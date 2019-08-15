@@ -479,5 +479,23 @@
     <ClInclude Include="AutLib\Geom\Approximation\Curve\2d\Geo2d_ApprxCurveFwd.hxx">
       <Filter>AutLib\Geom\Approximation\Curve\2d</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Connectivity\Entity_ConnectivityI.hxx">
+      <Filter>AutLib\Geom\Entities\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Line\Entity_LineI.hxx">
+      <Filter>AutLib\Geom\Entities\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric2\2d\Entity2d_Metric2I.hxx">
+      <Filter>AutLib\Geom\Entities\Metric2\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\Entity_PolygonI.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\StaticData\Entity_StaticDataI.hxx">
+      <Filter>AutLib\Geom\Entities\StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Triangle\Entity_TriangleI.hxx">
+      <Filter>AutLib\Geom\Entities\Triangle</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

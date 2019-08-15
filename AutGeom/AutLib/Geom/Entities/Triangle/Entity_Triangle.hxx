@@ -5,6 +5,9 @@
 #include <Traits.hxx>
 #include <Entity_Segment.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 namespace AutLib
 {
 
@@ -15,11 +18,17 @@ namespace AutLib
 		typedef typename remove_reference<PointRef>::type Point;
 		typedef Entity_Segment<PointRef> segment;
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		PointRef theP0_;
 		PointRef theP1_;
 		PointRef theP2_;
+
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version);
 
 	public:
 
@@ -131,5 +140,7 @@ namespace AutLib
 		}
 	};
 }
+
+#include <Entity_TriangleI.hxx>
 
 #endif // !_Entity_Triangle_Header

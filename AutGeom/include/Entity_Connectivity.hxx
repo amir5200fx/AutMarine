@@ -5,6 +5,9 @@
 #include <Standard_TypeDef.hxx>
 #include <Istream.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 #include <vector>
 
 namespace AutLib
@@ -14,9 +17,14 @@ namespace AutLib
 	class Entity_Connectivity
 	{
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		Standard_Integer theV_[Dim];
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version); 
 
 	public:
 
@@ -100,6 +108,9 @@ namespace AutLib
 	std::vector<connectivity::dual> dualConnectivityList(const Standard_Integer theNbEdges);
 
 	std::vector<connectivity::dual> dualConnectivityList_Chain(const Standard_Integer theNbEdges, const Standard_Boolean IsClosed = Standard_False);
+
 }
+
+#include <Entity_ConnectivityI.hxx>
 
 #endif // !_Entity_Connectivity_Header

@@ -2,8 +2,12 @@
 #ifndef _Entity2d_Eigen_Header
 #define _Entity2d_Eigen_Header
 
+#include <Global_Done.hxx>
 #include <Pnt2d.hxx>
 #include <armadillo.h>
+
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
 
 namespace AutLib
 {
@@ -20,7 +24,10 @@ namespace AutLib
 
 	class Entity2d_Eigen
 		: public Entity2d_EigenInfo
+		, public Global_Done
 	{
+
+		friend class boost::serialization::access;
 
 		/*Private Data*/
 
@@ -33,7 +40,8 @@ namespace AutLib
 		Standard_Real theLamda1_;
 		Standard_Real theLamda2_;
 
-		Standard_Boolean IsDone_;
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version);
 
 	public:
 
@@ -55,7 +63,17 @@ namespace AutLib
 			return theH1_;
 		}
 
+		Standard_Real& H1()
+		{
+			return theH1_;
+		}
+
 		Standard_Real H2() const
+		{
+			return theH2_;
+		}
+
+		Standard_Real& H2()
 		{
 			return theH2_;
 		}
@@ -65,7 +83,17 @@ namespace AutLib
 			return theLamda1_;
 		}
 
+		Standard_Real& Lamda1()
+		{
+			return theLamda1_;
+		}
+
 		Standard_Real Lamda2() const
+		{
+			return theLamda2_;
+		}
+
+		Standard_Real& Lamda2()
 		{
 			return theLamda2_;
 		}

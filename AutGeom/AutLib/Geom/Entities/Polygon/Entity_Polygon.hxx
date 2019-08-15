@@ -5,6 +5,9 @@
 #include <Standard_TypeDef.hxx>
 #include <OFstream.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 #include <vector>
 #include <fstream>
 
@@ -17,11 +20,17 @@ namespace AutLib
 
 		typedef std::vector<Point> pointList;
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		pointList thePoints_;
 
 		Standard_Real theDeflection_;
+
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version);
 
 	public:
 
@@ -96,5 +105,7 @@ namespace AutLib
 		void ExportToPlt(OFstream& File) const;
 	};
 }
+
+#include <Entity_PolygonI.hxx>
 
 #endif // !_Entity_Polygon_Header

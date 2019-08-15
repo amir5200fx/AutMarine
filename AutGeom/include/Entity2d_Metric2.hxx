@@ -6,11 +6,16 @@
 #include <error.hxx>
 #include <OSstream.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 namespace AutLib
 {
 
 	class Entity2d_Metric2
 	{
+
+		friend class boost::serialization::access;
 
 		/*Private Data*/
 
@@ -19,6 +24,10 @@ namespace AutLib
 
 		Standard_Real theH1_;
 		Standard_Real theH2_;
+
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version);
 
 	public:
 
@@ -120,5 +129,7 @@ namespace AutLib
 		}
 	};
 }
+
+#include <Entity2d_Metric2I.hxx>
 
 #endif // !_Entity2d_Metric2_Header

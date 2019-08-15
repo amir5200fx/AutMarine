@@ -6,6 +6,9 @@
 #include <Pnt2d.hxx>
 #include <armadillo.h>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 #include <iostream>
 #include <fstream>
 
@@ -17,11 +20,17 @@ namespace AutLib
 
 		typedef Entity2d_Metric1 metric;
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		Standard_Real theA_;
 		Standard_Real theB_;
 		Standard_Real theC_;
+
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version);
 
 	public:
 

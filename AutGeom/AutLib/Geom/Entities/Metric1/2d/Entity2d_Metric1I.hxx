@@ -3,7 +3,19 @@
 namespace AutLib
 {
 
-	inline Entity2d_Metric1 & AutLib::Entity2d_Metric1::operator*=(const Standard_Real Scalar)
+	template<class Archive>
+	void Entity2d_Metric1::serialize
+	(
+		Archive & ar,
+		const unsigned int version
+	)
+	{
+		ar& A();
+		ar& B();
+		ar& C();
+	}
+
+	inline Entity2d_Metric1 & Entity2d_Metric1::operator*=(const Standard_Real Scalar)
 	{
 		theA_ *= Scalar;
 		theB_ *= Scalar;

@@ -5,6 +5,9 @@
 #include <Traits.hxx>
 #include <Entity2d_LineRef.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 namespace AutLib
 {
 
@@ -18,10 +21,16 @@ namespace AutLib
 		template< bool cond, typename U >
 		using resolvedType = typename std::enable_if< cond, U >::type;
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		PointRef theP_;
 		DirectRef theDir_;
+
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version);
 
 	public:
 
@@ -60,5 +69,7 @@ namespace AutLib
 		}
 	};
 }
+
+#include <Entity_LineI.hxx>
 
 #endif // !_Entity_Line_Header

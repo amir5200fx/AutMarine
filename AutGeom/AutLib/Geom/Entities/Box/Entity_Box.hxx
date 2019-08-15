@@ -8,6 +8,9 @@
 #include <OSstream.hxx>
 #include <IOstream.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 #include <iostream>
 #include <vector>
 
@@ -21,10 +24,15 @@ namespace AutLib
 	class Entity_Box
 	{
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		Point theP0_;
 		Point theP1_;
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version) { ar& P0(); ar& P1(); }
 
 	public:
 

@@ -6,6 +6,9 @@
 #include <Standard_TypeDef.hxx>
 #include <OFstream.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 #include <vector>
 #include <memory>
 
@@ -24,6 +27,8 @@ namespace AutLib
 		typedef Entity_Box<Point> box;
 		typedef std::shared_ptr<box> box_ptr;
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		pointList thePoints_;
@@ -31,6 +36,10 @@ namespace AutLib
 		connectList theConnectivity_;
 
 		box_ptr theBoundingBox_;
+
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version);
 
 	public:
 
@@ -149,5 +158,7 @@ namespace AutLib
 		);
 	};
 }
+
+#include <Entity_StaticDataI.hxx>
 
 #endif // !_Entity_StaticData_Header

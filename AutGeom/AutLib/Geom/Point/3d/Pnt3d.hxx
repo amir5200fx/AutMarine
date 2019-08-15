@@ -6,6 +6,9 @@
 #include <error.hxx>
 #include <OSstream.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 namespace AutLib
 {
 
@@ -25,7 +28,12 @@ namespace AutLib
 		: public gp_Pnt
 	{
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version) { ar& X(); ar& Y(); ar& Z(); }
 
 	public:
 
@@ -40,7 +48,7 @@ namespace AutLib
 			dim = 3
 		};
 
-		// constructos
+		// constructors
 
 		Pnt3d()
 		{}

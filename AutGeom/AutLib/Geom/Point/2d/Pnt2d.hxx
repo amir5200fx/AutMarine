@@ -5,6 +5,9 @@
 #include <gp_Pnt2d.hxx>
 #include <IOstream.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 namespace AutLib
 {
 
@@ -25,7 +28,12 @@ namespace AutLib
 		: public gp_Pnt2d
 	{
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version) { ar& X(); ar& Y(); }
 
 	public:
 
@@ -40,7 +48,7 @@ namespace AutLib
 			dim = 2
 		};
 
-		// constructos
+		// constructors
 
 		Pnt2d()
 		{}

@@ -3,6 +3,26 @@
 #include <Entity2d_Metric1.hxx>
 namespace AutLib
 {
+
+	template<class Archive>
+	void Entity2d_Eigen::serialize
+	(
+		Archive & ar, 
+		const unsigned int version
+	)
+	{
+		ar& boost::serialization::base_object<Global_Done>(*this);
+
+		ar& E1();
+		ar& E2();
+
+		ar& H1();
+		ar& H2();
+
+		ar& Lamda1();
+		ar& Lamda2();
+	}
+
 	inline
 	void Entity2d_Eigen::CalcEigen(const Entity2d_Metric1 & M)
 	{
@@ -50,7 +70,7 @@ namespace AutLib
 		theH1_ = 1.0 / sqrt(theLamda1_);
 		theH2_ = 1.0 / sqrt(theLamda2_);
 
-		IsDone_ = Standard_True;
+		Change_IsDone() = Standard_True;
 	}
 
 	inline 
@@ -76,6 +96,6 @@ namespace AutLib
 		theH1_ = 1.0 / sqrt(theLamda1_);
 		theH2_ = 1.0 / sqrt(theLamda2_);
 
-		IsDone_ = Standard_True;
+		Change_IsDone() = Standard_True;
 	}
 }
