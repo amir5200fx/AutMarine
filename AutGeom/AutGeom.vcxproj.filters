@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{828ef81f-0f66-4ffe-951b-cf07bb5be439}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom">
+      <UniqueIdentifier>{866d355a-75b2-4c7a-9334-1a27538ee4e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Point">
+      <UniqueIdentifier>{f7186e59-3ee4-4338-b22a-07db742e5dc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Point\2d">
+      <UniqueIdentifier>{46e193a9-967a-43d2-9a02-9fcd8be518fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Point\3d">
+      <UniqueIdentifier>{678517b9-681d-4431-a9da-edc7167e0de2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities">
+      <UniqueIdentifier>{f81241a1-952d-46e0-8256-b7be572e4dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Box">
+      <UniqueIdentifier>{c33e1146-6a2d-46cd-8281-84cca64f8d2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Chain">
+      <UniqueIdentifier>{a6f54f37-1949-46da-95a7-ca67fcd95e96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Connectivity">
+      <UniqueIdentifier>{b0b3456e-4a0f-454b-94ba-7d9096eaf6c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Direct">
+      <UniqueIdentifier>{b960a10a-3678-47a7-ac30-74af538502a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Eigen">
+      <UniqueIdentifier>{e03a0295-9fb3-48e1-af63-deecb4e5613e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\IndexedItem">
+      <UniqueIdentifier>{e6466f08-deaf-4be4-aa74-bb4d48f45ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Line">
+      <UniqueIdentifier>{72333d16-666c-4034-abc8-3ab7969cb365}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Metric1">
+      <UniqueIdentifier>{b5234755-6c97-439c-9c1f-d24c5a5624e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Metric2">
+      <UniqueIdentifier>{6b27fa88-1fb0-4640-9bab-429555adf58a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Polygon">
+      <UniqueIdentifier>{2e53497a-1f05-4b1f-8390-34d21af46f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Segment">
+      <UniqueIdentifier>{56ddd790-020c-4aac-8b09-f21c408b45c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Triangle">
+      <UniqueIdentifier>{0cadc7c6-c2bb-4c77-b7c8-830ca385f80e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Triangulation">
+      <UniqueIdentifier>{7046309d-0b05-4e33-9439-e866c3b4b418}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Vector">
+      <UniqueIdentifier>{87221343-1121-431d-a3c3-8f0fb0eb7ee3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Box\2d">
+      <UniqueIdentifier>{17496689-97e9-4c1c-b0b3-3053c87890eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Box\3d">
+      <UniqueIdentifier>{61c5ba46-92a8-47e9-a0cd-cd0e925654a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Eigen\2d">
+      <UniqueIdentifier>{7065ed41-3094-4375-a51d-9b63d5378001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Metric1\2d">
+      <UniqueIdentifier>{8b514dd4-7f05-40ca-834e-3b182ab65cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Metric2\2d">
+      <UniqueIdentifier>{dc185ddb-cb62-4549-9c06-7f2b20a971cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Direct\2d">
+      <UniqueIdentifier>{1fb6a3bb-ef64-45c8-8fac-0776bce62ec7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Vector\2d">
+      <UniqueIdentifier>{ac5dcdea-fceb-4488-a46e-a5658c8895fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\IndexedItem\Point">
+      <UniqueIdentifier>{2a9af43a-c32a-4ba7-b357-20d0fd47a746}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\IndexedItem\Point\2d">
+      <UniqueIdentifier>{d27c3399-c29a-4c44-beaa-bdac03efca87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\IndexedItem\Point\3d">
+      <UniqueIdentifier>{9ae434e1-d32b-4af5-be57-0551a83d7833}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Chain\2d">
+      <UniqueIdentifier>{b72dff65-9aed-4e74-852a-9c8e1b01b51c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Chain\3d">
+      <UniqueIdentifier>{c6094c38-e58c-40d9-93e5-8db3a944274c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\StaticData">
+      <UniqueIdentifier>{7eaf4767-1872-41a3-b0f1-9e200e46a2c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Line\2d">
+      <UniqueIdentifier>{4df414ba-7fae-4657-b169-fc24cff55b56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Polygon\2d">
+      <UniqueIdentifier>{02faf04b-02ac-49f2-9af2-ad7e613c9ad8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Polygon\3d">
+      <UniqueIdentifier>{6334567f-afdd-4797-89ef-4acebf66771e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Triangulation\2d">
+      <UniqueIdentifier>{8b07a0d7-4f43-4e12-9ef3-ee5cd94020f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Triangulation\3d">
+      <UniqueIdentifier>{a2663ecc-5004-40ff-a14e-ef62502b5086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge">
+      <UniqueIdentifier>{8ec1bc57-144f-47ac-8b6d-07225ef3e7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\Point">
+      <UniqueIdentifier>{510eb5a7-ecef-462d-8c00-ec2941795699}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\Triangulation">
+      <UniqueIdentifier>{5a69bce0-ed1c-44e1-b2d7-0498b19c3bf6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\Chain">
+      <UniqueIdentifier>{c1faae26-2444-48b6-8f25-a30d520b7a7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\StaticData">
+      <UniqueIdentifier>{c35da904-9d67-4357-94ba-1635152a9251}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Search">
+      <UniqueIdentifier>{6fc084f8-e92e-4e13-b03c-cf7da6f6ac94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Search\AdTree">
+      <UniqueIdentifier>{70a2ab08-e999-4aa4-a062-9d2a98190007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Search\PrTree">
+      <UniqueIdentifier>{255f808c-2d90-4040-b061-2a6b8d68e573}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Processor">
+      <UniqueIdentifier>{bbcc3af5-7a40-424e-89f9-b255d79dcc4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Sort">
+      <UniqueIdentifier>{b6ec032a-e52a-40cb-99ee-f44b34113d52}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Triangulation">
+      <UniqueIdentifier>{6ca89127-078c-448a-874c-3c9d74cb70d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Triangulation\2d">
+      <UniqueIdentifier>{d348754d-4cf4-40b3-83d0-215454434acf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Triangulation\2d\cdt">
+      <UniqueIdentifier>{7d1a86d0-1fb0-42a9-b2c0-d50e115871cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Triangulation\2d\std">
+      <UniqueIdentifier>{a0175d51-49dc-45b6-9941-e96ad1d40700}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PriorityList">
+      <UniqueIdentifier>{70d4fe6a-3cd8-4791-abe9-d952f5615df1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\Chain\2d">
+      <UniqueIdentifier>{b258f64a-83ed-45bb-a171-b683aa33e211}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\Chain\3d">
+      <UniqueIdentifier>{c4bda3b0-d588-4e49-83a7-d1c6c544cd00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\Point\2d">
+      <UniqueIdentifier>{a5513d1c-8ba4-4ba3-a171-060cf1ad430f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Merge\Point\3d">
+      <UniqueIdentifier>{fb4865a1-b0ba-4635-9306-32a2c5dce0e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation">
+      <UniqueIdentifier>{17ee6764-7c99-4cb4-8608-ae64307149c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Curve">
+      <UniqueIdentifier>{3ca45ff7-3d9e-490c-8eb8-46eadfe66280}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Curve\2d">
+      <UniqueIdentifier>{e5c052de-490a-4abd-a938-9a06fcf944e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Curve\3d">
+      <UniqueIdentifier>{a6e179b6-f489-4e53-ac6f-2bf67d1562d5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
+      <Filter>AutLib\Geom\Point\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Point\2d\Pnt2dIO.cxx">
+      <Filter>AutLib\Geom\Point\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Point\3d\Pnt3d.cxx">
+      <Filter>AutLib\Geom\Point\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Point\3d\Pnt3dIO.cxx">
+      <Filter>AutLib\Geom\Point\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Box\2d\Entity2d_Box.cxx">
+      <Filter>AutLib\Geom\Entities\Box\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Box\2d\Entity2d_BoxIO.cxx">
+      <Filter>AutLib\Geom\Entities\Box\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Box\3d\Entity3d_Box.cxx">
+      <Filter>AutLib\Geom\Entities\Box\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1.cxx">
+      <Filter>AutLib\Geom\Entities\Metric1\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1IO.cxx">
+      <Filter>AutLib\Geom\Entities\Metric1\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Direct\2d\Dir2d.cxx">
+      <Filter>AutLib\Geom\Entities\Direct\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Vector\2d\Vec2d.cxx">
+      <Filter>AutLib\Geom\Entities\Vector\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_Eigen.cxx">
+      <Filter>AutLib\Geom\Entities\Eigen\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_EigenIO.cxx">
+      <Filter>AutLib\Geom\Entities\Eigen\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Connectivity\Entity_Connectivity.cxx">
+      <Filter>AutLib\Geom\Entities\Connectivity</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Chain\2d\Entity2d_Chain.cxx">
+      <Filter>AutLib\Geom\Entities\Chain\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Chain\2d\Entity2d_ChainIO.cxx">
+      <Filter>AutLib\Geom\Entities\Chain\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Chain\3d\Entity3d_ChainIO.cxx">
+      <Filter>AutLib\Geom\Entities\Chain\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Line\2d\Entity2d_LineRef.cxx">
+      <Filter>AutLib\Geom\Entities\Line\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_Tools.cxx">
+      <Filter>AutLib\Geom\Entities\Polygon\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_PolygonIO.cxx">
+      <Filter>AutLib\Geom\Entities\Polygon\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonIO.cxx">
+      <Filter>AutLib\Geom\Entities\Polygon\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationIO.cxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationN.cxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Triangulation\3d\Entity3d_TriangulationIO.cxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Search\PrTree\Geom_PrTree.cxx">
+      <Filter>AutLib\Geom\Search\PrTree</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Processor\GeoProcessor.cxx">
+      <Filter>AutLib\Geom\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Processor\GeoProcessor_cgal.cxx">
+      <Filter>AutLib\Geom\Processor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Triangulation\2d\cdt\Geo2d_CdtDelTri.cxx">
+      <Filter>AutLib\Geom\Triangulation\2d\cdt</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Triangulation\2d\std\Geo2d_DelTri.cxx">
+      <Filter>AutLib\Geom\Triangulation\2d\std</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Merge\Point\Merge_Pnt.cxx">
+      <Filter>AutLib\Geom\Merge\Point</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurve.cxx">
+      <Filter>AutLib\Geom\Approximation\Curve</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Geom\Point\2d\Pnt2dI.hxx">
+      <Filter>AutLib\Geom\Point\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Point\2d\Pnt2d.hxx">
+      <Filter>AutLib\Geom\Point\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Point\3d\Pnt3d.hxx">
+      <Filter>AutLib\Geom\Point\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Point\3d\Pnt3dI.hxx">
+      <Filter>AutLib\Geom\Point\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Box\Entity_Box.hxx">
+      <Filter>AutLib\Geom\Entities\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Box\Entity_BoxI.hxx">
+      <Filter>AutLib\Geom\Entities\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Box\2d\Entity2d_Box.hxx">
+      <Filter>AutLib\Geom\Entities\Box\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Box\2d\Entity2d_BoxFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Box\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Box\3d\Entity3d_Box.hxx">
+      <Filter>AutLib\Geom\Entities\Box\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Box\3d\Entity3d_BoxFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Box\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1.hxx">
+      <Filter>AutLib\Geom\Entities\Metric1\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1I.hxx">
+      <Filter>AutLib\Geom\Entities\Metric1\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric2\2d\Entity2d_Metric2.hxx">
+      <Filter>AutLib\Geom\Entities\Metric2\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Direct\2d\Dir2d.hxx">
+      <Filter>AutLib\Geom\Entities\Direct\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Vector\2d\Vec2d.hxx">
+      <Filter>AutLib\Geom\Entities\Vector\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_Eigen.hxx">
+      <Filter>AutLib\Geom\Entities\Eigen\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_EigenI.hxx">
+      <Filter>AutLib\Geom\Entities\Eigen\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\IndexedItem\IndexedItem.hxx">
+      <Filter>AutLib\Geom\Entities\IndexedItem</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\IndexedItem\Point\2d\IndexedPt2d.hxx">
+      <Filter>AutLib\Geom\Entities\IndexedItem\Point\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\IndexedItem\Point\3d\IndexedPt3d.hxx">
+      <Filter>AutLib\Geom\Entities\IndexedItem\Point\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Connectivity\Entity_Connectivity.hxx">
+      <Filter>AutLib\Geom\Entities\Connectivity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\StaticData\Entity_StaticData.hxx">
+      <Filter>AutLib\Geom\Entities\StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Chain\2d\Entity2d_Chain.hxx">
+      <Filter>AutLib\Geom\Entities\Chain\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Chain\2d\Entity2d_ChainFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Chain\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Chain\3d\Entity3d_Chain.hxx">
+      <Filter>AutLib\Geom\Entities\Chain\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Chain\3d\Entity3d_ChainFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Chain\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Segment\Entity_Segment.hxx">
+      <Filter>AutLib\Geom\Entities\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Line\2d\Entity2d_LineRef.hxx">
+      <Filter>AutLib\Geom\Entities\Line\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Line\Entity_Line.hxx">
+      <Filter>AutLib\Geom\Entities\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\Entity_Polygon.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_SIDE.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_Tools.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_PolygonFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_Polygon.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Triangle\Entity_Triangle.hxx">
+      <Filter>AutLib\Geom\Entities\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_Triangulation.hxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationN.hxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\3d\Entity3d_Triangulation.hxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\3d\Entity3d_TriangulationFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Triangulation\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Search\Geom_Search.hxx">
+      <Filter>AutLib\Geom\Search</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Search\AdTree\Geom_AdTree.hxx">
+      <Filter>AutLib\Geom\Search\AdTree</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Search\PrTree\Geom_PrTree.hxx">
+      <Filter>AutLib\Geom\Search\PrTree</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Search\PrTree\Geom_PrTreeI.hxx">
+      <Filter>AutLib\Geom\Search\PrTree</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Processor\GeoProcessor.hxx">
+      <Filter>AutLib\Geom\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Processor\GeoProcessorI.hxx">
+      <Filter>AutLib\Geom\Processor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Sort\Geom_ItemSort.hxx">
+      <Filter>AutLib\Geom\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Sort\Geom_Sort.hxx">
+      <Filter>AutLib\Geom\Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Triangulation\2d\cdt\Geo2d_CdtDelTri.hxx">
+      <Filter>AutLib\Geom\Triangulation\2d\cdt</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Triangulation\2d\std\Geo2d_DelTri.hxx">
+      <Filter>AutLib\Geom\Triangulation\2d\std</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Triangulation\2d\std\Geo2d_DelTriI.hxx">
+      <Filter>AutLib\Geom\Triangulation\2d\std</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\PriorityList\Geom_PriorityList.hxx">
+      <Filter>AutLib\Geom\PriorityList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\Chain\2d\Merge2d_Chain.hxx">
+      <Filter>AutLib\Geom\Merge\Chain\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\StaticData\Merge_StaticData.hxx">
+      <Filter>AutLib\Geom\Merge\StaticData</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\Point\Merge_Pnt.hxx">
+      <Filter>AutLib\Geom\Merge\Point</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\Point\Merge_PntAlg.hxx">
+      <Filter>AutLib\Geom\Merge\Point</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\Point\2d\Merge2d_Pnt.hxx">
+      <Filter>AutLib\Geom\Merge\Point\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\Point\3d\Merge3d_Pnt.hxx">
+      <Filter>AutLib\Geom\Merge\Point\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\Point\3d\Merge3d_PntFwd.hxx">
+      <Filter>AutLib\Geom\Merge\Point\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Merge\Chain\3d\Merge3d_Chain.hxx">
+      <Filter>AutLib\Geom\Merge\Chain\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurve.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurveI.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurveInfo.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\2d\Geo2d_ApprxCurve.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\2d\Geo2d_ApprxCurveFwd.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve\2d</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

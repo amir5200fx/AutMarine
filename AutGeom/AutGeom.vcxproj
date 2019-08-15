@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{F51E15FB-9314-4805-9753-E025E735725E}</ProjectGuid>
+    <RootNamespace>AutGeom</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(BOOST_INCLUDEDIR);$(TBB_INCLUDEDIR);$(GMP_INCLUDEDIR);$(CGAL_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+    <LibraryPath>$(TBB_INCLUDELIB);$(GMP_INCLUDELIB);$(BOOST_LIBRARYDIR);$(OPENCASCADE_INCLUDELIB);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(BOOST_INCLUDEDIR);$(TBB_INCLUDEDIR);$(GMP_INCLUDEDIR);$(CGAL_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+    <LibraryPath>$(TBB_INCLUDELIB);$(GMP_INCLUDELIB);$(BOOST_LIBRARYDIR);$(OPENCASCADE_INCLUDELIB);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;USE_CGAL_PROCESSOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutGeom\AutLib\Geom\Approximation\Curve\2d;$(SolutionDir)AutGeom\AutLib\Geom\Approximation\Curve;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Point\3d;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Point\2d;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Point;$(SolutionDir)AutGeom\AutLib\Geom\Merge\StaticData;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Chain\3d;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Chain\2d;$(SolutionDir)AutGeom\AutLib\Geom\Merge;$(SolutionDir)AutGeom\AutLib\Geom\PriorityList;$(SolutionDir)AutGeom\AutLib\Geom\Triangulation\2d\std;$(SolutionDir)AutGeom\AutLib\Geom\Triangulation\2d\cdt;$(SolutionDir)AutGeom\AutLib\Geom\Sort;$(SolutionDir)AutGeom\AutLib\Geom\Processor;$(SolutionDir)AutGeom\AutLib\Geom\Search\PrTree;$(SolutionDir)AutGeom\AutLib\Geom\Search\AdTree;$(SolutionDir)AutGeom\AutLib\Geom\Search;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Triangulation\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Triangulation\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Polygon\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Polygon\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Polygon;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Line\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Line;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Segment;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Chain\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Chain\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\StaticData;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Connectivity;$(SolutionDir)AutGeom\AutLib\Geom\Entities\IndexedItem\Point\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\IndexedItem\Point\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\IndexedItem;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Vector\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Direct\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Eigen\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Metric2\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Metric1\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Box\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Box\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Box;$(SolutionDir)AutGeom\AutLib\Geom\Point\3d;$(SolutionDir)AutGeom\AutLib\Geom\Point\2d;$(SolutionDir)AutBase\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)Common\Armadillo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;CGAL_HEADER_ONLY;USE_CGAL_PROCESSOR;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutGeom\AutLib\Geom\Approximation\Curve\2d;$(SolutionDir)AutGeom\AutLib\Geom\Approximation\Curve;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Point\3d;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Point\2d;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Point;$(SolutionDir)AutGeom\AutLib\Geom\Merge\StaticData;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Chain\3d;$(SolutionDir)AutGeom\AutLib\Geom\Merge\Chain\2d;$(SolutionDir)AutGeom\AutLib\Geom\Merge;$(SolutionDir)AutGeom\AutLib\Geom\PriorityList;$(SolutionDir)AutGeom\AutLib\Geom\Triangulation\2d\std;$(SolutionDir)AutGeom\AutLib\Geom\Triangulation\2d\cdt;$(SolutionDir)AutGeom\AutLib\Geom\Sort;$(SolutionDir)AutGeom\AutLib\Geom\Processor;$(SolutionDir)AutGeom\AutLib\Geom\Search\PrTree;$(SolutionDir)AutGeom\AutLib\Geom\Search\AdTree;$(SolutionDir)AutGeom\AutLib\Geom\Search;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Triangulation\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Triangulation\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Polygon\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Polygon\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Polygon;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Line\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Line;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Segment;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Chain\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Chain\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\StaticData;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Connectivity;$(SolutionDir)AutGeom\AutLib\Geom\Entities\IndexedItem\Point\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\IndexedItem\Point\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\IndexedItem;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Vector\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Direct\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Eigen\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Metric2\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Metric1\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Box\3d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Box\2d;$(SolutionDir)AutGeom\AutLib\Geom\Entities\Box;$(SolutionDir)AutGeom\AutLib\Geom\Point\3d;$(SolutionDir)AutGeom\AutLib\Geom\Point\2d;$(SolutionDir)AutBase\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)Common\Armadillo;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurve.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Box\2d\Entity2d_Box.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Box\2d\Entity2d_BoxIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Box\3d\Entity3d_Box.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Chain\2d\Entity2d_Chain.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Chain\2d\Entity2d_ChainIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Chain\3d\Entity3d_ChainIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Connectivity\Entity_Connectivity.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Direct\2d\Dir2d.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_Eigen.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_EigenIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Line\2d\Entity2d_LineRef.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1IO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_PolygonIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_Tools.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationN.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Triangulation\3d\Entity3d_TriangulationIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Vector\2d\Vec2d.cxx" />
+    <ClCompile Include="AutLib\Geom\Merge\Point\Merge_Pnt.cxx" />
+    <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx" />
+    <ClCompile Include="AutLib\Geom\Point\2d\Pnt2dIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Point\3d\Pnt3d.cxx" />
+    <ClCompile Include="AutLib\Geom\Point\3d\Pnt3dIO.cxx" />
+    <ClCompile Include="AutLib\Geom\Processor\GeoProcessor.cxx" />
+    <ClCompile Include="AutLib\Geom\Processor\GeoProcessor_cgal.cxx" />
+    <ClCompile Include="AutLib\Geom\Search\PrTree\Geom_PrTree.cxx" />
+    <ClCompile Include="AutLib\Geom\Triangulation\2d\cdt\Geo2d_CdtDelTri.cxx" />
+    <ClCompile Include="AutLib\Geom\Triangulation\2d\std\Geo2d_DelTri.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\2d\Geo2d_ApprxCurve.hxx" />
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\2d\Geo2d_ApprxCurveFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurve.hxx" />
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurveI.hxx" />
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurveInfo.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Box\2d\Entity2d_Box.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Box\2d\Entity2d_BoxFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Box\3d\Entity3d_Box.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Box\3d\Entity3d_BoxFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Box\Entity_Box.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Box\Entity_BoxI.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Chain\2d\Entity2d_Chain.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Chain\2d\Entity2d_ChainFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Chain\3d\Entity3d_Chain.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Chain\3d\Entity3d_ChainFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Connectivity\Entity_Connectivity.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Direct\2d\Dir2d.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_Eigen.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Eigen\2d\Entity2d_EigenI.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\IndexedItem\IndexedItem.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\IndexedItem\Point\2d\IndexedPt2d.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\IndexedItem\Point\3d\IndexedPt3d.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Line\2d\Entity2d_LineRef.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Line\Entity_Line.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1I.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Metric2\2d\Entity2d_Metric2.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_PolygonFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_SIDE.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_Tools.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_Polygon.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\Entity_Polygon.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Segment\Entity_Segment.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\StaticData\Entity_StaticData.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Triangle\Entity_Triangle.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_Triangulation.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\2d\Entity2d_TriangulationN.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\3d\Entity3d_Triangulation.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Triangulation\3d\Entity3d_TriangulationFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Vector\2d\Vec2d.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\Chain\2d\Merge2d_Chain.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\Chain\3d\Merge3d_Chain.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\Point\2d\Merge2d_Pnt.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\Point\3d\Merge3d_Pnt.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\Point\3d\Merge3d_PntFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\Point\Merge_Pnt.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\Point\Merge_PntAlg.hxx" />
+    <ClInclude Include="AutLib\Geom\Merge\StaticData\Merge_StaticData.hxx" />
+    <ClInclude Include="AutLib\Geom\Point\2d\Pnt2d.hxx" />
+    <ClInclude Include="AutLib\Geom\Point\2d\Pnt2dI.hxx" />
+    <ClInclude Include="AutLib\Geom\Point\3d\Pnt3d.hxx" />
+    <ClInclude Include="AutLib\Geom\Point\3d\Pnt3dI.hxx" />
+    <ClInclude Include="AutLib\Geom\PriorityList\Geom_PriorityList.hxx" />
+    <ClInclude Include="AutLib\Geom\Processor\GeoProcessor.hxx" />
+    <ClInclude Include="AutLib\Geom\Processor\GeoProcessorI.hxx" />
+    <ClInclude Include="AutLib\Geom\Search\AdTree\Geom_AdTree.hxx" />
+    <ClInclude Include="AutLib\Geom\Search\Geom_Search.hxx" />
+    <ClInclude Include="AutLib\Geom\Search\PrTree\Geom_PrTree.hxx" />
+    <ClInclude Include="AutLib\Geom\Search\PrTree\Geom_PrTreeI.hxx" />
+    <ClInclude Include="AutLib\Geom\Sort\Geom_ItemSort.hxx" />
+    <ClInclude Include="AutLib\Geom\Sort\Geom_Sort.hxx" />
+    <ClInclude Include="AutLib\Geom\Triangulation\2d\cdt\Geo2d_CdtDelTri.hxx" />
+    <ClInclude Include="AutLib\Geom\Triangulation\2d\std\Geo2d_DelTri.hxx" />
+    <ClInclude Include="AutLib\Geom\Triangulation\2d\std\Geo2d_DelTriI.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AutBase\AutBase.vcxproj">
+      <Project>{7829ceac-77e6-4bdc-8764-52bddb23a085}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

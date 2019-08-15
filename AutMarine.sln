@@ -9,6 +9,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutBase", "AutBase\AutBase.
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutNumeric", "AutNumeric\AutNumeric.vcxproj", "{1B446D4B-FB82-4FE3-BF9E-6919C9DCD15E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutGeom", "AutGeom\AutGeom.vcxproj", "{F51E15FB-9314-4805-9753-E025E735725E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -35,6 +37,12 @@ Global
 		{1B446D4B-FB82-4FE3-BF9E-6919C9DCD15E}.Release|x64.ActiveCfg = Release|x64
 		{1B446D4B-FB82-4FE3-BF9E-6919C9DCD15E}.Release|x64.Build.0 = Release|x64
 		{1B446D4B-FB82-4FE3-BF9E-6919C9DCD15E}.Release|x86.ActiveCfg = Release|x64
+		{F51E15FB-9314-4805-9753-E025E735725E}.Debug|x64.ActiveCfg = Debug|x64
+		{F51E15FB-9314-4805-9753-E025E735725E}.Debug|x64.Build.0 = Debug|x64
+		{F51E15FB-9314-4805-9753-E025E735725E}.Debug|x86.ActiveCfg = Debug|x64
+		{F51E15FB-9314-4805-9753-E025E735725E}.Release|x64.ActiveCfg = Release|x64
+		{F51E15FB-9314-4805-9753-E025E735725E}.Release|x64.Build.0 = Release|x64
+		{F51E15FB-9314-4805-9753-E025E735725E}.Release|x86.ActiveCfg = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
