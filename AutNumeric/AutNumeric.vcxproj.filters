@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{2fb39fa2-faf8-444c-ae80-04449218785f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric">
+      <UniqueIdentifier>{fe6392c0-6ff0-4790-9c26-904d0ed62494}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Eigen">
+      <UniqueIdentifier>{b336ce81-6fae-478b-83c2-5ad5c9d77d34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration">
+      <UniqueIdentifier>{a6bcb729-5bb6-402a-95ed-f3ada3c4c430}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\NonLinearSolver">
+      <UniqueIdentifier>{f5baa3ec-882e-4b2e-9c06-62da683709ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Optimization">
+      <UniqueIdentifier>{26662f5c-3d64-4e3d-b9b6-b976c509d04d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Random">
+      <UniqueIdentifier>{dbd62369-af0b-4d96-98d4-6a6fc8ab974b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\NonLinearSolver\Newton">
+      <UniqueIdentifier>{367388be-ce2c-4287-b50b-ea563b4606f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Optimization\NelderMead">
+      <UniqueIdentifier>{9b1d2a27-74b7-4bb4-9bfa-c21b8dbc46bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration\Adaptive">
+      <UniqueIdentifier>{64403c35-cbe2-44e1-ad63-4f8e8b21d31e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Numeric\Random\Numeric_Random.hxx">
+      <Filter>AutLib\Numeric\Random</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolver.hxx">
+      <Filter>AutLib\Numeric\NonLinearSolver\Newton</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Numeric_AdaptIntegration.hxx">
+      <Filter>AutLib\Numeric\Integration\Adaptive</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Optimization\NelderMead\NumOpt_NelderMead.hxx">
+      <Filter>AutLib\Numeric\Optimization\NelderMead</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Optimization\NelderMead\NumOpt_NelderMeadI.hxx">
+      <Filter>AutLib\Numeric\Optimization\NelderMead</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Numeric_AdaptIntegrationInfo.hxx">
+      <Filter>AutLib\Numeric\Integration\Adaptive</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolverInfo.hxx">
+      <Filter>AutLib\Numeric\NonLinearSolver\Newton</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolver.cxx">
+      <Filter>AutLib\Numeric\NonLinearSolver\Newton</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Numeric\Integration\Adaptive\Numeric_AdaptIntegration.cxx">
+      <Filter>AutLib\Numeric\Integration\Adaptive</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Numeric\Optimization\NelderMead\NumOpt_NelderMead.cxx">
+      <Filter>AutLib\Numeric\Optimization\NelderMead</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
