@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{39DADF5F-59E0-4267-B03B-0513A69610D2}</ProjectGuid>
+    <RootNamespace>AutBase</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(MSMPI_INC);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(MSMPI_LIB64);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(MSMPI_INC);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <LibraryPath>$(MSMPI_LIB64);$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Base\Traits;$(MSBuildProjectDirectory)\AutLib\Base\MSwindows\signals;$(MSBuildProjectDirectory)\AutLib\Base\MSwindows;$(MSBuildProjectDirectory)\AutLib\Base\memory;$(MSBuildProjectDirectory)\AutLib\Base\Global\argList;$(MSBuildProjectDirectory)\AutLib\Base\Global\profiling;$(MSBuildProjectDirectory)\AutLib\Base\Global;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\dictionaryEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\entry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\functionEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\includeEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\includeIfPresentEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\inputModeEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\removeEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\primitiveEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary;$(MSBuildProjectDirectory)\AutLib\Base\db\dlLibraryTable;$(MSBuildProjectDirectory)\AutLib\Base\db\error;$(MSBuildProjectDirectory)\AutLib\Base\db\functionObjects;$(MSBuildProjectDirectory)\AutLib\Base\db\IOobjects;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Fstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\gzstream;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\hashes;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\IOstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Pstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Sstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\StringStreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\token\CompoundToken;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\token;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Tstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\objectRegistry;$(MSBuildProjectDirectory)\AutLib\Base\db\regIOobject;$(MSBuildProjectDirectory)\AutLib\Base\db\scalarRange;$(MSBuildProjectDirectory)\AutLib\Base\db\Time;$(MSBuildProjectDirectory)\AutLib\Base\db\typeInfo;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\Ary2d;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\Ary1d;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\List;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\Avl;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\Dictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\DictionaryBase;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\PtrDictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\UDictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\UPtrDictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\HashPtrTable;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\HashSet;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\HashTable;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\Map;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\PtrMap;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\StaticHashTable;$(MSBuildProjectDirectory)\AutLib\Base\containers\Identifiers\Keyed;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\ILList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\LList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\LPtrList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\UILList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\linkTypes\DLListBase;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\linkTypes\SLListBase;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\user;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\BiIndirectList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\CompactListList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\DynamicList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\FixedList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\Histogram;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\IndirectList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\List;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\ListListOps;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\ListOps;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\PackedList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\PriorityList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\PtrList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\SortableList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\Stack;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\SubList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\UIndirectList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\UList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\UPtrList;$(MSBuildProjectDirectory)\AutLib\Base\containers\NamedEnum;$(MSBuildProjectDirectory)\AutLib\Base\containers\STL;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\zero;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\complexVector;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\labelVector;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\vector;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\vector2D;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\expandContract;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector2;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector3;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector4;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector6;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector8;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tuple2;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\transform;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\diagTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelDiagTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelSphericalTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelSymmTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\sphericalTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\sphericalTensor2D;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\symmTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\symmTensor2D;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\symmTensor4thOrder;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\tensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Swap;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\string;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\septernion;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\scalar;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\quaternion;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\pTraits;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\products;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Pair;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\ops;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\one;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\nil;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\mathematicalConstants;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\lists;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\ints;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\hashes;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\direction;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\contiguous;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\complex;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\char;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\bools;$(MSBuildProjectDirectory)\AutLib\Base\Variable\Smart;$(MSBuildProjectDirectory)\AutLib\Base\UnitSystem;$(MSBuildProjectDirectory)\AutLib\Base\multiValued;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Base\Traits;$(MSBuildProjectDirectory)\AutLib\Base\MSwindows\signals;$(MSBuildProjectDirectory)\AutLib\Base\MSwindows;$(MSBuildProjectDirectory)\AutLib\Base\memory;$(MSBuildProjectDirectory)\AutLib\Base\Global\argList;$(MSBuildProjectDirectory)\AutLib\Base\Global\profiling;$(MSBuildProjectDirectory)\AutLib\Base\Global;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\dictionaryEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\entry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\functionEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\includeEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\includeIfPresentEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\inputModeEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\functionEntries\removeEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary\primitiveEntry;$(MSBuildProjectDirectory)\AutLib\Base\db\dictionary;$(MSBuildProjectDirectory)\AutLib\Base\db\dlLibraryTable;$(MSBuildProjectDirectory)\AutLib\Base\db\error;$(MSBuildProjectDirectory)\AutLib\Base\db\functionObjects;$(MSBuildProjectDirectory)\AutLib\Base\db\IOobjects;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Fstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\gzstream;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\hashes;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\IOstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Pstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Sstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\StringStreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\token\CompoundToken;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\token;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams\Tstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\IOstreams;$(MSBuildProjectDirectory)\AutLib\Base\db\objectRegistry;$(MSBuildProjectDirectory)\AutLib\Base\db\regIOobject;$(MSBuildProjectDirectory)\AutLib\Base\db\scalarRange;$(MSBuildProjectDirectory)\AutLib\Base\db\Time;$(MSBuildProjectDirectory)\AutLib\Base\db\typeInfo;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\Ary2d;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\Ary1d;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\List;$(MSBuildProjectDirectory)\AutLib\Base\containers\ADT\Avl;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\Dictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\DictionaryBase;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\PtrDictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\UDictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\Dictionaries\UPtrDictionary;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\HashPtrTable;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\HashSet;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\HashTable;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\Map;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\PtrMap;$(MSBuildProjectDirectory)\AutLib\Base\containers\HashTables\StaticHashTable;$(MSBuildProjectDirectory)\AutLib\Base\containers\Identifiers\Keyed;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\ILList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\LList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\LPtrList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\accessTypes\UILList;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\linkTypes\DLListBase;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\linkTypes\SLListBase;$(MSBuildProjectDirectory)\AutLib\Base\containers\LinkedLists\user;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\BiIndirectList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\CompactListList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\DynamicList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\FixedList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\Histogram;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\IndirectList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\List;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\ListListOps;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\ListOps;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\PackedList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\PriorityList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\PtrList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\SortableList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\Stack;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\SubList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\UIndirectList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\UList;$(MSBuildProjectDirectory)\AutLib\Base\containers\Lists\UPtrList;$(MSBuildProjectDirectory)\AutLib\Base\containers\NamedEnum;$(MSBuildProjectDirectory)\AutLib\Base\containers\STL;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\zero;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\complexVector;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\labelVector;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\vector;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace\vector2D;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorSpace;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\expandContract;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector2;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector3;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector4;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector6;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN\vector8;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\VectorN;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tuple2;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\transform;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\diagTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelDiagTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelSphericalTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelSymmTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\sphericalTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\sphericalTensor2D;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\symmTensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\symmTensor2D;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\symmTensor4thOrder;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor\tensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Tensor;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Swap;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\string;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\septernion;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\scalar;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\quaternion;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\pTraits;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\products;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\Pair;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\ops;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\one;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\nil;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\mathematicalConstants;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\lists;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\ints;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\hashes;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\direction;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\contiguous;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\complex;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\char;$(MSBuildProjectDirectory)\AutLib\Base\Primitives\bools;$(MSBuildProjectDirectory)\AutLib\Base\Variable\Smart;$(MSBuildProjectDirectory)\AutLib\Base\UnitSystem;$(MSBuildProjectDirectory)\AutLib\Base\multiValued;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Base\containers\HashTables\HashTable\HashTableCore.cxx" />
+    <ClCompile Include="AutLib\Base\containers\LinkedLists\linkTypes\DLListBase\DLListBase.cxx" />
+    <ClCompile Include="AutLib\Base\containers\LinkedLists\linkTypes\SLListBase\SLListBase.cxx" />
+    <ClCompile Include="AutLib\Base\containers\Lists\ListOps\ListOps.cxx" />
+    <ClCompile Include="AutLib\Base\containers\Lists\PackedList\PackedList.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionary.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionaryEntry\dictionaryEntry.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionaryEntry\dictionaryEntryIO.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionaryIO.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\entry\entry.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\entry\entryIO.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\functionEntries\functionEntry\functionEntry.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\functionEntries\includeEntry\includeEntry.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\functionEntries\inputModeEntry\inputModeEntry.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntry.cxx" />
+    <ClCompile Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntryIO.cxx" />
+    <ClCompile Include="AutLib\Base\db\error\error.cxx" />
+    <ClCompile Include="AutLib\Base\db\error\IOerror.cxx" />
+    <ClCompile Include="AutLib\Base\db\error\messageStream.cxx" />
+    <ClCompile Include="AutLib\Base\db\error\NonConvergency_Iteration_Failure.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Fstreams\IFstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Fstreams\OFstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams\IOstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams\Istream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams\Ostream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\IPread.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\IPstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\OPstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\OPwrite.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\Pstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamCommsStruct.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamGlobals.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamReduceOps.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamsPrint.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\ISstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\OSstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\prefixOSstream.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\readHexLabel.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\SstreamsPrint.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\StringStreams\StringStreamsPrint.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\token\token.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\token\tokenIO.cxx" />
+    <ClCompile Include="AutLib\Base\db\IOstreams\Tstreams\ITstream.cxx" />
+    <ClCompile Include="AutLib\Base\Global\Global_InitRunTime.cxx" />
+    <ClCompile Include="AutLib\Base\Global\clock.cxx" />
+    <ClCompile Include="AutLib\Base\Global\constantsSwitch.cxx" />
+    <ClCompile Include="AutLib\Base\Global\debug.cxx" />
+    <ClCompile Include="AutLib\Base\Global\debugSwitch.cxx" />
+    <ClCompile Include="AutLib\Base\Global\dimensionedConstants.cxx" />
+    <ClCompile Include="AutLib\Base\Global\global.cxx" />
+    <ClCompile Include="AutLib\Base\Global\infoSwitch.cxx" />
+    <ClCompile Include="AutLib\Base\Global\JobInfo.cxx" />
+    <ClCompile Include="AutLib\Base\Global\optimisationSwitch.cxx" />
+    <ClCompile Include="AutLib\Base\Global\tolerancesSwitch.cxx" />
+    <ClCompile Include="AutLib\Base\MSwindows\clockTime.cxx" />
+    <ClCompile Include="AutLib\Base\MSwindows\cpuTime.cxx" />
+    <ClCompile Include="AutLib\Base\MSwindows\fileStat.cxx" />
+    <ClCompile Include="AutLib\Base\MSwindows\MSwindows.cxx" />
+    <ClCompile Include="AutLib\Base\MSwindows\printStack.cxx" />
+    <ClCompile Include="AutLib\Base\MSwindows\regExp.cxx" />
+    <ClCompile Include="AutLib\Base\MSwindows\timer.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\bools\bool.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\bools\boolIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\bools\Switch.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\bools\SwitchIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\char\charIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\complex\complex.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\hashes\Hasher.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\hashes\SHA1.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\hashes\SHA1Digest.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\ints\intIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\ints\label.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\ints\longIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\ints\longLongIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\ints\uintIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\ints\ulongIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\lists\vectorList.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\quaternion\quaternion.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\scalar\doubleScalar.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\scalar\floatScalar.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\scalar\longDoubleScalar.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\scalar\scalar.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\septernion\septernion.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\string\autString.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\string\autStringIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\string\fileName.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\string\fileNameIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\string\keyTypeIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\string\word.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\string\wordIO.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\diagTensor\diagTensor.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelDiagTensor\labelDiagTensor.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelSphericalTensor\labelSphericalTensor.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder\labelSymmTensor4thOrder.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelSymmTensor\labelSymmTensor.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\sphericalTensor2D\sphericalTensor2D.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\sphericalTensor\sphericalTensor.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\symmTensor2D\symmTensor2D.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\symmTensor4thOrder\symmTensor4thOrder.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\symmTensor\symmTensor.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\tensor\tensor.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\complexVector\complexVector.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\labelVector\labelVector.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\vector2D\vector2D.cxx" />
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\vector\vector.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary1d\Adt_Ary1d.hxx" />
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary1d\Adt_Ary1dI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary2d\Adt_Ary2d.hxx" />
+    <ClInclude Include="AutLib\Base\containers\ADT\Avl\Adt_AvlTree.hxx" />
+    <ClInclude Include="AutLib\Base\containers\ADT\List\Adt_List.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\DictionaryBase\DictionaryBase.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\DictionaryBase\DictionaryBaseI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\Dictionary\DictionaryTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\Dictionary\DictionaryTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\HashTables\HashTable\HashTable.hxx" />
+    <ClInclude Include="AutLib\Base\containers\HashTables\HashTable\HashTableI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Identifiers\Keyed\Keyed.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Identifiers\Keyed\KeyedI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\ILList\ILList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\ILList\ILListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LList\LList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LList\LListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LPtrList\LPtrList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LPtrList\LPtrListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\UILList\UILList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\UILList\UILListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\DLListBase\DLListBase.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\DLListBase\DLListBaseI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\SLListBase\SLListBase.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\SLListBase\SLListBaseI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\DLList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\FIFOStack.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\IDLList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\LIFOStack.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\SLList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\SLPtrList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\BiIndirectList\BiIndirectList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\BiIndirectList\BiIndirectListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\DynamicList\DynamicList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\DynamicList\DynamicListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\FixedList\FixedList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\FixedList\FixedListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\IndirectList\IndirectList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\IndirectList\IndirectListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\ListOps\ListOps.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\ListOps\ListOpsI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\List\List.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\List\ListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\PackedList\PackedList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\PackedList\PackedListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\PtrList\PtrList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\PtrList\PtrListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\SortableList\SortableList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\SortableList\SortableListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\SubList\SubList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\SubList\SubListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\UIndirectList\UIndirectList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\UIndirectList\UIndirectListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\UList\UList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\UList\UListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\UPtrList\UPtrList.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Lists\UPtrList\UPtrListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\STL\Stl_List.hxx" />
+    <ClInclude Include="AutLib\Base\containers\STL\Stl_SortedVector.hxx" />
+    <ClInclude Include="AutLib\Base\containers\STL\Stl_Vector.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\dictionary.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\dictionaryEntry\dictionaryEntry.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\dictionaryI.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\entry\entry.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\functionEntries\functionEntry\functionEntry.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\functionEntries\includeEntry\includeEntry.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\functionEntries\inputModeEntry\inputModeEntry.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntry.hxx" />
+    <ClInclude Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntryI.hxx" />
+    <ClInclude Include="AutLib\Base\db\error\error.hxx" />
+    <ClInclude Include="AutLib\Base\db\error\errorM.hxx" />
+    <ClInclude Include="AutLib\Base\db\error\errorManip.hxx" />
+    <ClInclude Include="AutLib\Base\db\error\messageStream.hxx" />
+    <ClInclude Include="AutLib\Base\db\error\NonConvergency_Iteration_Failure.hxx" />
+    <ClInclude Include="AutLib\Base\db\error\StaticAssert.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Fstreams\IFstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Fstreams\OFstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\hashes\OSHA1stream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\INew.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\InfoProxy.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\IOmanip.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\IOstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\Istream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\Ostream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\IPstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\OPstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\OPstreamI.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\Pstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamGlobals.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamI.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamReduceOps.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamTools.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamToolsI.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\ISstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\ISstreamI.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\OSstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\OSstreamI.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\prefixOSstream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\readHexLabel.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\StringStreams\IStringStream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\StringStreams\OStringStream.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\token\token.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\token\tokenI.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\token\tokenList.hxx" />
+    <ClInclude Include="AutLib\Base\db\IOstreams\Tstreams\ITstream.hxx" />
+    <ClInclude Include="AutLib\Base\Global\autVersion.hxx" />
+    <ClInclude Include="AutLib\Base\Global\clock.hxx" />
+    <ClInclude Include="AutLib\Base\Global\constantsSwitch.hxx" />
+    <ClInclude Include="AutLib\Base\Global\controlSwitches.hxx" />
+    <ClInclude Include="AutLib\Base\Global\controlSwitchesI.hxx" />
+    <ClInclude Include="AutLib\Base\Global\debug.hxx" />
+    <ClInclude Include="AutLib\Base\Global\debugSwitch.hxx" />
+    <ClInclude Include="AutLib\Base\Global\demandDrivenData.hxx" />
+    <ClInclude Include="AutLib\Base\Global\dimensionedConstants.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Exceptions.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_Done.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_Indexed.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_InitRunTime.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_Named.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_Verbose.hxx" />
+    <ClInclude Include="AutLib\Base\Global\infoSwitch.hxx" />
+    <ClInclude Include="AutLib\Base\Global\JobInfo.hxx" />
+    <ClInclude Include="AutLib\Base\Global\optimisationSwitch.hxx" />
+    <ClInclude Include="AutLib\Base\Global\OSspecific.hxx" />
+    <ClInclude Include="AutLib\Base\Global\parRun.hxx" />
+    <ClInclude Include="AutLib\Base\Global\predicates.h" />
+    <ClInclude Include="AutLib\Base\Global\safeBool.hxx" />
+    <ClInclude Include="AutLib\Base\Global\TColDecleration.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Time.hxx" />
+    <ClInclude Include="AutLib\Base\Global\tolerancesSwitch.hxx" />
+    <ClInclude Include="AutLib\Base\memory\autoPtr.hxx" />
+    <ClInclude Include="AutLib\Base\memory\autoPtrI.hxx" />
+    <ClInclude Include="AutLib\Base\memory\handle.hxx" />
+    <ClInclude Include="AutLib\Base\memory\refCount.hxx" />
+    <ClInclude Include="AutLib\Base\memory\tmp.hxx" />
+    <ClInclude Include="AutLib\Base\memory\Transient.hxx" />
+    <ClInclude Include="AutLib\Base\memory\Xfer.hxx" />
+    <ClInclude Include="AutLib\Base\memory\XferI.hxx" />
+    <ClInclude Include="AutLib\Base\MSwindows\clockTime.hxx" />
+    <ClInclude Include="AutLib\Base\MSwindows\cpuTime.hxx" />
+    <ClInclude Include="AutLib\Base\MSwindows\deelx.h" />
+    <ClInclude Include="AutLib\Base\MSwindows\fileStat.hxx" />
+    <ClInclude Include="AutLib\Base\MSwindows\MSwindows.hxx" />
+    <ClInclude Include="AutLib\Base\MSwindows\regExp.hxx" />
+    <ClInclude Include="AutLib\Base\MSwindows\timer.hxx" />
+    <ClInclude Include="AutLib\Base\multiValued\multiValued_Variable.hxx" />
+    <ClInclude Include="AutLib\Base\multiValued\multiValued_VariableI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\bools\bool.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\bools\Switch.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\char\char.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\complex\complex.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\complex\complexI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\contiguous\contiguous.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\direction\direction.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\hashes\Hash.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\hashes\Hasher.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\hashes\HasherInt.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\hashes\SHA1.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\hashes\SHA1Digest.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\hashes\SHA1I.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ints\int.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ints\label.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ints\long.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ints\longLong.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ints\uint.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ints\uLabel.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ints\ulong.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\boolList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\dynamicLabelList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\dynamicLabelListList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\fileNameList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\labelList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\labelPairList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\PackedBoolList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\scalarList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\stringList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\vectorList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\lists\wordList.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\mathematicalConstants\mathematicalConstants.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\nil\nil.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\one\one.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\one\oneI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\ops\ops.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Pair\labelPair.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Pair\Pair.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\products\products.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\pTraits\pTraits.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\quaternion\quaternion.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\quaternion\quaternionI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\scalar\doubleFloat.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\scalar\doubleScalar.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\scalar\floatScalar.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\scalar\longDoubleScalar.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\scalar\scalar.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\septernion\septernion.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\septernion\septernionI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\autString.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\autStringI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\fileName.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\fileNameI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\keyType.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\keyTypeI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\Standard_String.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\word.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\string\wordI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Swap\Swap.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\DiagTensorTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\DiagTensorTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\diagTensor\diagTensor.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelDiagTensor\labelDiagTensor.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelSphericalTensor\labelSphericalTensor.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder\labelSymmTensor4thOrder.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelSymmTensor\labelSymmTensor.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensor2DTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensor2DTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\sphericalTensor2D\sphericalTensor2D.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensorTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensorTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\sphericalTensor\sphericalTensor.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor2DTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor2DTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\symmTensor2D\symmTensor2D.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor4thOrderTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor4thOrderTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\symmTensor4thOrder\symmTensor4thOrder.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensorTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensorTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\symmTensor\symmTensor.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\Tensor2DTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\Tensor2DTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\TensorTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\TensorTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\tensor\tensor.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\transform\transform.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\Tuple2\Tuple2.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\complexVector\complexVector.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\complexVector\complexVectorI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\labelVector\labelVector.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\Vector2DTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\Vector2DTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\vector2D\vector2D.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorSpace.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorSpaceI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorSpaceM.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorTemplate.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorTemplateI.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\vector\vector.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\zero\zero.hxx" />
+    <ClInclude Include="AutLib\Base\Primitives\zero\zeroI.hxx" />
+    <ClInclude Include="AutLib\Base\Traits\Traits.hxx" />
+    <ClInclude Include="AutLib\Base\UnitSystem\UnitSystem.hxx" />
+    <ClInclude Include="AutLib\Base\Variable\Smart\Smart_Variable.hxx" />
+    <ClInclude Include="AutLib\Base\Variable\Smart\Smart_VariableI.hxx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

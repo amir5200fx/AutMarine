@@ -1,0 +1,1587 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="AutLib\Base\Primitives\hashes\Hasher.cxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\hashes\SHA1.cxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\hashes\SHA1Digest.cxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\bools\bool.cxx">
+      <Filter>AutLib\Base\Primitives\bools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\containers\HashTables\HashTable\HashTableCore.cxx">
+      <Filter>AutLib\Base\containers\HashTables\HashTable</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\containers\LinkedLists\linkTypes\DLListBase\DLListBase.cxx">
+      <Filter>AutLib\Base\containers\LinkedLists\linkTypes\DLListBase</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\containers\LinkedLists\linkTypes\SLListBase\SLListBase.cxx">
+      <Filter>AutLib\Base\containers\LinkedLists\linkTypes\SLListBase</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\containers\Lists\ListOps\ListOps.cxx">
+      <Filter>AutLib\Base\containers\Lists\ListOps</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\containers\Lists\PackedList\PackedList.cxx">
+      <Filter>AutLib\Base\containers\Lists\PackedList</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionaryEntry\dictionaryEntry.cxx">
+      <Filter>AutLib\Base\db\dictionary\dictionaryEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionaryEntry\dictionaryEntryIO.cxx">
+      <Filter>AutLib\Base\db\dictionary\dictionaryEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\entry\entry.cxx">
+      <Filter>AutLib\Base\db\dictionary\entry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\entry\entryIO.cxx">
+      <Filter>AutLib\Base\db\dictionary\entry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\functionEntries\functionEntry\functionEntry.cxx">
+      <Filter>AutLib\Base\db\dictionary\functionEntries\functionEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\functionEntries\includeEntry\includeEntry.cxx">
+      <Filter>AutLib\Base\db\dictionary\functionEntries\includeEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\functionEntries\inputModeEntry\inputModeEntry.cxx">
+      <Filter>AutLib\Base\db\dictionary\functionEntries\inputModeEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntry.cxx">
+      <Filter>AutLib\Base\db\dictionary\primitiveEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntryIO.cxx">
+      <Filter>AutLib\Base\db\dictionary\primitiveEntry</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionary.cxx">
+      <Filter>AutLib\Base\db\dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\dictionary\dictionaryIO.cxx">
+      <Filter>AutLib\Base\db\dictionary</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\error\error.cxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\error\IOerror.cxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\error\messageStream.cxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\error\NonConvergency_Iteration_Failure.cxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Fstreams\IFstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Fstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Fstreams\OFstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Fstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams\IOstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams\Istream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams\Ostream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Tstreams\ITstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Tstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\token\token.cxx">
+      <Filter>AutLib\Base\db\IOstreams\token</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\token\tokenIO.cxx">
+      <Filter>AutLib\Base\db\IOstreams\token</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\StringStreams\StringStreamsPrint.cxx">
+      <Filter>AutLib\Base\db\IOstreams\StringStreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\ISstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\OSstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\prefixOSstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\readHexLabel.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Sstreams\SstreamsPrint.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\IPread.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\IPstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\OPstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\OPwrite.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\Pstream.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamCommsStruct.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamGlobals.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamReduceOps.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\Pstreams\PstreamsPrint.cxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\clock.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\constantsSwitch.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\debug.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\debugSwitch.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\dimensionedConstants.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\global.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\infoSwitch.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\JobInfo.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\optimisationSwitch.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\tolerancesSwitch.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\MSwindows\clockTime.cxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\MSwindows\cpuTime.cxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\MSwindows\fileStat.cxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\MSwindows\MSwindows.cxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\MSwindows\printStack.cxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\MSwindows\regExp.cxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\MSwindows\timer.cxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\bools\boolIO.cxx">
+      <Filter>AutLib\Base\Primitives\bools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\bools\Switch.cxx">
+      <Filter>AutLib\Base\Primitives\bools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\bools\SwitchIO.cxx">
+      <Filter>AutLib\Base\Primitives\bools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\char\charIO.cxx">
+      <Filter>AutLib\Base\Primitives\char</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\complex\complex.cxx">
+      <Filter>AutLib\Base\Primitives\complex</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\ints\intIO.cxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\ints\label.cxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\ints\longIO.cxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\ints\longLongIO.cxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\ints\uintIO.cxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\ints\ulongIO.cxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\lists\vectorList.cxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\quaternion\quaternion.cxx">
+      <Filter>AutLib\Base\Primitives\quaternion</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\scalar\doubleScalar.cxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\scalar\floatScalar.cxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\scalar\longDoubleScalar.cxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\scalar\scalar.cxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\septernion\septernion.cxx">
+      <Filter>AutLib\Base\Primitives\septernion</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\string\autString.cxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\string\autStringIO.cxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\string\fileName.cxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\string\fileNameIO.cxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\string\keyTypeIO.cxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\string\word.cxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\string\wordIO.cxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\diagTensor\diagTensor.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\diagTensor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelDiagTensor\labelDiagTensor.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelDiagTensor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelSphericalTensor\labelSphericalTensor.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelSphericalTensor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelSymmTensor\labelSymmTensor.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelSymmTensor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder\labelSymmTensor4thOrder.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\tensor\tensor.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\tensor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\symmTensor4thOrder\symmTensor4thOrder.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\symmTensor4thOrder</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\symmTensor2D\symmTensor2D.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\symmTensor2D</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\symmTensor\symmTensor.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\symmTensor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\sphericalTensor2D\sphericalTensor2D.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\sphericalTensor2D</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\Tensor\sphericalTensor\sphericalTensor.cxx">
+      <Filter>AutLib\Base\Primitives\Tensor\sphericalTensor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\db\IOstreams\IOstreams.cxx">
+      <Filter>AutLib\Base\db\IOstreams</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\complexVector\complexVector.cxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\complexVector</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\labelVector\labelVector.cxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\labelVector</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\vector\vector.cxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\vector</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Primitives\VectorSpace\vector2D\vector2D.cxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\vector2D</Filter>
+    </ClCompile>
+    <Filter Include="AutLib\Base\Traits">
+      <UniqueIdentifier>{b6d16d19-ea27-4c39-8e18-4c2acf4c9689}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="AutLib\Base\Global\Global_InitRunTime.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Base\Primitives\pTraits\pTraits.hxx">
+      <Filter>AutLib\Base\Primitives\pTraits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\zero\zero.hxx">
+      <Filter>AutLib\Base\Primitives\zero</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\zero\zeroI.hxx">
+      <Filter>AutLib\Base\Primitives\zero</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\one\one.hxx">
+      <Filter>AutLib\Base\Primitives\one</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\one\oneI.hxx">
+      <Filter>AutLib\Base\Primitives\one</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\nil\nil.hxx">
+      <Filter>AutLib\Base\Primitives\nil</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\mathematicalConstants\mathematicalConstants.hxx">
+      <Filter>AutLib\Base\Primitives\mathematicalConstants</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Swap\Swap.hxx">
+      <Filter>AutLib\Base\Primitives\Swap</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\hashes\Hash.hxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\hashes\Hasher.hxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\hashes\HasherInt.hxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\hashes\SHA1.hxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\hashes\SHA1Digest.hxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\hashes\SHA1I.hxx">
+      <Filter>AutLib\Base\Primitives\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\bools\bool.hxx">
+      <Filter>AutLib\Base\Primitives\bools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\bools\Switch.hxx">
+      <Filter>AutLib\Base\Primitives\bools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\char\char.hxx">
+      <Filter>AutLib\Base\Primitives\char</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\complex\complex.hxx">
+      <Filter>AutLib\Base\Primitives\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\complex\complexI.hxx">
+      <Filter>AutLib\Base\Primitives\complex</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\Dictionary\DictionaryTemplate.hxx">
+      <Filter>AutLib\Base\containers\Dictionaries\Dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\Dictionary\DictionaryTemplateI.hxx">
+      <Filter>AutLib\Base\containers\Dictionaries\Dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\DictionaryBase\DictionaryBase.hxx">
+      <Filter>AutLib\Base\containers\Dictionaries\DictionaryBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Dictionaries\DictionaryBase\DictionaryBaseI.hxx">
+      <Filter>AutLib\Base\containers\Dictionaries\DictionaryBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\HashTables\HashTable\HashTable.hxx">
+      <Filter>AutLib\Base\containers\HashTables\HashTable</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\HashTables\HashTable\HashTableI.hxx">
+      <Filter>AutLib\Base\containers\HashTables\HashTable</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Identifiers\Keyed\Keyed.hxx">
+      <Filter>AutLib\Base\containers\Identifiers\Keyed</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Identifiers\Keyed\KeyedI.hxx">
+      <Filter>AutLib\Base\containers\Identifiers\Keyed</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\ILList\ILList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\ILList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\ILList\ILListI.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\ILList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LList\LList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\LList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LList\LListI.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\LList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LPtrList\LPtrList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\LPtrList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\LPtrList\LPtrListI.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\LPtrList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\UILList\UILList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\UILList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\accessTypes\UILList\UILListI.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\accessTypes\UILList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\DLListBase\DLListBase.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\linkTypes\DLListBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\DLListBase\DLListBaseI.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\linkTypes\DLListBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\SLListBase\SLListBase.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\linkTypes\SLListBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\linkTypes\SLListBase\SLListBaseI.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\linkTypes\SLListBase</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\DLList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\user</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\FIFOStack.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\user</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\IDLList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\user</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\LIFOStack.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\user</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\SLList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\user</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\LinkedLists\user\SLPtrList.hxx">
+      <Filter>AutLib\Base\containers\LinkedLists\user</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\BiIndirectList\BiIndirectList.hxx">
+      <Filter>AutLib\Base\containers\Lists\BiIndirectList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\BiIndirectList\BiIndirectListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\BiIndirectList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\DynamicList\DynamicList.hxx">
+      <Filter>AutLib\Base\containers\Lists\DynamicList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\DynamicList\DynamicListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\DynamicList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\FixedList\FixedList.hxx">
+      <Filter>AutLib\Base\containers\Lists\FixedList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\FixedList\FixedListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\FixedList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\IndirectList\IndirectList.hxx">
+      <Filter>AutLib\Base\containers\Lists\IndirectList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\IndirectList\IndirectListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\IndirectList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\List\List.hxx">
+      <Filter>AutLib\Base\containers\Lists\List</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\List\ListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\List</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\ListOps\ListOps.hxx">
+      <Filter>AutLib\Base\containers\Lists\ListOps</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\ListOps\ListOpsI.hxx">
+      <Filter>AutLib\Base\containers\Lists\ListOps</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\UPtrList\UPtrList.hxx">
+      <Filter>AutLib\Base\containers\Lists\UPtrList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\UPtrList\UPtrListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\UPtrList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\UList\UList.hxx">
+      <Filter>AutLib\Base\containers\Lists\UList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\UList\UListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\UList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\UIndirectList\UIndirectList.hxx">
+      <Filter>AutLib\Base\containers\Lists\UIndirectList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\UIndirectList\UIndirectListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\UIndirectList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\SubList\SubList.hxx">
+      <Filter>AutLib\Base\containers\Lists\SubList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\SubList\SubListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\SubList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\SortableList\SortableList.hxx">
+      <Filter>AutLib\Base\containers\Lists\SortableList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\SortableList\SortableListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\SortableList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\PtrList\PtrList.hxx">
+      <Filter>AutLib\Base\containers\Lists\PtrList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\PtrList\PtrListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\PtrList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\PackedList\PackedList.hxx">
+      <Filter>AutLib\Base\containers\Lists\PackedList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Lists\PackedList\PackedListI.hxx">
+      <Filter>AutLib\Base\containers\Lists\PackedList</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\STL\Stl_List.hxx">
+      <Filter>AutLib\Base\containers\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\STL\Stl_SortedVector.hxx">
+      <Filter>AutLib\Base\containers\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\STL\Stl_Vector.hxx">
+      <Filter>AutLib\Base\containers\STL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\dictionaryEntry\dictionaryEntry.hxx">
+      <Filter>AutLib\Base\db\dictionary\dictionaryEntry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\entry\entry.hxx">
+      <Filter>AutLib\Base\db\dictionary\entry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\functionEntries\functionEntry\functionEntry.hxx">
+      <Filter>AutLib\Base\db\dictionary\functionEntries\functionEntry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\functionEntries\includeEntry\includeEntry.hxx">
+      <Filter>AutLib\Base\db\dictionary\functionEntries\includeEntry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\functionEntries\inputModeEntry\inputModeEntry.hxx">
+      <Filter>AutLib\Base\db\dictionary\functionEntries\inputModeEntry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntry.hxx">
+      <Filter>AutLib\Base\db\dictionary\primitiveEntry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\primitiveEntry\primitiveEntryI.hxx">
+      <Filter>AutLib\Base\db\dictionary\primitiveEntry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\dictionary.hxx">
+      <Filter>AutLib\Base\db\dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\dictionary\dictionaryI.hxx">
+      <Filter>AutLib\Base\db\dictionary</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\error\error.hxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\error\errorM.hxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\error\errorManip.hxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\error\messageStream.hxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\error\NonConvergency_Iteration_Failure.hxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\error\StaticAssert.hxx">
+      <Filter>AutLib\Base\db\error</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Fstreams\IFstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Fstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Fstreams\OFstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Fstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\hashes\OSHA1stream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\hashes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\INew.hxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\InfoProxy.hxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\IOmanip.hxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\IOstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\Istream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams\Ostream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\IOstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Tstreams\ITstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Tstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\token\token.hxx">
+      <Filter>AutLib\Base\db\IOstreams\token</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\token\tokenI.hxx">
+      <Filter>AutLib\Base\db\IOstreams\token</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\token\tokenList.hxx">
+      <Filter>AutLib\Base\db\IOstreams\token</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\StringStreams\IStringStream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\StringStreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\StringStreams\OStringStream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\StringStreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\ISstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\ISstreamI.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\OSstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\OSstreamI.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\prefixOSstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Sstreams\readHexLabel.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Sstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\IPstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\OPstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\OPstreamI.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\Pstream.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamGlobals.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamI.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamReduceOps.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamTools.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\Pstreams\PstreamToolsI.hxx">
+      <Filter>AutLib\Base\db\IOstreams\Pstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\autVersion.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\clock.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\constantsSwitch.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\controlSwitches.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\controlSwitchesI.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\debug.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\debugSwitch.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\demandDrivenData.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\dimensionedConstants.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Exceptions.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\infoSwitch.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\JobInfo.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\optimisationSwitch.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\OSspecific.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\parRun.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\predicates.h">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\safeBool.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\TColDecleration.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\tolerancesSwitch.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_Done.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\autoPtr.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\autoPtrI.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\refCount.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\tmp.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\Xfer.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\XferI.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\MSwindows\clockTime.hxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\MSwindows\cpuTime.hxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\MSwindows\deelx.h">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\MSwindows\fileStat.hxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\MSwindows\MSwindows.hxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\MSwindows\regExp.hxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\MSwindows\timer.hxx">
+      <Filter>AutLib\Base\MSwindows</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\contiguous\contiguous.hxx">
+      <Filter>AutLib\Base\Primitives\contiguous</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\direction\direction.hxx">
+      <Filter>AutLib\Base\Primitives\direction</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ints\int.hxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ints\label.hxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ints\long.hxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ints\longLong.hxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ints\uint.hxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ints\uLabel.hxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ints\ulong.hxx">
+      <Filter>AutLib\Base\Primitives\ints</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\boolList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\dynamicLabelList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\dynamicLabelListList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\fileNameList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\labelList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\labelPairList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\PackedBoolList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\scalarList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\stringList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\vectorList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\lists\wordList.hxx">
+      <Filter>AutLib\Base\Primitives\lists</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\ops\ops.hxx">
+      <Filter>AutLib\Base\Primitives\ops</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Pair\labelPair.hxx">
+      <Filter>AutLib\Base\Primitives\Pair</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Pair\Pair.hxx">
+      <Filter>AutLib\Base\Primitives\Pair</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\products\products.hxx">
+      <Filter>AutLib\Base\Primitives\products</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\quaternion\quaternion.hxx">
+      <Filter>AutLib\Base\Primitives\quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\quaternion\quaternionI.hxx">
+      <Filter>AutLib\Base\Primitives\quaternion</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\scalar\doubleFloat.hxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\scalar\doubleScalar.hxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\scalar\floatScalar.hxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\scalar\longDoubleScalar.hxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\scalar\scalar.hxx">
+      <Filter>AutLib\Base\Primitives\scalar</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\septernion\septernion.hxx">
+      <Filter>AutLib\Base\Primitives\septernion</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\septernion\septernionI.hxx">
+      <Filter>AutLib\Base\Primitives\septernion</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\autString.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\autStringI.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\fileName.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\fileNameI.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\keyType.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\keyTypeI.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\Standard_String.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\word.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\string\wordI.hxx">
+      <Filter>AutLib\Base\Primitives\string</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\transform\transform.hxx">
+      <Filter>AutLib\Base\Primitives\transform</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\diagTensor\diagTensor.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\diagTensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelDiagTensor\labelDiagTensor.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelDiagTensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelSphericalTensor\labelSphericalTensor.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelSphericalTensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelSymmTensor\labelSymmTensor.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelSymmTensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder\labelSymmTensor4thOrder.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\tensor\tensor.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\symmTensor4thOrder\symmTensor4thOrder.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\symmTensor4thOrder</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\symmTensor2D\symmTensor2D.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\symmTensor2D</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\symmTensor\symmTensor.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\symmTensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\sphericalTensor2D\sphericalTensor2D.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\sphericalTensor2D</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\sphericalTensor\sphericalTensor.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor\sphericalTensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\DiagTensorTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\DiagTensorTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensor2DTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensor2DTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensorTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SphericalTensorTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor2DTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor2DTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor4thOrderTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensor4thOrderTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensorTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\SymmTensorTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\Tensor2DTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\Tensor2DTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\TensorTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tensor\TensorTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\Tensor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\Tuple2\Tuple2.hxx">
+      <Filter>AutLib\Base\Primitives\Tuple2</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\db\IOstreams\IOstreams.hxx">
+      <Filter>AutLib\Base\db\IOstreams</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\complexVector\complexVector.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\complexVector</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\complexVector\complexVectorI.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\complexVector</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\labelVector\labelVector.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\labelVector</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\vector\vector.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\vector</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\vector2D\vector2D.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace\vector2D</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\Vector2DTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\Vector2DTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorSpace.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorSpaceI.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorSpaceM.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorTemplate.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Primitives\VectorSpace\VectorTemplateI.hxx">
+      <Filter>AutLib\Base\Primitives\VectorSpace</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_Indexed.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_Named.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_Verbose.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\Avl\Adt_AvlTree.hxx">
+      <Filter>AutLib\Base\containers\ADT\Avl</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary1d\Adt_Ary1d.hxx">
+      <Filter>AutLib\Base\containers\ADT\Ary1d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary1d\Adt_Ary1dI.hxx">
+      <Filter>AutLib\Base\containers\ADT\Ary1d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\List\Adt_List.hxx">
+      <Filter>AutLib\Base\containers\ADT\List</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\handle.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\Transient.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Traits\Traits.hxx">
+      <Filter>AutLib\Base\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary2d\Adt_Ary2d.hxx">
+      <Filter>AutLib\Base\containers\ADT\Ary2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Time.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Variable\Smart\Smart_Variable.hxx">
+      <Filter>AutLib\Base\Variable\Smart</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Variable\Smart\Smart_VariableI.hxx">
+      <Filter>AutLib\Base\Variable\Smart</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\UnitSystem\UnitSystem.hxx">
+      <Filter>AutLib\Base\UnitSystem</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\multiValued\multiValued_Variable.hxx">
+      <Filter>AutLib\Base\multiValued</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\multiValued\multiValued_VariableI.hxx">
+      <Filter>AutLib\Base\multiValued</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary1d\Adt_Ary1d.hxx">
+      <Filter>AutLib\Base\containers\ADT\Ary1d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\Ary1d\Adt_Ary1dI.hxx">
+      <Filter>AutLib\Base\containers\ADT\Ary1d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\ADT\List\Adt_List.hxx">
+      <Filter>AutLib\Base\containers\ADT\List</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\handle.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\memory\Transient.hxx">
+      <Filter>AutLib\Base\memory</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_InitRunTime.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{98f279b7-853b-4d33-a528-6182ddafaf1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base">
+      <UniqueIdentifier>{3ce39a57-4893-4269-ba00-b46af85c9d85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives">
+      <UniqueIdentifier>{acda8cc3-00bb-4852-83a3-64da13ec5874}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\pTraits">
+      <UniqueIdentifier>{dc0ef1c3-55f1-4c79-9b4c-74a93de7c795}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\bools">
+      <UniqueIdentifier>{896baaad-6573-4f97-8f30-61837dd9e3df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\char">
+      <UniqueIdentifier>{b2b31495-d323-4873-bc8e-b9300df656ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\complex">
+      <UniqueIdentifier>{396325d8-e10b-4a6c-9551-7e0d14d6efeb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\contiguous">
+      <UniqueIdentifier>{288d5c1c-d462-4635-897f-d4f994541e3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\direction">
+      <UniqueIdentifier>{6a7d65b0-c14c-4426-a965-8c798bbec459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\hashes">
+      <UniqueIdentifier>{1dc6da36-1635-47fe-8ae6-61ed36998c9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\ints">
+      <UniqueIdentifier>{f48a158c-09e8-479c-a2e6-97729ffc160b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\lists">
+      <UniqueIdentifier>{e16f76aa-d6ac-4b8b-b05f-4fa345c671d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\mathematicalConstants">
+      <UniqueIdentifier>{51cb63e8-2a83-4882-a064-9030b67cd340}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\nil">
+      <UniqueIdentifier>{9311e2f4-eaff-4360-ad79-8b85e68df629}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\one">
+      <UniqueIdentifier>{407e7346-0dc1-40ca-bd61-cc6f19f0f7a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\ops">
+      <UniqueIdentifier>{963d3947-7d9c-430b-98f9-b12cb921430e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Pair">
+      <UniqueIdentifier>{860884e1-0d57-4582-ae80-53f2a7b9a05f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\products">
+      <UniqueIdentifier>{36d97127-70c6-4ac2-b3ec-b4e127657b4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\quaternion">
+      <UniqueIdentifier>{e87adaa6-42af-40ca-84cb-b2cfc88ac5b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\scalar">
+      <UniqueIdentifier>{983fcd97-57a6-4355-99f1-6c4a7753bbbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\septernion">
+      <UniqueIdentifier>{18bb13fe-ea1e-461c-9cad-7af52a50a238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\string">
+      <UniqueIdentifier>{5f68370c-fb7e-4ef2-809b-abc605222020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Swap">
+      <UniqueIdentifier>{c3342414-ba08-4c2d-a31e-bd7f8838fcb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor">
+      <UniqueIdentifier>{ee4e0554-55f3-4885-b920-044d2cc967f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\transform">
+      <UniqueIdentifier>{bbfab0e1-3473-4f09-ae41-2a52727b9dd0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tuple2">
+      <UniqueIdentifier>{ad66f8a7-f62b-4f52-9e23-fc113062694c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\VectorN">
+      <UniqueIdentifier>{28661c61-3eb8-4e57-82dc-946d782f6d66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\VectorSpace">
+      <UniqueIdentifier>{52da6f3b-24f1-42e0-b218-42e817e74bdc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\zero">
+      <UniqueIdentifier>{e36f09e2-3abd-4afb-ad41-d0e7b13334a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\VectorSpace\complexVector">
+      <UniqueIdentifier>{f744a827-8d27-4430-8cc9-e9b2c00ce93d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\VectorSpace\labelVector">
+      <UniqueIdentifier>{fdaf57e7-ff14-477b-91fd-1a86c7818c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\VectorSpace\vector">
+      <UniqueIdentifier>{41070b70-da11-4952-a831-e714284d0d65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\VectorSpace\vector2D">
+      <UniqueIdentifier>{643f487a-8178-46f4-8c77-05414ed39a73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers">
+      <UniqueIdentifier>{6fe9a2b2-fcee-46be-a80d-2e7dd71a8248}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db">
+      <UniqueIdentifier>{c76c7576-bcad-4de3-882f-2ba7f1e36451}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Global">
+      <UniqueIdentifier>{991bad8c-6379-49f3-a2e4-fcea1ba44afc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\memory">
+      <UniqueIdentifier>{bada666a-9123-4434-8392-0e13d5d683e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\MSwindows">
+      <UniqueIdentifier>{f0e5677f-57eb-4dc9-a6f1-d7a635110c67}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\ADT">
+      <UniqueIdentifier>{65fadf7f-6d20-4ae1-ace2-a593bf77b5d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\ADT\Avl">
+      <UniqueIdentifier>{56b964a4-a89f-45a9-b64d-fcb8150d4dd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\ADT\Ary1d">
+      <UniqueIdentifier>{1c5c6ba5-46f0-4bbf-afb1-de700f5576c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\ADT\List">
+      <UniqueIdentifier>{2778aecb-66e4-417b-97f5-abf7c08c80db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\ADT\Ary2d">
+      <UniqueIdentifier>{af1d6967-7a18-4e0b-b549-23f755d5a8d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Dictionaries">
+      <UniqueIdentifier>{21861870-81cd-4f25-8ea5-2d9f8e4ddc81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\HashTables">
+      <UniqueIdentifier>{cf6b7d44-ec7b-48b2-9b38-29ef4c620853}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Identifiers">
+      <UniqueIdentifier>{6039a3ea-b801-4708-9207-494fe2374895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists">
+      <UniqueIdentifier>{2d791e0f-9372-4522-b679-89eb6d96a532}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists">
+      <UniqueIdentifier>{20f711a5-d9ba-4be3-b159-10643bdb4458}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\NamedEnum">
+      <UniqueIdentifier>{b1256d68-960d-4d54-96c7-8bb1314db66b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\STL">
+      <UniqueIdentifier>{e5ae0a87-9c6c-4f78-bad1-348986ac32d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Dictionaries\Dictionary">
+      <UniqueIdentifier>{203282f5-b32e-4453-9085-e3c2fb4a12da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Dictionaries\DictionaryBase">
+      <UniqueIdentifier>{e3531d45-15aa-4e13-b4f0-4cc3f551201e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Dictionaries\PtrDictionary">
+      <UniqueIdentifier>{7b7839e6-1d02-45f2-8e62-2f0f7d8d120c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Dictionaries\UDictionary">
+      <UniqueIdentifier>{f844e9dc-3062-4292-ab60-355b0797f45d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Dictionaries\UPtrDictionary">
+      <UniqueIdentifier>{d2d8cf09-50b6-4e97-86ec-82e0f60d08c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\HashTables\HashPtrTable">
+      <UniqueIdentifier>{2cb0dcc4-c6dd-4b12-b174-4fb3c882a967}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\HashTables\HashSet">
+      <UniqueIdentifier>{079f1fd8-20b9-44a9-abe1-361b8babfc1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\HashTables\HashTable">
+      <UniqueIdentifier>{b7edca15-4fc2-4cf1-9493-fcb0aecf29f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\HashTables\Map">
+      <UniqueIdentifier>{f58243b5-7d4e-46cd-84b2-6990139b4921}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\HashTables\PtrMap">
+      <UniqueIdentifier>{460266f1-6e29-4ada-b6d9-4f537021ffff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\HashTables\StaticHashTable">
+      <UniqueIdentifier>{65403e4b-ab7d-4673-8969-10bfb4caecf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Identifiers\Keyed">
+      <UniqueIdentifier>{e9596931-1fae-4ac7-b02d-d18a23488d46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\accessTypes">
+      <UniqueIdentifier>{be3b7e2e-863f-4a0b-a33d-5e2f3187034b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\linkTypes">
+      <UniqueIdentifier>{2b51d658-2ffb-4864-98d5-a810bd79509f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\user">
+      <UniqueIdentifier>{07bb41c3-63fe-4cbb-9c2b-f7efc26da224}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\accessTypes\ILList">
+      <UniqueIdentifier>{8140b2f1-acca-4b41-85b3-10c8c15fc96d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\accessTypes\LList">
+      <UniqueIdentifier>{554795f1-6c87-48c0-bafd-8a1c5d6c53bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\accessTypes\LPtrList">
+      <UniqueIdentifier>{9299d304-073a-4fd6-9b09-71a74c5abef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\accessTypes\UILList">
+      <UniqueIdentifier>{f4457095-ddff-4356-a91a-761ab3bb0276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\linkTypes\DLListBase">
+      <UniqueIdentifier>{d503538d-9a0b-4cdc-8b58-4848de487e32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\LinkedLists\linkTypes\SLListBase">
+      <UniqueIdentifier>{65145241-1453-4375-8ef9-7a3947ebf246}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\BiIndirectList">
+      <UniqueIdentifier>{69bfa480-faaa-4e69-94c9-adfd5893ccd4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\CompactListList">
+      <UniqueIdentifier>{0a580a06-2d77-453c-9427-90dbbeb56feb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\DynamicList">
+      <UniqueIdentifier>{96451899-a712-40ce-a1a4-b0da73c627f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\FixedList">
+      <UniqueIdentifier>{10dc5601-113b-4163-ba3e-a09b19997789}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\Histogram">
+      <UniqueIdentifier>{caa74e29-3cb3-4c64-9f5a-3e05728379fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\IndirectList">
+      <UniqueIdentifier>{01b93e86-b848-48dd-8994-9d86e168cb05}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\List">
+      <UniqueIdentifier>{1181a9ff-af66-4a4a-899e-204ca6f4e60d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\ListListOps">
+      <UniqueIdentifier>{f6fdca98-bc0c-4bc9-88d1-48ec535aca5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\ListOps">
+      <UniqueIdentifier>{dec731d0-1da9-4d82-bf71-3fffeebf3ed6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\PackedList">
+      <UniqueIdentifier>{a283ff61-b56a-404a-ac56-317bca6d1d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\PriorityList">
+      <UniqueIdentifier>{2859ea90-2b15-4d82-98cd-a6af631cf90f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\PtrList">
+      <UniqueIdentifier>{29669fc7-33cb-4182-bf25-5135c1f04c50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\SortableList">
+      <UniqueIdentifier>{7bd7e416-6101-4223-8ce3-a1658f4a411b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\Stack">
+      <UniqueIdentifier>{23b272fd-f6fa-4ec5-8bd4-35a934ab4a0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\SubList">
+      <UniqueIdentifier>{04cbc49b-618d-49af-986c-e54db25d94b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\UIndirectList">
+      <UniqueIdentifier>{439c3129-02f4-4c0c-adf9-cafc22da68b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\UList">
+      <UniqueIdentifier>{28c789f8-77ec-4f39-b793-23a9253f6d26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Lists\UPtrList">
+      <UniqueIdentifier>{89c16f52-dab6-489b-8167-241e128c8394}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary">
+      <UniqueIdentifier>{7e58ce44-e972-4551-acd3-8e21cf0a0cca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dlLibraryTable">
+      <UniqueIdentifier>{9ebe78bd-5c16-457d-8a1d-d6ed9ba0c7b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\error">
+      <UniqueIdentifier>{b500c85f-dec3-46a1-b45e-58749830547e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\functionObjects">
+      <UniqueIdentifier>{27a58ca6-90f1-44ce-b6de-9320f961eea5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOobjects">
+      <UniqueIdentifier>{2030b0a8-aecd-4617-ac17-ba6f4363b8e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams">
+      <UniqueIdentifier>{79ca5f76-b34d-46a9-860b-70d8ffc8ac64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\objectRegistry">
+      <UniqueIdentifier>{26a8ea05-b4f5-45c2-ae47-6349c23d75bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\regIOobject">
+      <UniqueIdentifier>{40fd950e-7b69-48e6-9669-33d16859b2db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\scalarRange">
+      <UniqueIdentifier>{845887ea-f3a5-4ae1-9873-4a09ed2180ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\Time">
+      <UniqueIdentifier>{14bac008-5234-4fe7-8ba2-4d5965b66d9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\typeInfo">
+      <UniqueIdentifier>{abdeb91e-c85f-46fd-90b5-e099031b929b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\dictionaryEntry">
+      <UniqueIdentifier>{39e8324c-2118-4dbf-bafe-868cd80a9d4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\entry">
+      <UniqueIdentifier>{3fca1513-d8c3-4811-9080-114c22dc742b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\functionEntries">
+      <UniqueIdentifier>{dd043e5d-d0dc-4c2f-b6ef-b38d5905d2c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\primitiveEntry">
+      <UniqueIdentifier>{64b95bf0-fac9-4b92-94af-ee0614395e6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\Fstreams">
+      <UniqueIdentifier>{0e546c09-bc96-434c-8fce-05f5c143738e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\gzstream">
+      <UniqueIdentifier>{8b413009-51a5-4034-9d84-6600aaf37e98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\hashes">
+      <UniqueIdentifier>{1dc65266-00eb-4dd3-9ad0-f0d324548223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\IOstreams">
+      <UniqueIdentifier>{c5d36b1b-067e-4147-bde0-de5bdb93d50c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\Pstreams">
+      <UniqueIdentifier>{673660f8-057c-4328-83e4-9b29d8884cb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\Sstreams">
+      <UniqueIdentifier>{9ec24b97-8b7e-4a9c-a0b2-561a2442f484}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\StringStreams">
+      <UniqueIdentifier>{6439e86d-d29b-4ee2-8b08-4798fbf978f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\token">
+      <UniqueIdentifier>{59ba5bba-ee90-497f-aad6-9983e44d10bf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\IOstreams\Tstreams">
+      <UniqueIdentifier>{304fb0ad-4cbd-49d5-91a9-8932aa26cdd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\functionEntries\functionEntry">
+      <UniqueIdentifier>{e6649e8f-fa0b-4207-8fc2-09027dea3aa5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\functionEntries\includeEntry">
+      <UniqueIdentifier>{017ee902-edf8-4776-b759-b8634b0e86c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\functionEntries\includeIfPresentEntry">
+      <UniqueIdentifier>{1edd9cd1-124e-444d-8838-684235cd0f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\functionEntries\inputModeEntry">
+      <UniqueIdentifier>{67c74f6b-8d65-4620-a294-674299d8d6ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\db\dictionary\functionEntries\removeEntry">
+      <UniqueIdentifier>{d73dd618-f147-4950-b0a2-e23d517a63eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\diagTensor">
+      <UniqueIdentifier>{2a0ed004-9c34-4b59-89f1-4bb51bcc306f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\labelDiagTensor">
+      <UniqueIdentifier>{3eff0bd2-c696-4523-8157-bb212b0a306a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\labelSphericalTensor">
+      <UniqueIdentifier>{72140c8b-915d-4417-ac86-7165953f8f66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\labelSymmTensor">
+      <UniqueIdentifier>{038dfb1c-7abf-4119-87bc-db7bf6b2e4cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\labelSymmTensor4thOrder">
+      <UniqueIdentifier>{714704c4-d467-4585-9e87-983b72c8a4eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\sphericalTensor">
+      <UniqueIdentifier>{c38d707c-d724-42b9-b719-6ddcab9eaf48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\sphericalTensor2D">
+      <UniqueIdentifier>{5dcd3526-140a-4c01-8b01-90dcd51a1af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\symmTensor">
+      <UniqueIdentifier>{c0240446-a787-4e37-a6b0-690880e49e71}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\symmTensor2D">
+      <UniqueIdentifier>{910c3d7b-1714-4272-a6a7-1796a4094c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\symmTensor4thOrder">
+      <UniqueIdentifier>{66906462-1971-49ef-a642-d91d41a38ed7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Primitives\Tensor\tensor">
+      <UniqueIdentifier>{13eb3188-a862-4d96-b450-fd72d138abd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Variable">
+      <UniqueIdentifier>{1e3eacff-090e-4cad-a01c-49eaeab6076f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionedTypes">
+      <UniqueIdentifier>{7090abb3-8750-4ab6-80b1-5e929421ec91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionSet">
+      <UniqueIdentifier>{4be0831b-ecae-46c2-91f7-9872aadc99dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionedTypes\dimensionedScalar">
+      <UniqueIdentifier>{27794002-057e-448d-ace9-bf774909f6a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionedTypes\dimensionedType">
+      <UniqueIdentifier>{2542e7d5-bb00-4e6f-ad32-ea5ca2295fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Variable\Smart">
+      <UniqueIdentifier>{70bc665f-6644-49ad-9589-71618f67db53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\UnitSystem">
+      <UniqueIdentifier>{ae87eab0-ad05-434a-b880-78f75e9ccb3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment">
+      <UniqueIdentifier>{d8936dc0-e07d-4217-b20f-e84be4e4589a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Density">
+      <UniqueIdentifier>{0286fbd5-83a6-4c0d-93b9-df46a1ff25af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Gravity">
+      <UniqueIdentifier>{fc336ae8-862f-4a4c-ba0f-4a46471a1304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Velocity">
+      <UniqueIdentifier>{b015b21c-6c16-4895-a98a-6420d61a7909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Viscosity">
+      <UniqueIdentifier>{70f523a3-3587-4237-bffb-6cb9913f9c3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Viscosity\dynamic">
+      <UniqueIdentifier>{7b45f2c4-0c75-499e-9f47-62d0b462005e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Viscosity\kinematic">
+      <UniqueIdentifier>{33f6b173-ae0a-4c8d-939b-0c9027e778ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Variable\Unit">
+      <UniqueIdentifier>{ca451660-6d28-471a-9ea1-e90c62e68425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Variable">
+      <UniqueIdentifier>{1e3eacff-090e-4cad-a01c-49eaeab6076f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionedTypes">
+      <UniqueIdentifier>{7090abb3-8750-4ab6-80b1-5e929421ec91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionSet">
+      <UniqueIdentifier>{4be0831b-ecae-46c2-91f7-9872aadc99dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionedTypes\dimensionedScalar">
+      <UniqueIdentifier>{27794002-057e-448d-ace9-bf774909f6a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\dimensionedTypes\dimensionedType">
+      <UniqueIdentifier>{2542e7d5-bb00-4e6f-ad32-ea5ca2295fcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Variable\Smart">
+      <UniqueIdentifier>{70bc665f-6644-49ad-9589-71618f67db53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\UnitSystem">
+      <UniqueIdentifier>{ae87eab0-ad05-434a-b880-78f75e9ccb3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment">
+      <UniqueIdentifier>{d8936dc0-e07d-4217-b20f-e84be4e4589a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Density">
+      <UniqueIdentifier>{0286fbd5-83a6-4c0d-93b9-df46a1ff25af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Gravity">
+      <UniqueIdentifier>{fc336ae8-862f-4a4c-ba0f-4a46471a1304}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Velocity">
+      <UniqueIdentifier>{b015b21c-6c16-4895-a98a-6420d61a7909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Viscosity">
+      <UniqueIdentifier>{70f523a3-3587-4237-bffb-6cb9913f9c3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Viscosity\dynamic">
+      <UniqueIdentifier>{7b45f2c4-0c75-499e-9f47-62d0b462005e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Environment\Viscosity\kinematic">
+      <UniqueIdentifier>{33f6b173-ae0a-4c8d-939b-0c9027e778ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\Variable\Unit">
+      <UniqueIdentifier>{ca451660-6d28-471a-9ea1-e90c62e68425}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\multiValued">
+      <UniqueIdentifier>{1418107b-3b4a-494c-a8f7-030060be5178}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>
