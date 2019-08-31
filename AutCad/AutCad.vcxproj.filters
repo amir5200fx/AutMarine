@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{01c8ac75-f88b-479d-89bf-5c8c56f7ab4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad">
+      <UniqueIdentifier>{1feed5ab-7b26-48db-83cd-c1a90dc13195}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Entities">
+      <UniqueIdentifier>{87419a4f-d049-4247-8dc2-68c5f6251869}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Entities\Curve">
+      <UniqueIdentifier>{684ae50a-bf17-4e0b-83a7-faab37aed3a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Tools">
+      <UniqueIdentifier>{5c3bbb7e-3469-4f79-b98c-a3c37d29724e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Serialization">
+      <UniqueIdentifier>{85efde15-474d-4782-af77-1227867fdb08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade">
+      <UniqueIdentifier>{536c1236-cc65-4952-bf61-2a96d758f8ce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\IO">
+      <UniqueIdentifier>{bbd8773e-5bec-41f5-87e2-e5e854b039f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\IO\Format">
+      <UniqueIdentifier>{1f027d6c-d6e5-4503-beee-b13be1cbf8c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\IO\Format\System">
+      <UniqueIdentifier>{df0fdae3-e704-4067-b741-81b65edb78a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\Discrete">
+      <UniqueIdentifier>{4effac75-51f7-456b-948e-8a111e81ba9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\Discrete\System">
+      <UniqueIdentifier>{475a3512-0065-4ed1-a142-83038a524cc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\IO\Format\IGES">
+      <UniqueIdentifier>{0e6152d4-f27b-4a5e-a738-8e0a34d0d83d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\IO\Format\STEP">
+      <UniqueIdentifier>{eea66141-99db-4dfb-bf18-f2527c3dcaa0}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Cad\Entities\Curve\Cad_CurveInfo.cxx">
+      <Filter>AutLib\Cad\Entities\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
+      <Filter>AutLib\Cascade\Discrete\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cascade\Discrete\FastDiscrete.cxx">
+      <Filter>AutLib\Cascade\Discrete</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cascade\IO\Format\IGES\IO_IGES.cxx">
+      <Filter>AutLib\Cascade\IO\Format\IGES</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Tools\Cad_Tools.cxx">
+      <Filter>AutLib\Cad\Tools</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Cad\Entities\Curve\Cad_CurveInfo.hxx">
+      <Filter>AutLib\Cad\Entities\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Serialization\Cad_Serialization.hxx">
+      <Filter>AutLib\Cad\Serialization</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Config.hxx">
+      <Filter>AutLib\Cascade\IO\Format\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.hxx">
+      <Filter>AutLib\Cascade\Discrete\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\Discrete\FastDiscrete.hxx">
+      <Filter>AutLib\Cascade\Discrete</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Info.hxx">
+      <Filter>AutLib\Cascade\IO\Format\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Shape.hxx">
+      <Filter>AutLib\Cascade\IO\Format\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\IO\Format\IGES\IO_IGES.hxx">
+      <Filter>AutLib\Cascade\IO\Format\IGES</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Tools\Cad_Tools.hxx">
+      <Filter>AutLib\Cad\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\IO\Format\STEP\IO_STEP.hxx">
+      <Filter>AutLib\Cascade\IO\Format\STEP</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

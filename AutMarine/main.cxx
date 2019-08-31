@@ -6,20 +6,17 @@
 #include <Entity2d_Box.hxx>
 #include <fstream>
 #include <iostream>
+#include <IO_IGES.hxx>
+#include <FastDiscrete_Params.hxx>
 
 using namespace boost::archive;
 using namespace AutLib;
 
 int main()
 {
-	std::fstream file;
-	file.open("save.txt", ios::out);
-
-	text_oarchive oa(file);
-	oa << Pnt2d(1, 3);
-
-	Entity2d_Box b1(Pnt2d(0.2, 1.3), Pnt2d(0.86, 4.8));
-	oa << b1;
+	IO_IGES reader(gl_fast_discrete_parameters);
+	reader.Verbose() = 1;
+	reader.ReadFile("F16 one.IGS");
 
 	PAUSE;
 	return 0;

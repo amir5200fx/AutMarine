@@ -4,15 +4,26 @@
 
 #include <Standard_TypeDef.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 namespace AutLib
 {
 
 	class Global_Done
 	{
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		Standard_Boolean IsDone_;
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version)
+		{
+			ar& IsDone_;
+		}
 
 	protected:
 

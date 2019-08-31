@@ -4,15 +4,27 @@
 
 #include <Standard_TypeDef.hxx>
 
+#include <boost/archive/text_iarchive.hpp>
+#include <boost/archive/text_oarchive.hpp>
+
 namespace AutLib
 {
+
 
 	class Global_Verbose
 	{
 
+		friend class boost::serialization::access;
+
 		/*Private Data*/
 
 		Standard_Integer theVerbose_;
+
+		template<class Archive>
+		void serialize(Archive& ar, const unsigned int version)
+		{
+			ar& theVerbose_;
+		}
 
 	public:
 

@@ -43,11 +43,11 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(MSMPI_INC);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <IncludePath>$(BOOST_INCLUDEDIR);$(MSMPI_INC);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
     <LibraryPath>$(MSMPI_LIB64);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(MSMPI_INC);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <IncludePath>$(BOOST_INCLUDEDIR);$(MSMPI_INC);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
     <LibraryPath>$(MSMPI_LIB64);$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -130,6 +130,8 @@
     <ClCompile Include="AutLib\Base\Global\debugSwitch.cxx" />
     <ClCompile Include="AutLib\Base\Global\dimensionedConstants.cxx" />
     <ClCompile Include="AutLib\Base\Global\global.cxx" />
+    <ClCompile Include="AutLib\Base\Global\Global_Message.cxx" />
+    <ClCompile Include="AutLib\Base\Global\Global_Timer.cxx" />
     <ClCompile Include="AutLib\Base\Global\infoSwitch.cxx" />
     <ClCompile Include="AutLib\Base\Global\JobInfo.cxx" />
     <ClCompile Include="AutLib\Base\Global\optimisationSwitch.cxx" />
@@ -306,7 +308,9 @@
     <ClInclude Include="AutLib\Base\Global\Global_Done.hxx" />
     <ClInclude Include="AutLib\Base\Global\Global_Indexed.hxx" />
     <ClInclude Include="AutLib\Base\Global\Global_InitRunTime.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_Message.hxx" />
     <ClInclude Include="AutLib\Base\Global\Global_Named.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_Timer.hxx" />
     <ClInclude Include="AutLib\Base\Global\Global_Verbose.hxx" />
     <ClInclude Include="AutLib\Base\Global\infoSwitch.hxx" />
     <ClInclude Include="AutLib\Base\Global\JobInfo.hxx" />

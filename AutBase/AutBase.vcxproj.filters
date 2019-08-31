@@ -322,6 +322,12 @@
     <ClCompile Include="AutLib\Base\Global\Global_InitRunTime.cxx">
       <Filter>AutLib\Base\Global</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\Global_Timer.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Base\Global\Global_Message.cxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Base\Primitives\pTraits\pTraits.hxx">
@@ -1099,6 +1105,12 @@
       <Filter>AutLib\Base\memory</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\Base\Global\Global_InitRunTime.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_Timer.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_Message.hxx">
       <Filter>AutLib\Base\Global</Filter>
     </ClInclude>
   </ItemGroup>
