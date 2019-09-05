@@ -1,7 +1,5 @@
-#include <IO_IGES.hxx>
+#include <IO_STEP.hxx>
 
-#include <error.hxx>
-#include <OSstream.hxx>
 #include <Global_Timer.hxx>
 #include <Global_Message.hxx>
 #include <Pnt3d.hxx>
@@ -11,10 +9,10 @@
 
 #include <BRepBndLib.hxx>
 #include <ShapeFix_Shape.hxx>
-#include <IGESControl_Reader.hxx>
+#include <STEPControl_Reader.hxx>
 #include <BRepMesh_FastDiscret.hxx>
 
-void AutLib::IO_IGES::doFixShape()
+void AutLib::IO_STEP::doFixShape()
 {
 	if (Verbose())
 	{
@@ -30,7 +28,7 @@ void AutLib::IO_IGES::doFixShape()
 
 	if (Verbose())
 	{
-		GET_MESSAGE << "min corner= [" << BoundingBox().P0() 
+		GET_MESSAGE << "min corner= [" << BoundingBox().P0()
 			<< "], max corner= [" << BoundingBox().P1() << "]";
 		SEND_INFO;
 	}
@@ -66,39 +64,39 @@ void AutLib::IO_IGES::doFixShape()
 	if (Verbose())
 	{
 
-		GET_MESSAGE << " ShapeExtendOK = " 
+		GET_MESSAGE << " ShapeExtendOK = "
 			<< fixShape->Status(ShapeExtend_OK);
 		SEND_INFO;
-		
-		GET_MESSAGE << " ShapeExtend_DONE1 = " 
+
+		GET_MESSAGE << " ShapeExtend_DONE1 = "
 			<< fixShape->Status(ShapeExtend_DONE1);
 		SEND_INFO;
 
-		GET_MESSAGE << " ShapeExtend_DONE2 = " 
+		GET_MESSAGE << " ShapeExtend_DONE2 = "
 			<< fixShape->Status(ShapeExtend_DONE2);
 		SEND_INFO;
 
-		GET_MESSAGE << " ShapeExtend_DONE3 = " 
+		GET_MESSAGE << " ShapeExtend_DONE3 = "
 			<< fixShape->Status(ShapeExtend_DONE3);
 		SEND_INFO;
 
-		GET_MESSAGE << " ShapeExtend_DONE4 = " 
+		GET_MESSAGE << " ShapeExtend_DONE4 = "
 			<< fixShape->Status(ShapeExtend_DONE4);
 		SEND_INFO;
 
-		GET_MESSAGE << " ShapeExtend_DONE5 = " 
+		GET_MESSAGE << " ShapeExtend_DONE5 = "
 			<< fixShape->Status(ShapeExtend_DONE5);
 		SEND_INFO;
 
-		GET_MESSAGE << " ShapeExtend_DONE6 = " 
+		GET_MESSAGE << " ShapeExtend_DONE6 = "
 			<< fixShape->Status(ShapeExtend_DONE6);
 		SEND_INFO;
 
-		GET_MESSAGE << " ShapeExtend_DONE7 = " 
+		GET_MESSAGE << " ShapeExtend_DONE7 = "
 			<< fixShape->Status(ShapeExtend_DONE7);
 		SEND_INFO;
 
-		GET_MESSAGE << " ShapeExtend_DONE8 = " 
+		GET_MESSAGE << " ShapeExtend_DONE8 = "
 			<< fixShape->Status(ShapeExtend_DONE8);
 		SEND_INFO;
 	}
@@ -106,7 +104,7 @@ void AutLib::IO_IGES::doFixShape()
 	SetShape(fixShape->Shape());
 }
 
-void AutLib::IO_IGES::ReadFile
+void AutLib::IO_STEP::ReadFile
 (
 	const word & theFileName
 )
@@ -115,7 +113,7 @@ void AutLib::IO_IGES::ReadFile
 		Global_Timer timer;
 		timer.SetInfo(Global_TimerInfo_s);
 
-		IGESControl_Reader Reader;
+		STEPControl_Reader Reader;
 
 		Reader.ReadFile(theFileName.c_str());
 
@@ -157,7 +155,7 @@ void AutLib::IO_IGES::ReadFile
 
 	if (Verbose())
 	{
-		GET_MESSAGE << "IGES File Imported Successfully in "
+		GET_MESSAGE << "STEP File Imported Successfully in "
 			<< global_time_duration << " seconds.";
 		SEND_INFO;
 

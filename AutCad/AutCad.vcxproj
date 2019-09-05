@@ -24,6 +24,7 @@
     <ClCompile Include="AutLib\Cascade\Discrete\FastDiscrete.cxx" />
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx" />
     <ClCompile Include="AutLib\Cascade\IO\Format\IGES\IO_IGES.cxx" />
+    <ClCompile Include="AutLib\Cascade\IO\Format\STEP\IO_STEP.cxx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Entities\Curve\Cad_CurveInfo.hxx" />

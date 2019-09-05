@@ -60,6 +60,9 @@
     <ClCompile Include="AutLib\Cad\Tools\Cad_Tools.cxx">
       <Filter>AutLib\Cad\Tools</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Cascade\IO\Format\STEP\IO_STEP.cxx">
+      <Filter>AutLib\Cascade\IO\Format\STEP</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Entities\Curve\Cad_CurveInfo.hxx">

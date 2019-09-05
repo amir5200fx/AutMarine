@@ -1113,6 +1113,9 @@
     <ClInclude Include="AutLib\Base\Global\Global_Message.hxx">
       <Filter>AutLib\Base\Global</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Base\Global\Global_AccessMethod.hxx">
+      <Filter>AutLib\Base\Global</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="AutLib">

@@ -305,6 +305,7 @@
     <ClInclude Include="AutLib\Base\Global\demandDrivenData.hxx" />
     <ClInclude Include="AutLib\Base\Global\dimensionedConstants.hxx" />
     <ClInclude Include="AutLib\Base\Global\Exceptions.hxx" />
+    <ClInclude Include="AutLib\Base\Global\Global_AccessMethod.hxx" />
     <ClInclude Include="AutLib\Base\Global\Global_Done.hxx" />
     <ClInclude Include="AutLib\Base\Global\Global_Indexed.hxx" />
     <ClInclude Include="AutLib\Base\Global\Global_InitRunTime.hxx" />
