@@ -9,7 +9,7 @@ namespace AutLib
 
 	// Forward Declarations
 
-	template<class ElementTraits, Mesh_ElementType ElmType = Mesh_ElementType_Tetrahedron>
+	template<class ElementTraits, Mesh_ElementType ElmType>
 	class Mesh_Element;
 
 	template<class FacetTraits>

@@ -8,7 +8,7 @@
 namespace AutLib
 {
 
-	typedef Mesh_Element<Mesh2d_ElementTraits> Mesh2d_Element;
+	typedef Mesh_Element<Mesh2d_ElementTraits, Mesh_ElementType_Triangle2D> Mesh2d_Element;
 }
 
 #endif // !_Mesh2d_Element_Header

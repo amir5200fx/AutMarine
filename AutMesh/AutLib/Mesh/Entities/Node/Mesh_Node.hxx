@@ -36,6 +36,8 @@ namespace AutLib
 			rank = 0
 		};
 
+		static const std::shared_ptr<Mesh_Node> null_ptr;
+
 		Mesh_Node()
 		{}
 

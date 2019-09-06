@@ -8,7 +8,7 @@
 namespace AutLib
 {
 
-	typedef Mesh_Element<Mesh3d_ElementTraits> Mesh3d_Element;
+	typedef Mesh_Element<Mesh3d_ElementTraits, Mesh_ElementType_Tetrahedron> Mesh3d_Element;
 }
 
 #endif // !_Mesh3d_Element_Header
