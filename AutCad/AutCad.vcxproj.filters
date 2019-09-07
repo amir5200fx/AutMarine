@@ -43,11 +43,26 @@
     <Filter Include="AutLib\Cascade\IO\Format\STEP">
       <UniqueIdentifier>{eea66141-99db-4dfb-bf18-f2527c3dcaa0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Entities\Curve\Info">
+      <UniqueIdentifier>{6e56bbda-04cf-4520-be97-c4889deced08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Entities\Curve\Traits">
+      <UniqueIdentifier>{9e5c8904-9afe-46d7-88f0-da2e6c2585b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Entities\Block">
+      <UniqueIdentifier>{51f25c20-70b6-4b67-ad99-a6fee42e6a86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Entities\Manager">
+      <UniqueIdentifier>{b2e89508-d6f9-42a7-b8f8-71903f71cdbf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Entities\Entity">
+      <UniqueIdentifier>{ab086a0f-4959-486f-a8cf-b01c0e8e14e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane">
+      <UniqueIdentifier>{ddc985a6-891d-4c81-b879-f51b089df6c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\Cad\Entities\Curve\Cad_CurveInfo.cxx">
-      <Filter>AutLib\Cad\Entities\Curve</Filter>
-    </ClCompile>
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
       <Filter>AutLib\Cascade\Discrete\System</Filter>
     </ClCompile>
@@ -63,11 +78,17 @@
     <ClCompile Include="AutLib\Cascade\IO\Format\STEP\IO_STEP.cxx">
       <Filter>AutLib\Cascade\IO\Format\STEP</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Cad\Entities\Curve\Info\Cad_CurveInfo.cxx">
+      <Filter>AutLib\Cad\Entities\Curve\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Entities\Block\Cad_BlockEntity.cxx">
+      <Filter>AutLib\Cad\Entities\Block</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Entities\Manager\Cad_EntityManager.cxx">
+      <Filter>AutLib\Cad\Entities\Manager</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\Cad\Entities\Curve\Cad_CurveInfo.hxx">
-      <Filter>AutLib\Cad\Entities\Curve</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Cad\Serialization\Cad_Serialization.hxx">
       <Filter>AutLib\Cad\Serialization</Filter>
     </ClInclude>
@@ -94,6 +115,30 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cascade\IO\Format\STEP\IO_STEP.hxx">
       <Filter>AutLib\Cascade\IO\Format\STEP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Curve\Info\Cad_CurveInfo.hxx">
+      <Filter>AutLib\Cad\Entities\Curve\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Curve\Cad_Curve.hxx">
+      <Filter>AutLib\Cad\Entities\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Entity\Cad_EntityPrecision.hxx">
+      <Filter>AutLib\Cad\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Entity\Cad_Entity.hxx">
+      <Filter>AutLib\Cad\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Block\Cad_BlockEntity.hxx">
+      <Filter>AutLib\Cad\Entities\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Block\Cad_BlockEntityI.hxx">
+      <Filter>AutLib\Cad\Entities\Block</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Manager\Cad_EntityManager.hxx">
+      <Filter>AutLib\Cad\Entities\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Manager\Cad_EntityManagerI.hxx">
+      <Filter>AutLib\Cad\Entities\Manager</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
