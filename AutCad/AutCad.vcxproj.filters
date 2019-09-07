@@ -61,6 +61,33 @@
     <Filter Include="AutLib\Cad\Plane">
       <UniqueIdentifier>{ddc985a6-891d-4c81-b879-f51b089df6c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities">
+      <UniqueIdentifier>{89537667-567f-4bc4-a451-e65206fa843f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Curve">
+      <UniqueIdentifier>{3b17b77e-2972-44ed-81cb-550e096fc598}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Edge">
+      <UniqueIdentifier>{d5506c14-af22-4780-b73e-d1377aa90f49}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Entity">
+      <UniqueIdentifier>{3c969023-1e2b-4645-9973-01358adf08e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Orientation">
+      <UniqueIdentifier>{dd0ff2ec-1ae4-4e46-b702-81ed7be26f50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Ring">
+      <UniqueIdentifier>{64468aeb-29e3-4765-b5f7-0d1c728bbc0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Vertex">
+      <UniqueIdentifier>{82df6337-9bab-4f84-919f-fa7d2cdba3da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Wire">
+      <UniqueIdentifier>{9b750157-53e9-444e-a5fd-dc0e8483ff4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Info">
+      <UniqueIdentifier>{2d2dbc66-4394-4eb9-953d-6173d1a7dab6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
@@ -86,6 +113,27 @@
     </ClCompile>
     <ClCompile Include="AutLib\Cad\Entities\Manager\Cad_EntityManager.cxx">
       <Filter>AutLib\Cad\Entities\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Entities\Curve\Pln_Curve.cxx">
+      <Filter>AutLib\Cad\Plane\Entities\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Entities\Orientation\Pln_Orientation.cxx">
+      <Filter>AutLib\Cad\Plane\Entities\Orientation</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Entities\Vertex\Pln_Vertex.cxx">
+      <Filter>AutLib\Cad\Plane\Entities\Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Entities\Edge\Pln_Edge.cxx">
+      <Filter>AutLib\Cad\Plane\Entities\Edge</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Entities\Wire\Pln_Wire.cxx">
+      <Filter>AutLib\Cad\Plane\Entities\Wire</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Info\Cad2d_PlaneInfo.cxx">
+      <Filter>AutLib\Cad\Plane\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Cad2d_Plane.cxx">
+      <Filter>AutLib\Cad\Plane</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +187,33 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\Entities\Manager\Cad_EntityManagerI.hxx">
       <Filter>AutLib\Cad\Entities\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Curve\Pln_Curve.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Entity\Pln_Entity.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Orientation\Pln_Orientation.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Orientation</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Vertex\Pln_Vertex.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Edge\Pln_Edge.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Ring\Pln_Ring.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Ring</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Wire\Pln_Wire.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Wire</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Info\Cad2d_PlaneInfo.hxx">
+      <Filter>AutLib\Cad\Plane\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Cad2d_Plane.hxx">
+      <Filter>AutLib\Cad\Plane</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
