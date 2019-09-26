@@ -415,6 +415,111 @@
     <Filter Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Surface\Adaptor">
       <UniqueIdentifier>{4dc3b9de-919a-4953-8334-0ac9b34a3963}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools">
+      <UniqueIdentifier>{ee09fece-4d28-4fc4-8b11-bfa9a323d788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings">
+      <UniqueIdentifier>{aaf9d666-2429-4f33-90aa-1d82ced67cbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings\Info">
+      <UniqueIdentifier>{8924facd-6265-401b-9f62-ce3ce7b40ee9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings\SizeValues">
+      <UniqueIdentifier>{335b19b4-e6de-41e3-bc6b-bb5f80a8dcc0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings\CurvatureValues">
+      <UniqueIdentifier>{9e542f99-7602-42d7-85d3-304dd42691f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings\ReferenceValues">
+      <UniqueIdentifier>{673affe1-e0ee-4b0b-a535-ddfd33091d19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings\VariationRate">
+      <UniqueIdentifier>{f0af97c8-a10c-48c0-ae18-e0f5a1dd658e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings\Values">
+      <UniqueIdentifier>{e22642ec-6798-434e-9ef3-b17f6c6be221}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\Settings\Conditions">
+      <UniqueIdentifier>{152445e3-6294-4cff-a628-4c32967891cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\SizeMap">
+      <UniqueIdentifier>{d312bc42-0f7f-4566-8ca2-26790baeeab1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\MetricMap">
+      <UniqueIdentifier>{b68bb120-6e7f-4d61-869e-a3b82ca42e7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation">
+      <UniqueIdentifier>{d35d8cf4-c50b-4e79-bd3b-97298fe2ebff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit">
+      <UniqueIdentifier>{324b43d2-f872-415f-ae05-d2bd683b4b8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh">
+      <UniqueIdentifier>{b0b8157e-b3a5-4384-9175-30b3908d8ece}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\NormalizedMetric">
+      <UniqueIdentifier>{08b3456e-63fb-4be5-a539-e29f40c1c318}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PlaneEqualizer">
+      <UniqueIdentifier>{ca864edf-069c-446b-b843-19548f47f47c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PlaneNurbs">
+      <UniqueIdentifier>{e72301f2-1c7b-43aa-8741-09afa64589ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Singularity">
+      <UniqueIdentifier>{5f2ab492-f325-4257-abbc-268b128a29bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\TopologyAnalysis">
+      <UniqueIdentifier>{b2c7ebb9-4a4d-4683-85fc-1764d44e7594}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Space">
+      <UniqueIdentifier>{fca760bd-2736-48bb-8e05-92d231959bec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation\SurfaceMetric">
+      <UniqueIdentifier>{169c82a5-bdc7-44f7-bef3-7619fb7bd901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround">
+      <UniqueIdentifier>{dc0cdc1c-5cbd-4935-ac28-2776890a0b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\Data">
+      <UniqueIdentifier>{e824d952-d7f3-4d1e-898c-a3dcbbf5ec5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround\Iso">
+      <UniqueIdentifier>{0d31824e-56f2-4be0-b920-be688d1aaf44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround\AnIso">
+      <UniqueIdentifier>{ad74a371-eb5a-413d-86aa-08e532c8b52f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround\Info">
+      <UniqueIdentifier>{4c04debc-f0a4-465b-9d12-20c31ab210f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround\Iso\2d">
+      <UniqueIdentifier>{c33472e8-370a-425a-bbd9-32567b6b0748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround\Iso\3d">
+      <UniqueIdentifier>{6eededec-27b6-4042-963d-176fbe7cbd1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround\AnIso\2d">
+      <UniqueIdentifier>{aec4aff5-933d-4f77-b822-2e543d1e3790}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\BackGround\AnIso\3d">
+      <UniqueIdentifier>{bbe82560-54ac-4a99-80a3-3de524f1f3ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\Data\2d">
+      <UniqueIdentifier>{57201228-9580-407d-8ffb-3e2ec863b691}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Mesh\Data\3d">
+      <UniqueIdentifier>{f9c7aa5e-ba49-4d11-89e3-7c659214a589}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\SizeMap\Boundary">
+      <UniqueIdentifier>{d031d143-d7e2-4fcd-9d4c-ca5bcfba88c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Mesh\MetricProcessor\Tools\SizeMap\Volume">
+      <UniqueIdentifier>{87022251-b810-4916-ba51-c4ab68765dcb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation\SurfaceMetric\Info">
+      <UniqueIdentifier>{132d7701-d3b0-49d3-b5fa-4cee40e63dac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.hxx">
@@ -1029,6 +1134,105 @@
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_CoreI.hxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Core</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\Info\Mesh_RelativeAbsoluteInfo.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\Info\Mesh_SizeMethodInfo.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\Info\Mesh_SurfaceCurvatureInfo.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\SizeValues\Mesh_SurfaceSizeValues.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\SizeValues</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\CurvatureValues\Mesh_SurfaceCurvatureValues.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\CurvatureValues</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\ReferenceValues\Mesh_ReferenceValues.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\ReferenceValues</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\Info\Mesh_VariationRateInfo.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\VariationRate\Mesh_VariationRate.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\VariationRate</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\Values\Mesh_Values.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\Values</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\Conditions\Mesh_Conditions.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\Conditions</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\SizeMap\SizeMap_Tool.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Space\Geo_ApprxSpace.hxx">
+      <Filter>AutLib\Geom\Approximation\Space</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\Info\GeoMesh_BackgroundInfo.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\GeoMesh_Background.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\GeoMesh_BackgroundI.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\Iso\2d\GeoMesh2d_Background.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\Data\GeoMesh_Data.hxx">
+      <Filter>AutLib\Geom\Mesh\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\Data\GeoMesh_DataI.hxx">
+      <Filter>AutLib\Geom\Mesh\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\Data\2d\GeoMesh2d_Data.hxx">
+      <Filter>AutLib\Geom\Mesh\Data\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\Data\2d\GeoMesh2d_DataFwd.hxx">
+      <Filter>AutLib\Geom\Mesh\Data\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\Data\3d\GeoMesh3d_DataFwd.hxx">
+      <Filter>AutLib\Geom\Mesh\Data\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\Data\3d\GeoMesh3d_Data.hxx">
+      <Filter>AutLib\Geom\Mesh\Data\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\Iso\2d\GeoMesh2d_BackgroundFwd.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\Iso\3d\GeoMesh3d_Background.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\Iso\3d\GeoMesh3d_BackgroundFwd.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackgroundFwd.hxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\SizeMap\SizeMap_ToolI.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\SizeMap\Boundary\SizeMap_BoundaryTool.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap\Boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\SizeMap\Boundary\SizeMap_BoundaryToolI.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap\Boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Mesh\Metrics\Tools\SizeMap\Volume\SizeMap_VolumeTool.hxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap\Volume</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Info\Geo_ApprxSurfMetricInfo.hxx">
+      <Filter>AutLib\Geom\Approximation\SurfaceMetric\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Geo_ApprxSurfMetric.hxx">
+      <Filter>AutLib\Geom\Approximation\SurfaceMetric</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.cxx">
@@ -1087,6 +1291,54 @@
     </ClCompile>
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_Core.cxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Mesh\Metrics\Tools\Settings\VariationRate\Mesh_VariationRate.cxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\VariationRate</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\Info\GeoMesh_BackgroundInfo.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\GeoMesh_Background.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\Data\GeoMesh_Data.cxx">
+      <Filter>AutLib\Geom\Mesh\Data</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\Data\2d\GeoMesh2d_Data.cxx">
+      <Filter>AutLib\Geom\Mesh\Data\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\Data\3d\GeoMesh3d_Data.cxx">
+      <Filter>AutLib\Geom\Mesh\Data\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\Iso\2d\GeoMesh2d_Background.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\Iso\2d\GeoMesh2d_BackgroundIO.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\Iso\3d\GeoMesh3d_Background.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\Iso\3d\GeoMesh3d_BackgroundIO.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\Iso\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackgroundIO.cxx">
+      <Filter>AutLib\Geom\Mesh\BackGround\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Mesh\Metrics\Tools\SizeMap\SizeMap_Tool.cxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Mesh\Metrics\Tools\SizeMap\Boundary\SizeMap_BoundaryTool.cxx">
+      <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap\Boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Approximation\SurfaceMetric\Info\Geo_ApprxSurfMetricInfo.cxx">
+      <Filter>AutLib\Geom\Approximation\SurfaceMetric\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Approximation\SurfaceMetric\Geo_ApprxSurfMetric.cxx">
+      <Filter>AutLib\Geom\Approximation\SurfaceMetric</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

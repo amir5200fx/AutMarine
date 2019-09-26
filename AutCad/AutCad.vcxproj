@@ -22,6 +22,20 @@
     <ClCompile Include="AutLib\Cad\Entities\Block\Cad_BlockEntity.cxx" />
     <ClCompile Include="AutLib\Cad\Entities\Curve\Info\Cad_CurveInfo.cxx" />
     <ClCompile Include="AutLib\Cad\Entities\Manager\Cad_EntityManager.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Cad3d_GModel.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Curve\GModel_Curve.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Curve\Par\GModel_parCurve.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Curve\Par\GModel_parCurveIO.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Edge\GModel_Edge.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Plane\GModel_Plane.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Plane\GModel_PlaneIO.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Surface\GModel_Surface.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Surface\GModel_SurfaceIO.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Wire\GModel_Wire.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Wire\par\GModel_parWire.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Wire\par\GModel_parWireIO.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\System\GModel_FixWireInfo.cxx" />
+    <ClCompile Include="AutLib\Cad\GModel\System\GModel_System.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Cad2d_Plane.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Entities\Curve\Pln_Curve.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Entities\Edge\Pln_Edge.cxx" />
@@ -29,6 +43,8 @@
     <ClCompile Include="AutLib\Cad\Plane\Entities\Vertex\Pln_Vertex.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Entities\Wire\Pln_Wire.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Info\Cad2d_PlaneInfo.cxx" />
+    <ClCompile Include="AutLib\Cad\Sketch\Cad2d_Sketch.cxx" />
+    <ClCompile Include="AutLib\Cad\Sketch\Info\Cad2d_SketchInfo.cxx" />
     <ClCompile Include="AutLib\Cad\Tools\Cad_Tools.cxx" />
     <ClCompile Include="AutLib\Cascade\Discrete\FastDiscrete.cxx" />
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx" />
@@ -44,6 +60,17 @@
     <ClInclude Include="AutLib\Cad\Entities\Entity\Cad_EntityPrecision.hxx" />
     <ClInclude Include="AutLib\Cad\Entities\Manager\Cad_EntityManager.hxx" />
     <ClInclude Include="AutLib\Cad\Entities\Manager\Cad_EntityManagerI.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Cad3d_GModel.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Curve\GModel_Curve.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Curve\Par\GModel_parCurve.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Edge\GModel_Edge.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Entity\GModel_Entity.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Plane\GModel_Plane.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Surface\GModel_Surface.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Wire\GModel_Wire.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\Entities\Wire\par\GModel_parWire.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\System\GModel_FixWireInfo.hxx" />
+    <ClInclude Include="AutLib\Cad\GModel\System\GModel_System.hxx" />
     <ClInclude Include="AutLib\Cad\Plane\Cad2d_Plane.hxx" />
     <ClInclude Include="AutLib\Cad\Plane\Entities\Curve\Pln_Curve.hxx" />
     <ClInclude Include="AutLib\Cad\Plane\Entities\Edge\Pln_Edge.hxx" />
@@ -54,6 +81,8 @@
     <ClInclude Include="AutLib\Cad\Plane\Entities\Wire\Pln_Wire.hxx" />
     <ClInclude Include="AutLib\Cad\Plane\Info\Cad2d_PlaneInfo.hxx" />
     <ClInclude Include="AutLib\Cad\Serialization\Cad_Serialization.hxx" />
+    <ClInclude Include="AutLib\Cad\Sketch\Cad2d_Sketch.hxx" />
+    <ClInclude Include="AutLib\Cad\Sketch\Info\Cad2d_SketchInfo.hxx" />
     <ClInclude Include="AutLib\Cad\Tools\Cad_Tools.hxx" />
     <ClInclude Include="AutLib\Cascade\Discrete\FastDiscrete.hxx" />
     <ClInclude Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.hxx" />
@@ -128,7 +157,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\STEP;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\IGES;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\System;$(SolutionDir)AutCad\AutLib\Cascade\Discrete;$(SolutionDir)AutCad\AutLib\Cascade\Discrete\System;$(SolutionDir)AutCad\AutLib\Cad\Tools;$(SolutionDir)AutCad\AutLib\Cad\Serialization;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Info;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Traits;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Entities\Manager;$(SolutionDir)AutCad\AutLib\Cad\Entities\Block;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Orientation;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Wire;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Ring;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Edge;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Vertex;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Plane\Info;$(SolutionDir)AutCad\AutLib\Cad\Plane;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\STEP;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\IGES;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\System;$(SolutionDir)AutCad\AutLib\Cascade\Discrete;$(SolutionDir)AutCad\AutLib\Cascade\Discrete\System;$(SolutionDir)AutCad\AutLib\Cad\Tools;$(SolutionDir)AutCad\AutLib\Cad\Serialization;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Info;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Traits;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Entities\Manager;$(SolutionDir)AutCad\AutLib\Cad\Entities\Block;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Orientation;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Wire;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Ring;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Edge;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Vertex;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Plane\Info;$(SolutionDir)AutCad\AutLib\Cad\Plane;$(SolutionDir)AutCad\AutLib\Cad\Sketch\Info;$(SolutionDir)AutCad\AutLib\Cad\Sketch;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Plane;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Surface;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Wire\par;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Wire;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Edge;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Curve\Par;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\GModel\System;$(SolutionDir)AutCad\AutLib\Cad\GModel;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -161,7 +190,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\STEP;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\IGES;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\System;$(SolutionDir)AutCad\AutLib\Cascade\Discrete;$(SolutionDir)AutCad\AutLib\Cascade\Discrete\System;$(SolutionDir)AutCad\AutLib\Cad\Tools;$(SolutionDir)AutCad\AutLib\Cad\Serialization;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Info;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Traits;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Entities\Manager;$(SolutionDir)AutCad\AutLib\Cad\Entities\Block;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Orientation;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Wire;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Ring;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Edge;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Vertex;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Plane\Info;$(SolutionDir)AutCad\AutLib\Cad\Plane;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\STEP;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\IGES;$(SolutionDir)AutCad\AutLib\Cascade\IO\Format\System;$(SolutionDir)AutCad\AutLib\Cascade\Discrete;$(SolutionDir)AutCad\AutLib\Cascade\Discrete\System;$(SolutionDir)AutCad\AutLib\Cad\Tools;$(SolutionDir)AutCad\AutLib\Cad\Serialization;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Info;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve\Traits;$(SolutionDir)AutCad\AutLib\Cad\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Entities\Manager;$(SolutionDir)AutCad\AutLib\Cad\Entities\Block;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Orientation;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Wire;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Ring;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Edge;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Vertex;$(SolutionDir)AutCad\AutLib\Cad\Plane\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\Plane\Info;$(SolutionDir)AutCad\AutLib\Cad\Plane;$(SolutionDir)AutCad\AutLib\Cad\Sketch\Info;$(SolutionDir)AutCad\AutLib\Cad\Sketch;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Plane;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Surface;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Wire\par;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Wire;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Edge;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Curve\Par;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Curve;$(SolutionDir)AutCad\AutLib\Cad\GModel\Entities\Entity;$(SolutionDir)AutCad\AutLib\Cad\GModel\System;$(SolutionDir)AutCad\AutLib\Cad\GModel;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

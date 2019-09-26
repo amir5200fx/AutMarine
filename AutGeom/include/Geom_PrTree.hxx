@@ -17,10 +17,28 @@ namespace AutLib
 		Geo_Quadrant_NE
 	};
 
+	enum Geo_Octant
+	{
+		Geo_Octant_Fwd_SW,
+		Geo_Octant_Fwd_SE,
+		Geo_Octant_Fwd_NW,
+		Geo_Octant_Fwd_NE,
+		Geo_Octant_Bwd_SW,
+		Geo_Octant_Bwd_SE,
+		Geo_Octant_Bwd_NW,
+		Geo_Octant_Bwd_NE
+	};
+
 	inline Geo_Quadrant CalcQuadrant
 	(
 		const Pnt2d& theCoord,
 		const Pnt2d& theCentre
+	);
+
+	inline Geo_Octant CalcOctant
+	(
+		const Pnt3d& theCoord,
+		const Pnt3d& theCentre
 	);
 
 
@@ -46,6 +64,87 @@ namespace AutLib
 	template<class T, int Dim, bool Balanced = false>
 	class Geom_PrTreeLeafHub
 	{};
+
+	template<class T>
+	class Geom_PrTreeLeafHub<T, 3, true>
+	{
+
+		/*Private Data*/
+
+		typedef Stl_List<Geom_PrTreeLeaf<T, 3, true>*> leafList;
+
+		leafList theSNeighbors_;
+		leafList theENeighbors_;
+		leafList theNNeighbors_;
+		leafList theWNeighbors_;
+		leafList theFNeighbors_;
+		leafList theBNeighbors_;
+
+	public:
+
+		Geom_PrTreeLeafHub()
+		{}
+
+		const leafList& SNeighbors() const
+		{
+			return theSNeighbors_;
+		}
+
+		leafList& SNeighbors()
+		{
+			return theSNeighbors_;
+		}
+
+		const leafList& ENeighbors() const
+		{
+			return theENeighbors_;
+		}
+
+		leafList& ENeighbors()
+		{
+			return theENeighbors_;
+		}
+
+		const leafList& NNeighbors() const
+		{
+			return theNNeighbors_;
+		}
+
+		leafList& NNeighbors()
+		{
+			return theNNeighbors_;
+		}
+
+		const leafList& WNeighbors() const
+		{
+			return theWNeighbors_;
+		}
+
+		leafList& WNeighbors()
+		{
+			return theWNeighbors_;
+		}
+
+		const leafList& FNeighbors() const
+		{
+			return theFNeighbors_;
+		}
+
+		leafList& FNeighbors()
+		{
+			return theFNeighbors_;
+		}
+
+		const leafList& BNeighbors() const
+		{
+			return theBNeighbors_;
+		}
+
+		leafList& BNeighbors()
+		{
+			return theBNeighbors_;
+		}
+	};
 
 	template<class T>
 	class Geom_PrTreeLeafHub<T, 2, true>
@@ -109,6 +208,117 @@ namespace AutLib
 
 	template<class Point, int Dim>
 	class Geom_PrTreeInternalHub {};
+
+	template<class Point>
+	class Geom_PrTreeInternalHub<Point, 3>
+	{
+
+		/*Private Data*/
+		typedef Geom_PrTreeNode<Point> node;
+
+		node* theFwdSwPtr_;
+		node* theFwdSePtr_;
+		node* theFwdNePtr_;
+		node* theFwdNwPtr_;
+
+		node* theBwdSwPtr_;
+		node* theBwdSePtr_;
+		node* theBwdNePtr_;
+		node* theBwdNwPtr_;
+
+	public:
+
+		Geom_PrTreeInternalHub()
+			: theFwdSwPtr_(0)
+			, theFwdSePtr_(0)
+			, theFwdNePtr_(0)
+			, theFwdNwPtr_(0)
+			, theBwdSwPtr_(0)
+			, theBwdSePtr_(0)
+			, theBwdNePtr_(0)
+			, theBwdNwPtr_(0)
+		{}
+
+		node* FwdSw() const
+		{
+			return theFwdSwPtr_;
+		}
+
+		node*& FwdSw()
+		{
+			return theFwdSwPtr_;
+		}
+
+		node* FwdSe() const
+		{
+			return theFwdSePtr_;
+		}
+
+		node*& FwdSe()
+		{
+			return theFwdSePtr_;
+		}
+
+		node* FwdNe() const
+		{
+			return theFwdNePtr_;
+		}
+
+		node*& FwdNe()
+		{
+			return theFwdNePtr_;
+		}
+
+		node* FwdNw() const
+		{
+			return theFwdNwPtr_;
+		}
+
+		node*& FwdNw()
+		{
+			return theFwdNwPtr_;
+		}
+
+		node* BwdSw() const
+		{
+			return theBwdSwPtr_;
+		}
+
+		node*& BwdSw()
+		{
+			return theBwdSwPtr_;
+		}
+
+		node* BwdSe() const
+		{
+			return theBwdSePtr_;
+		}
+
+		node*& BwdSe()
+		{
+			return theBwdSePtr_;
+		}
+
+		node* BwdNe() const
+		{
+			return theBwdNePtr_;
+		}
+
+		node*& BwdNe()
+		{
+			return theBwdNePtr_;
+		}
+
+		node* BwdNw() const
+		{
+			return theBwdNwPtr_;
+		}
+
+		node*& BwdNw()
+		{
+			return theBwdNwPtr_;
+		}
+	};
 
 	template<class Point>
 	class Geom_PrTreeInternalHub<Point, 2>
@@ -392,7 +602,37 @@ namespace AutLib
 				const Point& theCentre,
 				const boxType& theBox,
 				internalNode*& t
-			);
+			)
+		{
+			switch (CalcOctant(geom::CoordinateOf(theItem), theCentre))
+			{
+			case Geo_Octant_Bwd_SW:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Aft_SW), t->BwdSw());
+				break;
+			case Geo_Octant_Bwd_SE:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Aft_SE), t->BwdSe());
+				break;
+			case Geo_Octant_Bwd_NE:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Aft_NE), t->BwdNe());
+				break;
+			case Geo_Octant_Bwd_NW:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Aft_NW), t->BwdNw());
+				break;
+			case Geo_Octant_Fwd_SW:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Fwd_SW), t->FwdSw());
+				break;
+			case Geo_Octant_Fwd_SE:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Fwd_SE), t->FwdSe());
+				break;
+			case Geo_Octant_Fwd_NE:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Fwd_NE), t->FwdNe());
+				break;
+			case Geo_Octant_Fwd_NW:
+				Insert(theItem, theBox.SubDivide(Box3d_SubDivideAlgorithm_Fwd_NW), t->FwdNw());
+				break;
+
+			}
+		}
 
 		void Insert
 		(
@@ -505,7 +745,36 @@ namespace AutLib
 			(
 				const T& theItem,
 				internalNode*& t
-			);
+			)
+		{
+			switch (CalcOctant(geom::CoordinateOf(theItem), t->Box().CalcCentre()))
+			{
+			case Geo_Octant_Bwd_SW:
+				Remove(theItem, t->BwdSw());
+				break;
+			case Geo_Octant_Bwd_SE:
+				Remove(theItem, t->BwdSe());
+				break;
+			case Geo_Octant_Bwd_NE:
+				Remove(theItem, t->BwdNe());
+				break;
+			case Geo_Octant_Bwd_NW:
+				Remove(theItem, t->BwdNw());
+				break;
+			case Geo_Octant_Fwd_SW:
+				Remove(theItem, t->FwdSw());
+				break;
+			case Geo_Octant_Fwd_SE:
+				Remove(theItem, t->FwdSe());
+				break;
+			case Geo_Octant_Fwd_NE:
+				Remove(theItem, t->FwdNe());
+				break;
+			case Geo_Octant_Fwd_NW:
+				Remove(theItem, t->FwdNw());
+				break;
+			}
+		}
 
 		void Remove(const T& theItem, node*& t)
 		{
@@ -586,7 +855,18 @@ namespace AutLib
 			(
 				internalNode* Internal,
 				Stl_List<T>& theItems
-			) const;
+			) const
+		{
+			if (Internal->BwdSw()) RetrieveTo(Internal->BwdSw(), theItems);
+			if (Internal->BwdSe()) RetrieveTo(Internal->BwdSe(), theItems);
+			if (Internal->BwdNe()) RetrieveTo(Internal->BwdNe(), theItems);
+			if (Internal->BwdNw()) RetrieveTo(Internal->BwdNw(), theItems);
+
+			if (Internal->FwdSw()) RetrieveTo(Internal->FwdSw(), theItems);
+			if (Internal->FwdSe()) RetrieveTo(Internal->FwdSe(), theItems);
+			if (Internal->FwdNe()) RetrieveTo(Internal->FwdNe(), theItems);
+			if (Internal->FwdNw()) RetrieveTo(Internal->FwdNw(), theItems);
+		}
 
 		void RetrieveTo(node* t, Stl_List<T>& theItems) const
 		{
@@ -653,7 +933,56 @@ namespace AutLib
 				const boxType& theRegion,
 				internalNode* t,
 				Stl_List<T>& theItems
-			) const;
+			) const
+		{
+			if (t->BwdSw())
+			{
+				if (theRegion.IsIntersect(t->BwdSw()->Box()))
+					Search(theRegion, t->BwdSw(), theItems);
+			}
+
+			if (t->BwdSe())
+			{
+				if (theRegion.IsIntersect(t->BwdSe()->Box()))
+					Search(theRegion, t->BwdSe(), theItems);
+			}
+
+			if (t->BwdNe())
+			{
+				if (theRegion.IsIntersect(t->BwdNe()->Box()))
+					Search(theRegion, t->BwdNe(), theItems);
+			}
+
+			if (t->BwdNw())
+			{
+				if (theRegion.IsIntersect(t->BwdNw()->Box()))
+					Search(theRegion, t->BwdNw(), theItems);
+			}
+
+			if (t->FwdSw())
+			{
+				if (theRegion.IsIntersect(t->FwdSw()->Box()))
+					Search(theRegion, t->FwdSw(), theItems);
+			}
+
+			if (t->FwdSe())
+			{
+				if (theRegion.IsIntersect(t->FwdSe()->Box()))
+					Search(theRegion, t->FwdSe(), theItems);
+			}
+
+			if (t->FwdNe())
+			{
+				if (theRegion.IsIntersect(t->FwdNe()->Box()))
+					Search(theRegion, t->FwdNe(), theItems);
+			}
+
+			if (t->FwdNw())
+			{
+				if (theRegion.IsIntersect(t->FwdNw()->Box()))
+					Search(theRegion, t->FwdNw(), theItems);
+			}
+		}
 
 		void Search
 		(

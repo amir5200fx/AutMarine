@@ -1,0 +1,1 @@
+#include <SizeMap_BoundaryTool.hxx>

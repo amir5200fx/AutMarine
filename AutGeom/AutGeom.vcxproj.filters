@@ -184,6 +184,24 @@
     <Filter Include="AutLib\Geom\Approximation\Curve\3d">
       <UniqueIdentifier>{a6e179b6-f489-4e53-ac6f-2bf67d1562d5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Entities\Tetrahedralization">
+      <UniqueIdentifier>{7ca073be-2a56-4ac8-8437-b5091ee44167}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PrimitiveShapes">
+      <UniqueIdentifier>{4135d272-dc07-4ccd-9ee1-f4a98c058d9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PrimitiveShapes\2d">
+      <UniqueIdentifier>{f223d21c-39a0-4451-9010-ae70775d63a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PrimitiveShapes\3d">
+      <UniqueIdentifier>{73c8c951-ac6b-4871-b694-48bc7afdcd4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PrimitiveShapes\2d\Circle">
+      <UniqueIdentifier>{0f8904ac-825a-4e92-90ce-49e7f78b2d83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle">
+      <UniqueIdentifier>{9280a1a4-5a24-445c-8240-751fca625790}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -278,6 +296,18 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurve.cxx">
       <Filter>AutLib\Geom\Approximation\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Tetrahedralization\Entity3d_Tetrahedralization.cxx">
+      <Filter>AutLib\Geom\Entities\Tetrahedralization</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Tetrahedralization\Entity3d_TetrahedralizationTools.cxx">
+      <Filter>AutLib\Geom\Entities\Tetrahedralization</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\PrimitiveShapes\2d\Circle\PrimShape2d_Circle.cxx">
+      <Filter>AutLib\Geom\PrimitiveShapes\2d\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle\PrimShape2d_Rectangle.cxx">
+      <Filter>AutLib\Geom\PrimitiveShapes\2d\Rectangle</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -496,6 +526,27 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Entities\Triangle\Entity_TriangleI.hxx">
       <Filter>AutLib\Geom\Entities\Triangle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Tetrahedralization\Entity3d_Tetrahedralization.hxx">
+      <Filter>AutLib\Geom\Entities\Tetrahedralization</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Tetrahedralization\Entity3d_TetrahedralizationTools.hxx">
+      <Filter>AutLib\Geom\Entities\Tetrahedralization</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\PrimitiveShapes\Geo_PrimShape.hxx">
+      <Filter>AutLib\Geom\PrimitiveShapes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\PrimitiveShapes\2d\Geo2d_PrimShape.hxx">
+      <Filter>AutLib\Geom\PrimitiveShapes\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\PrimitiveShapes\2d\Geo2d_PrimShapeFwd.hxx">
+      <Filter>AutLib\Geom\PrimitiveShapes\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\PrimitiveShapes\2d\Circle\PrimShape2d_Circle.hxx">
+      <Filter>AutLib\Geom\PrimitiveShapes\2d\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle\PrimShape2d_Rectangle.hxx">
+      <Filter>AutLib\Geom\PrimitiveShapes\2d\Rectangle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

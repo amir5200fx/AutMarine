@@ -27,6 +27,8 @@ namespace AutLib
 		typedef typename ElementTraits::facetType facetType;
 		typedef typename ElementTraits::elementType elementType;
 
+		typedef typename ElementTraits::connectType connectType;
+
 		typedef Mesh_ElementAdaptor<typename ElementTraits::elementType, ElmType> adaptor;
 
 	private:
@@ -199,6 +201,8 @@ namespace AutLib
 		typedef typename ElementTraits::facetType facetType;
 		typedef typename ElementTraits::elementType elementType;
 
+		typedef typename ElementTraits::connectType connectType;
+
 		typedef typename nodeType::ptType Point;
 
 	private:
@@ -290,6 +294,8 @@ namespace AutLib
 		typedef typename ElementTraits::edgeType edgeType;
 		typedef typename ElementTraits::facetType facetType;
 		typedef typename ElementTraits::elementType elementType;
+
+		typedef typename ElementTraits::connectType connectType;
 
 		typedef typename nodeType::ptType Point;
 		typedef Mesh_Element<ElementTraits, Mesh_ElementType_Triangle3D> base;
