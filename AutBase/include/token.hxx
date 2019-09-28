@@ -6,7 +6,6 @@
 #include <word.hxx>
 #include <autoPtr.hxx>
 #include <InfoProxy.hxx>
-#include <HashTable.hxx>
 
 namespace AutLib
 {
@@ -119,11 +118,11 @@ namespace AutLib
 				addIstreamConstructorToTable
 				(
 					const word& lookup = compoundType::typeName
-				)
-				{
+				);
+				/*{
 					constructIstreamConstructorTables();
 					IstreamConstructorTablePtr_->insert(lookup, New);
-				}
+				}*/
 
 				~addIstreamConstructorToTable()
 				{
@@ -149,20 +148,20 @@ namespace AutLib
 				addRemovableIstreamConstructorToTable
 				(
 					const word& lookup = compoundType::typeName
-				)
-					: lookup_(lookup)
+				);
+				/*	: lookup_(lookup)
 				{
 					constructIstreamConstructorTables();
 					IstreamConstructorTablePtr_->set(lookup, New);
-				}
+				}*/
 
-				~addRemovableIstreamConstructorToTable()
-				{
+				~addRemovableIstreamConstructorToTable();
+				/*{
 					if (IstreamConstructorTablePtr_)
 					{
 						IstreamConstructorTablePtr_->erase(lookup_);
 					}
-				}
+				}*/
 			};
 
 			compound()
@@ -345,12 +344,12 @@ namespace AutLib
 		scalar number() const;
 
 		bool isCompound() const;
+		
 		const compound& compoundToken() const;
 		compound& transferCompoundToken();
 
 		label lineNumber() const;
 		label& lineNumber();
-
 
 		// Edit
 

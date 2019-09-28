@@ -33,9 +33,9 @@ void AutLib::OPstream::writeToBuffer
 		enlargeBuffer(bufPosition_ - oldPos + count);
 	}
 
-	register char* bufPtr = &buf_[bufPosition_];
-	register const char* dataPtr = reinterpret_cast<const char*>(data);
-	register size_t i = count;
+	char* bufPtr = &buf_[bufPosition_];
+	const char* dataPtr = reinterpret_cast<const char*>(data);
+	size_t i = count;
 	while (i--) *bufPtr++ = *dataPtr++;
 
 	bufPosition_ += (int)count;

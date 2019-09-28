@@ -27,8 +27,8 @@ namespace AutLib
 	// Raise one label to the power of another (overloaded function call)
 	label pow(label a, label b)
 	{
-		register label ans = 1;
-		for (register label i = 0; i < b; i++)
+		label ans = 1;
+		for (label i = 0; i < b; i++)
 		{
 			ans *= a;
 		}

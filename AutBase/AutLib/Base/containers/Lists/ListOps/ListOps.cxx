@@ -1,5 +1,5 @@
 #include <ListOps.hxx>
-
+#include <token.hxx>
 AutLib::labelList AutLib::invert
 (
 	const label len,

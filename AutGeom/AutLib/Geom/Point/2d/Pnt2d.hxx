@@ -49,7 +49,7 @@ namespace AutLib
 		};
 
 		// constructors
-
+		
 		Pnt2d()
 		{}
 

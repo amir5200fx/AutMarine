@@ -17,7 +17,7 @@ AutLib::label AutLib::readHexLabel(ISstream& is)
 	{
 	}
 
-	register label result = 0;
+	label result = 0;
 	do
 	{
 		if (isspace(c) || c == 0) break;

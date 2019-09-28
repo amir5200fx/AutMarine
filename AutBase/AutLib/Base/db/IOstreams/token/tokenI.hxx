@@ -1,7 +1,31 @@
 #pragma once
-
+#include <HashTable.hxx>
 namespace AutLib
 {
+
+	template<class compoundType>
+	token::compound::addIstreamConstructorToTable<compoundType>::addIstreamConstructorToTable(const word& lookup)
+	{
+		constructIstreamConstructorTables();
+		IstreamConstructorTablePtr_->insert(lookup, New);
+	}
+
+	template<class compoundType>
+	token::compound::addRemovableIstreamConstructorToTable<compoundType>::addRemovableIstreamConstructorToTable(const word& lookup)
+		: lookup_(lookup)
+	{
+		constructIstreamConstructorTables();
+		IstreamConstructorTablePtr_->set(lookup, New);
+	}
+
+	template<class compoundType>
+	token::compound::addRemovableIstreamConstructorToTable<compoundType>::~addRemovableIstreamConstructorToTable()
+	{
+		if (IstreamConstructorTablePtr_)
+		{
+			IstreamConstructorTablePtr_->erase(lookup_);
+		}
+	}
 
 	// * * * * * * * * * * * * * Private Member Functions  * * * * * * * * * * * //
 
@@ -459,7 +483,6 @@ namespace AutLib
 
 		lineNumber_ = t.lineNumber_;
 	}
-
 
 	inline void token::operator=(const punctuationToken p)
 	{

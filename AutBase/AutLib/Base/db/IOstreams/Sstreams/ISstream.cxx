@@ -260,8 +260,8 @@ AutLib::Istream& AutLib::ISstream::read(word& str)
 	static const int errLen = 80; // truncate error message for readability
 	static char buf[maxLen];
 
-	register int i = 0;
-	register int bc = 0;
+	int i = 0;
+	int bc = 0;
 	char c;
 
 	while (get(c) && word::valid(c))
@@ -363,7 +363,7 @@ AutLib::Istream& AutLib::ISstream::read(string& str)
 		return *this;
 	}
 
-	register int i = 0;
+	int i = 0;
 	bool escaped = false;
 
 	while (get(c))

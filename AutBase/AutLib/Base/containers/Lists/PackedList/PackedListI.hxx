@@ -702,7 +702,7 @@ AutLib::PackedList<nBits>::storage() const
 template<unsigned nBits>
 unsigned int AutLib::PackedList<nBits>::count() const
 {
-	register unsigned int c = 0;
+	unsigned int c = 0;
 
 	if (size_)
 	{
@@ -715,7 +715,7 @@ unsigned int AutLib::PackedList<nBits>::count() const
 		// count bits in complete segments
 		for (unsigned i = 0; i < endSeg; ++i)
 		{
-			register unsigned int bits = StorageList::operator[](i) & mask;
+			unsigned int bits = StorageList::operator[](i) & mask;
 			COUNT_PACKEDBITS(c, bits);
 		}
 
@@ -724,7 +724,7 @@ unsigned int AutLib::PackedList<nBits>::count() const
 		{
 			mask = maskLower(endOff);
 
-			register unsigned int bits = StorageList::operator[](endSeg) & mask;
+			unsigned int bits = StorageList::operator[](endSeg) & mask;
 			COUNT_PACKEDBITS(c, bits);
 		}
 	}
@@ -877,7 +877,8 @@ void AutLib::PackedList<nBits>::flip()
 
 	for (label i = 0; i < packLen; i++)
 	{
-		StorageList::operator[](i) = ~StorageList::operator[](i);
+		auto& x = StorageList::operator[](i);
+		StorageList::operator[](i) = ~x;
 	}
 }
 

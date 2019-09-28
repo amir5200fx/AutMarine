@@ -403,10 +403,10 @@ bool AutLib::UList<T>::operator==(const UList<T>& a) const
 
 	bool equal = true;
 
-	register const T* vp = ((*this)).begin();
-	register const T* ap = ((a)).begin();
+	const T* vp = ((*this)).begin();
+	const T* ap = ((a)).begin();
 
-	register label i = ((*this)).size(); while (i--) {
+	label i = ((*this)).size(); while (i--) {
 		equal = equal && ((*vp++) == (*ap++));
 	}
 

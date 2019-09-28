@@ -289,8 +289,8 @@ AutLib::List<T>::~List()
 template<class T>
 void AutLib::List<T>::operator=(const T & t)
 {
-	register T* vp = ((*this)).begin();
-	register label i = ((*this)).size(); while (i--) {
+	T* vp = ((*this)).begin();
+	label i = ((*this)).size(); while (i--) {
 		(*vp++) = t;
 	}
 }
@@ -315,7 +315,7 @@ void AutLib::List<T>::setSize(const label newSize)
 
 			if (this->size_)
 			{
-				register label i = min(this->size_, newSize);
+				label i = min(this->size_, newSize);
 
 #               ifdef USEMEMCPY
 				if (contiguous<T>())
@@ -325,8 +325,8 @@ void AutLib::List<T>::setSize(const label newSize)
 				else
 #               endif
 				{
-					register T* vv = &this->v_[i];
-					register T* av = &nv[i];
+					T* vv = &this->v_[i];
+					T* av = &nv[i];
 					while (i--) *--av = *--vv;
 				}
 			}
@@ -351,8 +351,8 @@ void AutLib::List<T>::setSize(const label newSize, const T& a)
 
 	if (newSize > oldSize)
 	{
-		register label i = newSize - oldSize;
-		register T* vv = &this->v_[newSize];
+		label i = newSize - oldSize;
+		T* vv = &this->v_[newSize];
 		while (i--) *--vv = a;
 	}
 }
@@ -426,9 +426,9 @@ void AutLib::List<T>::operator=(const UList<T>& a)
 		else
 #       endif
 		{
-			register T* vp = ((*this)).begin();
-			register const T* ap = (a).begin();
-			register label i = ((*this)).size(); while (i--) {
+			T* vp = ((*this)).begin();
+			const T* ap = (a).begin();
+			label i = ((*this)).size(); while (i--) {
 				(*vp++) = (*ap++);
 			}
 		}
@@ -649,7 +649,7 @@ namespace AutLib
 				{
 					if (delimiter == token::BEGIN_LIST)
 					{
-						for (register label i = 0; i < s; i++)
+						for (label i = 0; i < s; i++)
 						{
 							is >> L[i];
 
@@ -663,7 +663,7 @@ namespace AutLib
 
 						is.fatalCheck("operator>>(Istream&, List<T>&) : ""reading the single entry");
 
-						for (register label i = 0; i < s; i++)
+						for (label i = 0; i < s; i++)
 						{
 							L[i] = element;
 						}

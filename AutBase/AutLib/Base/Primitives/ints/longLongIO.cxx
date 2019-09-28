@@ -15,7 +15,7 @@ AutLib::word AutLib::name(long long val)
 
 long long AutLib::readLongLong(Istream& is)
 {
-	register long long result = 0;
+	long long result = 0;
 
 	char c = 0;
 

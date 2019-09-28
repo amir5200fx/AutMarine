@@ -115,7 +115,7 @@ void AutLib::PtrList<T>::setSize(const label newSize)
 	}
 	else if (newSize < oldSize)
 	{
-		register label i;
+		label i;
 		for (i = newSize; i < oldSize; i++)
 		{
 			if (ptrs_[i])
@@ -130,7 +130,7 @@ void AutLib::PtrList<T>::setSize(const label newSize)
 	{
 		ptrs_.setSize(newSize);
 
-		register label i;
+		label i;
 		for (i = oldSize; i < newSize; i++)
 		{
 			ptrs_[i] = NULL;

@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{767e5640-06e0-4b78-9bba-7c43c5bfa890}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model">
+      <UniqueIdentifier>{5ca04239-de2f-42c3-8e9a-1f6e690458f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker">
+      <UniqueIdentifier>{7b17192a-b46a-4b1e-ae11-aceef1dc57ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame">
+      <UniqueIdentifier>{780ffb9d-f17a-4978-8ab4-a59055ad96c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\Segment">
+      <UniqueIdentifier>{4e458a72-ea9a-484a-8095-5fca81495f53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\Corner">
+      <UniqueIdentifier>{c88674ce-035f-428b-8c94-ac946880c4e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities">
+      <UniqueIdentifier>{602d02d4-9912-46a4-a79d-71b6f25089d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities\Pole">
+      <UniqueIdentifier>{b0410469-11bb-452a-9978-e3a58f74e621}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities\Segment">
+      <UniqueIdentifier>{b88c5151-7b3d-400f-9710-cc1acdbe7c21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities\Pole\Dangle">
+      <UniqueIdentifier>{be907259-3e08-4964-bc16-b4574afc6b27}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities\Pole\Tight">
+      <UniqueIdentifier>{ff96f830-5594-45ef-8d3e-e1cf49810f81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities\Entity">
+      <UniqueIdentifier>{e46ed6bf-de47-463c-9f15-2576f6dc1254}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\Step">
+      <UniqueIdentifier>{5fdf1cf4-ccb7-4841-b9bc-3e7b6ef2d001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\PairedCorners">
+      <UniqueIdentifier>{fa2e61ca-f357-4d2f-870b-6dc90e414c2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\PairedCorners\Step">
+      <UniqueIdentifier>{e42fc022-feca-43d9-b11a-2c6dfdc88528}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\PairedCorners\U">
+      <UniqueIdentifier>{34fb2b63-6b9a-4343-90d6-723fd6a23265}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\U">
+      <UniqueIdentifier>{0e39154b-087e-406d-9e7e-8156c534ac19}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Frame\Costum">
+      <UniqueIdentifier>{609b6a5d-607d-4b4b-9fde-40280e160a04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities\Point">
+      <UniqueIdentifier>{0299567b-844e-487a-9219-8fc0314fff73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Entities\Point\Datum">
+      <UniqueIdentifier>{68e1f462-22f3-4fb1-8de2-3e3af26e3e0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Variable">
+      <UniqueIdentifier>{e0b5fafd-355a-4db1-9844-5acc54b70b7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Variable\Parameter">
+      <UniqueIdentifier>{78a96e30-7048-418d-9739-5cb02b2b18c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Variable\Const">
+      <UniqueIdentifier>{48db5f01-430d-4bb5-9f3a-f0a4d822db0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Variable\Parameter\Fixed">
+      <UniqueIdentifier>{75ca2592-f98a-404b-830b-99a9ef6538a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Variable\Parameter\Free">
+      <UniqueIdentifier>{c7bc4989-79eb-43b5-8a33-752063ce6502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Freedom">
+      <UniqueIdentifier>{8c3fa46f-6a86-427d-97a7-00170a1ee9fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Freedom\xDir">
+      <UniqueIdentifier>{0a8ed8ce-6af4-4f5c-8fd5-1e1ad85aef4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect">
+      <UniqueIdentifier>{8a83c220-2ab8-400b-ac3d-b079c9d87af2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Freedom\Clamped">
+      <UniqueIdentifier>{1a14c157-bd76-4218-9e9d-0595a328f4d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Freedom\xAngle">
+      <UniqueIdentifier>{6faf73a8-d17c-4878-a5c4-e65b9805e35b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Freedom\Angle">
+      <UniqueIdentifier>{138f3e96-970a-4ca3-a545-407d4c423374}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\CrvMaker\Freedom\Dir">
+      <UniqueIdentifier>{0023b84a-00cb-4ece-9441-ed994d4e5fb5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Entity\CrvMaker_Entity.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\CrvMaker_Pole.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Pole</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\Dangle\CrvMake_DanglePole.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Pole\Dangle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\Tight\CrvMaker_TightPole.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Pole\Tight</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\Tight\CrvMaker_TerminalPole.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Pole\Tight</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Segment\CrvMaker_Segment.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\CrvMaker_Frame.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\Segment\CrvMakerFrame_Segment.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\Corner\CrvMakerFrame_Corner.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\Corner</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\Step\CrvMakerFrame_Step.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\Step</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\U\CrvMakerFrame_U.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\U</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\PairedCorners\CrvMakerFrame_PairedCorners.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\PairedCorners</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\PairedCorners\Step\CrvMakerFrame_PairedCorners_Step.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\PairedCorners\Step</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\PairedCorners\U\CrvMakerFrame_PairedCorners_U.hxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\PairedCorners\U</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Point\CrvMaker_Point.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Point</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Point\Datum\CrvMaker_Datum.hxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Point\Datum</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\CrvMaker_Variable.hxx">
+      <Filter>AutLib\Model\CrvMaker\Variable</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Const\CrvMaker_Constant.hxx">
+      <Filter>AutLib\Model\CrvMaker\Variable\Const</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Parameter\CrvMaker_Parameter.hxx">
+      <Filter>AutLib\Model\CrvMaker\Variable\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Parameter\Fixed\CrvMaker_FixedParameter.hxx">
+      <Filter>AutLib\Model\CrvMaker\Variable\Parameter\Fixed</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Parameter\Free\CrvMaker_FreeParameter.hxx">
+      <Filter>AutLib\Model\CrvMaker\Variable\Parameter\Free</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\CrvMaker_Freedom.hxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\xDir\CrvMakerFreedom_xDir.hxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\xDir</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\Clamped\CrvMaker_Clamped.hxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\Clamped</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect\CrvMakerFreedom_TwoAnglesIntersect.hxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\xAngle\CrvMakerFreedom_xAngle.hxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\xAngle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\Angle\CrvMakerFreedom_Angle.hxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\Angle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\Dir\CrvMakerFreedom_Dir.hxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\Dir</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutModel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Entities\Pole\Dangle\CrvMake_DanglePole.cxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Pole\Dangle</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Entities\Pole\Tight\CrvMaker_TightPole.cxx">
+      <Filter>AutLib\Model\CrvMaker\Entities\Pole\Tight</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\Corner\CrvMakerFrame_Corner.cxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\Corner</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\Step\CrvMakerFrame_Step.cxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\Step</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\U\CrvMakerFrame_U.cxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\U</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\PairedCorners\CrvMakerFrame_PairedCorners.cxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\PairedCorners</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\Segment\CrvMakerFrame_Segment.cxx">
+      <Filter>AutLib\Model\CrvMaker\Frame\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Freedom\xDir\CrvMakerFreedom_xDir.cxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\xDir</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect\CrvMakerFreedom_TwoAnglesIntersect.cxx">
+      <Filter>AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

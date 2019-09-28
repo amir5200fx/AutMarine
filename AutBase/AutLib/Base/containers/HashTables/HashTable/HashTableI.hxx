@@ -3,6 +3,8 @@
 #include <OSstream.hxx>
 #include <List.hxx>
 #include <Istream.hxx>
+#include <token.hxx>
+
 template<class T, class Key, class Hash>
 AutLib::HashTable<T, Key, Hash>::HashTable(const label size)
 	: HashTableCore()

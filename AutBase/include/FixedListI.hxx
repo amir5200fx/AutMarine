@@ -393,10 +393,10 @@ inline bool AutLib::FixedList<T, Size>::empty() const
 template<class T, unsigned Size>
 void AutLib::FixedList<T, Size>::swap(FixedList<T, Size>& a)
 {
-	register T* vp = ((*this)).begin();
-	register T* ap = (a).begin();
+	T* vp = ((*this)).begin();
+	T* ap = (a).begin();
 	T tmp;
-	register label i = ((*this)).size(); while (i--) 
+	label i = ((*this)).size(); while (i--) 
 	{
 		tmp = (*vp++);
 		(*vp++) = (*ap++);
@@ -411,10 +411,10 @@ namespace AutLib
 	{
 		bool equal = true;
 
-		register const T* vp = ((*this)).begin();
-		register const T* ap = ((a)).begin();
+		const T* vp = ((*this)).begin();
+		const T* ap = ((a)).begin();
 
-		register label i = ((*this)).size(); while (i--) {
+		label i = ((*this)).size(); while (i--) {
 			equal = equal && ((*vp++) == (*ap++));
 		}
 
@@ -549,7 +549,7 @@ namespace AutLib
 
 			if (delimiter == token::BEGIN_LIST)
 			{
-				for (register unsigned i = 0; i < Size; i++)
+				for (unsigned i = 0; i < Size; i++)
 				{
 					is >> L[i];
 
@@ -571,7 +571,7 @@ namespace AutLib
 					"reading the single entry"
 				);
 
-				for (register unsigned i = 0; i < Size; i++)
+				for (unsigned i = 0; i < Size; i++)
 				{
 					L[i] = element;
 				}

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{54BFFC88-515E-436D-8028-E393D4AB62BB}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>AutModel</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\Custom;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\PairedCorners\U;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\PairedCorners\Step;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\PairedCorners;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\U;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\Step;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\Corner;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame\Segment;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Frame;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Entities\Segment;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Entities\Pole\Tight;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Entities\Pole\Dangle;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Entities\Pole;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Entities\Point\Datum;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Entities\Point;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Entities\Entity;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Variable\Parameter\Free;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Variable\Parameter\Fixed;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Variable\Parameter;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Variable\Const;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Variable;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom\Clamped;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom\yDir;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom\xDir;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom\xAngle;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom\Angle;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom\Dir;$(SolutionDir)AutModel\AutLib\Model\CrvMaker\Freedom;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Entity\CrvMaker_Entity.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Point\CrvMaker_Point.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Point\Datum\CrvMaker_Datum.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\CrvMaker_Pole.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\Dangle\CrvMake_DanglePole.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\Tight\CrvMaker_TerminalPole.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Pole\Tight\CrvMaker_TightPole.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Entities\Segment\CrvMaker_Segment.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\Corner\CrvMakerFrame_Corner.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\CrvMaker_Frame.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\PairedCorners\CrvMakerFrame_PairedCorners.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\PairedCorners\Step\CrvMakerFrame_PairedCorners_Step.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\PairedCorners\U\CrvMakerFrame_PairedCorners_U.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\Segment\CrvMakerFrame_Segment.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\Step\CrvMakerFrame_Step.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Frame\U\CrvMakerFrame_U.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\Angle\CrvMakerFreedom_Angle.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\Clamped\CrvMaker_Clamped.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\CrvMaker_Freedom.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\Dir\CrvMakerFreedom_Dir.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect\CrvMakerFreedom_TwoAnglesIntersect.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\xAngle\CrvMakerFreedom_xAngle.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Freedom\xDir\CrvMakerFreedom_xDir.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Const\CrvMaker_Constant.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\CrvMaker_Variable.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Parameter\CrvMaker_Parameter.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Parameter\Fixed\CrvMaker_FixedParameter.hxx" />
+    <ClInclude Include="AutLib\Model\CrvMaker\Variable\Parameter\Free\CrvMaker_FreeParameter.hxx" />
+    <ClInclude Include="framework.h" />
+    <ClInclude Include="pch.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Model\CrvMaker\Entities\Pole\Dangle\CrvMake_DanglePole.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Entities\Pole\Tight\CrvMaker_TightPole.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\Corner\CrvMakerFrame_Corner.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\PairedCorners\CrvMakerFrame_PairedCorners.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\Segment\CrvMakerFrame_Segment.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\Step\CrvMakerFrame_Step.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Frame\U\CrvMakerFrame_U.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Freedom\TwoAnglesIntersect\CrvMakerFreedom_TwoAnglesIntersect.cxx" />
+    <ClCompile Include="AutLib\Model\CrvMaker\Freedom\xDir\CrvMakerFreedom_xDir.cxx" />
+    <ClCompile Include="AutModel.cpp" />
+    <ClCompile Include="pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
