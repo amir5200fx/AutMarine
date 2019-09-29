@@ -34,6 +34,8 @@ namespace AutLib
 
 		Handle(Geom_Surface) theGeom_;
 
+		Handle(Poly_Triangulation) theTriangulation_;
+
 		outer theOuter_;
 		inner theInner_;
 
@@ -117,6 +119,11 @@ namespace AutLib
 			return theGeom_;
 		}
 
+		const Handle(Poly_Triangulation)& Triangulation() const
+		{
+			return theTriangulation_;
+		}
+
 		const Entity2d_Box& BoundingBox() const
 		{
 			return theBoundingBox_;
@@ -142,6 +149,11 @@ namespace AutLib
 		void SetFace(const TopoDS_Face& theFace)
 		{
 			theFace_ = theFace;
+		}
+
+		void SetTriangulation(const Handle(Poly_Triangulation)& theTriangulation)
+		{
+			theTriangulation_ = theTriangulation;
 		}
 
 		void ExportPlaneCurvesToPlt(OFstream& File) const;

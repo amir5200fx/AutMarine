@@ -43,7 +43,7 @@ AutLib::GModel_parCurve::Value
 {
 	if (NOT INSIDE(x, FirstParam(), LastParam()))
 	{
-		FatalErrorIn("Pnt2d AutLib::Solid_parCurve::Value(const Standard_Real x) const")
+		FatalErrorIn("Pnt2d GModel_parCurve::Value(const Standard_Real x) const")
 			<< "Invalid Parameter: " << x << endl
 			<< " - First Parameter: " << FirstParam() << endl
 			<< " - Last Parameter: " << LastParam() << endl
@@ -60,7 +60,7 @@ AutLib::GModel_parCurve::NormalizedParameterValue
 {
 	if (NOT INSIDE(x, 0, 1))
 	{
-		FatalErrorIn("Pnt2d AutLib::Solid_parCurve::Value(const Standard_Real x) const")
+		FatalErrorIn("Pnt2d GModel_parCurve::Value(const Standard_Real x) const")
 			<< "Invalid Parameter: " << x << endl
 			<< " - First Parameter: " << 0 << endl
 			<< " - Last Parameter: " << 1 << endl

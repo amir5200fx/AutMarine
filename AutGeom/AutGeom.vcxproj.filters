@@ -548,5 +548,8 @@
     <ClInclude Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle\PrimShape2d_Rectangle.hxx">
       <Filter>AutLib\Geom\PrimitiveShapes\2d\Rectangle</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonFwd.hxx">
+      <Filter>AutLib\Geom\Entities\Polygon\3d</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

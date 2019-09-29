@@ -151,6 +151,7 @@
     <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_SIDE.hxx" />
     <ClInclude Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_Tools.hxx" />
     <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_Polygon.hxx" />
+    <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Entities\Polygon\Entity_Polygon.hxx" />
     <ClInclude Include="AutLib\Geom\Entities\Polygon\Entity_PolygonI.hxx" />
     <ClInclude Include="AutLib\Geom\Entities\Segment\Entity_Segment.hxx" />

@@ -130,6 +130,57 @@
     <Filter Include="AutLib\Cad\GModel\System">
       <UniqueIdentifier>{23a225b2-adce-4b43-bc9c-b6d71f9cbe53}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities">
+      <UniqueIdentifier>{b844ceaa-2529-4f7c-90ba-8e89d372248d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Curve">
+      <UniqueIdentifier>{8f76d702-5c7f-47c0-9545-0f16d870bfa6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Edge">
+      <UniqueIdentifier>{9f6c25b6-5185-4a6d-a13b-0b6d978b50f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Vertex">
+      <UniqueIdentifier>{f8bd96ff-7fca-4174-b80e-ecd853780d94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Wire">
+      <UniqueIdentifier>{251559f2-4446-40ee-a233-d7c991085b5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Shell">
+      <UniqueIdentifier>{a154b9f4-f343-4452-b3c3-b70cdcd05019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Plane">
+      <UniqueIdentifier>{30d76936-fe7a-4212-894e-90c829860bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Paired">
+      <UniqueIdentifier>{ab740c04-2286-40d1-b684-13e636b92b23}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Curve\par">
+      <UniqueIdentifier>{e6d68dcd-a484-46e7-95f7-28a339776dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Wire\par">
+      <UniqueIdentifier>{52e91e0b-7f33-4901-96d9-931bc5347d2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Entity">
+      <UniqueIdentifier>{2e820370-65d7-4082-a632-8f6828286b46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Edge\Singular">
+      <UniqueIdentifier>{4351eb54-fe59-496b-aa56-d24861b96722}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Surface">
+      <UniqueIdentifier>{4d9b0213-9ca4-4125-87ad-73b2c36c2bf8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Orientation">
+      <UniqueIdentifier>{e81a2a42-74f4-4ccf-9e8c-53f7dec5119f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Entities\Edge\Ring">
+      <UniqueIdentifier>{efb7bea8-8398-4f3b-927f-153d02cca47f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\System">
+      <UniqueIdentifier>{2c94e409-5874-44a4-a5e2-3e3d4b5f1238}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\TModel\Tools">
+      <UniqueIdentifier>{51e7f8af-7f2c-4ac7-b792-ed2aa24f5f6b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
@@ -224,6 +275,84 @@
     </ClCompile>
     <ClCompile Include="AutLib\Cad\GModel\System\GModel_FixWireInfo.cxx">
       <Filter>AutLib\Cad\GModel\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Curve\TModel_Curve.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Curve\TModel_CurveIO.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Curve\par\TModel_parCurve.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Curve\par</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Curve\par\TModel_parCurveIO.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Curve\par</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Vertex\TModel_Vertex.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Vertex</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Edge\TModel_Edge.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Edge</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Surface\TModel_Surface.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Surface\TModel_SurfaceIO.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Wire\TModel_Wire.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Wire</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Wire\par\TModel_parWire.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Wire\par</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Wire\par\TModel_parWireIO.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Wire\par</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Shell\TModel_Shell.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Shell\TModel_ShellIO.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Shell</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Paired\TModel_Paired.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Paired</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Paired\TModel_PairedIO.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Paired</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Plane\TModel_Plane.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Entities\Plane\TModel_PlaneIO.cxx">
+      <Filter>AutLib\Cad\TModel\Entities\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Cad3d_TModel.cxx">
+      <Filter>AutLib\Cad\TModel</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Cad3d_TModelIO.cxx">
+      <Filter>AutLib\Cad\TModel</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\System\TModel_FixWireInfo.cxx">
+      <Filter>AutLib\Cad\TModel\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\System\TModel_System.cxx">
+      <Filter>AutLib\Cad\TModel\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Tools\TModel_Tools.cxx">
+      <Filter>AutLib\Cad\TModel\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Cad3d_TModelMake.cxx">
+      <Filter>AutLib\Cad\TModel</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Tools\TModel_IdentifyHoles.cxx">
+      <Filter>AutLib\Cad\TModel\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Tools\TModel_GetSurfaces.cxx">
+      <Filter>AutLib\Cad\TModel\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\TModel\Tools\TModel_MakeShells.cxx">
+      <Filter>AutLib\Cad\TModel\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -343,6 +472,66 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\GModel\System\GModel_FixWireInfo.hxx">
       <Filter>AutLib\Cad\GModel\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Curve\TModel_Curve.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Entity\TModel_Entity.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Curve\par\TModel_parCurve.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Curve\par</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Vertex\TModel_Vertex.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\TModel_Edge.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Orientation\TModel_FaceOrientation.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Orientation</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Surface\TModel_Surface.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Wire\TModel_Wire.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Wire</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Wire\par\TModel_parWire.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Wire\par</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Shell\TModel_Shell.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Shell</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Paired\TModel_Paired.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Paired</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Ring\TModel_Ring.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Edge\Ring</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Singular\TModel_Singular.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Edge\Singular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Plane\TModel_Plane.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Cad3d_TModel.hxx">
+      <Filter>AutLib\Cad\TModel</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\System\TModel_FixWireInfo.hxx">
+      <Filter>AutLib\Cad\TModel\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\System\TModel_System.hxx">
+      <Filter>AutLib\Cad\TModel\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Tools\TModel_Tools.hxx">
+      <Filter>AutLib\Cad\TModel\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Entity\TModel_EntityManager.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Entity\TModel_EntityBlock.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Entity</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

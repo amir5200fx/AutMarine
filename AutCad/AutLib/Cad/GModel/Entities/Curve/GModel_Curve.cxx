@@ -56,7 +56,7 @@ AutLib::GModel_Curve::NormalizedParameterValue
 {
 	if (NOT INSIDE(x, 0, 1))
 	{
-		FatalErrorIn("Pnt3d AutLib::Solid_Curve::Value(const Standard_Real x) const")
+		FatalErrorIn("Pnt3d GModel_Curve::Value(const Standard_Real x) const")
 			<< "Invalid Parameter: " << x << endl
 			<< " - First Parameter: " << 0 << endl
 			<< " - Last Parameter: " << 1 << endl

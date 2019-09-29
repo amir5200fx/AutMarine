@@ -6,6 +6,7 @@
 #include <GModel_Wire.hxx>
 #include <GModel_Surface.hxx>
 #include <GModel_System.hxx>
+#include <GModel_FixWireInfo.hxx>
 
 #include <TopoDS.hxx>
 #include <TopoDS_Face.hxx>
@@ -82,4 +83,184 @@ namespace AutLib
 			return std::move(newEdge);
 		}
 	}
+}
+
+//- Static functions and operators
+
+std::shared_ptr<AutLib::GModel_Surface> 
+AutLib::Cad3d_GModel::GetSurface
+(
+	const TopoDS_Face & theFace
+)
+{
+	const auto forwardFace = TopoDS::Face(theFace.Oriented(TopAbs_FORWARD));
+
+	auto outter_edges_p = std::make_shared<std::vector<std::shared_ptr<GModel_Edge>>>();
+
+	Debug_Null_Pointer(outter_edges_p);
+	auto& outter_edges = *outter_edges_p;
+
+	const auto Tol = gModelSys::fix_wire->Tolerance();
+	Standard_Integer K = 0;
+	Standard_Integer wireIndex = 0;
+
+	const auto outer_wire = BRepTools::OuterWire(forwardFace);
+
+	if (outer_wire.IsNull())
+	{
+		FatalErrorIn(FunctionSIG)
+			<< "Null outer wire" << endl
+			<< abort(FatalError);
+	}
+
+	ShapeFix_Wire SFWF(outer_wire, forwardFace, Tol);
+
+	SFWF.SetPrecision(gModelSys::fix_wire->Precision());
+	SFWF.SetMaxTolerance(gModelSys::fix_wire->MaxTolerance());
+	SFWF.SetMinTolerance(gModelSys::fix_wire->MinTolerance());
+
+	SFWF.FixReorder();
+	SFWF.ClosedWireMode() = Standard_True;
+	SFWF.FixClosed();
+	SFWF.FixConnected();
+
+	SFWF.Perform();
+
+	auto fixed_outer_wire = SFWF.Wire();
+
+	for (
+		BRepTools_WireExplorer anEdgeExp(fixed_outer_wire);
+		anEdgeExp.More();
+		anEdgeExp.Next()
+		)
+	{
+		auto edge = TopoDS::Edge(anEdgeExp.Current());
+		auto new_edge = gModel::GetNewEdge(K, edge, forwardFace);
+
+		outter_edges.push_back(new_edge);
+	}
+
+	auto outerWire = std::make_shared<GModel_Wire>(++wireIndex, outter_edges_p);
+	std::shared_ptr<std::vector<std::shared_ptr<GModel_Wire>>> Qwire;
+	for (
+		TopExp_Explorer aWireExp(forwardFace, TopAbs_WIRE);
+		aWireExp.More();
+		aWireExp.Next()
+		)
+	{
+		auto wire = TopoDS::Wire(aWireExp.Current());
+
+		if (wire.IsNull()) continue;
+		if (wire IS_EQUAL outer_wire) continue;
+		// has inner wire
+
+		auto Inner_edges_ptr = std::make_shared<std::vector<std::shared_ptr<GModel_Edge>>>();
+		auto& Inner_edges = *Inner_edges_ptr;
+
+		ShapeFix_Wire SFWF(wire, forwardFace, Tol);
+
+		SFWF.SetPrecision(gModelSys::fix_wire->Precision());
+		SFWF.SetMaxTolerance(gModelSys::fix_wire->MaxTolerance());
+		SFWF.SetMinTolerance(gModelSys::fix_wire->MinTolerance());
+
+		SFWF.FixReorder();
+		SFWF.ClosedWireMode() = Standard_True;
+		SFWF.FixClosed();
+		SFWF.FixConnected();
+
+		SFWF.Perform();
+		wire = SFWF.WireAPIMake();
+
+		for (
+			BRepTools_WireExplorer anEdgeExp(wire);
+			anEdgeExp.More();
+			anEdgeExp.Next()
+			)
+		{
+			auto edge = TopoDS::Edge(anEdgeExp.Current());
+
+			Inner_edges.push_back(gModel::GetNewEdge(K, edge, forwardFace));
+		}
+
+		if (Inner_edges.empty())
+		{
+			FatalErrorIn("AutLib::Cad3d_SolidTools::face_ptr AutLib::Cad3d_SolidTools::GetSurface(const TopoDS_Face & theFace)")
+				<< "Empty wire" << endl
+				<< abort(FatalError);
+		}
+
+		auto innerWire = std::make_shared<GModel_Wire>(++wireIndex, Inner_edges_ptr);
+
+		if (NOT Qwire) Qwire = std::make_shared<std::vector<std::shared_ptr<GModel_Wire>>>();
+		Qwire->push_back(innerWire);
+	}
+
+	TopLoc_Location Location;
+	auto geometry = BRep_Tool::Surface(forwardFace, Location);
+
+	auto face =
+		std::make_shared<GModel_Surface>(geometry, outerWire, Qwire);
+
+	return std::move(face);
+}
+
+AutLib::Cad3d_GModel::faceList
+AutLib::Cad3d_GModel::GetSurfaces
+(
+	const TopoDS_Shape & theShape
+)
+{
+	Standard_Integer K = 0;
+	faceList list;
+	for (
+		TopExp_Explorer aFaceExp(theShape.Oriented(TopAbs_FORWARD), TopAbs_FACE);
+		aFaceExp.More();
+		aFaceExp.Next()
+		)
+	{
+		auto raw = TopoDS::Face(aFaceExp.Current());
+
+		TopLoc_Location aLoc;
+		auto tri = BRep_Tool::Triangulation(raw, aLoc);
+		if (tri)
+		{
+			auto trans = aLoc.Transformation();
+
+			auto& pts = tri->ChangeNodes();
+			forThose(Index, 1, pts.Size())
+			{
+				auto& p = pts.ChangeValue(Index);
+				p.Transform(trans);
+			}
+		}
+
+		if (raw.IsNull())
+		{
+			continue;
+		}
+
+		auto face = GetSurface(raw);
+
+		face->SetIndex(++K);
+
+		if (tri)
+		{
+			face->SetTriangulation(tri);
+		}
+
+		list.push_back(face);
+	}
+
+	return std::move(list);
+}
+
+std::shared_ptr<AutLib::Cad3d_GModel> 
+AutLib::Cad3d_GModel::GModel(const TopoDS_Shape & theShape)
+{
+	auto faces =
+		GetSurfaces(theShape);
+
+	auto shape =
+		std::make_shared<Cad3d_GModel>(faces);
+	return std::move(shape);
 }
