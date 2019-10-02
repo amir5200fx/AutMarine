@@ -106,11 +106,11 @@
     <Filter Include="AutLib\Model\Section">
       <UniqueIdentifier>{e991f3ff-d0fc-4cbb-83ce-b8f48c4ddc50}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\Model\Section\Half">
-      <UniqueIdentifier>{9e1fec08-5ab5-4810-bc27-43c96355d614}</UniqueIdentifier>
+    <Filter Include="AutLib\Model\Section\Symmetric">
+      <UniqueIdentifier>{c7304dd9-cd73-4495-a403-cd4368ab9dd6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\Model\Section\Full">
-      <UniqueIdentifier>{235589db-794b-49f5-ab91-c530ad9a4755}</UniqueIdentifier>
+    <Filter Include="AutLib\Model\Section\UnSymmetric">
+      <UniqueIdentifier>{5cf4f37d-0ade-42bb-884c-427b2444e83a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -186,8 +186,11 @@
     <ClInclude Include="AutLib\Model\Section\Model_Section.hxx">
       <Filter>AutLib\Model\Section</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Model\Section\Half\Model_HalfSection.hxx">
-      <Filter>AutLib\Model\Section\Half</Filter>
+    <ClInclude Include="AutLib\Model\Section\Symmetric\Model_SymSection.hxx">
+      <Filter>AutLib\Model\Section\Symmetric</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Section\UnSymmetric\Model_UnSymSection.hxx">
+      <Filter>AutLib\Model\Section\UnSymmetric</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
