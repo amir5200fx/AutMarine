@@ -11,7 +11,7 @@ namespace AutLib
 		: public CrvMaker_Variable
 	{
 
-		/*private Data*/
+		/*Private Data*/
 
 	protected:
 

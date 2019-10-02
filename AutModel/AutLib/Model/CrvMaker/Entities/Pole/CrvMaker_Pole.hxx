@@ -2,18 +2,13 @@
 #ifndef _CrvMaker_Pole_Header
 #define _CrvMaker_Pole_Header
 
-#include <CrvMaker_Point.hxx>
-
-#include <memory>
+#include <CrvMaker_Entity.hxx>
 
 namespace AutLib
 {
 
-	// Forward Declarations
-	class CrvMaker_Segment;
-
 	class CrvMaker_Pole
-		: public CrvMaker_Point
+		: public CrvMaker_Entity
 	{
 
 		/*Private Data*/
@@ -25,42 +20,25 @@ namespace AutLib
 
 		CrvMaker_Pole
 		(
-			const Standard_Integer theIndex,
-			const Pnt2d& theCoord
+			const Standard_Integer theIndex
 		)
-			: CrvMaker_Point(theIndex, theCoord)
+			: CrvMaker_Entity(theIndex)
 		{}
 
 		CrvMaker_Pole
 		(
 			const Standard_Integer theIndex,
-			const word& theName,
-			const Pnt2d& theCoord
+			const word& theName
 		)
-			: CrvMaker_Point(theIndex, theName, theCoord)
+			: CrvMaker_Entity(theIndex, theName)
 		{}
 
 	public:
 
-		//- virtual functions
 
-		virtual Standard_Boolean IsDangle() const
-		{
-			return Standard_False;
-		}
+		virtual Standard_Real xValue() const = 0;
 
-		virtual Standard_Boolean IsTight() const
-		{
-			return Standard_False;
-		}
-
-		virtual Standard_Integer NbSegments() const = 0;
-
-		virtual const std::weak_ptr<CrvMaker_Segment>& 
-			Segment
-			(
-				const Standard_Integer theIndex
-			) const = 0;
+		virtual Standard_Real yValue() const = 0;
 	};
 }
 

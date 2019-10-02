@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _CrvMakerDof_Dir_Header
-#define _CrvMakerDof_Dir_Header
+#ifndef _CrvMakerDof_Angle_Header
+#define _CrvMakerDof_Angle_Header
 
 #include <CrvMaker_Clamped.hxx>
 #include <CrvMaker_Dimension.hxx>
@@ -16,7 +16,7 @@ namespace AutLib
 	class CrvMaker_BndParameter;
 
 	template<class ParamType, int FreeDim>
-	class CrvMakerDof_Dir
+	class CrvMakerDof_Angle
 		: public CrvMaker_Dof
 	{
 
@@ -26,10 +26,7 @@ namespace AutLib
 
 	public:
 
-		CrvMakerDof_Dir
-		(
-			const std::shared_ptr<ParamType>& theParameter
-		)
+		CrvMakerDof_Angle(const std::shared_ptr<ParamType>& theParameter)
 			: theParameter_(theParameter)
 		{}
 
@@ -45,7 +42,7 @@ namespace AutLib
 	};
 
 	template<int FreeDim>
-	class CrvMakerDof_Dir<CrvMaker_Constatnt, FreeDim>
+	class CrvMakerDof_Angle<CrvMaker_Constatnt, FreeDim>
 		: public CrvMaker_Clamped
 	{
 
@@ -55,10 +52,7 @@ namespace AutLib
 
 	public:
 
-		CrvMakerDof_Dir
-		(
-			const std::shared_ptr<CrvMaker_Constatnt>& theParameter
-		)
+		CrvMakerDof_Angle(const std::shared_ptr<CrvMaker_Constatnt>& theParameter)
 			: theParameter_(theParameter)
 		{}
 
@@ -67,7 +61,7 @@ namespace AutLib
 			theParameter_ = theParameter;
 		}
 
-		const std::shared_ptr<CrvMaker_Constatnt>& Parameter() const
+		const std::shared_ptr<ParamType>& Parameter() const
 		{
 			return theParameter_;
 		}
@@ -75,15 +69,15 @@ namespace AutLib
 
 	namespace CrvMaker
 	{
-		typedef CrvMakerDof_Dir<CrvMaker_Constatnt, (int)CrvMaker_Dimension::xDirect> xDirClamped;
-		typedef CrvMakerDof_Dir<CrvMaker_FreeParameter, (int)CrvMaker_Dimension::xDirect> xDirParameter;
-		typedef CrvMakerDof_Dir<CrvMaker_BndParameter, (int)CrvMaker_Dimension::xDirect> xDirBounded;
+		typedef CrvMakerDof_Angle<CrvMaker_Constatnt, (int)CrvMaker_Dimension::Angle0> angle0Clamped;
+		typedef CrvMakerDof_Angle<CrvMaker_FreeParameter, (int)CrvMaker_Dimension::Angle0> angle0Parameter;
+		typedef CrvMakerDof_Angle<CrvMaker_BndParameter, (int)CrvMaker_Dimension::Angle0> angle0Bounded;
 
-		typedef CrvMakerDof_Dir<CrvMaker_Constatnt, (int)CrvMaker_Dimension::yDirect> yDirClamped;
-		typedef CrvMakerDof_Dir<CrvMaker_FreeParameter, (int)CrvMaker_Dimension::yDirect> yDirParameter;
-		typedef CrvMakerDof_Dir<CrvMaker_BndParameter, (int)CrvMaker_Dimension::yDirect> yDirBounded;
+		typedef CrvMakerDof_Angle<CrvMaker_Constatnt, (int)CrvMaker_Dimension::Angle1> angle1Clamped;
+		typedef CrvMakerDof_Angle<CrvMaker_FreeParameter, (int)CrvMaker_Dimension::Angle1> angle1Parameter;
+		typedef CrvMakerDof_Angle<CrvMaker_BndParameter, (int)CrvMaker_Dimension::Angle1> angle1Bounded;
 
 	}
 }
 
-#endif // !_CrvMakerDof_Dir_Header
+#endif // !_CrvMakerDof_Angle_Header

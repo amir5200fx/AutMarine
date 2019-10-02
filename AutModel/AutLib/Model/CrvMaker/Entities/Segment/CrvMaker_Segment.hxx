@@ -10,82 +10,84 @@ namespace AutLib
 {
 
 	// Forward Declarations
-	class CrvMaker_Pole;
+	template<class NodeTraits>
+	class CrvMaker_Node;
 
+
+	template<class NodeTraits>
 	class CrvMaker_Segment
 		: public CrvMaker_Entity
 	{
 
+		typedef CrvMaker_Node<NodeTraits> node;
+
 		/*Private Data*/
 
-		std::shared_ptr<CrvMaker_Pole> theFirst_;
-		std::shared_ptr<CrvMaker_Pole> theLast_;
+		std::shared_ptr<node> theNode0_;
+		std::shared_ptr<node> theNode1_;
 
 	public:
 
 		CrvMaker_Segment()
 		{}
 
+		CrvMaker_Segment
+		(
+			const std::shared_ptr<node>& theNode0,
+			const std::shared_ptr<node>& theNode1
+		)
+			: theNode0_(theNode0)
+			, theNode1_(theNode1)
+		{}
+
 		CrvMaker_Segment(const Standard_Integer theIndex)
 			: CrvMaker_Entity(theIndex)
 		{}
 
-		CrvMaker_Segment(const Standard_Integer theIndex, const word& theName)
-			: CrvMaker_Entity(theIndex, theName)
-		{}
-
-		CrvMaker_Segment
-		(
-			const std::shared_ptr<CrvMaker_Pole>& theFirst,
-			const std::shared_ptr<CrvMaker_Pole>& theLast
-		)
-			: theFirst_(theFirst)
-			, theLast_(theLast)
-		{}
-
 		CrvMaker_Segment
 		(
 			const Standard_Integer theIndex,
-			const std::shared_ptr<CrvMaker_Pole>& theFirst,
-			const std::shared_ptr<CrvMaker_Pole>& theLast
+			const std::shared_ptr<node>& theNode0,
+			const std::shared_ptr<node>& theNode1
 		)
-			: theFirst_(theFirst)
-			, theLast_(theLast)
-			, CrvMaker_Entity(theIndex)
+			: CrvMaker_Entity(theIndex)
+			, theNode0_(theNode0)
+			, theNode1_(theNode1)
 		{}
 
 		CrvMaker_Segment
 		(
-			const Standard_Integer theIndex,
+			const Standard_Integer theIndex, 
 			const word& theName,
-			const std::shared_ptr<CrvMaker_Pole>& theFirst,
-			const std::shared_ptr<CrvMaker_Pole>& theLast
+			const std::shared_ptr<node>& theNode0, 
+			const std::shared_ptr<node>& theNode1
 		)
-			: theFirst_(theFirst)
-			, theLast_(theLast)
-			, CrvMaker_Entity(theIndex, theName)
+			: CrvMaker_Entity(theIndex, theName)
+			, theNode0_(theNode0)
+			, theNode1_(theNode1)
 		{}
 
-
-		const std::shared_ptr<CrvMaker_Pole>& First() const
+		const std::shared_ptr<node>& Node0() const
 		{
-			return theFirst_;
+			return theNode0_;
 		}
 
-		const std::shared_ptr<CrvMaker_Pole>& Last() const
+		std::shared_ptr<node>& Node0()
 		{
-			return theLast_;
+			return theNode0_;
 		}
 
-		void SetFirst(const std::shared_ptr<CrvMaker_Pole>& theFirst)
+		const std::shared_ptr<node>& Node1() const
 		{
-			theFirst_ = theFirst;
+			return theNode1_;
 		}
 
-		void SetLast(const std::shared_ptr<CrvMaker_Pole>& theLast)
+		std::shared_ptr<node>& Node1()
 		{
-			theLast_ = theLast;
+			return theNode1_;
 		}
+
+
 	};
 }
 

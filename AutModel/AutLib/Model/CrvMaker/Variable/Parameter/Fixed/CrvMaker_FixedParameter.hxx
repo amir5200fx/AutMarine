@@ -21,20 +21,21 @@ namespace AutLib
 			: theValue_(0)
 		{}
 
-		CrvMaker_FixedParameter(const Standard_Real theValue)
+		CrvMaker_FixedParameter
+		(
+			const Standard_Real theValue
+		)
 			: theValue_(theValue)
 		{}
-
-		void SetValue(const Standard_Real theValue)
-		{
-			theValue_ = theValue;
-		}
-
-		//- override functions
 
 		Standard_Real Value() const override
 		{
 			return theValue_;
+		}
+
+		void SetValue(const Standard_Real theValue)
+		{
+			theValue_ = theValue;
 		}
 	};
 }

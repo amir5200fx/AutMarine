@@ -4,94 +4,91 @@
 
 #include <CrvMaker_Frame.hxx>
 
-#include <memory>
-
 namespace AutLib
 {
 
+	template<class NodeTraits>
 	class CrvMakerFrame_Corner
-		: public CrvMaker_Frame
+		: public CrvMaker_Frame<NodeTraits>
 	{
+
+		typedef CrvMaker_Node<NodeTraits> node;
 
 		/*Private Data*/
 
-		std::shared_ptr<CrvMaker_Pole> thePole0_;
-		std::shared_ptr<CrvMaker_Pole> thePole1_;
-		std::shared_ptr<CrvMaker_Pole> thePole2_;
+		std::shared_ptr<node> theNode0_;
+		std::shared_ptr<node> theNode1_;
+		std::shared_ptr<node> theNode2_;
+
+	protected:
+
+		CrvMakerFrame_Corner()
+		{}
+
+		CrvMakerFrame_Corner(const Standard_Integer theIndex)
+			: CrvMaker_Frame<NodeTraits>(theIndex)
+		{}
+
+		CrvMakerFrame_Corner
+		(
+			const Standard_Integer theIndex,
+			const word& theName
+		)
+			: CrvMaker_Frame<NodeTraits>(theIndex, theName)
+		{}
 
 	public:
 
-		CrvMakerFrame_Corner
-		(
-			const std::shared_ptr<CrvMaker_Pole>& thePole0, 
-			const std::shared_ptr<CrvMaker_Pole>& thePole1,
-			const std::shared_ptr<CrvMaker_Pole>& thePole2
-		)
-			: thePole0_(thePole0)
-			, thePole1_(thePole1)
-			, thePole2_(thePole2)
-		{}
-
-		CrvMakerFrame_Corner
-		(
-			const Standard_Integer theIndex,
-			const std::shared_ptr<CrvMaker_Pole>& thePole0,
-			const std::shared_ptr<CrvMaker_Pole>& thePole1,
-			const std::shared_ptr<CrvMaker_Pole>& thePole2
-		)
-			: thePole0_(thePole0)
-			, thePole1_(thePole1)
-			, thePole2_(thePole2)
-			, CrvMaker_Frame(theIndex)
-		{}
-
-		CrvMakerFrame_Corner
-		(
-			const Standard_Integer theIndex,
-			const word& theName,
-			const std::shared_ptr<CrvMaker_Pole>& thePole0,
-			const std::shared_ptr<CrvMaker_Pole>& thePole1,
-			const std::shared_ptr<CrvMaker_Pole>& thePole2
-		)
-			: thePole0_(thePole0)
-			, thePole1_(thePole1)
-			, thePole2_(thePole2)
-			, CrvMaker_Frame(theIndex, theName)
-		{}
-
-
-		const std::shared_ptr<CrvMaker_Pole>& Pole0() const
+		const std::shared_ptr<node>& Node0() const
 		{
-			return thePole0_;
+			return theNode0_;
 		}
 
-		const std::shared_ptr<CrvMaker_Pole>& Pole1() const
+		std::shared_ptr<node>& Node0()
 		{
-			return thePole1_;
+			return theNode0_;
 		}
 
-		const std::shared_ptr<CrvMaker_Pole>& Pole2() const
+		const std::shared_ptr<node>& Node1() const
 		{
-			return thePole2_;
+			return theNode1_;
 		}
 
-		//- overide functions
+		std::shared_ptr<node>& Node1()
+		{
+			return theNode1_;
+		}
+
+		const std::shared_ptr<node>& Node2() const
+		{
+			return theNode2_;
+		}
+
+		std::shared_ptr<node>& Node2()
+		{
+			return theNode2_;
+		}
+
+		//- override functions and operators
 
 		Standard_Boolean IsClosed() const override
 		{
 			return Standard_False;
 		}
 
-		Standard_Integer NbPoles() const override
+		Standard_Integer NbNodes() const override
 		{
 			return 3;
 		}
 
-		const std::shared_ptr<CrvMaker_Pole>&
-			Pole
+		const std::shared_ptr<CrvMaker_Node<NodeTraits>>& 
+			Node
 			(
 				const Standard_Integer theIndex
-			) const override;
+			) const override
+		{
+			return (&theNode0_)[theIndex];
+		}
 	};
 }
 

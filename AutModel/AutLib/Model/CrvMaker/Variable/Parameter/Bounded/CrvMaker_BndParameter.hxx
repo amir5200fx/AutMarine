@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _CrvMaker_FreeParameter_Header
-#define _CrvMaker_FreeParameter_Header
+#ifndef _CrvMaker_BndParameter_Header
+#define _CrvMaker_BndParameter_Header
 
 #include <CrvMaker_Parameter.hxx>
 #include <Global_Bound.hxx>
@@ -10,7 +10,7 @@
 namespace AutLib
 {
 
-	class CrvMaker_FreeParameter
+	class CrvMaker_BndParameter
 		: public CrvMaker_Parameter
 		, public Global_Bound<Standard_Real>
 	{
@@ -21,7 +21,7 @@ namespace AutLib
 
 	public:
 
-		CrvMaker_FreeParameter
+		CrvMaker_BndParameter
 		(
 			const Standard_Real theLower,
 			const Standard_Real theUpper
@@ -45,7 +45,7 @@ namespace AutLib
 			theValue_ = Lower() + x * (Upper() - Lower());
 		}
 
-		//- override funtions
+		// override functions
 
 		Standard_Real Value() const override
 		{
@@ -54,4 +54,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_CrvMaker_FreeParameter_Header
+#endif // !_CrvMaker_BndParameter_Header
