@@ -68,6 +68,9 @@ namespace AutLib
 
 		Entity2d_Box CalcParametricBoundingBox() const;
 
+
+		//- IO functions and operators
+
 		void ExportPlaneCurvesToPlt(OFstream& File) const;
 	};
 }

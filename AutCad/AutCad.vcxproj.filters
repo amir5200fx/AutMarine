@@ -181,6 +181,9 @@
     <Filter Include="AutLib\Cad\TModel\Tools">
       <UniqueIdentifier>{51e7f8af-7f2c-4ac7-b792-ed2aa24f5f6b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\GModel\Tools">
+      <UniqueIdentifier>{7af23a4b-8bcb-4305-8e8e-ef473f7758d6}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
@@ -353,6 +356,18 @@
     </ClCompile>
     <ClCompile Include="AutLib\Cad\TModel\Tools\TModel_MakeShells.cxx">
       <Filter>AutLib\Cad\TModel\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Wire\GModel_WireIO.cxx">
+      <Filter>AutLib\Cad\GModel\Entities\Wire</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\GModel\Tools\GModel_Tools.cxx">
+      <Filter>AutLib\Cad\GModel\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\GModel\Entities\Curve\GModel_CurveIO.cxx">
+      <Filter>AutLib\Cad\GModel\Entities\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\GModel\Cad3d_GModelIO.cxx">
+      <Filter>AutLib\Cad\GModel</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -532,6 +547,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\TModel\Entities\Entity\TModel_EntityBlock.hxx">
       <Filter>AutLib\Cad\TModel\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\GModel\Tools\GModel_Tools.hxx">
+      <Filter>AutLib\Cad\GModel\Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

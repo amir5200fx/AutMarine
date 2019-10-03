@@ -2,6 +2,7 @@
 #ifndef _TModel_Paired_Header
 #define _TModel_Paired_Header
 
+#include <Global_AccessMethod.hxx>
 #include <TModel_Entity.hxx>
 #include <Entity3d_PolygonFwd.hxx>
 #include <OFstream.hxx>
@@ -79,7 +80,15 @@ namespace AutLib
 			return theEdge0_ && theEdge1_;
 		}
 
+
+		//- Io functions and operators
+
 		void ExportToPlt(OFstream& File) const;
+
+
+		//- Macros
+
+		GLOBAL_ACCESS_SINGLE(std::shared_ptr<Entity3d_Polygon>, Mesh)
 	};
 }
 

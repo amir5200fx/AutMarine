@@ -5,10 +5,12 @@
 #include <Standard_Handle.hxx>
 #include <Entity2d_BoxFwd.hxx>
 #include <Entity3d_BoxFwd.hxx>
+#include <Entity3d_Triangulation.hxx>
 
 class Bnd_Box2d;
 class Bnd_Box;
 class Geom_Surface;
+class Poly_Triangulation;
 
 namespace AutLib
 {
@@ -27,6 +29,12 @@ namespace AutLib
 			const Handle(Geom_Surface)& theSurface,
 			const Entity2d_Box& theParams
 		);
+
+		static std::shared_ptr<Entity3d_Triangulation> 
+			Triangulation
+			(
+				const Poly_Triangulation& theTriangulation
+			);
 	};
 }
 

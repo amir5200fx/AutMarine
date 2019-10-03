@@ -135,16 +135,6 @@ namespace AutLib
 			, TModel_Entity(theIndex, theName)
 		{}
 
-		virtual Standard_Boolean IsDegenerated() const
-		{
-			return Standard_False;
-		}
-
-		virtual Standard_Boolean IsRing() const
-		{
-			return Standard_False;
-		}
-
 		Standard_Boolean Sense() const
 		{
 			return theSense_;
@@ -158,6 +148,19 @@ namespace AutLib
 		const std::shared_ptr<TModel_parCurve>& Par() const
 		{
 			return thePar_;
+		}
+
+
+		//- virtual functions and operators
+
+		virtual Standard_Boolean IsDegenerated() const
+		{
+			return Standard_False;
+		}
+
+		virtual Standard_Boolean IsRing() const
+		{
+			return Standard_False;
 		}
 
 
@@ -175,6 +178,7 @@ namespace AutLib
 
 			return theEdge0->Index() < theEdge1->Index();
 		}
+
 
 		//- Macros
 

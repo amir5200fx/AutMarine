@@ -70,7 +70,19 @@ namespace AutLib
 			return *theCurves_;
 		}
 
+
+		//- IO functions and operators
+
 		void ExportToPlt(OFstream& File) const;
+
+
+		//- Static functions and operators
+
+		static std::vector<std::shared_ptr<GModel_parCurve>> 
+			RetrieveCurves
+			(
+				const std::vector<std::shared_ptr<GModel_parWire>>& theWires
+			);
 	};
 }
 

@@ -2,6 +2,13 @@
 #ifndef _TModel_Tools_Header
 #define _TModel_Tools_Header
 
+#include <Standard_TypeDef.hxx>
+#include <Entity2d_PolygonFwd.hxx>
+#include <Entity3d_PolygonFwd.hxx>
+
+class TopoDS_Face;
+class TopoDS_Shape;
+
 #include <memory>
 #include <vector>
 
@@ -12,11 +19,27 @@ namespace AutLib
 	class TModel_Edge;
 	class TModel_Surface;
 	class TModel_Shell;
+	class TModel_Curve;
+	class TModel_parCurve;
 
 	class TModel_Tools
 	{
 
 	public:
+
+		static std::shared_ptr<Entity2d_Polygon> 
+			UniformDiscrete
+			(
+				const TModel_parCurve& theCurve, 
+				const Standard_Integer theNbSegments
+			);
+
+		static std::shared_ptr<Entity3d_Polygon> 
+			UniformDiscrete
+			(
+				const TModel_Curve& theCurve,
+				const Standard_Integer theNbSegments
+			);
 
 		static std::vector<std::shared_ptr<TModel_Edge>> 
 			RetrieveEdges

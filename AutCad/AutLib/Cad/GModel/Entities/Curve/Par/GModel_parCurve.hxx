@@ -105,7 +105,11 @@ namespace AutLib
 			theInfo_ = theInfo;
 		}
 
+
+		//- Io functions and operators
+
 		void ExportToPlt(OFstream& File) const;
+
 
 		//- Static functions and operators
 

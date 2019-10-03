@@ -48,6 +48,9 @@ namespace AutLib
 			return (Standard_Integer)theSurfaces_.size();
 		}
 
+
+		//- Io functions and operators
+
 		void ExportToPlt(OFstream& File) const;
 
 

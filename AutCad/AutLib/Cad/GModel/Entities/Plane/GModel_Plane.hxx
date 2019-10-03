@@ -74,6 +74,9 @@ namespace AutLib
 
 		void RetrieveWiresTo(wireList& theWires) const;
 
+
+		//- Io functions and operators
+
 		void ExportToPlt(OFstream& File) const;
 
 

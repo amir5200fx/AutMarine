@@ -15,6 +15,8 @@ namespace AutLib
 
 	// Forward Declarations
 	class GModel_Edge;
+	class GModel_parWire;
+	class GModel_parCurve;
 
 	class GModel_Wire
 		: public GModel_Entity
@@ -66,7 +68,21 @@ namespace AutLib
 
 		Entity2d_Box CalcParametricBoundingBox() const;
 
+
+		//- Io functions and operators
+
 		void ExportPlaneCurvesToPlt(OFstream& File) const;
+
+
+		//- Static functions and operators
+
+		static std::shared_ptr<std::vector<std::shared_ptr<GModel_parCurve>>> 
+			RetrievePlaneCurves
+			(
+				const GModel_Wire& theWire
+			);
+		
+		static std::shared_ptr<GModel_parWire> RetrieveParWire(const GModel_Wire& theWire);
 	};
 }
 

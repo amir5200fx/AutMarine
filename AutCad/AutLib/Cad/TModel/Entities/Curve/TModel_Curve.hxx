@@ -7,6 +7,7 @@
 #include <Cad_Curve.hxx>
 #include <Pnt3d.hxx>
 #include <Entity3d_BoxFwd.hxx>
+#include <OFstream.hxx>
 
 #include <Standard_Handle.hxx>
 #include <Precision.hxx>
@@ -80,6 +81,10 @@ namespace AutLib
 		{
 			theInfo_ = theInfo;
 		}
+
+		//- IO functions and operators
+
+		void ExportToPlt(OFstream& File) const;
 	};
 }
 

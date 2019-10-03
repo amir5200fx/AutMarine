@@ -156,9 +156,12 @@ namespace AutLib
 			theTriangulation_ = theTriangulation;
 		}
 
+
+		//- IO functions and operators
+
 		void ExportPlaneCurvesToPlt(OFstream& File) const;
 
-		void ExportCurvesFromPlaneToPlt(OFstream& File) const;
+		//void ExportCurvesFromPlaneToPlt(OFstream& File) const;
 
 		void ExportToPlt(OFstream& File) const;
 

@@ -2,6 +2,7 @@
 
 #include <Adt_AvlTree.hxx>
 #include <Entity3d_Chain.hxx>
+#include <Merge3d_Chain.hxx>
 #include <GeoProcessor.hxx>
 #include <TModel_EntityManager.hxx>
 #include <TModel_EntityBlock.hxx>
@@ -12,6 +13,7 @@
 #include <TModel_Paired.hxx>
 #include <TModel_Surface.hxx>
 #include <TModel_Shell.hxx>
+#include <TModel_Tools.hxx>
 
 namespace AutLib
 {
@@ -411,4 +413,61 @@ namespace AutLib
 			}
 		}
 	}
+}
+
+std::shared_ptr<AutLib::Cad3d_TModel> 
+AutLib::Cad3d_TModel::MakeSolid
+(
+	const std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces,
+	const Standard_Real theTolerance
+)
+{
+	std::shared_ptr<Cad3d_TModel> solid;
+
+	solid->theBoundingBox_ = CalcBoundingBox(theSurfaces);
+
+	const auto tol = theTolerance * solid->theBoundingBox_.Diameter();
+	auto EdgesOnSolid = TModel_Tools::RetrieveNonSingularEdges(theSurfaces);
+
+	Standard_Integer K = 0;
+	for (auto& x : EdgesOnSolid)
+	{
+		x->SetIndex(++K);
+		x->SetPrecision(tol);
+	}
+
+	Entity3d_Chain chain;
+	tModel::MakeStaticChain(EdgesOnSolid, chain);
+
+	Merge3d_Chain merge;
+	merge.InfoAlg().SetRadius(tol);
+	merge.Import(chain);
+
+	merge.Perform();
+
+	const auto& merged = *merge.Merged();
+
+	std::vector<std::shared_ptr<TModel_Entity>> vertices;
+	tModel::MakePointsOnSolid(merged, solid->theVertices_, vertices);
+
+	Debug_Null_Pointer(solid->theVertices_);
+
+	K = 0;
+	for (auto& x : vertices)
+	{
+		++K;
+
+		x->SetIndex(K);
+		x->SetName("Vertex " + std::to_string(K));
+	}
+
+	tModel::Assembly(merged, vertices, EdgesOnSolid);
+
+	tModel::MakePairedEdges(EdgesOnSolid, solid->theEdges_);
+
+	Debug_Null_Pointer(solid->theEdges_);
+
+	tModel::MakeFaces(theSurfaces, solid->theSurfaces_);
+
+	tModel::LinkEdges(solid->theEdges_);
 }

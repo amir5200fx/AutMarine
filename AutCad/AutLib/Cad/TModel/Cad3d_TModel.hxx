@@ -4,7 +4,7 @@
 
 #include <Global_Named.hxx>
 #include <Global_Indexed.hxx>
-#include <Cad_EntityManager.hxx>
+#include <TModel_EntityManager.hxx>
 #include <Entity3d_Box.hxx>
 
 class TopoDS_Face;
@@ -29,15 +29,16 @@ namespace AutLib
 
 		typedef std::shared_ptr<TModel_Shell> shell_ptr;
 		typedef std::vector<shell_ptr> shellList;
+		typedef TModel_EntityManager entityManager;
 
 		typedef shell_ptr outer;
 		typedef std::shared_ptr<shellList> inner;
 
 		/*Private Data*/
 
-		std::shared_ptr<Cad_EntityManager<TModel_Vertex>> theVertices_;
-		std::shared_ptr<Cad_EntityManager<TModel_Paired>> theEdges_;
-		std::shared_ptr<Cad_EntityManager<TModel_Surface>> theSurfaces_;
+		std::shared_ptr<entityManager> theVertices_;
+		std::shared_ptr<entityManager> theEdges_;
+		std::shared_ptr<entityManager> theSurfaces_;
 
 
 		outer theOuter_;
@@ -53,12 +54,12 @@ namespace AutLib
 			const std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces
 		);
 
+	protected:
 
+		Cad3d_TModel()
+		{}
 
 	public:
-
-
-		Cad3d_TModel(const std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces);
 
 
 		const Entity3d_Box& BoundingBox() const
@@ -66,17 +67,17 @@ namespace AutLib
 			return theBoundingBox_;
 		}
 
-		const std::shared_ptr<Cad_EntityManager<TModel_Vertex>>& Corners() const
+		const std::shared_ptr<entityManager>& Corners() const
 		{
 			return theVertices_;
 		}
 
-		const std::shared_ptr<Cad_EntityManager<TModel_Paired>>& Segments() const
+		const std::shared_ptr<entityManager>& Segments() const
 		{
 			return theEdges_;
 		}
 
-		const std::shared_ptr<Cad_EntityManager<TModel_Surface>>& Faces() const
+		const std::shared_ptr<entityManager>& Faces() const
 		{
 			return theSurfaces_;
 		}
@@ -114,6 +115,13 @@ namespace AutLib
 		}
 
 
+		void RetrieveFacesTo(std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces) const;
+
+		void RetrieveSegmentsTo(std::vector<std::shared_ptr<TModel_Edge>>& theEdges) const;
+
+		void RetrieveCornersTo(std::vector<std::shared_ptr<TModel_Vertex>>& thevertices) const;
+
+
 		//- IO functions and operators
 
 		void ExportCornersToPlt(OFstream& File) const;
@@ -127,7 +135,12 @@ namespace AutLib
 
 		//- Static functions and operators
 
-		
+		static std::shared_ptr<Cad3d_TModel> MakeSolid(const std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces, const Standard_Real theTolerance);
+
+		//! returns true if the algorithm unable to construct a shell structure
+		static Standard_Boolean MakeShells(const std::shared_ptr<Cad3d_TModel>& theSolid);
+
+		static void SplitByShells(const std::shared_ptr<Cad3d_TModel>& theSolid);
 	};
 }
 

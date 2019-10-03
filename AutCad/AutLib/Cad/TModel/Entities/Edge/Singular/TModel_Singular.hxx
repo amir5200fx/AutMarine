@@ -68,6 +68,8 @@ namespace AutLib
 		{}
 
 
+		//- override functions and operators
+
 		Standard_Boolean IsDegenerated() const override
 		{
 			return Standard_True;

@@ -78,6 +78,9 @@ namespace AutLib
 			: TModel_Edge(theIndex, theName, theCurve, thePar, theSense)
 		{}
 
+
+		//- override functions and operators
+
 		Standard_Boolean IsRing() const override
 		{
 			return Standard_True;

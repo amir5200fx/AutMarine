@@ -5,7 +5,9 @@
 #include <TModel_Curve.hxx>
 #include <TModel_Edge.hxx>
 #include <TModel_Surface.hxx>
+#include <TModel_Shell.hxx>
 #include <TModel_Tools.hxx>
+#include <TModel_EntityBlock.hxx>
 #include <error.hxx>
 #include <OSstream.hxx>
 
@@ -42,4 +44,92 @@ AutLib::Cad3d_TModel::CalcBoundingBox
 		box = Entity3d_Box::Union(box, theSurfaces[Index]->BoundingBox3d());
 	}
 	return std::move(box);
+}
+
+
+//- static functions and operators
+
+Standard_Boolean 
+AutLib::Cad3d_TModel::MakeShells
+(
+	const std::shared_ptr<Cad3d_TModel>& theSolid
+)
+{
+	std::vector<std::shared_ptr<TModel_Surface>> surfaces;
+	theSolid->RetrieveFacesTo(surfaces);
+	
+	auto pShells = TModel_Tools::TrackShells(surfaces);
+	for (const auto& x : *pShells)
+	{
+		Debug_Null_Pointer(x);
+
+		if (NOT x->IsWaterTight())
+		{
+			theSolid->theInner_ = pShells;
+			return Standard_True;
+		}
+	}
+
+	theSolid->theInner_ = std::make_shared<shellList>();
+	if (TModel_Tools::InnerHoles(*pShells, *theSolid->theInner_, theSolid->theOuter_))
+	{
+		return Standard_True;
+	}
+	return Standard_False;
+}
+
+void AutLib::Cad3d_TModel::SplitByShells
+(
+	const std::shared_ptr<Cad3d_TModel>& theSolid
+)
+{
+	if (NOT theSolid->theOuter_)
+	{
+		return;
+	}
+
+	const auto& faces = theSolid->theSurfaces_;
+	if (faces->NbBlocks() NOT_EQUAL 1)
+	{
+		FatalErrorIn("void Cad3d_TModel::SplitByShells()")
+			<< "Invalid Data" << endl
+			<< abort(FatalError);
+	}
+
+	Debug_Null_Pointer(theSolid->theInner_);
+	if (theSolid->theInner_->empty())
+	{
+		return;
+	}
+
+	std::vector<std::shared_ptr<TModel_EntityBlock>> blocks;
+	faces->RetrieveTo(blocks);
+
+	Debug_If_Condition_Message(blocks.size() NOT_EQUAL 1, "Conflict Data");
+	const auto& block = faces->SelectBlockEntity(blocks[0]->Name());
+
+	const auto& innerShells = *theSolid->theInner_;
+
+	Standard_Integer K = 0;
+	for (const auto& x : innerShells)
+	{
+		Debug_Null_Pointer(x);
+		Debug_Null_Pointer(x->Surfaces());
+
+		const auto& surfaces = *x->Surfaces();
+		for (const auto& s : surfaces)
+		{
+			Debug_Null_Pointer(s);
+			block->SelectEntity(s->Index());
+		}
+
+		faces->Split("Default Inner Shell " + std::to_string((++K) + 1));
+	}
+
+	if (NOT block->NbEntities())
+	{
+		FatalErrorIn("void Cad3d_TModel::SplitByShells()")
+			<< "Conflict Data"
+			<< abort(FatalError);
+	}
 }
