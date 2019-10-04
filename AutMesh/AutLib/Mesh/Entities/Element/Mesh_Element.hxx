@@ -28,6 +28,7 @@ namespace AutLib
 		typedef typename ElementTraits::elementType elementType;
 
 		typedef typename ElementTraits::connectType connectType;
+		typedef typename nodeType::ptType Point;
 
 		typedef Mesh_ElementAdaptor<typename ElementTraits::elementType, ElmType> adaptor;
 
@@ -173,19 +174,23 @@ namespace AutLib
 		GLOBAL_ACCESS_VECTOR(std::shared_ptr<nodeType>, Node, 0)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<nodeType>, Node, 1)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<nodeType>, Node, 2)
-			GLOBAL_ACCESS_VECTOR(std::shared_ptr<nodeType>, Node, 3)
+			GLOBAL_ACCESS_VECTOR(std::shared_ptr<nodeType>, Node, 3)		
 
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 0)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 1)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 2)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 3)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 4)
-			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 5)
+			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 5)		
 
-			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Face, 0)
-			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Face, 1)
-			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Face, 2)
-			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Face, 3)
+			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Facet, 0)
+			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Facet, 1)
+			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Facet, 2)
+			GLOBAL_ACCESS_VECTOR(std::shared_ptr<facetType>, Facet, 3)
+
+			GLOBAL_ACCESS_VECTOR_INDEX(std::shared_ptr<nodeType>, Node)
+			GLOBAL_ACCESS_VECTOR_INDEX(std::shared_ptr<edgeType>, Edge)
+			GLOBAL_ACCESS_VECTOR_INDEX(std::shared_ptr<facetType>, Facet)
 	};
 
 	template<class ElementTraits>
@@ -235,8 +240,7 @@ namespace AutLib
 			const Standard_Integer theIndex,
 			const std::shared_ptr<nodeType>& theNode0,
 			const std::shared_ptr<nodeType>& theNode1,
-			const std::shared_ptr<nodeType>& theNode2,
-			const std::shared_ptr<nodeType>& theNode3
+			const std::shared_ptr<nodeType>& theNode2
 		)
 			: Mesh_Entity(theIndex)
 		{
@@ -279,6 +283,9 @@ namespace AutLib
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 0)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 1)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 2)
+
+			GLOBAL_ACCESS_VECTOR_INDEX(std::shared_ptr<nodeType>, Node)
+			GLOBAL_ACCESS_VECTOR_INDEX(std::shared_ptr<edgeType>, Edge)
 	};
 
 
@@ -330,8 +337,7 @@ namespace AutLib
 			const Standard_Integer theIndex,
 			const std::shared_ptr<nodeType>& theNode0,
 			const std::shared_ptr<nodeType>& theNode1,
-			const std::shared_ptr<nodeType>& theNode2,
-			const std::shared_ptr<nodeType>& theNode3
+			const std::shared_ptr<nodeType>& theNode2
 		)
 			: Mesh_Entity(theIndex)
 		{
@@ -442,6 +448,9 @@ namespace AutLib
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 0)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 1)
 			GLOBAL_ACCESS_VECTOR(std::shared_ptr<edgeType>, Edge, 2)
+
+			GLOBAL_ACCESS_VECTOR_INDEX(std::shared_ptr<nodeType>, Node)
+			GLOBAL_ACCESS_VECTOR_INDEX(std::shared_ptr<edgeType>, Edge)
 	};
 
 

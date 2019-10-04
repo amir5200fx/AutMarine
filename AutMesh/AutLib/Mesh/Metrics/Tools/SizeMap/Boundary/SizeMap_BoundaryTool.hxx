@@ -11,10 +11,15 @@
 namespace AutLib
 {
 
+	// Forward Declarations
+	class Mesh_ReferenceValues;
+
 	template<class SizeMapTraits>
 	class SizeMap_BoundaryTool
 		: public SizeMap_Tool<SizeMapTraits>
 	{
+
+		typedef typename SizeMapTraits::objectType objectType;
 
 		/*Private Data*/
 

@@ -2,6 +2,8 @@
 
 #include <GeoProcessor.hxx>
 #include <Entity3d_TetrahedralizationTools.hxx>
+#include <error.hxx>
+#include <OSstream.hxx>
 
 namespace AutLib
 {
@@ -232,7 +234,7 @@ namespace AutLib
 					node3->InsertToFacets(current_facet->Index(), current_facet);
 				}
 
-				element->SetFace(I, current_facet);
+				element->SetFacet(I, current_facet);
 			}
 		}
 
@@ -242,26 +244,26 @@ namespace AutLib
 			Debug_Null_Pointer(x);
 			auto& element = *x;
 
-			Debug_Null_Pointer(element.Face0());
-			const auto& face0 = element.Face0();
+			Debug_Null_Pointer(element.Facet0());
+			const auto& face0 = element.Facet0();
 
 			element.SetNeighbor0(face0->LeftElement());
 			if (face0->LeftElement().lock() IS_EQUAL x) element.SetNeighbor0(face0->RightElement());
 
-			Debug_Null_Pointer(element.Face1());
-			const auto& face1 = element.Face1();
+			Debug_Null_Pointer(element.Facet1());
+			const auto& face1 = element.Facet1();
 
 			element.SetNeighbor1(face1->LeftElement());
 			if (face1->LeftElement().lock() IS_EQUAL x) element.SetNeighbor1(face1->RightElement());
 
-			Debug_Null_Pointer(element.Face2());
-			const auto& face2 = element.Face2();
+			Debug_Null_Pointer(element.Facet2());
+			const auto& face2 = element.Facet2();
 
 			element.SetNeighbor2(face2->LeftElement());
 			if (face2->LeftElement().lock() IS_EQUAL x) element.SetNeighbor2(face2->RightElement());
 
-			Debug_Null_Pointer(element.Face3());
-			const auto& face3 = element.Face3();
+			Debug_Null_Pointer(element.Facet3());
+			const auto& face3 = element.Facet3();
 
 			element.SetNeighbor3(face3->LeftElement());
 			if (face3->LeftElement().lock() IS_EQUAL x) element.SetNeighbor3(face3->RightElement());

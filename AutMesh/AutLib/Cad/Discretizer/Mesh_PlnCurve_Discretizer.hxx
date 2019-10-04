@@ -33,7 +33,7 @@ namespace AutLib
 			const Standard_Real theFirst,
 			const Standard_Real theLast,
 			const typename mesh_pln_curve_dicretizer_traits<gCurveType>::pType& theCurve,
-			const std::shared_ptr<Mesh2d_SizeMapSurface>& theSizeMap, 
+			const std::shared_ptr<Mesh2d_SizeMap>& theSizeMap,
 			const std::shared_ptr<Mesh_CurveInfo>& theInfo
 		);
 

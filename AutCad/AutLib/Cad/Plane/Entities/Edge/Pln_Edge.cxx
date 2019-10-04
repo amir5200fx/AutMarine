@@ -12,11 +12,6 @@ void AutLib::Pln_Edge::Discretize() const
 	thePoly_ = Pln_Curve::Discretize(*theCurve_, theCurve_->Info()->NbDivisions());
 }
 
-Standard_Boolean AutLib::Pln_Edge::IsRing() const
-{
-	return (Standard_Boolean)Handle(Pln_Ring)::DownCast(this);
-}
-
 void AutLib::Pln_Edge::Reverse
 (
 	const Standard_Boolean ApplyToMesh

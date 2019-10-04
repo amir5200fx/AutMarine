@@ -74,11 +74,11 @@ namespace AutLib
 			if (Curve)
 			{
 				auto curveOnSurface = std::make_shared<TModel_Curve>(U0, U1, Curve, tModelSys::curve_info);
-				newEdge = std::make_shared<TModel_Edge>(K, curveOnPlane, curveOnSurface);
+				newEdge = std::make_shared<TModel_Edge>(K, curveOnSurface, curveOnPlane);
 			}
 			else
 			{
-				newEdge = std::make_shared<TModel_Edge>(K, curveOnPlane, nullptr);
+				newEdge = std::make_shared<TModel_Edge>(K, nullptr, curveOnPlane);
 			}
 			return std::move(newEdge);
 		}

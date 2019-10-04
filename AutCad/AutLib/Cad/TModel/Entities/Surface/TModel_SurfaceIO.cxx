@@ -4,6 +4,8 @@
 #include <Cad_Tools.hxx>
 #include <TModel_Wire.hxx>
 
+#include <Poly_Triangulation.hxx>
+
 void AutLib::TModel_Surface::ExportPlaneCurvesToPlt(OFstream & File) const
 {
 	if(theOuter_)

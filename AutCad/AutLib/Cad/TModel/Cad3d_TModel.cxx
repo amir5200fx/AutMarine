@@ -3,6 +3,7 @@
 #include <Entity3d_Chain.hxx>
 #include <Merge3d_Chain.hxx>
 #include <TModel_Curve.hxx>
+#include <TModel_Vertex.hxx>
 #include <TModel_Edge.hxx>
 #include <TModel_Paired.hxx>
 #include <TModel_Surface.hxx>

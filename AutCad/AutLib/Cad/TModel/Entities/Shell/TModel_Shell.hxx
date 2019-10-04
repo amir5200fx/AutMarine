@@ -3,7 +3,7 @@
 #define _TModel_Shell_Header
 
 #include <TModel_Entity.hxx>
-#include <Entity3d_BoxFwd.hxx>
+#include <Entity3d_Box.hxx>
 #include <error.hxx>
 #include <OSstream.hxx>
 #include <OFstream.hxx>

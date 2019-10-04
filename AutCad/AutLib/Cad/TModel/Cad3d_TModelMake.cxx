@@ -372,7 +372,7 @@ namespace AutLib
 			std::shared_ptr<TModel_EntityManager>& theFaces
 		)
 		{
-			std::vector<std::shared_ptr<TModel_Surface>> Faces(theList.size());
+			std::vector<std::shared_ptr<TModel_Entity>> Faces(theList.size());
 			forThose(Index, 0, theList.size() - 1)
 				Faces[Index] = theList[Index];
 
@@ -470,4 +470,6 @@ AutLib::Cad3d_TModel::MakeSolid
 	tModel::MakeFaces(theSurfaces, solid->theSurfaces_);
 
 	tModel::LinkEdges(solid->theEdges_);
+
+	return std::move(solid);
 }

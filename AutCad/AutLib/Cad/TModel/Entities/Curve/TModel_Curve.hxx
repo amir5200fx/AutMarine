@@ -60,6 +60,11 @@ namespace AutLib
 			return FirstParam() <= LastParam();
 		}
 
+		const std::shared_ptr<Cad_CurveInfo>& Info() const
+		{
+			return theInfo_;
+		}
+
 		Pnt3d Start() const;
 
 		Pnt3d Last() const;

@@ -2,7 +2,7 @@
 namespace AutLib
 {
 
-	template<class SizeMapTraits>
+	/*template<class SizeMapTraits>
 	Standard_Boolean 
 		SizeMap_BoundaryTool<SizeMapTraits>::RemovePatch
 		(
@@ -17,7 +17,7 @@ namespace AutLib
 
 		if (n0 IS_EQUAL NbPatches()) return Standard_True;
 		return Standard_False;
-	}
+	}*/
 
 	template<class SizeMapTraits>
 	void SizeMap_BoundaryTool<SizeMapTraits>::ImportPatch

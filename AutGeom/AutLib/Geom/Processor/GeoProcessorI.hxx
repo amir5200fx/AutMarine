@@ -93,5 +93,46 @@ namespace AutLib
 
 			return Standard_False;
 		}
+
+		inline
+			Standard_Boolean IsOneCommonPointTwoTriangles
+			(
+				const Standard_Integer v1,
+				const Standard_Integer v2,
+				const Standard_Integer v3,
+				const Standard_Integer q1,
+				const Standard_Integer q2,
+				const Standard_Integer q3
+			)
+		{
+			if (v1 == q1)
+				return Standard_True;
+			else
+				if (v1 == q2)
+					return Standard_True;
+				else
+					if (v1 == q3)
+						return Standard_True;
+					else
+						if (v2 == q1)
+							return Standard_True;
+						else
+							if (v2 == q2)
+								return Standard_True;
+							else
+								if (v2 == q3)
+									return Standard_True;
+								else
+									if (v3 == q1)
+										return Standard_True;
+									else
+										if (v3 == q2)
+											return Standard_True;
+										else
+											if (v3 == q3)
+												return Standard_True;
+											else
+												return Standard_False;
+		}
 	}
 }

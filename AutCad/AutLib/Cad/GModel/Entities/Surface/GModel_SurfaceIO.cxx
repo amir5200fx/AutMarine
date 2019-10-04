@@ -4,6 +4,8 @@
 #include <GModel_Wire.hxx>
 #include <TecPlot.hxx>
 
+#include <Poly_Triangulation.hxx>
+
 void AutLib::GModel_Surface::ExportPlaneCurvesToPlt(OFstream & File) const
 {
 	if (theOuter_)

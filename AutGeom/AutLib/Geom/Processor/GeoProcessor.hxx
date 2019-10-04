@@ -249,6 +249,16 @@ namespace AutLib
 			return Standard_False;
 		}
 
+		Standard_Boolean IsOneCommonPointTwoTriangles
+		(
+			const Standard_Integer v1,
+			const Standard_Integer v2,
+			const Standard_Integer v3,
+			const Standard_Integer q1,
+			const Standard_Integer q2, 
+			const Standard_Integer q3
+		);
+
 		Standard_Boolean IsCcwOrder(const std::vector<Pnt2d>& thePts);
 
 		Standard_Boolean IsCcwOrder_cgal(const std::vector<Pnt2d>& thePts);
