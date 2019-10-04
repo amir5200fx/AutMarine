@@ -11,6 +11,8 @@ class Bnd_Box2d;
 class Bnd_Box;
 class Geom_Surface;
 class Poly_Triangulation;
+class TopoDS_Face;
+class TopoDS_Shape;
 
 namespace AutLib
 {
@@ -23,6 +25,18 @@ namespace AutLib
 		static Entity2d_Box BoundingBox(const Bnd_Box2d& theBox);
 
 		static Entity3d_Box BoundingBox(const Bnd_Box& theBox);
+
+		static Handle(Poly_Triangulation) 
+			RetrieveTriangulation
+			(
+				const TopoDS_Face& theFace
+			);
+
+		static std::vector<Handle(Poly_Triangulation)> 
+			RetrieveTriangulation
+			(
+				const TopoDS_Shape& theShape
+			);
 
 		static Bnd_Box BoundingBox
 		(

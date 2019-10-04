@@ -5,6 +5,7 @@
 #include <TModel_Entity.hxx>
 #include <Cad_EntityPrecision.hxx>
 #include <Global_AccessMethod.hxx>
+#include <Entity3d_ChainFwd.hxx>
 
 #include <TopoDS_Edge.hxx>
 
@@ -179,6 +180,11 @@ namespace AutLib
 			return theEdge0->Index() < theEdge1->Index();
 		}
 
+		/*static std::shared_ptr<Entity3d_Chain> 
+			GetStatic
+			(
+				const TModel_Edge& theEdge
+			);*/
 
 		//- Macros
 

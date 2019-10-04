@@ -4,6 +4,8 @@
 
 #include <TModel_Entity.hxx>
 #include <Entity3d_BoxFwd.hxx>
+#include <error.hxx>
+#include <OSstream.hxx>
 #include <OFstream.hxx>
 
 #include <vector>
@@ -71,6 +73,9 @@ namespace AutLib
 		{
 			return IsWaterTight_;
 		}
+
+
+		//- Io functions and operators
 
 		void ExportToPlt(OFstream& File) const;
 

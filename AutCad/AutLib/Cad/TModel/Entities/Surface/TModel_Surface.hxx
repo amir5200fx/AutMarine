@@ -19,6 +19,7 @@ namespace AutLib
 {
 
 	// Forward Declarations
+	class TModel_Edge;
 	class TModel_Wire;
 	class Entity2d_Metric1;
 
@@ -46,6 +47,11 @@ namespace AutLib
 		TopoDS_Face theFace_;
 
 		TModel_FaceOrientation theOrientation_;
+
+
+		//- Private functions and operators
+
+		void Check() const;
 
 		Entity2d_Box CalcParametricBoundingBox() const;
 
@@ -151,14 +157,18 @@ namespace AutLib
 			theTriangulation_ = theTriangulation;
 		}
 
+
+		//- Io functions and operators
+
 		void ExportPlaneCurvesToPlt(OFstream& File) const;
 
-		void ExportCurvesFromPlaneToPlt(OFstream& File) const;
+		//void ExportCurvesFromPlaneToPlt(OFstream& File) const;
 
 		void ExportToPlt(OFstream& File) const;
 
 		void ExportMetricDetToPlt(OFstream& File) const;
 
+		void ExportMetricDetPlaneToPlt(OFstream& File) const;
 
 		//- static functions and operators
 

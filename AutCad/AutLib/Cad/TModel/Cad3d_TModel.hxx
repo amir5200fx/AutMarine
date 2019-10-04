@@ -6,6 +6,7 @@
 #include <Global_Indexed.hxx>
 #include <TModel_EntityManager.hxx>
 #include <Entity3d_Box.hxx>
+#include <OFstream.hxx>
 
 class TopoDS_Face;
 class TopoDS_Shape;
@@ -18,6 +19,7 @@ namespace AutLib
 
 	// Forward Declarations
 	class TModel_Vertex;
+	class TModel_Edge;
 	class TModel_Paired;
 	class TModel_Surface;
 	class TModel_Shell;
@@ -84,7 +86,7 @@ namespace AutLib
 
 		Standard_Integer NbFreeSegment() const;
 
-		Standard_Boolean hasFreeSegment() const;
+		Standard_Boolean HasFreeSegment() const;
 
 		Standard_Integer NbCorners() const
 		{
@@ -115,9 +117,12 @@ namespace AutLib
 		}
 
 
-		void RetrieveFacesTo(std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces) const;
+		void RetrieveFacesTo
+		(
+			std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces
+		) const;
 
-		void RetrieveSegmentsTo(std::vector<std::shared_ptr<TModel_Edge>>& theEdges) const;
+		void RetrieveSegmentsTo(std::vector<std::shared_ptr<TModel_Paired>>& theEdges) const;
 
 		void RetrieveCornersTo(std::vector<std::shared_ptr<TModel_Vertex>>& thevertices) const;
 

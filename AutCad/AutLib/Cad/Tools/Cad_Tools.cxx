@@ -6,7 +6,15 @@
 
 #include <Bnd_Box.hxx>
 #include <Bnd_Box2d.hxx>
+#include <BndLib_AddSurface.hxx>
+#include <BRep_Tool.hxx>
 #include <Poly_Triangulation.hxx>
+#include <GeomAdaptor_Surface.hxx>
+#include <TopLoc_Location.hxx>
+#include <TopExp_Explorer.hxx>
+#include <TopoDS.hxx>
+#include <TopoDS_Face.hxx>
+#include <TopoDS_Shape.hxx>
 
 AutLib::Entity2d_Box 
 AutLib::Cad_Tools::BoundingBox
@@ -37,6 +45,55 @@ AutLib::Cad_Tools::BoundingBox
 
 	Entity3d_Box box(Pnt3d(Xmin, Ymin, Zmin), Pnt3d(Xmax, Ymax, Zmin));
 	return std::move(box);
+}
+
+Handle(Poly_Triangulation) 
+AutLib::Cad_Tools::RetrieveTriangulation
+(
+	const TopoDS_Face & theFace
+)
+{
+	TopLoc_Location Loc;
+	auto Triangulation = BRep_Tool::Triangulation(theFace, Loc);
+
+	return Triangulation;
+}
+
+std::vector<Handle(Poly_Triangulation)> 
+AutLib::Cad_Tools::RetrieveTriangulation
+(
+	const TopoDS_Shape & theShape
+)
+{
+	std::vector<Handle(Poly_Triangulation)> tris;
+	for
+		(
+			TopExp_Explorer Explorer(theShape, TopAbs_FACE);
+			Explorer.More();
+			Explorer.Next()
+			)
+	{
+		tris.push_back(RetrieveTriangulation(TopoDS::Face(Explorer.Current())));
+	}
+	return std::move(tris);
+}
+
+Bnd_Box 
+AutLib::Cad_Tools::BoundingBox
+(
+	const Handle(Geom_Surface)& theSurface, 
+	const Entity2d_Box & theParams
+)
+{
+	const auto& P0 = theParams.P0();
+	const auto& P1 = theParams.P1();
+
+	GeomAdaptor_Surface adaptor(theSurface, P0.X(), P1.X(), P0.Y(), P1.Y());
+
+	Bnd_Box b;
+	BndLib_AddSurface::Add(adaptor, 0, b);
+
+	return std::move(b);
 }
 
 std::shared_ptr<AutLib::Entity3d_Triangulation> 
