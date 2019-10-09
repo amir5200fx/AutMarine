@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _Leg_DispNo1_Parameters_Header
-#define _Leg_DispNo1_Parameters_Header
+#ifndef _Leg_Nihad2_Parameters_Header
+#define _Leg_Nihad2_Parameters_Header
 
 #include <Global_AccessMethod.hxx>
 #include <Leg_Model_Parameter.hxx>
@@ -12,16 +12,15 @@ namespace AutLib
 {
 
 	// Forward Declarations
-	class Leg_DispNo1_HullParams;
+	class Leg_Nihad2_HullParams;
 
-	class Leg_DispNo1_Dimensions
+	class Leg_Nihad2_Dimensions
 	{
 
 		typedef Leg_Model_Parameter parameter;
 
 		/*Private Data*/
 
-		std::shared_ptr<parameter> theDraft_;
 		std::shared_ptr<parameter> theTransomHeight_;
 
 		std::shared_ptr<parameter> theDepthAtBow_;
@@ -30,112 +29,123 @@ namespace AutLib
 		std::shared_ptr<parameter> theBeamOnDeck_;
 		std::shared_ptr<parameter> theLengthOnDeck_;
 
-		Standard_Integer theNbNetRows_;
 		Standard_Integer theNbNetColumns_;
 
 	protected:
 
-		Leg_DispNo1_Dimensions()
-		{}
+		Leg_Nihad2_Dimensions();
 
 	public:
 
+		Standard_Integer NbNetRows() const
+		{
+			return 9;
+		}
 
-		GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Draft)
-			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, TransomHeight)
+			
+		GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, TransomHeight)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, DepthAtBow)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, DepthAtTransom)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, BeamOnDeck)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, LengthOnDeck)
 
-			GLOBAL_ACCESS_SINGLE(Standard_Integer, NbNetRows)
 			GLOBAL_ACCESS_SINGLE(Standard_Integer, NbNetColumns)
+
 	};
 
 
-	class Leg_DispNo1_SectionParamsBase
+	class Leg_Nihad2_SectionParamsBase
 	{
 
 		typedef Leg_Model_Parameter parameter;
 
 		/*Private Data*/
 
-		std::shared_ptr<parameter> theTightness_;
 		std::shared_ptr<parameter> theDeadrise_;
 		std::shared_ptr<parameter> theSideSlope_;
-		std::shared_ptr<parameter> theFlare_;
-
+		std::shared_ptr<parameter> theTrim_;
+		std::shared_ptr<parameter> theTightness0_;
+		std::shared_ptr<parameter> theTightness1_;
 
 	protected:
 
-		Leg_DispNo1_SectionParamsBase()
+		Leg_Nihad2_SectionParamsBase()
+		{}
+
+		Leg_Nihad2_SectionParamsBase
+		(
+			const std::shared_ptr<parameter>& theDeadrise,
+			const std::shared_ptr<parameter>& theSideSlope,
+			const std::shared_ptr<parameter>& theTrim,
+			const std::shared_ptr<parameter>& theTightness0, 
+			const std::shared_ptr<parameter>& theTightness1
+		)
+			: theDeadrise_(theDeadrise)
+			, theSideSlope_(theSideSlope)
+			, theTrim_(theTrim)
+			, theTightness0_(theTightness0)
+			, theTightness1_(theTightness1)
 		{}
 
 	public:
 
-		GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Tightness)
-			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Deadrise)
+		GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Deadrise)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, SideSlope)
-			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Flare)
+			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Trim)
+			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Tightness0)
+			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Tightness1)
 	};
 
-
-	class Leg_DispNo1_AftSectionParams
-		: public Leg_DispNo1_SectionParamsBase
+	class Leg_Nihad2_AftSectionParams
+		: public Leg_Nihad2_SectionParamsBase
 	{
 
-		friend class Leg_DispNo1_HullParams;
+		friend class Leg_Nihad2_HullParams;
 
 		/*Private Data*/
 
 	protected:
 
-		Leg_DispNo1_AftSectionParams()
-		{}
-
-	public:
-
-	};
-
-
-	class Leg_DispNo1_MidSectionParams
-		: public Leg_DispNo1_SectionParamsBase
-	{
-
-		friend class Leg_DispNo1_HullParams;
-
-		/*Private Data*/
-
-	protected:
-
-		Leg_DispNo1_MidSectionParams()
-		{}
+		Leg_Nihad2_AftSectionParams();
 
 	public:
 
 
 	};
 
-	class Leg_DispNo1_FwdSectionParams
-		: public Leg_DispNo1_SectionParamsBase
+	class Leg_Nihad2_MidSectionParams
+		: public Leg_Nihad2_SectionParamsBase
 	{
 
-		friend class Leg_DispNo1_HullParams;
+		friend class Leg_Nihad2_HullParams;
 
 		/*Private Data*/
 
 	protected:
 
-		Leg_DispNo1_FwdSectionParams()
-		{}
+		Leg_Nihad2_MidSectionParams();
 
 	public:
 
+	};
+
+	class Leg_Nihad2_FwdSectionParams
+		: public Leg_Nihad2_SectionParamsBase
+	{
+
+		friend class Leg_Nihad2_HullParams;
+
+		/*Private Data*/
+
+	protected:
+
+		Leg_Nihad2_FwdSectionParams();
+
+	public:
 
 	};
 
-
-	class Leg_DispNo1_KeelParams
+	class Leg_Nihad2_KeelParams
 	{
 
 		typedef Leg_Model_Parameter parameter;
@@ -149,8 +159,7 @@ namespace AutLib
 
 	protected:
 
-		Leg_DispNo1_KeelParams()
-		{}
+		Leg_Nihad2_KeelParams();
 
 	public:
 
@@ -158,11 +167,9 @@ namespace AutLib
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, RisePoint)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, RiseSlope)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, TransomSlope)
-
 	};
 
-
-	class Leg_DispNo1_StemParams
+	class Leg_Nihad2_StemParams
 	{
 
 		typedef Leg_Model_Parameter parameter;
@@ -175,8 +182,7 @@ namespace AutLib
 
 	protected:
 
-		Leg_DispNo1_StemParams()
-		{}
+		Leg_Nihad2_StemParams();
 
 	public:
 
@@ -185,8 +191,7 @@ namespace AutLib
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, ForeFootShape)
 	};
 
-
-	class Leg_DispNo1_TransomParams
+	class Leg_Nihad2_TransomParams
 	{
 
 		typedef Leg_Model_Parameter parameter;
@@ -198,8 +203,7 @@ namespace AutLib
 
 	protected:
 
-		Leg_DispNo1_TransomParams()
-		{}
+		Leg_Nihad2_TransomParams();
 
 	public:
 
@@ -207,54 +211,54 @@ namespace AutLib
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Width)
 	};
 
-
-	class Leg_DispNo1_HullParams
+	class Leg_Nihad2_HullParams
 	{
 
 		typedef Leg_Model_Parameter parameter;
 
 		/*Private Data*/
 
-		Leg_DispNo1_AftSectionParams theAftSection_;
-		Leg_DispNo1_MidSectionParams theMidSection_;
-		Leg_DispNo1_FwdSectionParams theFwdSection_;
+		Leg_Nihad2_AftSectionParams theAftSection_;
+		Leg_Nihad2_MidSectionParams theMidSection_;
+		Leg_Nihad2_FwdSectionParams theFwdSection_;
 
 		std::shared_ptr<parameter> theMaxAreaLocation_;
 		std::shared_ptr<parameter> theFwdFullness_;
 		std::shared_ptr<parameter> theAftFullness_;
+		std::shared_ptr<parameter> theExtrude_;
 
 	protected:
 
-		Leg_DispNo1_HullParams()
-		{}
+		Leg_Nihad2_HullParams();
 
 	public:
 
-		GLOBAL_ACCESS_SINGLE(Leg_DispNo1_AftSectionParams, AftSection)
-			GLOBAL_ACCESS_SINGLE(Leg_DispNo1_MidSectionParams, MidSection)
-			GLOBAL_ACCESS_SINGLE(Leg_DispNo1_FwdSectionParams, FwdSection)
+		GLOBAL_ACCESS_SINGLE(Leg_Nihad2_AftSectionParams, AftSection)
+			GLOBAL_ACCESS_SINGLE(Leg_Nihad2_MidSectionParams, MidSection)
+			GLOBAL_ACCESS_SINGLE(Leg_Nihad2_FwdSectionParams, FwdSection)
 
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, MaxAreaLocation)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, FwdFullness)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, AftFullness)
+			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, Extrude)
 	};
 
 
-	class Leg_DispNo1_Parameters
-		: public Leg_DispNo1_Dimensions
-		, public Leg_DispNo1_HullParams
-		, public Leg_DispNo1_StemParams
-		, public Leg_DispNo1_KeelParams
-		, public Leg_DispNo1_TransomParams
+	class Leg_Nihad2_Parameters
+		: public Leg_Nihad2_Dimensions
+		, public Leg_Nihad2_HullParams
+		, public Leg_Nihad2_StemParams
+		, public Leg_Nihad2_KeelParams
+		, public Leg_Nihad2_TransomParams
 	{
 
 		/*Private Data*/
 
 	public:
 
-		Leg_DispNo1_Parameters()
+		Leg_Nihad2_Parameters()
 		{}
 	};
 }
 
-#endif // !_Leg_DispNo1_Parameters_Header
+#endif // !_Leg_Nihad2_Parameters_Header

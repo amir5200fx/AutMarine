@@ -1,11 +1,11 @@
 #pragma once
-#ifndef _Leg_Vessels_DispNo1_Header
-#define _Leg_Vessels_DispNo1_Header
+#ifndef _Leg_Vessel_Nihad2_Header
+#define _Leg_Vessel_Nihad2_Header
 
 #include <Leg_Model_Entity.hxx>
 #include <Leg_Model_CtrlNet.hxx>
-#include <Leg_DispNo1_Profiles.hxx>
-#include <Leg_DispNo1_Parameters.hxx>
+#include <Leg_Nihad2_Profiles.hxx>
+#include <Leg_Nihad2_Parameters.hxx>
 #include <Leg_Model_Displacement.hxx>
 #include <Leg_Model_Surface.hxx>
 #include <Leg_Model_SectionCtrlPts.hxx>
@@ -13,7 +13,7 @@
 namespace AutLib
 {
 
-	class Leg_DispNo1_Base
+	class Leg_Nihad2_Base
 	{
 
 		/*Private Data*/
@@ -22,7 +22,7 @@ namespace AutLib
 
 	protected:
 
-		Leg_DispNo1_Base()
+		Leg_Nihad2_Base()
 			: ApplySmoothing_(Standard_True)
 		{}
 
@@ -37,11 +37,13 @@ namespace AutLib
 		{
 			return ApplySmoothing_;
 		}
+
 	};
 
-	class Leg_DispNo1_Memory
-		: public Leg_DispNo1_Profile
-		, public Leg_DispNo1_Xparams
+
+	class Leg_Nihad2_Memory
+		: public Leg_Nihad2_Profile
+		, public Leg_Nihad2_Xparams
 		, public Leg_Model_CtrlNet
 	{
 
@@ -49,26 +51,25 @@ namespace AutLib
 
 	protected:
 
-		Leg_DispNo1_Memory()
+		Leg_Nihad2_Memory()
 		{}
 
 	public:
 
-
 	};
 
 
-	class Leg_DispNo1_HullPatch
+	class Leg_Nihad2_HullPatch
 		: public Leg_Model_Displacement
-		, public Leg_DispNo1_Parameters
-		, public Leg_DispNo1_Base
-		, public Leg_DispNo1_Memory
+		, public Leg_Nihad2_Parameters
+		, public Leg_Nihad2_Base
+		, public Leg_Nihad2_Memory
 	{
 
 		typedef Leg_Model_Displacement entity;
-		typedef Leg_DispNo1_Parameters params;
-		typedef Leg_DispNo1_Base base;
-		typedef Leg_DispNo1_Memory memory;
+		typedef Leg_Nihad2_Parameters params;
+		typedef Leg_Nihad2_Base base;
+		typedef Leg_Nihad2_Memory memory;
 
 
 		/*Private Data*/
@@ -86,13 +87,6 @@ namespace AutLib
 
 		void CreateDeckProfile();
 
-		void CreateFlareProfile
-		(
-			const Standard_Integer theSection
-		);
-
-		void CreateFlareProfile();
-
 
 		//- Calculate parameters
 
@@ -106,11 +100,13 @@ namespace AutLib
 
 		void CalcxDeadRise();
 
-		void CalcxFlare();
-
 		void CalcxSideSlope();
 
-		void CalcxTightness();
+		void CalcxTightness0();
+
+		void CalcxTightness1();
+
+		void CalcxTrim();
 
 		void CalcxRake();
 
@@ -121,10 +117,6 @@ namespace AutLib
 
 		//- Apply parameters
 
-		void ApplyTightness();
-
-		void ApplyFlare();
-
 		void ApplyRake();
 
 		void ApplyForeFootShape();
@@ -132,17 +124,6 @@ namespace AutLib
 		void ApplyBowSmoothness();
 
 		void ApplyParameters();
-
-		void ApplyTightness
-		(
-			Leg_Model_CorneredSectionCtrlPts& theSection,
-			const Standard_Real theTightness
-		);
-
-		void ApplyFlare
-		(
-			Standard_Integer theSection
-		);
 
 		void ApplyRake
 		(
@@ -156,8 +137,9 @@ namespace AutLib
 		std::shared_ptr<Leg_Model_SectionCtrlPts> CreateRawSection
 		(
 			const Standard_Integer Section,
-			const Standard_Integer nbWidth,
-			const Standard_Integer nbHeight
+			const Standard_Real theTrimm,
+			const Standard_Real theTightness1,
+			const Standard_Real theTightness2
 		);
 
 		std::shared_ptr<Leg_Model_SectionCtrlPts> CreateRawStem() const;
@@ -198,11 +180,43 @@ namespace AutLib
 
 	public:
 
-		Leg_DispNo1_HullPatch()
+		Leg_Nihad2_HullPatch()
 		{}
 
 
+		void Perform();
+
+
+		const Leg_Model::geomSurface& Patch() const
+		{
+			return theHull_;
+		}
+
+		const params& Parameters() const
+		{
+			return *this;
+		}
+
+		params& Parameters()
+		{
+			return *this;
+		}
+
+		const Leg_Nihad2_Dimensions& Dimensions() const
+		{
+			return *this;
+		}
+
+		Leg_Nihad2_Dimensions& Dimensions()
+		{
+			return *this;
+		}
+
+		const Leg_Nihad2_Xparams& Xparams() const
+		{
+			return *this;
+		}
 	};
 }
 
-#endif // !_Leg_Vessels_DispNo1_Header
+#endif // !_Leg_Vessel_Nihad2_Header

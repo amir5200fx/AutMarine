@@ -1,4 +1,4 @@
-#include <Leg_Vessels_DispNo1.hxx>
+#include <Leg_Vessel_DispNo1.hxx>
 
 #include <Pnt2d.hxx>
 #include <Dir2d.hxx>
@@ -212,13 +212,14 @@ AutLib::Leg_DispNo1_HullPatch::CreateRawStem() const
 		MaxPoints - 1
 	);
 
-	auto newSection = std::make_shared<Leg_Model_SectionCtrlPts>();
+	auto newSection = std::make_shared<Leg_Model_CorneredSectionCtrlPts>();
 	Assemble
 	(
 		xSection,
 		Points,
 		*newSection
 	);
+	newSection->Corner() = 1;
 
 	return std::move(newSection);
 }

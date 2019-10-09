@@ -79,7 +79,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel;$(SolutionDir)AutModelLegacy\AutLib\Model\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Bounded;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Constant;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter;$(SolutionDir)AutModelLegacy\AutLib\Model\Section;$(SolutionDir)AutModelLegacy\AutLib\Model\Net;$(SolutionDir)AutModelLegacy\AutLib\Model\Entity;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel;$(SolutionDir)AutModelLegacy\AutLib\Model\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Bounded;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Constant;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter;$(SolutionDir)AutModelLegacy\AutLib\Model\Section;$(SolutionDir)AutModelLegacy\AutLib\Model\Net;$(SolutionDir)AutModelLegacy\AutLib\Model\Entity;$(SolutionDir)AutIO\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -138,11 +138,16 @@
     <ClInclude Include="AutLib\Model\System\Leg_Model_PointList.hxx" />
     <ClInclude Include="AutLib\Model\System\Leg_Model_Surface.hxx" />
     <ClInclude Include="AutLib\Model\System\Leg_ParameterProfile.hxx" />
-    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Leg_Vessels_DispNo1.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Leg_Vessel_DispNo1.hxx" />
     <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Parameters\Leg_DispNo1_Parameters.hxx" />
     <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Profiles\Leg_DispNo1_Profiles.hxx" />
     <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\System\Leg_DispNo1_Dim.hxx" />
     <ClInclude Include="AutLib\Model\Vessel\Displacement\Leg_Model_Displacement.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Leg_Vessel_Nihad2.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters\Leg_Nihad2_Parameters.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles\Leg_Nihad2_Profiles.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Dim.hxx" />
     <ClInclude Include="AutLib\Model\Vessel\Leg_Model_Vessel.hxx" />
   </ItemGroup>
   <ItemGroup>
@@ -152,6 +157,14 @@
     <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_Sections.cxx" />
     <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_SetupHull.cxx" />
     <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\Parameters\Leg_DispNo1_Parameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Leg_Vessel_Nihad2.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_ApplyParamaters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_CalcParameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_Sections.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_SetupHull.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters\Leg_Nihad2_Parameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles\Leg_Nihad2_Profiles.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

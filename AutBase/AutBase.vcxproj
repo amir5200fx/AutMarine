@@ -187,6 +187,7 @@
     <ClCompile Include="AutLib\Base\Primitives\VectorSpace\labelVector\labelVector.cxx" />
     <ClCompile Include="AutLib\Base\Primitives\VectorSpace\vector2D\vector2D.cxx" />
     <ClCompile Include="AutLib\Base\Primitives\VectorSpace\vector\vector.cxx" />
+    <ClCompile Include="AutLib\Base\UnitSystem\UnitSystem.cxx" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Base\containers\ADT\Ary1d\Adt_Ary1d.hxx" />

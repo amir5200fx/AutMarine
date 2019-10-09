@@ -1,4 +1,4 @@
-#include <Leg_Vessels_DispNo1.hxx>
+#include <Leg_Vessel_DispNo1.hxx>
 
 #include <Pnt2d.hxx>
 #include <UnitSystem.hxx>

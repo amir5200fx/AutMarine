@@ -1,10 +1,10 @@
-#include <Leg_Vessel_DispNo1.hxx>
+#include <Leg_Vessel_Nihad2.hxx>
 
 #include <BSplCLib.hxx>
 #include <Geom_BSplineSurface.hxx>
 #include <TColStd_Array1OfReal.hxx>
 
-void AutLib::Leg_DispNo1_HullPatch::SetupControlNet()
+void AutLib::Leg_Nihad2_HullPatch::SetupControlNet()
 {
 	Standard_Integer
 		NbSections,
@@ -51,7 +51,7 @@ void AutLib::Leg_DispNo1_HullPatch::SetupControlNet()
 namespace AutLib
 {
 
-	static void UniformSurfaceMeshParameters
+	static void UniformSurfaceMeshParameters_Nihad2
 	(
 		Standard_Integer nI,
 		Standard_Integer nJ,
@@ -113,7 +113,7 @@ namespace AutLib
 		vKnots[nJ - 1] = (Standard_Real)1.0;
 	}
 
-	static void SequenceKnots
+	static void SequenceKnots_Nihad2
 	(
 		const Standard_Integer Degree,
 		const Standard_Integer MaxIndex,
@@ -159,7 +159,7 @@ namespace AutLib
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::SetupPatch()
+void AutLib::Leg_Nihad2_HullPatch::SetupPatch()
 {
 	std::vector<Standard_Real>
 		uParameters,
@@ -174,7 +174,7 @@ void AutLib::Leg_DispNo1_HullPatch::SetupPatch()
 	auto NbSections = NbNetColumns();
 	auto NbRows = NbNetRows();
 
-	UniformSurfaceMeshParameters
+	UniformSurfaceMeshParameters_Nihad2
 	(
 		NbSections,
 		NbRows,
@@ -182,7 +182,8 @@ void AutLib::Leg_DispNo1_HullPatch::SetupPatch()
 		vParameters
 	);
 
-	uDegree = vDegree = 3;
+	uDegree = 3;
+	vDegree = 2;
 
 	uMaxIndex = NbSections - 1;
 	vMaxIndex = NbRows - 1;
@@ -191,7 +192,7 @@ void AutLib::Leg_DispNo1_HullPatch::SetupPatch()
 		uKnots(uMaxIndex + uDegree + 2),
 		vKnots(vMaxIndex + vDegree + 2);
 
-	SequenceKnots
+	SequenceKnots_Nihad2
 	(
 		uDegree,
 		uMaxIndex,
@@ -199,7 +200,7 @@ void AutLib::Leg_DispNo1_HullPatch::SetupPatch()
 		uKnots
 	);
 
-	SequenceKnots
+	SequenceKnots_Nihad2
 	(
 		vDegree,
 		vMaxIndex,

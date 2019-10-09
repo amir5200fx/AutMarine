@@ -1,4 +1,4 @@
-#include <Leg_Vessel_DispNo1.hxx>
+#include <Leg_Vessel_Nihad2.hxx>
 
 #include <Pnt2d.hxx>
 #include <Leg_Model_Dim.hxx>
@@ -41,9 +41,9 @@ namespace AutLib
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxXSections()
+void AutLib::Leg_Nihad2_HullPatch::CalcxXSections()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
 
 	Standard_Integer
 		nbSections,
@@ -101,9 +101,9 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxXSections()
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxYSections()
+void AutLib::Leg_Nihad2_HullPatch::CalcxYSections()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
 
 	if (Deck.IsNull())
 	{
@@ -163,10 +163,10 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxYSections()
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxZSections()
+void AutLib::Leg_Nihad2_HullPatch::CalcxZSections()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
-	const Leg_DispNo1_KeelParams& keel = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
+	const Leg_Nihad2_KeelParams& keel = *this;
 
 	Standard_Integer nbSections = dimensions.NbNetColumns();
 
@@ -225,15 +225,15 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxZSections()
 		(
 			xZCoords,
 			nbSections,
-			Leg_DispNo1::SMOOTHING_WEIGHT,
-			Leg_DispNo1::LEVEL_OF_SMOOTHING
+			Leg_Nihad2::SMOOTHING_WEIGHT,
+			Leg_Nihad2::LEVEL_OF_SMOOTHING
 		);
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxDepthSections()
+void AutLib::Leg_Nihad2_HullPatch::CalcxDepthSections()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
 
 	Standard_Real Length = dimensions.LengthOnDeck()->Value();
 	Standard_Real DepthAtBow = dimensions.DepthAtBow()->Value();
@@ -259,10 +259,10 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxDepthSections()
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxDeadRise()
+void AutLib::Leg_Nihad2_HullPatch::CalcxDeadRise()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
-	const Leg_DispNo1_HullParams& Hull = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
+	const Leg_Nihad2_HullParams& Hull = *this;
 
 	Standard_Integer nbSections = dimensions.NbNetColumns();
 
@@ -307,70 +307,16 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxDeadRise()
 		(
 			xDeadRise,
 			nbSections - 2,
-			Leg_DispNo1::SMOOTHING_WEIGHT,
-			Leg_DispNo1::LEVEL_OF_SMOOTHING
+			Leg_Nihad2::SMOOTHING_WEIGHT,
+			Leg_Nihad2::LEVEL_OF_SMOOTHING
 		);
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxFlare()
+void AutLib::Leg_Nihad2_HullPatch::CalcxSideSlope()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
-	const Leg_DispNo1_HullParams& Hull = *this;
-
-	Standard_Integer nbSections = dimensions.NbNetColumns();
-
-	Standard_Real Length = dimensions.LengthOnDeck()->Value();
-
-	forThose
-	(
-		Section,
-		0,
-		nbSections - 1
-	)
-	{
-		Standard_Real X = xXCoords[Section] / Length;
-
-		if (X < (Standard_Real)0.5)
-		{
-			Standard_Real Value = Interpd1
-			(
-				(Standard_Real)2.0 * X,
-				Hull.AftSection().Flare()->Value(),
-				Hull.MidSection().Flare()->Value()
-			);
-
-			xFlare[Section] = Value;
-		}
-		else
-		{
-			Standard_Real Value = Interpd1
-			(
-				(Standard_Real)2.0 * (X - (Standard_Real)0.5),
-				Hull.MidSection().Flare()->Value(),
-				Hull.FwdSection().Flare()->Value()
-			);
-
-			xFlare[Section] = Value;
-		}
-	}
-
-	if (ApplySmoothing())
-	{
-		SmoothingParameter
-		(
-			xFlare,
-			nbSections - 1,
-			Leg_DispNo1::SMOOTHING_WEIGHT,
-			Leg_DispNo1::LEVEL_OF_SMOOTHING
-		);
-	}
-}
-
-void AutLib::Leg_DispNo1_HullPatch::CalcxSideSlope()
-{
-	const Leg_DispNo1_Dimensions& dimensions = *this;
-	const Leg_DispNo1_HullParams& Hull = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
+	const Leg_Nihad2_HullParams& Hull = *this;
 
 	Standard_Integer nbSections = dimensions.NbNetColumns();
 
@@ -415,16 +361,16 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxSideSlope()
 		(
 			xSideSlope,
 			nbSections - 1,
-			Leg_DispNo1::SMOOTHING_WEIGHT,
-			Leg_DispNo1::LEVEL_OF_SMOOTHING
+			Leg_Nihad2::SMOOTHING_WEIGHT,
+			Leg_Nihad2::LEVEL_OF_SMOOTHING
 		);
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxTightness()
+void AutLib::Leg_Nihad2_HullPatch::CalcxTightness0()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
-	const Leg_DispNo1_HullParams& Hull = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
+	const Leg_Nihad2_HullParams& Hull = *this;
 
 	Standard_Integer nbSections = dimensions.NbNetColumns();
 
@@ -444,22 +390,22 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxTightness()
 			Standard_Real Value = Interpd1
 			(
 				(Standard_Real)2.0 * X,
-				Hull.AftSection().Tightness()->Value(),
-				Hull.MidSection().Tightness()->Value()
+				Hull.AftSection().Tightness0()->Value(),
+				Hull.MidSection().Tightness0()->Value()
 			);
 
-			xTightness[Section] = Value;
+			xTightness0[Section] = Value;
 		}
 		else
 		{
 			Standard_Real Value = Interpd1
 			(
 				(Standard_Real)2.0 * (X - (Standard_Real)0.5),
-				Hull.MidSection().Tightness()->Value(),
-				Hull.FwdSection().Tightness()->Value()
+				Hull.MidSection().Tightness0()->Value(),
+				Hull.FwdSection().Tightness0()->Value()
 			);
 
-			xTightness[Section] = Value;
+			xTightness0[Section] = Value;
 		}
 	}
 
@@ -467,19 +413,127 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxTightness()
 	{
 		SmoothingParameter
 		(
-			xTightness,
+			xTightness0,
 			nbSections - 2,
-			Leg_DispNo1::SMOOTHING_WEIGHT,
-			Leg_DispNo1::LEVEL_OF_SMOOTHING
+			Leg_Nihad2::SMOOTHING_WEIGHT,
+			Leg_Nihad2::LEVEL_OF_SMOOTHING
 		);
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxRake()
+void AutLib::Leg_Nihad2_HullPatch::CalcxTightness1()
 {
-	const Leg_DispNo1_Dimensions& dimensions = *this;
-	const Leg_DispNo1_TransomParams& transom = *this;
-	const Leg_DispNo1_StemParams& stem = *this;
+	const Leg_Nihad2_Dimensions& dimensions = *this;
+	const Leg_Nihad2_HullParams& Hull = *this;
+
+	Standard_Integer nbSections = dimensions.NbNetColumns();
+
+	Standard_Real Length = xXCoords[nbSections - 3];
+
+	forThose
+	(
+		Section,
+		0,
+		nbSections - 3
+	)
+	{
+		Standard_Real X = xXCoords[Section] / Length;
+
+		if (X < (Standard_Real)0.5)
+		{
+			Standard_Real Value = Interpd1
+			(
+				(Standard_Real)2.0 * X,
+				Hull.AftSection().Tightness1()->Value(),
+				Hull.MidSection().Tightness1()->Value()
+			);
+
+			xTightness1[Section] = Value;
+		}
+		else
+		{
+			Standard_Real Value = Interpd1
+			(
+				(Standard_Real)2.0 * (X - (Standard_Real)0.5),
+				Hull.MidSection().Tightness1()->Value(),
+				Hull.FwdSection().Tightness1()->Value()
+			);
+
+			xTightness1[Section] = Value;
+		}
+	}
+
+	if (ApplySmoothing())
+	{
+		SmoothingParameter
+		(
+			xTightness1,
+			nbSections - 2,
+			Leg_Nihad2::SMOOTHING_WEIGHT,
+			Leg_Nihad2::LEVEL_OF_SMOOTHING
+		);
+	}
+}
+
+void AutLib::Leg_Nihad2_HullPatch::CalcxTrim()
+{
+	const Leg_Nihad2_Dimensions& dimensions = *this;
+	const Leg_Nihad2_HullParams& Hull = *this;
+
+	Standard_Integer nbSections = dimensions.NbNetColumns();
+
+	Standard_Real Length = xXCoords[nbSections - 3];
+
+	forThose
+	(
+		Section,
+		0,
+		nbSections - 3
+	)
+	{
+		Standard_Real X = xXCoords[Section] / Length;
+
+		if (X < (Standard_Real)0.5)
+		{
+			Standard_Real Value = Interpd1
+			(
+				(Standard_Real)2.0 * X,
+				Hull.AftSection().Trim()->Value(),
+				Hull.MidSection().Trim()->Value()
+			);
+
+			xTrim[Section] = Value;
+		}
+		else
+		{
+			Standard_Real Value = Interpd1
+			(
+				(Standard_Real)2.0 * (X - (Standard_Real)0.5),
+				Hull.MidSection().Trim()->Value(),
+				Hull.FwdSection().Trim()->Value()
+			);
+
+			xTrim[Section] = Value;
+		}
+	}
+
+	if (ApplySmoothing())
+	{
+		SmoothingParameter
+		(
+			xTrim,
+			nbSections - 2,
+			Leg_Nihad2::SMOOTHING_WEIGHT,
+			Leg_Nihad2::LEVEL_OF_SMOOTHING
+		);
+	}
+}
+
+void AutLib::Leg_Nihad2_HullPatch::CalcxRake()
+{
+	const Leg_Nihad2_Dimensions& dimensions = *this;
+	const Leg_Nihad2_TransomParams& transom = *this;
+	const Leg_Nihad2_StemParams& stem = *this;
 
 	Standard_Integer nbSections = dimensions.NbNetColumns();
 
@@ -509,7 +563,7 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxRake()
 	}
 }
 
-void AutLib::Leg_DispNo1_HullPatch::CalcxParameters()
+void AutLib::Leg_Nihad2_HullPatch::CalcxParameters()
 {
 	CreateDeckProfile();
 
@@ -523,9 +577,11 @@ void AutLib::Leg_DispNo1_HullPatch::CalcxParameters()
 
 	CalcxSideSlope();
 
-	CalcxTightness();
+	CalcxTightness0();
 
-	CalcxFlare();
+	CalcxTightness1();
+
+	CalcxTrim();
 
 	CalcxRake();
 }
