@@ -37,7 +37,7 @@ int main()
 
 
 	patch.Perform();
-	//patch.Discrete();
+	patch.Discrete();
 
 	patch.FileFormat() = Leg_EntityIO_Format::IGES;
 	patch.ExportToFile();
