@@ -172,6 +172,18 @@
     <Filter Include="AutLib\MarineBase\Vessel\Parameter\LOS">
       <UniqueIdentifier>{7cd7808d-0458-4232-85aa-e611841a48a9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MarineBase\Wave\StillWater">
+      <UniqueIdentifier>{3e7365a2-d617-406c-ac57-96b309f15c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station">
+      <UniqueIdentifier>{8584b1c8-0a78-4e32-9732-55a095533c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Type">
+      <UniqueIdentifier>{c57712a9-c848-46cf-bdea-02490370c1b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Info">
+      <UniqueIdentifier>{9691fb8c-fcb1-4d82-997c-3beeb9c27cfd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MarineBase\Dimension\Marine_DimensionSet.hxx">
@@ -342,6 +354,24 @@
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LOS\Marine_VesselParam_LOS.hxx">
       <Filter>AutLib\MarineBase\Vessel\Parameter\LOS</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Marine_VesselParams.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Wave\Marine_WaveProfile.hxx">
+      <Filter>AutLib\MarineBase\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Wave\StillWater\Marine_StillWaterProfile.hxx">
+      <Filter>AutLib\MarineBase\Wave\StillWater</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Type\Marine_StationType.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Marine_VesselStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Info\Marine_StationInfo.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Info</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSet.cxx">
@@ -355,6 +385,18 @@
     </ClCompile>
     <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionedParam.cxx">
       <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Wave\Marine_WaveProfile.cxx">
+      <Filter>AutLib\MarineBase\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Wave\StillWater\Marine_StillWaterProfile.cxx">
+      <Filter>AutLib\MarineBase\Wave\StillWater</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Vessel\Station\Info\Marine_StationInfo.cxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Vessel\Station\Marine_VesselStation.cxx">
+      <Filter>AutLib\MarineBase\Vessel\Station</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

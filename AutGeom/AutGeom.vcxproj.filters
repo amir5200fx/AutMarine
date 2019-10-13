@@ -202,6 +202,9 @@
     <Filter Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle">
       <UniqueIdentifier>{9280a1a4-5a24-445c-8240-751fca625790}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Interpolate">
+      <UniqueIdentifier>{277d130a-5b8f-4522-b870-6507f568f11d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -308,6 +311,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle\PrimShape2d_Rectangle.cxx">
       <Filter>AutLib\Geom\PrimitiveShapes\2d\Rectangle</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Interpolate\Geo_Interpolate.cxx">
+      <Filter>AutLib\Geom\Interpolate</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -550,6 +556,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonFwd.hxx">
       <Filter>AutLib\Geom\Entities\Polygon\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Interpolate\Geo_Interpolate.hxx">
+      <Filter>AutLib\Geom\Interpolate</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Interpolate\Geo_InterpolateI.hxx">
+      <Filter>AutLib\Geom\Interpolate</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

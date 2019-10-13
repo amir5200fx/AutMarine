@@ -31,6 +31,30 @@
     <Filter Include="AutLib\Numeric\Integration\Adaptive">
       <UniqueIdentifier>{64403c35-cbe2-44e1-ad63-4f8e8b21d31e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Numeric\Integration\GaussQuadrature">
+      <UniqueIdentifier>{24ab1462-ea59-400e-8acb-b2dc51fb1013}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration\System">
+      <UniqueIdentifier>{3577a362-3154-4690-873b-3652ffd4b2e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\System">
+      <UniqueIdentifier>{589d3fb0-c856-4809-bca8-81576d6e3695}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration\Function">
+      <UniqueIdentifier>{a4a4bfc1-69ad-40b9-bcb1-0d703e9c6830}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration\Adaptive\Core">
+      <UniqueIdentifier>{4ac5dc4e-b4b4-41a2-94dc-321e858f68de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration\Adaptive\Info">
+      <UniqueIdentifier>{23042baf-c100-44e9-8d51-67c4b501fa01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes">
+      <UniqueIdentifier>{18c44c65-a916-4e96-9075-907d4b52c89a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\Integration\GaussQuadrature\Weights">
+      <UniqueIdentifier>{d08b7a3e-cbc9-47b0-bb79-8a1354b9a430}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Numeric\Random\Numeric_Random.hxx">
@@ -48,11 +72,38 @@
     <ClInclude Include="AutLib\Numeric\Optimization\NelderMead\NumOpt_NelderMeadI.hxx">
       <Filter>AutLib\Numeric\Optimization\NelderMead</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Numeric_AdaptIntegrationInfo.hxx">
-      <Filter>AutLib\Numeric\Integration\Adaptive</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolverInfo.hxx">
       <Filter>AutLib\Numeric\NonLinearSolver\Newton</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\System\Numeric_IntegrationBound.hxx">
+      <Filter>AutLib\Numeric\Integration\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\System\Numeric_System.hxx">
+      <Filter>AutLib\Numeric\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\Function\Numeric_IntegrationFunction.hxx">
+      <Filter>AutLib\Numeric\Integration\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Core\Numeric_AdaptIntegration_Core.hxx">
+      <Filter>AutLib\Numeric\Integration\Adaptive\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Core\Numeric_AdaptIntegration_CoreI.hxx">
+      <Filter>AutLib\Numeric\Integration\Adaptive\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Info\Numeric_AdaptIntegrationInfo.hxx">
+      <Filter>AutLib\Numeric\Integration\Adaptive\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadrature.hxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GuassQuadratureNodes.hxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature\Nodes</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GuassQuadratureWeights.hxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature\Weights</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadratureI.hxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -64,6 +115,18 @@
     </ClCompile>
     <ClCompile Include="AutLib\Numeric\Optimization\NelderMead\NumOpt_NelderMead.cxx">
       <Filter>AutLib\Numeric\Optimization\NelderMead</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Numeric\Integration\Adaptive\Core\Numeric_AdaptIntegration_Core.cxx">
+      <Filter>AutLib\Numeric\Integration\Adaptive\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GuassQuadratureNodes.cxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature\Nodes</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GuassQuadratureWeights.cxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature\Weights</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadrature.cxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

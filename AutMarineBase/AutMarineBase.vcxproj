@@ -78,7 +78,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Entity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section\Compound;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section\Offset;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section\Curve;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Wave;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Viscosity\Water;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Viscosity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Velocity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Gravity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Froude;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Density\Water;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Density;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Dimension;$(SolutionDir)AutMarineBase\AutLib\MarineBase\System;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\WETA;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\VCB;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\TM;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\TF;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\TA;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\T;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\MPP;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\LWL;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\LPP;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\LOS;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\LOA;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\LCF;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\LCB;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\KB;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\HEELANG;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\FWL;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\FUW;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\FPP;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\DWL;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\DISPV;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\DISPM;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\D;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\CWL;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\CVP;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\CP;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\CM;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\CB;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\CAM;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\BWL;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\B;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\AWL;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\AW;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\AUW;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\APP;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\Amax;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter\AM;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Parameter;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Station\Info;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Station\Type;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Vessel\Station;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Entity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section\Compound;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section\Offset;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section\Curve;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Table\Section;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Wave\StillWater;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Wave;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Viscosity\Water;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Viscosity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Velocity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Gravity;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Froude;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Density\Water;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Environment\Density;$(SolutionDir)AutMarineBase\AutLib\MarineBase\Dimension;$(SolutionDir)AutMarineBase\AutLib\MarineBase\System;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -175,6 +175,7 @@
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LWL\Marine_VesselParam_LWL.hxx" />
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Marine_VesselParam.hxx" />
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Marine_VesselParamM.hxx" />
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Marine_VesselParams.hxx" />
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\MPP\Marine_VesselParam_MPP.hxx" />
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\TA\Marine_VesselParam_TA.hxx" />
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\TF\Marine_VesselParam_TF.hxx" />
@@ -182,12 +183,21 @@
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\T\Marine_VesselParam_T.hxx" />
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\VCB\Marine_VesselParam_VCB.hxx" />
     <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\WETA\Marine_VesselParam_WETA.hxx" />
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Info\Marine_StationInfo.hxx" />
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Marine_VesselStation.hxx" />
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Type\Marine_StationType.hxx" />
+    <ClInclude Include="AutLib\MarineBase\Wave\Marine_WaveProfile.hxx" />
+    <ClInclude Include="AutLib\MarineBase\Wave\StillWater\Marine_StillWaterProfile.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionedParam.cxx" />
     <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSet.cxx" />
     <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSetIO.cxx" />
     <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSets.cxx" />
+    <ClCompile Include="AutLib\MarineBase\Vessel\Station\Info\Marine_StationInfo.cxx" />
+    <ClCompile Include="AutLib\MarineBase\Vessel\Station\Marine_VesselStation.cxx" />
+    <ClCompile Include="AutLib\MarineBase\Wave\Marine_WaveProfile.cxx" />
+    <ClCompile Include="AutLib\MarineBase\Wave\StillWater\Marine_StillWaterProfile.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
