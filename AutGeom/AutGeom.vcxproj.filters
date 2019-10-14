@@ -202,6 +202,18 @@
     <Filter Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle">
       <UniqueIdentifier>{9280a1a4-5a24-445c-8240-751fca625790}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Space">
+      <UniqueIdentifier>{cf06f8d6-ace0-4435-9111-a0122485d393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function">
+      <UniqueIdentifier>{77b4a70e-2715-401f-9508-260de12cd84f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function\Size">
+      <UniqueIdentifier>{cdd1ccb4-9ba5-4a78-8fc5-0539664e2d3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function\Size\Uniform">
+      <UniqueIdentifier>{2951d4df-8918-49b9-8bcc-8088498b9a26}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -550,6 +562,15 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonFwd.hxx">
       <Filter>AutLib\Geom\Entities\Polygon\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Space\Geo_ApprxSpace.hxx">
+      <Filter>AutLib\Geom\Approximation\Space</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\Geo_SizeFunction.hxx">
+      <Filter>AutLib\Geom\Function\Size</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\Uniform\GeoSizeFun_Uniform.hxx">
+      <Filter>AutLib\Geom\Function\Size\Uniform</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{A8593A5E-68C0-481E-84FE-6362C1821AD4}</ProjectGuid>
+    <RootNamespace>AutMeshAft</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Front\Identifiers\Entity;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Front\Identifiers\Edge;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Front\Identifiers\Node;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Surface;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Surface;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Surface;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Front\Identifiers\Entity;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Front\Identifiers\Edge;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Front\Identifiers\Node;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Surface;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Element;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Facet;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Surface;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Edge;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Surface;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\AnIso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Iso;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Traits;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node\Adaptor;$(SolutionDir)AutMeshAft\AutLib\MeshAft\Entities\Node;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Aft_Edge.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Aft_EdgeI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\AnIso\Aft2d_EdgeAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\AnIso\Aft2d_EdgeAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\AnIso\Aft3d_EdgeAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\AnIso\Aft3d_EdgeAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Iso\Aft2d_Edge.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Iso\Aft2d_EdgeFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Iso\Aft3d_Edge.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Iso\Aft3d_EdgeFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Surface\Aft2d_EdgeSurface.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Surface\Aft2d_EdgeSurfaceFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Traits\Aft2d_EdgeAnIsoTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Traits\Aft2d_EdgeSurfaceTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Traits\Aft2d_EdgeTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Traits\Aft3d_EdgeAnIsoTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Edge\Traits\Aft3d_EdgeTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Aft_Element.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Aft_ElementFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\AnIso\Aft2d_ElementAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\AnIso\Aft2d_ElementAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\AnIso\Aft3d_ElementAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\AnIso\Aft3d_ElementAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Iso\Aft2d_Element.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Iso\Aft2d_ElementFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Iso\Aft3d_Element.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Iso\Aft3d_ElementFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Surface\Aft2d_ElementSurface.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Surface\Aft2d_ElementSurfaceFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Traits\Aft2d_ElementAnIsoTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Traits\Aft2d_ElementSurfaceTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Traits\Aft2d_ElementTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Traits\Aft3d_ElementAnIsoTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Element\Traits\Aft3d_ElementTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\Aft_Facet.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\Aft_FacetFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\AnIso\Aft3d_FacetAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\AnIso\Aft3d_FacetAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\Iso\Aft3d_Facet.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\Iso\Aft3d_FacetFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\Traits\Aft3d_FacetAnIsoTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Facet\Traits\Aft3d_FacetTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Front\Identifiers\Entity\Aft_EntityIdentifier.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Front\Identifiers\Node\Aft_NodeIdentifier.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Adaptor\Aft_NodeAdaptor.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Aft_Node.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Aft_NodeI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Aft_NodeType.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\AnIso\Aft2d_NodeAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\AnIso\Aft2d_NodeAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\AnIso\Aft3d_NodeAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\AnIso\Aft3d_NodeAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Iso\Aft2d_Node.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Iso\Aft2d_NodeFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Iso\Aft3d_Node.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Iso\Aft3d_NodeFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Surface\Aft2d_NodeSurface.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Surface\Aft2d_NodeSurfaceFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Traits\Aft2d_NodeAnIsoTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Traits\Aft2d_NodeSurfaceTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Traits\Aft2d_NodeTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Traits\Aft3d_NodeAnIsoTraits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Entities\Node\Traits\Aft3d_NodeTraits.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAft\Entities\Edge\Aft_Edge.cxx" />
+    <ClCompile Include="AutLib\MeshAft\Entities\Node\Aft_Node.cxx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
