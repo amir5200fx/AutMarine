@@ -15,6 +15,8 @@
 #include <TopoDS.hxx>
 #include <TopoDS_Face.hxx>
 #include <TopoDS_Shape.hxx>
+#include <IGESControl_Controller.hxx>
+#include <IGESControl_Writer.hxx>
 
 AutLib::Entity2d_Box 
 AutLib::Cad_Tools::BoundingBox
@@ -128,4 +130,20 @@ AutLib::Cad_Tools::Triangulation
 		indices.push_back(std::move(I));
 	}
 	return std::move(triangulation);
+}
+
+void AutLib::Cad_Tools::ExportToIGES
+(
+	const word & unit,
+	const TopoDS_Shape & theShape,
+	const fileName & name
+)
+{
+	IGESControl_Controller::Init();
+
+	IGESControl_Writer Writer(unit.c_str(), 0);
+	Writer.AddShape(theShape);
+	Writer.ComputeModel();
+
+	Standard_Boolean OK = Writer.Write(name.c_str());
 }

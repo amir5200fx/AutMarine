@@ -165,6 +165,7 @@
     <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters\Leg_Nihad2_Parameters.cxx" />
     <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles\Leg_Nihad2_Profiles.cxx" />
     <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Leg_Model_Vessel.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -170,5 +170,8 @@
     <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.cxx">
       <Filter>AutLib\Model\Vessel\Displacement\Nihad2\System</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Leg_Model_Vessel.cxx">
+      <Filter>AutLib\Model\Vessel</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

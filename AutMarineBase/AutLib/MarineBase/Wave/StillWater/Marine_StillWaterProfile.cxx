@@ -19,5 +19,5 @@ AutLib::Marine_StillWaterProfile::Value
 			<< abort(FatalError);
 	}
 
-	return Geo_Interpolate::Linear(x, Lower(), TA()(), Upper(), TF()());
+	return Geo_Interpolate::Linear(x, Lower(), H0(), Upper(), H1());
 }

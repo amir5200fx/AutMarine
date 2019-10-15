@@ -9,6 +9,25 @@
 #include <IO_IGES.hxx>
 #include <FastDiscrete_Params.hxx>
 #include <Leg_Vessel_Nihad2.hxx>
+#include <Cad_Tools.hxx>
+
+#include <Numeric_GaussQuadrature.hxx>
+#include <Numeric_IntegrationFunction.hxx>
+
+namespace AutLib
+{
+
+	struct IntFun
+		: public Numeric_IntegrationFunction
+	{
+
+		Standard_Real Value(const Standard_Real x) const override
+		{
+			cout <<" x = " << x << std::endl;
+			return 3*x*x;
+		}
+	};
+}
 
 using namespace boost::archive;
 using namespace AutLib;
@@ -18,6 +37,14 @@ int main()
 	/*IO_IGES reader(gl_fast_discrete_parameters);
 	reader.Verbose() = 1;
 	reader.ReadFile("F16 one.IGS");*/
+
+	/*IntFun integrand;
+	Numeric_GaussQuadrature<IntFun, 4> intg(integrand, 0, 1);
+	intg.Perform();
+
+	std::cout << intg.Result() << std::endl;
+	PAUSE;
+	return 0; */
 
 
 	Leg_Nihad2_HullPatch patch;
@@ -37,10 +64,14 @@ int main()
 
 
 	patch.Perform();
-	patch.Discrete();
+	//patch.Discrete();
 
 	patch.FileFormat() = Leg_EntityIO_Format::IGES;
 	patch.ExportToFile();
+
+	auto section = patch.GetStation(5);
+
+	Cad_Tools::ExportToIGES("MM", section, "section.iges");
 
 	PAUSE;
 	return 0;
