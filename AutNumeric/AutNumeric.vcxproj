@@ -56,7 +56,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutNumeric\AutLib\Numeric\Optimization\NelderMead;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Function;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\System;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Weights;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Nodes;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Info;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Random;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutNumeric\AutLib\Numeric\System;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Weights;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Nodes;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\System;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Function;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Info;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Optimization\NelderMead;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Function;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\System;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Weights;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Nodes;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Info;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Random;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutNumeric\AutLib\Numeric\System;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -67,7 +67,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutNumeric\AutLib\Numeric\Optimization\NelderMead;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Random;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Weights;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Nodes;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\System;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Function;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Info;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Optimization\NelderMead;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Random;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -80,10 +80,11 @@
     <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Info\Numeric_AdaptIntegrationInfo.hxx" />
     <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Numeric_AdaptIntegration.hxx" />
     <ClInclude Include="AutLib\Numeric\Integration\Function\Numeric_IntegrationFunction.hxx" />
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GuassQuadratureNodes.hxx" />
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadrature.hxx" />
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadratureI.hxx" />
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GuassQuadratureWeights.hxx" />
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Core\Numeric_GaussQuadrature_Core.hxx" />
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GaussQuadratureNodes.hxx" />
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GaussQuadrature.hxx" />
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GaussQuadratureI.hxx" />
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GaussQuadratureWeights.hxx" />
     <ClInclude Include="AutLib\Numeric\Integration\System\Numeric_IntegrationBound.hxx" />
     <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolver.hxx" />
     <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolverInfo.hxx" />
@@ -95,9 +96,9 @@
   <ItemGroup>
     <ClCompile Include="AutLib\Numeric\Integration\Adaptive\Core\Numeric_AdaptIntegration_Core.cxx" />
     <ClCompile Include="AutLib\Numeric\Integration\Adaptive\Numeric_AdaptIntegration.cxx" />
-    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GuassQuadratureNodes.cxx" />
-    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadrature.cxx" />
-    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GuassQuadratureWeights.cxx" />
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GaussQuadratureNodes.cxx" />
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GaussQuadrature.cxx" />
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GaussQuadratureWeights.cxx" />
     <ClCompile Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolver.cxx" />
     <ClCompile Include="AutLib\Numeric\Optimization\NelderMead\NumOpt_NelderMead.cxx" />
   </ItemGroup>

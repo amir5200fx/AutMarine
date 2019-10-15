@@ -55,6 +55,9 @@
     <Filter Include="AutLib\Numeric\Integration\GaussQuadrature\Weights">
       <UniqueIdentifier>{d08b7a3e-cbc9-47b0-bb79-8a1354b9a430}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Numeric\Integration\GaussQuadrature\Core">
+      <UniqueIdentifier>{f83b266b-4ffd-4b04-972d-4c903293ae50}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Numeric\Random\Numeric_Random.hxx">
@@ -93,16 +96,19 @@
     <ClInclude Include="AutLib\Numeric\Integration\Adaptive\Info\Numeric_AdaptIntegrationInfo.hxx">
       <Filter>AutLib\Numeric\Integration\Adaptive\Info</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadrature.hxx">
-      <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Core\Numeric_GaussQuadrature_Core.hxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature\Core</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GuassQuadratureNodes.hxx">
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GaussQuadratureNodes.hxx">
       <Filter>AutLib\Numeric\Integration\GaussQuadrature\Nodes</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GuassQuadratureWeights.hxx">
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GaussQuadratureWeights.hxx">
       <Filter>AutLib\Numeric\Integration\GaussQuadrature\Weights</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadratureI.hxx">
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GaussQuadrature.hxx">
+      <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GaussQuadratureI.hxx">
       <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
     </ClInclude>
   </ItemGroup>
@@ -119,13 +125,13 @@
     <ClCompile Include="AutLib\Numeric\Integration\Adaptive\Core\Numeric_AdaptIntegration_Core.cxx">
       <Filter>AutLib\Numeric\Integration\Adaptive\Core</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GuassQuadratureNodes.cxx">
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Nodes\Numeric_GaussQuadratureNodes.cxx">
       <Filter>AutLib\Numeric\Integration\GaussQuadrature\Nodes</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GuassQuadratureWeights.cxx">
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Weights\Numeric_GaussQuadratureWeights.cxx">
       <Filter>AutLib\Numeric\Integration\GaussQuadrature\Weights</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GuassQuadrature.cxx">
+    <ClCompile Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GaussQuadrature.cxx">
       <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
     </ClCompile>
   </ItemGroup>
