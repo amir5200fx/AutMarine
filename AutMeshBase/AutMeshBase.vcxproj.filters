@@ -150,6 +150,18 @@
     <ClCompile Include="AutLib\MeshBase\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.cxx">
       <Filter>AutLib\MeshBase\Geom\Mesh\BackGround\AnIso\2d</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\MeshBase\Entities\Element\2d\Mesh2d_Element.cxx">
+      <Filter>AutLib\MeshBase\Entities\Element\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshBase\Entities\Element\3d\Mesh3d_Element.cxx">
+      <Filter>AutLib\MeshBase\Entities\Element\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshBase\Entities\Edge\2d\Mesh2d_Edge.cxx">
+      <Filter>AutLib\MeshBase\Entities\Edge\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshBase\Entities\Facet\3d\Mesh3d_Facet.cxx">
+      <Filter>AutLib\MeshBase\Entities\Facet\3d</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshBase\Entities\Entity\Mesh_Entity.hxx">
@@ -298,6 +310,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshBase\Geom\SizeFunction\GeoSizeFun_BackGround.hxx">
       <Filter>AutLib\MeshBase\Geom\SizeFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\System\Mesh_TypeTraits.hxx">
+      <Filter>AutLib\MeshBase\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

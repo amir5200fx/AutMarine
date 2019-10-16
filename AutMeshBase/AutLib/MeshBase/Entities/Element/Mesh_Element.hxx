@@ -6,10 +6,12 @@
 #include <Mesh_Entity.hxx>
 #include <Mesh_ElementAdaptor.hxx>
 #include <Mesh_ElementType.hxx>
+#include <Mesh_TypeTraits.hxx>
 #include <error.hxx>
 #include <OSstream.hxx>
 
 #include <memory>
+#include <array>
 
 namespace AutLib
 {
@@ -21,6 +23,11 @@ namespace AutLib
 	{
 
 	public:
+
+		typedef std::array<Standard_Real, 4>
+			array4;
+
+		typedef array4 arrayType;
 
 		typedef typename ElementTraits::nodeType nodeType;
 		typedef typename ElementTraits::edgeType edgeType;
@@ -45,7 +52,8 @@ namespace AutLib
 
 		enum
 		{
-			nbNodes = 4
+			nbNodes = 4,
+			rank = 3
 		};
 
 		Mesh_Element()
@@ -154,6 +162,45 @@ namespace AutLib
 			return nodeType::null_ptr;
 		}
 
+		template<int Sub>
+		const std::shared_ptr<typename sub_type<Mesh_Element, Sub>::type>& 
+			SubEntity
+			(
+				const Standard_Integer theIndex
+			) const;
+
+		template<>
+		const std::shared_ptr<typename sub_type<Mesh_Element, 0>::type>& 
+			SubEntity<0>
+			(
+				const Standard_Integer theIndex
+				) const
+		{
+			return Node(theIndex);
+		}
+
+		template<>
+		const std::shared_ptr<typename sub_type<Mesh_Element, 1>::type>&
+			SubEntity<1>
+			(
+				const Standard_Integer theIndex
+				) const
+		{
+			return Edge(theIndex);
+		}
+
+		template<>
+		const std::shared_ptr<typename sub_type<Mesh_Element, 2>::type>&
+			SubEntity<2>
+			(
+				const Standard_Integer theIndex
+				) const
+		{
+			return Facet(theIndex);
+		}
+
+		array4 InterpWeights(const Point& theCoord) const;
+
 		//- Static function and operators
 
 		static Standard_Boolean
@@ -222,7 +269,8 @@ namespace AutLib
 
 		enum
 		{
-			nbNodes = 3
+			nbNodes = 3,
+			rank = 2
 		};
 
 		Mesh_Element()
@@ -257,6 +305,36 @@ namespace AutLib
 			return std::move(pt);
 		}
 
+		template<int Sub>
+		const std::shared_ptr<typename sub_type<Mesh_Element, Sub>::type>&
+			SubEntity
+			(
+				const Standard_Integer theIndex
+			) const;
+
+		template<>
+		const std::shared_ptr<typename sub_type<Mesh_Element, 0>::type>&
+			SubEntity<0>
+			(
+				const Standard_Integer theIndex
+				) const
+		{
+			return Node(theIndex);
+		}
+
+		template<>
+		const std::shared_ptr<typename sub_type<Mesh_Element, 1>::type>&
+			SubEntity<1>
+			(
+				const Standard_Integer theIndex
+				) const
+		{
+			return Edge(theIndex);
+		}
+
+		Standard_Boolean IsRightSide(const Point& theCoord) const;
+
+		Standard_Boolean IsLeftSide(const Point& theCoord) const;
 
 		//- Static function and operators
 
@@ -297,6 +375,11 @@ namespace AutLib
 
 	public:
 
+		typedef std::array<Standard_Real, 3>
+			array3;
+
+		typedef array3 arrayType;
+
 		typedef typename ElementTraits::nodeType nodeType;
 		typedef typename ElementTraits::edgeType edgeType;
 		typedef typename ElementTraits::facetType facetType;
@@ -319,7 +402,8 @@ namespace AutLib
 
 		enum
 		{
-			nbNodes = 3
+			nbNodes = 3,
+			rank = 2
 		};
 
 		Mesh_Element()
@@ -422,6 +506,34 @@ namespace AutLib
 			return nodeType::null_ptr;
 		}
 
+		template<int Sub>
+		const std::shared_ptr<typename sub_type<Mesh_Element, Sub>::type>&
+			SubEntity
+			(
+				const Standard_Integer theIndex
+			) const;
+
+		template<>
+		const std::shared_ptr<typename sub_type<Mesh_Element, 0>::type>&
+			SubEntity<0>
+			(
+				const Standard_Integer theIndex
+				) const
+		{
+			return Node(theIndex);
+		}
+
+		template<>
+		const std::shared_ptr<typename sub_type<Mesh_Element, 1>::type>&
+			SubEntity<1>
+			(
+				const Standard_Integer theIndex
+				) const
+		{
+			return Edge(theIndex);
+		}
+
+		array3 InterpWeights(const Point& theCoord) const;
 
 		//- Static function and operators
 

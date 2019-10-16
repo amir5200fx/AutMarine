@@ -142,6 +142,7 @@
     <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Config.hxx" />
     <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Info.hxx" />
     <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Shape.hxx" />
+    <ClInclude Include="AutLib\Cascade\System\Cad_CascadeTraits.hxx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

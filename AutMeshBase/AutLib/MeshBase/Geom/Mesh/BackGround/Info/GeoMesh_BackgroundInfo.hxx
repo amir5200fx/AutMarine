@@ -13,7 +13,7 @@ namespace AutLib
 
 		/*Private Data*/
 
-		Standard_Integer theNbIters_;
+		Standard_Integer theMaxNbIters_;
 		Standard_Real theFactor_;
 
 	public:
@@ -22,13 +22,13 @@ namespace AutLib
 		static const Standard_Real DEFAULT_FACTOR;
 
 		GeoMesh_Background_SmoothingHvCorrectionInfo()
-			: theNbIters_(DEFAULT_MX_NB_ITERS)
+			: theMaxNbIters_(DEFAULT_MX_NB_ITERS)
 			, theFactor_(DEFAULT_FACTOR)
 		{}
 
 		
 		//- Macros
-		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Integer, NbIters)
+		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Integer, MaxNbIters)
 			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, Factor)
 	};
 
@@ -37,7 +37,7 @@ namespace AutLib
 
 		/*Private Data*/
 
-		Standard_Integer theNbIters_;
+		Standard_Integer theMaxNbIters_;
 		Standard_Real theFactor_;
 
 	public:
@@ -46,13 +46,13 @@ namespace AutLib
 		static const Standard_Real DEFAULT_FACTOR;
 
 		GeoMesh_Background_SmoothingLaplacianInfo()
-			: theNbIters_(DEFAULT_MX_NB_ITERS)
+			: theMaxNbIters_(DEFAULT_MX_NB_ITERS)
 			, theFactor_(DEFAULT_FACTOR)
 		{}
 
 		
 		//- Macros
-		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Integer, NbIters)
+		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Integer, MaxNbIters)
 			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, Factor)
 	};
 }
