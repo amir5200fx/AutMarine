@@ -554,8 +554,5 @@
     <ClInclude Include="AutLib\Cad\GModel\Tools\GModel_Tools.hxx">
       <Filter>AutLib\Cad\GModel\Tools</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cascade\System\Cad_CascadeTraits.hxx">
-      <Filter>AutLib\Cascade\System</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>

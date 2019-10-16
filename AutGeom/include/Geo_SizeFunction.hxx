@@ -35,6 +35,7 @@ namespace AutLib
 
 	public:
 
+		typedef Point PtType;
 		
 		//- virtual functions and operators
 

@@ -1,21 +1,24 @@
 #pragma once
-#ifndef _Geo_SizeFunction_Header
-#define _Geo_SizeFunction_Header
+#ifndef _Geo_MetricFunction_Header
+#define _Geo_MetricFunction_Header
 
-#include <Global_Done.hxx>
-#include <Global_Named.hxx>
 #include <Global_Indexed.hxx>
+#include <Global_Named.hxx>
+#include <Global_Done.hxx>
 #include <Entity_Box.hxx>
+#include <Geo_MetricFunctionTraits.hxx>
 
 namespace AutLib
 {
-	
+
 	template<class Point>
-	class Geo_SizeFunction
+	class Geo_MetricFunction
 		: public Global_Indexed
 		, public Global_Named
 		, public Global_Done
 	{
+
+		typedef typename metric_type_from_point<Point>::metricType metricType;
 
 		/*Private Data*/
 
@@ -23,10 +26,10 @@ namespace AutLib
 
 	protected:
 
-		Geo_SizeFunction()
+		Geo_MetricFunction()
 		{}
 
-		Geo_SizeFunction
+		Geo_MetricFunction
 		(
 			const Standard_Integer theIndex, 
 			const word& theName
@@ -37,13 +40,10 @@ namespace AutLib
 
 	public:
 
-		typedef Point PtType;
-		typedef Entity_Box<Point> boxType;
-		
+		typedef Point ptType;
+		typedef metricType metricType;
 
-		//- virtual functions and operators
-
-		virtual Standard_Real Value(const Point& theCoord) const = 0;
+		virtual metricType Value(const Point& theCoord) const = 0;
 
 		virtual void Perform()
 		{
@@ -52,4 +52,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_Geo_SizeFunction_Header
+#endif // !_Geo_MetricFunction_Header

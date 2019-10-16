@@ -40,10 +40,11 @@ namespace AutLib
 			return theSize_;
 		}
 
-
 		//- Macros
 		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, Size)
 	};
 }
+
+#include <GeoSizeFun_UniformI.hxx>
 
 #endif // !_GeoSizeFun_Uniform_Header
