@@ -83,6 +83,7 @@
     <ClInclude Include="AutLib\VesselCoeffForm\Station\Type\Vessel_StationType.hxx" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AutLib\VesselCoeffForm\Dimensions\Vessel_DimOfForm.cxx" />
     <ClCompile Include="AutLib\VesselCoeffForm\Parameters\Vessel_FormParams.cxx" />
     <ClCompile Include="AutLib\VesselCoeffForm\Station\Info\Vessel_StationInfo.cxx" />
   </ItemGroup>

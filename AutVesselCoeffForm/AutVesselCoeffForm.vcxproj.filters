@@ -47,5 +47,8 @@
     <ClCompile Include="AutLib\VesselCoeffForm\Station\Info\Vessel_StationInfo.cxx">
       <Filter>AutLib\VesselCoeffForm\Station\Info</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\VesselCoeffForm\Dimensions\Vessel_DimOfForm.cxx">
+      <Filter>AutLib\VesselCoeffForm\Dimensions</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

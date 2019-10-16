@@ -3,7 +3,7 @@
 #define _Marine_TableCurve_Header
 
 #include <Marine_TableSection.hxx>
-#include <Cad_Curve.hxx>
+#include <Cad_PlaneCurve.hxx>
 
 class Geom_Curve;
 
@@ -12,7 +12,7 @@ namespace AutLib
 
 	class Marine_TableCurve
 		: public Marine_TableSection
-		, public Cad_Curve<Geom_Curve>
+		, public Cad_PlaneCurve<Geom_Curve>
 	{
 
 		/*Private Data*/
@@ -23,9 +23,10 @@ namespace AutLib
 		(
 			const Handle(Geom_Curve)& theCurve,
 			const Standard_Real theFirst,
-			const Standard_Real theLast
+			const Standard_Real theLast,
+			const std::shared_ptr<gp_Pln>& thePlane
 		)
-			: Cad_Curve<Geom_Curve>(theFirst, theLast, theCurve)
+			: Cad_PlaneCurve<Geom_Curve>(theFirst, theLast, theCurve, thePlane)
 		{}
 
 		Marine_TableCurve
@@ -34,11 +35,15 @@ namespace AutLib
 			const word& theName,
 			const Handle(Geom_Curve)& theCurve,
 			const Standard_Real theFirst,
-			const Standard_Real theLast
+			const Standard_Real theLast,
+			const std::shared_ptr<gp_Pln>& thePlane
 		)
-			: Cad_Curve<Geom_Curve>(theFirst, theLast, theCurve)
+			: Cad_PlaneCurve<Geom_Curve>(theFirst, theLast, theCurve, thePlane)
 			, Marine_TableSection(theIndex, theName)
 		{}
+
+
+
 	};
 }
 
