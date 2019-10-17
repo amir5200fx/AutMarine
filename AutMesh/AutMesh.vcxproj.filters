@@ -1167,9 +1167,6 @@
     <ClInclude Include="AutLib\Mesh\Metrics\Tools\SizeMap\SizeMap_Tool.hxx">
       <Filter>AutLib\Mesh\MetricProcessor\Tools\SizeMap</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Geom\Approximation\Space\Geo_ApprxSpace.hxx">
-      <Filter>AutLib\Geom\Approximation\Space</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Geom\Mesh\BackGround\Info\GeoMesh_BackgroundInfo.hxx">
       <Filter>AutLib\Geom\Mesh\BackGround\Info</Filter>
     </ClInclude>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{5a7fd036-d044-460e-bd1a-dd0f28b8392b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys">
+      <UniqueIdentifier>{688bde15-9a8c-4c7d-ae9d-d9eda7587104}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Approximation">
+      <UniqueIdentifier>{091e4b36-4d8f-42de-add2-ac902f2acdac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Approximation\SurfaceMetric">
+      <UniqueIdentifier>{4e432d15-596e-4388-8f06-dc4439bbba2d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Approximation\SurfaceMetric\Info">
+      <UniqueIdentifier>{37174249-97f9-41d6-8714-34cff0405a19}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\CadAnalys\Approximation\SurfaceMetric\Info\CadAnalys_ApprxSurfMetricInfo.hxx">
+      <Filter>AutLib\CadAnalys\Approximation\SurfaceMetric\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Approximation\SurfaceMetric\CadAnalys_ApprxSurfMetric.hxx">
+      <Filter>AutLib\CadAnalys\Approximation\SurfaceMetric</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\CadAnalys\Approximation\SurfaceMetric\Info\CadAnalys_ApprxSurfMetricInfo.cxx">
+      <Filter>AutLib\CadAnalys\Approximation\SurfaceMetric\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadAnalys\Approximation\SurfaceMetric\CadAnalys_ApprxSurfMetric.cxx">
+      <Filter>AutLib\CadAnalys\Approximation\SurfaceMetric</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

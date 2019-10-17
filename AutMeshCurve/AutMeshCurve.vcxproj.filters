@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{652b34e9-8dbc-4edc-931d-aaeeb9c4802d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve">
+      <UniqueIdentifier>{b1652bd0-26c4-4039-ac3d-a4f9f35ad142}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\Entity">
+      <UniqueIdentifier>{8e518fb8-02a0-407c-8854-87c4b1c6f71d}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.hxx">
+      <Filter>AutLib\MeshCurve\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntityI.hxx">
+      <Filter>AutLib\MeshCurve\Entity</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.cxx">
+      <Filter>AutLib\MeshCurve\Entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

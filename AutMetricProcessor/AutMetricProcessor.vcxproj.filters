@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{42296d67-5226-4cb8-b4d9-733a5538aeb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MetricProcessor">
+      <UniqueIdentifier>{6ab3075e-59e0-41a3-8372-0822cdfb0e87}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MetricProcessor\SizeMap">
+      <UniqueIdentifier>{13fd1340-d94f-4539-afa7-4dd4ec7b001d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MetricProcessor\SizeMap\Base">
+      <UniqueIdentifier>{87185f4d-c6f0-48e8-9a39-f175e68d12ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MetricProcessor\SizeMap\Iso">
+      <UniqueIdentifier>{a52fe660-b7c4-4bad-89a9-79e9e9def6b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MetricProcessor\SizeMap\AnIso">
+      <UniqueIdentifier>{67ad159d-fbd0-41c7-afce-9b3f8323d410}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MetricProcessor\SizeMap\Surface">
+      <UniqueIdentifier>{e345dd2d-7f7a-4bca-8159-544236e20d70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MetricProcessor\SizeMap\Iso\NewFilter1">
+      <UniqueIdentifier>{2d47efc7-27ed-4043-8ce7-75c903330cf4}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MetricProcessor\SizeMap\MetricPrcsr_SizeMap.hxx">
+      <Filter>AutLib\MetricProcessor\SizeMap</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MetricProcessor\SizeMap\Base\MetricPrcsr_SizeMapBase.hxx">
+      <Filter>AutLib\MetricProcessor\SizeMap\Base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MetricProcessor\SizeMap\MetricPrcsr_SizeMap.cxx">
+      <Filter>AutLib\MetricProcessor\SizeMap</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

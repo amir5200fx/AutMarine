@@ -129,7 +129,6 @@
     <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWireI.hxx" />
     <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplate.hxx" />
     <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplateI.hxx" />
-    <ClInclude Include="AutLib\Geom\Approximation\Space\Geo_ApprxSpace.hxx" />
     <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Geo_ApprxSurfMetric.hxx" />
     <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Info\Geo_ApprxSurfMetricInfo.hxx" />
     <ClInclude Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.hxx" />
