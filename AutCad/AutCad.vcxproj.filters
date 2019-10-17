@@ -189,6 +189,7 @@
     </Filter>
     <Filter Include="AutLib\Cad\Entities\Plane">
       <UniqueIdentifier>{2c643276-a783-48f2-bc7c-3120678dd967}</UniqueIdentifier>
+	</Filter>
     <Filter Include="AutLib\Cascade\System">
       <UniqueIdentifier>{a1df681f-96ac-44d1-aac4-01d90b82aa45}</UniqueIdentifier>
     </Filter>

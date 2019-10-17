@@ -204,6 +204,7 @@
     </Filter>
     <Filter Include="AutLib\Geom\Interpolate">
       <UniqueIdentifier>{277d130a-5b8f-4522-b870-6507f568f11d}</UniqueIdentifier>
+	</Filter>
     <Filter Include="AutLib\Geom\Approximation\Space">
       <UniqueIdentifier>{cf06f8d6-ace0-4435-9111-a0122485d393}</UniqueIdentifier>
     </Filter>
@@ -367,6 +368,7 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Interpolate\Geo_Interpolate.cxx">
       <Filter>AutLib\Geom\Interpolate</Filter>
+	</ClCompile>
     <ClCompile Include="AutLib\Geom\Function\Size\Uniform\GeoSizeFun_Uniform.cxx">
       <Filter>AutLib\Geom\Function\Size\Uniform</Filter>
     </ClCompile>
@@ -626,6 +628,7 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Interpolate\Geo_InterpolateI.hxx">
       <Filter>AutLib\Geom\Interpolate</Filter>
+	</ClInclude>
     <ClInclude Include="AutLib\Geom\Approximation\Space\Geo_ApprxSpace.hxx">
       <Filter>AutLib\Geom\Approximation\Space</Filter>
     </ClInclude>
