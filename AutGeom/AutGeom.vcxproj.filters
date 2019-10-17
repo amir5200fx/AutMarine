@@ -265,6 +265,12 @@
     <Filter Include="AutLib\Geom\Integrand\Curve\Function">
       <UniqueIdentifier>{9dcb6aaf-4d9b-4db9-ac0d-ed1e24a6713f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Length">
+      <UniqueIdentifier>{d4796a88-7280-4ef4-9f53-bbe2539f276f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Length\Curve">
+      <UniqueIdentifier>{959de0b0-3576-4718-b959-36b36aaa39c3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -392,6 +398,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Integrand\Curve\Function\Geo_CurveIntegrand_Function.cxx">
       <Filter>AutLib\Geom\Integrand\Curve\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Length\Curve\Geo_CurveLength.cxx">
+      <Filter>AutLib\Geom\Length\Curve</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -700,6 +709,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Integrand\Curve\Function\Geo_CurveIntegrand_FunctionI.hxx">
       <Filter>AutLib\Geom\Integrand\Curve\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Length\Curve\Geo_CurveLength.hxx">
+      <Filter>AutLib\Geom\Length\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Length\Curve\Geo_CurveLengthI.hxx">
+      <Filter>AutLib\Geom\Length\Curve</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

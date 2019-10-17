@@ -15,6 +15,4 @@ AutLib::CadAnalys_ApprxSurfMetricInfo::CadAnalys_ApprxSurfMetricInfo()
 	, theMaxLevel_(MAX_LEVEL)
 	, theTolerance_(DEFAULT_TOLERANCE)
 	, theDegeneracy_(DEFAULT_DEGENERACY)
-	, HasDegeneracy_(Standard_False)
-	, theMaxDet_(0)
 {}

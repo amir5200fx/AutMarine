@@ -14,6 +14,9 @@
 #include <Numeric_GaussQuadrature.hxx>
 #include <Numeric_IntegrationFunction.hxx>
 
+#include <Geom2d_Circle.hxx>
+#include <Geo_CurveLength.hxx>
+
 namespace AutLib
 {
 
@@ -46,6 +49,12 @@ int main()
 	PAUSE;
 	return 0; */
 
+	Numeric_AdaptIntegrationInfo inf;
+
+	Geom2d_Circle circle(gp_Ax2d(gp_Pnt2d(0, 0), gp_Dir2d(1, 0)), 1.0);
+
+	Geo_CurveIntegrand<Geom2d_Circle> integrand(circle);
+	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);
 
 	Leg_Nihad2_HullPatch patch;
 	

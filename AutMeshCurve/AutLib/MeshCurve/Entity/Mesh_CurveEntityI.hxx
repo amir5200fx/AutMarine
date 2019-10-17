@@ -41,7 +41,7 @@ Standard_Real AutLib::Mesh_CurveEntity<gCurveType, SizeMapType>::Integrand
 	auto first = theEntity.FirstParameter();
 	auto last = theEntity.LastParameter();
 
-	auto param = theParam;
+	auto param = x;
 	if (param < first) param = first;
 	if (param > last) param = last;
 

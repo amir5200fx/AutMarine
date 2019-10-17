@@ -3,7 +3,7 @@
 #define _Mesh_CurveEntity_Header
 
 #include <Standard_TypeDef.hxx>
-#include <Cad_CascadeTraits.hxx>
+#include <Geo_CascadeTraits.hxx>
 #include <Global_AccessMethod.hxx>
 
 namespace AutLib
