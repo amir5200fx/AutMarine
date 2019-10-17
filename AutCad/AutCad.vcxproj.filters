@@ -184,6 +184,11 @@
     <Filter Include="AutLib\Cad\GModel\Tools">
       <UniqueIdentifier>{7af23a4b-8bcb-4305-8e8e-ef473f7758d6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Entities\Section">
+      <UniqueIdentifier>{540dc3de-e311-476c-8d71-2e62f786aa74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Entities\Plane">
+      <UniqueIdentifier>{2c643276-a783-48f2-bc7c-3120678dd967}</UniqueIdentifier>
     <Filter Include="AutLib\Cascade\System">
       <UniqueIdentifier>{a1df681f-96ac-44d1-aac4-01d90b82aa45}</UniqueIdentifier>
     </Filter>
@@ -553,6 +558,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\GModel\Tools\GModel_Tools.hxx">
       <Filter>AutLib\Cad\GModel\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Entities\Plane\Cad_PlaneCurve.hxx">
+      <Filter>AutLib\Cad\Entities\Plane</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

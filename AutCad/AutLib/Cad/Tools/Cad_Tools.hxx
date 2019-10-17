@@ -49,6 +49,13 @@ namespace AutLib
 			(
 				const Poly_Triangulation& theTriangulation
 			);
+
+		static void ExportToIGES
+		(
+			const word& unit,
+			const TopoDS_Shape& theShape, 
+			const fileName& name
+		);
 	};
 }
 

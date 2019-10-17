@@ -328,6 +328,9 @@
     <ClCompile Include="AutLib\Base\Global\Global_Message.cxx">
       <Filter>AutLib\Base\Global</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Base\UnitSystem\UnitSystem.cxx">
+      <Filter>AutLib\Base\UnitSystem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Base\Primitives\pTraits\pTraits.hxx">

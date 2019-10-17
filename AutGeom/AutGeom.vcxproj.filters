@@ -202,6 +202,8 @@
     <Filter Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle">
       <UniqueIdentifier>{9280a1a4-5a24-445c-8240-751fca625790}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Interpolate">
+      <UniqueIdentifier>{277d130a-5b8f-4522-b870-6507f568f11d}</UniqueIdentifier>
     <Filter Include="AutLib\Geom\Approximation\Space">
       <UniqueIdentifier>{cf06f8d6-ace0-4435-9111-a0122485d393}</UniqueIdentifier>
     </Filter>
@@ -363,6 +365,8 @@
     <ClCompile Include="AutLib\Geom\PrimitiveShapes\2d\Rectangle\PrimShape2d_Rectangle.cxx">
       <Filter>AutLib\Geom\PrimitiveShapes\2d\Rectangle</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Geom\Interpolate\Geo_Interpolate.cxx">
+      <Filter>AutLib\Geom\Interpolate</Filter>
     <ClCompile Include="AutLib\Geom\Function\Size\Uniform\GeoSizeFun_Uniform.cxx">
       <Filter>AutLib\Geom\Function\Size\Uniform</Filter>
     </ClCompile>
@@ -617,6 +621,11 @@
     <ClInclude Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonFwd.hxx">
       <Filter>AutLib\Geom\Entities\Polygon\3d</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Geom\Interpolate\Geo_Interpolate.hxx">
+      <Filter>AutLib\Geom\Interpolate</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Interpolate\Geo_InterpolateI.hxx">
+      <Filter>AutLib\Geom\Interpolate</Filter>
     <ClInclude Include="AutLib\Geom\Approximation\Space\Geo_ApprxSpace.hxx">
       <Filter>AutLib\Geom\Approximation\Space</Filter>
     </ClInclude>

@@ -36,61 +36,61 @@ AutLib::SizeMap2d_FullIntAnIso::CorrEffRegion
 	return std::move(P);
 }
 
-Standard_Real
-AutLib::SizeMap2d_FullIntAnIso::CalcDistance
-(
-	const Pnt2d & theP0,
-	const Pnt2d & theP1
-) const
-{
-	Mesh_LineIntegrand_FullIntAnIso line(theP0, theP1, *this);
+//Standard_Real
+//AutLib::SizeMap2d_FullIntAnIso::CalcDistance
+//(
+//	const Pnt2d & theP0,
+//	const Pnt2d & theP1
+//) const
+//{
+//	Mesh_LineIntegrand_FullIntAnIso line(theP0, theP1, *this);
+//
+//	Mesh_LineIntegrand_Function_FullIntAnIso func(line);
+//
+//	Debug_Null_Pointer(Info());
+//	auto& info = *Info()->AdaptIntgInfo();
+//
+//	Numeric_AdaptIntegration_FullIntAnIso Integration(func, 0, 1, info);
+//	Integration.Perform();
+//
+//	Debug_If_Condition_Message(NOT info.IsDone(), "Integration has not been performed");
+//
+//	if (NOT info.IsConverged())
+//	{
+//		IterFailedIn(FunctionSIG, info.NbInitIterations())
+//			<< "Algorithm is not converged!" << endl
+//			<< abort(IterFail);
+//	}
+//	return info.Result();
+//}
 
-	Mesh_LineIntegrand_Function_FullIntAnIso func(line);
-
-	Debug_Null_Pointer(Info());
-	auto& info = *Info()->AdaptIntgInfo();
-
-	Numeric_AdaptIntegration_FullIntAnIso Integration(func, 0, 1, info);
-	Integration.Perform();
-
-	Debug_If_Condition_Message(NOT info.IsDone(), "Integration has not been performed");
-
-	if (NOT info.IsConverged())
-	{
-		IterFailedIn(FunctionSIG, info.NbInitIterations())
-			<< "Algorithm is not converged!" << endl
-			<< abort(IterFail);
-	}
-	return info.Result();
-}
-
-Standard_Real
-AutLib::SizeMap2d_FullIntAnIso::CalcUnitDistance
-(
-	const Pnt2d & theP0,
-	const Pnt2d & theP1
-) const
-{
-	Mesh_LineIntegrand_FullIntAnIso line(theP0, theP1, *this);
-
-	Mesh_LineIntegrand_UnitLengthFunction_FullIntAnIso func(line);
-
-	Debug_Null_Pointer(Info());
-	auto& info = *Info()->AdaptIntgInfo();
-
-	Numeric_AdaptIntegration_UnitLengthFullIntAnIso Integration(func, 0, 1, info);
-	Integration.Perform();
-
-	Debug_If_Condition_Message(NOT info.IsDone(), "Integration has not been performed");
-
-	if (NOT info.IsConverged())
-	{
-		IterFailedIn(FunctionSIG, info.NbInitIterations())
-			<< "Algorithm is not converged!" << endl
-			<< abort(IterFail);
-	}
-	return info.Result();
-}
+//Standard_Real
+//AutLib::SizeMap2d_FullIntAnIso::CalcUnitDistance
+//(
+//	const Pnt2d & theP0,
+//	const Pnt2d & theP1
+//) const
+//{
+//	Mesh_LineIntegrand_FullIntAnIso line(theP0, theP1, *this);
+//
+//	Mesh_LineIntegrand_UnitLengthFunction_FullIntAnIso func(line);
+//
+//	Debug_Null_Pointer(Info());
+//	auto& info = *Info()->AdaptIntgInfo();
+//
+//	Numeric_AdaptIntegration_UnitLengthFullIntAnIso Integration(func, 0, 1, info);
+//	Integration.Perform();
+//
+//	Debug_If_Condition_Message(NOT info.IsDone(), "Integration has not been performed");
+//
+//	if (NOT info.IsConverged())
+//	{
+//		IterFailedIn(FunctionSIG, info.NbInitIterations())
+//			<< "Algorithm is not converged!" << endl
+//			<< abort(IterFail);
+//	}
+//	return info.Result();
+//}
 
 #include <SizeMap2d_AnIso_OptmPointStd.hxx>
 #include <SizeMap2d_AnIso_OptmPoint_IterCorrect.hxx>
