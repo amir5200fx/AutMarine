@@ -3,6 +3,17 @@ namespace AutLib
 {
 
 	template<class SizeFun, class MetricFun>
+	Standard_Real Geo_MetricPrcsr<SizeFun, MetricFun>::CalcSquareDistance
+	(
+		const Point& theP0, 
+		const Point& theP1
+	) const
+	{
+		auto dis = CalcDistance(theP0, theP1);
+		return dis * dis;
+	}
+
+	template<class SizeFun, class MetricFun>
 	Standard_Real Geo_MetricPrcsr<SizeFun, MetricFun>::Integrand
 	(
 		const Point & thePoint,

@@ -235,6 +235,27 @@
     <Filter Include="AutLib\Geom\MetricPrcsr\AnIso">
       <UniqueIdentifier>{7510214f-25b0-4873-88cf-c6aa97c322d5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Function\Metric\Uniform">
+      <UniqueIdentifier>{029f63ef-96f1-4a6d-8cfe-629872395d8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function\Metric\nonUniform">
+      <UniqueIdentifier>{12cbf82a-f06b-41ca-8a84-ed88de12805c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function\Size\2d">
+      <UniqueIdentifier>{35cc52c0-a9bb-4c44-b6a4-c5825f85b4cf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function\Size\3d">
+      <UniqueIdentifier>{533445e7-57a6-44bd-a3e0-45e7d4df87f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Integrand">
+      <UniqueIdentifier>{c775bcb0-226d-48bc-96a0-b2eaf54d3547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Integrand\Segment">
+      <UniqueIdentifier>{d6e7bab1-5b7e-475b-8c25-5b9e2f4676be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Integrand\Segment\Function">
+      <UniqueIdentifier>{fc1e449c-9bb8-4ccf-9a65-68a54f1014d2}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -347,6 +368,12 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\MetricPrcsr\Geo_MetricPrcsr.cxx">
       <Filter>AutLib\Geom\MetricPrcsr</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Integrand\Segment\Geo_SegmentIntegrand.cxx">
+      <Filter>AutLib\Geom\Integrand\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Integrand\Segment\Function\Geo_SegmentIntegrand_Function.cxx">
+      <Filter>AutLib\Geom\Integrand\Segment\Function</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -616,6 +643,27 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Geo_MetricPrcsrI.hxx">
       <Filter>AutLib\Geom\MetricPrcsr</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\nonUniform\GeoMetricFun_nonUniform.hxx">
+      <Filter>AutLib\Geom\Function\Metric\nonUniform</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\2d\Geo2d_SizeFunction.hxx">
+      <Filter>AutLib\Geom\Function\Size\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\3d\Geo3d_SizeFunction.hxx">
+      <Filter>AutLib\Geom\Function\Size\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Segment\Geo_SegmentIntegrand.hxx">
+      <Filter>AutLib\Geom\Integrand\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Segment\Geo_SegmentIntegrandI.hxx">
+      <Filter>AutLib\Geom\Integrand\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Segment\Function\Geo_SegmentIntegrand_Function.hxx">
+      <Filter>AutLib\Geom\Integrand\Segment\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Segment\Function\Geo_SegmentIntegrand_FunctionI.hxx">
+      <Filter>AutLib\Geom\Integrand\Segment\Function</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

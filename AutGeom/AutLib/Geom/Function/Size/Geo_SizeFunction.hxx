@@ -37,7 +37,7 @@ namespace AutLib
 
 	public:
 
-		typedef Point PtType;
+		typedef Point ptType;
 		typedef Entity_Box<Point> boxType;
 		
 

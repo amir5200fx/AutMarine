@@ -2,14 +2,14 @@
 #ifndef _Geo_SizeFunction_Header
 #define _Geo_SizeFunction_Header
 
-#include <Standard_TypeDef.hxx>
 #include <Global_Done.hxx>
 #include <Global_Named.hxx>
 #include <Global_Indexed.hxx>
+#include <Entity_Box.hxx>
 
 namespace AutLib
 {
-
+	
 	template<class Point>
 	class Geo_SizeFunction
 		: public Global_Indexed
@@ -18,6 +18,8 @@ namespace AutLib
 	{
 
 		/*Private Data*/
+
+		Entity_Box<Point> theBoundingBox_;
 
 	protected:
 
@@ -35,8 +37,10 @@ namespace AutLib
 
 	public:
 
-		typedef Point PtType;
+		typedef Point ptType;
+		typedef Entity_Box<Point> boxType;
 		
+
 		//- virtual functions and operators
 
 		virtual Standard_Real Value(const Point& theCoord) const = 0;

@@ -115,6 +115,24 @@
     <Filter Include="AutLib\MeshBase\Geom\Mesh\BackGround\AnIso\3d">
       <UniqueIdentifier>{45558c76-5c27-4fef-8a9a-d51052138824}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\MetricFunction">
+      <UniqueIdentifier>{b8afcf95-1826-4d39-94e8-81de1018b78e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\MetricPrcsr">
+      <UniqueIdentifier>{3d29f783-ddd2-482f-bbee-426fbd48912a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\MetricFunction\2d">
+      <UniqueIdentifier>{b2e2e2d4-30b7-48e8-97a6-cebbfad105cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\MetricFunction\3d">
+      <UniqueIdentifier>{5355cf78-af72-41af-be0d-f4480448675c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\MetricPrcsr\2d">
+      <UniqueIdentifier>{d41f5fc6-4c6e-4986-aa3a-ef66ab6be396}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\MetricPrcsr\3d">
+      <UniqueIdentifier>{84cc564f-0648-488a-8803-face2724e150}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshBase\Entities\Entity\Mesh_Entity.cxx">
@@ -161,6 +179,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshBase\Entities\Facet\3d\Mesh3d_Facet.cxx">
       <Filter>AutLib\MeshBase\Entities\Facet\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshBase\Geom\MetricFunction\GeoMetricFun_Background.cxx">
+      <Filter>AutLib\MeshBase\Geom\MetricFunction</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -313,6 +334,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshBase\System\Mesh_TypeTraits.hxx">
       <Filter>AutLib\MeshBase\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\MetricFunction\GeoMetricFun_Background.hxx">
+      <Filter>AutLib\MeshBase\Geom\MetricFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\MetricFunction\GeoMetricFun_BackgroundI.hxx">
+      <Filter>AutLib\MeshBase\Geom\MetricFunction</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\MetricFunction\2d\GeoMetricFun2d_Background.hxx">
+      <Filter>AutLib\MeshBase\Geom\MetricFunction\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\MetricPrcsr\2d\GeoMetricPrcsr2d_Background.hxx">
+      <Filter>AutLib\MeshBase\Geom\MetricPrcsr\2d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
