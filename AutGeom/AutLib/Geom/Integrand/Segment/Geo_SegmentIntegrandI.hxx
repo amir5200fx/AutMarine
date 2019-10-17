@@ -22,7 +22,7 @@ namespace AutLib
 	{
 
 		template<class MetricPrcsrType, bool UnitLength = false>
-		struct Integrand
+		struct SegmentIntegrand
 		{
 			static Standard_Real _
 			(
@@ -35,7 +35,7 @@ namespace AutLib
 		};
 
 		template<class MetricPrcsrType>
-		struct Integrand<MetricPrcsrType, true>
+		struct SegmentIntegrand<MetricPrcsrType, true>
 		{
 			static Standard_Real _
 			(

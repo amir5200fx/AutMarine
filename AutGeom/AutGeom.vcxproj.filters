@@ -204,7 +204,7 @@
     </Filter>
     <Filter Include="AutLib\Geom\Interpolate">
       <UniqueIdentifier>{277d130a-5b8f-4522-b870-6507f568f11d}</UniqueIdentifier>
-	</Filter>
+    </Filter>
     <Filter Include="AutLib\Geom\Approximation\Space">
       <UniqueIdentifier>{cf06f8d6-ace0-4435-9111-a0122485d393}</UniqueIdentifier>
     </Filter>
@@ -258,6 +258,12 @@
     </Filter>
     <Filter Include="AutLib\Geom\Integrand\Segment\Function">
       <UniqueIdentifier>{fc1e449c-9bb8-4ccf-9a65-68a54f1014d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Integrand\Curve">
+      <UniqueIdentifier>{65c16b4c-ffd0-40fa-8367-16cd75a5d509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Integrand\Curve\Function">
+      <UniqueIdentifier>{9dcb6aaf-4d9b-4db9-ac0d-ed1e24a6713f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -368,7 +374,7 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Interpolate\Geo_Interpolate.cxx">
       <Filter>AutLib\Geom\Interpolate</Filter>
-	</ClCompile>
+    </ClCompile>
     <ClCompile Include="AutLib\Geom\Function\Size\Uniform\GeoSizeFun_Uniform.cxx">
       <Filter>AutLib\Geom\Function\Size\Uniform</Filter>
     </ClCompile>
@@ -380,6 +386,12 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Integrand\Segment\Function\Geo_SegmentIntegrand_Function.cxx">
       <Filter>AutLib\Geom\Integrand\Segment\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Integrand\Curve\Geo_CurveIntegrand.cxx">
+      <Filter>AutLib\Geom\Integrand\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Integrand\Curve\Function\Geo_CurveIntegrand_Function.cxx">
+      <Filter>AutLib\Geom\Integrand\Curve\Function</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -628,7 +640,7 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Interpolate\Geo_InterpolateI.hxx">
       <Filter>AutLib\Geom\Interpolate</Filter>
-	</ClInclude>
+    </ClInclude>
     <ClInclude Include="AutLib\Geom\Approximation\Space\Geo_ApprxSpace.hxx">
       <Filter>AutLib\Geom\Approximation\Space</Filter>
     </ClInclude>
@@ -676,6 +688,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Integrand\Segment\Function\Geo_SegmentIntegrand_FunctionI.hxx">
       <Filter>AutLib\Geom\Integrand\Segment\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Curve\Function\Geo_CurveIntegrand_Function.hxx">
+      <Filter>AutLib\Geom\Integrand\Curve\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Curve\Geo_CurveIntegrand.hxx">
+      <Filter>AutLib\Geom\Integrand\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Curve\Geo_CurveIntegrandI.hxx">
+      <Filter>AutLib\Geom\Integrand\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Integrand\Curve\Function\Geo_CurveIntegrand_FunctionI.hxx">
+      <Filter>AutLib\Geom\Integrand\Curve\Function</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
