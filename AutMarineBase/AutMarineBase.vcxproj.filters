@@ -1,0 +1,441 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{4100932f-9488-4aa3-bad0-9101a9f6918b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase">
+      <UniqueIdentifier>{b6ce88bc-93a5-46f0-9846-17fdba13ed6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Dimension">
+      <UniqueIdentifier>{bc4ce2a3-2e2b-4383-87d8-11d5ccf21b62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment">
+      <UniqueIdentifier>{379c370a-59b2-47e6-a70a-255acdc435a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Wave">
+      <UniqueIdentifier>{158c1337-67b0-42df-bbf8-c6b97a572b97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\System">
+      <UniqueIdentifier>{ad4d945c-c3c9-4760-93d4-2ed1f3978047}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment\Density">
+      <UniqueIdentifier>{cd4ad2b8-7652-41e2-9737-82bfc4a89054}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment\Froude">
+      <UniqueIdentifier>{3d5ad2d6-2348-4b51-a4f6-4861df2505ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment\Gravity">
+      <UniqueIdentifier>{1f8bb577-a1b5-402d-8f2d-65c60475409e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment\Velocity">
+      <UniqueIdentifier>{cd476ce0-1965-45a2-975b-d81a45260058}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment\Viscosity">
+      <UniqueIdentifier>{cba2263c-2113-4b84-a9e4-dd90d418039f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment\Viscosity\Water">
+      <UniqueIdentifier>{d6edfffd-ba94-4e53-9400-a2c92ae64001}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Environment\Density\Water">
+      <UniqueIdentifier>{58534872-3d59-4247-a4e6-01a95d1ccfe7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Table">
+      <UniqueIdentifier>{d1719bfb-c63d-4ba1-b581-2136d365b308}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Table\Entity">
+      <UniqueIdentifier>{1b6bfe7c-f4df-45ef-978e-bf74dd13f514}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Table\Section">
+      <UniqueIdentifier>{c98bd087-bce1-4f0f-80ba-ddc55471e3fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Table\Section\Curve">
+      <UniqueIdentifier>{aa004897-172e-4362-8d0e-144fe03a6a37}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Table\Section\OffSet">
+      <UniqueIdentifier>{899c6bef-3c1f-45df-97e3-5b0cd83ac2d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Table\Section\Compound">
+      <UniqueIdentifier>{f0af0794-a10e-479f-a55e-9e0022b196af}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel">
+      <UniqueIdentifier>{6881703b-0c2f-4136-9ddb-6f202499aef4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter">
+      <UniqueIdentifier>{e67b3ba5-347e-4697-84d1-db9729387c79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\APP">
+      <UniqueIdentifier>{4a599aa5-a50f-492c-ba74-c13f60a16ec4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\FPP">
+      <UniqueIdentifier>{be76c05f-1cfa-4d63-90da-d5df0d9190e6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\MPP">
+      <UniqueIdentifier>{cfa1e0df-dd9d-45aa-9d3b-4ca9d5e355d8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\LPP">
+      <UniqueIdentifier>{bb670818-5531-4e55-8e5e-209311e86f8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\FWL">
+      <UniqueIdentifier>{df02d3d5-c296-4676-a248-0e1289a98c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\AWL">
+      <UniqueIdentifier>{04d05091-df20-47e2-9757-07207e3f225b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\FUW">
+      <UniqueIdentifier>{95e5daf9-22cb-4fa5-aeef-d85c88543a29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\AUW">
+      <UniqueIdentifier>{4a9009ab-5a57-4ba0-be02-a03f9c0aa665}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\B">
+      <UniqueIdentifier>{8ca60629-85f0-4119-a401-f5f916c86900}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\BWL">
+      <UniqueIdentifier>{9ce08d2d-05b0-45ab-9951-4b987f553326}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\D">
+      <UniqueIdentifier>{f68c063a-c35c-463b-83ff-78143d0839cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\DWL">
+      <UniqueIdentifier>{6edd93b8-7774-41e6-b7f8-51182a81cf1c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\T">
+      <UniqueIdentifier>{cb8bf6db-602d-45a6-8bed-d004764175b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\TF">
+      <UniqueIdentifier>{895941fb-16a7-4826-8b47-01d176c0f943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\TM">
+      <UniqueIdentifier>{6b491ce4-742a-42ea-acaf-6820192882b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\TA">
+      <UniqueIdentifier>{821769a4-7e2c-4811-951e-e348693e323b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\LWL">
+      <UniqueIdentifier>{cf60e306-b300-4d51-b001-c99138e38f91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\AM">
+      <UniqueIdentifier>{1dc5352c-3bee-4791-84c4-b77694dc82ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\AW">
+      <UniqueIdentifier>{ceb25780-daef-4c7e-921e-82f3ddbbb2aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\Amax">
+      <UniqueIdentifier>{22357219-b731-42bc-9a4d-8127f5d7fa38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\WETA">
+      <UniqueIdentifier>{fa5d7206-00a7-4628-aec7-6066935de6cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\DISPV">
+      <UniqueIdentifier>{7610472d-c80f-4c27-ad3c-ccb6e767ae26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\DISPM">
+      <UniqueIdentifier>{37e0f196-2306-4be2-bd76-e5ce3447bd24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\CB">
+      <UniqueIdentifier>{01f85e9d-bb87-4469-bfa3-f8bcb3ce043e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\CM">
+      <UniqueIdentifier>{57517f8f-038f-4e29-bb56-971cf57c8196}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\CP">
+      <UniqueIdentifier>{c0748acd-9c9a-4698-a0f7-f671094d39ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\CWL">
+      <UniqueIdentifier>{d1592412-8031-4eb2-bad7-f5dab4a72457}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\CVP">
+      <UniqueIdentifier>{8fa4ca03-ffe3-4a7f-aa0b-70e5ef63b575}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\CAM">
+      <UniqueIdentifier>{e7403824-1a8d-4542-ae03-c153ec685898}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\LCB">
+      <UniqueIdentifier>{5962422b-f41a-462f-a438-e8bb2afca32a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\LCF">
+      <UniqueIdentifier>{3aa9be94-aef7-4ec5-9ebe-c82cf86cdba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\VCB">
+      <UniqueIdentifier>{d7122684-f58a-4f11-b7c8-23b9c8d904e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\KB">
+      <UniqueIdentifier>{63a3e0e4-2ab7-413e-8169-2824b7be79ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\HEELANG">
+      <UniqueIdentifier>{b37866ff-4092-42a7-b803-3ceac739c348}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\LOA">
+      <UniqueIdentifier>{73571d51-1f3d-4694-a131-bacadfcc8539}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Parameter\LOS">
+      <UniqueIdentifier>{7cd7808d-0458-4232-85aa-e611841a48a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Wave\StillWater">
+      <UniqueIdentifier>{3e7365a2-d617-406c-ac57-96b309f15c96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station">
+      <UniqueIdentifier>{8584b1c8-0a78-4e32-9732-55a095533c5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Type">
+      <UniqueIdentifier>{c57712a9-c848-46cf-bdea-02490370c1b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Info">
+      <UniqueIdentifier>{9691fb8c-fcb1-4d82-997c-3beeb9c27cfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Deck">
+      <UniqueIdentifier>{564a52ce-aa1d-4502-b9d8-c362688377e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Dry">
+      <UniqueIdentifier>{61c34d45-134c-435a-910b-6f8abd0d17b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Underwater">
+      <UniqueIdentifier>{f621a5e6-edff-443d-9a3a-384b8b4220d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\WaterLine">
+      <UniqueIdentifier>{b3050c93-77b1-49cf-b381-2b4293a548c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Compound">
+      <UniqueIdentifier>{a65b97e1-6b20-4a06-9f86-7e12155a0b6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Station\Single">
+      <UniqueIdentifier>{0b7c5279-a0d0-4ca9-8aca-4acf7fe09553}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MarineBase\Dimension\Marine_DimensionSet.hxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Dimension\Marine_DimensionSets.hxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\System\Marine_UnitsSys.hxx">
+      <Filter>AutLib\MarineBase\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Dimension\Marine_DimensionedParam.hxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Dimension\Marine_DimensionedParamFwd.hxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Environment\Froude\Marine_Froude.hxx">
+      <Filter>AutLib\MarineBase\Environment\Froude</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Environment\Gravity\Marine_Gravity.hxx">
+      <Filter>AutLib\MarineBase\Environment\Gravity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Environment\Velocity\Marine_Velocity.hxx">
+      <Filter>AutLib\MarineBase\Environment\Velocity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Environment\Density\Water\Marine_DensityOfWater.hxx">
+      <Filter>AutLib\MarineBase\Environment\Density\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Environment\Density\Marine_Density.hxx">
+      <Filter>AutLib\MarineBase\Environment\Density</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Environment\Viscosity\Marine_Viscosity.hxx">
+      <Filter>AutLib\MarineBase\Environment\Viscosity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Environment\Viscosity\Water\Marine_ViscosityOfWater.hxx">
+      <Filter>AutLib\MarineBase\Environment\Viscosity\Water</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Table\Entity\Marine_TableEntity.hxx">
+      <Filter>AutLib\MarineBase\Table\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Table\Section\Marine_TableSection.hxx">
+      <Filter>AutLib\MarineBase\Table\Section</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Table\Section\Curve\Marine_TableCurve.hxx">
+      <Filter>AutLib\MarineBase\Table\Section\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Table\Marine_Table.hxx">
+      <Filter>AutLib\MarineBase\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Table\Section\Compound\Marine_CompoundSection.hxx">
+      <Filter>AutLib\MarineBase\Table\Section\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Table\Section\Compound\Marine_CompoundSectionFwd.hxx">
+      <Filter>AutLib\MarineBase\Table\Section\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Marine_VesselParam.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\APP\Marine_VesselParam_APP.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\APP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\FPP\Marine_VesselParam_FPP.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\FPP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Marine_VesselParamM.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\MPP\Marine_VesselParam_MPP.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\MPP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LPP\Marine_VesselParam_LPP.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\LPP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\FWL\Marine_VesselParam_FWL.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\FWL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\AWL\Marine_VesselParam_AWL.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\AWL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\FUW\Marine_VesselParam_FUW.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\FUW</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\AUW\Marine_VesselParam_AUW.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\AUW</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\B\Marine_VesselParam_B.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\B</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\BWL\Marine_VesselParam_BWL.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\BWL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\D\Marine_VesselParam_D.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\D</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\DWL\Marine_VesselParam_DWL.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\DWL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\T\Marine_VesselParam_T.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\T</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\TF\Marine_VesselParam_TF.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\TF</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\TM\Marine_VesselParam_TM.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\TM</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\TA\Marine_VesselParam_TA.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\TA</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LWL\Marine_VesselParam_LWL.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\LWL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\AM\Marine_VesselParam_AM.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\AM</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\AW\Marine_VesselParam_AW.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\AW</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Amax\Marine_VesselParam_Amax.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\Amax</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\WETA\Marine_VesselParam_WETA.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\WETA</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\DISPV\Marine_VesselParam_DISPV.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\DISPV</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\DISPM\Marine_VesselParam_DISPM.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\DISPM</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\CB\Marine_VesselParam_CB.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\CB</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\CM\Marine_VesselParam_CM.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\CM</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\CP\Marine_VesselParam_CP.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\CP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\CWL\Marine_VesselParam_CWL.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\CWL</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\CVP\Marine_VesselParam_CVP.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\CVP</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\CAM\Marine_VesselParam_CAM.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\CAM</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LCB\Marine_VesselParam_LCB.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\LCB</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LCF\Marine_VesselParam_LCF.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\LCF</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\VCB\Marine_VesselParam_VCB.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\VCB</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\KB\Marine_VesselParam_KB.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\KB</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\HEELANG\Marine_VesselParam_HEELANG.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\HEELANG</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LOA\Marine_VesselParam_LOA.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\LOA</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\LOS\Marine_VesselParam_LOS.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter\LOS</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Parameter\Marine_VesselParams.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Wave\Marine_WaveProfile.hxx">
+      <Filter>AutLib\MarineBase\Wave</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Wave\StillWater\Marine_StillWaterProfile.hxx">
+      <Filter>AutLib\MarineBase\Wave\StillWater</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Type\Marine_StationType.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Marine_VesselStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Info\Marine_StationInfo.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Deck\Marine_DeckStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Deck</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Dry\Marine_DryStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Dry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Underwater\Marine_UnderwaterStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Underwater</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\WaterLine\Marine_WaterLineStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\WaterLine</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Single\Marine_SingleStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Station\Compound\Marine_CompoundStation.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Compound</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSet.cxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSets.cxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSetIO.cxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionedParam.cxx">
+      <Filter>AutLib\MarineBase\Dimension</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Wave\Marine_WaveProfile.cxx">
+      <Filter>AutLib\MarineBase\Wave</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Wave\StillWater\Marine_StillWaterProfile.cxx">
+      <Filter>AutLib\MarineBase\Wave\StillWater</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Vessel\Station\Info\Marine_StationInfo.cxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Vessel\Station\Marine_VesselStation.cxx">
+      <Filter>AutLib\MarineBase\Vessel\Station</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Vessel\Station\Single\Marine_SingleStation.cxx">
+      <Filter>AutLib\MarineBase\Vessel\Station\Single</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

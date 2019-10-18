@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{9ed92682-9566-4af4-8643-e79ee55a739b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model">
+      <UniqueIdentifier>{f342af2e-07d2-4122-8c36-97dda1459fc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\System">
+      <UniqueIdentifier>{e8150b05-dae8-4b07-9826-1d298791d553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Entity">
+      <UniqueIdentifier>{fb9f16e1-50aa-4e83-907a-742f0676bcc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel">
+      <UniqueIdentifier>{52831813-6275-40db-999f-9e83bdffab98}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement">
+      <UniqueIdentifier>{88da1ba3-fadb-439e-ade2-90102a05196f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Parameter">
+      <UniqueIdentifier>{d4365fd1-c67f-4e01-8099-e9fb33290fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Parameter\Constant">
+      <UniqueIdentifier>{dffc56eb-6fd0-48a5-8ca0-f955753e9dbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Parameter\Bounded">
+      <UniqueIdentifier>{18f436c5-e436-4e79-ab0e-f8e8b67c919f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\DispNo1">
+      <UniqueIdentifier>{703610fa-9290-49f5-bebd-a6dcf4da99a4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\DispNo1\Parameters">
+      <UniqueIdentifier>{123a0355-36b1-4b56-b1f8-fe193d6c17f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\DispNo1\Profiles">
+      <UniqueIdentifier>{15c28395-38fa-4485-afdc-2d04f5e52e9d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\DispNo1\System">
+      <UniqueIdentifier>{614d9e5b-f7c0-4d78-9d16-95ac6689962b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Section">
+      <UniqueIdentifier>{864e5067-ddc2-4e4d-9109-5afc4273b87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Net">
+      <UniqueIdentifier>{60395fe2-473b-499b-822f-8ff067ddee74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\Nihad2">
+      <UniqueIdentifier>{ddf10077-b216-4d30-b587-711266e738b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters">
+      <UniqueIdentifier>{5e9cc00f-c52d-4d2e-9736-44398c801ab2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles">
+      <UniqueIdentifier>{a1fd46f9-a9a9-4732-a3a3-babed8aaef58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Vessel\Displacement\Nihad2\System">
+      <UniqueIdentifier>{ba48acfb-1787-412c-a8e5-2a75e730192b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Model\Entity\Leg_Model_Entity.hxx">
+      <Filter>AutLib\Model\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\System\Leg_Model_Dim.hxx">
+      <Filter>AutLib\Model\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Leg_Model_Vessel.hxx">
+      <Filter>AutLib\Model\Vessel</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Parameter\Leg_Model_Parameter.hxx">
+      <Filter>AutLib\Model\Parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Parameter\Constant\Leg_Model_ConstParam.hxx">
+      <Filter>AutLib\Model\Parameter\Constant</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Parameter\Bounded\Leg_Model_BndParam.hxx">
+      <Filter>AutLib\Model\Parameter\Bounded</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\System\Leg_Model_ManipParams.hxx">
+      <Filter>AutLib\Model\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Parameters\Leg_DispNo1_Parameters.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Profiles\Leg_DispNo1_Profiles.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1\Profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\System\Leg_ParameterProfile.hxx">
+      <Filter>AutLib\Model\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\System\Leg_DispNo1_Dim.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\System\Leg_Model_PointList.hxx">
+      <Filter>AutLib\Model\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Section\Leg_Model_SectionCtrlPts.hxx">
+      <Filter>AutLib\Model\Section</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Net\Leg_Model_CtrlNet.hxx">
+      <Filter>AutLib\Model\Net</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Leg_Model_Displacement.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\System\Leg_Model_Surface.hxx">
+      <Filter>AutLib\Model\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters\Leg_Nihad2_Parameters.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Dim.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles\Leg_Nihad2_Profiles.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2\Profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Leg_Vessel_Nihad2.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Leg_Vessel_DispNo1.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.hxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Model\Entity\Leg_Model_Entity.cxx">
+      <Filter>AutLib\Model\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\Parameters\Leg_DispNo1_Parameters.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_CalcParameters.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_ApplyParameters.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_Sections.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_SetupHull.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\DispNo1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters\Leg_Nihad2_Parameters.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_CalcParameters.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_ApplyParamaters.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_Sections.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_SetupHull.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Leg_Vessel_Nihad2.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles\Leg_Nihad2_Profiles.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2\Profiles</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.cxx">
+      <Filter>AutLib\Model\Vessel\Displacement\Nihad2\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Vessel\Leg_Model_Vessel.cxx">
+      <Filter>AutLib\Model\Vessel</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

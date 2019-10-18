@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{7FC6BC16-DDE4-491A-BED3-2F4121766223}</ProjectGuid>
+    <RootNamespace>AutModelLegacy</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel;$(SolutionDir)AutModelLegacy\AutLib\Model\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Bounded;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Constant;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter;$(SolutionDir)AutModelLegacy\AutLib\Model\Section;$(SolutionDir)AutModelLegacy\AutLib\Model\Net;$(SolutionDir)AutModelLegacy\AutLib\Model\Entity;$(SolutionDir)AutIO\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Model\Entity\Leg_Model_Entity.hxx" />
+    <ClInclude Include="AutLib\Model\Net\Leg_Model_CtrlNet.hxx" />
+    <ClInclude Include="AutLib\Model\Parameter\Bounded\Leg_Model_BndParam.hxx" />
+    <ClInclude Include="AutLib\Model\Parameter\Constant\Leg_Model_ConstParam.hxx" />
+    <ClInclude Include="AutLib\Model\Parameter\Leg_Model_Parameter.hxx" />
+    <ClInclude Include="AutLib\Model\Section\Leg_Model_SectionCtrlPts.hxx" />
+    <ClInclude Include="AutLib\Model\System\Leg_Model_Dim.hxx" />
+    <ClInclude Include="AutLib\Model\System\Leg_Model_ManipParams.hxx" />
+    <ClInclude Include="AutLib\Model\System\Leg_Model_PointList.hxx" />
+    <ClInclude Include="AutLib\Model\System\Leg_Model_Surface.hxx" />
+    <ClInclude Include="AutLib\Model\System\Leg_ParameterProfile.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Leg_Vessel_DispNo1.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Parameters\Leg_DispNo1_Parameters.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\Profiles\Leg_DispNo1_Profiles.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\DispNo1\System\Leg_DispNo1_Dim.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Leg_Model_Displacement.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Leg_Vessel_Nihad2.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters\Leg_Nihad2_Parameters.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles\Leg_Nihad2_Profiles.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Dim.hxx" />
+    <ClInclude Include="AutLib\Model\Vessel\Leg_Model_Vessel.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Model\Entity\Leg_Model_Entity.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_ApplyParameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_CalcParameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_Sections.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_SetupHull.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\Parameters\Leg_DispNo1_Parameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Leg_Vessel_Nihad2.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_ApplyParamaters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_CalcParameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_Sections.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Nihad2_SetupHull.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Parameters\Leg_Nihad2_Parameters.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\Profiles\Leg_Nihad2_Profiles.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.cxx" />
+    <ClCompile Include="AutLib\Model\Vessel\Leg_Model_Vessel.cxx" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
