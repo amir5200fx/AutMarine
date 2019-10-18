@@ -1,17 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{4d98d73e-8aab-4617-b689-954bbb971ff6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="AutLib\Sketch">
+      <UniqueIdentifier>{88b4e3d5-8066-4b8b-83f4-516f30ec7b66}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="AutLib\Sketch\2d">
+      <UniqueIdentifier>{040b47c6-af48-4d9b-b87a-5f8f1878744c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Sketch\3d">
+      <UniqueIdentifier>{4e02c549-f1d8-409b-b7ef-0a0413b08dd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Sketch\2d\Info">
+      <UniqueIdentifier>{270cb13f-b916-4457-9c21-411d2fffd8e3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Sketch\2d\System">
+      <UniqueIdentifier>{aa84966b-01f1-438e-b1ce-72144f2e28c1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Sketch\2d\Engine">
+      <UniqueIdentifier>{ab9fb29f-09bd-4de8-8339-0baa376ad78a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom">
+      <UniqueIdentifier>{8c610095-8f03-4f3b-a83c-d57530e12a9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\2d">
+      <UniqueIdentifier>{b259733f-b2cb-4780-a082-591a490c8a3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\2d\Approximation">
+      <UniqueIdentifier>{dbad3629-353b-4619-8204-982fd41ceb9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\2d\Circle">
+      <UniqueIdentifier>{12fb8ff9-3e49-4c79-b4b2-16b58485f5da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\2d\Ellipse">
+      <UniqueIdentifier>{0cb433a1-9589-4271-9896-a4a75eae5659}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\2d\Interpolation">
+      <UniqueIdentifier>{b006f28e-9cfe-445a-b6dc-908fc652ba4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\2d\LineSegment">
+      <UniqueIdentifier>{1d28bfa1-fb07-4cb4-9ee0-c6125326aa7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\2d\Interpolation\Info">
+      <UniqueIdentifier>{6cf9e2b3-64ec-4bba-966f-ba108a3a58ba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Sketch\2d\Info\Cad2d_SketchInfo.hxx">
+      <Filter>AutLib\Sketch\2d\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Sketch\2d\System\Cad2d_SketchCache.hxx">
+      <Filter>AutLib\Sketch\2d\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Sketch\Cad_Sketch.hxx">
+      <Filter>AutLib\Sketch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Sketch\2d\Cad2d_Sketch.hxx">
+      <Filter>AutLib\Sketch\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Sketch\2d\Engine\Cad2d_SketchEngine.hxx">
+      <Filter>AutLib\Sketch\2d\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Geo_Sketch.hxx">
+      <Filter>AutLib\Geom</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\2d\Geo2d_Sketch.hxx">
+      <Filter>AutLib\Geom\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\2d\LineSegment\Geo2d_LineSegment.hxx">
+      <Filter>AutLib\Geom\2d\LineSegment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\2d\Circle\Geo2d_Circle.hxx">
+      <Filter>AutLib\Geom\2d\Circle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\2d\Ellipse\Geo2d_Ellipse.hxx">
+      <Filter>AutLib\Geom\2d\Ellipse</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\2d\Interpolation\Geo2d_Interpolation.hxx">
+      <Filter>AutLib\Geom\2d\Interpolation</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\2d\Interpolation\Info\Geo2d_InterpolationInfo.hxx">
+      <Filter>AutLib\Geom\2d\Interpolation\Info</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Sketch\2d\Info\Cad2d_SketchInfo.cxx">
+      <Filter>AutLib\Sketch\2d\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\2d\LineSegment\Geo2d_LineSegment.cxx">
+      <Filter>AutLib\Geom\2d\LineSegment</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\2d\Circle\Geo2d_Circle.cxx">
+      <Filter>AutLib\Geom\2d\Circle</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\2d\Ellipse\Geo2d_Ellipse.cxx">
+      <Filter>AutLib\Geom\2d\Ellipse</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\2d\Interpolation\Geo2d_Interpolation.cxx">
+      <Filter>AutLib\Geom\2d\Interpolation</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\2d\Geo2d_Sketch.cxx">
+      <Filter>AutLib\Geom\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\2d\Interpolation\Info\Geo2d_InterpolationInfo.cxx">
+      <Filter>AutLib\Geom\2d\Interpolation\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Sketch\2d\Cad2d_Sketch.cxx">
+      <Filter>AutLib\Sketch\2d</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

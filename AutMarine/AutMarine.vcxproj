@@ -85,6 +85,9 @@
     <ProjectReference Include="..\AutBase\AutBase.vcxproj">
       <Project>{39dadf5f-59e0-4267-b03b-0513a69610d2}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\AutCadSketch\AutCadSketch.vcxproj">
+      <Project>{f0c83bac-20d0-4ce4-8b10-ed4d9cf9f132}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\AutCad\AutCad.vcxproj">
       <Project>{cd9fb958-fb78-41a4-bee6-f06e02da75a7}</Project>
     </ProjectReference>

@@ -32,6 +32,8 @@ namespace AutLib
 	};
 }
 
+#include <Geo2d_Circle.hxx>
+
 using namespace boost::archive;
 using namespace AutLib;
 

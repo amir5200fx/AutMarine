@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F0C83BAC-20D0-4CE4-8B10-ED4D9CF9F132}</ProjectGuid>
-    <RootNamespace>AutCadSketch</RootNamespace>
+    <ProjectGuid>{FDC97543-761E-47F1-AF40-BD58310A14D4}</ProjectGuid>
+    <RootNamespace>AutMeshAdapt</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -39,13 +39,13 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -69,19 +69,13 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
-  </PropertyGroup>
+  <PropertyGroup />
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Polygon;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Info;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\System;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Engine;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d;$(SolutionDir)AutCadSketch\AutLib\Sketch;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Quadrilateral;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\LineSegment;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Approximation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation\Info;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Ellipse;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Circle;$(SolutionDir)AutCadSketch\AutLib\Geom\2d;$(SolutionDir)AutCadSketch\AutLib\Geom;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -114,7 +108,6 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Polygon;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Info;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\System;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Engine;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d;$(SolutionDir)AutCadSketch\AutLib\Sketch;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Quadrilateral;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\LineSegment;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Approximation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation\Info;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Ellipse;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Circle;$(SolutionDir)AutCadSketch\AutLib\Geom\2d;$(SolutionDir)AutCadSketch\AutLib\Geom;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -122,28 +115,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\Geom\2d\Circle\Geo2d_Circle.hxx" />
-    <ClInclude Include="AutLib\Geom\2d\Ellipse\Geo2d_Ellipse.hxx" />
-    <ClInclude Include="AutLib\Geom\2d\Geo2d_Sketch.hxx" />
-    <ClInclude Include="AutLib\Geom\2d\Interpolation\Geo2d_Interpolation.hxx" />
-    <ClInclude Include="AutLib\Geom\2d\Interpolation\Info\Geo2d_InterpolationInfo.hxx" />
-    <ClInclude Include="AutLib\Geom\2d\LineSegment\Geo2d_LineSegment.hxx" />
-    <ClInclude Include="AutLib\Geom\Geo_Sketch.hxx" />
-    <ClInclude Include="AutLib\Sketch\2d\Cad2d_Sketch.hxx" />
-    <ClInclude Include="AutLib\Sketch\2d\Engine\Cad2d_SketchEngine.hxx" />
-    <ClInclude Include="AutLib\Sketch\2d\Info\Cad2d_SketchInfo.hxx" />
-    <ClInclude Include="AutLib\Sketch\2d\System\Cad2d_SketchCache.hxx" />
-    <ClInclude Include="AutLib\Sketch\Cad_Sketch.hxx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AutLib\Geom\2d\Circle\Geo2d_Circle.cxx" />
-    <ClCompile Include="AutLib\Geom\2d\Ellipse\Geo2d_Ellipse.cxx" />
-    <ClCompile Include="AutLib\Geom\2d\Geo2d_Sketch.cxx" />
-    <ClCompile Include="AutLib\Geom\2d\Interpolation\Geo2d_Interpolation.cxx" />
-    <ClCompile Include="AutLib\Geom\2d\Interpolation\Info\Geo2d_InterpolationInfo.cxx" />
-    <ClCompile Include="AutLib\Geom\2d\LineSegment\Geo2d_LineSegment.cxx" />
-    <ClCompile Include="AutLib\Sketch\2d\Cad2d_Sketch.cxx" />
-    <ClCompile Include="AutLib\Sketch\2d\Info\Cad2d_SketchInfo.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
