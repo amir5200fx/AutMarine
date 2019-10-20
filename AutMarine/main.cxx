@@ -50,12 +50,12 @@ int main()
 	PAUSE;
 	return 0; */
 
-	Numeric_AdaptIntegrationInfo inf;
+	/*Numeric_AdaptIntegrationInfo inf;
 
 	Geom2d_Circle circle(gp_Ax2d(gp_Pnt2d(0, 0), gp_Dir2d(1, 0)), 1.0);
 
 	Geo_CurveIntegrand<Geom2d_Circle> integrand(circle);
-	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);
+	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);*/
 
 	Leg_Nihad2_HullPatch patch;
 	
@@ -76,12 +76,21 @@ int main()
 	patch.Perform();
 	//patch.Discrete();
 
-	patch.FileFormat() = Leg_EntityIO_Format::IGES;
+	fileName name("preview.plt");
+	OFstream myFile(name);
+
+	auto gsurface = patch.Patch();
+
+	auto preview = Cad_Tools::PreviewPatchCurves(gsurface, 15, 15);
+
+	preview->ExportToPlt(myFile);
+
+	/*patch.FileFormat() = Leg_EntityIO_Format::IGES;
 	patch.ExportToFile();
 
 	auto section = patch.GetStation(5);
 
-	Cad_Tools::ExportToIGES("MM", section, "section.iges");
+	Cad_Tools::ExportToIGES("MM", section, "section.iges");*/
 
 	PAUSE;
 	return 0;

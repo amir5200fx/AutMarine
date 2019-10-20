@@ -86,6 +86,7 @@ AutLib::Cad_Tools::PreviewPatchCurves
 	for (const auto x : uknots)
 	{
 		auto tr = PreviewCurveOnSurface_U(theSurface, x, theNbSegments_U);
+		cout << "ind = " << tr->NbConnectivity() << std::endl;
 		trinagulations.push_back(std::move(tr));
 	}
 
@@ -107,6 +108,7 @@ AutLib::Cad_Tools::PreviewPatchCurves
 	}
 
 	auto merged = merge.Merged();
+
 	return std::move(merged);
 }
 
@@ -145,14 +147,14 @@ AutLib::Cad_Tools::PreviewCurveOnSurface_U
 		pts.push_back(std::move(pt));
 	}
 
-	auto indices = triangulation->Connectivity();
+	auto& indices = triangulation->Connectivity();
 	indices.reserve(nbsegts);
 	forThose(Index, 0, nbsegts - 1)
 	{
 		connectivity::triple t;
 		t.Value(0) = Index + 1;
 		t.Value(1) = Index + 2;
-		t.Value(3) = Index + 1;
+		t.Value(2) = Index + 1;
 
 		indices.push_back(std::move(t));
 	}
@@ -195,14 +197,14 @@ AutLib::Cad_Tools::PreviewCurveOnSurface_V
 		pts.push_back(std::move(pt));
 	}
 
-	auto indices = triangulation->Connectivity();
+	auto& indices = triangulation->Connectivity();
 	indices.reserve(nbsegts);
 	forThose(Index, 0, nbsegts - 1)
 	{
 		connectivity::triple t;
 		t.Value(0) = Index + 1;
 		t.Value(1) = Index + 2;
-		t.Value(3) = Index + 1;
+		t.Value(2) = Index + 1;
 
 		indices.push_back(std::move(t));
 	}
@@ -243,14 +245,14 @@ AutLib::Cad_Tools::PreviewCurve
 		pts.push_back(std::move(pt));
 	}
 
-	auto indices = triangulation->Connectivity();
+	auto& indices = triangulation->Connectivity();
 	indices.reserve(nbsegts);
 	forThose(Index, 0, nbsegts - 1)
 	{
 		connectivity::triple t;
 		t.Value(0) = Index + 1;
 		t.Value(1) = Index + 2;
-		t.Value(3) = Index + 1;
+		t.Value(2) = Index + 1;
 
 		indices.push_back(std::move(t));
 	}
