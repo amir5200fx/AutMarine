@@ -166,7 +166,6 @@ void AutLib::Cad_EntityManager<EntityType>::Split
 	const word & BlockName
 )
 {
-	cout << " split size = " << theSelected_.size() << std::endl;
 	if (theSelected_.size() NOT_EQUAL 1)
 	{
 		UnSelectAll();
