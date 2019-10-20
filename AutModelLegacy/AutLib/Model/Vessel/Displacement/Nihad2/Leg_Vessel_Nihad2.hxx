@@ -217,6 +217,23 @@ namespace AutLib
 			return *this;
 		}
 	};
+
+
+	class Leg_Nihad2_BareHull
+		: public Leg_Nihad2_HullPatch
+	{
+
+		/*Private Data*/
+
+	protected:
+
+		void MakeFace() override;
+
+	public:
+
+		Leg_Nihad2_BareHull()
+		{}
+	};
 }
 
 #endif // !_Leg_Vessel_Nihad2_Header

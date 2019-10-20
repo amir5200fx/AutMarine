@@ -3,6 +3,7 @@
 #include <TModel_parCurve.hxx>
 #include <TModel_Curve.hxx>
 #include <TModel_Edge.hxx>
+#include <TModel_SingularEdge.hxx>
 #include <TModel_Wire.hxx>
 #include <TModel_Surface.hxx>
 #include <TModel_System.hxx>
@@ -78,7 +79,7 @@ namespace AutLib
 			}
 			else
 			{
-				newEdge = std::make_shared<TModel_Edge>(K, nullptr, curveOnPlane);
+				newEdge = std::make_shared<TModel_SingularEdge>(K, curveOnPlane);
 			}
 			return std::move(newEdge);
 		}
