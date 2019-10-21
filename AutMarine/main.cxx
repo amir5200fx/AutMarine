@@ -10,6 +10,9 @@
 #include <FastDiscrete_Params.hxx>
 #include <Leg_Vessel_Nihad2.hxx>
 #include <Cad_Tools.hxx>
+#include <Cad3d_TModel.hxx>
+#include <TModel_Surface.hxx>
+#include <TModel_Tools.hxx>
 
 #include <Numeric_GaussQuadrature.hxx>
 #include <Numeric_IntegrationFunction.hxx>
@@ -50,14 +53,14 @@ int main()
 	PAUSE;
 	return 0; */
 
-	Numeric_AdaptIntegrationInfo inf;
+	/*Numeric_AdaptIntegrationInfo inf;
 
 	Geom2d_Circle circle(gp_Ax2d(gp_Pnt2d(0, 0), gp_Dir2d(1, 0)), 1.0);
 
 	Geo_CurveIntegrand<Geom2d_Circle> integrand(circle);
-	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);
+	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);*/
 
-	Leg_Nihad2_HullPatch patch;
+	Leg_Nihad2_BareHull patch;
 	
 	/*patch.AftSection().Tightness0()->SetValue(0.1);
 	patch.AftSection().Tightness1()->SetValue(0.1);
@@ -76,12 +79,40 @@ int main()
 	patch.Perform();
 	//patch.Discrete();
 
-	patch.FileFormat() = Leg_EntityIO_Format::IGES;
+	fileName name("preview.plt");
+	OFstream myFile(name);
+
+	auto gsurface = patch.Patch();
+
+	//auto preview = Cad_Tools::PreviewPatchCurves(gsurface, 15, 15);
+
+	//preview->ExportToPlt(myFile);
+
+	auto surfaces = TModel_Tools::GetSurfaces(patch.Entity());
+
+	auto solid = Cad3d_TModel::MakeSolid(surfaces, 1.0e-6);
+
+	const auto& faces = solid->Faces();
+	faces->Print(Standard_True);
+
+	auto block = faces->SelectBlockEntity("Default Block Surface");
+	Debug_Null_Pointer(block);
+
+	cout << block->Name() << std::endl;
+
+	block->SelectEntity(1);
+	block->SelectEntity(3);
+
+	faces->Split("Block 1");
+
+	faces->Print(Standard_True);
+
+	/*patch.FileFormat() = Leg_EntityIO_Format::IGES;
 	patch.ExportToFile();
 
 	auto section = patch.GetStation(5);
 
-	Cad_Tools::ExportToIGES("MM", section, "section.iges");
+	Cad_Tools::ExportToIGES("MM", section, "section.iges");*/
 
 	PAUSE;
 	return 0;

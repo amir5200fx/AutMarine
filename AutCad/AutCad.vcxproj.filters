@@ -542,9 +542,6 @@
     <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Ring\TModel_Ring.hxx">
       <Filter>AutLib\Cad\TModel\Entities\Edge\Ring</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Singular\TModel_Singular.hxx">
-      <Filter>AutLib\Cad\TModel\Entities\Edge\Singular</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Cad\TModel\Entities\Plane\TModel_Plane.hxx">
       <Filter>AutLib\Cad\TModel\Entities\Plane</Filter>
     </ClInclude>
@@ -577,6 +574,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\Plane\Entities\CmpEdge\Pln_CmpEdge.hxx">
       <Filter>AutLib\Cad\Plane\Entities\CmpEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Singular\TModel_SingularEdge.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Edge\Singular</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

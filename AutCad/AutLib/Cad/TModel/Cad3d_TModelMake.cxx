@@ -275,6 +275,7 @@ namespace AutLib
 			for (const auto& x : Points)
 			{
 				auto vertex = std::make_shared<TModel_Vertex>(++K, x);
+				thePts.push_back(vertex);
 			}
 
 			auto block = std::make_shared<TModel_EntityBlock>("Default Block Point", thePts);
@@ -422,7 +423,7 @@ AutLib::Cad3d_TModel::MakeSolid
 	const Standard_Real theTolerance
 )
 {
-	std::shared_ptr<Cad3d_TModel> solid;
+	auto solid = std::make_shared<Cad3d_TModel>();
 
 	solid->theBoundingBox_ = CalcBoundingBox(theSurfaces);
 
@@ -451,12 +452,13 @@ AutLib::Cad3d_TModel::MakeSolid
 	tModel::MakePointsOnSolid(merged, solid->theVertices_, vertices);
 
 	Debug_Null_Pointer(solid->theVertices_);
-
+	
 	K = 0;
 	for (auto& x : vertices)
 	{
 		++K;
 
+		Debug_Null_Pointer(x);
 		x->SetIndex(K);
 		x->SetName("Vertex " + std::to_string(K));
 	}

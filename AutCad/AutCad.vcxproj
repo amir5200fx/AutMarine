@@ -122,7 +122,7 @@
     <ClInclude Include="AutLib\Cad\TModel\Entities\Curve\par\TModel_parCurve.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Curve\TModel_Curve.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Ring\TModel_Ring.hxx" />
-    <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Singular\TModel_Singular.hxx" />
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Singular\TModel_SingularEdge.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\TModel_Edge.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Entity\TModel_EntityBlock.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Entity\TModel_Entity.hxx" />

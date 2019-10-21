@@ -10,6 +10,36 @@
     <Filter Include="AutLib\MeshCurve\Entity">
       <UniqueIdentifier>{8e518fb8-02a0-407c-8854-87c4b1c6f71d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshCurve\Entity\2d">
+      <UniqueIdentifier>{8bd842b1-59f2-4804-9b1d-231a786de199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\Entity\3d">
+      <UniqueIdentifier>{84c9ef43-47b4-48fc-b82c-285cd09ac6ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\OptmPoint">
+      <UniqueIdentifier>{3f64ed8e-5acb-4b23-a161-55f8e22df289}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\OptmPoint\Newton">
+      <UniqueIdentifier>{ed5d8320-7f5f-4c63-9803-e147273a0f04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\OptmPoint\Correction">
+      <UniqueIdentifier>{5e6ac934-b0d3-4afc-b65f-a722aebec683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\OptmPoint\Correction\Info">
+      <UniqueIdentifier>{0f450885-3691-469d-9139-e663c1c60e59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\OptmPoint\Newton\Derivation">
+      <UniqueIdentifier>{9e812ab4-84ed-4f31-8328-5dac89d6279c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\OptmPoint\Newton\Function">
+      <UniqueIdentifier>{13f65094-2ca5-46a8-bb70-b088217bc483}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\Curve">
+      <UniqueIdentifier>{ab2d6d66-3789-4b82-8a0c-ef782d2128b2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\Curve\Info">
+      <UniqueIdentifier>{4d754a20-b00e-49a1-8562-d605629bed34}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.hxx">
@@ -18,10 +48,61 @@
     <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntityI.hxx">
       <Filter>AutLib\MeshCurve\Entity</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Correction\Info\Mesh_CurveOptmPoint_CorrectionInfo.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Correction\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Correction\Mesh_CurveOptmPoint_Correction.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Correction</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Correction\Mesh_CurveOptmPoint_CorrectionI.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Correction</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Function\Mesh_CurveOptmPoint_Newton_Function.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Function\Mesh_CurveOptmPoint_Newton_FunctionI.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Derivation\Mesh_CurveOptmPoint_Newton_Derivation.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton\Derivation</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Derivation\Mesh_CurveOptmPoint_Newton_DerivationI.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton\Derivation</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_Newton.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_NewtonI.hxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.hxx">
+      <Filter>AutLib\MeshCurve\Curve\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Curve\Mesh_Curve.hxx">
+      <Filter>AutLib\MeshCurve\Curve</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.cxx">
       <Filter>AutLib\MeshCurve\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Correction\Info\Mesh_CurveOptmPoint_CorrectionInfo.cxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Correction\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Correction\Mesh_CurveOptmPoint_Correction.cxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Correction</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Newton\Function\Mesh_CurveOptmPoint_Newton_Function.cxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Newton\Derivation\Mesh_CurveOptmPoint_Newton_Derivation.cxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton\Derivation</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_Newton.cxx">
+      <Filter>AutLib\MeshCurve\OptmPoint\Newton</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.cxx">
+      <Filter>AutLib\MeshCurve\Curve\Info</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

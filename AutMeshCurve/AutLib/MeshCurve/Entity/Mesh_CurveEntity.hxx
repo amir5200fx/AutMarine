@@ -9,7 +9,7 @@
 namespace AutLib
 {
 
-	template<class gCurveType, class SizeMapType>
+	template<class gCurveType, class MetricPrcsrType>
 	class Mesh_CurveEntity
 	{
 
@@ -19,7 +19,7 @@ namespace AutLib
 
 		const gCurveType& theCurve_;
 
-		const SizeMapType& theSizeMap_;
+		const MetricPrcsrType& theSizeMap_;
 
 		Standard_Real theFirstParameter_;
 		Standard_Real theLastParameter_;
@@ -29,7 +29,7 @@ namespace AutLib
 		Mesh_CurveEntity
 		(
 			const gCurveType& theCurve, 
-			const SizeMapType& theSizeMap,
+			const MetricPrcsrType& theSizeMap,
 			const Standard_Real theFirst,
 			const Standard_Real theLast
 		);
@@ -48,7 +48,7 @@ namespace AutLib
 		//- Macros
 
 		GLOBAL_ACCESS_ONLY_SINGLE(gCurveType, Curve)
-			GLOBAL_ACCESS_ONLY_SINGLE(SizeMapType, SizeMap)
+			GLOBAL_ACCESS_ONLY_SINGLE(MetricPrcsrType, SizeMap)
 			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, FirstParameter)
 			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, LastParameter)
 	};
