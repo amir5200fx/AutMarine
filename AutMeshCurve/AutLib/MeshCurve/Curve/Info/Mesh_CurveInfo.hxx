@@ -43,6 +43,10 @@ namespace AutLib
 
 		Mesh_CurveInfo();
 
+		Standard_Boolean IgnoreNonConvergency() const
+		{
+			return IgnoreNonConvergency_;
+		}
 
 		const std::shared_ptr<intgInfo>& OverallLengthIntgInfo() const
 		{

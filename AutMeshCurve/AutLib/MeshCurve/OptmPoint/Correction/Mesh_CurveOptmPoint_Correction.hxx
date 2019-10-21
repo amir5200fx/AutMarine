@@ -85,6 +85,11 @@ namespace AutLib
 			, theInfo_(theInfo)
 		{}
 
+		const entity& Entity() const
+		{
+			return theCurve_;
+		}
+
 		void Perform();
 	};
 }

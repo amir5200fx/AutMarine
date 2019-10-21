@@ -30,7 +30,7 @@ namespace AutLib
 
 		Standard_Real Value(const Standard_Real x) const override
 		{
-			return entity::Integrand(x, Curve());
+			return entity::Integrand(x, Entity());
 		}
 	};
 }

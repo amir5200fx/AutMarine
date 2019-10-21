@@ -40,6 +40,12 @@
     <Filter Include="AutLib\MeshCurve\Curve\Info">
       <UniqueIdentifier>{4d754a20-b00e-49a1-8562-d605629bed34}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshCurve\Length">
+      <UniqueIdentifier>{fa715ca7-b953-49c4-ae1b-cd96d345f319}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\Length\Function">
+      <UniqueIdentifier>{2b82567a-ff95-4484-9b83-e5b435f8ddb4}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.hxx">
@@ -81,6 +87,21 @@
     <ClInclude Include="AutLib\MeshCurve\Curve\Mesh_Curve.hxx">
       <Filter>AutLib\MeshCurve\Curve</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Curve\Mesh_CurveI.hxx">
+      <Filter>AutLib\MeshCurve\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Length\Mesh_CurveLength.hxx">
+      <Filter>AutLib\MeshCurve\Length</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Length\Mesh_CurveLengthI.hxx">
+      <Filter>AutLib\MeshCurve\Length</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_Function.hxx">
+      <Filter>AutLib\MeshCurve\Length\Function</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_FunctionI.hxx">
+      <Filter>AutLib\MeshCurve\Length\Function</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.cxx">
@@ -103,6 +124,15 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.cxx">
       <Filter>AutLib\MeshCurve\Curve\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\Curve\Mesh_Curve.cxx">
+      <Filter>AutLib\MeshCurve\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\Length\Mesh_CurveLength.cxx">
+      <Filter>AutLib\MeshCurve\Length</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_Function.cxx">
+      <Filter>AutLib\MeshCurve\Length\Function</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

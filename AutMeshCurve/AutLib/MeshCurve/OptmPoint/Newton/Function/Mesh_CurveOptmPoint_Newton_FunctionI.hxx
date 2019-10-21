@@ -13,8 +13,8 @@ namespace AutLib
 		: Mesh_CurveOptmPoint_Newton_Function_Base(theX0, theStep, theInfo)
 		, theCurve_(theCurve)
 	{
-		Lower() = Curve().FirstParameter();
-		Upper() = Curve().LastParameter();
+		Lower() = Entity().FirstParameter();
+		Upper() = Entity().LastParameter();
 	}
 
 	template<class gCurveType, class MetricPrcsrType>
