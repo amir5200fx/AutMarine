@@ -15,7 +15,9 @@ namespace AutLib
 
 	// Forward Declarations
 	class Pln_Edge;
+	class Pln_Curve;
 	class Pln_Vertex;
+	class Pln_CmpEdge;
 
 	class Pln_Wire
 		: public Pln_Entity
@@ -28,7 +30,7 @@ namespace AutLib
 
 		Pln_Orientation theOrientation_;
 
-		std::shared_ptr<edgeList> theEdges_;
+		std::shared_ptr<Pln_CmpEdge> theEdges_;
 
 		std::shared_ptr<Entity2d_Box> theBoundingBox_;
 
@@ -37,11 +39,11 @@ namespace AutLib
 
 		void CheckWire(const edgeList& theEdges) const;
 
-		void CreateWire(const std::shared_ptr<edgeList>& theEdges);
+		void CreateWire(const std::shared_ptr<Pln_CmpEdge>& theEdges);
 
 	public:
 
-		Pln_Wire(const std::shared_ptr<edgeList>& theEdges)
+		Pln_Wire(const std::shared_ptr<Pln_CmpEdge>& theEdges)
 			: theEdges_(theEdges)
 		{
 			CreateWire(theEdges);
@@ -52,7 +54,7 @@ namespace AutLib
 		Pln_Wire
 		(
 			const Standard_Integer theIndex,
-			const std::shared_ptr<edgeList>& theEdges
+			const std::shared_ptr<Pln_CmpEdge>& theEdges
 		)
 			: theEdges_(theEdges)
 			, Pln_Entity(theIndex)
@@ -66,7 +68,7 @@ namespace AutLib
 		(
 			const Standard_Integer theIndex,
 			const word& theName,
-			const std::shared_ptr<edgeList>& theEdges
+			const std::shared_ptr<Pln_CmpEdge>& theEdges
 		)
 			: theEdges_(theEdges)
 			, Pln_Entity(theIndex, theName)
@@ -79,12 +81,12 @@ namespace AutLib
 		Standard_Integer NbEdges() const
 		{
 			Debug_Null_Pointer(theEdges_);
-			return (Standard_Integer)theEdges_->size();
+			return theEdges_->NbEdges();
 		}
 
-		const std::shared_ptr<edgeList>& Edges() const
+		const edgeList& Edges() const
 		{
-			return theEdges_;
+			return theEdges_->Edges();
 		}
 
 		const std::shared_ptr<Entity2d_Box>& BoundingBox() const
@@ -110,6 +112,20 @@ namespace AutLib
 		) const;
 
 		//- Static functions and operators
+
+		static std::shared_ptr<Pln_CmpEdge> 
+			Cut
+			(
+				const std::shared_ptr<Pln_Wire>& theTarget, 
+				const std::shared_ptr<Pln_Edge>& theCutter
+			);
+
+		static std::shared_ptr<Pln_CmpEdge> 
+			Cut
+			(
+				const std::shared_ptr<Pln_Wire>& theTarget, 
+				const std::shared_ptr<Pln_Curve>& theCutter
+			);
 
 		static std::vector<std::shared_ptr<Pln_Wire>>
 			RetrieveWires

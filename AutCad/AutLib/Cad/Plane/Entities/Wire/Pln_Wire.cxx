@@ -3,14 +3,14 @@
 #include <Pln_Vertex.hxx>
 #include <Pln_Edge.hxx>
 #include <Pln_Curve.hxx>
+#include <Pln_CmpEdge.hxx>
 #include <Entity2d_Chain.hxx>
 #include <GeoProcessor.hxx>
 #include <Adt_AvlTree.hxx>
 
 void AutLib::Pln_Wire::CalcBoundingBox()
 {
-	Debug_Null_Pointer(Edges());
-	const auto& edges = *Edges();
+	const auto& edges = Edges();
 
 	if (edges.empty())
 	{
@@ -36,8 +36,7 @@ void AutLib::Pln_Wire::CalcBoundingBox()
 
 void AutLib::Pln_Wire::CheckWire(const edgeList & theEdges) const
 {
-	Debug_Null_Pointer(Edges());
-	const auto& edges = *Edges();
+	const auto& edges = Edges();
 
 	if (edges.size() IS_EQUAL 1)
 	{
@@ -76,7 +75,7 @@ void AutLib::Pln_Wire::CheckWire(const edgeList & theEdges) const
 
 void AutLib::Pln_Wire::CreateWire
 (
-	const std::shared_ptr<edgeList>& theEdges
+	const std::shared_ptr<Pln_CmpEdge>& theEdges
 )
 {
 	if (NOT theEdges)
@@ -86,7 +85,7 @@ void AutLib::Pln_Wire::CreateWire
 			<< abort(FatalError);
 	}
 
-	CheckWire(*theEdges);
+	CheckWire(theEdges->Edges());
 
 	theEdges_ = theEdges;
 
@@ -102,13 +101,15 @@ void AutLib::Pln_Wire::Reverse()
 			<< abort(FatalError);
 	}
 
-	for (auto& x : *theEdges_)
+	const auto& edges = theEdges_->Edges();
+
+	for (auto& x : edges)
 	{
 		Debug_Null_Pointer(x);
 		x->Reverse();
 	}
 
-	std::reverse(theEdges_->begin(), theEdges_->end());
+	std::reverse(edges.begin(), edges.end());
 	theOrientation_ = AutLib::Reverse(Orientation());
 }
 
@@ -118,7 +119,7 @@ void AutLib::Pln_Wire::RetrieveVerticesTo
 ) const
 {
 	theVertices.reserve(NbEdges());
-	for (const auto& x : *Edges())
+	for (const auto& x : Edges())
 	{
 		theVertices.push_back(x->Vtx0());
 	}
@@ -225,6 +226,78 @@ namespace AutLib
 	}
 }
 
+//- Static functions 
+
+#include <Geom2dAPI_InterCurveCurve.hxx>
+
+namespace AutLib
+{
+
+	namespace plnLib
+	{
+		typedef std::shared_ptr<std::vector<Standard_Real>> paramsList;
+		typedef std::shared_ptr<Pln_Edge> edgePtr;
+		typedef std::pair<edgePtr, paramsList> paramsPair;
+
+		typedef std::map<edgePtr, paramsList> paramsMap;
+
+		void CalcIntersections
+		(
+			const std::shared_ptr<Pln_Wire>& theTarget,
+			const std::shared_ptr<Pln_Edge>& theCutter, 
+			paramsMap& theTargetParams,
+			paramsPair& theCutterParams
+		)
+		{
+			Geom2dAPI_InterCurveCurve Intersection;
+
+			Debug_Null_Pointer(theCutter->Curve());
+			const auto& g_cutter = theCutter->Curve()->Curve();
+
+			auto cutterParams = std::make_shared<std::vector<Standard_Real>>();
+
+			const auto& edges = theTarget->Edges();
+			for (const auto& x : edges)
+			{
+				Debug_Null_Pointer(x);
+				Debug_Null_Pointer(x->Curve());
+				const auto& g_edge = x->Curve()->Curve();
+
+				Intersection.Init(g_cutter, g_edge);
+
+				auto params = std::make_shared<std::vector<Standard_Real>>();
+
+				if (Intersection.NbPoints())
+				{
+					forThose(Index, 1, Intersection.NbPoints())
+					{
+						const auto& alg = Intersection.Intersector();
+						const auto& Pt = alg.Point(Index);
+
+						auto p1 = Pt.ParamOnFirst();
+						auto p2 = Pt.ParamOnSecond();
+
+						cutterParams->push_back(p1);
+						params->push_back(p2);
+					}
+
+
+				}
+			}
+		}
+	}
+}
+
+std::shared_ptr<AutLib::Pln_CmpEdge> 
+AutLib::Pln_Wire::Cut
+(
+	const std::shared_ptr<Pln_Wire>& theTarget, 
+	const std::shared_ptr<Pln_Edge>& theCutter
+)
+{
+	
+}
+
 std::vector<std::shared_ptr<AutLib::Pln_Wire>>
 AutLib::Pln_Wire::RetrieveWires
 (
@@ -274,7 +347,7 @@ AutLib::Pln_Wire::RetrieveOrientation
 {
 	std::vector<Pnt2d> Pts;
 
-	const auto& edges = *theWire.Edges();
+	const auto& edges = theWire.Edges();
 	for (const auto& x : edges)
 	{
 		Debug_Null_Pointer(x);

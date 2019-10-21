@@ -202,6 +202,30 @@
     <Filter Include="AutLib\MarineBase\Vessel\Station\Single">
       <UniqueIdentifier>{0b7c5279-a0d0-4ca9-8aca-4acf7fe09553}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Table">
+      <UniqueIdentifier>{6eb26889-4826-4372-a2ea-dffb050c25d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Table\Single">
+      <UniqueIdentifier>{f4c2b2ec-30c3-4df8-97ad-85b695cf463a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Table\Compound">
+      <UniqueIdentifier>{735c1754-7053-41e6-975d-51db0a73481f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Entities">
+      <UniqueIdentifier>{02e1a591-a76d-4f84-a2a1-0336e5ce13db}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Entities\Entity">
+      <UniqueIdentifier>{26639ce3-349c-43c3-bcc9-444f7083abfc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Entities\Displacer">
+      <UniqueIdentifier>{3c686899-8476-4f2c-b0b5-c31083566d70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Entities\Sail">
+      <UniqueIdentifier>{3015f681-574e-4de6-b6ca-998fa0e016dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MarineBase\Vessel\Entities\Container">
+      <UniqueIdentifier>{941c6020-c71c-4449-b2ad-25affa46b057}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MarineBase\Dimension\Marine_DimensionSet.hxx">
@@ -408,6 +432,30 @@
     <ClInclude Include="AutLib\MarineBase\Vessel\Station\Compound\Marine_CompoundStation.hxx">
       <Filter>AutLib\MarineBase\Vessel\Station\Compound</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Table\Marine_VesselTable.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Table</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Table\Single\Marine_SingleTable.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Table\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Table\Compound\Marine_CompoundTable.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Table\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Table\Single\Marine_SingleTableI.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Table\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Table\Compound\Marine_CompoundTableI.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Table\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Marine_Vessel.hxx">
+      <Filter>AutLib\MarineBase\Vessel</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Entities\Entity\Marine_VesselEntity.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MarineBase\Vessel\Entities\Displacer\Marine_VesselDisplacer.hxx">
+      <Filter>AutLib\MarineBase\Vessel\Entities\Displacer</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MarineBase\Dimension\Marine_DimensionSet.cxx">
@@ -436,6 +484,12 @@
     </ClCompile>
     <ClCompile Include="AutLib\MarineBase\Vessel\Station\Single\Marine_SingleStation.cxx">
       <Filter>AutLib\MarineBase\Vessel\Station\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Vessel\Table\Single\Marine_SingleTable.cxx">
+      <Filter>AutLib\MarineBase\Vessel\Table\Single</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MarineBase\Vessel\Table\Compound\Marine_CompoundTable.cxx">
+      <Filter>AutLib\MarineBase\Vessel\Table\Compound</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

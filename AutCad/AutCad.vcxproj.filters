@@ -189,9 +189,15 @@
     </Filter>
     <Filter Include="AutLib\Cad\Entities\Plane">
       <UniqueIdentifier>{2c643276-a783-48f2-bc7c-3120678dd967}</UniqueIdentifier>
-	</Filter>
+    </Filter>
     <Filter Include="AutLib\Cascade\System">
       <UniqueIdentifier>{a1df681f-96ac-44d1-aac4-01d90b82aa45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\Cutter">
+      <UniqueIdentifier>{0c08c035-ce41-4fa4-bc77-e1e7c9f64895}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Plane\Entities\CmpEdge">
+      <UniqueIdentifier>{a2700d5b-0b42-4e30-9aac-63f03544d666}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -378,6 +384,9 @@
     <ClCompile Include="AutLib\Cad\GModel\Cad3d_GModelIO.cxx">
       <Filter>AutLib\Cad\GModel</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Entities\Cutter\Pln_Cutter.cxx">
+      <Filter>AutLib\Cad\Plane\Entities\Cutter</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Serialization\Cad_Serialization.hxx">
@@ -562,6 +571,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\Entities\Plane\Cad_PlaneCurve.hxx">
       <Filter>AutLib\Cad\Entities\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\Cutter\Pln_Cutter.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\Cutter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Entities\CmpEdge\Pln_CmpEdge.hxx">
+      <Filter>AutLib\Cad\Plane\Entities\CmpEdge</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

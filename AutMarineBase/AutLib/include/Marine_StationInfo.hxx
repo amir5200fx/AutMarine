@@ -1,19 +1,19 @@
 #pragma once
-#ifndef _Vessel_StationInfo_Header
-#define _Vessel_StationInfo_Header
+#ifndef _Marine_StationInfo_Header
+#define _Marine_StationInfo_Header
 
-#include <Vessel_StationType.hxx>
 #include <Standard_TypeDef.hxx>
+#include <Marine_StationType.hxx>
 
 namespace AutLib
 {
 
-	class Vessel_StationInfo
+	class Marine_StationInfo
 	{
 
 		/*Private Data*/
 
-		Vessel_StationType theType_;
+		Marine_StationType theType_;
 
 		Standard_Real theX_;
 		Standard_Real theZbar_;
@@ -24,10 +24,10 @@ namespace AutLib
 
 	protected:
 
-		Vessel_StationInfo();
+		Marine_StationInfo();
 
 
-		Vessel_StationType& ChangeType()
+		Marine_StationType& ChangeType()
 		{
 			return theType_;
 		}
@@ -55,7 +55,7 @@ namespace AutLib
 
 	public:
 
-		Vessel_StationType Type() const
+		Marine_StationType Type() const
 		{
 			return theType_;
 		}
@@ -82,4 +82,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_Vessel_StationInfo_Header
+#endif // !_Marine_StationInfo_Header

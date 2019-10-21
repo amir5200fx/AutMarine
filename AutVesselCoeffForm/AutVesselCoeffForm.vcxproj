@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Station\Info;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Station\Type;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Station;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Dimensions;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Parameters;$(SolutionDir)AutMarineBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Coeff\Info;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Coeff;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Dimensions;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Parameters;$(SolutionDir)AutMarineBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -68,7 +68,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Station\Info;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Station\Type;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Station;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Dimensions;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Parameters;$(SolutionDir)AutMarineBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Coeff\Info;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Coeff;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Dimensions;$(SolutionDir)AutVesselCoeffForm\AutLib\VesselCoeffForm\Parameters;$(SolutionDir)AutMarineBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -77,15 +77,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\VesselCoeffForm\Coeff\Info\Vessel_FormCoeff_Info.hxx" />
+    <ClInclude Include="AutLib\VesselCoeffForm\Coeff\Vessel_FormCoeff.hxx" />
     <ClInclude Include="AutLib\VesselCoeffForm\Dimensions\Vessel_DimOfForm.hxx" />
+    <ClInclude Include="AutLib\VesselCoeffForm\Dimensions\Vessel_FormDim.hxx" />
     <ClInclude Include="AutLib\VesselCoeffForm\Parameters\Vessel_FormParams.hxx" />
-    <ClInclude Include="AutLib\VesselCoeffForm\Station\Info\Vessel_StationInfo.hxx" />
-    <ClInclude Include="AutLib\VesselCoeffForm\Station\Type\Vessel_StationType.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\VesselCoeffForm\Dimensions\Vessel_DimOfForm.cxx" />
     <ClCompile Include="AutLib\VesselCoeffForm\Parameters\Vessel_FormParams.cxx" />
-    <ClCompile Include="AutLib\VesselCoeffForm\Station\Info\Vessel_StationInfo.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

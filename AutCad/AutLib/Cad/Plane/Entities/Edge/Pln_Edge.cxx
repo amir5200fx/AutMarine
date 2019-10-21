@@ -23,7 +23,7 @@ void AutLib::Pln_Edge::Reverse
 		thePoly_->Reverse();
 	}
 
-	SameSense_ = NOT SameSense_;
+	Sense_ = NOT Sense_;
 }
 
 void AutLib::Pln_Edge::Approx(const info & theInfo) const

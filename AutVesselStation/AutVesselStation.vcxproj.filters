@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{23e9f05b-eee7-4592-965a-7ac78f8de0b5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation">
+      <UniqueIdentifier>{1548056a-748d-48ae-aae0-229196dacc72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station">
+      <UniqueIdentifier>{30d4f1bc-d179-4f6d-b90e-9625682c234d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Compound">
+      <UniqueIdentifier>{01d5dc4f-ed32-4a2d-adc2-976e34871ba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Deck">
+      <UniqueIdentifier>{5ca1d29b-4fc2-4d50-b31e-22d2970c20ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Dry">
+      <UniqueIdentifier>{2c858cb9-9411-4d0f-b619-59865b89fad7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Info">
+      <UniqueIdentifier>{307c6d6e-0ce7-4e8d-a0e4-54cbaf8aa3a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Single">
+      <UniqueIdentifier>{45517187-2f81-476a-9d6d-44c11a182f74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Type">
+      <UniqueIdentifier>{c2c22b00-00a0-4adf-bec1-1d807e4da98d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Underwater">
+      <UniqueIdentifier>{0ce961bb-e658-4d32-ac35-854321d3f52a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Station\Waterline">
+      <UniqueIdentifier>{a39f22a6-0979-43ee-ae52-bfe6fdf0781a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\VesselStation\Stations">
+      <UniqueIdentifier>{58933ebc-382c-4bb0-813c-911a2bc7e5be}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\VesselStation\Station\Vessel_Station.hxx">
+      <Filter>AutLib\VesselStation\Station</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Station\Type\Vessel_StationType.hxx">
+      <Filter>AutLib\VesselStation\Station\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Station\Single\Vessel_SingleStation.hxx">
+      <Filter>AutLib\VesselStation\Station\Single</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Station\Dry\Vessel_DryStation.hxx">
+      <Filter>AutLib\VesselStation\Station\Dry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Station\Underwater\Vessel_UnderwaterStation.hxx">
+      <Filter>AutLib\VesselStation\Station\Underwater</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Station\Waterline\Vessel_WaterlineStation.hxx">
+      <Filter>AutLib\VesselStation\Station\Waterline</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Station\Compound\Vessel_CompoundStation.hxx">
+      <Filter>AutLib\VesselStation\Station\Compound</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Stations\Vessel_Stations.hxx">
+      <Filter>AutLib\VesselStation\Stations</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselStation\Station\Deck\Vessel_DeckStation.hxx">
+      <Filter>AutLib\VesselStation\Station\Deck</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\VesselStation\Station\Vessel_Station.cxx">
+      <Filter>AutLib\VesselStation\Station</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

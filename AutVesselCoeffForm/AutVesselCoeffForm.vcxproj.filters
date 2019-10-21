@@ -13,17 +13,11 @@
     <Filter Include="AutLib\VesselCoeffForm\Dimensions">
       <UniqueIdentifier>{e8cdaa86-7217-4527-879d-1a71b18a257a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\VesselCoeffForm\Station">
-      <UniqueIdentifier>{46388d1e-b070-4acc-a1b9-60de96cc7162}</UniqueIdentifier>
+    <Filter Include="AutLib\VesselCoeffForm\Coeff">
+      <UniqueIdentifier>{b8585d6b-f1db-446a-bf67-04a5b9e8e610}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\VesselCoeffForm\StationType">
-      <UniqueIdentifier>{a2b6e391-ef3d-478b-95ab-243aae106b71}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\VesselCoeffForm\Station\Type">
-      <UniqueIdentifier>{6e1fe97b-aea0-46e8-9c70-f2e5ea38f47d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\VesselCoeffForm\Station\Info">
-      <UniqueIdentifier>{f99cdb4d-d598-4b81-a19e-b49aba3c3627}</UniqueIdentifier>
+    <Filter Include="AutLib\VesselCoeffForm\Coeff\Info">
+      <UniqueIdentifier>{a72051b2-677f-428d-b739-f210c23b403a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -33,19 +27,19 @@
     <ClInclude Include="AutLib\VesselCoeffForm\Parameters\Vessel_FormParams.hxx">
       <Filter>AutLib\VesselCoeffForm\Parameters</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\VesselCoeffForm\Station\Type\Vessel_StationType.hxx">
-      <Filter>AutLib\VesselCoeffForm\Station\Type</Filter>
+    <ClInclude Include="AutLib\VesselCoeffForm\Coeff\Vessel_FormCoeff.hxx">
+      <Filter>AutLib\VesselCoeffForm\Coeff</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\VesselCoeffForm\Station\Info\Vessel_StationInfo.hxx">
-      <Filter>AutLib\VesselCoeffForm\Station\Info</Filter>
+    <ClInclude Include="AutLib\VesselCoeffForm\Coeff\Info\Vessel_FormCoeff_Info.hxx">
+      <Filter>AutLib\VesselCoeffForm\Coeff\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\VesselCoeffForm\Dimensions\Vessel_FormDim.hxx">
+      <Filter>AutLib\VesselCoeffForm\Dimensions</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\VesselCoeffForm\Parameters\Vessel_FormParams.cxx">
       <Filter>AutLib\VesselCoeffForm\Parameters</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\VesselCoeffForm\Station\Info\Vessel_StationInfo.cxx">
-      <Filter>AutLib\VesselCoeffForm\Station\Info</Filter>
     </ClCompile>
     <ClCompile Include="AutLib\VesselCoeffForm\Dimensions\Vessel_DimOfForm.cxx">
       <Filter>AutLib\VesselCoeffForm\Dimensions</Filter>
