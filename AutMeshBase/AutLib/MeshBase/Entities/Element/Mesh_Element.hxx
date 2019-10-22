@@ -305,6 +305,12 @@ namespace AutLib
 			return std::move(pt);
 		}
 
+		Standard_Real Oriented(const Point& theCoord) const;
+
+		Standard_Real CalcDistance(const Point& theCoord) const;
+
+		Standard_Real CalcSquareDistance(const Point& theCoord) const;
+
 		template<int Sub>
 		const std::shared_ptr<typename sub_type<Mesh_Element, Sub>::type>&
 			SubEntity
@@ -568,5 +574,7 @@ namespace AutLib
 
 
 }
+
+#include <Mesh_ElementI.hxx>
 
 #endif // !_Mesh_Element_Header

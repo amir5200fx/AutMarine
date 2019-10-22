@@ -347,5 +347,20 @@
     <ClInclude Include="AutLib\MeshBase\Geom\MetricPrcsr\2d\GeoMetricPrcsr2d_Background.hxx">
       <Filter>AutLib\MeshBase\Geom\MetricPrcsr\2d</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\System\Mesh_RegisterEntityM.hxx">
+      <Filter>AutLib\MeshBase\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\System\Mesh_EntityCounterM.hxx">
+      <Filter>AutLib\MeshBase\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\System\Mesh_Counters.hxx">
+      <Filter>AutLib\MeshBase\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Element\Mesh_ElementI.hxx">
+      <Filter>AutLib\MeshBase\Entities\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Edge\Mesh_EdgeI.hxx">
+      <Filter>AutLib\MeshBase\Entities\Edge</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

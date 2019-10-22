@@ -43,6 +43,7 @@
     <ClInclude Include="AutLib\MeshBase\Entities\Edge\3d\Mesh3d_EdgeFwd.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Edge\Adaptor\Mesh_EdgeAdaptor.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Edge\Mesh_Edge.hxx" />
+    <ClInclude Include="AutLib\MeshBase\Entities\Edge\Mesh_EdgeI.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Edge\Traits\Mesh2d_EdgeTraits.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Edge\Traits\Mesh3d_EdgeTraits.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Element\2d\Mesh2d_Element.hxx" />
@@ -51,6 +52,7 @@
     <ClInclude Include="AutLib\MeshBase\Entities\Element\3d\Mesh3d_ElementFwd.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Element\Adaptor\Mesh_ElementAdaptor.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Element\Mesh_Element.hxx" />
+    <ClInclude Include="AutLib\MeshBase\Entities\Element\Mesh_ElementI.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Element\Mesh_ElementType.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Element\Traits\Mesh2d_ElementTraits.hxx" />
     <ClInclude Include="AutLib\MeshBase\Entities\Element\Traits\Mesh3d_ElementTraits.hxx" />
@@ -90,6 +92,9 @@
     <ClInclude Include="AutLib\MeshBase\Geom\MetricFunction\GeoMetricFun_BackgroundI.hxx" />
     <ClInclude Include="AutLib\MeshBase\Geom\MetricPrcsr\2d\GeoMetricPrcsr2d_Background.hxx" />
     <ClInclude Include="AutLib\MeshBase\Geom\SizeFunction\GeoSizeFun_BackGround.hxx" />
+    <ClInclude Include="AutLib\MeshBase\System\Mesh_Counters.hxx" />
+    <ClInclude Include="AutLib\MeshBase\System\Mesh_EntityCounterM.hxx" />
+    <ClInclude Include="AutLib\MeshBase\System\Mesh_RegisterEntityM.hxx" />
     <ClInclude Include="AutLib\MeshBase\System\Mesh_TypeTraits.hxx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">

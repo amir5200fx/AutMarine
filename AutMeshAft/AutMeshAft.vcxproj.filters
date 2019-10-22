@@ -88,6 +88,99 @@
     <Filter Include="AutLib\MeshAft\Entities\Element\Surface">
       <UniqueIdentifier>{0d9c049f-ba17-4b59-9266-c49336c49c9a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Data">
+      <UniqueIdentifier>{fd23ac2b-846e-4fa4-93bb-574a6e658eb3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core">
+      <UniqueIdentifier>{eed65d8c-90dc-4861-aa64-381987724a1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Cavity">
+      <UniqueIdentifier>{4cd0e362-fd16-4fcd-975a-a824274e7b14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front">
+      <UniqueIdentifier>{f4566118-de05-4a79-9c7e-121667c96f92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\Surface">
+      <UniqueIdentifier>{36ec015b-1048-4818-8a7f-c84bf90de831}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d">
+      <UniqueIdentifier>{787dd561-6652-4211-95b4-d30f4a7b2028}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\3d">
+      <UniqueIdentifier>{e1ccbf54-c054-4823-a630-82a061f7e393}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\Iso">
+      <UniqueIdentifier>{cda79e5c-73b0-4f73-8750-fb9f2be69ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\AnIso">
+      <UniqueIdentifier>{e946524a-fbc8-429a-991c-4303d5f6c375}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\3d\Iso">
+      <UniqueIdentifier>{e3a59b75-5ff7-44e0-901a-8680cde9c0f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\3d\AnIso">
+      <UniqueIdentifier>{58b31f32-9649-4517-ae34-be919957c273}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\Info">
+      <UniqueIdentifier>{91a1e39c-f6b8-4302-b11d-e1a7a084322a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\3d\Info">
+      <UniqueIdentifier>{9fe998ff-09ae-48e5-834a-bfb8c4ffbd8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\Info\Adaptor">
+      <UniqueIdentifier>{0fe28070-0c1f-4195-a789-fd51c045069f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\Iso\Info">
+      <UniqueIdentifier>{5992b000-43f1-4360-8f68-7b49d94863d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\Iso\Info\Adaptor">
+      <UniqueIdentifier>{101878a4-2c24-40b2-9aa8-1b0b0f8d7af4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\Traits">
+      <UniqueIdentifier>{33909f15-7f26-43b0-8d12-4d24fdbc7e2c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\Info">
+      <UniqueIdentifier>{536f89d1-49cc-4990-9bf1-21075a152b66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\Data">
+      <UniqueIdentifier>{f14de8ba-d38d-462f-b5d4-147a03653cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\AnIso\Info">
+      <UniqueIdentifier>{d1933514-7508-4f9e-9e8e-62f98f4505b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\2d\AnIso\Info\Adaptor">
+      <UniqueIdentifier>{afdc6301-8408-4377-8e6c-d84b4522fce5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\System">
+      <UniqueIdentifier>{d192e0c2-015c-4afb-8492-00c108428ca0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\Surface\Info">
+      <UniqueIdentifier>{48e08a9b-204d-43c1-8ca0-09296e94e270}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Data\Front\Surface\Info\Adaptor">
+      <UniqueIdentifier>{1c78e4f6-69d8-4236-a9a8-b7f74dd05f72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor">
+      <UniqueIdentifier>{2bdeca06-e55f-44d3-b648-904e0f894201}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\Traits">
+      <UniqueIdentifier>{3eafb979-223d-4207-afdb-81ddccdfc9ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\Iso">
+      <UniqueIdentifier>{b5c92b63-e979-4d30-bfcd-9186db1a2dd9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\AnIso">
+      <UniqueIdentifier>{99a39053-d932-45a9-b423-6f1d9902d64e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\Surface">
+      <UniqueIdentifier>{8a5d8a60-f260-460d-a664-3202b05aadc9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\Iso\2d">
+      <UniqueIdentifier>{8ec0dfa9-ffa1-43db-92ff-769707dc0c8c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\Iso\3d">
+      <UniqueIdentifier>{6ed8a032-ab30-4d23-b1f7-71ae70d22482}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Entities\Node\Aft_Node.hxx">
@@ -279,6 +372,90 @@
     <ClInclude Include="AutLib\MeshAft\Entities\Element\AnIso\Aft3d_ElementAnIso.hxx">
       <Filter>AutLib\MeshAft\Entities\Element\AnIso</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Cavity\Aft_CavityData.hxx">
+      <Filter>AutLib\MeshAft\Data\Cavity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Iso\Aft2d_FrontGlobalData.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Iso\Aft2d_FrontGlobalDataFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Info\Adaptor\Aft2d_FrontInfoAdaptorTemplate.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Info\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Info\Aft2d_FrontInfoTemplate.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Info\Aft2d_FrontInfoTemplateI.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Info\Aft_FrontInfo.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Data\Aft_FrontGlobalData.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Traits\Aft_FrontTraits.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Iso\Info\Adaptor\Aft2d_FrontInfoAdaptor.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Iso\Info\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Iso\Info\Adaptor\Aft2d_FrontInfoAdaptorFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Iso\Info\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Iso\Info\Aft2d_FrontInfo.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Iso\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\Iso\Info\Aft2d_FrontInfoFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Iso\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\AnIso\Info\Adaptor\Aft2d_FrontAnIsoInfoAdaptor.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\AnIso\Info\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\AnIso\Info\Adaptor\Aft2d_FrontAnIsoInfoAdaptorFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\AnIso\Info\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\AnIso\Info\Aft2d_FrontAnIsoInfo.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\AnIso\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\AnIso\Info\Aft2d_FrontAnIsoInfoFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\AnIso\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\System\Mesh_AftTypeTraits.hxx">
+      <Filter>AutLib\MeshAft\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\AnIso\Aft2d_FrontAnIsoGlobalData.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\2d\AnIso\Aft2d_FrontAnIsoGlobalDataFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Surface\Info\Adaptor\Aft2d_FrontSurfaceInfoAdaptor.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Surface\Info\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Surface\Info\Adaptor\Aft2d_FrontSurfaceInfoAdaptorFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Surface\Info\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Surface\Info\Aft2d_FrontSurfaceInfo.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Surface\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\2d\Mesh2d_AftMetricPrcsr.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\Mesh_AftMetricPrcsrIso.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Mesh_AftMetricPrcsr.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Mesh_AftMetricPrcsrI.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\Mesh_AftMetricPrcsrIsoI.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\Iso</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Entities\Node\Aft_Node.cxx">
@@ -286,6 +463,15 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshAft\Entities\Edge\Aft_Edge.cxx">
       <Filter>AutLib\MeshAft\Entities\Edge</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Data\Front\2d\Info\Aft2d_FrontInfoTemplate.cxx">
+      <Filter>AutLib\MeshAft\Data\Front\2d\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\MetricProcessor\Mesh_AftMetricPrcsr.cxx">
+      <Filter>AutLib\MeshAft\MetricProcessor</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\MetricProcessor\Iso\Mesh_AftMetricPrcsrIso.cxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\Iso</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
