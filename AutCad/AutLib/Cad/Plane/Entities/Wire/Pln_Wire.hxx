@@ -3,6 +3,7 @@
 #define _Pln_Wire_Header
 
 #include <Pln_Entity.hxx>
+#include <Pln_CmpEdge.hxx>
 #include <Pln_Orientation.hxx>
 #include <Entity2d_BoxFwd.hxx>
 #include <error.hxx>

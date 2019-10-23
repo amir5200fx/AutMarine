@@ -3,6 +3,7 @@
 #define _Mesh_AftMetricPrcsr_Header
 
 #include <Geo_MetricPrcsr.hxx>
+#include <Entity_Box.hxx>
 #include <Aft2d_EdgeFwd.hxx>
 #include <Aft2d_EdgeAnIsoFwd.hxx>
 #include <Aft2d_EdgeSurfaceFwd.hxx>

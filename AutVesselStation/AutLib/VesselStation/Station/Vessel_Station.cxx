@@ -59,14 +59,14 @@ namespace AutLib
 	}
 }
 
-AutLib::Vessel_Station::bounds 
-AutLib::Vessel_Station::CalcBreadth
-(
-	const Standard_Real draft
-) const
-{
-	Handle(Geom2d_Line) Line =
-		new Geom2d_Line(gp_Pnt2d(0, draft), gp_Vec2d(1, 0));
-
-
-}
+//AutLib::Vessel_Station::bounds 
+//AutLib::Vessel_Station::CalcBreadth
+//(
+//	const Standard_Real draft
+//) const
+//{
+//	Handle(Geom2d_Line) Line =
+//		new Geom2d_Line(gp_Pnt2d(0, draft), gp_Vec2d(1, 0));
+//
+//
+//}
