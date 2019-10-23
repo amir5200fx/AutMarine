@@ -86,7 +86,6 @@ AutLib::Cad_Tools::PreviewPatchCurves
 	for (const auto x : uknots)
 	{
 		auto tr = PreviewCurveOnSurface_U(theSurface, x, theNbSegments_U);
-		cout << "ind = " << tr->NbConnectivity() << std::endl;
 		trinagulations.push_back(std::move(tr));
 	}
 

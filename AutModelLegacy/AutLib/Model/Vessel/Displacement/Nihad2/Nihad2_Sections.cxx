@@ -91,7 +91,7 @@ AutLib::Leg_Nihad2_HullPatch::CreateRawSection
 
 	auto P1 = P2 + it1 * (Pm1 - P2);
 	auto P3 = P2 + it1 * (P4 - P2);
-	cout << it1 << std::endl;
+
 	auto P7 = P6 + it2 * (Pm2 - P6);
 	auto P5 = P6 + it2 * (P4 - P6);
 

@@ -117,7 +117,7 @@ void AutLib::Leg_Model_Entity::ExportToFile() const
 {
 	fileName name_of_file(FileName());
 
-	switch (IO().FileFormat())
+	/*switch (IO().FileFormat())
 	{
 	case Leg_EntityIO_Format::TecPlot:
 		name_of_file += ".plt";
@@ -128,7 +128,7 @@ void AutLib::Leg_Model_Entity::ExportToFile() const
 	case Leg_EntityIO_Format::IGES:
 		name_of_file += ".iges";
 		break;
-	}
+	}*/
 
 	switch (IO().FileFormat())
 	{
