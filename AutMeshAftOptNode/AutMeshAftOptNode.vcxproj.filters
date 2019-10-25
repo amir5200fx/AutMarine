@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{db556987-5d00-4496-879f-cdd635998d9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft">
+      <UniqueIdentifier>{3496c006-d65b-455e-97fd-c91e536aaa4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode">
+      <UniqueIdentifier>{7e110dac-75bb-40d4-9911-3aafc62919ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical">
+      <UniqueIdentifier>{8e5c835b-85f0-45ab-af24-99a3e9627940}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical\Iso">
+      <UniqueIdentifier>{a6a142fc-d4fc-4562-9dd9-2f01c06a8d64}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical\AnIso">
+      <UniqueIdentifier>{7e0ba162-6671-4cd2-8897-178e18122a9f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d">
+      <UniqueIdentifier>{03b00847-50ad-474a-83a6-f4d926243605}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical\Iso\3d">
+      <UniqueIdentifier>{0cfab30d-b06a-419e-84ee-9752492e9dd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d">
+      <UniqueIdentifier>{2fccf66a-dcf3-410e-826f-752fedae8124}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical\AnIso\3d">
+      <UniqueIdentifier>{2815c576-bd70-4542-a7d3-bf2008ce7999}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Analytical\Surface">
+      <UniqueIdentifier>{ada1884a-a703-44b9-8ba2-077e5ac095ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector">
+      <UniqueIdentifier>{1f220b7d-ba08-4ce6-82ce-5f1a080e6796}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative">
+      <UniqueIdentifier>{949fa2cd-eafe-4817-a876-327268e8de9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Iso">
+      <UniqueIdentifier>{5f299143-bbf1-43ec-89d2-b5f19c564d78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d">
+      <UniqueIdentifier>{8de68ce2-7e6b-445d-9034-d17310c5a3be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\3d">
+      <UniqueIdentifier>{a541e4b4-a4f5-4d9b-a3dc-3a4b5ca83cc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso">
+      <UniqueIdentifier>{73d49ddd-c649-42c2-941a-ba0ea8839c24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d">
+      <UniqueIdentifier>{9068a1f2-b66e-4012-be48-ad0d0ca712fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\3d">
+      <UniqueIdentifier>{ca9759cc-0cf4-4ed5-abb1-c10c8df0a862}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Surface">
+      <UniqueIdentifier>{2ab123a5-cca1-4c4d-9f76-6b609c2bf717}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Force">
+      <UniqueIdentifier>{8f26395b-e735-47e5-8011-5c3a05e20f29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Force\NelderMead">
+      <UniqueIdentifier>{da869a66-4e81-449a-92cd-ed985ac13574}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info">
+      <UniqueIdentifier>{556a836b-2706-4ef3-98c0-7e2977b31f6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Algorithm">
+      <UniqueIdentifier>{bad47e23-9c57-4e0a-913c-b05f39b35e8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Algorithm\Iso">
+      <UniqueIdentifier>{97eb7e8a-cedd-42a6-85e5-ba8b6b839521}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Algorithm\AnIso">
+      <UniqueIdentifier>{802ad678-5c18-4826-ab16-da3d5ffe602d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Algorithm\Surface">
+      <UniqueIdentifier>{0b6ff7c2-f6a6-4a48-aba8-deaff0938880}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Algorithm\Iso\2d">
+      <UniqueIdentifier>{91886367-d22a-48b4-a4bc-50db26d60e18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Algorithm\Iso\3d">
+      <UniqueIdentifier>{e09ce8a1-06f2-4bac-af67-04d97249a323}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Info">
+      <UniqueIdentifier>{5c07d43f-e36b-430e-8c0f-65b9bed6ca0c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Mesh_OptNode_Analytical.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Mesh2d_OptNodeAnIso_Analytical.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Mesh2d_OptNodeAnIso_AnalyticalI.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Mesh2d_OptNode_Analytical.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Mesh2d_OptNode_AnalyticalI.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Mesh_OptNode_Corrector.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Mesh_OptNode_IterativeCorrector.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Mesh_OptNode_IterativeCorrectorInfo.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Mesh_OptNode_IterativeCorrectorI.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Mesh_AftOptNode.hxx">
+      <Filter>AutLib\MeshAft\OptNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Mesh_AftOptNodeI.hxx">
+      <Filter>AutLib\MeshAft\OptNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Info\Mesh_AftOptNode_Info.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Info</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Mesh2d_OptNodeAnIso_Analytical.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Mesh2d_OptNode_Analytical.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Mesh_OptNode_IterativeCorrectorInfo.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Mesh_OptNode_IterativeCorrector.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Mesh_AftOptNode.cxx">
+      <Filter>AutLib\MeshAft\OptNode</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

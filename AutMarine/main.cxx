@@ -20,6 +20,9 @@
 #include <Geom2d_Circle.hxx>
 #include <Geo_CurveLength.hxx>
 
+#include <GeoSizeFun_Uniform.hxx>
+#include <Mesh2d_AftMetricPrcsr.hxx>
+
 namespace AutLib
 {
 
@@ -33,6 +36,32 @@ namespace AutLib
 			return 3*x*x;
 		}
 	};
+
+	template<class T>
+	class A
+	{
+	public:
+
+		A()
+		{}
+
+		void f(int)
+		{}
+	};
+
+	template<class T>
+	class B : public A<T>
+	{
+	public:
+
+		using A<T>::f;
+
+		B()
+		{}
+
+		void f(int ,int)
+		{}
+	};
 }
 
 
@@ -41,6 +70,16 @@ using namespace AutLib;
 
 int main()
 {
+	auto fun = std::make_shared<GeoSizeFun_Uniform<Pnt2d>>(0.2);
+	Mesh_AftMetricPrcsr<Aft2d_Edge, GeoSizeFun_Uniform<Pnt2d>> procsr(fun);
+
+	procsr.CalcDistance(Pnt2d(1, 2), Pnt2d(0.1, 9));
+	cout << procsr.CalcDistance(Pnt2d(1, 2), Pnt2d(1, 4)) << std::endl;
+	PAUSE;
+	return 0;
+	B<double> bb;
+	bb.f(1);
+
 	/*IO_IGES reader(gl_fast_discrete_parameters);
 	reader.Verbose() = 1;
 	reader.ReadFile("F16 one.IGS");*/
