@@ -13,6 +13,8 @@
 #include <Cad3d_TModel.hxx>
 #include <TModel_Surface.hxx>
 #include <TModel_Tools.hxx>
+#include <FastDiscrete.hxx>
+#include <Poly_Triangulation.hxx>
 
 #include <Numeric_GaussQuadrature.hxx>
 #include <Numeric_IntegrationFunction.hxx>
@@ -107,34 +109,85 @@ int main()
 	patch.MidSection().Tightness0()->SetValue(0.1);
 	patch.MidSection().Tightness1()->SetValue(0.1);*/
 
-	patch.FwdSection().Tightness0()->SetValue(0.9);
-	patch.FwdSection().Tightness1()->SetValue(0.9);
+	/*patch.FwdSection().Tightness0()->SetValue(0.9);
+	patch.FwdSection().Tightness1()->SetValue(0.9);*/
 
-	patch.AftSection().Trim0()->SetValue(0.1);
-	patch.MidSection().Trim0()->SetValue(0.1);
-	patch.FwdSection().Trim0()->SetValue(0.1);
+	patch.Parameters().SetNbNetColumns(25);
+
+	patch.Parameters().LengthOnDeck()->SetValue(16.0);
+	patch.Parameters().TransomHeight()->SetValue(0.6);
+
+	patch.Parameters().FwdFullness()->SetValue(0.5);
+
+	patch.AftSection().Trim0()->SetValue(0.42);
+	patch.AftSection().Trim1()->SetValue(0.2);
+
+	patch.MidSection().Trim0()->SetValue(0.45);
+	patch.MidSection().Trim1()->SetValue(0.12);
+
+	patch.FwdSection().Trim0()->SetValue(0.35);
+	patch.FwdSection().Trim1()->SetValue(0.15);
+
+	patch.Parameters().Position()->SetValue(0.35);
+	patch.Parameters().RisePoint()->SetValue(0.15);
+	patch.Parameters().RiseSlope()->SetValue(0.05);
+	patch.Parameters().TransomSlope()->SetValue(0.37);
+
+	patch.FwdFullness()->SetValue(0.4);
+	patch.AftFullness()->SetValue(0.45);
+
+	patch.Parameters().StemRake()->SetValue(30.0);
 
 
-	patch.PerformToPreview();
+	patch.Parameters().ForeFootShape()->SetValue(0.65);
+	patch.Parameters().BowRounding()->SetValue(0.0);
+
+	patch.Perform();
 	//patch.Discrete();
+	patch.FileName() = "myModle.iges";
 
 	fileName name("preview.plt");
 	OFstream myFile(name);
 
-	auto gsurface = patch.PreviewEntity();
+	patch.FileFormat() = Leg_EntityIO_Format::IGES;
+	patch.ExportToFile();
 
-	auto preview = Cad_Tools::PreviewPatchCurves(gsurface, 15, 15);
-
-	for (const auto& x : preview)
-	{
-		x->ExportToPlt(myFile);
-	}
 	PAUSE;
 	return 0;
+
+	auto gsurface = patch.Entity();
+
+
+	//auto preview = Cad_Tools::PreviewPatchCurves(gsurface, 15, 15);
+
+	/*for (const auto& x : preview)
+	{
+		x->ExportToPlt(myFile);
+	}*/
+
 	auto surfaces = TModel_Tools::GetSurfaces(patch.Entity());
 
 	auto solid = Cad3d_TModel::MakeSolid(surfaces, 1.0e-6);
 
+	std::vector<std::shared_ptr<TModel_Surface>> surfaces1;
+	solid->RetrieveFacesTo(surfaces1);
+
+	for (const auto& x : surfaces1)
+	{
+		const auto& face = x->Face();
+		FastDiscrete::Triangulation(face, *gl_fast_discrete_parameters);
+
+		auto tri = Cad_Tools::RetrieveTriangulation(face);
+		cout << face.IsNull() << std::endl;
+		std::cout << tri.IsNull() << std::endl;
+		PAUSE;
+
+		if (tri.IsNull()) continue;
+
+		Cad_Tools::Triangulation(*tri)->ExportToPlt(myFile);
+	}
+	PAUSE;
+	return 0;
 	const auto& faces = solid->Faces();
 	faces->Print(Standard_True);
 

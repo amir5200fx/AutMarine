@@ -199,6 +199,7 @@ AutLib::TModel_Tools::GetSurface
 
 	auto face =
 		std::make_shared<TModel_Surface>(geometry, outerWire, Qwire);
+	face->SetFace(theFace);
 
 	return std::move(face);
 }
