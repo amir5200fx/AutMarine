@@ -290,15 +290,15 @@ namespace AutLib
 
 	inline doubleScalar lgamma(const doubleScalar s) { return ::lgamma(s); }
 
-	inline doubleScalar stabilise(const doubleScalar& s, const doubleScalar& small)
+	inline doubleScalar stabilise(const doubleScalar& s, const doubleScalar& theSmall)
 	{
 		if (s >= 0)
 		{
-			return s + small;
+			return s + theSmall;
 		}
 		else
 		{
-			return s - small;
+			return s - theSmall;
 		}
 	}
 
@@ -306,11 +306,11 @@ namespace AutLib
 	inline doubleScalar cmptStabilise
 	(
 		const doubleScalar& s,
-		const doubleScalar& small,
+		const doubleScalar& theSmall,
 		const doubleScalar& value
 	)
 	{
-		if (mag(s) < small)
+		if (mag(s) < theSmall)
 		{
 			return sign(s)*value;
 		}

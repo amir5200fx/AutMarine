@@ -58,6 +58,15 @@ void AutLib::Leg_Nihad2_HullPatch::Perform()
 	Change_IsDone() = Standard_True;
 }
 
+void AutLib::Leg_Nihad2_HullPatch::PerformToPreview()
+{
+	Leg_Nihad2_HullPatch::Perform();
+
+	Leg_Nihad2_HullPatch::MakeFace();
+
+	ChangePreviewEntity() = Entity();
+}
+
 void AutLib::Leg_Nihad2_BareHull::MakeFace()
 {
 	Leg_Nihad2_HullPatch::MakeFace();

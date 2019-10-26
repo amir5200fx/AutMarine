@@ -48,7 +48,8 @@ std::shared_ptr<AutLib::Leg_Model_SectionCtrlPts>
 AutLib::Leg_Nihad2_HullPatch::CreateRawSection
 (
 	const Standard_Integer Section,
-	const Standard_Real theTrimm,
+	const Standard_Real theTrimm1,
+	const Standard_Real theTrimm2,
 	const Standard_Real theTightness1,
 	const Standard_Real theTightness2
 )
@@ -79,8 +80,8 @@ AutLib::Leg_Nihad2_HullPatch::CreateRawSection
 
 	auto IP = gProcessor::Intersect(Line0, Line2, (Standard_Real)1.0E-12);
 
-	auto P2 = IP + theTrimm * (P0 - IP);
-	auto P6 = IP + theTrimm * (P8 - IP);
+	auto P2 = IP + theTrimm1 * (P0 - IP);
+	auto P6 = IP + theTrimm2 * (P8 - IP);
 	auto P4 = MEAN(P2, P6);
 
 	auto Pm1 = MEAN(P2, P0);
@@ -213,7 +214,7 @@ void AutLib::Leg_Nihad2_HullPatch::CreateRawSections()
 		SetSection
 		(
 			Section,
-			CreateRawSection(Section, xTrim[Section], xTightness0[Section], xTightness1[Section])
+			CreateRawSection(Section, xTrim0[Section], xTrim1[Section], xTightness0[Section], xTightness1[Section])
 		);
 	}
 

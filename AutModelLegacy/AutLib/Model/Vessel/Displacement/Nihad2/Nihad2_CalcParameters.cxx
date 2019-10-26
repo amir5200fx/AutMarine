@@ -495,25 +495,41 @@ void AutLib::Leg_Nihad2_HullPatch::CalcxTrim()
 
 		if (X < (Standard_Real)0.5)
 		{
-			Standard_Real Value = Interpd1
+			Standard_Real Value0 = Interpd1
 			(
 				(Standard_Real)2.0 * X,
-				Hull.AftSection().Trim()->Value(),
-				Hull.MidSection().Trim()->Value()
+				Hull.AftSection().Trim0()->Value(),
+				Hull.MidSection().Trim0()->Value()
 			);
 
-			xTrim[Section] = Value;
+			Standard_Real Value1 = Interpd1
+			(
+				(Standard_Real)2.0 * X,
+				Hull.AftSection().Trim1()->Value(),
+				Hull.MidSection().Trim1()->Value()
+			);
+
+			xTrim0[Section] = Value0;
+			xTrim1[Section] = Value1;
 		}
 		else
 		{
-			Standard_Real Value = Interpd1
+			Standard_Real Value0 = Interpd1
 			(
 				(Standard_Real)2.0 * (X - (Standard_Real)0.5),
-				Hull.MidSection().Trim()->Value(),
-				Hull.FwdSection().Trim()->Value()
+				Hull.MidSection().Trim0()->Value(),
+				Hull.FwdSection().Trim0()->Value()
 			);
 
-			xTrim[Section] = Value;
+			Standard_Real Value1 = Interpd1
+			(
+				(Standard_Real)2.0 * (X - (Standard_Real)0.5),
+				Hull.MidSection().Trim1()->Value(),
+				Hull.FwdSection().Trim1()->Value()
+			);
+
+			xTrim0[Section] = Value0;
+			xTrim1[Section] = Value1;
 		}
 	}
 
@@ -521,7 +537,15 @@ void AutLib::Leg_Nihad2_HullPatch::CalcxTrim()
 	{
 		SmoothingParameter
 		(
-			xTrim,
+			xTrim0,
+			nbSections - 2,
+			Leg_Nihad2::SMOOTHING_WEIGHT,
+			Leg_Nihad2::LEVEL_OF_SMOOTHING
+		);
+
+		SmoothingParameter
+		(
+			xTrim1,
 			nbSections - 2,
 			Leg_Nihad2::SMOOTHING_WEIGHT,
 			Leg_Nihad2::LEVEL_OF_SMOOTHING

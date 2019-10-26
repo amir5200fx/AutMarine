@@ -112,6 +112,48 @@ AutLib::Cad_Tools::PreviewPatchCurves
 }
 
 std::shared_ptr<AutLib::Entity3d_Triangulation> 
+AutLib::Cad_Tools::PreviewPatchCurves
+(
+	const TopoDS_Face& theFace,
+	const Standard_Integer theNbSegments_U,
+	const Standard_Integer theNbSegments_V
+)
+{
+	auto geom = BRep_Tool::Surface(theFace);
+	if (NOT geom)
+	{
+		FatalErrorIn("std::shared_ptr<Entity3d_Triangulation> PreviewPatchCurves()")
+			<< "the face has no geometry!" << endl
+			<< abort(FatalError);
+	}
+
+	auto tri = PreviewPatchCurves(theFace, theNbSegments_U, theNbSegments_V);
+	return std::move(tri);
+}
+
+std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>>
+AutLib::Cad_Tools::PreviewPatchCurves
+(
+	const TopoDS_Shape& theShape, 
+	const Standard_Integer theNbSegments_U, 
+	const Standard_Integer theNbSegments_V
+)
+{
+	std::vector<std::shared_ptr<Entity3d_Triangulation>> preview;
+	for
+		(
+			TopExp_Explorer Explorer(theShape, TopAbs_FACE);
+			Explorer.More();
+			Explorer.Next()
+			)
+	{
+
+		preview.push_back(PreviewPatchCurves(TopoDS::Face(Explorer.Current()), theNbSegments_U, theNbSegments_V));
+	}
+	return std::move(preview);
+}
+
+std::shared_ptr<AutLib::Entity3d_Triangulation> 
 AutLib::Cad_Tools::PreviewCurveOnSurface_U
 (
 	const Handle(Geom_Surface)& theSurface,

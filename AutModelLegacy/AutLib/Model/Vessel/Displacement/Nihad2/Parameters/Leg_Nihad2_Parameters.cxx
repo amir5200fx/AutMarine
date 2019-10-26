@@ -21,7 +21,8 @@ AutLib::Leg_Nihad2_AftSectionParams::Leg_Nihad2_AftSectionParams()
 {
 	Tightness0() = std::make_shared<Leg_Model_BndParam>(DP::AFT_TIGHTNESS0.Index(), DP::AFT_TIGHTNESS0.Name(), DP::AFT_TIGHTNESS0.Value(), 0, 1);
 	Tightness1() = std::make_shared<Leg_Model_BndParam>(DP::AFT_TIGHTNESS1.Index(), DP::AFT_TIGHTNESS1.Name(), DP::AFT_TIGHTNESS1.Value(), 0, 1);
-	Trim() = std::make_shared<Leg_Model_BndParam>(DP::AFT_TRIM.Index(), DP::AFT_TRIM.Name(), DP::AFT_TRIM.Value(), 0, 1);
+	Trim0() = std::make_shared<Leg_Model_BndParam>(DP::AFT_TRIM0.Index(), DP::AFT_TRIM0.Name(), DP::AFT_TRIM0.Value(), 0, 1);
+	Trim1() = std::make_shared<Leg_Model_BndParam>(DP::AFT_TRIM1.Index(), DP::AFT_TRIM1.Name(), DP::AFT_TRIM1.Value(), 0, 1);
 	Deadrise() = std::make_shared<Leg_Model_BndParam>(DP::AFT_DEADRISE.Index(), DP::AFT_DEADRISE.Name(), DP::AFT_DEADRISE.Value(), 0, 1);
 	SideSlope() = std::make_shared<Leg_Model_BndParam>(DP::AFT_SIDE_SLOPE.Index(), DP::AFT_SIDE_SLOPE.Name(), DP::AFT_SIDE_SLOPE.Value(), 0, 1);
 }
@@ -30,7 +31,8 @@ AutLib::Leg_Nihad2_FwdSectionParams::Leg_Nihad2_FwdSectionParams()
 {
 	Tightness0() = std::make_shared<Leg_Model_BndParam>(DP::FWD_TIGHTNESS0.Index(), DP::FWD_TIGHTNESS0.Name(), DP::FWD_TIGHTNESS0.Value(), 0, 1);
 	Tightness1() = std::make_shared<Leg_Model_BndParam>(DP::FWD_TIGHTNESS1.Index(), DP::FWD_TIGHTNESS1.Name(), DP::FWD_TIGHTNESS1.Value(), 0, 1);
-	Trim() = std::make_shared<Leg_Model_BndParam>(DP::FWD_TRIM.Index(), DP::FWD_TRIM.Name(), DP::FWD_TRIM.Value(), 0, 1);
+	Trim0() = std::make_shared<Leg_Model_BndParam>(DP::FWD_TRIM0.Index(), DP::FWD_TRIM0.Name(), DP::FWD_TRIM0.Value(), 0, 1);
+	Trim1() = std::make_shared<Leg_Model_BndParam>(DP::FWD_TRIM1.Index(), DP::FWD_TRIM1.Name(), DP::FWD_TRIM1.Value(), 0, 1);
 	Deadrise() = std::make_shared<Leg_Model_BndParam>(DP::FWD_DEADRISE.Index(), DP::FWD_DEADRISE.Name(), DP::FWD_DEADRISE.Value(), 0, 1);
 	SideSlope() = std::make_shared<Leg_Model_BndParam>(DP::FWD_SIDE_SLOPE.Index(), DP::FWD_SIDE_SLOPE.Name(), DP::FWD_SIDE_SLOPE.Value(), 0, 1);
 }
@@ -39,7 +41,8 @@ AutLib::Leg_Nihad2_MidSectionParams::Leg_Nihad2_MidSectionParams()
 {
 	Tightness0() = std::make_shared<Leg_Model_BndParam>(DP::MID_TIGHTNESS0.Index(), DP::MID_TIGHTNESS0.Name(), DP::MID_TIGHTNESS0.Value(), 0, 1);
 	Tightness1() = std::make_shared<Leg_Model_BndParam>(DP::MID_TIGHTNESS1.Index(), DP::MID_TIGHTNESS1.Name(), DP::MID_TIGHTNESS1.Value(), 0, 1);
-	Trim() = std::make_shared<Leg_Model_BndParam>(DP::MID_TRIM.Index(), DP::MID_TRIM.Name(), DP::MID_TRIM.Value(), 0, 1);
+	Trim0() = std::make_shared<Leg_Model_BndParam>(DP::MID_TRIM0.Index(), DP::MID_TRIM0.Name(), DP::MID_TRIM0.Value(), 0, 1);
+	Trim1() = std::make_shared<Leg_Model_BndParam>(DP::MID_TRIM1.Index(), DP::MID_TRIM1.Name(), DP::MID_TRIM1.Value(), 0, 1);
 	Deadrise() = std::make_shared<Leg_Model_BndParam>(DP::MID_DEADRISE.Index(), DP::MID_DEADRISE.Name(), DP::MID_DEADRISE.Value(), 0, 1);
 	SideSlope() = std::make_shared<Leg_Model_BndParam>(DP::MID_SIDE_SLOPE.Index(), DP::MID_SIDE_SLOPE.Name(), DP::MID_SIDE_SLOPE.Value(), 0, 1);
 }

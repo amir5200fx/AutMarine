@@ -110,9 +110,9 @@ int main()
 	patch.FwdSection().Tightness0()->SetValue(0.9);
 	patch.FwdSection().Tightness1()->SetValue(0.9);
 
-	patch.AftSection().Trim()->SetValue(0.1);
-	patch.MidSection().Trim()->SetValue(0.1);
-	patch.FwdSection().Trim()->SetValue(0.1);
+	patch.AftSection().Trim0()->SetValue(0.1);
+	patch.MidSection().Trim0()->SetValue(0.1);
+	patch.FwdSection().Trim0()->SetValue(0.1);
 
 
 	patch.Perform();
