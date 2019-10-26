@@ -70,7 +70,7 @@ using namespace AutLib;
 
 int main()
 {
-	auto fun = std::make_shared<GeoSizeFun_Uniform<Pnt2d>>(0.2);
+	/*auto fun = std::make_shared<GeoSizeFun_Uniform<Pnt2d>>(0.2);
 	Mesh_AftMetricPrcsr<Aft2d_Edge, GeoSizeFun_Uniform<Pnt2d>> procsr(fun);
 
 	procsr.CalcDistance(Pnt2d(1, 2), Pnt2d(0.1, 9));
@@ -78,7 +78,7 @@ int main()
 	PAUSE;
 	return 0;
 	B<double> bb;
-	bb.f(1);
+	bb.f(1);*/
 
 	/*IO_IGES reader(gl_fast_discrete_parameters);
 	reader.Verbose() = 1;
@@ -115,18 +115,22 @@ int main()
 	patch.FwdSection().Trim0()->SetValue(0.1);
 
 
-	patch.Perform();
+	patch.PerformToPreview();
 	//patch.Discrete();
 
 	fileName name("preview.plt");
 	OFstream myFile(name);
 
-	auto gsurface = patch.Patch();
+	auto gsurface = patch.PreviewEntity();
 
-	//auto preview = Cad_Tools::PreviewPatchCurves(gsurface, 15, 15);
+	auto preview = Cad_Tools::PreviewPatchCurves(gsurface, 15, 15);
 
-	//preview->ExportToPlt(myFile);
-
+	for (const auto& x : preview)
+	{
+		x->ExportToPlt(myFile);
+	}
+	PAUSE;
+	return 0;
 	auto surfaces = TModel_Tools::GetSurfaces(patch.Entity());
 
 	auto solid = Cad3d_TModel::MakeSolid(surfaces, 1.0e-6);

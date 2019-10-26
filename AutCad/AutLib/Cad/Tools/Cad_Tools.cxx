@@ -127,7 +127,7 @@ AutLib::Cad_Tools::PreviewPatchCurves
 			<< abort(FatalError);
 	}
 
-	auto tri = PreviewPatchCurves(theFace, theNbSegments_U, theNbSegments_V);
+	auto tri = PreviewPatchCurves(geom, theNbSegments_U, theNbSegments_V);
 	return std::move(tri);
 }
 
@@ -147,7 +147,6 @@ AutLib::Cad_Tools::PreviewPatchCurves
 			Explorer.Next()
 			)
 	{
-
 		preview.push_back(PreviewPatchCurves(TopoDS::Face(Explorer.Current()), theNbSegments_U, theNbSegments_V));
 	}
 	return std::move(preview);
