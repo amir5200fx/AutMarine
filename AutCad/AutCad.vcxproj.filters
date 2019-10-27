@@ -199,6 +199,9 @@
     <Filter Include="AutLib\Cad\Plane\Entities\CmpEdge">
       <UniqueIdentifier>{a2700d5b-0b42-4e30-9aac-63f03544d666}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Plane\Tools">
+      <UniqueIdentifier>{b270f870-8952-4abb-a7c8-ba19a1d24cfa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
@@ -386,6 +389,12 @@
     </ClCompile>
     <ClCompile Include="AutLib\Cad\Plane\Entities\Cutter\Pln_Cutter.cxx">
       <Filter>AutLib\Cad\Plane\Entities\Cutter</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Tools\Pln_Tools.cxx">
+      <Filter>AutLib\Cad\Plane\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Entities\CmpEdge\Pln_CmpEdge.cxx">
+      <Filter>AutLib\Cad\Plane\Entities\CmpEdge</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -577,6 +586,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\TModel\Entities\Edge\Singular\TModel_SingularEdge.hxx">
       <Filter>AutLib\Cad\TModel\Entities\Edge\Singular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\Tools\Pln_Tools.hxx">
+      <Filter>AutLib\Cad\Plane\Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

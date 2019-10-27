@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _Mesh_OptNode_Corrector_Header
-#define _Mesh_OptNode_Corrector_Header
+#ifndef _Aft_OptNode_Corrector_Header
+#define _Aft_OptNode_Corrector_Header
 
 #include <Global_Done.hxx>
 
@@ -8,7 +8,7 @@ namespace AutLib
 {
 
 	template<class AftMetricPrcsr>
-	class Mesh_OptNode_Corrector
+	class Aft_OptNode_Corrector
 		: public Global_Done
 	{
 
@@ -36,7 +36,7 @@ namespace AutLib
 
 	protected:
 
-		Mesh_OptNode_Corrector
+		Aft_OptNode_Corrector
 		(
 			const Standard_Real theSize,
 			const frontType& theFront,
@@ -90,4 +90,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_Mesh_OptNode_Corrector_Header
+#endif // !_Aft_OptNode_Corrector_Header

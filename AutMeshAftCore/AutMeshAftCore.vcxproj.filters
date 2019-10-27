@@ -11,4 +11,17 @@
       <UniqueIdentifier>{11fd86bf-189b-45c5-a0e3-9cdf397e949a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshAft\Core\Aft_CoreI.hxx">
+      <Filter>AutLib\MeshAft\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Aft_Core.hxx">
+      <Filter>AutLib\MeshAft\Core</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAft\Core\Aft_Core.cxx">
+      <Filter>AutLib\MeshAft\Core</Filter>
+    </ClCompile>
+  </ItemGroup>
 </Project>

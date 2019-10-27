@@ -7,7 +7,7 @@ namespace AutLib
 {
 
 	template<class AftMetricPrcsr>
-	void Mesh_OptNode_IterativeCorrector<AftMetricPrcsr>::Perform()
+	void Aft_OptNode_IterativeCorrector<AftMetricPrcsr>::Perform()
 	{
 		base::ChangeCoord() = base::P0();
 

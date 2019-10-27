@@ -78,6 +78,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Core;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -117,6 +118,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\MeshAft\Core\Aft_Core.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\Aft_CoreI.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAft\Core\Aft_Core.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

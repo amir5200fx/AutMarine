@@ -146,9 +146,6 @@
     <ClInclude Include="AutLib\Geom\Mesh\Data\3d\GeoMesh3d_DataFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Mesh\Data\GeoMesh_Data.hxx" />
     <ClInclude Include="AutLib\Geom\Mesh\Data\GeoMesh_DataI.hxx" />
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_Core.hxx" />
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_CoreI.hxx" />
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Cavity\Aft_CavityData.hxx" />
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Global\Aft_FrontGlobalData.hxx" />
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Global\AnIso\Aft2d_FrontAnIsoGlobalData.hxx" />
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Global\AnIso\Aft2d_FrontAnIsoGlobalDataFwd.hxx" />
@@ -374,7 +371,6 @@
     <ClCompile Include="AutLib\Geom\Mesh\Data\2d\GeoMesh2d_Data.cxx" />
     <ClCompile Include="AutLib\Geom\Mesh\Data\3d\GeoMesh3d_Data.cxx" />
     <ClCompile Include="AutLib\Geom\Mesh\Data\GeoMesh_Data.cxx" />
-    <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_Core.cxx" />
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Aft2d_FrontInfoTemplate.cxx" />
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Entities\Edge\Aft_Edge.cxx" />
     <ClCompile Include="AutLib\Mesh\Alg\Curve\Info\Mesh_CurveInfo.cxx" />

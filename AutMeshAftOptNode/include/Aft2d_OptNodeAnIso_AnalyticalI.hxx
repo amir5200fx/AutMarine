@@ -2,7 +2,7 @@
 namespace AutLib
 {
 
-	void Mesh2d_OptNodeAnIso_Analytical::Perform()
+	void Aft2d_OptNodeAnIso_Analytical::Perform()
 	{
 		const auto& map = MetricMap();
 		auto h = ElementSize();

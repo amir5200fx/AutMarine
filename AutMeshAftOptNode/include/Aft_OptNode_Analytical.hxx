@@ -6,7 +6,7 @@ namespace AutLib
 {
 
 	template<class FrontType, class SizeFun, class MetricFun = void>
-	class Mesh_OptNode_Analytical
+	class Aft_OptNode_Analytical
 	{
 
 		/*Private Data*/

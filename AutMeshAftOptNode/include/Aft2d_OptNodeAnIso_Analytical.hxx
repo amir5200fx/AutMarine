@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _Mesh2d_OptNodeAnIso_Analytical_Header
-#define _Mesh2d_OptNodeAnIso_Analytical_Header
+#ifndef _Aft2d_OptNodeAnIso_Analytical_Header
+#define _Aft2d_OptNodeAnIso_Analytical_Header
 
 #include <Global_Done.hxx>
 #include <Mesh_OptNode_Analytical.hxx>
@@ -9,14 +9,14 @@
 namespace AutLib
 {
 
-	class Mesh2d_OptNodeAnIso_Analytical_Base
+	class Aft2d_OptNodeAnIso_Analytical_Base
 	{
 
 		/*Private Data*/
 
 	protected:
 
-		Mesh2d_OptNodeAnIso_Analytical_Base()
+		Aft2d_OptNodeAnIso_Analytical_Base()
 		{}
 
 	public:
@@ -31,8 +31,8 @@ namespace AutLib
 		);
 	};
 
-	class Mesh2d_OptNodeAnIso_Analytical
-		: public Mesh2d_OptNodeAnIso_Analytical_Base
+	class Aft2d_OptNodeAnIso_Analytical
+		: public Aft2d_OptNodeAnIso_Analytical_Base
 		, public Global_Done
 	{
 
@@ -58,7 +58,7 @@ namespace AutLib
 	public:
 
 
-		Mesh2d_OptNodeAnIso_Analytical
+		Aft2d_OptNodeAnIso_Analytical
 		(
 			const Standard_Real theSize,
 			const frontType& theFront,
@@ -94,6 +94,6 @@ namespace AutLib
 	};
 }
 
-#include <Mesh2d_OptNodeAnIso_AnalyticalI.hxx>
+#include <Aft2d_OptNodeAnIso_AnalyticalI.hxx>
 
-#endif // !_Mesh2d_OptNodeAnIso_Analytical_Header
+#endif // !_Aft2d_OptNodeAnIso_Analytical_Header

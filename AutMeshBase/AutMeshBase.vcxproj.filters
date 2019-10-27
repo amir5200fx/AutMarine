@@ -133,6 +133,9 @@
     <Filter Include="AutLib\MeshBase\Geom\MetricPrcsr\3d">
       <UniqueIdentifier>{84cc564f-0648-488a-8803-face2724e150}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshBase\Data">
+      <UniqueIdentifier>{3cdd7ecd-7680-4219-bc47-8540ceb190f1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshBase\Entities\Entity\Mesh_Entity.cxx">
@@ -361,6 +364,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshBase\Entities\Edge\Mesh_EdgeI.hxx">
       <Filter>AutLib\MeshBase\Entities\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Data\Mesh_GlobalData.hxx">
+      <Filter>AutLib\MeshBase\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Data\Mesh_QualityMap.hxx">
+      <Filter>AutLib\MeshBase\Data</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

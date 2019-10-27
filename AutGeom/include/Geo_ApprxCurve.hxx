@@ -33,6 +33,8 @@ namespace AutLib
 		Standard_Real theFirst_;
 		Standard_Real theLast_;
 
+		const std::shared_ptr<info>& theInfo_;
+
 		chain_ptr theChain_;
 
 	public:
@@ -44,21 +46,18 @@ namespace AutLib
 		(
 			const CurveType& theCurve,
 			const Standard_Real theFirst,
-			const Standard_Real theLast
+			const Standard_Real theLast,
+			const std::shared_ptr<info>& theInfo
 		)
 			: theCurve_(theCurve)
 			, theFirst_(theFirst)
 			, theLast_(theLast)
+			, theInfo_(theInfo)
 		{}
 
-		const Geo_ApprxCurveInfo& Info() const
+		const std::shared_ptr<info>& Info() const
 		{
-			return *this;
-		}
-
-		Geo_ApprxCurveInfo& Info()
-		{
-			return *this;
+			return theInfo_;
 		}
 
 		const CurveType& Curve() const
@@ -90,7 +89,8 @@ namespace AutLib
 		(
 			const CurveType& theCurve,
 			const Standard_Real theFirst,
-			const Standard_Real theLast
+			const Standard_Real theLast,
+			const std::shared_ptr<info>& theInfo
 		)
 		{
 			theCurve_ = theCurve;
@@ -98,10 +98,12 @@ namespace AutLib
 			theFirst_ = theFirst;
 			theLast_ = theLast;
 
+			theInfo_ = theInfo;
+
 			Change_IsDone() = Standard_False;
 		}
 
-		void Perform(const info& theInfo);
+		void Perform();
 
 		void Reset();
 	};

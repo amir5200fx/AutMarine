@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _Mesh_OptNode_IterativeCorrectorInfo_Header
-#define _Mesh_OptNode_IterativeCorrectorInfo_Header
+#ifndef _Aft_OptNode_IterativeCorrectorInfo_Header
+#define _Aft_OptNode_IterativeCorrectorInfo_Header
 
 #include <Standard_TypeDef.hxx>
 #include <Global_AccessMethod.hxx>
@@ -9,7 +9,7 @@
 namespace AutLib
 {
 
-	class Mesh_OptNode_IterativeCorrectorInfo
+	class Aft_OptNode_IterativeCorrectorInfo
 		: public Global_Verbose
 	{
 
@@ -29,7 +29,7 @@ namespace AutLib
 		static const Standard_Real DEFAULT_TOLERANCE;
 		static const Standard_Real DEFAULT_UNDER_RELAXATION;
 
-		Mesh_OptNode_IterativeCorrectorInfo()
+		Aft_OptNode_IterativeCorrectorInfo()
 			: theMaxNbIters_(DEFAULT_MAX_NB_ITERATIONS)
 			, theTolerance_(DEFAULT_TOLERANCE)
 			, theUnderRelaxation_(DEFAULT_UNDER_RELAXATION)
@@ -54,4 +54,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_Mesh_OptNode_IterativeCorrectorInfo_Header
+#endif // !_Aft_OptNode_IterativeCorrectorInfo_Header

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _Mesh_AftOptNode_Header
-#define _Mesh_AftOptNode_Header
+#ifndef _Aft_OptNode_Header
+#define _Aft_OptNode_Header
 
 #include <Standard_TypeDef.hxx>
 #include <Mesh_AftMetricPrcsr.hxx>
@@ -20,7 +20,7 @@ namespace AutLib
 		class CorrtAlg, 	
 		class AltrAlg = void
 		>
-	class Mesh_AftOptNode_Calculator
+	class Aft_OptNode_Calculator
 	{
 
 		typedef Mesh_AftMetricPrcsr<FrontType, SizeFun, MetricFun>
@@ -41,7 +41,7 @@ namespace AutLib
 
 	public:
 
-		Mesh_AftOptNode_Calculator
+		Aft_OptNode_Calculator
 		(
 			const std::shared_ptr<metricMap>& theMetricMap,
 			const Standard_Real theSize,
@@ -78,7 +78,7 @@ namespace AutLib
 		class AnalyAlg,
 		class CorrtAlg
 		>
-		class Mesh_AftOptNode_Calculator<FrontType, SizeFun, InfoAlg, void, AnalyAlg, CorrtAlg>
+		class Aft_OptNode_Calculator<FrontType, SizeFun, InfoAlg, void, AnalyAlg, CorrtAlg>
 	{
 
 		typedef Mesh_AftMetricPrcsr<FrontType, SizeFun, void>
@@ -121,7 +121,7 @@ namespace AutLib
 
 	public:
 
-		Mesh_AftOptNode_Calculator
+		Aft_OptNode_Calculator
 		(
 			const std::shared_ptr<metricMap>& theMetricMap,
 			const Standard_Real theSize,
@@ -212,6 +212,6 @@ namespace AutLib
 	};
 }
 
-#include <Mesh_AftOptNodeI.hxx>
+#include <Aft_OptNodeI.hxx>
 
 #endif // !_Mesh_AftOptNode_Header

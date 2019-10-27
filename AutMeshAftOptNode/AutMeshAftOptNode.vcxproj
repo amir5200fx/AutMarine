@@ -19,25 +19,25 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Mesh2d_OptNodeAnIso_Analytical.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Mesh2d_OptNodeAnIso_AnalyticalI.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Mesh2d_OptNode_Analytical.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Mesh2d_OptNode_AnalyticalI.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Mesh_OptNode_Analytical.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Mesh_OptNode_IterativeCorrectorInfo.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Mesh_OptNode_IterativeCorrector.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Mesh_OptNode_IterativeCorrectorI.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Mesh_OptNode_Corrector.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Info\Mesh_AftOptNode_Info.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Mesh_AftOptNode.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Mesh_AftOptNodeI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_Analytical.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_AnalyticalI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_Analytical.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_AnalyticalI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Aft_OptNode_Analytical.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_OptNode_IterativeCorrectorInfo.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrector.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrectorI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Aft_OptNode_Corrector.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Info\Aft_OptNode_Info.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Aft_OptNode.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Aft_OptNodeI.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Mesh2d_OptNodeAnIso_Analytical.cxx" />
-    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Mesh2d_OptNode_Analytical.cxx" />
-    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Mesh_OptNode_IterativeCorrectorInfo.cxx" />
-    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Mesh_OptNode_IterativeCorrector.cxx" />
-    <ClCompile Include="AutLib\MeshAft\OptNode\Mesh_AftOptNode.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_Analytical.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_Analytical.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_OptNode_IterativeCorrectorInfo.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrector.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Aft_OptNode.cxx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

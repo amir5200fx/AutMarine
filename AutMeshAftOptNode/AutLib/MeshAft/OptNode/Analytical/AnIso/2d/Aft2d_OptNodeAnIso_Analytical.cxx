@@ -1,13 +1,13 @@
-#include <Mesh2d_OptNodeAnIso_Analytical.hxx>
+#include <Aft2d_OptNodeAnIso_Analytical.hxx>
 
 #include <armadillo.h>
 
 using namespace arma;
 
-const Standard_Real AutLib::Mesh2d_OptNodeAnIso_Analytical_Base::C3(1.7320508075688773);
+const Standard_Real AutLib::Aft2d_OptNodeAnIso_Analytical_Base::C3(1.7320508075688773);
 
 AutLib::Pnt2d 
-AutLib::Mesh2d_OptNodeAnIso_Analytical_Base::CalcCoord
+AutLib::Aft2d_OptNodeAnIso_Analytical_Base::CalcCoord
 (
 	const Standard_Real theSize,
 	const Aft2d_EdgeAnIso & theEdge,
