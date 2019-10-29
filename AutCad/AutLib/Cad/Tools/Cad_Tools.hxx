@@ -11,9 +11,11 @@ class Bnd_Box2d;
 class Bnd_Box;
 class Geom_Curve;
 class Geom_Surface;
+class Geom2d_Curve;
 class Poly_Triangulation;
 class TopoDS_Face;
 class TopoDS_Shape;
+class Geom2dAPI_InterCurveCurve;
 
 namespace AutLib
 {
@@ -22,6 +24,23 @@ namespace AutLib
 	{
 
 	public:
+
+		//- an exception will be thrown if the curve is not bounded
+		static Handle(Geom2dAPI_InterCurveCurve) 
+			Intersection
+			(
+				const Handle(Geom2d_Curve)& theCurve0, 
+				const Handle(Geom2d_Curve)& theCurve1,
+				const Standard_Real theTol = 1.0E-6
+			);
+
+		static Handle(Geom2d_Curve) 
+			ConvertToTrimmedCurve
+			(
+				const Handle(Geom2d_Curve)& theCurve,
+				const Standard_Real theU0,
+				const Standard_Real theU1
+			);
 
 		static Handle(Geom_Surface)
 			ConvertToRectangularTrimmedSurface
@@ -35,6 +54,13 @@ namespace AutLib
 			ConvertToBSpline
 			(
 				const Handle(Geom_Surface)& theSurface
+			);
+
+		//- an exception will be thrown if the curve is not bounded
+		static Handle(Geom2d_Curve) 
+			ConvertToBSpline
+			(
+				const Handle(Geom2d_Curve)& theCurve
 			);
 
 		//- an exception will be thrown if the surface is not bspline
@@ -107,11 +133,27 @@ namespace AutLib
 			const Entity2d_Box& theParams
 		);
 
+		//- an exception will be thrown if the curve is not bounded
+		static Bnd_Box2d BoundingBox
+		(
+			const Handle(Geom2d_Curve)& theCurve
+		);
+
+		static Bnd_Box2d BoundingBox
+		(
+			const Handle(Geom2d_Curve)& theCurve,
+			const Standard_Real theU0, 
+			const Standard_Real theU1
+		);
+
 		static std::shared_ptr<Entity3d_Triangulation> 
 			Triangulation
 			(
 				const Poly_Triangulation& theTriangulation
 			);
+
+		//- an exception will be thrown if the curve is not bounded and the x exceeds the boundary
+		static void SplitCurve(const Handle(Geom2d_Curve)& theCurve, const Standard_Real theX, Handle(Geom2d_Curve)& theC0, Handle(Geom2d_Curve)& theC1);
 
 		static void ExportToIGES
 		(

@@ -51,6 +51,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutMeshAftOptNode", "AutMes
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutMeshAftCore", "AutMeshAftCore\AutMeshAftCore.vcxproj", "{AADEA632-4059-404A-9B25-0CCB225AA91E}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutCadOperators", "AutCadOperators\AutCadOperators.vcxproj", "{AC08AE30-A740-4E81-AE41-73EC60388D64}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -239,6 +241,14 @@ Global
 		{AADEA632-4059-404A-9B25-0CCB225AA91E}.Release|x64.Build.0 = Release|x64
 		{AADEA632-4059-404A-9B25-0CCB225AA91E}.Release|x86.ActiveCfg = Release|Win32
 		{AADEA632-4059-404A-9B25-0CCB225AA91E}.Release|x86.Build.0 = Release|Win32
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Debug|x64.ActiveCfg = Debug|x64
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Debug|x64.Build.0 = Debug|x64
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Debug|x86.ActiveCfg = Debug|Win32
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Debug|x86.Build.0 = Debug|Win32
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Release|x64.ActiveCfg = Release|x64
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Release|x64.Build.0 = Release|x64
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Release|x86.ActiveCfg = Release|Win32
+		{AC08AE30-A740-4E81-AE41-73EC60388D64}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

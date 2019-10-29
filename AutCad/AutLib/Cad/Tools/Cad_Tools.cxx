@@ -8,14 +8,18 @@
 #include <Bnd_Box.hxx>
 #include <Bnd_Box2d.hxx>
 #include <BndLib_AddSurface.hxx>
+#include <BndLib_Add2dCurve.hxx>
 #include <BRep_Tool.hxx>
 #include <Poly_Triangulation.hxx>
 #include <Geom2d_BoundedCurve.hxx>
+#include <Geom2d_TrimmedCurve.hxx>
+#include <Geom2d_Curve.hxx>
 #include <Geom_Surface.hxx>
 #include <Geom_BSplineSurface.hxx>
 #include <Geom_RectangularTrimmedSurface.hxx>
 #include <GeomAdaptor_Surface.hxx>
 #include <GeomConvert.hxx>
+#include <Geom2dConvert.hxx>
 #include <TopLoc_Location.hxx>
 #include <TopExp_Explorer.hxx>
 #include <TopoDS.hxx>
@@ -23,6 +27,54 @@
 #include <TopoDS_Shape.hxx>
 #include <IGESControl_Controller.hxx>
 #include <IGESControl_Writer.hxx>
+
+#include <Geom2dAPI_InterCurveCurve.hxx>
+
+Handle(Geom2dAPI_InterCurveCurve) 
+AutLib::Cad_Tools::Intersection
+(
+	const Handle(Geom2d_Curve)& theCurve0,
+	const Handle(Geom2d_Curve)& theCurve1,
+	const Standard_Real theTol
+)
+{
+	auto trimmed0 = Handle(Geom2d_BoundedCurve)::DownCast(theCurve0);
+	if (NOT trimmed0)
+	{
+		FatalErrorIn("Handle(Geom2dAPI_InterCurveCurve) Intersection(const Handle(Geom2d_Curve)& theCurve0, const Handle(Geom2d_Curve)& theCurve1, const Standard_Real theTol = 1.0E-6)")
+			<< "Invalid Data: the surface is not bounded!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	auto trimmed1 = Handle(Geom2d_BoundedCurve)::DownCast(theCurve1);
+	if (NOT trimmed1)
+	{
+		FatalErrorIn("Handle(Geom2dAPI_InterCurveCurve) Intersection(const Handle(Geom2d_Curve)& theCurve0, const Handle(Geom2d_Curve)& theCurve1, const Standard_Real theTol = 1.0E-6)")
+			<< "Invalid Data: the surface is not bounded!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	Handle(Geom2dAPI_InterCurveCurve) Inter = 
+		new Geom2dAPI_InterCurveCurve(theCurve0, theCurve1, theTol);
+	Debug_Null_Pointer(Inter);
+
+	return std::move(Inter);
+}
+
+Handle(Geom2d_Curve) 
+AutLib::Cad_Tools::ConvertToTrimmedCurve
+(
+	const Handle(Geom2d_Curve)& theCurve, 
+	const Standard_Real theU0, 
+	const Standard_Real theU1
+)
+{
+	Handle(Geom2d_Curve) trimmed = 
+		new Geom2d_TrimmedCurve(theCurve, theU0, theU1);
+	return std::move(trimmed);
+}
 
 Handle(Geom_Surface)
 AutLib::Cad_Tools::ConvertToRectangularTrimmedSurface
@@ -48,7 +100,7 @@ AutLib::Cad_Tools::ConvertToBSpline
 )
 {
 	auto trimmed = Handle(Geom_BoundedSurface)::DownCast(theSurface);
-	if (not trimmed)
+	if (NOT trimmed)
 	{
 		FatalErrorIn("Handle(Geom_Surface) ConvertToBSpline(const Handle(Geom_Surface)& theSurface)")
 			<< "Invalid Data: the surface is not bounded!" << endl
@@ -57,6 +109,25 @@ AutLib::Cad_Tools::ConvertToBSpline
 	}
 
 	auto bspline = GeomConvert::SurfaceToBSplineSurface(theSurface);
+	return std::move(bspline);
+}
+
+Handle(Geom2d_Curve) 
+AutLib::Cad_Tools::ConvertToBSpline
+(
+	const Handle(Geom2d_Curve)& theCurve
+)
+{
+	auto trimmed = Handle(Geom2d_BoundedCurve)::DownCast(theCurve);
+	if (NOT trimmed)
+	{
+		FatalErrorIn("Handle(Geom2d_Curve) ConvertToBSpline(const Handle(Geom2d_Curve)& theCurve)")
+			<< "Invalid Data: the surface is not bounded!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	auto bspline = Geom2dConvert::CurveToBSplineCurve(theCurve);
 	return std::move(bspline);
 }
 
@@ -380,6 +451,44 @@ AutLib::Cad_Tools::BoundingBox
 	return std::move(b);
 }
 
+Bnd_Box2d 
+AutLib::Cad_Tools::BoundingBox
+(
+	const Handle(Geom2d_Curve)& theCurve
+)
+{
+	auto trimmed = Handle(Geom2d_BoundedCurve)::DownCast(theCurve);
+	if (NOT trimmed)
+	{
+		FatalErrorIn("Handle(Geom2d_Curve) ConvertToBSpline(const Handle(Geom2d_Curve)& theCurve)")
+			<< "Invalid Data: the surface is not bounded!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	auto box = BoundingBox
+	(
+		theCurve, 
+		trimmed->FirstParameter(),
+		trimmed->LastParameter()
+	);
+	return std::move(box);
+}
+
+Bnd_Box2d 
+AutLib::Cad_Tools::BoundingBox
+(
+	const Handle(Geom2d_Curve)& theCurve,
+	const Standard_Real theU0, 
+	const Standard_Real theU1
+)
+{
+	Bnd_Box2d b;
+	BndLib_Add2dCurve::Add(theCurve, theU0, theU1, 0, b);
+
+	return std::move(b);
+}
+
 std::shared_ptr<AutLib::Entity3d_Triangulation> 
 AutLib::Cad_Tools::Triangulation
 (
@@ -412,6 +521,39 @@ AutLib::Cad_Tools::Triangulation
 		indices.push_back(std::move(I));
 	}
 	return std::move(triangulation);
+}
+
+void AutLib::Cad_Tools::SplitCurve
+(
+	const Handle(Geom2d_Curve)& theCurve,
+	const Standard_Real theX,
+	Handle(Geom2d_Curve)& theC0, 
+	Handle(Geom2d_Curve)& theC1
+)
+{
+	auto trimmed = Handle(Geom2d_BoundedCurve)::DownCast(theCurve);
+	if (NOT trimmed)
+	{
+		FatalErrorIn("void SplitCurve(const Handle(Geom2d_Curve)& theCurve, const Standard_Real theX, Handle(Geom2d_Curve)& theC0, Handle(Geom2d_Curve)& theC1)")
+			<< "Invalid Data: the surface is not bounded!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	if (NOT INSIDE(theX, theCurve->FirstParameter(), theCurve->LastParameter()))
+	{
+		FatalErrorIn("void SplitCurve(const Handle(Geom2d_Curve)& theCurve, const Standard_Real theX, Handle(Geom2d_Curve)& theC0, Handle(Geom2d_Curve)& theC1)")
+			<< "Invalid Parameter: " << theX << endl
+			<< " - First parameter: " << theCurve->FirstParameter() << endl
+			<< " - Last parameter: " << theCurve->LastParameter() << endl
+			<< abort(FatalError);
+	}
+
+	auto first = theCurve->FirstParameter();
+	auto last = theCurve->LastParameter();
+
+	theC0 = Cad_Tools::ConvertToTrimmedCurve(theCurve, first, theX);
+	theC1 = Cad_Tools::ConvertToTrimmedCurve(theCurve, theX, last);
 }
 
 void AutLib::Cad_Tools::ExportToIGES

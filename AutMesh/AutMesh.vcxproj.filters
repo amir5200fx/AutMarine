@@ -522,12 +522,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.hxx">
-      <Filter>AutLib\Cad\PlnCurve</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurveI.hxx">
-      <Filter>AutLib\Cad\PlnCurve</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Mesh\System\Mesh_EntityCounterM.hxx">
       <Filter>AutLib\Mesh\System</Filter>
     </ClInclude>
@@ -975,23 +969,8 @@
     <ClInclude Include="AutLib\Mesh\Alg\Curve\Mesh_CurveI.hxx">
       <Filter>AutLib\Mesh\Alg\Curve</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Discretizer\Mesh_PlnCurve_Discretizer.hxx">
-      <Filter>AutLib\Cad\Discretizer</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Mesh\System\Mesh_TypeTraits.hxx">
       <Filter>AutLib\Mesh\System</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWire.hxx">
-      <Filter>AutLib\Cad\PlnWire</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWireI.hxx">
-      <Filter>AutLib\Cad\PlnWire</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplate.hxx">
-      <Filter>AutLib\Cad\Surface</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplateI.hxx">
-      <Filter>AutLib\Cad\Surface</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Aft_FrontInfo.hxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Data\Front\Info</Filter>
@@ -1223,9 +1202,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.cxx">
-      <Filter>AutLib\Cad\PlnCurve</Filter>
-    </ClCompile>
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Entities\Edge\Aft_Edge.cxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Entities\Edge</Filter>
     </ClCompile>

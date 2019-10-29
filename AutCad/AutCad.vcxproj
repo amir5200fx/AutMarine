@@ -150,6 +150,9 @@
     <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Info.hxx" />
     <ClInclude Include="AutLib\Cascade\IO\Format\System\IO_Shape.hxx" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{CD9FB958-FB78-41A4-BEE6-F06E02DA75A7}</ProjectGuid>

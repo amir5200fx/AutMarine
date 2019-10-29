@@ -122,13 +122,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\Cad\Discretizer\Mesh_PlnCurve_Discretizer.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurveI.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWire.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWireI.hxx" />
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplate.hxx" />
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplateI.hxx" />
     <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Geo_ApprxSurfMetric.hxx" />
     <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Info\Geo_ApprxSurfMetricInfo.hxx" />
     <ClInclude Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.hxx" />
@@ -357,7 +350,6 @@
     <ClInclude Include="AutLib\Mesh\System\Mesh_TypeTraits.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.cxx" />
     <ClCompile Include="AutLib\Geom\Approximation\SurfaceMetric\Geo_ApprxSurfMetric.cxx" />
     <ClCompile Include="AutLib\Geom\Approximation\SurfaceMetric\Info\Geo_ApprxSurfMetricInfo.cxx" />
     <ClCompile Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.cxx" />

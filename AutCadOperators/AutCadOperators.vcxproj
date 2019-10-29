@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -19,22 +19,22 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{D9F7A879-3057-40C6-9B01-830BB7E4B355}</ProjectGuid>
-    <RootNamespace>AutMeshCurve</RootNamespace>
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{AC08AE30-A740-4E81-AE41-73EC60388D64}</ProjectGuid>
+    <RootNamespace>AutCadOperators</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -45,7 +45,7 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -72,20 +72,14 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -94,9 +88,6 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -108,7 +99,6 @@
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
@@ -121,48 +111,33 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\MeshCurve\Cad\Plane\Curve\Mesh_PlnCurve.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Cad\Plane\Curve\Mesh_PlnCurveI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Curve\Mesh_Curve.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Curve\Mesh_CurveI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntityI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_Function.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_FunctionI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Length\Mesh_CurveLength.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Length\Mesh_CurveLengthI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Correction\Info\Mesh_CurveOptmPoint_CorrectionInfo.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Correction\Mesh_CurveOptmPoint_Correction.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Correction\Mesh_CurveOptmPoint_CorrectionI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Derivation\Mesh_CurveOptmPoint_Newton_Derivation.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Derivation\Mesh_CurveOptmPoint_Newton_DerivationI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Function\Mesh_CurveOptmPoint_Newton_Function.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Function\Mesh_CurveOptmPoint_Newton_FunctionI.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_Newton.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_NewtonI.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Info\Pln_IntsctEdgeEdgeInfo.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Pln_IntsctEdgeEdge.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Edge\Boundary\Pln_IntsctEdge_Boundary.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Edge\Inner\Pln_IntsctEdge_Inner.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Edge\Outer\Pln_IntsctEdge_Outer.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Edge\Pln_IntsctEdge.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Edge\Subdivided\Pln_IntsctEdge_Subdivided.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Pln_IntsctEntity.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Pln_IntsctPair.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Point\Pln_IntsctPoint.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Segment\Pln_IntscSegment.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Vertex\Pln_IntsctVertex.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Tools\Pln_IntsctTools.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\MeshCurve\Cad\Plane\Curve\Mesh_PlnCurve.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\Curve\Mesh_Curve.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_Function.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\Length\Mesh_CurveLength.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Correction\Info\Mesh_CurveOptmPoint_CorrectionInfo.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Correction\Mesh_CurveOptmPoint_Correction.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Newton\Derivation\Mesh_CurveOptmPoint_Newton_Derivation.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Newton\Function\Mesh_CurveOptmPoint_Newton_Function.cxx" />
-    <ClCompile Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_Newton.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Info\Pln_IntsctEdgeEdgeInfo.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Pln_IntsctEdgeEdge.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Pln_IntsctEntity.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Point\Pln_IntsctPoint.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Tools\Pln_IntsctTools.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
