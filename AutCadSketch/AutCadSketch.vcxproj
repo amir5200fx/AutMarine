@@ -83,6 +83,10 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Polygon;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Info;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\System;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Engine;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d;$(SolutionDir)AutCadSketch\AutLib\Sketch;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Quadrilateral;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\LineSegment;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Approximation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation\Info;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Ellipse;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Circle;$(SolutionDir)AutCadSketch\AutLib\Geom\2d;$(SolutionDir)AutCadSketch\AutLib\Geom;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

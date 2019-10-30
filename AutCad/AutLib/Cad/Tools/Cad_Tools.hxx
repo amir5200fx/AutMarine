@@ -46,6 +46,14 @@ namespace AutLib
 				const Standard_Integer theNbSegments_V
 			);
 
+		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
+			PreviewUnMergedPatchCurves
+			(
+				const Handle(Geom_Surface)& theSurface,
+				const Standard_Integer theNbSegments_U,
+				const Standard_Integer theNbSegments_V
+			);
+
 		static std::shared_ptr<Entity3d_Triangulation>
 			PreviewPatchCurves
 			(
@@ -55,7 +63,23 @@ namespace AutLib
 			);
 
 		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
+			PreviewUnMergedPatchCurves
+			(
+				const TopoDS_Face& theFace,
+				const Standard_Integer theNbSegments_U,
+				const Standard_Integer theNbSegments_V
+			);
+
+		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
 			PreviewPatchCurves
+			(
+				const TopoDS_Shape& theShape,
+				const Standard_Integer theNbSegments_U,
+				const Standard_Integer theNbSegments_V
+			);
+
+		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
+			PreviewUnMergedPatchCurves
 			(
 				const TopoDS_Shape& theShape,
 				const Standard_Integer theNbSegments_U,

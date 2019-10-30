@@ -83,6 +83,10 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station\Single;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station\Underwater;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station\Waterline;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station\Info;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station\Dry;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station\Type;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station\Compound;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Station;$(SolutionDir)AutVesselStation\AutLib\VesselStation\Stations;$(SolutionDir)AutMarineBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

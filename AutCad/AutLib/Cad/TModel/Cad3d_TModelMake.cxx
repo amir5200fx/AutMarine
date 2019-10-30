@@ -15,6 +15,10 @@
 #include <TModel_Shell.hxx>
 #include <TModel_Tools.hxx>
 
+#include <iostream>
+
+#include <TopoDS_Shape.hxx>
+
 namespace AutLib
 {
 

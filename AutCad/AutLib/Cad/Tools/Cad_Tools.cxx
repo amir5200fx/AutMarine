@@ -113,6 +113,44 @@ AutLib::Cad_Tools::PreviewPatchCurves
 	return std::move(merged);
 }
 
+std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>> 
+AutLib::Cad_Tools::PreviewUnMergedPatchCurves
+(
+	const Handle(Geom_Surface)& theSurface,
+	const Standard_Integer theNbSegments_U,
+	const Standard_Integer theNbSegments_V
+)
+{
+	auto bspline = Handle(Geom_BSplineSurface)::DownCast(theSurface);
+	if (not bspline)
+	{
+		FatalErrorIn("Handle(Geom_Surface) PreviewPatchCurves(const Handle(Geom_Surface)& theSurface)")
+			<< "Invalid Data: the surface is not bspline!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	auto uknots = bspline->UKnots();
+	auto vknots = bspline->VKnots();
+
+	std::vector<std::shared_ptr<Entity3d_Triangulation>> trinagulations;
+	trinagulations.reserve(uknots.Size() + vknots.Size());
+
+	for (const auto x : uknots)
+	{
+		auto tr = PreviewCurveOnSurface_U(theSurface, x, theNbSegments_U);
+		trinagulations.push_back(std::move(tr));
+	}
+
+	for (const auto x : vknots)
+	{
+		auto tr = PreviewCurveOnSurface_V(theSurface, x, theNbSegments_U);
+		trinagulations.push_back(std::move(tr));
+	}
+
+	return std::move(trinagulations);
+}
+
 std::shared_ptr<AutLib::Entity3d_Triangulation> 
 AutLib::Cad_Tools::PreviewPatchCurves
 (
@@ -134,6 +172,26 @@ AutLib::Cad_Tools::PreviewPatchCurves
 }
 
 std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>>
+AutLib::Cad_Tools::PreviewUnMergedPatchCurves
+(
+	const TopoDS_Face& theFace,
+	const Standard_Integer theNbSegments_U, 
+	const Standard_Integer theNbSegments_V
+)
+{
+	auto geom = BRep_Tool::Surface(theFace);
+	if (NOT geom)
+	{
+		FatalErrorIn("std::shared_ptr<Entity3d_Triangulation> PreviewPatchCurves()")
+			<< "the face has no geometry!" << endl
+			<< abort(FatalError);
+	}
+
+	auto tri = PreviewUnMergedPatchCurves(geom, theNbSegments_U, theNbSegments_V);
+	return std::move(tri);
+}
+
+std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>>
 AutLib::Cad_Tools::PreviewPatchCurves
 (
 	const TopoDS_Shape& theShape, 
@@ -150,6 +208,28 @@ AutLib::Cad_Tools::PreviewPatchCurves
 			)
 	{
 		preview.push_back(PreviewPatchCurves(TopoDS::Face(Explorer.Current()), theNbSegments_U, theNbSegments_V));
+	}
+	return std::move(preview);
+}
+
+std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>> 
+AutLib::Cad_Tools::PreviewUnMergedPatchCurves(const TopoDS_Shape& theShape, const Standard_Integer theNbSegments_U, const Standard_Integer theNbSegments_V)
+{
+	std::vector<std::shared_ptr<Entity3d_Triangulation>> preview;
+	for
+		(
+			TopExp_Explorer Explorer(theShape, TopAbs_FACE);
+			Explorer.More();
+			Explorer.Next()
+			)
+	{
+		auto face = TopoDS::Face(Explorer.Current());
+
+		auto curves = PreviewUnMergedPatchCurves(face, theNbSegments_U, theNbSegments_V);
+		for (const auto& x : curves)
+		{
+			preview.push_back(x);
+		}
 	}
 	return std::move(preview);
 }
@@ -341,8 +421,7 @@ AutLib::Cad_Tools::RetrieveTriangulation
 {
 	TopLoc_Location Loc;
 	auto Triangulation = BRep_Tool::Triangulation(theFace, Loc);
-
-	return Triangulation;
+	return std::move(Triangulation);
 }
 
 std::vector<Handle(Poly_Triangulation)> 

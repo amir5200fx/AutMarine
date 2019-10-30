@@ -235,6 +235,8 @@ namespace AutLib
 
 		Leg_Nihad2_BareHull()
 		{}
+
+		void PerformToPreview() override;
 	};
 }
 
