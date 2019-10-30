@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutMarine", "AutMarine\AutMarine.vcxproj", "{D2126030-8550-48FB-B678-7E0E236FC370}"
 EndProject
@@ -143,12 +143,10 @@ Global
 		{0B03CA50-B983-4CFC-97BA-ACEE431F386B}.Release|x86.Build.0 = Release|Win32
 		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Debug|x64.ActiveCfg = Debug|x64
 		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Debug|x64.Build.0 = Debug|x64
-		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Debug|x86.ActiveCfg = Debug|Win32
-		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Debug|x86.Build.0 = Debug|Win32
+		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Debug|x86.ActiveCfg = Debug|x64
 		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Release|x64.ActiveCfg = Release|x64
 		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Release|x64.Build.0 = Release|x64
-		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Release|x86.ActiveCfg = Release|Win32
-		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Release|x86.Build.0 = Release|Win32
+		{3DDF3EE9-8D3A-4157-8C18-012E0E49339B}.Release|x86.ActiveCfg = Release|x64
 		{7FC6BC16-DDE4-491A-BED3-2F4121766223}.Debug|x64.ActiveCfg = Debug|x64
 		{7FC6BC16-DDE4-491A-BED3-2F4121766223}.Debug|x64.Build.0 = Debug|x64
 		{7FC6BC16-DDE4-491A-BED3-2F4121766223}.Debug|x86.ActiveCfg = Debug|Win32
