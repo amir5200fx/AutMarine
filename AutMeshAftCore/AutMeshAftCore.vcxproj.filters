@@ -10,6 +10,12 @@
     <Filter Include="AutLib\MeshAft\Core">
       <UniqueIdentifier>{11fd86bf-189b-45c5-a0e3-9cdf397e949a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Core\2d">
+      <UniqueIdentifier>{5ae2f9bf-037f-424f-a511-42d94010daf2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core\Surface">
+      <UniqueIdentifier>{701ef3e4-762b-43a1-a3b1-d548a016e440}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Core\Aft_CoreI.hxx">
@@ -17,6 +23,15 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Core\Aft_Core.hxx">
       <Filter>AutLib\MeshAft\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\2d\Aft2d_CoreTemplate.hxx">
+      <Filter>AutLib\MeshAft\Core\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\2d\Aft2d_CoreAnIsoTemplate.hxx">
+      <Filter>AutLib\MeshAft\Core\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurfaceTemplate.hxx">
+      <Filter>AutLib\MeshAft\Core\Surface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

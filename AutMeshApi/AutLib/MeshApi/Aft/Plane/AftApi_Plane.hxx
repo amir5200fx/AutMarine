@@ -5,22 +5,29 @@
 #include <Global_Done.hxx>
 #include <Global_Verbose.hxx>
 #include <Entity2d_Triangulation.hxx>
+#include <MeshApi_Aft.hxx>
+#include <Aft2d_CoreTemplate.hxx>
 
 #include <memory>
 
 namespace AutLib
 {
 
-	template<class PlaneType, class AftMetricPrcsr>
-	class AftApi_Plane
+	// Forward Declarations
+	class Cad2d_Plane;
+
+	template<class OptNodeAlg, class AftMetricPrcsr>
+	class MeshApi_Aft<Cad2d_Plane, OptNodeAlg, AftMetricPrcsr, false>
 		: public Global_Done
 		, public Global_Verbose
+		, public Aft2d_CoreTemplate<OptNodeAlg, AftMetricPrcsr>
 	{
 
 		/*Private Data*/
 
-		std::shared_ptr<PlaneType> thePlane_;
+		std::shared_ptr<Cad2d_Plane> thePlane_;
 		std::shared_ptr<AftMetricPrcsr> theMetricMap_;
+
 
 		std::shared_ptr<Entity2d_Triangulation> theMesh_;
 
@@ -32,19 +39,19 @@ namespace AutLib
 
 	public:
 
-		AftApi_Plane()
+		MeshApi_Aft()
 		{}
 
-		AftApi_Plane
+		MeshApi_Aft
 		(
-			const std::shared_ptr<PlaneType>& thePlane, 
+			const std::shared_ptr<Cad2d_Plane>& thePlane,
 			const std::shared_ptr<AftMetricPrcsr>& theMetricMap
 		)
 			: thePlane_(thePlane)
 			, theMetricMap_(theMetricMap)
 		{}
 
-		const std::shared_ptr<PlaneType>& Plane() const
+		const std::shared_ptr<Cad2d_Plane>& Plane() const
 		{
 			return thePlane_;
 		}
@@ -61,7 +68,7 @@ namespace AutLib
 
 		void Perform();
 
-		void LoadPlane(const std::shared_ptr<PlaneType>& thePlane)
+		void LoadPlane(const std::shared_ptr<Cad2d_Plane>& thePlane)
 		{
 			thePlane_ = thePlane;
 		}
@@ -70,10 +77,9 @@ namespace AutLib
 		{
 			theMetricMap_ = theMap;
 		}
-
-		
-
 	};
+
+	
 }
 
 #include <AftApi_PlaneI.hxx>

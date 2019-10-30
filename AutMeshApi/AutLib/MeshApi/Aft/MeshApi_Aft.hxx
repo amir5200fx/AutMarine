@@ -5,12 +5,12 @@
 namespace AutLib
 {
 
-	template<class ModelType, class AftMetricPrcsrType>
+	template<class ModelType, class OptNodeAlg, class AftMetricPrcsr, bool BndOnly = false>
 	class MeshApi_Aft
 	{
 
-
 	};
+	
 }
 
 #endif // !_MeshApi_Aft_Header
