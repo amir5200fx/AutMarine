@@ -119,6 +119,12 @@ namespace AutLib
 			const TopoDS_Shape& theShape, 
 			const fileName& name
 		);
+
+		static void ExportToSTEP
+		(
+			const TopoDS_Shape& theShape,
+			const fileName& name
+		);
 	};
 }
 

@@ -23,6 +23,8 @@
 #include <TopoDS_Shape.hxx>
 #include <IGESControl_Controller.hxx>
 #include <IGESControl_Writer.hxx>
+#include <STEPControl_Controller.hxx>
+#include <STEPControl_Writer.hxx>
 
 Handle(Geom_Surface)
 AutLib::Cad_Tools::ConvertToRectangularTrimmedSurface
@@ -428,4 +430,32 @@ void AutLib::Cad_Tools::ExportToIGES
 	Writer.ComputeModel();
 
 	Standard_Boolean OK = Writer.Write(name.c_str());
+
+	if (NOT OK)
+	{
+		FatalErrorIn("void ExportToIGES()")
+			<< "Unable to export the model" << endl
+			<< abort(FatalError);
+	}
+}
+
+void AutLib::Cad_Tools::ExportToSTEP
+(
+	const TopoDS_Shape& theShape,
+	const fileName& name
+)
+{
+	STEPControl_Controller::Init();
+
+	STEPControl_Writer Writer;
+	Writer.Transfer(theShape, STEPControl_ManifoldSolidBrep);
+
+	Standard_Boolean OK = Writer.Write(name.c_str());
+
+	if (NOT OK)
+	{
+		FatalErrorIn("void ExportToSTEP()")
+			<< "Unable to export the model" << endl
+			<< abort(FatalError);
+	}
 }
