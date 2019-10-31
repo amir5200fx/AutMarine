@@ -277,6 +277,18 @@
     <Filter Include="AutLib\Geom\Function\Metric\3d">
       <UniqueIdentifier>{f69ed00a-b3c4-43d3-9268-b8bcb76d514e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\Iso\2d">
+      <UniqueIdentifier>{0b532e86-7f5d-4586-92d7-fdb57387f77d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\Iso\3d">
+      <UniqueIdentifier>{931c9203-1e0b-4b25-a367-192e12acff5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\AnIso\2d">
+      <UniqueIdentifier>{7274f340-f782-4652-a219-f575124598ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\AnIso\3d">
+      <UniqueIdentifier>{535484cb-5088-4358-aaf2-cf6c4e90a1f9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -407,6 +419,18 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Length\Curve\Geo_CurveLength.cxx">
       <Filter>AutLib\Geom\Length\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsr.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsr.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIso.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIso.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\2d</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -727,6 +751,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunction.hxx">
       <Filter>AutLib\Geom\Function\Metric\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsr.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsr.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIso.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIso.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

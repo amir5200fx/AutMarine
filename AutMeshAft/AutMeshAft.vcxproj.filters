@@ -244,6 +244,9 @@
     <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge">
       <UniqueIdentifier>{b7e6bfac-f6b0-4d0b-8d96-9d6e56836e0a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\BNode">
+      <UniqueIdentifier>{63440127-1d74-41d6-b989-8531e26fbe25}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Entities\Node\Aft_Node.hxx">
@@ -665,6 +668,75 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\Aft2d_SegmentEdgeAnIso.hxx">
       <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge\Aft2d_BndEdge.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\BEdge\Aft2d_BndEdgeAnIso.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Traits\Aft2d_BndNodeSurfaceTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\BNode\Aft2d_BndNodeSurfaceFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface\BNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_gCornerNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_tCornerNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_gSegmentNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_tSegmentNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface\Aft2d_gSegmentEdgeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface\Aft2d_tSegmentEdgeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits\Aft2d_BndEdgeSurfaceTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\BNode\Aft2d_BndNodeSurface.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface\BNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface\BEdge\Aft2d_BndEdgeSurface.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Surface\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface\Aft2d_gSegmentEdge.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface\Aft2d_tSegmentEdge.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits\Aft2d_gBndEdgeSurfaceTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits\Aft2d_tBndEdgeSurfaceTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Traits\Aft2d_gBndNodeSurfaceTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Traits\Aft2d_tBndNodeSurfaceTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_gCornerNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_tCornerNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_gSegmentNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_tSegmentNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
