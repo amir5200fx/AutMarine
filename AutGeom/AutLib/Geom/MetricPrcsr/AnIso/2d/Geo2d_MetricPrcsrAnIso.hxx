@@ -5,6 +5,7 @@
 #include <Geo_MetricPrcsr.hxx>
 #include <Geo2d_SizeFunction.hxx>
 #include <Geo2d_MetricFunction.hxx>
+#include <Entity2d_Metric1.hxx>
 
 namespace AutLib
 {

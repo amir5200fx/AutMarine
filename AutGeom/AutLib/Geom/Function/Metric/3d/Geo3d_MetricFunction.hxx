@@ -4,6 +4,7 @@
 
 #include <Geo_MetricFunction.hxx>
 #include <Pnt3d.hxx>
+#include <Entity3d_Metric1.hxx>
 
 namespace AutLib
 {

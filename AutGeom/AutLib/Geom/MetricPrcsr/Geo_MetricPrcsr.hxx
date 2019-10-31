@@ -17,7 +17,11 @@ namespace AutLib
 		, public Global_Named
 	{
 		
+	public:
+
 		typedef Numeric_AdaptIntegrationInfo info;
+
+	private:
 
 		/*Private Data*/
 

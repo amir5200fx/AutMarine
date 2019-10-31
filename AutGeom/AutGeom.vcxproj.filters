@@ -289,6 +289,9 @@
     <Filter Include="AutLib\Geom\MetricPrcsr\AnIso\3d">
       <UniqueIdentifier>{535484cb-5088-4358-aaf2-cf6c4e90a1f9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Entities\Metric1\3d">
+      <UniqueIdentifier>{bd2d1bc3-bd52-4f0d-ab61-cafbd98d6bc5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -431,6 +434,12 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIso.cxx">
       <Filter>AutLib\Geom\MetricPrcsr\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1.cxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1IO.cxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -763,6 +772,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIso.hxx">
       <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1.hxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1I.hxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
