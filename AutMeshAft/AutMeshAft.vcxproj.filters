@@ -181,6 +181,69 @@
     <Filter Include="AutLib\MeshAft\MetricProcessor\Iso\3d">
       <UniqueIdentifier>{6ed8a032-ab30-4d23-b1f7-71ae70d22482}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd">
+      <UniqueIdentifier>{cdc6dd34-14cc-4d7c-a1d4-f73f20069638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node">
+      <UniqueIdentifier>{5e73a757-f41c-4632-baeb-0815e5d4fddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge">
+      <UniqueIdentifier>{8125f82c-b0e9-42eb-983e-25b8c26e0ff5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Facet">
+      <UniqueIdentifier>{27cc12cd-36e6-4e87-ba10-0a0a3b8ef97c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\Adaptor">
+      <UniqueIdentifier>{bcb843c4-1cbc-482e-b2c8-b7d99f8476cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\Iso">
+      <UniqueIdentifier>{8f56c8e9-d5ea-4366-a812-14f0e48bef04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso">
+      <UniqueIdentifier>{06d7af35-1d63-48ce-bf28-38b11f65376a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\Surface">
+      <UniqueIdentifier>{c5235737-d337-478f-9a09-2cc07ab8d738}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\TNode">
+      <UniqueIdentifier>{237c9b8c-b096-4016-82b2-18736d884ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\Traits">
+      <UniqueIdentifier>{101d50cc-fece-4fad-a95a-88fa09db63f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\BNode">
+      <UniqueIdentifier>{be883b00-90f9-45f8-97d2-d74d19219a17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Bnd">
+      <UniqueIdentifier>{1d879c5d-3206-47c5-b363-52887ef0f6f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\TEdge">
+      <UniqueIdentifier>{4ab67396-fbb4-404d-b15a-112dd3557c18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\Adaptor">
+      <UniqueIdentifier>{d9c2d8c5-6869-46d3-b3f6-16c6cba5d9df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits">
+      <UniqueIdentifier>{01317e9e-512e-4655-8674-6194f2f1fee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso">
+      <UniqueIdentifier>{a4d1e558-e658-4762-8d53-4e8f405f4664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso">
+      <UniqueIdentifier>{fc86f757-9be5-4cd7-b913-c83a6e85ddb1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface">
+      <UniqueIdentifier>{e2f5e96a-3581-4342-aac4-f00afe76de04}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface\BEdge">
+      <UniqueIdentifier>{a3887a3c-bb47-4cf7-9290-8e7bab9faf43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\BEdge">
+      <UniqueIdentifier>{3924fa68-5fe8-4b96-8eee-27df9deec61c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge">
+      <UniqueIdentifier>{b7e6bfac-f6b0-4d0b-8d96-9d6e56836e0a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Entities\Node\Aft_Node.hxx">
@@ -455,6 +518,153 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\Mesh_AftMetricPrcsrIsoI.hxx">
       <Filter>AutLib\MeshAft\MetricProcessor\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Aft_BndNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Adaptor\Aft_BndNodeAdaptor.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\TNode\Aft_TBndNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\TNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\Aft2d_SegmentNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\Aft3d_SegmentNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\Aft2d_CornerNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\Aft3d_CornerNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\Aft3d_FacetNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\BNode\Aft2d_BndNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso\BNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\BNode\Aft3d_BndNodeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso\BNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\BNode\Aft2d_BndNodeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso\Bnd</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\BNode\Aft3d_BndNodeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso\Bnd</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Aft2d_CornerNodeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Aft2d_SegmentNodeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Aft3d_CornerNodeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Aft3d_FacetNodeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Aft3d_SegmentNodeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Adaptor\Aft_BndEdgeAdaptor.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Aft_BndEdge.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Aft_BndEdgeI.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\TEdge\Aft_TBndEdge.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\TEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\TEdge\Aft_TBndEdgeI.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\TEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge\Aft2d_BndEdgeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge\Aft3d_BndEdgeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Iso\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Surface\BEdge\Aft2d_BndEdgeSurfaceFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Surface\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\Aft2d_SegmentEdgeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\Aft3d_SegmentEdgeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\Aft3d_FacetEdgeFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\Aft2d_SegmentEdgeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\Aft3d_SegmentEdgeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\Aft3d_FacetEdgeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Traits\Aft2d_BndNodeTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Traits\Aft2d_BndNodeAnIsoTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\BEdge\Aft3d_BndEdgeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\BEdge\Aft2d_BndEdgeAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso\BEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Traits\Aft2d_TBndNodeTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Traits\Aft2d_TBndNodeAnIsoTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\Aft2d_CornerNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\Aft2d_SegmentNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Aft2d_CornerNodeAnIso.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\Aft2d_SegmentNodeAnIso.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Iso\BNode\Aft2d_BndNode.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\Iso\BNode</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\AnIso\BNode\Aft2d_BndNodeAnIso.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Node\AnIso\Bnd</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits\Aft2d_BndEdgeTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits\Aft2d_BndEdgeAnIsoTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits\Aft2d_TBndEdgeTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Traits\Aft2d_TBndEdgeAnIsoTraits.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\Iso\Aft2d_SegmentEdge.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Edge\AnIso\Aft2d_SegmentEdgeAnIso.hxx">
+      <Filter>AutLib\MeshAft\Entities\Bnd\Edge\AnIso</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

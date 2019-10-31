@@ -136,6 +136,24 @@
     <Filter Include="AutLib\MeshBase\Data">
       <UniqueIdentifier>{3cdd7ecd-7680-4219-bc47-8540ceb190f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Node">
+      <UniqueIdentifier>{ac10e41c-e7a8-4100-b844-0cc3fe50f301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Node\Position">
+      <UniqueIdentifier>{8c663e2c-8785-4912-bb28-1161c744dde3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Node\Adaptor">
+      <UniqueIdentifier>{ad8fa792-3061-45c9-91d4-0963fb59df58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Edge">
+      <UniqueIdentifier>{4b3e2330-56cd-4a8d-a49c-b6a8284dedbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Edge\Position">
+      <UniqueIdentifier>{bef5814b-f4e1-467e-9107-c6be3cbb9613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Edge\Adaptor">
+      <UniqueIdentifier>{44bd464f-7a3f-4863-91ac-c33d5c457cf3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshBase\Entities\Entity\Mesh_Entity.cxx">
@@ -370,6 +388,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshBase\Data\Mesh_QualityMap.hxx">
       <Filter>AutLib\MeshBase\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Node\Position\Mesh_BndNode_Position.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Node\Position</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Node\Adaptor\Mesh_BndNodeGeomAdaptor.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Node\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Edge\Position\Mesh_BndEdge_Position.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Edge\Position</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Edge\Adaptor\Mesh_BndEdgeGeomAdaptor.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Edge\Adaptor</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
