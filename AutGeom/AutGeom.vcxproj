@@ -186,7 +186,11 @@
     <ClInclude Include="AutLib\Geom\Entities\Triangulation\3d\Entity3d_TriangulationFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Entities\Vector\2d\Vec2d.hxx" />
     <ClInclude Include="AutLib\Geom\Function\Metric\2d\Geo2d_MetricFunction.hxx" />
+    <ClInclude Include="AutLib\Geom\Function\Metric\2d\Geo2d_MetricFunctionFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunction.hxx" />
+    <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunctionFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Function\Size\2d\Geo2d_SizeFunctionFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Function\Size\3d\Geo3d_SizeFunctionFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Integrand\Curve\Function\Geo_CurveIntegrand_Function.hxx" />
     <ClInclude Include="AutLib\Geom\Integrand\Curve\Function\Geo_CurveIntegrand_FunctionI.hxx" />
     <ClInclude Include="AutLib\Geom\Integrand\Curve\Geo_CurveIntegrand.hxx" />

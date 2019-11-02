@@ -10,12 +10,6 @@
     <Filter Include="AutLib\MeshCurve\Entity">
       <UniqueIdentifier>{8e518fb8-02a0-407c-8854-87c4b1c6f71d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshCurve\Entity\2d">
-      <UniqueIdentifier>{8bd842b1-59f2-4804-9b1d-231a786de199}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshCurve\Entity\3d">
-      <UniqueIdentifier>{84c9ef43-47b4-48fc-b82c-285cd09ac6ae}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\MeshCurve\OptmPoint">
       <UniqueIdentifier>{3f64ed8e-5acb-4b23-a161-55f8e22df289}</UniqueIdentifier>
     </Filter>
@@ -46,14 +40,17 @@
     <Filter Include="AutLib\MeshCurve\Length\Function">
       <UniqueIdentifier>{2b82567a-ff95-4484-9b83-e5b435f8ddb4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshCurve\Cad">
-      <UniqueIdentifier>{af25a74b-45b4-42b3-b32a-b6197165eb09}</UniqueIdentifier>
+    <Filter Include="AutLib\MeshCurve\Entity\Iso">
+      <UniqueIdentifier>{8bd842b1-59f2-4804-9b1d-231a786de199}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshCurve\Cad\Plane">
-      <UniqueIdentifier>{a327cd56-1f03-438b-a825-cbc0984990a6}</UniqueIdentifier>
+    <Filter Include="AutLib\MeshCurve\Entity\AnIso">
+      <UniqueIdentifier>{84c9ef43-47b4-48fc-b82c-285cd09ac6ae}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshCurve\Cad\Plane\Curve">
-      <UniqueIdentifier>{bf73cff8-60c7-4519-a662-055a52278738}</UniqueIdentifier>
+    <Filter Include="AutLib\MeshCurve\Curve\Iso">
+      <UniqueIdentifier>{1ffce931-f626-4850-b7cc-588366b19a82}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\Curve\AnIso">
+      <UniqueIdentifier>{b7178e19-38bf-416b-9a4a-1020e567e5d4}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -111,11 +108,17 @@
     <ClInclude Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_FunctionI.hxx">
       <Filter>AutLib\MeshCurve\Length\Function</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshCurve\Cad\Plane\Curve\Mesh_PlnCurve.hxx">
-      <Filter>AutLib\MeshCurve\Cad\Plane\Curve</Filter>
+    <ClInclude Include="AutLib\MeshCurve\Entity\Iso\Mesh2d_CurveEntity.hxx">
+      <Filter>AutLib\MeshCurve\Entity\Iso</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshCurve\Cad\Plane\Curve\Mesh_PlnCurveI.hxx">
-      <Filter>AutLib\MeshCurve\Cad\Plane\Curve</Filter>
+    <ClInclude Include="AutLib\MeshCurve\Entity\AnIso\Mesh2d_CurveEntityAnIso.hxx">
+      <Filter>AutLib\MeshCurve\Entity\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Curve\Iso\Mesh2d_Curve.hxx">
+      <Filter>AutLib\MeshCurve\Curve\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Curve\AnIso\Mesh2d_CurveAnIso.hxx">
+      <Filter>AutLib\MeshCurve\Curve\AnIso</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -148,9 +151,6 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_Function.cxx">
       <Filter>AutLib\MeshCurve\Length\Function</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshCurve\Cad\Plane\Curve\Mesh_PlnCurve.cxx">
-      <Filter>AutLib\MeshCurve\Cad\Plane\Curve</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

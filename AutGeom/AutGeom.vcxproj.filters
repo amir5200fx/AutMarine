@@ -779,5 +779,17 @@
     <ClInclude Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1I.hxx">
       <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\2d\Geo2d_SizeFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Size\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\3d\Geo3d_SizeFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Size\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\2d\Geo2d_MetricFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Metric\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Metric\3d</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
