@@ -55,6 +55,27 @@
     <Filter Include="AutLib\MeshAft\Cad\Plane\Surface">
       <UniqueIdentifier>{5fe0bd0e-e4f2-49c9-9fef-b932c2a9abd4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch">
+      <UniqueIdentifier>{78fdbcc9-50c9-4375-b5a7-5de7a94fa17f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\Imperfection">
+      <UniqueIdentifier>{77a41ed8-9f0b-44cc-92cc-8fea05ed91d9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\Singular">
+      <UniqueIdentifier>{69f8d8b8-d536-4d28-bd3d-ffd2e0b147c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\Defect">
+      <UniqueIdentifier>{5a1c29d6-e596-4474-a6c0-361a5ad42b91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\Singular\General">
+      <UniqueIdentifier>{d0245bf9-ab71-4425-a2e5-291e6727eba7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\Singular\Common">
+      <UniqueIdentifier>{6cea96be-a082-417c-bea7-2f25d551fdf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\Defect\Wire">
+      <UniqueIdentifier>{ece98260-3b44-4e84-8697-847d8b62c550}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Core\Aft_CoreI.hxx">
@@ -143,6 +164,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\AnIso\Mesh2d_PlnRegionAnIso.hxx">
       <Filter>AutLib\MeshAft\Cad\Plane\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Mesh_PatchTemplate.hxx">
+      <Filter>AutLib\MeshAft\Cad\Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Mesh_PatchTemplateI.hxx">
+      <Filter>AutLib\MeshAft\Cad\Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Imperfection\Mesh_ImpPatch.hxx">
+      <Filter>AutLib\MeshAft\Cad\Patch\Imperfection</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Singular\Mesh_SingularPatch.hxx">
+      <Filter>AutLib\MeshAft\Cad\Patch\Singular</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

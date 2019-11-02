@@ -11,7 +11,7 @@ namespace AutLib
 	class Mesh_PlnWire;
 
 	typedef Mesh_PlnWire<Mesh2d_gPlnCurveSurface>
-		Mesh2d_gPlnCurveSurface;
+		Mesh2d_gPlnWireSurface;
 }
 
 #endif // !_Mesh2d_gPlnWireSurfaceFwd_Header
