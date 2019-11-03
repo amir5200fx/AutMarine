@@ -7,12 +7,17 @@
 namespace AutLib
 {
 
-	template<class PlnSurf>
+	template<class SurfType, class SizeFun, class MetricFun>
 	class Mesh_SingularPatch
-		: public 
+		: public Mesh_ImpPatch<SurfType, SizeFun, MetricFun>
 	{
 
-	};
+		/*Private Data*/
+
+	protected:
+
+
+	}
 }
 
 #endif // !_Mesh_SingularPatch_Header

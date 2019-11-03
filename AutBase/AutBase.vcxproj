@@ -247,6 +247,7 @@
     <ClInclude Include="AutLib\Base\containers\Lists\UList\UListI.hxx" />
     <ClInclude Include="AutLib\Base\containers\Lists\UPtrList\UPtrList.hxx" />
     <ClInclude Include="AutLib\Base\containers\Lists\UPtrList\UPtrListI.hxx" />
+    <ClInclude Include="AutLib\Base\containers\Register\Avl\RegisterEntityM_Avl.hxx" />
     <ClInclude Include="AutLib\Base\containers\STL\Stl_List.hxx" />
     <ClInclude Include="AutLib\Base\containers\STL\Stl_SortedVector.hxx" />
     <ClInclude Include="AutLib\Base\containers\STL\Stl_Vector.hxx" />

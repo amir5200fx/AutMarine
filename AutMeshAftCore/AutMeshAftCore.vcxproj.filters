@@ -58,23 +58,17 @@
     <Filter Include="AutLib\MeshAft\Cad\Patch">
       <UniqueIdentifier>{78fdbcc9-50c9-4375-b5a7-5de7a94fa17f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Patch\Imperfection">
-      <UniqueIdentifier>{77a41ed8-9f0b-44cc-92cc-8fea05ed91d9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Patch\Singular">
-      <UniqueIdentifier>{69f8d8b8-d536-4d28-bd3d-ffd2e0b147c6}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\MeshAft\Cad\Patch\Defect">
       <UniqueIdentifier>{5a1c29d6-e596-4474-a6c0-361a5ad42b91}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Patch\Singular\General">
-      <UniqueIdentifier>{d0245bf9-ab71-4425-a2e5-291e6727eba7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Patch\Singular\Common">
-      <UniqueIdentifier>{6cea96be-a082-417c-bea7-2f25d551fdf9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\MeshAft\Cad\Patch\Defect\Wire">
       <UniqueIdentifier>{ece98260-3b44-4e84-8697-847d8b62c550}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\G">
+      <UniqueIdentifier>{bb182cc7-9343-49a1-91d8-92a71342f8c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Cad\Patch\T">
+      <UniqueIdentifier>{258093f5-0888-40c7-b55a-d4067ed7c2ab}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -171,11 +165,29 @@
     <ClInclude Include="AutLib\MeshAft\Cad\Patch\Mesh_PatchTemplateI.hxx">
       <Filter>AutLib\MeshAft\Cad\Patch</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Imperfection\Mesh_ImpPatch.hxx">
-      <Filter>AutLib\MeshAft\Cad\Patch\Imperfection</Filter>
+    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Iso\Mesh2d_PlnRegionFwd.hxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\Iso</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Singular\Mesh_SingularPatch.hxx">
-      <Filter>AutLib\MeshAft\Cad\Patch\Singular</Filter>
+    <ClInclude Include="AutLib\MeshAft\Cad\Plane\AnIso\Mesh2d_PlnRegionAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurface.hxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurface.hxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Patch\G\Mesh2d_gPatch.hxx">
+      <Filter>AutLib\MeshAft\Cad\Patch\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurfaceFwd.hxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurfaceFwd.hxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.hxx">
+      <Filter>AutLib\MeshAft\Cad\Patch\T</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -196,6 +208,18 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_tPlnCurveSurface.cxx">
       <Filter>AutLib\MeshAft\Cad\Plane\Curve\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurface.cxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurface.cxx">
+      <Filter>AutLib\MeshAft\Cad\Plane\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Cad\Patch\G\Mesh2d_gPatch.cxx">
+      <Filter>AutLib\MeshAft\Cad\Patch\G</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.cxx">
+      <Filter>AutLib\MeshAft\Cad\Patch\T</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

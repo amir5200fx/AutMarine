@@ -7,9 +7,9 @@
 namespace AutLib
 {
 
-	template<class SurfType>
+	template<class SurfType, class SizeFun, class MetricFun>
 	class Mesh_ImpPatch
-		: public Mesh_PatchTemplate<SurfType>
+		: public Mesh_PatchTemplate<SurfType, SizeFun, MetricFun>
 	{
 
 		/*Private Data*/

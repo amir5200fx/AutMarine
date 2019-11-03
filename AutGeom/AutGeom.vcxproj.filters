@@ -292,6 +292,27 @@
     <Filter Include="AutLib\Geom\Entities\Metric1\3d">
       <UniqueIdentifier>{bd2d1bc3-bd52-4f0d-ab61-cafbd98d6bc5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Knit">
+      <UniqueIdentifier>{ecf2a663-5570-4286-85a7-15413d69268e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain">
+      <UniqueIdentifier>{98fcbb4a-8422-4593-84ce-bc3645d31bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node">
+      <UniqueIdentifier>{5271ba96-ff9d-4217-a27f-717411dfaf48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node\Type">
+      <UniqueIdentifier>{246292e4-5f28-450e-8ab2-cfb2e3e8bf43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node\Adaptor">
+      <UniqueIdentifier>{3c86ee0b-abb2-48b1-b173-3e548fd7d9fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node\2d">
+      <UniqueIdentifier>{fc45935e-8dcd-443f-9669-19c392c135cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Register">
+      <UniqueIdentifier>{f482b52b-755c-409f-9494-1c78eea75f4c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -440,6 +461,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1IO.cxx">
       <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Knit\Chain\Knit_Chain.cxx">
+      <Filter>AutLib\Geom\Knit\Chain</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -790,6 +814,21 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunctionFwd.hxx">
       <Filter>AutLib\Geom\Function\Metric\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Node\Type\Knit_ChainNode_Type.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNode.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Knit_Chain.hxx">
+      <Filter>AutLib\Geom\Knit\Chain</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Register\Knit_ChainRegister.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Knit_ChainI.hxx">
+      <Filter>AutLib\Geom\Knit\Chain</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

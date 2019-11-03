@@ -18,6 +18,17 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Approx\CadAnalys_ApprxSurfMetric.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Approx\Info\CadAnalys_ApprxSurfMetricInfo.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Coloring\CadAnalys_ColoringSurfMetric.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Coloring\CadAnalys_ColoringSurfMetricIO.cxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Approx\CadAnalys_ApprxSurfMetric.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Approx\Info\CadAnalys_ApprxSurfMetricInfo.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Coloring\CadAnalys_ColoringSurfMetric.hxx" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
     <ProjectGuid>{46DB38FF-CEDB-4B41-B4F5-2CBBDBCBA25B}</ProjectGuid>
@@ -81,7 +92,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -114,21 +125,13 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="AutLib\CadAnalys\Approximation\SurfaceMetric\CadAnalys_ApprxSurfMetric.hxx" />
-    <ClInclude Include="AutLib\CadAnalys\Approximation\SurfaceMetric\Info\CadAnalys_ApprxSurfMetricInfo.hxx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AutLib\CadAnalys\Approximation\SurfaceMetric\CadAnalys_ApprxSurfMetric.cxx" />
-    <ClCompile Include="AutLib\CadAnalys\Approximation\SurfaceMetric\Info\CadAnalys_ApprxSurfMetricInfo.cxx" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

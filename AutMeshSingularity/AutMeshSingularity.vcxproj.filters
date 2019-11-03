@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{e7a40c1f-938e-41b9-8e7b-7aac452d9c29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity">
+      <UniqueIdentifier>{28cfb745-c1ea-400f-b1ec-a2e2e013afed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch">
+      <UniqueIdentifier>{d39d73b9-5083-48e2-a004-5aff2788826f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone">
+      <UniqueIdentifier>{f13c0d1a-4242-4f57-b94d-9a4bc4d81487}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Imperfection">
+      <UniqueIdentifier>{90f11afa-1b30-4753-a558-710d09c6e7dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Singular">
+      <UniqueIdentifier>{9e15c068-9cd3-44cd-b820-ddea659fa7c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Defect">
+      <UniqueIdentifier>{56a61026-a498-47ca-b243-a2cec94a317e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Singular\Common">
+      <UniqueIdentifier>{d5477919-532f-475c-9d28-27fd147f2623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Singular\General">
+      <UniqueIdentifier>{f3a16600-6a2f-466a-9842-f89e39230b79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Defect\Wire">
+      <UniqueIdentifier>{9b5f0bed-e56d-4aaf-8e46-d542b6bbe696}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Imperfection</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Singular\Mesh_SingularPatch.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Singular</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Imperfection</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

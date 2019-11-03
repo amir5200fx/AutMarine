@@ -1119,6 +1119,9 @@
     <ClInclude Include="AutLib\Base\Global\Global_AccessMethod.hxx">
       <Filter>AutLib\Base\Global</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Register\Avl\RegisterEntityM_Avl.hxx">
+      <Filter>AutLib\Base\containers\Register\Avl</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="AutLib">
@@ -1600,6 +1603,12 @@
     </Filter>
     <Filter Include="AutLib\Base\multiValued">
       <UniqueIdentifier>{1418107b-3b4a-494c-a8f7-030060be5178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Register">
+      <UniqueIdentifier>{a0a71a96-c0f2-4201-902b-293f9b3d8d56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Register\Avl">
+      <UniqueIdentifier>{00f84924-45e0-450e-abce-f774b1b11d6c}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>
