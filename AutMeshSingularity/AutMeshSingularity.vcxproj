@@ -81,7 +81,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect\Wire;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Sigular\General;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Sigular\Common;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Sigular;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Imperfection;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect\Wire;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular\General;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular\Common;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular\Type;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\Loop;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\Corner;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\WholeSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\TwoSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\Loop;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\Dangle;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\Corner;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Imperfection;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -114,7 +114,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect\Wire;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Sigular\General;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Sigular\Common;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Sigular;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Imperfection;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect\Wire;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular\General;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular\Common;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular\Type;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\Loop;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole\Corner;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Pole;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\WholeSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\TwoSide;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\Loop;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\Dangle;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone\Line\Corner;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Zone;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Singular;$(MSBuildProjectDirectory)\AutLib\MeshSingularity\Patch\Imperfection;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -124,9 +124,31 @@
   <ItemGroup>
     <ClInclude Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.hxx" />
     <ClInclude Include="AutLib\MeshSingularity\Patch\Singular\Mesh_SingularPatch.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Singular\Type\Mesh_SingularType.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\Corner\SingularZone_Line_Corner.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\Dangle\SingularZone_Line_Dangle.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\Loop\SingularZone_Line_Loop.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\SingularZone_Line.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\TwoSide\SingularZone_Line_TwoSide.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\WholeSide\SingularZone_Line_WholeSide.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Mesh_SingularZone.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\Corner\SingularZone_Pole_Corner.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\Loop\SingularZone_Pole_Loop.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide\SingularZone_Pole_PartialSide.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\SingularZone_Pole.hxx" />
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide\SingularZone_Pole_WholeSide.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\Corner\SingularZone_Line_Corner.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\Dangle\SingularZone_Line_Dangle.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\Loop\SingularZone_Line_Loop.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\TwoSide\SingularZone_Line_TwoSide.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\WholeSide\SingularZone_Line_WholeSide.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\Corner\SingularZone_Pole_Corner.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\Loop\SingularZone_Pole_Loop.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide\SingularZone_Pole_PartialSide.cxx" />
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide\SingularZone_Pole_WholeSide.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

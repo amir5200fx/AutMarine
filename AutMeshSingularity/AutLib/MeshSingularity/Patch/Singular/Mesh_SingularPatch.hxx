@@ -17,7 +17,7 @@ namespace AutLib
 	protected:
 
 
-	}
+	};
 }
 
 #endif // !_Mesh_SingularPatch_Header

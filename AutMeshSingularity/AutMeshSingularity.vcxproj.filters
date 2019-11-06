@@ -31,6 +31,45 @@
     <Filter Include="AutLib\MeshSingularity\Patch\Defect\Wire">
       <UniqueIdentifier>{9b5f0bed-e56d-4aaf-8e46-d542b6bbe696}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshSingularity\Knit">
+      <UniqueIdentifier>{be946bb6-2116-4bb0-aebf-f47d8bd7bab7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Singular\Type">
+      <UniqueIdentifier>{c1ebb5f3-380e-44e8-8ae7-4dcbe49a3ba1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Pole">
+      <UniqueIdentifier>{c131ef3f-efed-49f8-8368-46da55f3e6c7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Line">
+      <UniqueIdentifier>{98befd07-ba83-411e-8925-756fc5c0245e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Pole\Corner">
+      <UniqueIdentifier>{243748b4-d68d-4a55-ba23-226590a818c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Pole\Loop">
+      <UniqueIdentifier>{a07c11a1-c383-461a-ac70-ae43f5c3501f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide">
+      <UniqueIdentifier>{e93ba729-2e8d-4b6f-8ebd-e7b58ac3e920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide">
+      <UniqueIdentifier>{079f5a78-3bac-4961-8ee9-5e9db732097d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Line\Corner">
+      <UniqueIdentifier>{79e0380c-fd39-4b62-8058-77e8d73d1dfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Line\Dangle">
+      <UniqueIdentifier>{958ba876-209b-4b49-97dd-a6d0dd9faa9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Line\Loop">
+      <UniqueIdentifier>{a5e47eeb-9ee2-4112-b806-249aecc469a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Line\TwoSide">
+      <UniqueIdentifier>{4a71888f-debb-4bfa-b319-65bac64966f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Zone\Line\WholeSide">
+      <UniqueIdentifier>{bddadb60-29e4-487c-a4bb-51ec05c118c1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.hxx">
@@ -39,10 +78,76 @@
     <ClInclude Include="AutLib\MeshSingularity\Patch\Singular\Mesh_SingularPatch.hxx">
       <Filter>AutLib\MeshSingularity\Patch\Singular</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Mesh_SingularZone.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Singular\Type\Mesh_SingularType.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Singular\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\SingularZone_Pole.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\Corner\SingularZone_Pole_Corner.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\Corner</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\Loop\SingularZone_Pole_Loop.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\Loop</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide\SingularZone_Pole_WholeSide.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide\SingularZone_Pole_PartialSide.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\SingularZone_Line.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\Corner\SingularZone_Line_Corner.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\Corner</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\Dangle\SingularZone_Line_Dangle.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\Dangle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\Loop\SingularZone_Line_Loop.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\Loop</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\WholeSide\SingularZone_Line_WholeSide.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\WholeSide</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\TwoSide\SingularZone_Line_TwoSide.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\TwoSide</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.cxx">
       <Filter>AutLib\MeshSingularity\Patch\Imperfection</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\Corner\SingularZone_Pole_Corner.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\Corner</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\Loop\SingularZone_Pole_Loop.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\Loop</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide\SingularZone_Pole_WholeSide.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\WholeSide</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide\SingularZone_Pole_PartialSide.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Pole\PartialSide</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\Corner\SingularZone_Line_Corner.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\Corner</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\Dangle\SingularZone_Line_Dangle.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\Dangle</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\Loop\SingularZone_Line_Loop.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\Loop</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\WholeSide\SingularZone_Line_WholeSide.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\WholeSide</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\TwoSide\SingularZone_Line_TwoSide.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Zone\Line\TwoSide</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
