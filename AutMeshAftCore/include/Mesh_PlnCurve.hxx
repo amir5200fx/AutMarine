@@ -90,10 +90,10 @@ namespace AutLib
 		) const;
 
 		
-		template<class EdgeType>
+		template<class EdgeType, class PlnCurve>
 		static std::vector<std::shared_ptr<EdgeType>> TopoMesh
 		(
-			const std::shared_ptr<Mesh_PlnCurve>& theCurve,
+			const std::shared_ptr<PlnCurve>& theCurve,
 			const std::shared_ptr<metricMap>& theMetricMap, 
 			const std::shared_ptr<Mesh_CurveInfo>& theInfo
 		);

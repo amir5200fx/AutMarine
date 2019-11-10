@@ -31,7 +31,7 @@ namespace AutLib
 			if (ABS(1.0 - dis) < tol) break;
 		}
 
-		theCorrected_ = Correct;
+		ChangeCorrected() = Correct;
 		Change_IsDone() = Standard_True;
 	}
 }

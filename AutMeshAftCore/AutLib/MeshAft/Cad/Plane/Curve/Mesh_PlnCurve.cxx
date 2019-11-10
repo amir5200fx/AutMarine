@@ -1,6 +1,7 @@
 #include <Mesh_PlnCurve.hxx>
 
 #include <Geo2d_ApprxCurve.hxx>
+#include <Geom2d_Curve.hxx>
 
 std::shared_ptr<AutLib::Entity2d_Chain> 
 AutLib::Mesh_PlnCurve_Base::Discrete

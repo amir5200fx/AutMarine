@@ -57,7 +57,7 @@ namespace AutLib
 			return Standard_True;
 		}
 
-		Mesh_SingularZone Type() const override
+		Mesh_SingularType Type() const override
 		{
 			return Mesh_SingularType::Line_Corner;
 		}

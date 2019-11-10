@@ -15,6 +15,9 @@ namespace AutLib
 	class TModel_parWire;
 	class TModel_Wire;
 
+	template<class PlnCurve>
+	class Mesh_PlnWire;
+
 	template<>
 	class Mesh_PlnRegion<TModel_parCurve, Geo2d_SizeFunction, Geo2d_MetricFunction>
 		: public Global_Indexed

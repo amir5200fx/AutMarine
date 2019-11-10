@@ -4,6 +4,7 @@
 
 #include <Aft2d_BndEdgeAnIsoTraits.hxx>
 #include <Geo2d_SizeFunction.hxx>
+#include <Geo2d_MetricFunction.hxx>
 
 namespace AutLib
 {
@@ -19,7 +20,7 @@ namespace AutLib
 
 		typedef Aft2d_BndEdgeAnIsoTraits bndEdgeTraits;
 
-		typedef Mesh_PlnCurve<Pln_Curve, Geo2d_SizeFunction, void> curveType;
+		typedef Mesh_PlnCurve<Pln_Curve, Geo2d_SizeFunction, Geo2d_MetricFunction> curveType;
 		typedef void surfType;
 	};
 }

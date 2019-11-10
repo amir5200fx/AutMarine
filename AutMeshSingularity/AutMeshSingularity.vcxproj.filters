@@ -70,6 +70,45 @@
     <Filter Include="AutLib\MeshSingularity\Patch\Zone\Line\WholeSide">
       <UniqueIdentifier>{bddadb60-29e4-487c-a4bb-51ec05c118c1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshSingularity\Detection">
+      <UniqueIdentifier>{77922c3c-f279-4b3c-a1ac-e35155a0a3dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Detection\Info">
+      <UniqueIdentifier>{5228d338-be3e-43a7-89df-34ef8d05557d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Horizon">
+      <UniqueIdentifier>{c48d5d5f-1212-4d50-baef-67b2fb64f5b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Curve">
+      <UniqueIdentifier>{f6982f49-9924-4fd9-a17e-fe2cc89e52a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Curve\Pole">
+      <UniqueIdentifier>{fc58e752-a141-48b1-94e1-d2012b9076d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Curve\Line">
+      <UniqueIdentifier>{def060d3-43f8-40ef-aba0-28bdb3f03f4d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Curve\Pole\Surface">
+      <UniqueIdentifier>{a6f82b3d-6d85-4727-a7f0-ef206dc83afb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Curve\Pole\AnIso">
+      <UniqueIdentifier>{514e7351-12c3-4289-9d7b-315a661e255e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft">
+      <UniqueIdentifier>{e472fac7-e681-4496-aa0c-5ec89c2b7afd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft\Entities">
+      <UniqueIdentifier>{a0928285-de46-48c1-93c4-8bed3f15dcf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft\Entities\Edge">
+      <UniqueIdentifier>{604f888c-ba00-4eb0-8229-6e187dbc5503}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Curve\Line\AnIso">
+      <UniqueIdentifier>{f293a255-6ef1-4810-b8c2-5d518dc620e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Curve\Line\Surface">
+      <UniqueIdentifier>{06736ee8-3341-4125-8522-1452f08dc249}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.hxx">
@@ -117,6 +156,57 @@
     <ClInclude Include="AutLib\MeshSingularity\Patch\Zone\Line\TwoSide\SingularZone_Line_TwoSide.hxx">
       <Filter>AutLib\MeshSingularity\Patch\Zone\Line\TwoSide</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Detection\Mesh_SingularDetection.hxx">
+      <Filter>AutLib\MeshSingularity\Detection</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Detection\Info\Mesh_SingularDetection_Info.hxx">
+      <Filter>AutLib\MeshSingularity\Detection\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Mesh_SingularCurve.hxx">
+      <Filter>AutLib\MeshSingularity\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Pole\SingularCurve_Pole.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Pole\SingularCurve_PoleI.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Pole\Surface\SingularCurve2d_gPoleSurface.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Pole\AnIso\SingularCurve2d_PoleAnIso_Base.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Aft\Entities\Edge\Aft_SingEdge.hxx">
+      <Filter>AutLib\MeshSingularity\Aft\Entities\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Aft\Entities\Edge\Aft_SingEdgeI.hxx">
+      <Filter>AutLib\MeshSingularity\Aft\Entities\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Pole\Surface\SingularCurve2d_tPoleSurface.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Line\SingularCurve_Line.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Line\SingularCurve_LineI.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Line\AnIso\SingularCurve2d_LineAnIso_Base.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Line\Surface\SingularCurve2d_tLineSurface.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Curve\Line\Surface\SingularCurve2d_gLineSurface.hxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Horizon\Mesh_SingularHorizon.hxx">
+      <Filter>AutLib\MeshSingularity\Horizon</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Detection\Mesh_SingularDetectionI.hxx">
+      <Filter>AutLib\MeshSingularity\Detection</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.cxx">
@@ -148,6 +238,33 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshSingularity\Patch\Zone\Line\TwoSide\SingularZone_Line_TwoSide.cxx">
       <Filter>AutLib\MeshSingularity\Patch\Zone\Line\TwoSide</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Curve\Pole\SingularCurve_Pole.cxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Curve\Pole\AnIso\SingularCurve2d_PoleAnIso_Base.cxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole\AnIso</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Curve\Pole\Surface\SingularCurve2d_gPoleSurface.cxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Curve\Pole\Surface\SingularCurve2d_tPoleSurface.cxx">
+      <Filter>AutLib\MeshSingularity\Curve\Pole\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Curve\Line\AnIso\SingularCurve2d_LineAnIso_Base.cxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line\AnIso</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Curve\Line\Surface\SingularCurve2d_tLineSurface.cxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Curve\Line\Surface\SingularCurve2d_gLineSurface.cxx">
+      <Filter>AutLib\MeshSingularity\Curve\Line\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Horizon\Mesh_SingularHorizon.cxx">
+      <Filter>AutLib\MeshSingularity\Horizon</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Detection\Mesh_SingularDetection.cxx">
+      <Filter>AutLib\MeshSingularity\Detection</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

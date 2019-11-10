@@ -15,7 +15,7 @@ namespace AutLib
 	template<class SurfPln>
 	class SingularZone_Line_Dangle
 		: public SingularZone_Line<SurfPln>
-		, public SingularZone_Line_Corner_Base
+		, public SingularZone_Line_Dangle_Base
 	{
 
 		typedef typename SurfPln::plnCurve plnCurve;

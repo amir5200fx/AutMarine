@@ -59,7 +59,7 @@ namespace AutLib
 
 		try
 		{
-			Iteration.Perform(corrected, *theInfo.NewtonIterInfo(), *theInfo.NewtonIntgInfo());
+			Iteration.Perform(corrected, theInfo.NewtonIterInfo(), theInfo.NewtonIntgInfo());
 			Debug_If_Condition_Message(NOT Iteration.IsDone(), "mesh_curveoptpoint_newton algorithm has not been performed!");
 
 			return Iteration.Corrected();

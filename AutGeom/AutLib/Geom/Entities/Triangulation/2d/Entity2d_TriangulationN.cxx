@@ -1,5 +1,8 @@
 #include <Entity2d_TriangulationN.hxx>
 
+#include <error.hxx>
+#include <OSstream.hxx>
+
 namespace AutLib
 {
 

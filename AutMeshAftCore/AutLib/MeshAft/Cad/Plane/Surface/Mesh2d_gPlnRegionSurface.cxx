@@ -1,8 +1,10 @@
 #include <Mesh2d_gPlnRegionSurface.hxx>
 
+#include <GModel_parCurve.hxx>
 #include <GModel_Surface.hxx>
 #include <GModel_Wire.hxx>
 #include <GModel_Edge.hxx>
+#include <Mesh2d_gPlnWireSurface.hxx>
 
 namespace AutLib
 {

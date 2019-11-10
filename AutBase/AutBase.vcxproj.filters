@@ -1122,6 +1122,9 @@
     <ClInclude Include="AutLib\Base\containers\Register\Avl\RegisterEntityM_Avl.hxx">
       <Filter>AutLib\Base\containers\Register\Avl</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Base\containers\Register\Map\RegisterEntityM_Map.hxx">
+      <Filter>AutLib\Base\containers\Register\Map</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="AutLib">
@@ -1609,6 +1612,9 @@
     </Filter>
     <Filter Include="AutLib\Base\containers\Register\Avl">
       <UniqueIdentifier>{00f84924-45e0-450e-abce-f774b1b11d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Base\containers\Register\Map">
+      <UniqueIdentifier>{86820b4d-755f-4230-a42a-2a118769158e}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

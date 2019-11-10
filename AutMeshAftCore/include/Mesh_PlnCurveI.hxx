@@ -28,7 +28,7 @@ namespace AutLib
 		) const
 	{
 		auto mesh = 
-			base::Mesh<SizeMap, MetricFun>
+			base::Mesh<SizeFun, MetricFun>
 			(
 				CurveType::Curve(), 
 				CurveType::FirstParam(), 

@@ -9,6 +9,7 @@
 #include <Geom_Sort.hxx>
 
 #include <memory>
+#include <vector>
 
 namespace AutLib
 {

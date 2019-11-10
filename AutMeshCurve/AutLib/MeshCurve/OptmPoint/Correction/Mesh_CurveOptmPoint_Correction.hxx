@@ -51,6 +51,11 @@ namespace AutLib
 			return theInfo_;
 		}
 
+		Standard_Real Corrected() const
+		{
+			return theCorrected_;
+		}
+
 		//- macros
 
 		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, U0)
@@ -79,10 +84,8 @@ namespace AutLib
 			const entity& theCurve, 
 			const info& theInfo
 		)
-			: theU0_(theU0)
-			, theGuess_(theGuess)
+			: Mesh_CurveOptmPoint_Correction_Base(theU0, theGuess, theInfo)
 			, theCurve_(theCurve)
-			, theInfo_(theInfo)
 		{}
 
 		const entity& Entity() const

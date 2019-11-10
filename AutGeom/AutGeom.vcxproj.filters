@@ -313,6 +313,9 @@
     <Filter Include="AutLib\Geom\Knit\Chain\Register">
       <UniqueIdentifier>{f482b52b-755c-409f-9494-1c78eea75f4c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Traits">
+      <UniqueIdentifier>{beb20ac0-c01f-4ce7-afde-895b5389a2ac}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -464,6 +467,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Knit\Chain\Knit_Chain.cxx">
       <Filter>AutLib\Geom\Knit\Chain</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNode.cxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -829,6 +835,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Knit\Chain\Knit_ChainI.hxx">
       <Filter>AutLib\Geom\Knit\Chain</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Traits\Geo_Traits.hxx">
+      <Filter>AutLib\Geom\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNodeI.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

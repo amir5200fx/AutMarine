@@ -23,7 +23,7 @@ namespace AutLib
 
 		Iterator.Perform(theGuess);
 
-		Debug_If_Condition_Message(NOT Iterator.IsDone(), "Newton's Algorithm is not performed");
+		Debug_If_Condition_Message(NOT theIter->IsDone(), "Newton's Algorithm is not performed");
 
 		if (theIter->Condition() IS_EQUAL NewtonIter_ZERODIVIDE)
 		{

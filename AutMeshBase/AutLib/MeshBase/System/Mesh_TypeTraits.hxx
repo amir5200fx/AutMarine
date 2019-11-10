@@ -2,6 +2,7 @@
 #ifndef _Mesh_TypeTraits_Header
 #define _Mesh_TypeTraits_Header
 
+#include <Traits.hxx>
 #include <Mesh2d_NodeFwd.hxx>
 #include <Mesh2d_EdgeFwd.hxx>
 #include <Mesh2d_ElementFwd.hxx>

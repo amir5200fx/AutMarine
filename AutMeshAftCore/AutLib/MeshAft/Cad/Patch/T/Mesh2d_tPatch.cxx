@@ -1,6 +1,7 @@
 #include <Mesh2d_tPatch.hxx>
 
 #include <Mesh2d_tPlnRegionSurface.hxx>
+#include <TModel_Surface.hxx>
 
 namespace AutLib
 {
@@ -11,7 +12,7 @@ namespace AutLib
 		auto This =
 			std::dynamic_pointer_cast<Mesh2d_tPatch>
 			(
-				std::const_pointer_cast<TModel_Surface>(this->shared_from_this())
+				std::const_pointer_cast<TModel_Entity>(this->shared_from_this())
 				);
 		auto plane = Mesh2d_tPlnRegionSurface::MakePlane(This);
 		return std::move(plane);

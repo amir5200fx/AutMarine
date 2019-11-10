@@ -3,6 +3,8 @@
 #include <TModel_Surface.hxx>
 #include <TModel_Wire.hxx>
 #include <TModel_Edge.hxx>
+#include <Mesh2d_tPlnWireSurface.hxx>
+#include <Mesh2d_tPlnCurveSurface.hxx>
 
 namespace AutLib
 {
