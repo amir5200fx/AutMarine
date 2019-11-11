@@ -35,6 +35,9 @@ namespace AutLib
 		typedef std::shared_ptr<std::vector<outer>> inner;
 		typedef std::vector<std::shared_ptr<plnWireType>> wireList;
 
+		typedef Geo2d_SizeFunction sizeFun;
+		typedef Geo2d_MetricFunction metricFun;
+
 	private:
 
 		/*Private Data*/

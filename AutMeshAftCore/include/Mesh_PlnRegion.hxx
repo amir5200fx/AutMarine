@@ -36,6 +36,9 @@ namespace AutLib
 		typedef std::shared_ptr<std::vector<outer>> inner;
 		typedef std::vector<std::shared_ptr<plnWireType>> wireList;
 
+		typedef SizeFun sizeFun;
+		typedef MetricFun metricFun;
+
 	private:
 
 		/*Private Data*/
