@@ -58,6 +58,78 @@
     <Filter Include="AutLib\Model\Vessel\Displacement\Nihad2\System">
       <UniqueIdentifier>{ba48acfb-1787-412c-a8e5-2a75e730192b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Model\Propeller">
+      <UniqueIdentifier>{c3daad91-dcb2-4356-815b-1cf5ac1b5f59}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct">
+      <UniqueIdentifier>{0d3265b7-760b-405a-bf7e-ebb0e05260b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1">
+      <UniqueIdentifier>{91030ce4-330d-45b9-bd09-0c71b40d7787}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\System">
+      <UniqueIdentifier>{aca18b20-4326-48fb-ae9c-74d0cd531585}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\Section">
+      <UniqueIdentifier>{8f0bff78-97e7-47c5-99eb-dc7c1c3075de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\Section\Wrapped">
+      <UniqueIdentifier>{3fd90302-e97c-4104-b4cc-c22abb69299b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\Section\UnWrapped">
+      <UniqueIdentifier>{a951e7e3-818e-4525-b551-9c26813cc7f4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\Face">
+      <UniqueIdentifier>{d209a5e0-03ca-4169-ae66-a504d4a171fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Profiles">
+      <UniqueIdentifier>{699e1943-6731-4ded-a2cd-41bfb040bb7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\System">
+      <UniqueIdentifier>{a178350f-27df-4a74-a9b9-b0b4e52cf516}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form">
+      <UniqueIdentifier>{dae3e3de-eef5-4f10-8903-8f1e94174515}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Chord">
+      <UniqueIdentifier>{aeb2331e-a8ea-43a9-9865-7978262e459a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Hub">
+      <UniqueIdentifier>{8a4d39f5-4566-4f30-9850-1c0d409d29ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Camber">
+      <UniqueIdentifier>{654975e6-7da2-4c01-b1dd-14f79d360f0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Blade">
+      <UniqueIdentifier>{7645dd39-5a07-4917-a52f-bc691a17220f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Pitch">
+      <UniqueIdentifier>{141b4c2f-bbc7-4dae-9912-dd861a4c871b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Rake">
+      <UniqueIdentifier>{b7a7f0e8-b345-4875-9d49-0eb2778344be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Thickness">
+      <UniqueIdentifier>{2e0da03d-d6b1-4a0f-ab46-825d08f2b00d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Form\Skew">
+      <UniqueIdentifier>{416e59ce-a89e-4c0c-a443-83ce568a375a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\Section\Blade">
+      <UniqueIdentifier>{9900ef39-1e1d-4e70-a37f-7897762b8c02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\View">
+      <UniqueIdentifier>{2ec22e2c-7d97-489d-be2b-f3d982ee67e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\View\Expanded">
+      <UniqueIdentifier>{bc6362da-2a38-4375-9fb8-fdc49c5809cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\View\Prop">
+      <UniqueIdentifier>{27c8556a-2f61-4772-b0d2-751ece64e5c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Propeller\No1\Parameters">
+      <UniqueIdentifier>{eb939032-2ca7-49a6-a6ee-3171886e7ddb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Model\Entity\Leg_Model_Entity.hxx">
@@ -126,6 +198,69 @@
     <ClInclude Include="AutLib\Model\Vessel\Displacement\Nihad2\System\Leg_Nihad2_Defaults.hxx">
       <Filter>AutLib\Model\Vessel\Displacement\Nihad2\System</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\Leg_Model_Propeller.hxx">
+      <Filter>AutLib\Model\Propeller</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\Section\Wrapped\Leg_Prop_WrappedSection.hxx">
+      <Filter>AutLib\Model\Propeller\Section\Wrapped</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\Section\UnWrapped\Leg_Prop_UnWrappedSection.hxx">
+      <Filter>AutLib\Model\Propeller\Section\UnWrapped</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\Face\Leg_Prop_BladeFace.hxx">
+      <Filter>AutLib\Model\Propeller\Face</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Leg_PropNo1_Form.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Chord\Leg_PropNo1_ChordForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Chord</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Hub\Leg_PropNo1_HubForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Hub</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Camber\Leg_PropNo1_CamberForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Camber</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Blade\Leg_PropNo1_BladeForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Blade</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Skew\Leg_PropNo1_SkewForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Skew</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Thickness\Leg_PropNo1_ThicknessForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Thickness</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Rake\Leg_PropNo1_RakeForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Rake</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Pitch\Leg_PropNo1_PitchForm.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Pitch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Dim.hxx">
+      <Filter>AutLib\Model\Propeller\No1\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Profiles\Leg_PropNo1_Profiles.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Profiles</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\Section\Blade\Leg_Prop_BladeSection.hxx">
+      <Filter>AutLib\Model\Propeller\Section\Blade</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\View\Expanded\Leg_Prop_ExpandedView.hxx">
+      <Filter>AutLib\Model\Propeller\View\Expanded</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\View\Prop\Leg_Prop_PropView.hxx">
+      <Filter>AutLib\Model\Propeller\View\Prop</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Leg_Model_PropNo1.hxx">
+      <Filter>AutLib\Model\Propeller\No1</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\Parameters\Leg_PropNo1_Parameters.hxx">
+      <Filter>AutLib\Model\Propeller\No1\Parameters</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Defaults.hxx">
+      <Filter>AutLib\Model\Propeller\No1\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Model\Entity\Leg_Model_Entity.cxx">
@@ -172,6 +307,54 @@
     </ClCompile>
     <ClCompile Include="AutLib\Model\Vessel\Leg_Model_Vessel.cxx">
       <Filter>AutLib\Model\Vessel</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\Section\Wrapped\Leg_Prop_WrappedSection.cxx">
+      <Filter>AutLib\Model\Propeller\Section\Wrapped</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\View\Expanded\Leg_Prop_ExpandedView.cxx">
+      <Filter>AutLib\Model\Propeller\View\Expanded</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\View\Prop\Leg_Prop_PropView.cxx">
+      <Filter>AutLib\Model\Propeller\View\Prop</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CalcParameters.cxx">
+      <Filter>AutLib\Model\Propeller\No1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CreateProfiles.cxx">
+      <Filter>AutLib\Model\Propeller\No1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CreateSections.cxx">
+      <Filter>AutLib\Model\Propeller\No1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Leg_Model_PropNo1.cxx">
+      <Filter>AutLib\Model\Propeller\No1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Parameters\Leg_PropNo1_Parameters.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Parameters</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Defaults.cxx">
+      <Filter>AutLib\Model\Propeller\No1\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Chord\Leg_PropNo1_ChordForm.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Chord</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Hub\Leg_PropNo1_HubForm.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Hub</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Camber\Leg_PropNo1_CamberForm.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Camber</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Skew\Leg_PropNo1_SkewForm.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Skew</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Thickness\Leg_PropNo1_ThicknessForm.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Thickness</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Rake\Leg_PropNo1_RakeForm.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Rake</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Pitch\Leg_PropNo1_PitchForm.cxx">
+      <Filter>AutLib\Model\Propeller\No1\Form\Pitch</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

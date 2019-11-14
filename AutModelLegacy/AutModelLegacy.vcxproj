@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
@@ -25,19 +17,6 @@
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -79,7 +58,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel;$(SolutionDir)AutModelLegacy\AutLib\Model\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Bounded;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Constant;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter;$(SolutionDir)AutModelLegacy\AutLib\Model\Section;$(SolutionDir)AutModelLegacy\AutLib\Model\Net;$(SolutionDir)AutModelLegacy\AutLib\Model\Entity;$(SolutionDir)AutIO\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Thickness;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Rake;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Skew;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Pitch;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Hub;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Camber;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Chord;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Blade;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\ExpandedView;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\Blade;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\UnWrapped;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\Wrapped;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Face;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\View\Prop;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\View\Expanded;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller;$(SolutionDir)AutModelLegacy\AutLib\Model\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Bounded;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Constant;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter;$(SolutionDir)AutModelLegacy\AutLib\Model\Section;$(SolutionDir)AutModelLegacy\AutLib\Model\Net;$(SolutionDir)AutModelLegacy\AutLib\Model\Entity;$(SolutionDir)AutIO\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -89,32 +68,6 @@
 for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -123,6 +76,7 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Thickness;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Rake;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Skew;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Pitch;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Hub;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Camber;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Chord;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Blade;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\ExpandedView;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\Blade;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\UnWrapped;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\Wrapped;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Face;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\View\Prop;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\View\Expanded;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller;$(SolutionDir)AutModelLegacy\AutLib\Model\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Bounded;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Constant;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter;$(SolutionDir)AutModelLegacy\AutLib\Model\Section;$(SolutionDir)AutModelLegacy\AutLib\Model\Net;$(SolutionDir)AutModelLegacy\AutLib\Model\Entity;$(SolutionDir)AutIO\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,6 +90,27 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     <ClInclude Include="AutLib\Model\Parameter\Bounded\Leg_Model_BndParam.hxx" />
     <ClInclude Include="AutLib\Model\Parameter\Constant\Leg_Model_ConstParam.hxx" />
     <ClInclude Include="AutLib\Model\Parameter\Leg_Model_Parameter.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\Face\Leg_Prop_BladeFace.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\Leg_Model_Propeller.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Blade\Leg_PropNo1_BladeForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Camber\Leg_PropNo1_CamberForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Chord\Leg_PropNo1_ChordForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Hub\Leg_PropNo1_HubForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Leg_PropNo1_Form.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Pitch\Leg_PropNo1_PitchForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Rake\Leg_PropNo1_RakeForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Skew\Leg_PropNo1_SkewForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Form\Thickness\Leg_PropNo1_ThicknessForm.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Leg_Model_PropNo1.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Parameters\Leg_PropNo1_Parameters.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\Profiles\Leg_PropNo1_Profiles.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Defaults.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Dim.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\Section\Blade\Leg_Prop_BladeSection.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\Section\UnWrapped\Leg_Prop_UnWrappedSection.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\Section\Wrapped\Leg_Prop_WrappedSection.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\View\Expanded\Leg_Prop_ExpandedView.hxx" />
+    <ClInclude Include="AutLib\Model\Propeller\View\Prop\Leg_Prop_PropView.hxx" />
     <ClInclude Include="AutLib\Model\Section\Leg_Model_SectionCtrlPts.hxx" />
     <ClInclude Include="AutLib\Model\System\Leg_Model_Dim.hxx" />
     <ClInclude Include="AutLib\Model\System\Leg_Model_ManipParams.hxx" />
@@ -156,6 +131,22 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Model\Entity\Leg_Model_Entity.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Camber\Leg_PropNo1_CamberForm.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Chord\Leg_PropNo1_ChordForm.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Hub\Leg_PropNo1_HubForm.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Pitch\Leg_PropNo1_PitchForm.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Rake\Leg_PropNo1_RakeForm.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Skew\Leg_PropNo1_SkewForm.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Form\Thickness\Leg_PropNo1_ThicknessForm.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Leg_Model_PropNo1.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\Parameters\Leg_PropNo1_Parameters.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CalcParameters.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CreateProfiles.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CreateSections.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Defaults.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\Section\Wrapped\Leg_Prop_WrappedSection.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\View\Expanded\Leg_Prop_ExpandedView.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\View\Prop\Leg_Prop_PropView.cxx" />
     <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_ApplyParameters.cxx" />
     <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_CalcParameters.cxx" />
     <ClCompile Include="AutLib\Model\Vessel\Displacement\DispNo1\DispNo1_Sections.cxx" />
