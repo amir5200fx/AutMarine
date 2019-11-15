@@ -9,6 +9,8 @@
 #include <IO_IGES.hxx>
 #include <FastDiscrete_Params.hxx>
 #include <Leg_Vessel_Nihad2.hxx>
+#include <Leg_Model_PropNo1.hxx>
+#include <Leg_Prop_BladeFace.hxx>
 #include <Cad_Tools.hxx>
 #include <Cad3d_TModel.hxx>
 #include <TModel_Surface.hxx>
@@ -24,7 +26,7 @@
 #include <Geo_CurveLength.hxx>
 
 #include <GeoSizeFun_Uniform.hxx>
-#include <Mesh2d_AftMetricPrcsr.hxx>
+//#include <Mesh2d_AftMetricPrcsr.hxx>
 
 namespace AutLib
 {
@@ -108,16 +110,28 @@ int main()
 	{
 		Global_Timer timer;
 
+		Leg_Model_PropNo1 prop;
+		prop.Perform();
+
+		const auto& myShape = prop.Entity();
+
+		FastDiscrete::Triangulation(myShape, *gl_fast_discrete_parameters);
+
+		auto myTris = Cad_Tools::RetrieveTriangulation(myShape);
+
+		for (const auto& x : myTris)
+		{
+			auto mesh = Cad_Tools::Triangulation(*x);
+			mesh->ExportToPlt(myFile);
+		}
+	}
+
+	cout << global_time_duration << std::endl;
+
+	/*{
+		Global_Timer timer;
+
 		Leg_Nihad2_BareHull patch;
-
-		/*patch.AftSection().Tightness0()->SetValue(0.1);
-		patch.AftSection().Tightness1()->SetValue(0.1);
-
-		patch.MidSection().Tightness0()->SetValue(0.1);
-		patch.MidSection().Tightness1()->SetValue(0.1);*/
-
-		/*patch.FwdSection().Tightness0()->SetValue(0.9);
-		patch.FwdSection().Tightness1()->SetValue(0.9);*/
 
 		patch.Parameters().SetNbNetColumns(25);
 
@@ -151,28 +165,13 @@ int main()
 
 		patch.PerformToPreview();
 
-
-		//patch.Discrete();
 		patch.FileName() = "myModle.plt";
 
-
-
-		/*patch.FileFormat() = Leg_EntityIO_Format::TecPlot;
-		patch.ExportToFile();
-		PAUSE;
-		return 0;*/
 		const auto& myShape = patch.PreviewEntity();
+	
+	}*/
 
-		/*auto meshes = Cad_Tools::PreviewUnMergedPatchCurves(myShape, 20, 20);
-		for (const auto& x : meshes)
-		{
-			x->ExportToPlt(myFile);
-		}*/
-
-		
-	}
-
-	cout << global_time_duration << std::endl;
+	/*cout << global_time_duration << std::endl;*/
 	PAUSE;
 	return 0;
 
