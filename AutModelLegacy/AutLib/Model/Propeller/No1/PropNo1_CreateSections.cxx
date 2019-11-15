@@ -154,6 +154,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CreateUnWrappedView()
 				Pnt3d(SK*cos(Pitch) + Xs * cos(Pitch) - Tf * sin(Pitch),
 					xParams.xXCoords[Section], SK*sin(Pitch) + RK - Xs * sin(Pitch) - Tf * cos(Pitch)));
 		}
+
 		thePropView_->SetUnWrapped(Section, UnWrappedSection);
 	}
 }

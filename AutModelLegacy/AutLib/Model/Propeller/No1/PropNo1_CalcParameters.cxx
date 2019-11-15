@@ -126,7 +126,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CalcXSkew()
 
 		Point = Intersection.Point(1);
 
-		X[Index] = Processor::DegToRadian(Point.Y());
+		X[Index] = Point.Y();
 	}
 }
 
@@ -176,7 +176,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CalcXChord()
 
 		Point = Intersection.Point(1);
 
-		X[Index] = Processor::DegToRadian(Point.Y());
+		X[Index] = Point.Y();
 	}
 }
 
@@ -227,7 +227,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CalcXCamber()
 
 		Point = Intersection.Point(1);
 
-		X[Index] = Processor::DegToRadian(Point.Y());
+		X[Index] = Point.Y();
 		Xpos[Index] = 0.4;
 	}
 }
@@ -278,7 +278,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CalcXThickness()
 
 		Point = Intersection.Point(1);
 
-		X[Index] = Processor::DegToRadian(Point.Y());
+		X[Index] = Point.Y();
 	}
 }
 
@@ -328,7 +328,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CalcXRake()
 
 		Point = Intersection.Point(1);
 
-		X[Index] = Processor::DegToRadian(Point.Y());
+		X[Index] = Point.Y();
 	}
 }
 

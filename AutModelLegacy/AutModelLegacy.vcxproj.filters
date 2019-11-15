@@ -359,5 +359,8 @@
     <ClCompile Include="AutLib\Model\Propeller\Face\Leg_Prop_BladeFaceIO.cxx">
       <Filter>AutLib\Model\Propeller\Face</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_MakeHub.cxx">
+      <Filter>AutLib\Model\Propeller\No1</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

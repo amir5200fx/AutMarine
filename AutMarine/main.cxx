@@ -26,7 +26,7 @@
 #include <Geo_CurveLength.hxx>
 
 #include <GeoSizeFun_Uniform.hxx>
-#include <Mesh2d_AftMetricPrcsr.hxx>
+//#include <Mesh2d_AftMetricPrcsr.hxx>
 
 namespace AutLib
 {
@@ -107,10 +107,26 @@ int main()
 	fileName name("preview.plt");
 	OFstream myFile(name);
 
-	Leg_Model_PropNo1_Blade prop;
-	prop.Make();
+	{
+		Global_Timer timer;
 
-	prop.Blade()->ExportToPlt(myFile);
+		Leg_Model_PropNo1 prop;
+		prop.Perform();
+
+		const auto& myShape = prop.Entity();
+
+		FastDiscrete::Triangulation(myShape, *gl_fast_discrete_parameters);
+
+		auto myTris = Cad_Tools::RetrieveTriangulation(myShape);
+
+		for (const auto& x : myTris)
+		{
+			auto mesh = Cad_Tools::Triangulation(*x);
+			mesh->ExportToPlt(myFile);
+		}
+	}
+
+	cout << global_time_duration << std::endl;
 
 	/*{
 		Global_Timer timer;

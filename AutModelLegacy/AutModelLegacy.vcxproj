@@ -24,9 +24,9 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -34,12 +34,6 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -49,6 +43,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -81,6 +78,7 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
       <AdditionalIncludeDirectories>$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\DispNo1;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement\Nihad2;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel\Displacement;$(SolutionDir)AutModelLegacy\AutLib\Model\Vessel;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Thickness;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Rake;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Skew;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Pitch;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Hub;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Camber;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Chord;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form\Blade;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Form;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\No1\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\ExpandedView;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Profiles;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Parameters;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\Blade;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\UnWrapped;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Section\Wrapped;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\Face;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\View\Prop;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller\View\Expanded;$(SolutionDir)AutModelLegacy\AutLib\Model\Propeller;$(SolutionDir)AutModelLegacy\AutLib\Model\System;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Bounded;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter\Constant;$(SolutionDir)AutModelLegacy\AutLib\Model\Parameter;$(SolutionDir)AutModelLegacy\AutLib\Model\Section;$(SolutionDir)AutModelLegacy\AutLib\Model\Net;$(SolutionDir)AutModelLegacy\AutLib\Model\Entity;$(SolutionDir)AutIO\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -148,6 +146,7 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CalcParameters.cxx" />
     <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CreateProfiles.cxx" />
     <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_CreateSections.cxx" />
+    <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_MakeHub.cxx" />
     <ClCompile Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Defaults.cxx" />
     <ClCompile Include="AutLib\Model\Propeller\Section\Wrapped\Leg_Prop_WrappedSection.cxx" />
     <ClCompile Include="AutLib\Model\Propeller\View\Expanded\Leg_Prop_ExpandedView.cxx" />

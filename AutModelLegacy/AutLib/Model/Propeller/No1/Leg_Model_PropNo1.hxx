@@ -5,6 +5,8 @@
 #include <Global_AccessMethod.hxx>
 #include <Leg_Model_Propeller.hxx>
 
+class TopoDS_Shape;
+
 namespace AutLib
 {
 
@@ -32,9 +34,14 @@ namespace AutLib
 		std::shared_ptr<Leg_Prop_BladeFace> theBlade_;
 
 
+		TopoDS_Shape theFace_;
+		TopoDS_Shape theBack_;
+
+		TopoDS_Shape theClosed_;
+
+	protected:
 
 		void AllocateMemory();
-
 
 		/* Calculate Parameters */
 
@@ -89,6 +96,23 @@ namespace AutLib
 
 		void CreateBladeFaces();
 
+
+	protected:
+
+		TopoDS_Shape& ChangeFace()
+		{
+			return theFace_;
+		}
+
+		TopoDS_Shape& ChangeBack()
+		{
+			return theBack_;
+		}
+
+		virtual void MakeFace();
+
+		virtual void MakeClosed();
+
 	public:
 
 		Leg_Model_PropNo1_Blade();
@@ -98,12 +122,24 @@ namespace AutLib
 			return theBlade_;
 		}
 
-		virtual void Make();
-
-		void PerformToPreview() override
+		const TopoDS_Shape& ClosedBlade() const
 		{
-
+			return theClosed_;
 		}
+
+		const TopoDS_Shape& Face() const
+		{
+			return theFace_;
+		}
+
+		const TopoDS_Shape& Back() const
+		{
+			return theBack_;
+		}
+
+		virtual void Perform();
+
+		void PerformToPreview() override;
 
 		//- Macros
 
@@ -114,6 +150,48 @@ namespace AutLib
 	private:
 
 		GLOBAL_ACCESS_SINGLE(std::shared_ptr<Leg_PropNo1_Xparams>, Xparams)
+	};
+
+
+	class Leg_Model_PropNo1_Blades
+		: public Leg_Model_PropNo1_Blade
+	{
+
+		/*Private Data*/
+
+		TopoDS_Shape theBlades_;
+
+	protected:
+
+		void MakeFace() override;
+
+	public:
+
+		Leg_Model_PropNo1_Blades();
+
+		const TopoDS_Shape& Blades() const
+		{
+			return theBlades_;
+		}
+
+		void Perform() override;
+
+		void PerformToPreview() override;
+	};
+
+	class Leg_Model_PropNo1
+		: public Leg_Model_PropNo1_Blades
+	{
+
+		/*Private Data*/
+
+		TopoDS_Shape theHub_;
+
+		void MakeHub();
+
+	public:
+
+		void Perform() override;
 	};
 }
 

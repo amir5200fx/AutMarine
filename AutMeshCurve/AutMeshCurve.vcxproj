@@ -82,6 +82,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,6 +127,7 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
