@@ -8,7 +8,7 @@ void AutLib::Leg_Prop_ExpandedView::AllocateMemory
 	theTb_.resize(theSize);
 	theTf_.resize(theSize);
 	theX_.resize(theSize);
-	theXs_.reserve(theSize);
+	theXs_.resize(theSize);
 	theYb_.resize(theSize);
 	theYf_.resize(theSize);
 }

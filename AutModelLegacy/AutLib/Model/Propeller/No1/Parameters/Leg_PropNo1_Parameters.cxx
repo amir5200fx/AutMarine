@@ -8,6 +8,12 @@ typedef AutLib::Leg_PropNo1_Defaults DP;
 
 void AutLib::Leg_PropNo1_Parameters::Defaults()
 {
+	NbSections() = DP::NB_SECTIONS;
+	NbBlades() = DP::NB_BLADES;
+	NbSpans() = DP::NB_SPANS;
+
+	RemoveHubApex_ = Standard_False;
+
 	Diameter() = std::make_shared<Leg_Model_ConstParam>(DP::DIAMETER.Index(), DP::DIAMETER.Name(), DP::DIAMETER.Value());
 	HubRadius() = std::make_shared<Leg_Model_ConstParam>(DP::HUB_RADIUS.Index(), DP::HUB_RADIUS.Name(), DP::HUB_RADIUS.Value());
 

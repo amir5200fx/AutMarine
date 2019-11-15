@@ -45,4 +45,7 @@ namespace AutLib
 	const Leg_PropNo1_Defaults::param Leg_PropNo1_Defaults::THICK_TIP_STEEP(30, "thickTipSteep", 0.5);
 
 	const Leg_PropNo1_Defaults::param Leg_PropNo1_Defaults::RAKE(31, "rake", 30 * 0.02);
+
+	const Leg_PropNo1_Defaults::param Leg_PropNo1_Defaults::TIP_GAP(32, "tipGap", 0.002);
+	const Leg_PropNo1_Defaults::param Leg_PropNo1_Defaults::TE_GAP(33, "teGap", 0.005);
 }

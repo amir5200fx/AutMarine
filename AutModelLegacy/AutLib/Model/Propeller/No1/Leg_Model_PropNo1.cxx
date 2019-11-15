@@ -21,6 +21,12 @@ void AutLib::Leg_Model_PropNo1_Blade::AllocateMemory()
 	thePropView_ = std::make_shared<Leg_Prop_PropView>(nbSections);
 }
 
+AutLib::Leg_Model_PropNo1_Blade::Leg_Model_PropNo1_Blade()
+{
+	theParameters_ = std::make_shared<Leg_PropNo1_Parameters>();
+	theProfiles_ = std::make_shared<Leg_PropNo1_Profile>();
+}
+
 void AutLib::Leg_Model_PropNo1_Blade::CreateBladeFaces()
 {
 	const auto& params = *Parameters();
@@ -77,7 +83,7 @@ void AutLib::Leg_Model_PropNo1_Blade::Make()
 	AllocateMemory();
 
 	CreateProfiles();
-
+	
 	CalcXParameters();
 
 	CreateSections_NACA4Digits();

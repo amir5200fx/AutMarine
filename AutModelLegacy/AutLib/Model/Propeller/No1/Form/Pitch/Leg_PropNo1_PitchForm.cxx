@@ -13,3 +13,8 @@ void AutLib::Leg_PropNo1_PitchForm::Defaults()
 	RootSteep() = std::make_shared<Leg_Model_BndParam>(DP::PITCH_ROOT_STEEP.Index(), DP::PITCH_ROOT_STEEP.Name(), DP::PITCH_ROOT_STEEP.Value(), 0, 1);
 	TipSteep() = std::make_shared<Leg_Model_BndParam>(DP::PITCH_TIP_STEEP.Index(), DP::PITCH_TIP_STEEP.Name(), DP::PITCH_TIP_STEEP.Value(), 0, 1);
 }
+
+AutLib::Leg_PropNo1_PitchForm::Leg_PropNo1_PitchForm()
+{
+	Defaults();
+}

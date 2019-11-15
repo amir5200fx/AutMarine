@@ -41,7 +41,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CreateSectionProfiles_NACA4Digits(const St
 	{
 		X[Index] = 0.5*(1.0 - cos(Index*dx));
 	}
-	X[n] = (1.0 - params.TEGap()->Value());
+	X[n - 1] = (1.0 - params.TEGap()->Value());
 
 	forThose
 	(
@@ -95,7 +95,7 @@ void AutLib::Leg_Model_PropNo1_Blade::CreateExpandedView
 	const std::vector<Pnt2d>& theTB
 )
 {
-	auto expandedView = std::make_shared<Leg_Prop_ExpandedView>(Parameters()->NbSections());
+	auto expandedView = std::make_shared<Leg_Prop_ExpandedView>(Parameters()->NbSpans());
 	auto& expanded = *expandedView;
 
 	const auto& xParams = *Xparams();
@@ -109,7 +109,6 @@ void AutLib::Leg_Model_PropNo1_Blade::CreateExpandedView
 		expanded.SetYb(Index, theTB[Index].Y() + xParams.xXCoords[Index]);
 		expanded.SetYf(Index, theTF[Index].Y() + xParams.xXCoords[Index]);
 	}
-
 	thePropView_->SetExpanded(Section, expandedView);
 }
 
