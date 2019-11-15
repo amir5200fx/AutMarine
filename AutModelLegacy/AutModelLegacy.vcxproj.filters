@@ -130,6 +130,36 @@
     <Filter Include="AutLib\Model\Propeller\No1\Parameters">
       <UniqueIdentifier>{eb939032-2ca7-49a6-a6ee-3171886e7ddb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Model\Duct\No1">
+      <UniqueIdentifier>{fa3eab2c-9228-4f95-a04b-2c7c57d87660}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct\No1\Form">
+      <UniqueIdentifier>{918159e2-7dc3-4cd9-85fe-31ec63499b21}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct\No1\Form\Dimensions">
+      <UniqueIdentifier>{fb646aba-3396-4aaa-a226-f1729be59b34}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct\No1\Form\Hull">
+      <UniqueIdentifier>{4b33e2fd-cf12-422e-a33c-f86e851f350b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct\No1\Form\Section">
+      <UniqueIdentifier>{9c664b44-779a-4eb8-9c68-3ab6e2273f38}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct\No1\Form\Generator">
+      <UniqueIdentifier>{6f9a83c8-7995-40f1-985a-a3c51c7a34ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Profile">
+      <UniqueIdentifier>{cf026970-7f25-44f3-8884-0104e72caea9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Profile\TwoSegmentNo1">
+      <UniqueIdentifier>{ed9f96c2-9539-426a-baff-42e336e7540b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct\No1\Form\Breadth">
+      <UniqueIdentifier>{d3cddf8f-b592-4ea2-8ca5-db77de644808}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Model\Duct\No1\Form\Depth">
+      <UniqueIdentifier>{83f52376-0292-4521-b310-c360de57f8d1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Model\Entity\Leg_Model_Entity.hxx">
@@ -261,6 +291,24 @@
     <ClInclude Include="AutLib\Model\Propeller\No1\System\Leg_PropNo1_Defaults.hxx">
       <Filter>AutLib\Model\Propeller\No1\System</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Model\Duct\No1\Form\Dimension\Leg_DuctNo1_DimensionForm.hxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Dimensions</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Duct\No1\Form\Hull\Leg_DuctNo1_HullForm.hxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Hull</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Duct\No1\Form\Section\Leg_DuctNo1_SectionForm.hxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Section</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Duct\No1\Form\Generator\Leg_DuctNo1_GeneratorForm.hxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Generator</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Profile\TwoSegmentNo1\Leg_Model_InterpTwoSegmentNo1.hxx">
+      <Filter>AutLib\Model\Profile\TwoSegmentNo1</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Model\Duct\No1\Form\Breadth\Leg_DuctNo1_BreadthForm.hxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Breadth</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Model\Entity\Leg_Model_Entity.cxx">
@@ -361,6 +409,18 @@
     </ClCompile>
     <ClCompile Include="AutLib\Model\Propeller\No1\PropNo1_MakeHub.cxx">
       <Filter>AutLib\Model\Propeller\No1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Duct\No1\Form\Dimension\Leg_DuctNo1_DimensionForm.cxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Dimensions</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Duct\No1\Form\Section\Leg_DuctNo1_SectionForm.cxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Section</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Duct\No1\Form\Generator\Leg_DuctNo1_GeneratorForm.cxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Generator</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Duct\No1\Form\Breadth\Leg_DuctNo1_BreadthForm.cxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Breadth</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
