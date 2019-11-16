@@ -26,6 +26,8 @@ namespace AutLib
 		std::shared_ptr<parameter> theDepthAtInlet_;
 		std::shared_ptr<parameter> theDepthAtOutlet_;
 
+		Standard_Integer theNbSections_;
+
 	protected:
 
 		void Defaults();
@@ -42,6 +44,8 @@ namespace AutLib
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, BreadthAtOutlet)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, DepthAtInlet)
 			GLOBAL_ACCESS_SINGLE(std::shared_ptr<parameter>, DepthAtOutlet)
+
+			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Integer, NbSections)
 	};
 }
 
