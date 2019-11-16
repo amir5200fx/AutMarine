@@ -336,6 +336,9 @@
     <ClInclude Include="AutLib\Model\Duct\Leg_Model_Duct.hxx">
       <Filter>AutLib\Model\Duct</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Model\Duct\No1\System\Leg_DuctNo1_Defaults.hxx">
+      <Filter>AutLib\Model\Duct\No1\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Model\Entity\Leg_Model_Entity.cxx">
@@ -460,6 +463,15 @@
     </ClCompile>
     <ClCompile Include="AutLib\Model\Duct\No1\DuctNo1_CreateSections.cxx">
       <Filter>AutLib\Model\Duct\No1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Duct\No1\Leg_Model_DuctNo1.cxx">
+      <Filter>AutLib\Model\Duct\No1</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Duct\No1\System\Leg_DuctNo1_Defaults.cxx">
+      <Filter>AutLib\Model\Duct\No1\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Model\Duct\No1\Form\Hull\Leg_DuctNo1_HullForm.cxx">
+      <Filter>AutLib\Model\Duct\No1\Form\Hull</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

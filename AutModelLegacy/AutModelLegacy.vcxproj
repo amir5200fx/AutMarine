@@ -98,6 +98,7 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     <ClInclude Include="AutLib\Model\Duct\No1\Leg_Model_DuctNo1.hxx" />
     <ClInclude Include="AutLib\Model\Duct\No1\Profiles\Leg_DuctNo1_Profiles.hxx" />
     <ClInclude Include="AutLib\Model\Duct\No1\System\Leg_DuctNo1_Dim.hxx" />
+    <ClInclude Include="AutLib\Model\Duct\No1\System\Leg_DuctNo1_Defaults.hxx" />
     <ClInclude Include="AutLib\Model\Entity\Leg_Model_Entity.hxx" />
     <ClInclude Include="AutLib\Model\Net\Leg_Model_CtrlNet.hxx" />
     <ClInclude Include="AutLib\Model\Parameter\Bounded\Leg_Model_BndParam.hxx" />
@@ -151,7 +152,10 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     <ClCompile Include="AutLib\Model\Duct\No1\Form\Depth\Leg_DuctNo1_DepthForm.cxx" />
     <ClCompile Include="AutLib\Model\Duct\No1\Form\Dimension\Leg_DuctNo1_DimensionForm.cxx" />
     <ClCompile Include="AutLib\Model\Duct\No1\Form\Generator\Leg_DuctNo1_GeneratorForm.cxx" />
+    <ClCompile Include="AutLib\Model\Duct\No1\Form\Hull\Leg_DuctNo1_HullForm.cxx" />
     <ClCompile Include="AutLib\Model\Duct\No1\Form\Section\Leg_DuctNo1_SectionForm.cxx" />
+    <ClCompile Include="AutLib\Model\Duct\No1\Leg_Model_DuctNo1.cxx" />
+    <ClCompile Include="AutLib\Model\Duct\No1\System\Leg_DuctNo1_Defaults.cxx" />
     <ClCompile Include="AutLib\Model\Entity\Leg_Model_Entity.cxx" />
     <ClCompile Include="AutLib\Model\Propeller\Face\Leg_Prop_BladeFaceIO.cxx" />
     <ClCompile Include="AutLib\Model\Propeller\No1\Form\Camber\Leg_PropNo1_CamberForm.cxx" />

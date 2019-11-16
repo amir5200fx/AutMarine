@@ -3,6 +3,9 @@
 #include <Pnt2d.hxx>
 #include <Leg_DuctNo1_Parameters.hxx>
 
+#include <BSplCLib.hxx>
+#include <Geom_BSplineSurface.hxx>
+
 namespace AutLib
 {
 	namespace Leg_DuctNo1
@@ -271,6 +274,7 @@ AutLib::Leg_Model_DuctNo1::CreateSection
 
 	auto newSection = std::make_shared<Leg_Model_SectionCtrlPts>();
 	auto& Coords = newSection->Points();
+	Coords.resize(11);
 
 	Coords[0] = Pnt3d(xSection, P0.X(), P0.Y());
 	Coords[1] = Pnt3d(xSection, P1.X(), P1.Y());
@@ -291,12 +295,91 @@ void AutLib::Leg_Model_DuctNo1::CreateSections()
 {
 	const auto& dimensions = Parameters()->Dimensions();
 
-	Standard_Integer NbSections = dimensions.NbSections();
+	const auto NbSections = dimensions.NbSections();
 
 	auto& sections = ChangeSections();
+	sections.resize(NbSections);
 
 	forThose(Section, 0, NbSections - 1)
 	{
 		sections[Section] = CreateSection(Section);
 	}
+}
+
+void AutLib::Leg_Model_DuctNo1::SetupPatch()
+{
+	std::vector<Standard_Real>
+		uParameters;
+
+	Standard_Integer
+		uDegree,
+		vDegree,
+		uMaxIndex,
+		vMaxIndex;
+
+	const auto& dimensions = Parameters()->Dimensions();
+	const auto nbSections = dimensions.NbSections();
+
+	const Standard_Integer nbRows = 11;
+
+	Leg_DuctNo1::UniformSurfaceMeshParameters
+	(
+		nbSections,
+		uParameters
+	);
+
+	uDegree = 3;
+	vDegree = 2;
+
+	uMaxIndex = nbSections - 1;
+	vMaxIndex = nbRows - 1;
+
+	std::vector<Standard_Real>
+		uKnots(uMaxIndex + uDegree + 2);
+
+	Leg_DuctNo1::SequenceKnots
+	(
+		uDegree,
+		uMaxIndex,
+		uParameters,
+		uKnots
+	);
+
+	TColStd_Array1OfReal Seq_uKnots(1, (Standard_Integer)uKnots.size());
+
+	forThose(Index, 0, uKnots.size() - 1)
+		Seq_uKnots.SetValue(Index + 1, uKnots[Index]);
+
+	Standard_Integer uLength = BSplCLib::KnotsLength(Seq_uKnots);
+
+	TColStd_Array1OfReal uKnotVector(1, uLength);
+	TColStd_Array1OfReal vKnotVector(1, 6);
+	TColStd_Array1OfInteger uMult(1, uLength);
+	TColStd_Array1OfInteger vMult(1, 6);
+
+	BSplCLib::Knots(Seq_uKnots, uKnotVector, uMult);
+	//BSplCLib::Knots(Seq_vKnots, vKnotVector, vMult);
+
+	vMult.SetValue(1, 3);
+	vMult.SetValue(2, 2);
+	vMult.SetValue(3, 2);
+	vMult.SetValue(4, 2);
+	vMult.SetValue(5, 2);
+	vMult.SetValue(6, 3);
+
+	vKnotVector.SetValue(1, 0);
+	vKnotVector.SetValue(2, 0.2);
+	vKnotVector.SetValue(3, 0.4);
+	vKnotVector.SetValue(4, 0.6);
+	vKnotVector.SetValue(5, 0.8);
+	vKnotVector.SetValue(6, 1.0);
+
+	theGeometry_ = 
+		new Geom_BSplineSurface
+	(
+		*CtrlNet,
+		*WeightNet,
+		uKnotVector, 
+		vKnotVector,
+		uMult, vMult, uDegree, vDegree);
 }

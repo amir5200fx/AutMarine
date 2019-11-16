@@ -24,14 +24,12 @@ namespace AutLib
 			Standard_Integer nbSections
 		)
 		{
-			Try_Exception_Handle_Exit
+			forThose
 			(
-				forThose
-				(
-					Section,
-					1,
-					nbSections - 2
-				)
+				Section,
+				1,
+				nbSections - 2
+			)
 			{
 				Standard_Real Mean = MEAN
 				(
@@ -41,7 +39,6 @@ namespace AutLib
 
 				Parameters[Section] += (Mean - Parameters[Section]) * Coeff;
 			}
-			);
 		}
 	}
 }
