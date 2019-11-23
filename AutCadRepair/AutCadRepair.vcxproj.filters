@@ -1,17 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{3b09a8ac-fde8-4b30-8e11-7ad4bc3211b0}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="AutLib\CadRepair">
+      <UniqueIdentifier>{ada282cd-54cf-4685-bc88-8c6f95b51920}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="AutLib\CadRepair\Metric">
+      <UniqueIdentifier>{faabf5ba-fc20-4e0b-a945-a128aeec0aff}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadRepair\Metric\Normalize">
+      <UniqueIdentifier>{7955b42b-d92b-4eff-b74e-2ab1cad8c73d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Metric\Normalize\Info">
+      <UniqueIdentifier>{64ec328d-989b-42bd-91f7-209b03ec9811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Metric\Normalize\System">
+      <UniqueIdentifier>{d0a0ff9d-fcc1-47ee-a25e-ad3edd6ee371}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\AR">
+      <UniqueIdentifier>{34c361d2-6de6-4289-8d79-a6eae7e3c090}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\AR\ParaPlane">
+      <UniqueIdentifier>{04698d12-b779-4d40-9b7a-603fec004180}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\AR\ParaPlane\Info">
+      <UniqueIdentifier>{742c0df9-d442-4a13-aab8-b058df9e41cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\AR\ParaPlane\System">
+      <UniqueIdentifier>{da81c841-c1eb-4a2f-9102-04154cb1f355}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\System\CadRepair_NormalizeMetric_System.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetric.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetricI.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneAR.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\Info\CadRepair_ParaPlaneAR_Info.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\System\CadRepair_ParaPlaneAR_System.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneARI.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.cxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\Metric\Normalize\System\CadRepair_NormalizeMetric_System.cxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetric.cxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\Info\CadRepair_ParaPlaneAR_Info.cxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\System\CadRepair_ParaPlaneAR_System.cxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneAR.cxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

@@ -172,9 +172,6 @@
     <Filter Include="AutLib\MeshAft\MetricProcessor\AnIso">
       <UniqueIdentifier>{99a39053-d932-45a9-b423-6f1d9902d64e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshAft\MetricProcessor\Surface">
-      <UniqueIdentifier>{8a5d8a60-f260-460d-a664-3202b05aadc9}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\MeshAft\MetricProcessor\Iso\2d">
       <UniqueIdentifier>{8ec0dfa9-ffa1-43db-92ff-769707dc0c8c}</UniqueIdentifier>
     </Filter>
@@ -246,6 +243,21 @@
     </Filter>
     <Filter Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\BNode">
       <UniqueIdentifier>{63440127-1d74-41d6-b989-8531e26fbe25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\AnIso\2d">
+      <UniqueIdentifier>{b06f7dc2-7e7d-43dd-949e-eefc03a4803e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\AnIso\Surface">
+      <UniqueIdentifier>{cdee10c7-062a-45f1-a4d9-d36130d28578}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\AnIso\Info">
+      <UniqueIdentifier>{e0623035-ca83-4b38-9fd1-5869215a633c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\AnIso\System">
+      <UniqueIdentifier>{1db0a473-5017-4d92-9989-5fd1b91b6342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\MetricProcessor\AnIso\3d">
+      <UniqueIdentifier>{b8f0ac0b-1b38-4613-9d6e-75ad1008f160}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -507,21 +519,6 @@
     <ClInclude Include="AutLib\MeshAft\Data\Front\Surface\Info\Aft2d_FrontSurfaceInfo.hxx">
       <Filter>AutLib\MeshAft\Data\Front\Surface\Info</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\2d\Mesh2d_AftMetricPrcsr.hxx">
-      <Filter>AutLib\MeshAft\MetricProcessor\Iso\2d</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\Mesh_AftMetricPrcsrIso.hxx">
-      <Filter>AutLib\MeshAft\MetricProcessor\Iso</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Mesh_AftMetricPrcsr.hxx">
-      <Filter>AutLib\MeshAft\MetricProcessor</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Mesh_AftMetricPrcsrI.hxx">
-      <Filter>AutLib\MeshAft\MetricProcessor</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\Mesh_AftMetricPrcsrIsoI.hxx">
-      <Filter>AutLib\MeshAft\MetricProcessor\Iso</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Aft_BndNode.hxx">
       <Filter>AutLib\MeshAft\Entities\Bnd\Node</Filter>
     </ClInclude>
@@ -738,6 +735,30 @@
     <ClInclude Include="AutLib\MeshAft\Entities\Bnd\Node\Surface\Aft2d_tSegmentNode.hxx">
       <Filter>AutLib\MeshAft\Entities\Bnd\Node\Surface</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Aft_MetricPrcsrI.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Aft_MetricPrcsr.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\AnIso\2d\Aft2d_MetricPrcsrAnIso.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\AnIso\Info\Aft_MetricPrcsrAnIso_Info.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\AnIso\System\Aft2d_MetricPrcsrAnIso_System.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\AnIso\Surface\Aft2d_MetricPrcsrSurface.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\2d\Aft2d_MetricPrcsr.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\3d\Aft3d_MetricPrcsr.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\Iso\3d</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Entities\Node\Aft_Node.cxx">
@@ -749,11 +770,20 @@
     <ClCompile Include="AutLib\MeshAft\Data\Front\2d\Info\Aft2d_FrontInfoTemplate.cxx">
       <Filter>AutLib\MeshAft\Data\Front\2d\Info</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\MetricProcessor\Mesh_AftMetricPrcsr.cxx">
+    <ClCompile Include="AutLib\MeshAft\MetricProcessor\Aft_MetricPrcsr.cxx">
       <Filter>AutLib\MeshAft\MetricProcessor</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\MetricProcessor\Iso\Mesh_AftMetricPrcsrIso.cxx">
-      <Filter>AutLib\MeshAft\MetricProcessor\Iso</Filter>
+    <ClCompile Include="AutLib\MeshAft\MetricProcessor\AnIso\2d\Aft2d_MetricPrcsrAnIso.cxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\MetricProcessor\AnIso\Info\Aft_MetricPrcsrAnIso_Info.cxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\MetricProcessor\AnIso\System\Aft2d_MetricPrcsrAnIso_System.cxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\MetricProcessor\AnIso\Surface\Aft2d_MetricPrcsrSurface.cxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\Surface</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

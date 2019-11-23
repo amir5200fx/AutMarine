@@ -20,6 +20,9 @@ class Geom2dAPI_InterCurveCurve;
 namespace AutLib
 {
 
+	// Forward Declaration
+	class Numeric_AdaptIntegrationInfo;
+
 	class Cad_Tools
 	{
 
@@ -153,7 +156,13 @@ namespace AutLib
 			);
 
 		//- an exception will be thrown if the curve is not bounded and the x exceeds the boundary
-		static void SplitCurve(const Handle(Geom2d_Curve)& theCurve, const Standard_Real theX, Handle(Geom2d_Curve)& theC0, Handle(Geom2d_Curve)& theC1);
+		static void SplitCurve
+		(
+			const Handle(Geom2d_Curve)& theCurve,
+			const Standard_Real theX,
+			Handle(Geom2d_Curve)& theC0, 
+			Handle(Geom2d_Curve)& theC1
+		);
 
 		static void ExportToIGES
 		(
@@ -161,6 +170,17 @@ namespace AutLib
 			const TopoDS_Shape& theShape, 
 			const fileName& name
 		);
+
+		Standard_Real CharLength(const Handle(Geom_Surface)& theSurface, const Pnt2d& theP0, const Pnt2d& theP1, Numeric_AdaptIntegrationInfo& theInfo);
+
+		template<class SurfType>
+		static std::shared_ptr<SurfType> ReParameterization(const SurfType& theSurface, const Standard_Real thsScale);
+
+		template<class SurfType>
+		static std::shared_ptr<SurfType> ReParameterization_uExpand(const SurfType& theSurface, const Standard_Real theMult);
+
+		template<class SurfType>
+		static std::shared_ptr<SurfType> ReParameterization_vExpand(const SurfType& theSurface, const Standard_Real theMult);
 	};
 }
 

@@ -228,11 +228,15 @@
     <ClInclude Include="AutLib\Geom\Merge\Point\Merge_PntAlg.hxx" />
     <ClInclude Include="AutLib\Geom\Merge\StaticData\Merge_StaticData.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIso.hxx" />
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIsoFwd.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIso.hxx" />
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIsoFwd.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Geo_MetricPrcsr.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Geo_MetricPrcsrI.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsr.hxx" />
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsrFwd.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsr.hxx" />
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsrFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Point\2d\Pnt2d.hxx" />
     <ClInclude Include="AutLib\Geom\Point\2d\Pnt2dI.hxx" />
     <ClInclude Include="AutLib\Geom\Point\3d\Pnt3d.hxx" />

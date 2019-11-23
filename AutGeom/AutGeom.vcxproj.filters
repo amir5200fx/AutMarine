@@ -842,5 +842,17 @@
     <ClInclude Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNodeI.hxx">
       <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsrFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsrFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIsoFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIsoFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

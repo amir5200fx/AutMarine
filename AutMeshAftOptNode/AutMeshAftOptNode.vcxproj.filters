@@ -91,6 +91,66 @@
     <Filter Include="AutLib\MeshAft\OptNode\Info">
       <UniqueIdentifier>{5c07d43f-e36b-430e-8c0f-65b9bed6ca0c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr">
+      <UniqueIdentifier>{fbd8cb33-b9e6-4feb-ba5e-253d39614788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Fraction">
+      <UniqueIdentifier>{e275f661-99f0-41c2-9039-618f04121570}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Fraction\Info">
+      <UniqueIdentifier>{4de89f1b-8a41-496f-904d-86dc78d657b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Iso">
+      <UniqueIdentifier>{15ef0e77-c0b3-4073-941a-aaa16d0675a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\AnIso">
+      <UniqueIdentifier>{ff6e6d17-8f27-4198-8217-db84f6d7c0bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Iso\2d">
+      <UniqueIdentifier>{d6b1db52-615f-4963-924f-78e20d6914c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Iso\3d">
+      <UniqueIdentifier>{bb3860a5-27bf-498e-a4a5-e9739517f108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\AnIso\2d">
+      <UniqueIdentifier>{57cae76b-a323-4dc9-baa8-919ab74fc58d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\AnIso\3d">
+      <UniqueIdentifier>{1b2901cd-fb88-4226-82b1-8dc0aa3e5553}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Fraction\Iso">
+      <UniqueIdentifier>{b33bdea4-8bf9-4bcc-87a9-414191e5ae00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Fraction\Iso\2d">
+      <UniqueIdentifier>{fc0008ec-76e6-4448-904e-867611632c5c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\SizeCorr\Fraction\Iso\3d">
+      <UniqueIdentifier>{ae948906-24ff-4ba2-ac5e-e9ff4646c47a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Fraction">
+      <UniqueIdentifier>{437e3ce4-4515-4e4a-b59f-ba8456fec240}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso">
+      <UniqueIdentifier>{585ba7c5-ed30-4564-a3c5-c37114c35b75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Fraction\AnIso">
+      <UniqueIdentifier>{2037e183-8803-446e-bc4a-02a5beff0dba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d">
+      <UniqueIdentifier>{7b769e87-b2eb-4151-8241-ea2dddaf957e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d">
+      <UniqueIdentifier>{6d16356a-0706-4f98-b9f3-210e31c27466}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Info">
+      <UniqueIdentifier>{91e9d161-7988-48ff-ab62-bfcd790b8498}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Type">
+      <UniqueIdentifier>{3aca1f5a-a176-41a8-8dc9-c0b84f042a42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Tools">
+      <UniqueIdentifier>{775e9c41-1552-4c19-b221-9c90fa56eddd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\OptNode\Aft_OptNode.hxx">
@@ -102,49 +162,91 @@
     <ClInclude Include="AutLib\MeshAft\OptNode\Info\Aft_OptNode_Info.hxx">
       <Filter>AutLib\MeshAft\OptNode\Info</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_OptNode_IterativeCorrectorInfo.hxx">
-      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Info</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrector.hxx">
-      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrectorI.hxx">
-      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Aft_OptNode_Corrector.hxx">
       <Filter>AutLib\MeshAft\OptNode\Corrector</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_Analytical.hxx">
       <Filter>AutLib\MeshAft\OptNode\Analytical\AnIso\2d</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_AnalyticalI.hxx">
-      <Filter>AutLib\MeshAft\OptNode\Analytical\AnIso\2d</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_Analytical.hxx">
-      <Filter>AutLib\MeshAft\OptNode\Analytical\Iso\2d</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_AnalyticalI.hxx">
       <Filter>AutLib\MeshAft\OptNode\Analytical\Iso\2d</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Aft_OptNode_Analytical.hxx">
       <Filter>AutLib\MeshAft\OptNode\Analytical</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\SizeCorr\Aft_SizeCorr.hxx">
+      <Filter>AutLib\MeshAft\SizeCorr</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\SizeCorr\Iso\2d\Aft2d_SizeCorr.hxx">
+      <Filter>AutLib\MeshAft\SizeCorr\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\SizeCorr\Iso\2d\Aft2d_SizeCorrFwd.hxx">
+      <Filter>AutLib\MeshAft\SizeCorr\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d\Aft2d_CorrOptNode_Fraction.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Info\Aft_SizeCorr_Fraction_Info.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Fraction\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d\Aft3d_CorrOptNode_Fraction.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Type\Aft_OptNode_Corrector_Type.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d\Aft2d_CorrOptNode_Iterative.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_SizeCorr_Iterative_Info.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Tools\Aft_CorrOptNode_Iterative_Tools.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d\Aft2d_CorrOptNodeAnIso_Iterative.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Surface\Aft2d_CorrOptNodeSurface_Iterative.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Surface\Aft2d_OptNodeSurface_Analytical.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\Surface</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\OptNode\Aft_OptNode.cxx">
       <Filter>AutLib\MeshAft\OptNode</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_OptNode_IterativeCorrectorInfo.cxx">
-      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Info</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrector.cxx">
-      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative</Filter>
-    </ClCompile>
     <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_Analytical.cxx">
       <Filter>AutLib\MeshAft\OptNode\Analytical\AnIso\2d</Filter>
     </ClCompile>
     <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_Analytical.cxx">
       <Filter>AutLib\MeshAft\OptNode\Analytical\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d\Aft2d_CorrOptNode_Fraction.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Info\Aft_SizeCorr_Fraction_Info.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Fraction\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d\Aft3d_CorrOptNode_Fraction.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_SizeCorr_Iterative_Info.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d\Aft2d_CorrOptNode_Iterative.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d\Aft2d_CorrOptNodeAnIso_Iterative.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Surface\Aft2d_CorrOptNodeSurface_Iterative.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Corrector\Iterative\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\Surface\Aft2d_OptNodeSurface_Analytical.cxx">
+      <Filter>AutLib\MeshAft\OptNode\Analytical\Surface</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

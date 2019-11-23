@@ -23,6 +23,7 @@ namespace AutLib
 	{
 		Debug_Null_Pointer(theMetricFunction_);
 		auto m = theMetricFunction_->Value(theCoord);
+		currentMetric = m;
 		return std::move(m);
 	}
 

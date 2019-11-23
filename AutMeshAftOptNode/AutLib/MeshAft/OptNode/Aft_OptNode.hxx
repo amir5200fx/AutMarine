@@ -3,7 +3,7 @@
 #define _Aft_OptNode_Header
 
 #include <Standard_TypeDef.hxx>
-#include <Mesh_AftMetricPrcsr.hxx>
+#include <Aft_MetricPrcsr.hxx>
 
 #include <memory>
 
@@ -23,7 +23,7 @@ namespace AutLib
 	class Aft_OptNode_Calculator
 	{
 
-		typedef Mesh_AftMetricPrcsr<FrontType, SizeFun, MetricFun>
+		typedef Aft_MetricPrcsr<FrontType, SizeFun, MetricFun>
 			metricMap;
 		typedef FrontType frontType;
 		typedef MetricFun metricFun;
@@ -81,7 +81,7 @@ namespace AutLib
 		class Aft_OptNode_Calculator<FrontType, SizeFun, InfoAlg, void, AnalyAlg, CorrtAlg>
 	{
 
-		typedef Mesh_AftMetricPrcsr<FrontType, SizeFun, void>
+		typedef Aft_MetricPrcsr<FrontType, SizeFun, void>
 			metricMap;
 		typedef FrontType frontType;
 		typedef SizeFun sizeFun;

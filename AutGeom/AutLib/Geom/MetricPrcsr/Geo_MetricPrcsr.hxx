@@ -61,8 +61,14 @@ namespace AutLib
 		: public Geo_MetricPrcsrBase
 	{
 
+	public:
+
 		typedef typename SizeFun::ptType Point;
 		typedef typename MetricFun::metricType metricType;
+
+		mutable metricType currentMetric;
+
+	private:
 
 		/*Private Data*/
 
@@ -71,7 +77,7 @@ namespace AutLib
 
 	public:
 
-		using Geo_MetricPrcsrBase::info;
+		typedef typename Geo_MetricPrcsrBase::info info;
 
 		typedef Point ptType;
 		typedef typename cascadeLib::vec_type_from_point<Point>::vcType vcType;
@@ -103,6 +109,16 @@ namespace AutLib
 			, theSizeFunction_(theSizeFunction)
 			, theMetricFunction_(theMetricFunction)
 		{}
+
+		const std::shared_ptr<SizeFun>& SizeFunction() const
+		{
+			return theSizeFunction_;
+		}
+
+		const std::shared_ptr<MetricFun>& MetricFunction() const
+		{
+			return theMetricFunction_;
+		}
 
 		Standard_Real CalcElementSize(const Point& theCoord) const;
 
@@ -129,7 +145,11 @@ namespace AutLib
 		: public Geo_MetricPrcsrBase
 	{
 
+	public:
+
 		typedef typename SizeFun::ptType Point;
+
+	private:
 
 		/*Private Data*/
 
@@ -137,7 +157,7 @@ namespace AutLib
 
 	public:
 
-		using Geo_MetricPrcsrBase::info;
+		typedef typename Geo_MetricPrcsrBase::info info;
 
 		typedef Point ptType;
 		typedef typename cascadeLib::vec_type_from_point<Point>::vcType vcType;
@@ -165,6 +185,11 @@ namespace AutLib
 			: Geo_MetricPrcsrBase(theIndex, theName, theInfo)
 			, theSizeFunction_(theSizeFunction)
 		{}
+
+		const std::shared_ptr<SizeFun>& SizeFunction() const
+		{
+			return theSizeFunction_;
+		}
 
 		Standard_Real CalcElementSize(const Point& theCoord) const;
 

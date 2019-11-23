@@ -20,24 +20,38 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_Analytical.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_AnalyticalI.hxx" />
     <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_Analytical.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_AnalyticalI.hxx" />
     <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Aft_OptNode_Analytical.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_OptNode_IterativeCorrectorInfo.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrector.hxx" />
-    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrectorI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Surface\Aft2d_OptNodeSurface_Analytical.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Info\Aft_SizeCorr_Fraction_Info.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d\Aft2d_CorrOptNode_Fraction.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d\Aft3d_CorrOptNode_Fraction.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d\Aft2d_CorrOptNodeAnIso_Iterative.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_SizeCorr_Iterative_Info.hxx" />
     <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Aft_OptNode_Corrector.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d\Aft2d_CorrOptNode_Iterative.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Surface\Aft2d_CorrOptNodeSurface_Iterative.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Tools\Aft_CorrOptNode_Iterative_Tools.hxx" />
+    <ClInclude Include="AutLib\MeshAft\OptNode\Corrector\Type\Aft_OptNode_Corrector_Type.hxx" />
     <ClInclude Include="AutLib\MeshAft\OptNode\Info\Aft_OptNode_Info.hxx" />
     <ClInclude Include="AutLib\MeshAft\OptNode\Aft_OptNode.hxx" />
     <ClInclude Include="AutLib\MeshAft\OptNode\Aft_OptNodeI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\SizeCorr\Aft_SizeCorr.hxx" />
+    <ClInclude Include="AutLib\MeshAft\SizeCorr\Iso\2d\Aft2d_SizeCorr.hxx" />
+    <ClInclude Include="AutLib\MeshAft\SizeCorr\Iso\2d\Aft2d_SizeCorrFwd.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\AnIso\2d\Aft2d_OptNodeAnIso_Analytical.cxx" />
     <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\Iso\2d\Aft2d_OptNode_Analytical.cxx" />
-    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_OptNode_IterativeCorrectorInfo.cxx" />
-    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Aft_OptNode_IterativeCorrector.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Analytical\Surface\Aft2d_OptNodeSurface_Analytical.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Info\Aft_SizeCorr_Fraction_Info.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d\Aft2d_CorrOptNode_Fraction.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d\Aft3d_CorrOptNode_Fraction.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d\Aft2d_CorrOptNodeAnIso_Iterative.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Info\Aft_SizeCorr_Iterative_Info.cxx" />
     <ClCompile Include="AutLib\MeshAft\OptNode\Aft_OptNode.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d\Aft2d_CorrOptNode_Iterative.cxx" />
+    <ClCompile Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Surface\Aft2d_CorrOptNodeSurface_Iterative.cxx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -46,19 +60,6 @@
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v141</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -77,12 +78,6 @@
   </ImportGroup>
   <ImportGroup Label="Shared">
   </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
@@ -93,37 +88,20 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(BOOST_INCLUDEDIR);$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Info;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\AnIso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Info;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Tools;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Fraction\Info;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Type;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\AnIso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\System;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction\Info;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\AnIso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\AnIso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
     </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -133,7 +111,10 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\AnIso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Info;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative\Tools;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Iterative;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Fraction\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Fraction\Info;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector\Type;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Corrector;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\AnIso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical\System;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode\Analytical;$(MSBuildProjectDirectory)\AutLib\MeshAft\OptNode;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction\Info;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Fraction;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\AnIso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\AnIso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Iso\3d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr\Iso\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\SizeCorr;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

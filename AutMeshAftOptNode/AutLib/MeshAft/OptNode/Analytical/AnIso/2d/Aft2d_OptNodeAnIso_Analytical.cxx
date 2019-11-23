@@ -1,47 +1,50 @@
 #include <Aft2d_OptNodeAnIso_Analytical.hxx>
 
+#include <Entity2d_Metric1.hxx>
 #include <armadillo.h>
 
 using namespace arma;
 
-const Standard_Real AutLib::Aft2d_OptNodeAnIso_Analytical_Base::C3(1.7320508075688773);
-
-AutLib::Pnt2d 
-AutLib::Aft2d_OptNodeAnIso_Analytical_Base::CalcCoord
-(
-	const Standard_Real theSize,
-	const Aft2d_EdgeAnIso & theEdge,
-	const Entity2d_Metric1 & theMetric
-)
+namespace AutLib
 {
-	const auto invH2 = (Standard_Real)1.0 / (theSize*theSize);
+	template<>
+	void Aft2d_OptNodeAnIso_Analytical::Perform()
+	{
 
-	const auto& centre = theEdge.Centre();
+		static const Standard_Real C3(1.7320508075688773);
 
-	Debug_Null_Pointer(theEdge.Node0());
-	Debug_Null_Pointer(theEdge.Node1());
+		const auto h = ElementSize();
+		const auto& m = Metric();
 
-	const auto& v0 = theEdge.Node0()->Coord();
-	const auto& v1 = theEdge.Node1()->Coord();
+		const auto& invH2 = (Standard_Real)1.0 / (h*h);
+		const auto& centre = Front().Centre();
 
-	const auto D = sqrt(theMetric.Determinant());
-	const auto cte = C3 / (2.0*D*Entity2d_Metric1::Distance(centre, v1, theMetric));
+		Debug_Null_Pointer(Front().Node0());
+		Debug_Null_Pointer(Front().Node1());
 
-	auto dU = v1 - centre;
+		const auto& v0 = Front().Node0()->Coord();
+		const auto& v1 = Front().Node1()->Coord();
 
-	vec2 U;
-	U(0) = dU.X();
-	U(1) = dU.Y();
+		const auto D = sqrt(m.Determinant());
+		const auto cte = C3 / (2.0*D*Entity2d_Metric1::Distance(centre, v1, m));
 
-	mat22 orthM;
-	orthM(0, 0) = -theMetric.B();
-	orthM(0, 1) = -theMetric.C();
-	orthM(1, 0) = theMetric.A();
-	orthM(1, 1) = theMetric.B();
+		auto dU = v1 - centre;
 
-	U = cte * (orthM*U);
+		vec2 U;
+		U(0) = dU.X();
+		U(1) = dU.Y();
 
-	Pnt2d P(centre.X() + U(0), centre.Y() + U(1));
+		mat22 orthM;
+		orthM(0, 0) = -m.B();
+		orthM(0, 1) = -m.C();
+		orthM(1, 0) = m.A();
+		orthM(1, 1) = m.B();
 
-	return std::move(P);
+		U = cte * (orthM*U);
+
+		Pnt2d P(centre.X() + U(0), centre.Y() + U(1));
+		ChangeCoord() = std::move(P);
+
+		Change_IsDone() = Standard_True;
+	}
 }
