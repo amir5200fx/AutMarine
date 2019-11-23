@@ -4,6 +4,7 @@
 
 #include <Standard_TypeDef.hxx>
 #include <Global_AccessMethod.hxx>
+#include <Pnt2d.hxx>
 #include <Pnt3d.hxx>
 #include <armadillo.h>
 

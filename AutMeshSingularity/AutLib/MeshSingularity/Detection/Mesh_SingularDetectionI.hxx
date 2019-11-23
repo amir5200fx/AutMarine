@@ -4,6 +4,7 @@
 #include <Geo_Tools.hxx>
 #include <Cad2d_Plane_System.hxx>
 #include <CadPlnModel_Curve.hxx>
+#include <CadPlnModel_Segment.hxx>
 #include <SingularCurve_Pole.hxx>
 #include <SingularCurve_Line.hxx>
 #include <SingularZone_Pole_Loop.hxx>
@@ -372,7 +373,7 @@ namespace AutLib
 
 			const auto box = Entity2d_Box::BoundingBoxOf(pts);
 
-			auto curves = LineHorizonCurves_Loop<plnCurve>(box);
+			auto curves = base::template LineHorizonCurves_Loop<plnCurve>(box);
 
 			if (length < Weight() * elmSize)
 			{
@@ -470,7 +471,7 @@ namespace AutLib
 			{
 				if (s0 IS_EQUAL s1)
 				{
-					const auto curve = ParametricCurve<plnCurve>(thePolygon);
+					const auto curve = base::template ParametricCurve<plnCurve>(thePolygon);
 
 					const auto Pm = SingularityTools::FindParametricCoord(thePolygon, theSurface, 0.5 * length);
 					curve->SetMid(Pm);
@@ -488,7 +489,7 @@ namespace AutLib
 				}
 				else if (ABS(s0 - s1) IS_EQUAL 1)
 				{
-					const auto curve = ParametricCurve<plnCurve>(thePolygon);
+					const auto curve = base::template ParametricCurve<plnCurve>(thePolygon);
 
 					const auto Pm = SingularityTools::FindParametricCoord(thePolygon, theSurface, 0.5 * length);
 					curve->SetMid(Pm);
@@ -542,7 +543,7 @@ namespace AutLib
 
 				if (s0 IS_EQUAL s1)
 				{
-					auto curves = LineHorizonCurves_Dangle<plnCurve>(box, s0);
+					auto curves = base::template LineHorizonCurves_Dangle<plnCurve>(box, s0);
 
 					if (Verbose())
 					{
@@ -562,7 +563,7 @@ namespace AutLib
 				else if (ABS(s0 - s1) IS_EQUAL 1)
 				{
 					auto curves =
-						LineHorizonCurves_Corner<plnCurve>
+						base::template LineHorizonCurves_Corner<plnCurve>
 						(
 							box,
 							s0, theSurface, Weight() * size);
@@ -580,7 +581,7 @@ namespace AutLib
 				}
 				else if (ABS(s0 - s1) IS_EQUAL 2)
 				{
-					auto curves = LineHorizonCurves_WholeSide<plnCurve>(box, s0);
+					auto curves = base::template LineHorizonCurves_WholeSide<plnCurve>(box, s0);
 
 					if (Verbose())
 					{
@@ -714,7 +715,7 @@ namespace AutLib
 
 		const auto box = Entity2d_Box::Union(box0, box1);
 
-		const auto curves = LineHorizonCurves_TwoSided<plnCurve>(box, s00);
+		const auto curves = base::template LineHorizonCurves_TwoSided<plnCurve>(box, s00);
 
 		auto singularity =
 			std::make_shared<SingularZone_Line_TwoSide<SurfPln>>

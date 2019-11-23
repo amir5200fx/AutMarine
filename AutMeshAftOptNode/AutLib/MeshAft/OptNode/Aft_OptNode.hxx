@@ -10,17 +10,87 @@
 namespace AutLib
 {
 
+	template<class FrontType, class SizeFun, class MetricFun>
+	class Aft_OptNode_Base
+	{
+
+		typedef Aft_MetricPrcsr<FrontType, SizeFun, MetricFun>
+			metricMap;
+		typedef FrontType frontType;
+		typedef typename SizeFun::ptType Point;
+
+		/*Private Data*/
+
+		const std::shared_ptr<metricMap>& theMetricMap_;
+
+		Standard_Real theSize_;
+
+		const frontType& theFront_;
+
+		Point theCoord_;
+
+		Standard_Boolean IsConverged_;
+
+	protected:
+
+		Aft_OptNode_Base
+		(
+			const std::shared_ptr<metricMap>& theMetricMap,
+			const Standard_Real theSize,
+			const frontType& theFront
+		)
+			: theMetricMap_(theMetricMap)
+			, theSize_(theSize)
+			, theFront_(theFront)
+		{}
+
+
+		Point& ChangeCoord()
+		{
+			return theCoord_;
+		}
+
+		Standard_Boolean& Change_IsConverged()
+		{
+			return IsConverged_;
+		}
+
+	public:
+
+		const std::shared_ptr<metricMap>& MetricMap() const
+		{
+			return theMetricMap_;
+		}
+
+		Standard_Real ElementSize() const
+		{
+			return theSize_;
+		}
+
+		const frontType& Front() const
+		{
+			return theFront_;
+		}
+
+		const Point& Coord() const
+		{
+			return theCoord_;
+		}
+
+	};
+
 	template
 		<
 		class FrontType,
-		class SizeFun, 
-		class MetricFun,
-		class InfoAlg,
-		class AnalyAlg, 
-		class CorrtAlg, 	
+		class SizeFun,
+		class OptTraits = void,
+		bool CorrAlg = false,
+		class MetricFun = void,
 		class AltrAlg = void
 		>
-	class Aft_OptNode_Calculator
+		class Aft_OptNode
+		: public Global_Done
+		, public Aft_OptNode_Base<FrontType, sizeFun, MetricFun>
 	{
 
 		typedef Aft_MetricPrcsr<FrontType, SizeFun, MetricFun>
@@ -33,15 +103,9 @@ namespace AutLib
 
 		/*Private Data*/
 
-		const std::shared_ptr<metricMap>& theMetricMap_;
-		
-		Standard_Real theSize_;
-
-		const frontType& theFront_;
-
 	public:
 
-		Aft_OptNode_Calculator
+		Aft_OptNode
 		(
 			const std::shared_ptr<metricMap>& theMetricMap,
 			const Standard_Real theSize,
@@ -52,35 +116,16 @@ namespace AutLib
 			, theFront_(theFront)
 		{}
 
-		const std::shared_ptr<metricMap>& MetricMap() const
-		{
-			return theMetricMap_;
-		}
-
-		Standard_Real ElementSize() const
-		{
-			return theSize_;
-		}
-
-		const frontType& Front() const
-		{
-			return theFront_;
-		}
-
 		void Perform();
 	};
 
-	template
-		<
-		class FrontType,
-		class SizeFun,
-		class InfoAlg,
-		class AnalyAlg,
-		class CorrtAlg
-		>
-		class Aft_OptNode_Calculator<FrontType, SizeFun, InfoAlg, void, AnalyAlg, CorrtAlg>
+	template<class FrontType, class SizeFun>
+	class Aft_OptNode<FrontType, SizeFun>
+		: public Global_Done
+		, public Aft_OptNode_Base<frontType, sizeFun, void>
 	{
 
+		typedef Aft_OptNode_Base<frontType, sizeFun, void> base;
 		typedef Aft_MetricPrcsr<FrontType, SizeFun, void>
 			metricMap;
 		typedef FrontType frontType;
@@ -90,38 +135,12 @@ namespace AutLib
 
 		/*Private Data*/
 
-		const std::shared_ptr<metricMap>& theMetricMap_;
-		const std::shared_ptr<InfoAlg>& theInfo_;
 
-		Standard_Real theSize_;
-
-		const frontType& theFront_;
-
-
-		std::shared_ptr<AnalyAlg> theAnalytical_;
-		std::shared_ptr<CorrtAlg> theCorrector_;
-
-		Point theCoord_;
-
-
-		std::shared_ptr<AnalyAlg>& ChangeAnalytical()
-		{
-			return theAnalytical_;
-		}
-
-		std::shared_ptr<CorrtAlg>& ChangeCorrector()
-		{
-			return theCorrector_;
-		}
-
-		Point& ChangeCoord()
-		{
-			return theCoord_;
-		}
+		//- private functions and operators
 
 	public:
 
-		Aft_OptNode_Calculator
+		Aft_OptNode
 		(
 			const std::shared_ptr<metricMap>& theMetricMap,
 			const Standard_Real theSize,
@@ -132,83 +151,42 @@ namespace AutLib
 			, theFront_(theFront)
 		{}
 
-		const std::shared_ptr<metricMap>& MetricMap() const
-		{
-			return theMetricMap_;
-		}
-
-		Standard_Real ElementSize() const
-		{
-			return theSize_;
-		}
-
-		const frontType& Front() const
-		{
-			return theFront_;
-		}
-
-		const std::shared_ptr<AnalyAlg>& Analytical() const
-		{
-			return theAnalytical_;
-		}
-
-		const std::shared_ptr<CorrtAlg>& Corrector() const
-		{
-			return theCorrector_;
-		}
-
-		const std::shared_ptr<InfoAlg>& Info() const
-		{
-			return theInfo_;
-		}
-
-		const Point& Coord() const
-		{
-			return theCoord_;
-		}
-
 		void Perform();
 	};
 
-	template<class AftMetricPrcsr, class AnalyAlg, class CorrtAlg, class AltrAlg = void>
-	class Mesh_AftOptNode
+	template<class FrontType, class SizeFun, class OptTraits>
+	class Aft_OptNode<FrontType, SizeFun, OptTraits, true>
+		: public Global_Done
+		, public Aft_OptNode_Base<frontType, sizeFun, void>
 	{
+
+		typedef Aft_OptNode_Base<frontType, sizeFun, void> base;
+		typedef Aft_MetricPrcsr<FrontType, SizeFun, void>
+			metricMap;
+		typedef FrontType frontType;
+		typedef SizeFun sizeFun;
+
+		typedef typename sizeFun::ptType Point;
 
 		/*Private Data*/
 
 
-	};
-
-	template<class AftMetricPrcsr, class AnalyAlg, class CorrtAlg>
-	class Mesh_AftOptNode<AftMetricPrcsr, AnalyAlg, CorrtAlg, void>
-	{
-
-		typedef typename AftMetricPrcsr::frontType frontType;
-
-		/*Private Data*/
-
-		std::shared_ptr<AftMetricPrcsr> theMetricMap_;
-
-		Standard_Real theSize_;
-
-
-		std::shared_ptr<AnalyAlg> theAnalytical_;
-		std::shared_ptr<CorrtAlg> theCorrection_;
+		//- private functions and operators
 
 	public:
 
-		Mesh_AftOptNode
+		Aft_OptNode
 		(
-			const std::shared_ptr<AftMetricPrcsr>& theMetricMap,
-			const std::shared_ptr<AnalyAlg>& theAnalytical,
-			const std::shared_ptr<CorrtAlg>& theCorrection
+			const std::shared_ptr<metricMap>& theMetricMap,
+			const Standard_Real theSize,
+			const frontType& theFront
 		)
 			: theMetricMap_(theMetricMap)
-			, theAnalytical_(theAnalytical)
-			, theCorrection_(theCorrection)
+			, theSize_(theSize)
+			, theFront_(theFront)
 		{}
 
-
+		void Perform();
 	};
 }
 

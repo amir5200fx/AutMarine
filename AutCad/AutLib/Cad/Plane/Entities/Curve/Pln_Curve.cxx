@@ -86,8 +86,8 @@ void AutLib::Pln_Curve::Split
 	Handle(Geom2d_Curve) C0, C1;
 	Cad_Tools::SplitCurve(Curve(), x, C0, C1);
 
-	theLeft = std::make_shared<Pln_Curve>(C0, C0->FirstParameter(), C0->LastParameter());
-	theRight = std::make_shared<Pln_Curve>(C1, C1->FirstParameter(), C1->LastParameter());
+	theLeft = std::make_shared<Pln_Curve>(C0->FirstParameter(), C0->LastParameter(), C0, Info());
+	theRight = std::make_shared<Pln_Curve>(C1->FirstParameter(), C1->LastParameter(), C1, Info());
 }
 
 void AutLib::Pln_Curve::Split
@@ -112,8 +112,8 @@ void AutLib::Pln_Curve::Split
 
 	theCoord = Curve()->Value(x);
 
-	theLeft = std::make_shared<Pln_Curve>(C0, C0->FirstParameter(), C0->LastParameter());
-	theRight = std::make_shared<Pln_Curve>(C1, C1->FirstParameter(), C1->LastParameter());
+	theLeft = std::make_shared<Pln_Curve>(C0->FirstParameter(), C0->LastParameter(), C0, Info());
+	theRight = std::make_shared<Pln_Curve>(C1->FirstParameter(), C1->LastParameter(), C1, Info());
 }
 
 //- Static functions and operators

@@ -5,6 +5,7 @@
 #include <Entity3d_Triangulation.hxx>
 #include <Merge_StaticData.hxx>
 
+#include <Standard_Handle.hxx>
 #include <Bnd_Box.hxx>
 #include <Bnd_Box2d.hxx>
 #include <BndLib_AddSurface.hxx>
@@ -30,7 +31,7 @@
 
 #include <Geom2dAPI_InterCurveCurve.hxx>
 
-Handle(Geom2dAPI_InterCurveCurve) 
+std::shared_ptr<Geom2dAPI_InterCurveCurve>
 AutLib::Cad_Tools::Intersection
 (
 	const Handle(Geom2d_Curve)& theCurve0,
@@ -56,8 +57,7 @@ AutLib::Cad_Tools::Intersection
 			<< abort(FatalError);
 	}
 
-	Handle(Geom2dAPI_InterCurveCurve) Inter = 
-		new Geom2dAPI_InterCurveCurve(theCurve0, theCurve1, theTol);
+	auto Inter = std::make_shared<Geom2dAPI_InterCurveCurve>(theCurve0, theCurve1, theTol);
 	Debug_Null_Pointer(Inter);
 
 	return std::move(Inter);

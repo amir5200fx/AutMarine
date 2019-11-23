@@ -26,11 +26,11 @@ void AutLib::Pln_Edge::Reverse
 	Sense_ = NOT Sense_;
 }
 
-void AutLib::Pln_Edge::Approx(const info & theInfo) const
+void AutLib::Pln_Edge::Approx(const std::shared_ptr<info>& theInfo) const
 {
 	Debug_Null_Pointer(theCurve_);
-	Geo2d_ApprxCurve approx(theCurve_->Curve(), theCurve_->FirstParam(), theCurve_->LastParam());
-	approx.Perform(theInfo);
+	Geo2d_ApprxCurve approx(theCurve_->Curve(), theCurve_->FirstParam(), theCurve_->LastParam(), theInfo);
+	approx.Perform();
 
 	auto chain = approx.Chain();
 

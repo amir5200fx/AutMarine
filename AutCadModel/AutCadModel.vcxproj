@@ -81,7 +81,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Approximation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Interpolation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Segment;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\EllipticalArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\CircularArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Entity;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Approximation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Interpolation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Segment;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\EllipticalArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\CircularArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Entity;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -122,7 +122,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Approximation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Interpolation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Segment;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\EllipticalArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\CircularArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Entity;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Approximation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Interpolation;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\Segment;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\EllipticalArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve\CircularArc;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Curve;$(SolutionDir)AutCadModel\AutLib\CadModel\Plane\Entity;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>

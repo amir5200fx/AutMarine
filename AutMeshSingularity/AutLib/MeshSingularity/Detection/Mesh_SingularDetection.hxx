@@ -90,7 +90,7 @@ namespace AutLib
 
 	template<class SurfPln>
 	class Mesh_SingularDetection
-		: public  Mesh_SingularDetection_Base<typename SurfPln::plnCurveType>
+		: public Mesh_SingularDetection_Base<typename SurfPln::plnCurveType>
 		, public Global_Done
 		, public Global_Verbose
 	{
@@ -98,6 +98,7 @@ namespace AutLib
 		typedef Mesh_SingularDetection_Info info;
 		typedef Mesh_SingularZone<SurfPln> singularZone;
 		typedef std::vector<std::shared_ptr<singularZone>> zoneList;
+		typedef Mesh_SingularDetection_Base<typename SurfPln::plnCurveType> base;
 
 		typedef typename SurfPln::plnCurveType plnCurve;
 		typedef typename SurfPln::sizeFun sizeFun;

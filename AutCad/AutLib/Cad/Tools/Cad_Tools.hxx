@@ -29,7 +29,7 @@ namespace AutLib
 	public:
 
 		//- an exception will be thrown if the curve is not bounded
-		static Handle(Geom2dAPI_InterCurveCurve) 
+		static std::shared_ptr<Geom2dAPI_InterCurveCurve> 
 			Intersection
 			(
 				const Handle(Geom2d_Curve)& theCurve0, 

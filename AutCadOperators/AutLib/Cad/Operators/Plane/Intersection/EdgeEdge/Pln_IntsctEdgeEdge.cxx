@@ -11,6 +11,7 @@
 #include <error.hxx>
 #include <OSstream.hxx>
 
+#include <Standard_Handle.hxx>
 #include <Geom2dAPI_InterCurveCurve.hxx>
 #include <Geom2dInt_GInter.hxx>
 #include <Geom2d_Curve.hxx>
@@ -56,7 +57,7 @@ void AutLib::Pln_IntsctEdgeEdge::Perform()
 	auto Inter = 
 		Cad_Tools::Intersection(curve0.Curve(), curve1.Curve(), Info()->Tolerance());
 
-	auto& alg = Inter->Intersector();
+	const auto& alg = Inter->Intersector();
 
 	auto& entities = ChangeEntities();
 	entities.reserve(alg.NbPoints() + alg.NbPoints());

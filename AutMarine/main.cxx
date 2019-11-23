@@ -23,7 +23,6 @@
 #include <Geo_CurveLength.hxx>
 
 #include <GeoSizeFun_Uniform.hxx>
-#include <Mesh2d_AftMetricPrcsr.hxx>
 
 namespace AutLib
 {
