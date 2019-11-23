@@ -202,6 +202,9 @@
     <Filter Include="AutLib\Cad\Plane\Tools">
       <UniqueIdentifier>{b270f870-8952-4abb-a7c8-ba19a1d24cfa}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Plane\System">
+      <UniqueIdentifier>{9a30dd85-6ea8-45fd-9dba-296cde8ffdb0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
@@ -396,6 +399,9 @@
     <ClCompile Include="AutLib\Cad\Plane\Entities\CmpEdge\Pln_CmpEdge.cxx">
       <Filter>AutLib\Cad\Plane\Entities\CmpEdge</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\System\Cad2d_Plane_System.cxx">
+      <Filter>AutLib\Cad\Plane\System</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Serialization\Cad_Serialization.hxx">
@@ -589,6 +595,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\Plane\Tools\Pln_Tools.hxx">
       <Filter>AutLib\Cad\Plane\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Plane\System\Cad2d_Plane_System.hxx">
+      <Filter>AutLib\Cad\Plane\System</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

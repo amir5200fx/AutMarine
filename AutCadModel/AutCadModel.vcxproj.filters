@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{a614fce0-3bb3-49ce-bb82-240352efc2bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel">
+      <UniqueIdentifier>{c24616d7-56ac-433e-a0ed-1f23dfe1f276}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane">
+      <UniqueIdentifier>{66a53369-ce74-4b1d-bdbe-d0976cf1b854}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Curve">
+      <UniqueIdentifier>{c60516e5-57e6-4eae-b0ab-c26127b51ee7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Entity">
+      <UniqueIdentifier>{5ef2b339-0c9b-479f-81c7-dca881263402}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Regular">
+      <UniqueIdentifier>{b5752886-9726-4a4d-b020-fa956b4eb61c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Curve\Segment">
+      <UniqueIdentifier>{72ac0619-7525-44f2-8250-3c993b68f79f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Curve\CircularArc">
+      <UniqueIdentifier>{ffe6dbb9-cd60-4a69-8627-9827acff55ec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Curve\Ellipse">
+      <UniqueIdentifier>{3335ea74-e4c2-414d-be62-f16d266b9ed9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Curve\Interpolation">
+      <UniqueIdentifier>{6783d152-db19-43b2-8b65-65f28906e37f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Plane\Curve\Approximation">
+      <UniqueIdentifier>{e5f475c9-22c1-483d-b7b0-217bba956984}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\CadModel\Plane\Entity\CadPlnModel_Entity.hxx">
+      <Filter>AutLib\CadModel\Plane\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Plane\Curve\CadPlnModel_Curve.hxx">
+      <Filter>AutLib\CadModel\Plane\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Plane\Curve\Segment\CadPlnModel_Segment.hxx">
+      <Filter>AutLib\CadModel\Plane\Curve\Segment</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\CadModel\Plane\Entity\CadPlnModel_Entity.cxx">
+      <Filter>AutLib\CadModel\Plane\Entity</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadModel\Plane\Curve\Segment\CadPlnModel_Segment.cxx">
+      <Filter>AutLib\CadModel\Plane\Curve\Segment</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadModel\Plane\Curve\CadPlnModel_Curve.cxx">
+      <Filter>AutLib\CadModel\Plane\Curve</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

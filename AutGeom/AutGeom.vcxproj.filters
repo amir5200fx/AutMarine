@@ -316,6 +316,9 @@
     <Filter Include="AutLib\Geom\Traits">
       <UniqueIdentifier>{beb20ac0-c01f-4ce7-afde-895b5389a2ac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Tools">
+      <UniqueIdentifier>{a598f940-5d68-4012-a355-e562f5900eef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -470,6 +473,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNode.cxx">
       <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Tools\Geo_Tools.cxx">
+      <Filter>AutLib\Geom\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -853,6 +859,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIsoFwd.hxx">
       <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Tools\Geo_Tools.hxx">
+      <Filter>AutLib\Geom\Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
