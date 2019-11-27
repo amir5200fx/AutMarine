@@ -39,13 +39,13 @@
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v141</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
@@ -69,13 +69,19 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadRepair\Metric\Normalize\Info;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\System;$(ProjectDir)AutLib\CadRepair\Metric\Normalize;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\System;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\Info;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
@@ -112,6 +118,7 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadRepair\Metric\Normalize\Info;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\System;$(ProjectDir)AutLib\CadRepair\Metric\Normalize;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\System;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\Info;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -119,6 +126,22 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneAR.hxx" />
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneARI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\Info\CadRepair_ParaPlaneAR_Info.hxx" />
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\System\CadRepair_ParaPlaneAR_System.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetric.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetricI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\System\CadRepair_NormalizeMetric_System.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneAR.cxx" />
+    <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\Info\CadRepair_ParaPlaneAR_Info.cxx" />
+    <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\System\CadRepair_ParaPlaneAR_System.cxx" />
+    <ClCompile Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetric.cxx" />
+    <ClCompile Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.cxx" />
+    <ClCompile Include="AutLib\CadRepair\Metric\Normalize\System\CadRepair_NormalizeMetric_System.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

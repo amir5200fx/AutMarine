@@ -1,17 +1,35 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source Files">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{32620ff0-8341-440a-9242-1ec22ed9a100}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files">
-      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
-      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    <Filter Include="AutLib\MeshApi">
+      <UniqueIdentifier>{981d33d8-3c13-4c96-8369-924647cdc92c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="AutLib\MeshApi\Aft">
+      <UniqueIdentifier>{5a4c28c1-a507-46ad-a689-d78f46cfb657}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshApi\Aft\Volume">
+      <UniqueIdentifier>{0785e31d-4d9e-4ae0-ab7b-a2bc85d63459}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshApi\Aft\Surface">
+      <UniqueIdentifier>{a88830a1-b63a-4430-88b6-b0c72dc97062}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshApi\Aft\Plane">
+      <UniqueIdentifier>{de18cc50-5007-4805-8f3a-a8fc46690c4b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshApi\Boundary">
+      <UniqueIdentifier>{baaa11fd-99b9-4f6a-a64e-32e8dcd4f53f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshApi\Boundary\Plane">
+      <UniqueIdentifier>{dee5a41a-4908-4ee6-8559-f7b18d74b741}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshApi\Boundary\Surface">
+      <UniqueIdentifier>{07d73627-46b5-4394-a4c4-9e35b0059bf1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshApi\Boundary\Volume">
+      <UniqueIdentifier>{3c4aa72d-3b28-4e08-8114-a4993fd4ae16}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
 </Project>

@@ -271,6 +271,54 @@
     <Filter Include="AutLib\Geom\Length\Curve">
       <UniqueIdentifier>{959de0b0-3576-4718-b959-36b36aaa39c3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Function\Metric\2d">
+      <UniqueIdentifier>{77ea0cf9-82df-4fe9-9809-5434a6776392}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function\Metric\3d">
+      <UniqueIdentifier>{f69ed00a-b3c4-43d3-9268-b8bcb76d514e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\Iso\2d">
+      <UniqueIdentifier>{0b532e86-7f5d-4586-92d7-fdb57387f77d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\Iso\3d">
+      <UniqueIdentifier>{931c9203-1e0b-4b25-a367-192e12acff5a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\AnIso\2d">
+      <UniqueIdentifier>{7274f340-f782-4652-a219-f575124598ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\AnIso\3d">
+      <UniqueIdentifier>{535484cb-5088-4358-aaf2-cf6c4e90a1f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Entities\Metric1\3d">
+      <UniqueIdentifier>{bd2d1bc3-bd52-4f0d-ab61-cafbd98d6bc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit">
+      <UniqueIdentifier>{ecf2a663-5570-4286-85a7-15413d69268e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain">
+      <UniqueIdentifier>{98fcbb4a-8422-4593-84ce-bc3645d31bbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node">
+      <UniqueIdentifier>{5271ba96-ff9d-4217-a27f-717411dfaf48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node\Type">
+      <UniqueIdentifier>{246292e4-5f28-450e-8ab2-cfb2e3e8bf43}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node\Adaptor">
+      <UniqueIdentifier>{3c86ee0b-abb2-48b1-b173-3e548fd7d9fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Node\2d">
+      <UniqueIdentifier>{fc45935e-8dcd-443f-9669-19c392c135cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Knit\Chain\Register">
+      <UniqueIdentifier>{f482b52b-755c-409f-9494-1c78eea75f4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Traits">
+      <UniqueIdentifier>{beb20ac0-c01f-4ce7-afde-895b5389a2ac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Tools">
+      <UniqueIdentifier>{a598f940-5d68-4012-a355-e562f5900eef}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -401,6 +449,33 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Length\Curve\Geo_CurveLength.cxx">
       <Filter>AutLib\Geom\Length\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsr.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsr.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIso.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIso.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1.cxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1IO.cxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Knit\Chain\Knit_Chain.cxx">
+      <Filter>AutLib\Geom\Knit\Chain</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNode.cxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Tools\Geo_Tools.cxx">
+      <Filter>AutLib\Geom\Tools</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -715,6 +790,78 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Length\Curve\Geo_CurveLengthI.hxx">
       <Filter>AutLib\Geom\Length\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\2d\Geo2d_MetricFunction.hxx">
+      <Filter>AutLib\Geom\Function\Metric\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunction.hxx">
+      <Filter>AutLib\Geom\Function\Metric\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsr.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsr.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIso.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIso.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1.hxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1I.hxx">
+      <Filter>AutLib\Geom\Entities\Metric1\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\2d\Geo2d_SizeFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Size\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\3d\Geo3d_SizeFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Size\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\2d\Geo2d_MetricFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Metric\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunctionFwd.hxx">
+      <Filter>AutLib\Geom\Function\Metric\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Node\Type\Knit_ChainNode_Type.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node\Type</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNode.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Knit_Chain.hxx">
+      <Filter>AutLib\Geom\Knit\Chain</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Register\Knit_ChainRegister.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Register</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Knit_ChainI.hxx">
+      <Filter>AutLib\Geom\Knit\Chain</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Traits\Geo_Traits.hxx">
+      <Filter>AutLib\Geom\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Chain\Node\Knit_ChainNodeI.hxx">
+      <Filter>AutLib\Geom\Knit\Chain\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsrFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsrFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\2d\Geo2d_MetricPrcsrAnIsoFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\AnIso\3d\Geo3d_MetricPrcsrAnIsoFwd.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\AnIso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Tools\Geo_Tools.hxx">
+      <Filter>AutLib\Geom\Tools</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{8b348654-3b6f-4499-9741-6f9dcfee17e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis">
+      <UniqueIdentifier>{6a52ebfa-5fb4-4fb8-b83e-182e7e55da51}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Boundary">
+      <UniqueIdentifier>{29529799-855b-40a2-aee2-81e46cb7b3c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Model">
+      <UniqueIdentifier>{c1b55c8b-05b1-4763-9157-2f06cd26bc9a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

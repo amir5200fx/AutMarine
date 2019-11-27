@@ -1,6 +1,7 @@
 #include <Pln_Curve.hxx>
 
 #include <GeoProcessor.hxx>
+#include <Cad_Tools.hxx>
 
 #include <Bnd_Box2d.hxx>
 #include <BndLib_Add2dCurve.hxx>
@@ -66,6 +67,55 @@ AutLib::Pln_Curve::BoundingBox() const
 	return std::move(box);
 }
 
+void AutLib::Pln_Curve::Split
+(
+	const Standard_Real x,
+	std::shared_ptr<Pln_Curve>& theLeft,
+	std::shared_ptr<Pln_Curve>& theRight
+) const
+{
+	if (NOT INSIDE(x, FirstParam(), LastParam()))
+	{
+		FatalErrorIn("void Split()")
+			<< "Invalid Parameter: " << x << endl
+			<< " - First parameter: " << FirstParam() << endl
+			<< " - Last Parameter: " << LastParam() << endl
+			<< abort(FatalError);
+	}
+
+	Handle(Geom2d_Curve) C0, C1;
+	Cad_Tools::SplitCurve(Curve(), x, C0, C1);
+
+	theLeft = std::make_shared<Pln_Curve>(C0->FirstParameter(), C0->LastParameter(), C0, Info());
+	theRight = std::make_shared<Pln_Curve>(C1->FirstParameter(), C1->LastParameter(), C1, Info());
+}
+
+void AutLib::Pln_Curve::Split
+(
+	const Standard_Real x, 
+	Pnt2d & theCoord, 
+	std::shared_ptr<Pln_Curve>& theLeft,
+	std::shared_ptr<Pln_Curve>& theRight
+) const
+{
+	if (NOT INSIDE(x, FirstParam(), LastParam()))
+	{
+		FatalErrorIn("void Split()")
+			<< "Invalid Parameter: " << x << endl
+			<< " - First parameter: " << FirstParam() << endl
+			<< " - Last Parameter: " << LastParam() << endl
+			<< abort(FatalError);
+	}
+
+	Handle(Geom2d_Curve) C0, C1;
+	Cad_Tools::SplitCurve(Curve(), x, C0, C1);
+
+	theCoord = Curve()->Value(x);
+
+	theLeft = std::make_shared<Pln_Curve>(C0->FirstParameter(), C0->LastParameter(), C0, Info());
+	theRight = std::make_shared<Pln_Curve>(C1->FirstParameter(), C1->LastParameter(), C1, Info());
+}
+
 //- Static functions and operators
 
 #include <Geom2d_Line.hxx>
@@ -125,7 +175,9 @@ AutLib::Pln_Curve::MakeLineSegment
 	Projection.Init(theP1, geom);
 	auto last = Projection.LowerDistanceParameter();
 
-	auto curve = std::make_shared<Pln_Curve>(first, last, geom, theInfo);
+	auto trimmed = Cad_Tools::ConvertToTrimmedCurve(geom, first, last);
+
+	auto curve = std::make_shared<Pln_Curve>(first, last, trimmed, theInfo);
 	return std::move(curve);
 }
 
@@ -144,7 +196,9 @@ AutLib::Pln_Curve::MakeCircularArc
 	auto first = Processor::DegToRadian(theDeg0);
 	auto last = Processor::DegToRadian(theDeg1);
 
-	auto curve = std::make_shared<Pln_Curve>(first, last, geom, theInfo);
+	auto trimmed = Cad_Tools::ConvertToTrimmedCurve(geom, first, last);
+
+	auto curve = std::make_shared<Pln_Curve>(first, last, trimmed, theInfo);
 	return std::move(curve);
 }
 

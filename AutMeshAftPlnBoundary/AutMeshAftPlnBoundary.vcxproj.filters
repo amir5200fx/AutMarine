@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{2da7c15b-4cbe-4de2-b4cd-6f437dbe64ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft">
+      <UniqueIdentifier>{b43bbedd-7af2-48a8-843e-f26740a23f17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary">
+      <UniqueIdentifier>{271eb752-5265-412d-bbc6-474b895ebe01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane">
+      <UniqueIdentifier>{9fe9d4ce-5bfa-4b50-afb1-26a9853f3009}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Surface">
+      <UniqueIdentifier>{4ef9d1f0-3afb-44bd-985c-378f4d1f1724}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Info">
+      <UniqueIdentifier>{408df133-d4a6-4b27-96c5-45ef129bd6a7}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

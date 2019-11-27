@@ -128,13 +128,6 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\Cad\Discretizer\Mesh_PlnCurve_Discretizer.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurveI.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWire.hxx" />
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWireI.hxx" />
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplate.hxx" />
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplateI.hxx" />
     <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Geo_ApprxSurfMetric.hxx" />
     <ClInclude Include="AutLib\Geom\Approximation\SurfaceMetric\Info\Geo_ApprxSurfMetricInfo.hxx" />
     <ClInclude Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.hxx" />
@@ -152,9 +145,6 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     <ClInclude Include="AutLib\Geom\Mesh\Data\3d\GeoMesh3d_DataFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Mesh\Data\GeoMesh_Data.hxx" />
     <ClInclude Include="AutLib\Geom\Mesh\Data\GeoMesh_DataI.hxx" />
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_Core.hxx" />
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_CoreI.hxx" />
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Cavity\Aft_CavityData.hxx" />
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Global\Aft_FrontGlobalData.hxx" />
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Global\AnIso\Aft2d_FrontAnIsoGlobalData.hxx" />
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Global\AnIso\Aft2d_FrontAnIsoGlobalDataFwd.hxx" />
@@ -366,7 +356,6 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     <ClInclude Include="AutLib\Mesh\System\Mesh_TypeTraits.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.cxx" />
     <ClCompile Include="AutLib\Geom\Approximation\SurfaceMetric\Geo_ApprxSurfMetric.cxx" />
     <ClCompile Include="AutLib\Geom\Approximation\SurfaceMetric\Info\Geo_ApprxSurfMetricInfo.cxx" />
     <ClCompile Include="AutLib\Geom\Mesh\BackGround\AnIso\2d\GeoMesh2d_MetricBackground.cxx" />
@@ -380,7 +369,6 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
     <ClCompile Include="AutLib\Geom\Mesh\Data\2d\GeoMesh2d_Data.cxx" />
     <ClCompile Include="AutLib\Geom\Mesh\Data\3d\GeoMesh3d_Data.cxx" />
     <ClCompile Include="AutLib\Geom\Mesh\Data\GeoMesh_Data.cxx" />
-    <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_Core.cxx" />
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Aft2d_FrontInfoTemplate.cxx" />
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Entities\Edge\Aft_Edge.cxx" />
     <ClCompile Include="AutLib\Mesh\Alg\Curve\Info\Mesh_CurveInfo.cxx" />

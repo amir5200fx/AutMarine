@@ -133,6 +133,39 @@
     <Filter Include="AutLib\MeshBase\Geom\MetricPrcsr\3d">
       <UniqueIdentifier>{84cc564f-0648-488a-8803-face2724e150}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshBase\Data">
+      <UniqueIdentifier>{3cdd7ecd-7680-4219-bc47-8540ceb190f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Node">
+      <UniqueIdentifier>{ac10e41c-e7a8-4100-b844-0cc3fe50f301}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Node\Position">
+      <UniqueIdentifier>{8c663e2c-8785-4912-bb28-1161c744dde3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Node\Adaptor">
+      <UniqueIdentifier>{ad8fa792-3061-45c9-91d4-0963fb59df58}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Edge">
+      <UniqueIdentifier>{4b3e2330-56cd-4a8d-a49c-b6a8284dedbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Edge\Position">
+      <UniqueIdentifier>{bef5814b-f4e1-467e-9107-c6be3cbb9613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Entities\Bnd\Edge\Adaptor">
+      <UniqueIdentifier>{44bd464f-7a3f-4863-91ac-c33d5c457cf3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\Knit">
+      <UniqueIdentifier>{60301d5f-1557-4944-bad6-d4577f3317a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\Knit\Node">
+      <UniqueIdentifier>{088d87c0-384a-4315-b9b9-8a4188449be6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\Knit\Edge">
+      <UniqueIdentifier>{34a61417-f7ad-41d4-838e-1fe9e8656b07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshBase\Geom\Knit\Traits">
+      <UniqueIdentifier>{777f3cfe-fc0f-4c47-ba57-71de2e5fca43}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshBase\Entities\Entity\Mesh_Entity.cxx">
@@ -361,6 +394,45 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshBase\Entities\Edge\Mesh_EdgeI.hxx">
       <Filter>AutLib\MeshBase\Entities\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Data\Mesh_GlobalData.hxx">
+      <Filter>AutLib\MeshBase\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Data\Mesh_QualityMap.hxx">
+      <Filter>AutLib\MeshBase\Data</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Node\Position\Mesh_BndNode_Position.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Node\Position</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Node\Adaptor\Mesh_BndNodeGeomAdaptor.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Node\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Edge\Position\Mesh_BndEdge_Position.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Edge\Position</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Entities\Bnd\Edge\Adaptor\Mesh_BndEdgeGeomAdaptor.hxx">
+      <Filter>AutLib\MeshBase\Entities\Bnd\Edge\Adaptor</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\Knit\Node\Mesh2d_KnitNodeFwd.hxx">
+      <Filter>AutLib\MeshBase\Geom\Knit\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\Knit\Node\Mesh2d_KnitNode.hxx">
+      <Filter>AutLib\MeshBase\Geom\Knit\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\Knit\Edge\Mesh2d_KnitEdge.hxx">
+      <Filter>AutLib\MeshBase\Geom\Knit\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\Knit\Edge\Mesh2d_KnitEdgeFwd.hxx">
+      <Filter>AutLib\MeshBase\Geom\Knit\Edge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\Knit\Traits\Mesh2d_KnitTraits.hxx">
+      <Filter>AutLib\MeshBase\Geom\Knit\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\Knit\Mesh2d_KnitChain.hxx">
+      <Filter>AutLib\MeshBase\Geom\Knit</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshBase\Geom\Knit\Mesh2d_KnitChainFwd.hxx">
+      <Filter>AutLib\MeshBase\Geom\Knit</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

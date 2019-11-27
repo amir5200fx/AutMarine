@@ -1,5 +1,8 @@
 #include <PrimShape2d_Circle.hxx>
 
+#include <error.hxx>
+#include <OSstream.hxx>
+
 void AutLib::PrimShape2d_Circle::Make()
 {
 	if (theNbPoints_ < 3)

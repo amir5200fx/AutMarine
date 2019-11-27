@@ -522,12 +522,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.hxx">
-      <Filter>AutLib\Cad\PlnCurve</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\PlnCurve\Mesh_PlnCurveI.hxx">
-      <Filter>AutLib\Cad\PlnCurve</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Mesh\System\Mesh_EntityCounterM.hxx">
       <Filter>AutLib\Mesh\System</Filter>
     </ClInclude>
@@ -975,26 +969,8 @@
     <ClInclude Include="AutLib\Mesh\Alg\Curve\Mesh_CurveI.hxx">
       <Filter>AutLib\Mesh\Alg\Curve</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Discretizer\Mesh_PlnCurve_Discretizer.hxx">
-      <Filter>AutLib\Cad\Discretizer</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Mesh\System\Mesh_TypeTraits.hxx">
       <Filter>AutLib\Mesh\System</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWire.hxx">
-      <Filter>AutLib\Cad\PlnWire</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\PlnWire\Mesh_PlnWireI.hxx">
-      <Filter>AutLib\Cad\PlnWire</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplate.hxx">
-      <Filter>AutLib\Cad\Surface</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Surface\Mesh_SurfaceTemplateI.hxx">
-      <Filter>AutLib\Cad\Surface</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Cavity\Aft_CavityData.hxx">
-      <Filter>AutLib\Mesh\Alg\AdvFront\Data\Cavity</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Aft_FrontInfo.hxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Data\Front\Info</Filter>
@@ -1128,12 +1104,6 @@
     <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Surface\Aft2d_FrontSurfaceInfoFwd.hxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Surface</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_Core.hxx">
-      <Filter>AutLib\Mesh\Alg\AdvFront\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_CoreI.hxx">
-      <Filter>AutLib\Mesh\Alg\AdvFront\Core</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Mesh\Metrics\Tools\Settings\Info\Mesh_RelativeAbsoluteInfo.hxx">
       <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\Info</Filter>
     </ClInclude>
@@ -1232,9 +1202,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\Cad\PlnCurve\Mesh_PlnCurve.cxx">
-      <Filter>AutLib\Cad\PlnCurve</Filter>
-    </ClCompile>
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Entities\Edge\Aft_Edge.cxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Entities\Edge</Filter>
     </ClCompile>
@@ -1285,9 +1252,6 @@
     </ClCompile>
     <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Data\Front\Info\Aft2d_FrontInfoTemplate.cxx">
       <Filter>AutLib\Mesh\Alg\AdvFront\Data\Front\Info</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\Mesh\Alg\AdvFront\Core\Aft_Core.cxx">
-      <Filter>AutLib\Mesh\Alg\AdvFront\Core</Filter>
     </ClCompile>
     <ClCompile Include="AutLib\Mesh\Metrics\Tools\Settings\VariationRate\Mesh_VariationRate.cxx">
       <Filter>AutLib\Mesh\MetricProcessor\Tools\Settings\VariationRate</Filter>
