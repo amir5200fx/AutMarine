@@ -6,6 +6,7 @@ AutLib::CadRepair_NormalizeMetric_Info::CadRepair_NormalizeMetric_Info()
 	: theMaxDet_(0)
 	, theNbSegmentsU_(DEFAULT_NB_SEGMENTS_U)
 	, theNbSegmentsV_(DEFAULT_NB_SEGMENTS_V)
+	, toApply_(Standard_False)
 {
 	theIntgInfo_ = cadRepairSys::normalize_metric_intg_info;
 }

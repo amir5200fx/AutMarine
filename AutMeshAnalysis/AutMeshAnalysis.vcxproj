@@ -69,7 +69,12 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -78,6 +83,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAnalysis\Model\Info;$(ProjectDir)AutLib\MeshAnalysis\Model\Base;$(ProjectDir)AutLib\MeshAnalysis\Model;$(ProjectDir)AutLib\MeshAnalysis\Traits;$(SolutionDir)AutMeshSingularity\include;$(SolutionDir)AutMesh\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -98,6 +104,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAnalysis\Model\Info;$(ProjectDir)AutLib\MeshAnalysis\Model\Base;$(ProjectDir)AutLib\MeshAnalysis\Model;$(ProjectDir)AutLib\MeshAnalysis\Traits;$(SolutionDir)AutMeshSingularity\include;$(SolutionDir)AutMesh\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -115,6 +122,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.hxx" />
+    <ClInclude Include="AutLib\MeshAnalysis\Model\Base\MeshAnalysis_Model_Base.hxx" />
+    <ClInclude Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.hxx" />
+    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.hxx" />
+    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_ModelI.hxx" />
+    <ClInclude Include="AutLib\MeshAnalysis\Traits\MeshAnalysis_Traits.hxx" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.cxx" />
+    <ClCompile Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.cxx" />
+    <ClCompile Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

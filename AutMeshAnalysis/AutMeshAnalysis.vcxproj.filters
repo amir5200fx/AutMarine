@@ -13,5 +13,45 @@
     <Filter Include="AutLib\MeshAnalysis\Model">
       <UniqueIdentifier>{c1b55c8b-05b1-4763-9157-2f06cd26bc9a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Model\Info">
+      <UniqueIdentifier>{e0f2453f-16f6-40b3-ad51-249c47130fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Traits">
+      <UniqueIdentifier>{f1f0d679-b7f9-4677-af82-0366e2ea71da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Model\Base">
+      <UniqueIdentifier>{97b00664-d4d1-4663-ada6-8ea5752fb590}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.hxx">
+      <Filter>AutLib\MeshAnalysis\Boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.hxx">
+      <Filter>AutLib\MeshAnalysis\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.hxx">
+      <Filter>AutLib\MeshAnalysis\Model\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAnalysis\Traits\MeshAnalysis_Traits.hxx">
+      <Filter>AutLib\MeshAnalysis\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_ModelI.hxx">
+      <Filter>AutLib\MeshAnalysis\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAnalysis\Model\Base\MeshAnalysis_Model_Base.hxx">
+      <Filter>AutLib\MeshAnalysis\Model\Base</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.cxx">
+      <Filter>AutLib\MeshAnalysis\Boundary</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.cxx">
+      <Filter>AutLib\MeshAnalysis\Model\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.cxx">
+      <Filter>AutLib\MeshAnalysis\Model</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
