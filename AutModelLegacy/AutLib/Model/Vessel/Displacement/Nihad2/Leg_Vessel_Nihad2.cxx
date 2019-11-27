@@ -62,7 +62,7 @@ void AutLib::Leg_Nihad2_HullPatch::PerformToPreview()
 {
 	Leg_Nihad2_HullPatch::Perform();
 
-	Leg_Nihad2_HullPatch::MakeFace();
+	//Leg_Nihad2_HullPatch::MakeFace();
 
 	ChangePreviewEntity() = Entity();
 }
@@ -123,4 +123,27 @@ void AutLib::Leg_Nihad2_BareHull::MakeFace()
 
 	GeomFill_BSplineCurves Deck(Curves.Value(3), Curves.Value(7), GeomFill_CoonsStyle);
 	ChangeEntity() = BRepAlgoAPI_Fuse(Entity(), BRepBuilderAPI_MakeFace(Deck.Surface(), 1.0E-6));
+}
+
+void AutLib::Leg_Nihad2_BareHull::PerformToPreview()
+{
+	AllocateMemory();
+
+	CalcxXSections();
+
+	CalcxParameters();
+
+	CreateRawSections();
+
+	ApplyParameters();
+
+	SetupControlNet();
+
+	SetupPatch();
+
+	Leg_Nihad2_HullPatch::MakeFace();
+
+	Change_IsDone() = Standard_True;
+
+	ChangePreviewEntity() = Entity();
 }

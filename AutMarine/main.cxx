@@ -9,12 +9,15 @@
 #include <IO_IGES.hxx>
 #include <FastDiscrete_Params.hxx>
 #include <Leg_Vessel_Nihad2.hxx>
+#include <Leg_Model_PropNo1.hxx>
+#include <Leg_Prop_BladeFace.hxx>
 #include <Cad_Tools.hxx>
 #include <Cad3d_TModel.hxx>
 #include <TModel_Surface.hxx>
 #include <TModel_Tools.hxx>
 #include <FastDiscrete.hxx>
 #include <Poly_Triangulation.hxx>
+#include <Global_Timer.hxx>
 
 #include <Numeric_GaussQuadrature.hxx>
 #include <Numeric_IntegrationFunction.hxx>
@@ -23,6 +26,7 @@
 #include <Geo_CurveLength.hxx>
 
 #include <GeoSizeFun_Uniform.hxx>
+//#include <Mesh2d_AftMetricPrcsr.hxx>
 
 namespace AutLib
 {
@@ -100,61 +104,95 @@ int main()
 	Geo_CurveIntegrand<Geom2d_Circle> integrand(circle);
 	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);*/
 
-	Leg_Nihad2_BareHull patch;
-	
-	/*patch.AftSection().Tightness0()->SetValue(0.1);
-	patch.AftSection().Tightness1()->SetValue(0.1);
-
-	patch.MidSection().Tightness0()->SetValue(0.1);
-	patch.MidSection().Tightness1()->SetValue(0.1);*/
-
-	/*patch.FwdSection().Tightness0()->SetValue(0.9);
-	patch.FwdSection().Tightness1()->SetValue(0.9);*/
-
-	patch.Parameters().SetNbNetColumns(25);
-
-	patch.Parameters().LengthOnDeck()->SetValue(16.0);
-	patch.Parameters().TransomHeight()->SetValue(0.6);
-
-	patch.Parameters().FwdFullness()->SetValue(0.5);
-
-	patch.AftSection().Trim0()->SetValue(0.42);
-	patch.AftSection().Trim1()->SetValue(0.2);
-
-	patch.MidSection().Trim0()->SetValue(0.45);
-	patch.MidSection().Trim1()->SetValue(0.12);
-
-	patch.FwdSection().Trim0()->SetValue(0.35);
-	patch.FwdSection().Trim1()->SetValue(0.15);
-
-	patch.Parameters().Position()->SetValue(0.35);
-	patch.Parameters().RisePoint()->SetValue(0.15);
-	patch.Parameters().RiseSlope()->SetValue(0.05);
-	patch.Parameters().TransomSlope()->SetValue(0.37);
-
-	patch.FwdFullness()->SetValue(0.4);
-	patch.AftFullness()->SetValue(0.45);
-
-	patch.Parameters().StemRake()->SetValue(30.0);
-
-
-	patch.Parameters().ForeFootShape()->SetValue(0.65);
-	patch.Parameters().BowRounding()->SetValue(0.0);
-
-	patch.Perform();
-	//patch.Discrete();
-	patch.FileName() = "myModle.iges";
-
 	fileName name("preview.plt");
 	OFstream myFile(name);
 
-	patch.FileFormat() = Leg_EntityIO_Format::IGES;
-	patch.ExportToFile();
+	{
+		Global_Timer timer;
+
+		Leg_Model_PropNo1 prop;
+		prop.Perform();
+
+		const auto& myShape = prop.Entity();
+
+		FastDiscrete::Triangulation(myShape, *gl_fast_discrete_parameters);
+
+		auto myTris = Cad_Tools::RetrieveTriangulation(myShape);
+
+		for (const auto& x : myTris)
+		{
+			auto mesh = Cad_Tools::Triangulation(*x);
+			mesh->ExportToPlt(myFile);
+		}
+	}
+
+	cout << global_time_duration << std::endl;
+
+	/*{
+		Global_Timer timer;
+
+		Leg_Nihad2_BareHull patch;
+
+		patch.Parameters().SetNbNetColumns(25);
+
+		patch.Parameters().LengthOnDeck()->SetValue(16.0);
+		patch.Parameters().TransomHeight()->SetValue(0.6);
+
+		patch.Parameters().FwdFullness()->SetValue(0.5);
+
+		patch.AftSection().Trim0()->SetValue(0.42);
+		patch.AftSection().Trim1()->SetValue(0.2);
+
+		patch.MidSection().Trim0()->SetValue(0.45);
+		patch.MidSection().Trim1()->SetValue(0.12);
+
+		patch.FwdSection().Trim0()->SetValue(0.35);
+		patch.FwdSection().Trim1()->SetValue(0.15);
+
+		patch.Parameters().Position()->SetValue(0.35);
+		patch.Parameters().RisePoint()->SetValue(0.15);
+		patch.Parameters().RiseSlope()->SetValue(0.05);
+		patch.Parameters().TransomSlope()->SetValue(0.37);
+
+		patch.FwdFullness()->SetValue(0.4);
+		patch.AftFullness()->SetValue(0.45);
+
+		patch.Parameters().StemRake()->SetValue(30.0);
+
+
+		patch.Parameters().ForeFootShape()->SetValue(0.65);
+		patch.Parameters().BowRounding()->SetValue(0.0);
+
+		patch.PerformToPreview();
+
+		patch.FileName() = "myModle.plt";
+
+		const auto& myShape = patch.PreviewEntity();
+	
+	}*/
+
+	/*cout << global_time_duration << std::endl;*/
+	PAUSE;
+	return 0;
+
+	//auto oriented = myShape.Oriented(TopAbs_FORWARD);
+	//auto mySolid = Cad3d_TModel::MakeSolid(myShape, 1.0e-6);
+
+
+	//FastDiscrete::Triangulation(myShape, *gl_fast_discrete_parameters);
+
+	//auto myTris = Cad_Tools::RetrieveTriangulation(myShape);
+
+	/*for (const auto& x : myTris)
+	{
+		auto mesh = Cad_Tools::Triangulation(*x);
+		mesh->ExportToPlt(myFile);
+	}*/
 
 	PAUSE;
 	return 0;
 
-	auto gsurface = patch.Entity();
+	//auto gsurface = patch.Entity();
 
 
 	//auto preview = Cad_Tools::PreviewPatchCurves(gsurface, 15, 15);
@@ -164,7 +202,7 @@ int main()
 		x->ExportToPlt(myFile);
 	}*/
 
-	auto surfaces = TModel_Tools::GetSurfaces(patch.Entity());
+	/*auto surfaces = TModel_Tools::GetSurfaces(patch.Entity());
 
 	auto solid = Cad3d_TModel::MakeSolid(surfaces, 1.0e-6);
 
@@ -200,7 +238,7 @@ int main()
 
 	faces->Split("Block 1");
 
-	faces->Print(Standard_True);
+	faces->Print(Standard_True);*/
 
 	/*patch.FileFormat() = Leg_EntityIO_Format::IGES;
 	patch.ExportToFile();

@@ -6,6 +6,7 @@
 #include <Entity2d_BoxFwd.hxx>
 #include <Entity3d_BoxFwd.hxx>
 #include <Entity3d_Triangulation.hxx>
+#include <Entity2d_TriangulationFwd.hxx>
 
 class Bnd_Box2d;
 class Bnd_Box;
@@ -28,6 +29,7 @@ namespace AutLib
 
 	public:
 
+
 		//- an exception will be thrown if the curve is not bounded
 		static std::shared_ptr<Geom2dAPI_InterCurveCurve> 
 			Intersection
@@ -43,6 +45,30 @@ namespace AutLib
 				const Handle(Geom2d_Curve)& theCurve,
 				const Standard_Real theU0,
 				const Standard_Real theU1
+
+		static std::shared_ptr<Entity2d_Triangulation> 
+			ParametricTriangulation
+			(
+				const Pnt2d& theP0,
+				const Pnt2d& theP1,
+				const Standard_Integer theNx, 
+				const Standard_Integer theNy
+			);
+
+		static std::shared_ptr<Entity3d_Triangulation>
+			Triangulation
+			(
+				const Geom_Surface& theSurface, 
+				const Entity2d_Triangulation& theParametric
+			);
+
+		static std::shared_ptr<Entity3d_Triangulation>
+			Triangulation
+			(
+				const Handle(Geom_Surface)& theSurface,
+				const Standard_Integer theNx,
+				const Standard_Integer theNy
+
 			);
 
 		static Handle(Geom_Surface)
@@ -75,6 +101,14 @@ namespace AutLib
 				const Standard_Integer theNbSegments_V
 			);
 
+		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
+			PreviewUnMergedPatchCurves
+			(
+				const Handle(Geom_Surface)& theSurface,
+				const Standard_Integer theNbSegments_U,
+				const Standard_Integer theNbSegments_V
+			);
+
 		static std::shared_ptr<Entity3d_Triangulation>
 			PreviewPatchCurves
 			(
@@ -84,7 +118,23 @@ namespace AutLib
 			);
 
 		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
+			PreviewUnMergedPatchCurves
+			(
+				const TopoDS_Face& theFace,
+				const Standard_Integer theNbSegments_U,
+				const Standard_Integer theNbSegments_V
+			);
+
+		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
 			PreviewPatchCurves
+			(
+				const TopoDS_Shape& theShape,
+				const Standard_Integer theNbSegments_U,
+				const Standard_Integer theNbSegments_V
+			);
+
+		static std::vector<std::shared_ptr<Entity3d_Triangulation>>
+			PreviewUnMergedPatchCurves
 			(
 				const TopoDS_Shape& theShape,
 				const Standard_Integer theNbSegments_U,
@@ -181,6 +231,13 @@ namespace AutLib
 
 		template<class SurfType>
 		static std::shared_ptr<SurfType> ReParameterization_vExpand(const SurfType& theSurface, const Standard_Real theMult);
+
+		static void ExportToSTEP
+		(
+			const TopoDS_Shape& theShape,
+			const fileName& name
+		);
+
 	};
 }
 

@@ -83,6 +83,10 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadRepair\Metric\Normalize\Info;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\System;$(ProjectDir)AutLib\CadRepair\Metric\Normalize;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\System;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\Info;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

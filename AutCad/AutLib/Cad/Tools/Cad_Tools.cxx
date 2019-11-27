@@ -2,8 +2,10 @@
 
 #include <Entity2d_Box.hxx>
 #include <Entity3d_Box.hxx>
+#include <Entity2d_Triangulation.hxx>
 #include <Entity3d_Triangulation.hxx>
 #include <Merge_StaticData.hxx>
+#include <TecPlot.hxx>
 
 #include <Standard_Handle.hxx>
 #include <Bnd_Box.hxx>
@@ -28,6 +30,142 @@
 #include <TopoDS_Shape.hxx>
 #include <IGESControl_Controller.hxx>
 #include <IGESControl_Writer.hxx>
+#include <STEPControl_Controller.hxx>
+#include <STEPControl_Writer.hxx>
+
+std::shared_ptr<AutLib::Entity2d_Triangulation> 
+AutLib::Cad_Tools::ParametricTriangulation
+(
+	const Pnt2d & theP0, 
+	const Pnt2d & theP1, 
+	const Standard_Integer theNx, 
+	const Standard_Integer theNy
+)
+{
+	if (theNx < 2)
+	{
+		FatalErrorIn("std::shared_ptr<AutLib::Entity2d_Triangulation> ParametricTriangulation()")
+			<< "Invalid Data" << endl
+			<< abort(FatalError);
+	}
+
+	if (theNy < 2)
+	{
+		FatalErrorIn("std::shared_ptr<AutLib::Entity2d_Triangulation> ParametricTriangulation()")
+			<< "Invalid Data" << endl
+			<< abort(FatalError);
+	}
+
+	const auto Dx = theP1.X() - theP0.X();
+	const auto Dy = theP1.Y() - theP0.Y();
+
+	const auto dx = Dx / (Standard_Real)theNx;
+	const auto dy = Dy / (Standard_Real)theNy;
+
+	auto tri = std::make_shared<Entity2d_Triangulation>();
+	Debug_Null_Pointer(tri);
+
+	auto& pts = tri->Points();
+	pts.reserve(theNx*theNy);
+
+	auto& indices = tri->Connectivity();
+	indices.reserve((theNx - 1)*(theNy - 1)*2);
+
+	Standard_Integer k = 0;
+	for (auto i = 0; i < theNx; i++)
+	{
+		for (auto j = 0; j < theNy; j++)
+		{
+			auto P0 = theP0 + Pnt2d(i*dx, j*dy);
+			/*auto P1 = P0 + Pnt2d(dx, 0);
+			auto P2 = P0 + Pnt2d(dx, dy);
+			auto P3 = P0 + Pnt2d(0, dy);*/
+			//cout << i << ", " << j << "  " << P0 << std::endl;
+			pts.push_back(std::move(P0));
+		}
+	}
+
+	for (auto i = 0; i < theNx - 1; i++)
+	{
+		for (auto j = 0; j < theNy - 1; j++)
+		{
+			auto i0 = j * theNx + i + 1;
+			auto i1 = j * theNx + i + 2;
+			auto i2 = (j + 1)*theNx + i + 2;
+
+			auto j0 = i0;
+			auto j1 = i2;
+			auto j2 = (j + 1)*theNx + i + 1;
+
+			connectivity::triple I0, I1;
+			I0.Value(0) = i0;
+			I0.Value(1) = i1;
+			I0.Value(2) = i2;
+
+			I1.Value(0) = j0;
+			I1.Value(1) = j1;
+			I1.Value(2) = j2;
+
+			indices.push_back(std::move(I0));
+			indices.push_back(std::move(I1));
+		}
+	}
+	return std::move(tri);
+}
+
+std::shared_ptr<AutLib::Entity3d_Triangulation> 
+AutLib::Cad_Tools::Triangulation
+(
+	const Geom_Surface & theSurface, 
+	const Entity2d_Triangulation & theParametric
+)
+{
+	const auto& pts0 = theParametric.Points();
+	
+	auto tri = std::make_shared<Entity3d_Triangulation>();
+	Debug_Null_Pointer(tri);
+
+	auto& pts = tri->Points();
+	pts.reserve(pts.size());
+
+	for (const auto& x : pts0)
+	{
+		auto pt = theSurface.Value(x.X(), x.Y());
+		pts.push_back(std::move(pt));
+	}
+
+	tri->Connectivity() = theParametric.Connectivity();
+
+	return std::move(tri);
+}
+
+std::shared_ptr<AutLib::Entity3d_Triangulation>
+AutLib::Cad_Tools::Triangulation
+(
+	const Handle(Geom_Surface)& theSurface,
+	const Standard_Integer theNx,
+	const Standard_Integer theNy
+)
+{
+	auto trimmed = Handle(Geom_BoundedSurface)::DownCast(theSurface);
+	if (NOT trimmed)
+	{
+		FatalErrorIn("std::shared_ptr<Entity3d_Triangulation> Triangulation(...)")
+			<< "Invalid Data: the surface is not bounded!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	Standard_Real U0, U1, V0, V1;
+	trimmed->Bounds(U0, U1, V0, V1);
+
+	auto para = 
+		ParametricTriangulation(Pnt2d(U0, V0), Pnt2d(U1, V1), theNx, theNy);
+
+	auto tri = Triangulation(*theSurface, *para);
+
+	return std::move(tri);
+}
 
 #include <Geom2dAPI_InterCurveCurve.hxx>
 
@@ -140,7 +278,7 @@ AutLib::Cad_Tools::PreviewPatchCurves
 )
 {
 	auto bspline = Handle(Geom_BSplineSurface)::DownCast(theSurface);
-	if (not bspline)
+	if (NOT bspline)
 	{
 		FatalErrorIn("Handle(Geom_Surface) PreviewPatchCurves(const Handle(Geom_Surface)& theSurface)")
 			<< "Invalid Data: the surface is not bspline!" << endl
@@ -182,6 +320,44 @@ AutLib::Cad_Tools::PreviewPatchCurves
 	return std::move(merged);
 }
 
+std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>> 
+AutLib::Cad_Tools::PreviewUnMergedPatchCurves
+(
+	const Handle(Geom_Surface)& theSurface,
+	const Standard_Integer theNbSegments_U,
+	const Standard_Integer theNbSegments_V
+)
+{
+	auto bspline = Handle(Geom_BSplineSurface)::DownCast(theSurface);
+	if (NOT bspline)
+	{
+		FatalErrorIn("Handle(Geom_Surface) PreviewPatchCurves(const Handle(Geom_Surface)& theSurface)")
+			<< "Invalid Data: the surface is not bspline!" << endl
+			<< " - first, convert the surface to RectangularTrimmedSurface then convert it to BSpline" << endl
+			<< abort(FatalError);
+	}
+
+	auto uknots = bspline->UKnots();
+	auto vknots = bspline->VKnots();
+
+	std::vector<std::shared_ptr<Entity3d_Triangulation>> trinagulations;
+	trinagulations.reserve(uknots.Size() + vknots.Size());
+
+	for (const auto x : uknots)
+	{
+		auto tr = PreviewCurveOnSurface_U(theSurface, x, theNbSegments_U);
+		trinagulations.push_back(std::move(tr));
+	}
+
+	for (const auto x : vknots)
+	{
+		auto tr = PreviewCurveOnSurface_V(theSurface, x, theNbSegments_U);
+		trinagulations.push_back(std::move(tr));
+	}
+
+	return std::move(trinagulations);
+}
+
 std::shared_ptr<AutLib::Entity3d_Triangulation> 
 AutLib::Cad_Tools::PreviewPatchCurves
 (
@@ -199,6 +375,26 @@ AutLib::Cad_Tools::PreviewPatchCurves
 	}
 
 	auto tri = PreviewPatchCurves(geom, theNbSegments_U, theNbSegments_V);
+	return std::move(tri);
+}
+
+std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>>
+AutLib::Cad_Tools::PreviewUnMergedPatchCurves
+(
+	const TopoDS_Face& theFace,
+	const Standard_Integer theNbSegments_U, 
+	const Standard_Integer theNbSegments_V
+)
+{
+	auto geom = BRep_Tool::Surface(theFace);
+	if (NOT geom)
+	{
+		FatalErrorIn("std::shared_ptr<Entity3d_Triangulation> PreviewPatchCurves()")
+			<< "the face has no geometry!" << endl
+			<< abort(FatalError);
+	}
+
+	auto tri = PreviewUnMergedPatchCurves(geom, theNbSegments_U, theNbSegments_V);
 	return std::move(tri);
 }
 
@@ -223,6 +419,28 @@ AutLib::Cad_Tools::PreviewPatchCurves
 	return std::move(preview);
 }
 
+std::vector<std::shared_ptr<AutLib::Entity3d_Triangulation>> 
+AutLib::Cad_Tools::PreviewUnMergedPatchCurves(const TopoDS_Shape& theShape, const Standard_Integer theNbSegments_U, const Standard_Integer theNbSegments_V)
+{
+	std::vector<std::shared_ptr<Entity3d_Triangulation>> preview;
+	for
+		(
+			TopExp_Explorer Explorer(theShape, TopAbs_FACE);
+			Explorer.More();
+			Explorer.Next()
+			)
+	{
+		auto face = TopoDS::Face(Explorer.Current());
+
+		auto curves = PreviewUnMergedPatchCurves(face, theNbSegments_U, theNbSegments_V);
+		for (const auto& x : curves)
+		{
+			preview.push_back(x);
+		}
+	}
+	return std::move(preview);
+}
+
 std::shared_ptr<AutLib::Entity3d_Triangulation> 
 AutLib::Cad_Tools::PreviewCurveOnSurface_U
 (
@@ -232,7 +450,7 @@ AutLib::Cad_Tools::PreviewCurveOnSurface_U
 )
 {
 	auto trimmed = Handle(Geom_BoundedSurface)::DownCast(theSurface);
-	if (not trimmed)
+	if (NOT trimmed)
 	{
 		FatalErrorIn("std::shared_ptr<Entity3d_Triangulation> PreviewCurveOnSurface_U(...)")
 			<< "Invalid Data: the surface is not bounded!" << endl
@@ -282,7 +500,7 @@ AutLib::Cad_Tools::PreviewCurveOnSurface_V
 )
 {
 	auto trimmed = Handle(Geom_BoundedSurface)::DownCast(theSurface);
-	if (not trimmed)
+	if (NOT trimmed)
 	{
 		FatalErrorIn("std::shared_ptr<Entity3d_Triangulation> PreviewCurveOnSurface_V(...)")
 			<< "Invalid Data: the surface is not bounded!" << endl
@@ -410,8 +628,7 @@ AutLib::Cad_Tools::RetrieveTriangulation
 {
 	TopLoc_Location Loc;
 	auto Triangulation = BRep_Tool::Triangulation(theFace, Loc);
-
-	return Triangulation;
+	return std::move(Triangulation);
 }
 
 std::vector<Handle(Poly_Triangulation)> 
@@ -570,4 +787,32 @@ void AutLib::Cad_Tools::ExportToIGES
 	Writer.ComputeModel();
 
 	Standard_Boolean OK = Writer.Write(name.c_str());
+
+	if (NOT OK)
+	{
+		FatalErrorIn("void ExportToIGES()")
+			<< "Unable to export the model" << endl
+			<< abort(FatalError);
+	}
+}
+
+void AutLib::Cad_Tools::ExportToSTEP
+(
+	const TopoDS_Shape& theShape,
+	const fileName& name
+)
+{
+	STEPControl_Controller::Init();
+
+	STEPControl_Writer Writer;
+	Writer.Transfer(theShape, STEPControl_ManifoldSolidBrep);
+
+	Standard_Boolean OK = Writer.Write(name.c_str());
+
+	if (NOT OK)
+	{
+		FatalErrorIn("void ExportToSTEP()")
+			<< "Unable to export the model" << endl
+			<< abort(FatalError);
+	}
 }

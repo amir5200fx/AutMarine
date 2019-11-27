@@ -57,7 +57,12 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Weights;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Nodes;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\System;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Function;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Info;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutNumeric\AutLib\Numeric\Optimization\NelderMead;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Function;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\System;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Weights;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Nodes;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Info;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Random;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutNumeric\AutLib\Numeric\System;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -68,6 +73,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Weights;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Nodes;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\GaussQuadrature;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\System;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Function;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Info;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive\Core;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutNumeric\AutLib\Numeric\Optimization\NelderMead;$(SolutionDir)AutNumeric\AutLib\Numeric\Integration\Adaptive;$(SolutionDir)AutNumeric\AutLib\Numeric\Random;$(SolutionDir)AutNumeric\AutLib\Numeric\NonLinearSolver\Newton;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

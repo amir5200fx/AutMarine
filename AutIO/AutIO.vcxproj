@@ -82,7 +82,12 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutIO\AutLib\IO\TecPlot;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -115,6 +120,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutIO\AutLib\IO\TecPlot;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>

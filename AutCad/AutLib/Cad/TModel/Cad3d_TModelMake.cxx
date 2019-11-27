@@ -15,6 +15,10 @@
 #include <TModel_Shell.hxx>
 #include <TModel_Tools.hxx>
 
+#include <iostream>
+
+#include <TopoDS_Shape.hxx>
+
 namespace AutLib
 {
 
@@ -414,6 +418,23 @@ namespace AutLib
 			}
 		}
 	}
+}
+
+std::shared_ptr<AutLib::Cad3d_TModel> 
+AutLib::Cad3d_TModel::MakeSolid
+(
+	const TopoDS_Shape& theShape, 
+	const Standard_Real theTolerance
+)
+{
+	auto surfaces = TModel_Tools::GetSurfaces(theShape);
+
+	auto solid = MakeSolid(surfaces, theTolerance);
+
+	Debug_Null_Pointer(solid);
+	if (solid) solid->SetShape(theShape);
+
+	return std::move(solid);
 }
 
 std::shared_ptr<AutLib::Cad3d_TModel> 
