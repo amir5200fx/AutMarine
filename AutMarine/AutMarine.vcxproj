@@ -124,9 +124,6 @@
     <ProjectReference Include="..\AutMeshAft\AutMeshAft.vcxproj">
       <Project>{a8593a5e-68c0-481e-84fe-6362c1821ad4}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\AutMeshApi\AutMeshApi.vcxproj">
-      <Project>{3ddf3ee9-8d3a-4157-8c18-012e0e49339b}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\AutMeshBase\AutMeshBase.vcxproj">
       <Project>{41611037-46a9-46f9-9634-682edf3f308a}</Project>
     </ProjectReference>

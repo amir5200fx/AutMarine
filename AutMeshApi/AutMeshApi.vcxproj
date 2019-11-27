@@ -74,14 +74,6 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="AutLib\MeshApi\Aft\MeshApi_Aft.hxx" />
-    <ClInclude Include="AutLib\MeshApi\Aft\Plane\AftApi_Plane.hxx" />
-    <ClInclude Include="AutLib\MeshApi\Aft\Plane\AftApi_PlaneI.hxx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AutLib\MeshApi\Aft\Plane\AftApi_Plane.cxx" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

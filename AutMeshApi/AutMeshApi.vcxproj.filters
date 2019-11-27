@@ -32,20 +32,4 @@
       <UniqueIdentifier>{3c4aa72d-3b28-4e08-8114-a4993fd4ae16}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AutLib\MeshApi\Aft\MeshApi_Aft.hxx">
-      <Filter>AutLib\MeshApi\Aft</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshApi\Aft\Plane\AftApi_Plane.hxx">
-      <Filter>AutLib\MeshApi\Aft\Plane</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshApi\Aft\Plane\AftApi_PlaneI.hxx">
-      <Filter>AutLib\MeshApi\Aft\Plane</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AutLib\MeshApi\Aft\Plane\AftApi_Plane.cxx">
-      <Filter>AutLib\MeshApi\Aft\Plane</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>
