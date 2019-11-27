@@ -38,12 +38,12 @@ namespace AutLib
 				const Standard_Real theTol = 1.0E-6
 			);
 
-		static Handle(Geom2d_Curve) 
+		static Handle(Geom2d_Curve)
 			ConvertToTrimmedCurve
 			(
 				const Handle(Geom2d_Curve)& theCurve,
 				const Standard_Real theU0,
-				const Standard_Real theU1
+				const Standard_Real theU1);
 
 		static std::shared_ptr<Entity2d_Triangulation> 
 			ParametricTriangulation
