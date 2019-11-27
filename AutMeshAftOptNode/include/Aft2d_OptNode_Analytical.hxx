@@ -9,73 +9,11 @@
 namespace AutLib
 {
 
-	class Aft2d_OptNode_Analytical_Base
-	{
+	typedef Aft_OptNode_Analytical<Aft2d_Edge>
+		Aft2d_OptNode_Analytical;
 
-		/*Private Data*/
-
-	protected:
-
-		Aft2d_OptNode_Analytical_Base()
-		{}
-
-	public:
-
-		static Pnt2d CalcCoord(const Standard_Real theSize, const Aft2d_Edge& theEdge);
-	};
-
-	class Aft2d_OptNode_Analytical
-		: public Aft2d_OptNode_Analytical_Base
-		, public Global_Done
-	{
-
-		typedef Aft2d_Edge frontType;
-		typedef Pnt2d Point;
-
-		/*Private Data*/
-
-		Standard_Real theSize_;
-
-		const frontType& theFront_;
-
-		Point theCoord_;
-
-
-		Point& ChangeCoord()
-		{
-			return theCoord_;
-		}
-
-	public:
-
-		Aft2d_OptNode_Analytical
-		(
-			const Standard_Real theSize,
-			const frontType& theFront
-		)
-			: theSize_(theSize)
-			, theFront_(theFront)
-		{}
-
-		Standard_Real ElementSize() const
-		{
-			return theSize_;
-		}
-
-		const frontType& Front() const
-		{
-			return theFront_;
-		}
-
-		const Point& Coord() const
-		{
-			return theCoord_;
-		}
-
-		void Perform();
-	};
+	template<>
+	void Aft2d_OptNode_Analytical::Perform();	
 }
-
-#include <Aft2d_OptNode_AnalyticalI.hxx>
 
 #endif // !_Aft2d_OptNode_Analytical_Header

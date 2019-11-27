@@ -54,9 +54,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Imperfection;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Singular;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\T;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\G;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\Base;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Imperfection;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Singular;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\T;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\G;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -67,9 +68,10 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Imperfection;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Singular;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\T;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\G;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\2d;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\Base;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Core;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Wire;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Curve;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Surface;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\AnIso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane\Iso;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Plane;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Imperfection;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Defect;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\Singular;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\T;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch\G;$(MSBuildProjectDirectory)\AutLib\MeshAft\Cad\Patch;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -112,9 +114,16 @@
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Surface\Mesh2d_gPlnWireSurface.hxx" />
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Surface\Mesh2d_tPlnWireSurfaceFwd.hxx" />
     <ClInclude Include="AutLib\MeshAft\Core\2d\Aft2d_CoreAnIsoTemplate.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Core\2d\Aft2d_CoreTemplate.hxx" />
     <ClInclude Include="AutLib\MeshAft\Core\Aft_Core.hxx" />
     <ClInclude Include="AutLib\MeshAft\Core\Aft_CoreI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\AnIso\2d\Aft2d_CoreAnIso.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\AnIso\2d\Aft2d_CoreAnIsoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\Base\Aft_Core_Base.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\Base\Aft_Core_BaseI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\Iso\2d\Aft2d_Core.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\Iso\2d\Aft2d_CoreFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurface.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurfaceFwd.hxx" />
     <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurfaceTemplate.hxx" />
   </ItemGroup>
   <ItemGroup>
@@ -128,6 +137,7 @@
     <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurface.cxx" />
     <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurface.cxx" />
     <ClCompile Include="AutLib\MeshAft\Core\Aft_Core.cxx" />
+    <ClCompile Include="AutLib\MeshAft\Core\Base\Aft_Core_Base.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

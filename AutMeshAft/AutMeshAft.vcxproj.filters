@@ -759,6 +759,18 @@
     <ClInclude Include="AutLib\MeshAft\MetricProcessor\Iso\3d\Aft3d_MetricPrcsr.hxx">
       <Filter>AutLib\MeshAft\MetricProcessor\Iso\3d</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Surface\Aft2d_FrontSurfaceGlobalData.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Surface\Aft2d_FrontSurfaceGlobalDataFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Data\Front\Surface\Info\Aft2d_FrontSurfaceInfoFwd.hxx">
+      <Filter>AutLib\MeshAft\Data\Front\Surface\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\MetricProcessor\AnIso\Surface\Aft2d_MetricPrcsrSurfaceFwd.hxx">
+      <Filter>AutLib\MeshAft\MetricProcessor\AnIso\Surface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Entities\Node\Aft_Node.cxx">

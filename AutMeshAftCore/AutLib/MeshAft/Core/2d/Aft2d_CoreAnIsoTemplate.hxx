@@ -9,8 +9,8 @@
 namespace AutLib
 {
 
-	template<class OptNodeAlg, class AftMetricPrcsr>
-	using Aft2d_CoreAnIsoTemplate = Aft_Core<OptNodeAlg, AftMetricPrcsr, Aft2d_FrontAnIsoInfo, Aft2d_FrontAnIsoGlobalData>;
+	template<class OptNodeAlg, class SizeFun, class MetricFun>
+	using Aft2d_CoreAnIsoTemplate = Aft_Core<OptNodeAlg, SizeFun, Aft2d_FrontAnIsoInfo, Aft2d_FrontAnIsoGlobalData, MetricFun>;
 }
 
 #endif // !_Aft2d_CoreAnIsoTemplate_Header

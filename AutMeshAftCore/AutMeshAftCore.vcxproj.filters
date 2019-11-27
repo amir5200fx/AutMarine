@@ -70,6 +70,27 @@
     <Filter Include="AutLib\MeshAft\Cad\Patch\T">
       <UniqueIdentifier>{258093f5-0888-40c7-b55a-d4067ed7c2ab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Core\Base">
+      <UniqueIdentifier>{8052edfa-5143-4508-b97d-81fb74bbb174}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core\Iso">
+      <UniqueIdentifier>{8a1f35bc-c516-42f8-a8d1-d168a1119e4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core\AnIso">
+      <UniqueIdentifier>{6844b211-f33a-4a6d-b2a7-12e9bfe05313}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core\Iso\2d">
+      <UniqueIdentifier>{03753e5a-8452-4d24-a3f4-a666069b446d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core\Iso\3d">
+      <UniqueIdentifier>{2287a4d4-b253-4bc4-a024-d580f9d9c285}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core\AnIso\2d">
+      <UniqueIdentifier>{b017d1e9-a2f8-4041-a7c5-fd2e27fbceec}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Core\AnIso\3d">
+      <UniqueIdentifier>{7102a8d1-50fe-4adf-ba91-3fcd7791d3ab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Core\Aft_CoreI.hxx">
@@ -77,9 +98,6 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Core\Aft_Core.hxx">
       <Filter>AutLib\MeshAft\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Core\2d\Aft2d_CoreTemplate.hxx">
-      <Filter>AutLib\MeshAft\Core\2d</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Core\2d\Aft2d_CoreAnIsoTemplate.hxx">
       <Filter>AutLib\MeshAft\Core\2d</Filter>
@@ -189,6 +207,30 @@
     <ClInclude Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.hxx">
       <Filter>AutLib\MeshAft\Cad\Patch\T</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Base\Aft_Core_Base.hxx">
+      <Filter>AutLib\MeshAft\Core\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Base\Aft_Core_BaseI.hxx">
+      <Filter>AutLib\MeshAft\Core\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Iso\2d\Aft2d_Core.hxx">
+      <Filter>AutLib\MeshAft\Core\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Iso\2d\Aft2d_CoreFwd.hxx">
+      <Filter>AutLib\MeshAft\Core\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\AnIso\2d\Aft2d_CoreAnIso.hxx">
+      <Filter>AutLib\MeshAft\Core\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\AnIso\2d\Aft2d_CoreAnIsoFwd.hxx">
+      <Filter>AutLib\MeshAft\Core\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurface.hxx">
+      <Filter>AutLib\MeshAft\Core\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurfaceFwd.hxx">
+      <Filter>AutLib\MeshAft\Core\Surface</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Core\Aft_Core.cxx">
@@ -220,6 +262,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.cxx">
       <Filter>AutLib\MeshAft\Cad\Patch\T</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Core\Base\Aft_Core_Base.cxx">
+      <Filter>AutLib\MeshAft\Core\Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

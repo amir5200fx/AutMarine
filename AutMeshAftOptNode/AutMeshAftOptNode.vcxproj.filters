@@ -151,6 +151,30 @@
     <Filter Include="AutLib\MeshAft\OptNode\Corrector\Iterative\Tools">
       <UniqueIdentifier>{775e9c41-1552-4c19-b221-9c90fa56eddd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator">
+      <UniqueIdentifier>{4657cd30-0d85-49b9-9fd8-c4108087d3e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator\Iso">
+      <UniqueIdentifier>{b02ca018-0011-4378-aa0d-3c6e09012f0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator\AnIso">
+      <UniqueIdentifier>{9d01715c-983f-4c41-bb4b-ca768aeefa48}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator\Surface">
+      <UniqueIdentifier>{b8b6aa5e-705e-47b5-b009-5789021c3f6f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator\Iso\2d">
+      <UniqueIdentifier>{83a327f9-8663-44ca-a248-cb1dab11103f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator\Iso\3d">
+      <UniqueIdentifier>{4e1ae09f-93f1-4971-9623-5f553822e81f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator\AnIso\2d">
+      <UniqueIdentifier>{886f8d28-ca09-4b06-9039-6b40138a4d1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\OptNode\Calculator\AnIso\3d">
+      <UniqueIdentifier>{869028e0-af43-40f6-8f23-b260fb2f773e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\OptNode\Aft_OptNode.hxx">
@@ -212,6 +236,39 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\OptNode\Analytical\Surface\Aft2d_OptNodeSurface_Analytical.hxx">
       <Filter>AutLib\MeshAft\OptNode\Analytical\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\Aft_OptNode_Calculator.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\Iso\2d\Aft2d_OptNode_Calculator.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\Iso\3d\Aft3d_OptNode_Calculator.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\Iso\3d\Aft3d_OptNode_CalculatorFwd.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\Iso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\Iso\2d\Aft2d_OptNode_CalculatorFwd.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\AnIso\2d\Aft2d_OptNodeAnIso_Calculator.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\AnIso\2d\Aft2d_OptNodeAnIso_CalculatorFwd.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\AnIso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\Surface\Aft2d_OptNodeSurface_Calculator.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\Surface\Aft2d_OptNodeSurface_CalculatorFwd.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\AnIso\3d\Aft3d_OptNodeAnIso_Calculator.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\AnIso\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\OptNode\Calculator\AnIso\3d\Aft3d_OptNodeAnIso_CalculatorFwd.hxx">
+      <Filter>AutLib\MeshAft\OptNode\Calculator\AnIso\3d</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
