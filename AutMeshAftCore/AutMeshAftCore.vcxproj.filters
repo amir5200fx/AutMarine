@@ -58,12 +58,6 @@
     <Filter Include="AutLib\MeshAft\Cad\Patch">
       <UniqueIdentifier>{78fdbcc9-50c9-4375-b5a7-5de7a94fa17f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Patch\Defect">
-      <UniqueIdentifier>{5a1c29d6-e596-4474-a6c0-361a5ad42b91}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Patch\Defect\Wire">
-      <UniqueIdentifier>{ece98260-3b44-4e84-8697-847d8b62c550}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\MeshAft\Cad\Patch\G">
       <UniqueIdentifier>{bb182cc7-9343-49a1-91d8-92a71342f8c9}</UniqueIdentifier>
     </Filter>

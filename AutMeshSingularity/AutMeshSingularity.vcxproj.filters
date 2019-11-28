@@ -109,6 +109,15 @@
     <Filter Include="AutLib\MeshSingularity\Curve\Line\Surface">
       <UniqueIdentifier>{06736ee8-3341-4125-8522-1452f08dc249}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Defect\Wire\Intersect">
+      <UniqueIdentifier>{9353f03f-2d7e-4957-b032-23ee4b89e4c2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Defect\Wire\Open">
+      <UniqueIdentifier>{0e548b18-d6a0-43a1-bd16-743b5cedbecb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Defect\Wire\Order">
+      <UniqueIdentifier>{adca1caf-ba0c-403a-ae9a-54cbddd26ed8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.hxx">
@@ -207,6 +216,30 @@
     <ClInclude Include="AutLib\MeshSingularity\Detection\Mesh_SingularDetectionI.hxx">
       <Filter>AutLib\MeshSingularity\Detection</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Mesh_DefectPatch.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Open\Mesh_DefectPatch_OpenWire.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Open</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Open\Mesh_DefectPatch_OpenWireI.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Open</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Mesh_DefectPatch_Wire.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Order\Mesh_DefectPatch_OrderWire.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Order</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Order\Mesh_DefectPatch_OrderWireI.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Order</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Intersect\Mesh_DefectPatch_IntersectWire.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Intersect</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Intersect\Mesh_DefectPatch_IntersectWireI.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Intersect</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.cxx">
@@ -265,6 +298,15 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshSingularity\Detection\Mesh_SingularDetection.cxx">
       <Filter>AutLib\MeshSingularity\Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Defect\Wire\Open\Mesh_DefectPatch_OpenWire.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Open</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Defect\Wire\Order\Mesh_DefectPatch_OrderWire.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Order</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Defect\Wire\Intersect\Mesh_DefectPatch_IntersectWire.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Intersect</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
