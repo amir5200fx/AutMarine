@@ -30,7 +30,7 @@ namespace AutLib
 		indexedEntityMap theDefects_;
 
 		indexedEntityMap theDeepSingulars_;
-		indexedEntityMap theRegularSingulars_;
+		indexedEntityMap theCommonSingulars_;
 
 		std::shared_ptr<SizeFun> theSizeFunction_;
 		std::shared_ptr<ModelType> theModel_;
@@ -54,6 +54,28 @@ namespace AutLib
 			, theModel_(theModel)
 		{}
 
+
+
+		indexedEntityMap& ChangeRegulars()
+		{
+			return theRegulars_;
+		}
+
+		indexedEntityMap& ChangeDefects()
+		{
+			return theDefects_;
+		}
+
+		indexedEntityMap& ChangeDeepSingulars()
+		{
+			return theDeepSingulars_;
+		}
+
+		indexedEntityMap& ChangeCommonSingulars()
+		{
+			return theCommonSingulars_;
+		}
+
 	public:
 
 		Standard_Integer NbRegulars() const
@@ -73,7 +95,7 @@ namespace AutLib
 
 		Standard_Integer NbRegularSingularities() const
 		{
-			return (Standard_Integer)theRegularSingulars_.size();
+			return (Standard_Integer)theCommonSingulars_.size();
 		}
 
 		const std::shared_ptr<SizeFun>& SizeFunction() const
@@ -123,12 +145,12 @@ namespace AutLib
 
 		const indexedEntityMap& RegularSingulars() const
 		{
-			return theRegularSingulars_;
+			return theCommonSingulars_;
 		}
 
 		indexedEntityMap& RegularSingulars()
 		{
-			return theRegularSingulars_;
+			return theCommonSingulars_;
 		}
 
 		void LoadSizeFunction(const std::shared_ptr<SizeFun>& theSizeFun)

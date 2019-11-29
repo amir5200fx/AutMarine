@@ -4,6 +4,7 @@
 
 #include <Standard_TypeDef.hxx>
 #include <Global_Verbose.hxx>
+#include <Global_AccessMethod.hxx>
 
 #include <memory>
 #include <map>
@@ -12,7 +13,7 @@ namespace AutLib
 {
 
 	// Forward Declarations
-	class Geo_ApprxSurfMetricInfo;
+	class CadAnalys_ApprxSurfMetricInfo;
 	class Mesh_SingularDetection_Info;
 	class CadRepair_NormalizeMetric_Info;
 	class CadRepair_ParaPlaneAR_Info;
@@ -21,7 +22,7 @@ namespace AutLib
 		: public Global_Verbose
 	{
 
-		typedef Geo_ApprxSurfMetricInfo metricApprxInfo;
+		typedef CadAnalys_ApprxSurfMetricInfo metricApprxInfo;
 		typedef Mesh_SingularDetection_Info singularInfo;
 		typedef CadRepair_NormalizeMetric_Info normInfo;
 		typedef CadRepair_ParaPlaneAR_Info equalInfo;
@@ -29,6 +30,8 @@ namespace AutLib
 		/*Private Data*/
 
 		Standard_Real theMinSize_;
+		Standard_Real theOpenWireTolerance_;
+		Standard_Real theInterstWireTolerance_;
 
 		std::shared_ptr<metricApprxInfo> theGlobalMetricApprxInfo_;
 		std::shared_ptr<singularInfo> theGlobalSingularDetectInfo_;
@@ -47,6 +50,8 @@ namespace AutLib
 	public:
 
 		static const Standard_Real DEFAULT_MIN_SIZE;
+		static const Standard_Real DEFAULT_OPENWIRE_TOLERANCE;
+		static const Standard_Real DEFAULT_INTERECT_WIRE_TOLERANCE;
 
 		MeshAnalysis_Model_Info();
 
@@ -157,6 +162,11 @@ namespace AutLib
 			const Standard_Integer theIndex,
 			const std::shared_ptr<singularInfo>& theInfo
 		);
+
+		//- Macros
+		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, OpenWireTolerance)
+			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, InterstWireTolerance)
+			
 	};
 }
 

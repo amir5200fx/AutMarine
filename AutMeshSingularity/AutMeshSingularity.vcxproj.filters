@@ -22,12 +22,6 @@
     <Filter Include="AutLib\MeshSingularity\Patch\Defect">
       <UniqueIdentifier>{56a61026-a498-47ca-b243-a2cec94a317e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshSingularity\Patch\Singular\Common">
-      <UniqueIdentifier>{d5477919-532f-475c-9d28-27fd147f2623}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshSingularity\Patch\Singular\General">
-      <UniqueIdentifier>{f3a16600-6a2f-466a-9842-f89e39230b79}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\MeshSingularity\Patch\Defect\Wire">
       <UniqueIdentifier>{9b5f0bed-e56d-4aaf-8e46-d542b6bbe696}</UniqueIdentifier>
     </Filter>
@@ -117,6 +111,21 @@
     </Filter>
     <Filter Include="AutLib\MeshSingularity\Patch\Defect\Wire\Order">
       <UniqueIdentifier>{adca1caf-ba0c-403a-ae9a-54cbddd26ed8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Traits">
+      <UniqueIdentifier>{5b8b76aa-263a-4869-9c0a-751a7ab52fae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Singular\Deep">
+      <UniqueIdentifier>{f3a16600-6a2f-466a-9842-f89e39230b79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Singular\Regular">
+      <UniqueIdentifier>{d5477919-532f-475c-9d28-27fd147f2623}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Defect\UnBalanced">
+      <UniqueIdentifier>{d6c62374-8d41-4e0f-9e38-a6c85be76204}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Patch\Defect\Metric">
+      <UniqueIdentifier>{4d5ff079-eaed-4a1b-94a3-a4bd463b114b}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -240,6 +249,21 @@
     <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Wire\Intersect\Mesh_DefectPatch_IntersectWireI.hxx">
       <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Intersect</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Traits\Mesh_SingularTraits.hxx">
+      <Filter>AutLib\MeshSingularity\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Singular\Deep\Mesh_SingularPatch_Deep.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Singular\Deep</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Singular\Regular\Mesh_SingularPatch_Regular.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Singular\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\UnBalanced\Mesh_DefectPatch_UnBalancedAR.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\UnBalanced</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshSingularity\Patch\Defect\Metric\Mesh_DefectPatch_BadMetric.hxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Metric</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.cxx">
@@ -307,6 +331,12 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshSingularity\Patch\Defect\Wire\Intersect\Mesh_DefectPatch_IntersectWire.cxx">
       <Filter>AutLib\MeshSingularity\Patch\Defect\Wire\Intersect</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Defect\Metric\Mesh_DefectPatch_BadMetric.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\Metric</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshSingularity\Patch\Defect\UnBalanced\Mesh_DefectPatch_UnBalancedAR.cxx">
+      <Filter>AutLib\MeshSingularity\Patch\Defect\UnBalanced</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
