@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{8f80cbe3-53f3-4950-8026-efdcc9873e0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine">
+      <UniqueIdentifier>{c82dbae8-7b66-4fc4-837e-f278f2d53c66}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model">
+      <UniqueIdentifier>{c8132d37-f9f3-452b-a889-5d5ae1c23444}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model\Vessel">
+      <UniqueIdentifier>{f028f0d4-7d26-4266-a45e-01bf3a8c17f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model\Vessel\Displacement">
+      <UniqueIdentifier>{36919abc-3841-4eb2-8cdd-bbd683c4d518}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model\Vessel\Planing">
+      <UniqueIdentifier>{49b3c41e-081a-4d11-84bd-c0aa0ca31e68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model\Propeller">
+      <UniqueIdentifier>{a17920c9-b9fe-4265-a909-c7893d94b68d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model\Duct">
+      <UniqueIdentifier>{e80ba0d9-a741-46a3-a8fe-c46c2fcf29cb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model\Skeg">
+      <UniqueIdentifier>{155431e0-7e3d-450f-83d9-c1a95653a7cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Marine\Model\Vessel\Displacement\Legacy">
+      <UniqueIdentifier>{3e314e33-6b2b-4033-a89a-f3faafe61c6b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\Marine\Model\Marine_Model.cxx">
+      <Filter>AutLib\Marine\Model</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\Marine\Model\Marine_Model.hxx">
+      <Filter>AutLib\Marine\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Marine\Model\Vessel\MarineModel_Vessel.hxx">
+      <Filter>AutLib\Marine\Model\Vessel</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Marine\Model\Vessel\Displacement\MarineModel_Displacement.hxx">
+      <Filter>AutLib\Marine\Model\Vessel\Displacement</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

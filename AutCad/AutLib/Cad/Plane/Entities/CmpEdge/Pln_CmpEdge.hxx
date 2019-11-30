@@ -32,7 +32,7 @@ namespace AutLib
 	protected:	
 
 
-		void Insert(const std::shared_ptr<Pln_Edge>& theEdge)
+		virtual void Insert(const std::shared_ptr<Pln_Edge>& theEdge)
 		{
 			theEdges_.push_back(theEdge);
 		}
