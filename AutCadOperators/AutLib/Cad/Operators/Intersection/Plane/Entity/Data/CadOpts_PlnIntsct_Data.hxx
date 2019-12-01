@@ -4,6 +4,7 @@
 
 #include <Pnt2d.hxx>
 #include <Global_AccessMethod.hxx>
+#include <Global_Indexed.hxx>
 
 #include <Standard_Handle.hxx>
 
@@ -46,7 +47,7 @@ namespace AutLib
 
 		//- Macros
 
-		GLOBAL_ACCESS_ONLY_SINGLE(Pnt2d, Coord)
+		GLOBAL_ACCESS_SINGLE(Pnt2d, Coord)
 			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, Parameter1)
 			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, Parameter2)
 	};
@@ -56,26 +57,40 @@ namespace AutLib
 
 		/*Private Data*/
 
-		CadOpts_PlnIntsctData_Point theEnt1_;
-		CadOpts_PlnIntsctData_Point theEnt2_;
+		std::shared_ptr<CadOpts_PlnIntsctData_Point> theEnt1_;
+		std::shared_ptr<CadOpts_PlnIntsctData_Point> theEnt2_;
 
-		Handle(Geom2d_Curve) theGeometry1_;
-		Handle(Geom2d_Curve) theGeometry2_;
+		/*Handle(Geom2d_Curve) theGeometry1_;
+		Handle(Geom2d_Curve) theGeometry2_;*/
+
+		Standard_Boolean IsOpposite_;
 
 	public:
 
 		CadOpts_PlnIntsctData_Segment()
+			: IsOpposite_(Standard_True)
 		{}
 
-		//- Macros
-		GLOBAL_ACCESS_ONLY_SINGLE(CadOpts_PlnIntsctData_Point, Ent1)
-			GLOBAL_ACCESS_ONLY_SINGLE(CadOpts_PlnIntsctData_Point, Ent2)
+		Standard_Boolean IsOpposite() const
+		{
+			return IsOpposite_;
+		}
 
-			GLOBAL_ACCESS_ONLY_SINGLE(Handle(Geom2d_Curve), Geometry1)
-			GLOBAL_ACCESS_ONLY_SINGLE(Handle(Geom2d_Curve), Geometry2)
+		void SetOpposite(const Standard_Boolean cond)
+		{
+			IsOpposite_ = cond;
+		}
+
+		//- Macros
+		GLOBAL_ACCESS_SINGLE(std::shared_ptr<CadOpts_PlnIntsctData_Point>, Ent1)
+			GLOBAL_ACCESS_SINGLE(std::shared_ptr<CadOpts_PlnIntsctData_Point>, Ent2)
+
+			/*GLOBAL_ACCESS_SINGLE(Handle(Geom2d_Curve), Geometry1)
+			GLOBAL_ACCESS_SINGLE(Handle(Geom2d_Curve), Geometry2)*/
 	};
 
-	class CadOpts_PlnIntsct_Data
+	class CadOpts_PlnIntsctEdgeEdge_Data
+		: public Global_Indexed
 	{
 
 		/*Private Data*/
@@ -88,7 +103,7 @@ namespace AutLib
 
 	public:
 
-		CadOpts_PlnIntsct_Data
+		CadOpts_PlnIntsctEdgeEdge_Data
 		(
 			const std::shared_ptr<Pln_Edge>& theEdge1,
 			const std::shared_ptr<Pln_Edge>& theEdge2
@@ -105,6 +120,11 @@ namespace AutLib
 		Standard_Integer NbSegments() const
 		{
 			return (Standard_Integer)theSegments_.size();
+		}
+
+		Standard_Boolean HasIntersection() const
+		{
+			return (NbPoints()) || (NbSegments());
 		}
 
 		const std::shared_ptr<Pln_Edge>& Edge1() const

@@ -319,6 +319,12 @@
     <Filter Include="AutLib\Geom\Tools">
       <UniqueIdentifier>{a598f940-5d68-4012-a355-e562f5900eef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\ObjectSearch">
+      <UniqueIdentifier>{b2f01d47-0e26-4966-ae44-db466019f98c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\ObjectSearch\Brutal">
+      <UniqueIdentifier>{748fea7a-2dab-442e-a6ff-8bbfc60c7c7c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -476,6 +482,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Tools\Geo_Tools.cxx">
       <Filter>AutLib\Geom\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\ObjectSearch\Brutal\Geo_ObjectSearch_Brutal.cxx">
+      <Filter>AutLib\Geom\ObjectSearch\Brutal</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -862,6 +871,15 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Tools\Geo_Tools.hxx">
       <Filter>AutLib\Geom\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\ObjectSearch\Geo_ObjectSearch.hxx">
+      <Filter>AutLib\Geom\ObjectSearch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\ObjectSearch\Brutal\Geo_ObjectSearch_Brutal.hxx">
+      <Filter>AutLib\Geom\ObjectSearch\Brutal</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\ObjectSearch\Brutal\Geo_ObjectSearch_BrutalI.hxx">
+      <Filter>AutLib\Geom\ObjectSearch\Brutal</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

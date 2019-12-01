@@ -2,6 +2,8 @@
 #ifndef _CadOpts_PlnIntsct_EdgeEdge_Header
 #define _CadOpts_PlnIntsct_EdgeEdge_Header
 
+#include <Global_Done.hxx>
+
 #include <memory>
 
 namespace AutLib
@@ -10,10 +12,11 @@ namespace AutLib
 	// Forward Declarations
 	class CadOpts_PlnIntsct_Edge;
 	class CadOpts_PlnIntsct_Info;
-	class CadOpts_PlnIntsct_Data;
+	class CadOpts_PlnIntsctEdgeEdge_Data;
 	class Pln_Edge;
 
 	class CadOpts_PlnIntsct_EdgeEdge
+		: public Global_Done
 	{
 
 		typedef CadOpts_PlnIntsct_Info info;
@@ -23,7 +26,7 @@ namespace AutLib
 		std::shared_ptr<Pln_Edge> theEdge0_;
 		std::shared_ptr<Pln_Edge> theEdge1_;
 
-		std::shared_ptr<CadOpts_PlnIntsct_Data> theData_;
+		std::shared_ptr<CadOpts_PlnIntsctEdgeEdge_Data> theData_;
 
 		const std::shared_ptr<info>& theInfo_;
 
@@ -57,7 +60,7 @@ namespace AutLib
 			return theEdge1_;
 		}
 
-		const std::shared_ptr<CadOpts_PlnIntsct_Data>& Data() const
+		const std::shared_ptr<CadOpts_PlnIntsctEdgeEdge_Data>& Data() const
 		{
 			return theData_;
 		}

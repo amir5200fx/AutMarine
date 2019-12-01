@@ -45,3 +45,36 @@ void AutLib::Pln_Edge::Discretize(const Pln_Edge & theEdge)
 {
 	theEdge.Discretize();
 }
+
+void AutLib::Pln_Edge::Split
+(
+	const Standard_Real x, 
+	std::shared_ptr<Pln_Vertex>& theVertex,
+	std::shared_ptr<Pln_Edge>& theLeft, 
+	std::shared_ptr<Pln_Edge>& theRight
+) const
+{
+	Debug_Null_Pointer(Curve());
+	const auto& curve = *Curve();
+
+	if (NOT INSIDE(x, curve.FirstParam(), curve.LastParam()))
+	{
+		FatalErrorIn("void Split()")
+			<< "Invalid Data: the parameter is outside the parametric bounds"
+			<< " - parameter: " << x << endl
+			<< " - first = " << curve.FirstParam() << ", last = " << curve.LastParam() << endl
+			<< abort(FatalError);
+	}
+
+	Pnt2d pt;
+	std::shared_ptr<Pln_Curve> c1, c2;
+	curve.Split(x, pt, c1, c2);
+
+	Debug_Null_Pointer(c1);
+	Debug_Null_Pointer(c2);
+
+	auto vtx = std::make_shared<Pln_Vertex>(0, pt);
+
+	auto edge1 = std::make_shared<Pln_Edge>(Vtx0(), vtx, c1, Sense());
+	auto edge2 = std::make_shared<Pln_Edge>(vtx, Vtx1(), c2, Sense());
+}
