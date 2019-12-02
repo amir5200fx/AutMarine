@@ -28,14 +28,14 @@ namespace AutLib
 
 		/*Private Data*/
 
-		std::shared_ptr<Mesh_SingularPatch<planeType>> theType_;
+		std::shared_ptr<Mesh_SingularDetection<planeType>> theType_;
 
 	protected:
 
 		Mesh_SingularPatch
 		(
 			const SurfType& theSurface,
-			const std::shared_ptr<Mesh_SingularPatch<planeType>>& theType
+			const std::shared_ptr<Mesh_SingularDetection<planeType>>& theType
 		)
 			: Mesh_ImpPatch<SurfType, SizeFun, MetricFun>(theSurface)
 			, theType_(theType)
@@ -46,7 +46,7 @@ namespace AutLib
 		typedef Mesh_ImpPatch<SurfType, SizeFun, MetricFun>
 			base;
 
-		const std::shared_ptr<Mesh_SingularPatch<planeType>>& Type() const
+		const std::shared_ptr<Mesh_SingularDetection<planeType>>& Type() const
 		{
 			return theType_;
 		}

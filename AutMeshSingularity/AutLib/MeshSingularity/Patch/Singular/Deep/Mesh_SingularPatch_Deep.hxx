@@ -24,7 +24,7 @@ namespace AutLib
 		Mesh_SingularPatch_Deep
 		(
 			const SurfType& theSurface,
-			const std::shared_ptr<Mesh_SingularPatch<planeType>>& theType
+			const std::shared_ptr<Mesh_SingularDetection<planeType>>& theType
 		)
 			: base(theSurface, theType)
 		{}

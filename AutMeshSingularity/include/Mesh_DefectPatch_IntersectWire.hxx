@@ -16,6 +16,7 @@ namespace AutLib
 	template<class SurfType, class SizeFun, class MetricFun>
 	class Mesh_DefectPatch_IntersectWire
 		: public Mesh_DefectPatch_Wire<SurfType, SizeFun, MetricFun>
+		, public Mesh_DefectPatch_IntersectWire_TypeName
 	{
 
 		typedef typename SurfType::wireType wireType;

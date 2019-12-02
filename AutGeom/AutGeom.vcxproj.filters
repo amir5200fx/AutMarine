@@ -319,6 +319,9 @@
     <Filter Include="AutLib\Geom\Tools">
       <UniqueIdentifier>{a598f940-5d68-4012-a355-e562f5900eef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Function\Size\Surface">
+      <UniqueIdentifier>{a64fb8f6-6f64-44a6-a869-f01e4f03820c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -476,6 +479,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Tools\Geo_Tools.cxx">
       <Filter>AutLib\Geom\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Function\Size\Surface\Geo2d_SizeFunction_Surface.cxx">
+      <Filter>AutLib\Geom\Function\Size\Surface</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -862,6 +868,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Tools\Geo_Tools.hxx">
       <Filter>AutLib\Geom\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\Surface\Geo2d_SizeFunction_Surface.hxx">
+      <Filter>AutLib\Geom\Function\Size\Surface</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

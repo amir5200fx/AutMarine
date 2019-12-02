@@ -17,12 +17,12 @@ namespace AutLib
 	protected:
 
 		Mesh_ImpPatch(const SurfType& theSurface)
-			: Mesh_PatchTemplate<SurfType>(theSurface)
+			: Mesh_PatchTemplate<SurfType, SizeFun, MetricFun>(theSurface)
 		{}
 
 	public:
 
-		typedef Mesh_PatchTemplate<SurfType> base;
+		typedef Mesh_PatchTemplate<SurfType, SizeFun, MetricFun> base;
 	};
 }
 

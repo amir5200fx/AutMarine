@@ -9,6 +9,9 @@ AutLib::gModelSys::par_curve_info = std::make_shared<AutLib::Cad_CurveInfo>();
 std::shared_ptr<AutLib::Cad_CurveInfo>
 AutLib::gModelSys::curve_info = std::make_shared<AutLib::Cad_CurveInfo>();
 
+std::shared_ptr<AutLib::GModel_FixWireInfo>
+AutLib::gModelSys::fix_wire = std::make_shared<AutLib::GModel_FixWireInfo>();
+
 void AutLib::gModelSys::InitRunTime()
 {
 	par_curve_info->SetNbDivisions(20);

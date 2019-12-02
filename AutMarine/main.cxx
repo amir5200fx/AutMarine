@@ -8,11 +8,9 @@
 #include <iostream>
 #include <IO_IGES.hxx>
 #include <FastDiscrete_Params.hxx>
-#include <Leg_Vessel_Nihad2.hxx>
-#include <Leg_Model_PropNo1.hxx>
-#include <Leg_Prop_BladeFace.hxx>
 #include <Cad_Tools.hxx>
 #include <Cad3d_TModel.hxx>
+#include <Cad3d_GModel.hxx>
 #include <TModel_Surface.hxx>
 #include <TModel_Tools.hxx>
 #include <FastDiscrete.hxx>
@@ -25,49 +23,15 @@
 #include <Geom2d_Circle.hxx>
 #include <Geo_CurveLength.hxx>
 
+#include <GModel_Curve.hxx>
+#include <GModel_Surface.hxx>
 #include <GeoSizeFun_Uniform.hxx>
 //#include <Mesh2d_AftMetricPrcsr.hxx>
+#include <MeshAnalysis_Model.hxx>
+#include <MeshAnalysis_Model_Traits.hxx>
+#include <Geo3d_SizeFunction.hxx>
 
-namespace AutLib
-{
-
-	struct IntFun
-		: public Numeric_IntegrationFunction
-	{
-
-		Standard_Real Value(const Standard_Real x) const override
-		{
-			cout <<" x = " << x << std::endl;
-			return 3*x*x;
-		}
-	};
-
-	template<class T>
-	class A
-	{
-	public:
-
-		A()
-		{}
-
-		void f(int)
-		{}
-	};
-
-	template<class T>
-	class B : public A<T>
-	{
-	public:
-
-		using A<T>::f;
-
-		B()
-		{}
-
-		void f(int ,int)
-		{}
-	};
-}
+#include <AutMarine_Examples.hxx>
 
 
 using namespace boost::archive;
@@ -75,6 +39,13 @@ using namespace AutLib;
 
 int main()
 {
+
+	//example_reading_iges_creating_gmodel();
+
+	
+
+	return 0;
+
 	/*auto fun = std::make_shared<GeoSizeFun_Uniform<Pnt2d>>(0.2);
 	Mesh_AftMetricPrcsr<Aft2d_Edge, GeoSizeFun_Uniform<Pnt2d>> procsr(fun);
 
@@ -104,7 +75,7 @@ int main()
 	Geo_CurveIntegrand<Geom2d_Circle> integrand(circle);
 	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);*/
 
-	fileName name("preview.plt");
+	/*fileName name("preview.plt");
 	OFstream myFile(name);
 
 	{
@@ -126,7 +97,7 @@ int main()
 		}
 	}
 
-	cout << global_time_duration << std::endl;
+	cout << global_time_duration << std::endl;*/
 
 	/*{
 		Global_Timer timer;

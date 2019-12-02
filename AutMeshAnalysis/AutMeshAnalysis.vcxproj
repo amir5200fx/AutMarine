@@ -70,10 +70,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -83,7 +83,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAnalysis\Model\Info;$(ProjectDir)AutLib\MeshAnalysis\Model\Base;$(ProjectDir)AutLib\MeshAnalysis\Model;$(ProjectDir)AutLib\MeshAnalysis\Traits;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshSingularity\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAnalysis\Model\Info;$(ProjectDir)AutLib\MeshAnalysis\Model\Base;$(ProjectDir)AutLib\MeshAnalysis\Model\Traits;$(ProjectDir)AutLib\MeshAnalysis\Model;$(ProjectDir)AutLib\MeshAnalysis\Traits;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshSingularity\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -104,7 +104,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAnalysis\Model\Info;$(ProjectDir)AutLib\MeshAnalysis\Model\Base;$(ProjectDir)AutLib\MeshAnalysis\Model;$(ProjectDir)AutLib\MeshAnalysis\Traits;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshSingularity\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAnalysis\Model\Info;$(ProjectDir)AutLib\MeshAnalysis\Model\Base;$(ProjectDir)AutLib\MeshAnalysis\Model\Traits;$(ProjectDir)AutLib\MeshAnalysis\Model;$(ProjectDir)AutLib\MeshAnalysis\Traits;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshSingularity\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -127,6 +127,7 @@
     <ClInclude Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.hxx" />
     <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.hxx" />
     <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_ModelI.hxx" />
+    <ClInclude Include="AutLib\MeshAnalysis\Model\Traits\MeshAnalysis_Model_Traits.hxx" />
     <ClInclude Include="AutLib\MeshAnalysis\Traits\MeshAnalysis_Traits.hxx" />
   </ItemGroup>
   <ItemGroup>

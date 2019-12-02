@@ -65,7 +65,6 @@ namespace AutLib
 		)
 			: theInfo_(theInfo)
 			, Applied_(Standard_False)
-			, toApply_(Standard_False)
 		{}
 
 		CadRepair_NormalizeMetric
@@ -78,7 +77,6 @@ namespace AutLib
 			, theSurface_(theSurface)
 			, theMetric_(theMetric)
 			, Applied_(Standard_False)
-			, toApply_(Standard_False)
 		{}
 
 

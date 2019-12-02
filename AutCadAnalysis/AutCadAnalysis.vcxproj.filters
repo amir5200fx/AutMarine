@@ -7,18 +7,6 @@
     <Filter Include="AutLib\CadAnalys">
       <UniqueIdentifier>{688bde15-9a8c-4c7d-ae9d-d9eda7587104}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\CadAnalys\Approximation">
-      <UniqueIdentifier>{091e4b36-4d8f-42de-add2-ac902f2acdac}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Approximation\SurfaceMetric">
-      <UniqueIdentifier>{4e432d15-596e-4388-8f06-dc4439bbba2d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Approximation\SurfaceMetric\Info">
-      <UniqueIdentifier>{37174249-97f9-41d6-8714-34cff0405a19}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Coloring">
-      <UniqueIdentifier>{34dc8b0a-fd7f-4fd2-9563-f9d685ca0a16}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\CadAnalys\SurfaceMetric">
       <UniqueIdentifier>{d2fa75d0-f277-4293-8168-0701f26212c4}</UniqueIdentifier>
     </Filter>
@@ -30,6 +18,36 @@
     </Filter>
     <Filter Include="AutLib\CadAnalys\SurfaceMetric\Approx\Info">
       <UniqueIdentifier>{a99214c3-958d-41fe-9d9b-db3d53687d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model">
+      <UniqueIdentifier>{03c5d809-0cf9-4031-b26a-edc8a6908cf4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Base">
+      <UniqueIdentifier>{2470fe93-609d-440d-9ee5-a37a0ccbb10b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Entities">
+      <UniqueIdentifier>{01e2719d-84ce-45d9-83b2-f7d790716e8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch">
+      <UniqueIdentifier>{03e22575-f26e-4965-a18d-8c5e0a28015a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection">
+      <UniqueIdentifier>{1ad7bf53-1557-415f-bba7-85323095bd0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular">
+      <UniqueIdentifier>{0ad85045-35c5-44a5-a9c1-a73a6eea133e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep">
+      <UniqueIdentifier>{4bbfd5aa-6f37-4699-9048-293616d358b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common">
+      <UniqueIdentifier>{64e9ce94-3648-4d9f-b626-8db06db19d15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Regular">
+      <UniqueIdentifier>{ba6320ba-056d-471c-9524-b662451f6b2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\Info">
+      <UniqueIdentifier>{e990c112-94fd-42ae-b00a-b6e57683667a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -55,6 +73,30 @@
     </ClInclude>
     <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Coloring\CadAnalys_ColoringSurfMetric.hxx">
       <Filter>AutLib\CadAnalys\SurfaceMetric\Coloring</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Base\CadAnalys_Model_Base.hxx">
+      <Filter>AutLib\CadAnalys\Model\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\CadAnalys_Patch.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Regular\CadAnalys_RegularPatch.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\CadAnalys_ImpPatch.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\CadAnalys_SingularPatch.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common\CadAnalys_CommonPatch.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep\CadAnalys_DeepPatch.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Info\CadAnalys_Model_Info.hxx">
+      <Filter>AutLib\CadAnalys\Model\Info</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -36,15 +36,16 @@ namespace AutLib
 			TopLoc_Location pLoc, eLoc;
 			auto patch = BRep_Tool::Surface(theFace, pLoc);
 
-			auto pCurve0 = BRep_Tool::CurveOnSurface(edge, patch, pLoc, u0, u1);
-			auto pCurve = Handle(Geom2d_Curve)::DownCast(pCurve0->Copy());
-			auto Curve = BRep_Tool::Curve(edge, eLoc, U0, U1);
-
 			if (NOT BRep_Tool::SameRange(edge))
 			{
 				BRepLib::SameRange(edge);
 			}
-			
+
+			if (NOT BRep_Tool::SameParameter(edge))
+			{
+				BRepLib::SameParameter(edge);
+			}
+
 			if (NOT BRep_Tool::SameParameter(edge))
 			{
 				FatalErrorIn(FunctionSIG)
@@ -58,6 +59,10 @@ namespace AutLib
 					<< "It's supposed that the edge has SameRange flag" << endl
 					<< abort(FatalError);
 			}
+
+			auto pCurve0 = BRep_Tool::CurveOnSurface(edge, patch, pLoc, u0, u1);
+			auto pCurve = Handle(Geom2d_Curve)::DownCast(pCurve0->Copy());
+			auto Curve = BRep_Tool::Curve(edge, eLoc, U0, U1);		
 			
 			if (edge.Orientation() IS_EQUAL TopAbs_REVERSED)
 			{

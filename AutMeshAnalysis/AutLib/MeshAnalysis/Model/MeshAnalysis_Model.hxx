@@ -23,18 +23,20 @@ namespace AutLib
 		: public MeshAnalysis_Model_Base
 		<
 		SizeFun,
-		typename MeshAnalysis_Model<CurveType, SurfType>::type, 
+		typename meshAnalysis::model_type<CurveType, SurfType>::type, 
 		CurveType
 		>
+		, public Global_Done
 	{
 
 		typedef MeshAnalysis_Model_Base
 			<
 			SizeFun,
-			typename MeshAnalysis_Model<CurveType, SurfType>::type,
+			typename meshAnalysis::model_type<CurveType, SurfType>::type,
 			CurveType
 			> base;
 		typedef typename SurfType::wireType wireType;
+		typedef MeshAnalysis_Model_Info info;
 
 		/*Private Data*/
 
@@ -49,6 +51,21 @@ namespace AutLib
 
 	public:
 
+		MeshAnalysis_Model
+		(
+			const std::shared_ptr<info>& theInfo
+		)
+			: MeshAnalysis_Model_Base(theInfo)
+		{}
+
+		MeshAnalysis_Model
+		(
+			const std::shared_ptr<info>& theInfo,
+			const std::shared_ptr<ModelType>& theModel
+		)
+			: MeshAnalysis_Model_Base(theInfo, theModel)
+		{}
+
 		void Perform();
 
 		
@@ -56,20 +73,16 @@ namespace AutLib
 
 	template<class ModelTraits, class SizeFun, class CurveType>
 	class MeshAnalysis_Model<ModelTraits, SizeFun, CurveType, void>
-		: public Global_Done
-		, public Global_Indexed
-		, public Global_Named
+		: public MeshAnalysis_Model_Base
+		<
+		SizeFun,
+		typename meshAnalysis::model_type<CurveType>::type,
+		CurveType
+		>
+		, public Global_Done
 	{
 
-		typedef std::map<Standard_Integer, std::shared_ptr<CurveType>>
-			indexedCurveMap;
-
 		/*Private Data*/
-
-		indexedCurveMap theRegulars_;
-		indexedCurveMap theDefects_;
-
-		indexedCurveMap theDeepSingulars_;
 	};
 }
 

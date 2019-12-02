@@ -48,7 +48,6 @@ namespace AutLib
 		)
 			: theInfo_(theInfo)
 			, Applied_(Standard_False)
-			, toApply_(Standard_False)
 		{}
 
 		CadRepair_ParaPlaneAR
@@ -59,7 +58,6 @@ namespace AutLib
 			: theInfo_(theInfo)
 			, theSurface_(theSurface)
 			, Applied_(Standard_False)
-			, toApply_(Standard_False)
 		{}
 
 		Standard_Boolean Applied() const
