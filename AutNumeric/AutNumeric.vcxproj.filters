@@ -58,6 +58,12 @@
     <Filter Include="AutLib\Numeric\Integration\GaussQuadrature\Core">
       <UniqueIdentifier>{f83b266b-4ffd-4b04-972d-4c903293ae50}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Numeric\NonLinearSolver\Newton\Info">
+      <UniqueIdentifier>{fa595a49-465d-4a8d-92ea-ff657485ab08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Numeric\NonLinearSolver\Newton\Core">
+      <UniqueIdentifier>{d215376f-f175-4bb6-b443-014557b6fcd5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Numeric\Random\Numeric_Random.hxx">
@@ -74,9 +80,6 @@
     </ClInclude>
     <ClInclude Include="AutLib\Numeric\Optimization\NelderMead\NumOpt_NelderMeadI.hxx">
       <Filter>AutLib\Numeric\Optimization\NelderMead</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Numeric_NewtonSolverInfo.hxx">
-      <Filter>AutLib\Numeric\NonLinearSolver\Newton</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\Numeric\Integration\System\Numeric_IntegrationBound.hxx">
       <Filter>AutLib\Numeric\Integration\System</Filter>
@@ -110,6 +113,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Numeric\Integration\GaussQuadrature\Numeric_GaussQuadratureI.hxx">
       <Filter>AutLib\Numeric\Integration\GaussQuadrature</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Info\Numeric_NewtonSolverInfo.hxx">
+      <Filter>AutLib\Numeric\NonLinearSolver\Newton\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Numeric\NonLinearSolver\Newton\Core\Numeric_NewtonSolver_Core.hxx">
+      <Filter>AutLib\Numeric\NonLinearSolver\Newton\Core</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
