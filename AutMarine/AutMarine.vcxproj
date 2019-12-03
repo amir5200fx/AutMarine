@@ -103,17 +103,11 @@
     <ProjectReference Include="..\AutGeom\AutGeom.vcxproj">
       <Project>{f51e15fb-9314-4805-9753-e025e735725e}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\AutHydroStatic\AutHydroStatic.vcxproj">
-      <Project>{e82e80fb-c474-4507-ac63-2932e5624216}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\AutIO\AutIO.vcxproj">
       <Project>{c5b8127a-23a7-4752-8380-1221288db6f4}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMarineBase\AutMarineBase.vcxproj">
       <Project>{92c56944-d175-4e27-bb20-5f09c115b020}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\AutMeshAdapt\AutMeshAdapt.vcxproj">
-      <Project>{fdc97543-761e-47f1-af40-bd58310a14d4}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMeshAftCore\AutMeshAftCore.vcxproj">
       <Project>{aadea632-4059-404a-9b25-0ccb225aa91e}</Project>
@@ -129,9 +123,6 @@
     </ProjectReference>
     <ProjectReference Include="..\AutMeshCurve\AutMeshCurve.vcxproj">
       <Project>{d9f7a879-3057-40c6-9b01-830bb7e4b355}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\AutMeshRepair\AutMeshRepair.vcxproj">
-      <Project>{0b03ca50-b983-4cfc-97ba-acee431f386b}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMeshSingularity\AutMeshSingularity.vcxproj">
       <Project>{28be9ab3-7d34-415d-9113-6831f49a8702}</Project>
