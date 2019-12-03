@@ -201,7 +201,7 @@ namespace AutLib
 		static void Assembly
 		(
 			const Entity3d_Chain& theChain, 
-			const std::vector<std::shared_ptr<TModel_Entity>>& theVertices, 
+			const std::vector<std::shared_ptr<TModel_Vertex>>& theVertices, 
 			const std::vector<std::shared_ptr<TModel_Edge>>& theEdges
 		)
 		{
@@ -218,8 +218,8 @@ namespace AutLib
 				auto v0 = Indices[Index].Value(0);
 				auto v1 = Indices[Index].Value(1);
 
-				auto vtx0 = std::dynamic_pointer_cast<TModel_Vertex>(theVertices[Index_Of(v0)]);
-				auto vtx1 = std::dynamic_pointer_cast<TModel_Vertex>(theVertices[Index_Of(v1)]);
+				auto vtx0 = theVertices[Index_Of(v0)];
+				auto vtx1 = theVertices[Index_Of(v1)];
 
 				Debug_Null_Pointer(vtx0);
 				Debug_Null_Pointer(vtx1);
@@ -267,8 +267,8 @@ namespace AutLib
 		static void MakePointsOnSolid
 		(
 			const Entity3d_Chain& Chain,
-			std::shared_ptr<TModel_EntityManager>& thePointsOnSolid,
-			std::vector<std::shared_ptr<TModel_Entity>>& thePts
+			std::shared_ptr<TModel_VertexManager>& thePointsOnSolid,
+			std::vector<std::shared_ptr<TModel_Vertex>>& thePts
 		)
 		{
 			const auto& Points = Chain.Points();
@@ -282,14 +282,14 @@ namespace AutLib
 				thePts.push_back(vertex);
 			}
 
-			auto block = std::make_shared<TModel_EntityBlock>("Default Block Point", thePts);
-			thePointsOnSolid = std::make_shared<TModel_EntityManager>("Default Block Point", block);
+			auto block = std::make_shared<Cad_BlockEntity<TModel_Vertex>>("Default Block Point", thePts);
+			thePointsOnSolid = std::make_shared<TModel_VertexManager>("Default Block Point", block);
 		}
 
 		static void MakePairedEdges
 		(
 			const std::vector<std::shared_ptr<TModel_Edge>>& theEdges,
-			std::shared_ptr<TModel_EntityManager>& thePairedEdges
+			std::shared_ptr<TModel_PairedManager>& thePairedEdges
 		)
 		{
 			Adt_AvlTree<std::shared_ptr<TModel_Edge>> tree;
@@ -301,7 +301,7 @@ namespace AutLib
 			tree.Root(edge);
 			tree.Remove(edge);
 
-			std::vector<std::shared_ptr<TModel_Entity>> QPaired;
+			std::vector<std::shared_ptr<TModel_Paired>> QPaired;
 			Standard_Integer k = 0;
 
 			while (NOT tree.IsEmpty())
@@ -326,8 +326,8 @@ namespace AutLib
 				tree.Remove(edge);
 			}
 
-			auto block = std::make_shared<TModel_EntityBlock>("Default Block Edge", QPaired);
-			thePairedEdges = std::make_shared<TModel_EntityManager>("Default Block Edge", block);
+			auto block = std::make_shared<Cad_BlockEntity<TModel_Paired>>("Default Block Edge", QPaired);
+			thePairedEdges = std::make_shared<TModel_PairedManager>("Default Block Edge", block);
 		}
 
 
@@ -374,30 +374,27 @@ namespace AutLib
 		static void MakeFaces
 		(
 			const std::vector<std::shared_ptr<TModel_Surface>>& theList,
-			std::shared_ptr<TModel_EntityManager>& theFaces
+			std::shared_ptr<TModel_SurfaceManager>& theFaces
 		)
 		{
-			std::vector<std::shared_ptr<TModel_Entity>> Faces(theList.size());
+			std::vector<std::shared_ptr<TModel_Surface>> Faces(theList.size());
 			forThose(Index, 0, theList.size() - 1)
 				Faces[Index] = theList[Index];
 
-			auto block = std::make_shared<TModel_EntityBlock>("Default Block Surface", Faces);
-			theFaces = std::make_shared<TModel_EntityManager>("Default Block Surface", block);
+			auto block = std::make_shared<Cad_BlockEntity<TModel_Surface>>("Default Block Surface", Faces);
+			theFaces = std::make_shared<TModel_SurfaceManager>("Default Block Surface", block);
 		}
 
 
-		static void LinkEdges(const std::shared_ptr<TModel_EntityManager>& theEdges)
+		static void LinkEdges(const std::shared_ptr<TModel_PairedManager>& theEdges)
 		{
 			Debug_Null_Pointer(theEdges);
 
-			std::vector<std::shared_ptr<TModel_Entity>> edges;
+			std::vector<std::shared_ptr<TModel_Paired>> edges;
 			theEdges->RetrieveTo(edges);
 
-			for (const auto& x : edges)
+			for (const auto& paired : edges)
 			{
-				Debug_Null_Pointer(x);
-
-				auto paired = std::dynamic_pointer_cast<TModel_Paired>(x);
 				Debug_Null_Pointer(paired);
 
 				auto edge0 = paired->Edge0();
@@ -469,7 +466,7 @@ AutLib::Cad3d_TModel::MakeSolid
 
 	const auto& merged = *merge.Merged();
 
-	std::vector<std::shared_ptr<TModel_Entity>> vertices;
+	std::vector<std::shared_ptr<TModel_Vertex>> vertices;
 	tModel::MakePointsOnSolid(merged, solid->theVertices_, vertices);
 
 	Debug_Null_Pointer(solid->theVertices_);

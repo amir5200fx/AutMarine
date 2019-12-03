@@ -58,15 +58,12 @@ AutLib::Cad3d_TModel::NbFreeSegment() const
 {
 	Debug_Null_Pointer(theEdges_);
 
-	std::vector<std::shared_ptr<TModel_Entity>> entities;
+	std::vector<std::shared_ptr<TModel_Paired>> entities;
 	theEdges_->RetrieveTo(entities);
 
 	Standard_Integer K = 0;
-	for (const auto& x : entities)
+	for (const auto& paired : entities)
 	{
-		Debug_Null_Pointer(x);
-		auto paired = std::dynamic_pointer_cast<TModel_Paired>(x);
-
 		Debug_Null_Pointer(paired);
 		if (NOT paired->IsPaired()) ++K;
 	}
@@ -78,14 +75,11 @@ AutLib::Cad3d_TModel::HasFreeSegment() const
 {
 	Debug_Null_Pointer(theEdges_);
 
-	std::vector<std::shared_ptr<TModel_Entity>> entities;
+	std::vector<std::shared_ptr<TModel_Paired>> entities;
 	theEdges_->RetrieveTo(entities);
 
-	for (const auto& x : entities)
+	for (const auto& paired : entities)
 	{
-		Debug_Null_Pointer(x);
-		auto paired = std::dynamic_pointer_cast<TModel_Paired>(x);
-
 		Debug_Null_Pointer(paired);
 		if (NOT paired->IsPaired()) return Standard_True;
 	}
@@ -97,16 +91,15 @@ void AutLib::Cad3d_TModel::RetrieveFacesTo
 	std::vector<std::shared_ptr<TModel_Surface>>& theSurfaces
 ) const
 {
-	std::vector<std::shared_ptr<TModel_Entity>> entities;
+	std::vector<std::shared_ptr<TModel_Surface>> entities;
 	theSurfaces_->RetrieveTo(entities);
 
 	theSurfaces.reserve(entities.size());
 	for (const auto& x : entities)
 	{
 		Debug_Null_Pointer(x);
-		auto surface = std::dynamic_pointer_cast<TModel_Surface>(x);
 
-		theSurfaces.push_back(std::move(surface));
+		theSurfaces.push_back(x);
 	}
 }
 
@@ -115,16 +108,14 @@ void AutLib::Cad3d_TModel::RetrieveSegmentsTo
 	std::vector<std::shared_ptr<TModel_Paired>>& theEdges
 ) const
 {
-	std::vector<std::shared_ptr<TModel_Entity>> entities;
+	std::vector<std::shared_ptr<TModel_Paired>> entities;
 	theEdges_->RetrieveTo(entities);
 
 	theEdges.reserve(entities.size());
 	for (const auto& x : entities)
 	{
 		Debug_Null_Pointer(x);
-		auto edge = std::dynamic_pointer_cast<TModel_Paired>(x);
-
-		theEdges.push_back(std::move(edge));
+		theEdges.push_back(x);
 	}
 }
 
@@ -133,16 +124,14 @@ void AutLib::Cad3d_TModel::RetrieveCornersTo
 	std::vector<std::shared_ptr<TModel_Vertex>>& thevertices
 ) const
 {
-	std::vector<std::shared_ptr<TModel_Entity>> entities;
+	std::vector<std::shared_ptr<TModel_Vertex>> entities;
 	theVertices_->RetrieveTo(entities);
 
 	thevertices.reserve(entities.size());
 	for (const auto& x : entities)
 	{
 		Debug_Null_Pointer(x);
-		auto vertex = std::dynamic_pointer_cast<TModel_Vertex>(x);
-
-		thevertices.push_back(std::move(vertex));
+		thevertices.push_back(x);
 	}
 }
 
@@ -201,7 +190,7 @@ void AutLib::Cad3d_TModel::SplitByShells
 		return;
 	}
 
-	std::vector<std::shared_ptr<TModel_EntityBlock>> blocks;
+	std::vector<std::shared_ptr<Cad_BlockEntity<TModel_Surface>>> blocks;
 	faces->RetrieveTo(blocks);
 
 	Debug_If_Condition_Message(blocks.size() NOT_EQUAL 1, "Conflict Data");
