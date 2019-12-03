@@ -2,6 +2,8 @@
 #ifndef _CadAnalys_Patch_Header
 #define _CadAnalys_Patch_Header
 
+#include <Standard_TypeDef.hxx>
+
 #include <memory>
 
 namespace AutLib

@@ -31,6 +31,9 @@
     <Filter Include="AutLib\CadRepair\AR\ParaPlane\System">
       <UniqueIdentifier>{da81c841-c1eb-4a2f-9102-04154cb1f355}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadRepair\Model">
+      <UniqueIdentifier>{dc72f6cc-1660-472e-86ce-03ad5a346635}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.hxx">

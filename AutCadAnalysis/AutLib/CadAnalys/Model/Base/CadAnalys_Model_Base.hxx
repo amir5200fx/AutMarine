@@ -13,6 +13,7 @@ namespace AutLib
 {
 
 	// Forward Declarations
+	template<class ModelType>
 	class CadAnalys_Model_Info;
 
 	template<class ModelType, class SizeFun, class SubEntity>
@@ -24,7 +25,7 @@ namespace AutLib
 
 		typedef std::map<Standard_Integer, std::shared_ptr<SubEntity>>
 			indexedEntityMap;
-		typedef CadAnalys_Model_Info info;
+		typedef CadAnalys_Model_Info<ModelType> info;
 
 		/*Private Data*/
 

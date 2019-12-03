@@ -9,7 +9,7 @@ namespace AutLib
 
 	template<class SurfType>
 	class CadAnalys_ImpPatch
-		: public CadAnalys_Patch<SurfType>
+		: public CadAnaly..s_Patch<SurfType>
 	{
 
 		/*Private Data*/

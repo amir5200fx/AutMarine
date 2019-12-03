@@ -19,20 +19,46 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AutLib\CadAnalys\Metric\CadAnalys_MetricPatch.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Metric\Info\CadAnalys_MetricPatch_Info.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Metric\System\CadAnalys_MetricPatch_System.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Model\CadAnalys_Model.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Shape\Edge\CadAnalys_Edge.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Shape\Face\CadAnalys_Face.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Shape\Wire\CadAnalys_Wire.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Shape\Wire\Info\CadAnalys_Wire_Info.cxx" />
     <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Approx\CadAnalys_ApprxSurfMetric.cxx" />
     <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Approx\Info\CadAnalys_ApprxSurfMetricInfo.cxx" />
     <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Coloring\CadAnalys_ColoringSurfMetric.cxx" />
     <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Coloring\CadAnalys_ColoringSurfMetricIO.cxx" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\CadAnalys\Metric\CadAnalys_MetricPatch.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Metric\CadAnalys_MetricPatchI.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Metric\Info\CadAnalys_MetricPatch_Info.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Metric\System\CadAnalys_MetricPatch_System.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Base\CadAnalys_Model_Base.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\CadAnalys_Model.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\CadAnalys_ModelI.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\CadAnalys_Patch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\CadAnalys_ImpPatch.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR\CadAnalys_BadARPatch.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR\CadAnalys_BadARPatchI.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\CadAnalys_DefectPatch.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Metric\CadAnalys_BadMetricPatch.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\CadAnalys_DefectPatch_Wire.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWire.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWire.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\CadAnalys_SingularPatch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common\CadAnalys_CommonPatch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep\CadAnalys_DeepPatch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Regular\CadAnalys_RegularPatch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Info\CadAnalys_Model_Info.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Shape\Edge\CadAnalys_Edge.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Shape\Face\CadAnalys_Face.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Shape\Surface\CadAnalys_Surface.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Shape\Wire\CadAnalys_Wire.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Shape\Wire\Info\CadAnalys_Wire_Info.hxx" />
     <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Approx\CadAnalys_ApprxSurfMetric.hxx" />
     <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Approx\Info\CadAnalys_ApprxSurfMetricInfo.hxx" />
     <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Coloring\CadAnalys_ColoringSurfMetric.hxx" />
@@ -100,7 +126,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Base;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Regular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Wire\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Wire;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Face;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Edge;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Base;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Intersect;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Metric;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Regular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Metric\System;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Metric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Metric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCadSingularity\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <PostBuildEvent>
@@ -138,7 +164,7 @@ for /r "$(MSBuildProjectDirectory)" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDi
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Base;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Regular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Wire\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Wire;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Face;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape\Edge;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Shape;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Base;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Intersect;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Metric;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Imperfection;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch\Regular;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model\Entities\Patch;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Model;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\SurfaceMetric\Approx;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Approximation\SurfaceMetric;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Metric\System;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Metric\Info;$(SolutionDir)AutCadAnalysis\AutLib\CadAnalys\Metric;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCadSingularity\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>

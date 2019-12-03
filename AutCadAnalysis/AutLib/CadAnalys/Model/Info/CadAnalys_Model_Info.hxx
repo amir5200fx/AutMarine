@@ -11,6 +11,7 @@
 namespace AutLib
 {
 
+	template<class ModelType>
 	class CadAnalys_Model_Info
 		: public Global_Verbose
 	{
