@@ -599,6 +599,15 @@
     <ClInclude Include="AutLib\Cad\Plane\System\Cad2d_Plane_System.hxx">
       <Filter>AutLib\Cad\Plane\System</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Vertex\TModel_VertexManager.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Surface\TModel_SurfaceManager.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Paired\TModel_PairedManager.hxx">
+      <Filter>AutLib\Cad\TModel\Entities\Paired</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />

@@ -126,10 +126,13 @@
     <ClInclude Include="AutLib\Cad\TModel\Entities\Entity\TModel_EntityManager.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Orientation\TModel_FaceOrientation.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Paired\TModel_Paired.hxx" />
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Paired\TModel_PairedManager.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Plane\TModel_Plane.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Shell\TModel_Shell.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Surface\TModel_Surface.hxx" />
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Surface\TModel_SurfaceManager.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Vertex\TModel_Vertex.hxx" />
+    <ClInclude Include="AutLib\Cad\TModel\Entities\Vertex\TModel_VertexManager.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Wire\par\TModel_parWire.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\Entities\Wire\TModel_Wire.hxx" />
     <ClInclude Include="AutLib\Cad\TModel\System\TModel_FixWireInfo.hxx" />
