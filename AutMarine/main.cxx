@@ -11,6 +11,7 @@
 #include <Leg_Vessel_Nihad2.hxx>
 #include <Leg_Model_PropNo1.hxx>
 #include <Leg_Prop_BladeFace.hxx>
+#include <Leg_Model_DuctNo1.hxx>
 #include <Cad_Tools.hxx>
 #include <Cad3d_TModel.hxx>
 #include <TModel_Surface.hxx>
@@ -110,11 +111,15 @@ int main()
 	{
 		Global_Timer timer;
 
-		Leg_Model_PropNo1 prop;
-		prop.Perform();
+		Leg_Model_DuctNo1 duct;
+		duct.Perform();
+		PAUSE;
+		const auto& myShape = duct.Entity();
 
-		const auto& myShape = prop.Entity();
+		Cad_Tools::ExportToIGES("mm", myShape, "duct.iges");
 
+		gl_fast_discrete_parameters->Angle = 1.0;
+		gl_fast_discrete_parameters->Deflection = 0.1;
 		FastDiscrete::Triangulation(myShape, *gl_fast_discrete_parameters);
 
 		auto myTris = Cad_Tools::RetrieveTriangulation(myShape);
