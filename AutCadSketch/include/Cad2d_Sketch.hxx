@@ -5,6 +5,8 @@
 #include <Cad_Sketch.hxx>
 #include <Cad2d_SketchEngine.hxx>
 
+#include <memory>
+
 namespace AutLib
 {
 
@@ -13,6 +15,10 @@ namespace AutLib
 	class Pln_Edge;
 	class Pln_Wire;
 	class Cad2d_Plane;
+
+	class Geo2d_Circle;
+	class Geo2d_LineSegment;
+	class Geo2d_Ellipse;
 
 
 	class Cad2d_Sketch
@@ -29,7 +35,11 @@ namespace AutLib
 
 	public:
 
+		void CreateSegment(const std::shared_ptr<Geo2d_LineSegment>& theSegment);
 
+		void CreateCircle(const std::shared_ptr<Geo2d_Circle>& theCircle);
+
+		void CreateEllipse(const std::shared_ptr<Geo2d_Ellipse>& theEllipse);
 	};
 }
 

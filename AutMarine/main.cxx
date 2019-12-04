@@ -105,6 +105,8 @@ int main()
 	Geo_CurveIntegrand<Geom2d_Circle> integrand(circle);
 	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);*/
 
+	
+
 	fileName name("preview.plt");
 	OFstream myFile(name);
 
