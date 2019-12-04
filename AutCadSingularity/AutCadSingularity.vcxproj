@@ -108,6 +108,12 @@
       <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadSingularity\Zone\Line\TwoSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Dangle;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Line;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\PartialSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Pole;$(ProjectDir)AutLib\CadSingularity\Zone;$(ProjectDir)AutLib\CadSingularity\Horizon;$(ProjectDir)AutLib\CadSingularity\Detection\Info;$(ProjectDir)AutLib\CadSingularity\Detection\Base;$(ProjectDir)AutLib\CadSingularity\Detection;$(ProjectDir)AutLib\CadSingularity\Type;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+if not exist "$(ProjectDir)include" mkdir "$(ProjectDir)include"
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

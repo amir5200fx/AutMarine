@@ -106,6 +106,12 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAnalysis\Model\Info;$(ProjectDir)AutLib\MeshAnalysis\Model\Base;$(ProjectDir)AutLib\MeshAnalysis\Model\Traits;$(ProjectDir)AutLib\MeshAnalysis\Model;$(ProjectDir)AutLib\MeshAnalysis\Traits;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshSingularity\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCadRepair\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+if not exist "$(ProjectDir)include" mkdir "$(ProjectDir)include"
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>

@@ -56,6 +56,12 @@
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+if not exist "$(ProjectDir)include" mkdir "$(ProjectDir)include"
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
