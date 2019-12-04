@@ -4,6 +4,7 @@
 
 #include <Global_Done.hxx>
 #include <CadAnalys_Model_Base.hxx>
+#include <CadAnalys_Patch.hxx>
 
 namespace AutLib
 {
@@ -14,7 +15,7 @@ namespace AutLib
 
 	template<class ModelType, class SizeFun>
 	class CadAnalys_Model
-		: public CadAnalys_Model_Base<ModelType, SizeFun, typename ModelType::surfType>
+		: public CadAnalys_Model_Base<ModelType, SizeFun, CadAnalys_Patch<typename ModelType::surfType>>
 	{
 
 		typedef typename ModelType::surfType surfType;

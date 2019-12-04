@@ -16,7 +16,7 @@ namespace AutLib
 
 	protected:
 
-		CadAnalys_DefectPatch(const SurfType& theSurface)
+		CadAnalys_DefectPatch(const std::shared_ptr<SurfType>& theSurface)
 			: CadAnalys_ImpPatch<SurfType>(theSurface)
 		{}
 

@@ -19,7 +19,7 @@ namespace AutLib
 		typedef CadAnalys_DefectPatch<SurfType>
 			base;
 
-		CadAnalys_BadARPatch(const SurfType& theSurface)
+		CadAnalys_BadARPatch(const std::shared_ptr<SurfType>& theSurface)
 			: CadAnalys_DefectPatch<SurfType>(theSurface)
 		{}
 

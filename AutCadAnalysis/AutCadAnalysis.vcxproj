@@ -23,6 +23,8 @@
     <ClCompile Include="AutLib\CadAnalys\Metric\Info\CadAnalys_MetricPatch_Info.cxx" />
     <ClCompile Include="AutLib\CadAnalys\Metric\System\CadAnalys_MetricPatch_System.cxx" />
     <ClCompile Include="AutLib\CadAnalys\Model\CadAnalys_Model.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWire.cxx" />
+    <ClCompile Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWire.cxx" />
     <ClCompile Include="AutLib\CadAnalys\Shape\Edge\CadAnalys_Edge.cxx" />
     <ClCompile Include="AutLib\CadAnalys\Shape\Face\CadAnalys_Face.cxx" />
     <ClCompile Include="AutLib\CadAnalys\Shape\Wire\CadAnalys_Wire.cxx" />
@@ -48,7 +50,9 @@
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Metric\CadAnalys_BadMetricPatch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\CadAnalys_DefectPatch_Wire.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWire.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWireI.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWire.hxx" />
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWireI.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\CadAnalys_SingularPatch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common\CadAnalys_CommonPatch.hxx" />
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep\CadAnalys_DeepPatch.hxx" />

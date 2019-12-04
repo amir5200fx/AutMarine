@@ -9,14 +9,14 @@ namespace AutLib
 
 	template<class SurfType>
 	class CadAnalys_ImpPatch
-		: public CadAnaly..s_Patch<SurfType>
+		: public CadAnalys_Patch<SurfType>
 	{
 
 		/*Private Data*/
 
 	protected:
 
-		CadAnalys_ImpPatch(const SurfType& theSurface)
+		CadAnalys_ImpPatch(const std::shared_ptr<SurfType>& theSurface)
 			: CadAnalys_Patch<SurfType>(theSurface)
 		{}
 

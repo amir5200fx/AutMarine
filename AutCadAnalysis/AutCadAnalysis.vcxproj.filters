@@ -138,6 +138,12 @@
     <ClCompile Include="AutLib\CadAnalys\Metric\CadAnalys_MetricPatch.cxx">
       <Filter>AutLib\CadAnalys\Metric</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWire.cxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWire.cxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadAnalys\SurfaceMetric\Approx\Info\CadAnalys_ApprxSurfMetricInfo.hxx">
@@ -226,6 +232,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR\CadAnalys_BadARPatchI.hxx">
       <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWireI.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWireI.hxx">
+      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

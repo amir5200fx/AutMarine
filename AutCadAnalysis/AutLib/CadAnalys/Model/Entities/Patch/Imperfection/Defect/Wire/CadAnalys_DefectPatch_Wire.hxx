@@ -16,7 +16,7 @@ namespace AutLib
 
 	protected:
 
-		CadAnalys_DefectPatch_Wire(const SurfType& theSurface)
+		CadAnalys_DefectPatch_Wire(const std::shared_ptr<SurfType>& theSurface)
 			: CadAnalys_DefectPatch<SurfType>(theSurface)
 		{}
 

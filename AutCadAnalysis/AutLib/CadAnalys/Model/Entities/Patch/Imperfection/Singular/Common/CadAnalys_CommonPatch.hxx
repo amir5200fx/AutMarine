@@ -18,7 +18,7 @@ namespace AutLib
 
 		typedef CadAnalys_SingularPatch<SurfType> base;
 
-		CadAnalys_CommonPatch(const SurfType& theSurface)
+		CadAnalys_CommonPatch(const std::shared_ptr<SurfType>& theSurface)
 			: CadAnalys_SingularPatch<SurfType>(theSurface)
 		{}
 

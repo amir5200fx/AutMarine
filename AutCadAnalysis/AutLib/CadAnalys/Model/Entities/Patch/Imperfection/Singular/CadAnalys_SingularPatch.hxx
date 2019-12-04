@@ -16,7 +16,7 @@ namespace AutLib
 
 	protected:
 
-		CadAnalys_SingularPatch(const SurfType& theSurface)
+		CadAnalys_SingularPatch(const std::shared_ptr<SurfType>& theSurface)
 			: CadAnalys_ImpPatch<SurfType>(theSurface)
 		{}
 
