@@ -3,11 +3,17 @@
 #include <CadAnalys_DefectPatch_OpenWire.hxx>
 #include <CadAnalys_DefectPatch_OrderWire.hxx>
 
+
+#include <CadSingularity_Horizon.hxx>
+#include <CadSingularity_Detection.hxx>
 #include <CadRepair_DefectPatch_AR.hxx>
 #include <CadRepair_DefectPatch_OrderWire.hxx>
 #include <CadRepair_DefectPatch_OpenWire.hxx>
 #include <CadRepair_DefectPatch_IntersectWire.hxx>
 #include <CadRepair_DefectPatch_Metric.hxx>
+#include <CadRepair_SingularPatch_Common.hxx>
+#include <CadRepair_SingularPatch_Deep.hxx>
+#include <CadRepair_RegularPatch.hxx>
 #include <CadRepair_ApproxSurfMetric.hxx>
 #include <CadRepair_ColoringSurfMetric.hxx>
 #include <CadRepair_NormalizeMetric.hxx>
@@ -29,6 +35,7 @@ namespace AutLib
 
 		const auto& model = *base::Model();
 		const auto& surfaces = model.Surfaces();
+		const auto& sizeMap = base::SizeFunction();
 
 		const auto verbose = base::Info()->Verbose();
 		for (const auto& x : surfaces)
@@ -197,7 +204,169 @@ namespace AutLib
 
 				continue;
 			}
+
+			if (verbose)
+			{
+				GET_MESSAGE << "  Proceeding to detect the horizons of singularities...";
+				SEND_INFO;
+			}
+
+			auto horizons =
+				std::make_shared<CadSingularity_Horizon>(x->Index(), approx);
+
+			horizons->Perform();
+			Debug_If_Condition_Message
+			(
+				NOT horizons->IsDone(),
+				"the Mesh_SingularHorizon has not been performed!");
+
+			if (verbose)
+			{
+				GET_MESSAGE << "  detecting of horizons has been completed!";
+				SEND_INFO;
+				GET_MESSAGE << "  - Has been any horizons detected? " << (horizons->HasHorizon() ? "YES" : "NO");
+				SEND_INFO;
+
+				if (horizons->HasHorizon())
+				{
+					GET_MESSAGE << "  - Nb. of horizons: " << horizons->NbHorizons();
+					SEND_INFO;
+				}
+			}
+
+			if (NOT horizons->HasHorizon())
+			{
+
+				if (verbose)
+				{
+					GET_MESSAGE << "  ****registering the surface as a perfection one!****";
+					SEND_INFO;
+
+					GET_MESSAGE << "  continue...";
+					SEND_INFO;
+				}
+
+				base::ChangeRegulars().insert
+				(
+					std::make_pair
+					(
+						x->Index(),
+						std::make_shared
+						<
+						CadRepair_RegularPatch<surfType>>(x->Index(), x)));
+
+				continue;
+			}
+			else if (horizons->HasHorizon())
+			{
+				if (verbose)
+				{
+					GET_MESSAGE << "  Coloring algorithm has been called!";
+					SEND_INFO;
+				}
+
+				auto colors =
+					std::make_shared<CadRepair_ColoringSurfMetric>(approx);
+
+				colors->Perform();
+				Debug_If_Condition_Message(NOT colors->IsDone(), "the color algorithm has not been performed");
+
+				if (verbose)
+				{
+					GET_MESSAGE << "  Coloring the regions has been finished";
+					SEND_INFO;
+
+					GET_MESSAGE << "  Proceeding to detect the type of singularities...";
+					SEND_INFO;
+				}
+
+				Debug_Null_Pointer(base::Info()->GlobalSingularDetectInfo());
+
+				auto typeDetecInfo = base::Info()->GlobalSingularDetectInfo();
+				if (base::Info()->OverrideGlobalSingDetectInfo())
+				{
+					const auto& typeMap = base::Info()->SinglDetectInfo();
+					auto iter = typeMap.find(x->Index());
+
+					if (iter IS_EQUAL typeMap.end())
+					{
+						typeDetecInfo = iter->second;
+					}
+				}
+
+				if (verbose)
+				{
+					GET_MESSAGE << "  - Overriding settings? " << (Info()->OverrideSingDetectInfo() ? "YES" : "NO");
+					SEND_INFO;
+
+					GET_MESSAGE << "  - Nb. of iterations: " << typeDetecInfo->NbIters();
+					SEND_INFO;
+
+					GET_MESSAGE << "  - Omega: " << typeDetecInfo->Omega();
+					SEND_INFO;
+				}
+
+				auto detection=std::make_shared<CadSingularity_Detection<surfType>>
+					(
+						horizons, colors,
+						sizeMap, typeDetecInfo);
+
+				detection->Perform();
+				Debug_If_Condition_Message(NOT detection->IsDone(), "the type detection algorithm has not been performed");
+
+				if (verbose)
+				{
+					GET_MESSAGE << "  type detection has been performed successfully! ";
+					SEND_INFO;
+				}
+
+				if (CheckRegulars(*detection))
+				{
+					base::ChangeDeepSingulars().insert
+					(
+						std::make_pair
+						(
+							x->Index(),
+							std::make_shared
+							<
+							CadRepair_SingularPatch_Deep<surfType>>(x->Index(), x, detection)));
+
+					continue;
+				}
+				else
+				{
+					base::ChangeCommonSingulars().insert
+					(
+						std::make_pair
+						(
+							x->Index(),
+							std::make_shared
+							<
+							CadRepair_SingularPatch_Deep<surfType>>(x->Index(), x, detection)));
+
+					continue;
+				}
+			}
 		}
 
+		if (verbose)
+		{
+			GET_MESSAGE << " total nb. of surfaces = " << base::Model()->NbSurfaces();
+			SEND_INFO;
+
+			GET_MESSAGE << "  - nb. of regular surfaces = " << base::NbRegulars();
+			SEND_INFO;
+
+			GET_MESSAGE << "  - nb. of singularities = " << base::NbDeepSingularities();
+			SEND_INFO;
+
+			GET_MESSAGE << "  - nb. of common singularities = " << base::NbRegularSingularities();
+			SEND_INFO;
+
+			GET_MESSAGE << "  - nb. of defect surfaces = " << base::NbDefects();
+			SEND_INFO;
+		}
+
+		Change_IsDone() = Standard_True;
 	}
 }

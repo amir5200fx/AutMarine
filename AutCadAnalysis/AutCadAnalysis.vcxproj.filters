@@ -100,6 +100,12 @@
     <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open">
       <UniqueIdentifier>{354e94fa-3a0e-48b9-8ca6-d2471ff12e71}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\G">
+      <UniqueIdentifier>{4f506394-7f76-4325-a60b-ad0980fb36fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\T">
+      <UniqueIdentifier>{373558c2-254d-4d8a-b15c-4d568e174d78}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\CadAnalys\SurfaceMetric\Approx\Info\CadAnalys_ApprxSurfMetricInfo.cxx">

@@ -11,12 +11,17 @@
 namespace AutLib
 {
 
+	// Forward Declarations
+	class CadRepair_ApproxSurfMetric_Info;
+
 	template<class ModelType>
 	class CadAnalys_Model_Info
 		: public Global_Verbose
 	{
 
 		/*Private Data*/
+
+
 	};
 }
 

@@ -177,6 +177,12 @@
     <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Coloring\CadRepair_ColoringSurfMetric.hxx">
       <Filter>AutLib\CadRepair\SurfaceMetric\Coloring</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Deep\CadRepair_SingularPatch_Deep.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Singular\Deep</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Common\CadRepair_SingularPatch_Common.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Singular\Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.cxx">

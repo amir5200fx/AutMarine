@@ -7,12 +7,17 @@
 namespace AutLib
 {
 
+	// Forward Declarations
+	class CadRepair_ApproxSurfMetric;
+
 	template<class SurfType>
 	class CadRepair_DefectPatch_Metric
 		: public CadRepair_DefectPatch<SurfType>
 	{
 
 		/*Private Data*/
+
+		std::shared_ptr<CadRepair_ApproxSurfMetric> theApprox_;
 
 	public:
 
@@ -22,10 +27,18 @@ namespace AutLib
 		CadRepair_DefectPatch_Metric
 		(
 			const Standard_Integer theIndex,
-			const std::shared_ptr<SurfType>& theSurface
+			const std::shared_ptr<SurfType>& theSurface,
+			const std::shared_ptr<CadRepair_ApproxSurfMetric>& theApprox
 		)
 			: CadRepair_DefectPatch<SurfType>(theIndex, theSurface)
+			, theApprox_(theApprox)
 		{}
+
+
+		const std::shared_ptr<CadRepair_ApproxSurfMetric>& MetricApprox() const
+		{
+			return theApprox_;
+		}
 	};
 }
 

@@ -13,6 +13,9 @@ namespace AutLib
 	template<class ModelType>
 	class CadAnalys_Model_Info;
 
+	template<class SurfPln>
+	class CadSingularity_Detection;
+
 	template<class ModelType, class SizeFun>
 	class CadAnalys_Model
 		: public CadAnalys_Model_Base<ModelType, SizeFun, CadAnalys_Patch<typename ModelType::surfType>>
@@ -28,6 +31,15 @@ namespace AutLib
 			base;
 
 		/*Private Data*/
+
+		//- static functions and operators
+
+		template<class SurfPln>
+		static Standard_Boolean CheckRegulars
+		(
+			const CadSingularity_Detection<SurfPln>& detection
+		);
+
 
 	public:
 
