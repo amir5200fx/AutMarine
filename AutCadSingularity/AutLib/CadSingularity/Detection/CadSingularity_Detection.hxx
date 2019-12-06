@@ -7,6 +7,7 @@
 #include <CadSingularity_Detection_Base.hxx>
 #include <Cad_SingularZone.hxx>
 #include <GeoMesh2d_Data.hxx>
+#include <Geo2d_SizeFunction.hxx>
 
 #include <vector>
 #include <memory>
@@ -17,20 +18,19 @@ namespace AutLib
 	// Forward Declarations
 	class CadSingularity_Horizon;
 	class CadAnalys_ColoringSurfMetric;
-	class Geo2d_SizeFunction;
 
 	template<class SurfPln>
 	class CadSingularity_Detection
-		: public CadSingularity_Detection_Base<typename SurfPln::plnCurveType>
+		: public CadSingularity_Detection_Base<typename SurfPln::parCurveType>
 		, public Global_Done
 	{
 
 		typedef CadSingularity_Detection_Info info;
-		typedef CadSingularity_Detection_Base<typename SurfPln::plnCurveType> base;
+		typedef CadSingularity_Detection_Base<typename SurfPln::parCurveType> base;
 		typedef Cad_SingularZone<SurfPln> singularZone;
 		typedef std::vector<std::shared_ptr<singularZone>> zoneList;
 		typedef Geo2d_SizeFunction sizeFun;
-		typedef typename SurfPln::plnCurveType plnCurve;
+		typedef typename SurfPln::parCurveType plnCurve;
 
 		/*Private Data*/
 

@@ -24,7 +24,7 @@ namespace AutLib
 			const Standard_Integer theIndex, 
 			const std::shared_ptr<SurfType>& theSurface
 		)
-			: base(theIndex, theSurface_)
+			: base(theIndex, theSurface)
 		{}
 	};
 }

@@ -17,7 +17,7 @@ namespace AutLib
 		: public Global_Indexed
 	{
 
-		typedef typename SurfPln::plnCurve plnCurve;
+		typedef typename SurfPln::parCurveType plnCurve;
 
 		/*Private Data*/
 

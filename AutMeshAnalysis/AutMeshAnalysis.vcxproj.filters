@@ -26,38 +26,4 @@
       <UniqueIdentifier>{bf43825b-97f2-467c-ab34-c78a8b1577fe}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.hxx">
-      <Filter>AutLib\MeshAnalysis\Boundary</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.hxx">
-      <Filter>AutLib\MeshAnalysis\Model</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.hxx">
-      <Filter>AutLib\MeshAnalysis\Model\Info</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAnalysis\Traits\MeshAnalysis_Traits.hxx">
-      <Filter>AutLib\MeshAnalysis\Traits</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_ModelI.hxx">
-      <Filter>AutLib\MeshAnalysis\Model</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAnalysis\Model\Base\MeshAnalysis_Model_Base.hxx">
-      <Filter>AutLib\MeshAnalysis\Model\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAnalysis\Model\Traits\MeshAnalysis_Model_Traits.hxx">
-      <Filter>AutLib\MeshAnalysis\Model\Traits</Filter>
-    </ClInclude>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.cxx">
-      <Filter>AutLib\MeshAnalysis\Boundary</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.cxx">
-      <Filter>AutLib\MeshAnalysis\Model\Info</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.cxx">
-      <Filter>AutLib\MeshAnalysis\Model</Filter>
-    </ClCompile>
-  </ItemGroup>
 </Project>

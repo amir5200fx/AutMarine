@@ -39,7 +39,7 @@ namespace AutLib
 		typedef CadRepair_Patch<SurfType>
 			base;
 
-		virtual void Repair() = 0;
+		//virtual void Repair() = 0;
 	};
 }
 

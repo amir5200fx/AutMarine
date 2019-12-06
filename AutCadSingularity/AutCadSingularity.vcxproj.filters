@@ -58,6 +58,18 @@
     <Filter Include="AutLib\CadSingularity\Detection\Base">
       <UniqueIdentifier>{569a1687-a07e-4cab-bc07-ce6c162644bd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadSingularity\Curve">
+      <UniqueIdentifier>{f2c62216-0172-4d7f-a437-5a9365930844}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadSingularity\Curve\Pole">
+      <UniqueIdentifier>{efa376b9-b4ab-4b08-9525-cea93ee02e6e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadSingularity\Curve\Line">
+      <UniqueIdentifier>{6b2b2d41-462c-4fd6-acc6-8b9fa0f1184b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadSingularity\Detection\System">
+      <UniqueIdentifier>{693e9bd8-f5a6-4062-96ee-0beb13aa22cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadSingularity\Horizon\CadSingularity_Horizon.hxx">
@@ -117,6 +129,18 @@
     <ClInclude Include="AutLib\CadSingularity\Detection\CadSingularity_DetectionI.hxx">
       <Filter>AutLib\CadSingularity\Detection</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Curve\CadSingularity_Curve.hxx">
+      <Filter>AutLib\CadSingularity\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Curve\Pole\CadSingularity_PoleCurve.hxx">
+      <Filter>AutLib\CadSingularity\Curve\Pole</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Curve\Line\CadSingularity_LineCurve.hxx">
+      <Filter>AutLib\CadSingularity\Curve\Line</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Detection\System\CadSingularity_Detection_System.hxx">
+      <Filter>AutLib\CadSingularity\Detection\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\CadSingularity\Horizon\CadSingularity_Horizon.cxx">
@@ -154,6 +178,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\CadSingularity\Detection\CadSingularity_Detection.cxx">
       <Filter>AutLib\CadSingularity\Detection</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadSingularity\Detection\System\CadSingularity_Detection_System.cxx">
+      <Filter>AutLib\CadSingularity\Detection\System</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -83,7 +83,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadSingularity\Zone\Line\TwoSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Dangle;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Line;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\PartialSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Pole;$(ProjectDir)AutLib\CadSingularity\Zone;$(ProjectDir)AutLib\CadSingularity\Horizon;$(ProjectDir)AutLib\CadSingularity\Detection\Info;$(ProjectDir)AutLib\CadSingularity\Detection\Base;$(ProjectDir)AutLib\CadSingularity\Detection;$(ProjectDir)AutLib\CadSingularity\Type;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadSingularity\Zone\Line\TwoSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Dangle;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Line;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\PartialSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Pole;$(ProjectDir)AutLib\CadSingularity\Zone;$(ProjectDir)AutLib\CadSingularity\Horizon;$(ProjectDir)AutLib\CadSingularity\Detection\Info;$(ProjectDir)AutLib\CadSingularity\Detection\Base;$(ProjectDir)AutLib\CadSingularity\Detection\System;$(ProjectDir)AutLib\CadSingularity\Detection;$(ProjectDir)AutLib\CadSingularity\Curve\Line;$(ProjectDir)AutLib\CadSingularity\Curve\Pole;$(ProjectDir)AutLib\CadSingularity\Curve;$(ProjectDir)AutLib\CadSingularity\Type;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -105,7 +105,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadSingularity\Zone\Line\TwoSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Dangle;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Line;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\PartialSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Pole;$(ProjectDir)AutLib\CadSingularity\Zone;$(ProjectDir)AutLib\CadSingularity\Horizon;$(ProjectDir)AutLib\CadSingularity\Detection\Info;$(ProjectDir)AutLib\CadSingularity\Detection\Base;$(ProjectDir)AutLib\CadSingularity\Detection;$(ProjectDir)AutLib\CadSingularity\Type;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadSingularity\Zone\Line\TwoSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Dangle;$(ProjectDir)AutLib\CadSingularity\Zone\Line\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Line;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\PartialSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\WholeSide;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Loop;$(ProjectDir)AutLib\CadSingularity\Zone\Pole\Corner;$(ProjectDir)AutLib\CadSingularity\Zone\Pole;$(ProjectDir)AutLib\CadSingularity\Zone;$(ProjectDir)AutLib\CadSingularity\Horizon;$(ProjectDir)AutLib\CadSingularity\Detection\Info;$(ProjectDir)AutLib\CadSingularity\Detection\Base;$(ProjectDir)AutLib\CadSingularity\Detection\System;$(ProjectDir)AutLib\CadSingularity\Detection;$(ProjectDir)AutLib\CadSingularity\Curve\Line;$(ProjectDir)AutLib\CadSingularity\Curve\Pole;$(ProjectDir)AutLib\CadSingularity\Curve;$(ProjectDir)AutLib\CadSingularity\Type;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCadModel\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <PostBuildEvent>
@@ -130,11 +130,15 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\CadSingularity\Curve\CadSingularity_Curve.hxx" />
+    <ClInclude Include="AutLib\CadSingularity\Curve\Line\CadSingularity_LineCurve.hxx" />
+    <ClInclude Include="AutLib\CadSingularity\Curve\Pole\CadSingularity_PoleCurve.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Detection\Base\CadSingularity_Detection_Base.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Detection\Base\CadSingularity_Detection_BaseI.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Detection\CadSingularity_Detection.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Detection\CadSingularity_DetectionI.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Detection\Info\CadSingularity_Detection_Info.hxx" />
+    <ClInclude Include="AutLib\CadSingularity\Detection\System\CadSingularity_Detection_System.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Horizon\CadSingularity_Horizon.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Type\Cad_SingularType.hxx" />
     <ClInclude Include="AutLib\CadSingularity\Zone\Cad_SingularZone.hxx" />
@@ -153,6 +157,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
   <ItemGroup>
     <ClCompile Include="AutLib\CadSingularity\Detection\CadSingularity_Detection.cxx" />
     <ClCompile Include="AutLib\CadSingularity\Detection\Info\CadSingularity_Detection_Info.cxx" />
+    <ClCompile Include="AutLib\CadSingularity\Detection\System\CadSingularity_Detection_System.cxx" />
     <ClCompile Include="AutLib\CadSingularity\Horizon\CadSingularity_Horizon.cxx" />
     <ClCompile Include="AutLib\CadSingularity\Zone\Line\Corner\SingularZone_Line_Corner.cxx" />
     <ClCompile Include="AutLib\CadSingularity\Zone\Line\Dangle\SingularZone_Line_Dangle.cxx" />

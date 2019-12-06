@@ -18,7 +18,7 @@ namespace AutLib
 		, public SingularZone_Pole_PartialSide_Base
 	{
 
-		typedef typename SurfPln::plnCurve plnCurve;
+		typedef typename SurfPln::parCurveType plnCurve;
 
 		/*Private Data*/
 

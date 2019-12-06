@@ -127,20 +127,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.hxx" />
-    <ClInclude Include="AutLib\MeshAnalysis\Model\Base\MeshAnalysis_Model_Base.hxx" />
-    <ClInclude Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.hxx" />
-    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.hxx" />
-    <ClInclude Include="AutLib\MeshAnalysis\Model\MeshAnalysis_ModelI.hxx" />
-    <ClInclude Include="AutLib\MeshAnalysis\Model\Traits\MeshAnalysis_Model_Traits.hxx" />
-    <ClInclude Include="AutLib\MeshAnalysis\Traits\MeshAnalysis_Traits.hxx" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="AutLib\MeshAnalysis\Boundary\MeshAnalysis_Boundary.cxx" />
-    <ClCompile Include="AutLib\MeshAnalysis\Model\Info\MeshAnalysis_Model_Info.cxx" />
-    <ClCompile Include="AutLib\MeshAnalysis\Model\MeshAnalysis_Model.cxx" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

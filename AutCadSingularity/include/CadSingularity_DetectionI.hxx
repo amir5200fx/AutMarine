@@ -5,6 +5,8 @@
 #include <Cad2d_Plane_System.hxx>
 #include <CadPlnModel_Curve.hxx>
 #include <CadPlnModel_Segment.hxx>
+#include <CadSingularity_PoleCurve.hxx>
+#include <CadSingularity_LineCurve.hxx>
 #include <SingularZone_Pole_Loop.hxx>
 #include <SingularZone_Pole_Corner.hxx>
 #include <SingularZone_Pole_PartialSide.hxx>
@@ -64,7 +66,7 @@ namespace AutLib
 			const auto length =
 				Geo_Tools::CalcPolyLengthOnSurface(thePolygon, theSurface);
 
-			const auto elmSize = theSize->Value(P0);
+			const auto elmSize = theSize.Value(P0);
 
 			if (Info()->Verbose())
 			{
@@ -218,7 +220,7 @@ namespace AutLib
 				{
 					CadPlnModel_Segment LinSegMaker;
 					const auto pcurve = LinSegMaker(P0, P1);
-					auto curve = std::make_shared<SingularCurve_Pole<plnCurve, sizeFun, metricFun>>
+					auto curve = std::make_shared<CadSingularity_PoleCurve<plnCurve>>
 						(
 							Cad_Tools::ConvertToBSpline(pcurve->Curve(), pcurve->FirstParam(), pcurve->LastParam()),
 							pcurve->FirstParam(), pcurve->LastParam(),

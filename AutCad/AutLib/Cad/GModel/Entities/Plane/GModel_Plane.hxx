@@ -30,6 +30,8 @@ namespace AutLib
 
 	public:
 
+		typedef GModel_parWire parWireType;
+
 		GModel_Plane
 		(
 			const Standard_Integer theIndex,

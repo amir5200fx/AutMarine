@@ -50,6 +50,11 @@ namespace AutLib
 			toApply_ = apply;
 		}
 
+		void OverrideIntegInfo(const std::shared_ptr<intgInfo>& theInfo)
+		{
+			theIntgInfo_ = theInfo;
+		}
+
 		//- Macros
 		GLOBAL_ACCESS_PRIM_SINGLE(Standard_Real, MaxDet)
 			GLOBAL_ACCESS_PRIM_SINGLE(Standard_Integer, NbSegmentsU)

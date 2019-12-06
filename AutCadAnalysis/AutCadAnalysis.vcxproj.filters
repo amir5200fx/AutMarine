@@ -25,27 +25,6 @@
     <Filter Include="AutLib\CadAnalys\Model\Base">
       <UniqueIdentifier>{2470fe93-609d-440d-9ee5-a37a0ccbb10b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities">
-      <UniqueIdentifier>{01e2719d-84ce-45d9-83b2-f7d790716e8d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch">
-      <UniqueIdentifier>{03e22575-f26e-4965-a18d-8c5e0a28015a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection">
-      <UniqueIdentifier>{1ad7bf53-1557-415f-bba7-85323095bd0e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular">
-      <UniqueIdentifier>{0ad85045-35c5-44a5-a9c1-a73a6eea133e}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep">
-      <UniqueIdentifier>{4bbfd5aa-6f37-4699-9048-293616d358b3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common">
-      <UniqueIdentifier>{64e9ce94-3648-4d9f-b626-8db06db19d15}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Regular">
-      <UniqueIdentifier>{ba6320ba-056d-471c-9524-b662451f6b2b}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\CadAnalys\Model\Info">
       <UniqueIdentifier>{e990c112-94fd-42ae-b00a-b6e57683667a}</UniqueIdentifier>
     </Filter>
@@ -67,23 +46,8 @@
     <Filter Include="AutLib\CadAnalys\Shape\Wire\Info">
       <UniqueIdentifier>{fea5547f-14af-4922-802e-9c63e8f60582}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect">
-      <UniqueIdentifier>{fd7ca501-5a3b-41e9-9fdd-80442d155037}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Metric">
-      <UniqueIdentifier>{78e1391e-2dbe-4552-b279-b7a8d76cde5a}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR">
-      <UniqueIdentifier>{860fdc81-c55d-4027-b7aa-ee02146dde65}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire">
-      <UniqueIdentifier>{5a4387f1-7e46-4913-96f7-58f6d4eb745d}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\CadAnalys\Metric">
       <UniqueIdentifier>{4b255500-38ff-48e6-8188-4ed4f54b0fa5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\CadAnalys\AR">
-      <UniqueIdentifier>{0bce067b-c713-4a78-96c2-e45d6df53b62}</UniqueIdentifier>
     </Filter>
     <Filter Include="AutLib\CadAnalys\Metric\Info">
       <UniqueIdentifier>{f3433832-3504-446b-8aaa-76c72323d8af}</UniqueIdentifier>
@@ -91,20 +55,44 @@
     <Filter Include="AutLib\CadAnalys\Metric\System">
       <UniqueIdentifier>{eabf211b-ed01-4e0e-8f30-e6d5b8c1b3d7}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Intersect">
-      <UniqueIdentifier>{0b14e32a-32a3-444f-b086-eddd95f1fede}</UniqueIdentifier>
+    <Filter Include="AutLib\CadAnalys\Model\Traits">
+      <UniqueIdentifier>{9a0107df-0478-43c3-aaa2-ff211c35c01e}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order">
-      <UniqueIdentifier>{106cbf15-bfdd-44a4-8552-b4ff05555849}</UniqueIdentifier>
+    <Filter Include="AutLib\CadAnalys\Patch">
+      <UniqueIdentifier>{cb5042bd-8691-46fe-b882-a9b76e6338df}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open">
-      <UniqueIdentifier>{354e94fa-3a0e-48b9-8ca6-d2471ff12e71}</UniqueIdentifier>
+    <Filter Include="AutLib\CadAnalys\Patch\Geometry">
+      <UniqueIdentifier>{bb20c89a-f139-4d4b-876a-a9eac7aff01a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Patch\Geometry\AR">
+      <UniqueIdentifier>{e982f157-a87d-4e49-a5b2-e093410cf92f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Patch\Geometry\Metric">
+      <UniqueIdentifier>{1cbf3468-63d3-41fa-a4b5-1853964e40c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Patch\Topology">
+      <UniqueIdentifier>{d2b230bb-95ce-4ce0-8c30-73204529e65a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Patch\Topology\Wire">
+      <UniqueIdentifier>{4e937f74-f9aa-4a14-915e-9905b3fb18b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Patch\Singularity">
+      <UniqueIdentifier>{6241b65e-9693-49a7-b203-9fbc5e930463}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Patch\Singularity\Common">
+      <UniqueIdentifier>{f40d1a7e-6d74-459e-81e4-165f9f664a93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Patch\Singularity\Deep">
+      <UniqueIdentifier>{a6881d8e-9e36-4722-94aa-0c51dc5ffb5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadAnalys\Model\System">
+      <UniqueIdentifier>{66cce5da-a2b7-42ee-80d5-d9023d024d7f}</UniqueIdentifier>
     </Filter>
     <Filter Include="AutLib\CadAnalys\Model\G">
-      <UniqueIdentifier>{4f506394-7f76-4325-a60b-ad0980fb36fe}</UniqueIdentifier>
+      <UniqueIdentifier>{344210c4-78be-4ee0-bd60-e0bf403a9a03}</UniqueIdentifier>
     </Filter>
     <Filter Include="AutLib\CadAnalys\Model\T">
-      <UniqueIdentifier>{373558c2-254d-4d8a-b15c-4d568e174d78}</UniqueIdentifier>
+      <UniqueIdentifier>{d51a60c9-135f-4ad1-af6c-71c6790219be}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -144,11 +132,11 @@
     <ClCompile Include="AutLib\CadAnalys\Metric\CadAnalys_MetricPatch.cxx">
       <Filter>AutLib\CadAnalys\Metric</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWire.cxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open</Filter>
+    <ClCompile Include="AutLib\CadAnalys\Model\Info\CadAnalys_Model_Info.cxx">
+      <Filter>AutLib\CadAnalys\Model\Info</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWire.cxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order</Filter>
+    <ClCompile Include="AutLib\CadAnalys\Model\System\CadAnalys_Model_System.cxx">
+      <Filter>AutLib\CadAnalys\Model\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -163,24 +151,6 @@
     </ClInclude>
     <ClInclude Include="AutLib\CadAnalys\Model\Base\CadAnalys_Model_Base.hxx">
       <Filter>AutLib\CadAnalys\Model\Base</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\CadAnalys_Patch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Regular\CadAnalys_RegularPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Regular</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\CadAnalys_ImpPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\CadAnalys_SingularPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common\CadAnalys_CommonPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Common</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep\CadAnalys_DeepPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Singular\Deep</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\CadAnalys\Model\Info\CadAnalys_Model_Info.hxx">
       <Filter>AutLib\CadAnalys\Model\Info</Filter>
@@ -206,12 +176,6 @@
     <ClInclude Include="AutLib\CadAnalys\Model\CadAnalys_ModelI.hxx">
       <Filter>AutLib\CadAnalys\Model</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\CadAnalys_DefectPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Metric\CadAnalys_BadMetricPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Metric</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\CadAnalys\Metric\Info\CadAnalys_MetricPatch_Info.hxx">
       <Filter>AutLib\CadAnalys\Metric\Info</Filter>
     </ClInclude>
@@ -224,26 +188,23 @@
     <ClInclude Include="AutLib\CadAnalys\Metric\CadAnalys_MetricPatchI.hxx">
       <Filter>AutLib\CadAnalys\Metric</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR\CadAnalys_BadARPatch.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR</Filter>
+    <ClInclude Include="AutLib\CadAnalys\Model\Traits\CadAnalys_Model_Traits.hxx">
+      <Filter>AutLib\CadAnalys\Model\Traits</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\CadAnalys_DefectPatch_Wire.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire</Filter>
+    <ClInclude Include="AutLib\CadAnalys\Patch\CadAnalys_Patch.hxx">
+      <Filter>AutLib\CadAnalys\Patch</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWire.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order</Filter>
+    <ClInclude Include="AutLib\CadAnalys\Patch\Geometry\CadAnalys_GeometryPatch.hxx">
+      <Filter>AutLib\CadAnalys\Patch\Geometry</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWire.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open</Filter>
+    <ClInclude Include="AutLib\CadAnalys\Model\System\CadAnalys_Model_System.hxx">
+      <Filter>AutLib\CadAnalys\Model\System</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR\CadAnalys_BadARPatchI.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\AR</Filter>
+    <ClInclude Include="AutLib\CadAnalys\Model\G\CadAnalys_gModel.hxx">
+      <Filter>AutLib\CadAnalys\Model\G</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open\CadAnalys_DefectPatch_OpenWireI.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Open</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order\CadAnalys_DefectPatch_OrderWireI.hxx">
-      <Filter>AutLib\CadAnalys\Model\Entities\Patch\Imperfection\Defect\Wire\Order</Filter>
+    <ClInclude Include="AutLib\CadAnalys\Model\T\CadAnalys_tModel.hxx">
+      <Filter>AutLib\CadAnalys\Model\T</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

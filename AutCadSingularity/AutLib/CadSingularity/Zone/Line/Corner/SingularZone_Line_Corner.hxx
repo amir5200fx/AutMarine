@@ -18,7 +18,7 @@ namespace AutLib
 		, public SingularZone_Line_Corner_Base
 	{
 
-		typedef typename SurfPln::plnCurve plnCurve;
+		typedef typename SurfPln::parCurveType plnCurve;
 
 		/*private Data*/
 

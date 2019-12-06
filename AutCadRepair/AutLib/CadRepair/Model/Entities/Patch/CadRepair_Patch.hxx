@@ -12,7 +12,7 @@ namespace AutLib
 	template<class SurfType>
 	class CadRepair_Patch
 		: public Global_Indexed
-		, public std::enable_shared_from_this<CadRepair_Patch>
+		, public std::enable_shared_from_this<CadRepair_Patch<SurfType>>
 	{
 
 		/*Private Data*/
@@ -23,7 +23,7 @@ namespace AutLib
 
 		CadRepair_Patch
 		(
-			const Standard_Integer theIndex, 
+			const Standard_Integer theIndex,
 			const std::shared_ptr<SurfType>& theSurface
 		)
 			: Global_Indexed(theIndex)

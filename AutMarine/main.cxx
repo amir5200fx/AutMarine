@@ -11,6 +11,7 @@
 #include <Cad_Tools.hxx>
 #include <Cad3d_TModel.hxx>
 #include <Cad3d_GModel.hxx>
+#include <GModel_Surface.hxx>
 #include <TModel_Surface.hxx>
 #include <TModel_Tools.hxx>
 #include <FastDiscrete.hxx>
@@ -26,9 +27,10 @@
 #include <GModel_Curve.hxx>
 #include <GModel_Surface.hxx>
 #include <GeoSizeFun_Uniform.hxx>
+#include <CadSingularity_Detection.hxx>
+#include <CadAnalys_Model.hxx>
+#include <CadAnalys_Model_System.hxx>
 //#include <Mesh2d_AftMetricPrcsr.hxx>
-#include <MeshAnalysis_Model.hxx>
-#include <MeshAnalysis_Model_Traits.hxx>
 #include <Geo3d_SizeFunction.hxx>
 
 #include <AutMarine_Examples.hxx>
@@ -42,7 +44,13 @@ int main()
 
 	//example_reading_iges_creating_gmodel();
 
-	
+	std::vector<std::shared_ptr<GModel_Surface>> surfaces;
+	std::shared_ptr<Geo3d_SizeFunction> sizeFun;
+
+	CadSingularity_Detection<GModel_Surface> detect;
+
+	CadAnalys_Model<GModel_Surface, Geo3d_SizeFunction>
+		analys(surfaces, sizeFun, cadAnalysSys::gl_model_analysis_info);
 
 	return 0;
 
