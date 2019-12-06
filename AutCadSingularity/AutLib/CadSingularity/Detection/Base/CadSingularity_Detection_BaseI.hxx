@@ -23,33 +23,33 @@ namespace AutLib
 
 		if (s0 IS_EQUAL 1)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p0, p3));
-			curves.push_back(ParametricCurve_Pole<CurveType>(p3, p2));
-			curves.push_back(ParametricCurve_Line<CurveType>(p2, p1));
+			curves.push_back(ParametricCurve_Line(p0, p3));
+			curves.push_back(ParametricCurve_Pole(p3, p2));
+			curves.push_back(ParametricCurve_Line(p2, p1));
 
 			return std::move(curves);
 		}
 		else if (s0 IS_EQUAL 2)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p1, p0));
-			curves.push_back(ParametricCurve_Pole<CurveType>(p0, p3));
-			curves.push_back(ParametricCurve_Line<CurveType>(p3, p2));
+			curves.push_back(ParametricCurve_Line(p1, p0));
+			curves.push_back(ParametricCurve_Pole(p0, p3));
+			curves.push_back(ParametricCurve_Line(p3, p2));
 
 			return std::move(curves);
 		}
 		else if (s0 IS_EQUAL 3)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p2, p1));
-			curves.push_back(ParametricCurve_Pole<CurveType>(p1, p0));
-			curves.push_back(ParametricCurve_Line<CurveType>(p0, p3));
+			curves.push_back(ParametricCurve_Line(p2, p1));
+			curves.push_back(ParametricCurve_Pole(p1, p0));
+			curves.push_back(ParametricCurve_Line(p0, p3));
 
 			return std::move(curves);
 		}
 		else if (s0 IS_EQUAL 4)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p3, p2));
-			curves.push_back(ParametricCurve_Pole<CurveType>(p2, p1));
-			curves.push_back(ParametricCurve_Line<CurveType>(p1, p0));
+			curves.push_back(ParametricCurve_Line(p3, p2));
+			curves.push_back(ParametricCurve_Pole(p2, p1));
+			curves.push_back(ParametricCurve_Line(p1, p0));
 
 			return std::move(curves);
 		}
@@ -90,13 +90,13 @@ namespace AutLib
 
 			if (d0 <= tol)
 			{
-				curves.push_back(ParametricCurve_Pole<CurveType>(p3, p2));
-				curves.push_back(ParametricCurve_Line<CurveType>(p0, p3));
+				curves.push_back(ParametricCurve_Pole(p3, p2));
+				curves.push_back(ParametricCurve_Line(p0, p3));
 			}
 			else
 			{
-				curves.push_back(ParametricCurve_Line<CurveType>(p3, p2));
-				curves.push_back(ParametricCurve_Pole<CurveType>(p0, p3));
+				curves.push_back(ParametricCurve_Line(p3, p2));
+				curves.push_back(ParametricCurve_Pole(p0, p3));
 			}
 
 			return std::move(curves);
@@ -114,13 +114,13 @@ namespace AutLib
 
 			if (d0 <= tol)
 			{
-				curves.push_back(ParametricCurve_Pole<CurveType>(p1, p0));
-				curves.push_back(ParametricCurve_Line<CurveType>(p0, p3));
+				curves.push_back(ParametricCurve_Pole(p1, p0));
+				curves.push_back(ParametricCurve_Line(p0, p3));
 			}
 			else
 			{
-				curves.push_back(ParametricCurve_Line<CurveType>(p1, p0));
-				curves.push_back(ParametricCurve_Pole<CurveType>(p0, p3));
+				curves.push_back(ParametricCurve_Line(p1, p0));
+				curves.push_back(ParametricCurve_Pole(p0, p3));
 			}
 
 			return std::move(curves);
@@ -138,13 +138,13 @@ namespace AutLib
 
 			if (d0 <= tol)
 			{
-				curves.push_back(ParametricCurve_Pole<CurveType>(p2, p1));
-				curves.push_back(ParametricCurve_Line<CurveType>(p1, p0));
+				curves.push_back(ParametricCurve_Pole(p2, p1));
+				curves.push_back(ParametricCurve_Line(p1, p0));
 			}
 			else
 			{
-				curves.push_back(ParametricCurve_Line<CurveType>(p2, p1));
-				curves.push_back(ParametricCurve_Pole<CurveType>(p1, p0));
+				curves.push_back(ParametricCurve_Line(p2, p1));
+				curves.push_back(ParametricCurve_Pole(p1, p0));
 			}
 
 			return std::move(curves);
@@ -162,13 +162,13 @@ namespace AutLib
 
 			if (d0 <= tol)
 			{
-				curves.push_back(ParametricCurve_Pole<CurveType>(p3, p2));
-				curves.push_back(ParametricCurve_Line<CurveType>(p2, p1));
+				curves.push_back(ParametricCurve_Pole(p3, p2));
+				curves.push_back(ParametricCurve_Line(p2, p1));
 			}
 			else
 			{
-				curves.push_back(ParametricCurve_Line<CurveType>(p3, p2));
-				curves.push_back(ParametricCurve_Pole<CurveType>(p2, p1));
+				curves.push_back(ParametricCurve_Line(p3, p2));
+				curves.push_back(ParametricCurve_Pole(p2, p1));
 			}
 
 			return std::move(curves);
@@ -197,25 +197,25 @@ namespace AutLib
 
 		if (s0 IS_EQUAL 1)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p0, p3));
+			curves.push_back(ParametricCurve_Line(p0, p3));
 
 			return std::move(curves);
 		}
 		else if (s0 IS_EQUAL 2)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p1, p0));
+			curves.push_back(ParametricCurve_Line(p1, p0));
 
 			return std::move(curves);
 		}
 		else if (s0 IS_EQUAL 3)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p2, p1));
+			curves.push_back(ParametricCurve_Line(p2, p1));
 
 			return std::move(curves);
 		}
 		else if (s0 IS_EQUAL 4)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p3, p2));
+			curves.push_back(ParametricCurve_Line(p3, p2));
 
 			return std::move(curves);
 		}
@@ -240,10 +240,10 @@ namespace AutLib
 		std::vector<std::shared_ptr<CurveType>> curves;
 		curves.reserve(4);
 
-		curves.push_back(ParametricCurve_Line<CurveType>(p0, p3));
-		curves.push_back(ParametricCurve_Line<CurveType>(p3, p2));
-		curves.push_back(ParametricCurve_Line<CurveType>(p2, p1));
-		curves.push_back(ParametricCurve_Line<CurveType>(p1, p0));
+		curves.push_back(ParametricCurve_Line(p0, p3));
+		curves.push_back(ParametricCurve_Line(p3, p2));
+		curves.push_back(ParametricCurve_Line(p2, p1));
+		curves.push_back(ParametricCurve_Line(p1, p0));
 
 		return std::move(curves);
 	}
@@ -266,15 +266,15 @@ namespace AutLib
 
 		if (s0 IS_EQUAL 1 OR s0 IS_EQUAL 3)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p0, p3));
-			curves.push_back(ParametricCurve_Line<CurveType>(p2, p1));
+			curves.push_back(ParametricCurve_Line(p0, p3));
+			curves.push_back(ParametricCurve_Line(p2, p1));
 
 			return std::move(curves);
 		}
 		else if (s0 IS_EQUAL 2 OR s0 IS_EQUAL 4)
 		{
-			curves.push_back(ParametricCurve_Line<CurveType>(p3, p2));
-			curves.push_back(ParametricCurve_Line<CurveType>(p1, p0));
+			curves.push_back(ParametricCurve_Line(p3, p2));
+			curves.push_back(ParametricCurve_Line(p1, p0));
 
 			return std::move(curves);
 		}

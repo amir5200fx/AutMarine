@@ -21,9 +21,9 @@ namespace AutLib
 		typedef typename base::geomType geomType;
 		typedef typename base::infoType info;
 
-		CadSingularity_LineCurve(const CurveType& theCurve)
+		/*CadSingularity_LineCurve(const CurveType& theCurve)
 			: CadSingularity_Curve<CurveType>(theCurve)
-		{}
+		{}*/
 
 		CadSingularity_LineCurve
 		(
@@ -32,7 +32,7 @@ namespace AutLib
 			const Standard_Real theLast,
 			const std::shared_ptr<info>& theInfo
 		)
-			: CadSingularity_Curve<CurveType>(theFirst, theLast, theCurve, theInfo)
+			: CadSingularity_Curve<CurveType>(theCurve, theFirst, theLast, theInfo)
 		{}
 
 

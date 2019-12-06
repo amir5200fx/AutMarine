@@ -50,7 +50,7 @@ namespace AutLib
 
 		virtual Cad_SingularType Type() const = 0;
 
-		virtual word& TypeName() const = 0;
+		virtual const word& TypeName() const = 0;
 
 		virtual Standard_Integer NbHorizons() const = 0;
 

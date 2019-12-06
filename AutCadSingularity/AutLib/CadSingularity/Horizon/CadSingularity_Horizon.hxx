@@ -13,7 +13,7 @@ namespace AutLib
 {
 
 	// Forward Declarations
-	class CadAnalys_ApprxSurfMetric;
+	class CadRepair_ApproxSurfMetric;
 
 	class CadSingularity_Horizon
 		: public Global_Done
@@ -22,7 +22,7 @@ namespace AutLib
 
 		/*Private Data*/
 
-		std::shared_ptr<CadAnalys_ApprxSurfMetric> theMetric_;
+		std::shared_ptr<CadRepair_ApproxSurfMetric> theMetric_;
 
 		std::shared_ptr<Mesh2d_KnitChain> theChain_;
 
@@ -49,7 +49,7 @@ namespace AutLib
 		CadSingularity_Horizon
 		(
 			const Standard_Integer theIndex,
-			const std::shared_ptr<CadAnalys_ApprxSurfMetric>& theMetric
+			const std::shared_ptr<CadRepair_ApproxSurfMetric>& theMetric
 		)
 			: Global_Indexed(theIndex)
 			, theMetric_(theMetric)
@@ -57,12 +57,12 @@ namespace AutLib
 
 		CadSingularity_Horizon
 		(
-			const std::shared_ptr<CadAnalys_ApprxSurfMetric>& theMetric
+			const std::shared_ptr<CadRepair_ApproxSurfMetric>& theMetric
 		)
 			: theMetric_(theMetric)
 		{}
 
-		const std::shared_ptr<CadAnalys_ApprxSurfMetric>& Metric() const
+		const std::shared_ptr<CadRepair_ApproxSurfMetric>& Metric() const
 		{
 			return theMetric_;
 		}
@@ -86,7 +86,7 @@ namespace AutLib
 
 		void LoadMetric
 		(
-			const std::shared_ptr<CadAnalys_ApprxSurfMetric>& theMetric
+			const std::shared_ptr<CadRepair_ApproxSurfMetric>& theMetric
 		)
 		{
 			theMetric_ = theMetric;

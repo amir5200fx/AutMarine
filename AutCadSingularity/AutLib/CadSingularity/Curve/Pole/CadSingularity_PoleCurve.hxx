@@ -3,6 +3,7 @@
 #define _CadSingularity_PoleCurve_Header
 
 #include <CadSingularity_Curve.hxx>
+#include <Pnt2d.hxx>
 
 namespace AutLib
 {
@@ -14,6 +15,8 @@ namespace AutLib
 
 		/*Private Data*/
 
+		Pnt2d theMid_;
+
 	public:
 
 		typedef CadSingularity_Curve<CurveType> base;
@@ -21,9 +24,9 @@ namespace AutLib
 		typedef typename base::geomType geomType;
 		typedef typename base::infoType info;
 
-		CadSingularity_PoleCurve(const CurveType& theCurve)
+		/*CadSingularity_PoleCurve(const CurveType& theCurve)
 			: CadSingularity_Curve<CurveType>(theCurve)
-		{}
+		{}*/
 
 		CadSingularity_PoleCurve
 		(
@@ -32,8 +35,18 @@ namespace AutLib
 			const Standard_Real theLast,
 			const std::shared_ptr<info>& theInfo
 		)
-			: CadSingularity_Curve<CurveType>(theFirst, theLast, theCurve, theInfo)
+			: CadSingularity_Curve<CurveType>(theCurve, theFirst, theLast, theInfo)
 		{}
+
+		const Pnt2d& Mid() const
+		{
+			return theMid_;
+		}
+
+		void SetMid(const Pnt2d& theP)
+		{
+			theMid_ = theP;
+		}
 
 		Standard_Boolean IsPole() const override
 		{

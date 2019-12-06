@@ -25,11 +25,6 @@ namespace AutLib
 			: Cad_SingularZone<SurfPln>(theIndex)
 		{}
 
-		Pnt2d& ChangePole()
-		{
-			return thePole_;
-		}
-
 	public:
 
 		typedef Cad_SingularZone<SurfPln> base;
@@ -37,6 +32,11 @@ namespace AutLib
 		const Pnt2d& Pole() const
 		{
 			return thePole_;
+		}
+
+		void SetPole(const Pnt2d& thePole)
+		{
+			thePole_ = thePole;
 		}
 	};
 }

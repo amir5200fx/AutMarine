@@ -70,6 +70,12 @@
     <Filter Include="AutLib\CadSingularity\Detection\System">
       <UniqueIdentifier>{693e9bd8-f5a6-4062-96ee-0beb13aa22cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadSingularity\Detection\G">
+      <UniqueIdentifier>{d5151c18-43eb-42f4-a48c-8fa16cc2b509}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadSingularity\Detection\T">
+      <UniqueIdentifier>{d0efd434-ab59-4fa7-9315-8228cbcae1f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadSingularity\Horizon\CadSingularity_Horizon.hxx">
@@ -140,6 +146,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\CadSingularity\Detection\System\CadSingularity_Detection_System.hxx">
       <Filter>AutLib\CadSingularity\Detection\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Detection\G\CadSingularity_gDetection.hxx">
+      <Filter>AutLib\CadSingularity\Detection\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Detection\T\CadSingularity_tDetection.hxx">
+      <Filter>AutLib\CadSingularity\Detection\T</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

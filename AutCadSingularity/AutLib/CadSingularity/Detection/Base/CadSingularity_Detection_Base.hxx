@@ -19,11 +19,10 @@ namespace AutLib
 
 	protected:
 
-		static std::shared_ptr<CurveType> ParametricCurve(const Entity2d_Polygon& thePoly);
 
-		static std::shared_ptr<CurveType> ParametricCurve_Pole(const Entity2d_Polygon& thePoly);
+		static std::shared_ptr<CurveType> ParametricCurve_Pole(const Pnt2d& theP0, const Pnt2d& theP1);
 
-		static std::shared_ptr<CurveType> ParametricCurve_Line(const Entity2d_Polygon& thePoly);
+		static std::shared_ptr<CurveType> ParametricCurve_Line(const Pnt2d& theP0, const Pnt2d& theP1);
 
 		static std::vector<std::shared_ptr<CurveType>>
 			LineHorizonCurves_Dangle

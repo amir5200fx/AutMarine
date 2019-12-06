@@ -31,6 +31,7 @@ namespace AutLib
 	public:
 
 		typedef GModel_parWire parWireType;
+		typedef GModel_parCurve parCurveType;
 
 		GModel_Plane
 		(

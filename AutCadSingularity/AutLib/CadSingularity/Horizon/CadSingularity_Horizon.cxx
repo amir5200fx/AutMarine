@@ -2,8 +2,8 @@
 
 #include <Entity2d_Chain.hxx>
 #include <GeoMesh2d_MetricBackground.hxx>
-#include <CadAnalys_ApprxSurfMetric.hxx>
-#include <CadAnalys_ApprxSurfMetricInfo.hxx>
+#include <CadRepair_ApproxSurfMetric.hxx>
+#include <CadRepair_ApproxSurfMetric_Info.hxx>
 #include <Entity2d_Polygon.hxx>
 #include <Mesh2d_KnitChain.hxx>
 #include <error.hxx>

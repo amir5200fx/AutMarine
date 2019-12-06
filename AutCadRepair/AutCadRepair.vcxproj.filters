@@ -100,6 +100,18 @@
     <Filter Include="AutLib\CadRepair\SurfaceMetric\Approx\System">
       <UniqueIdentifier>{35314bb5-6204-49f0-925b-b6f78a0a6a3c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadRepair\AR\ParaPlane\G">
+      <UniqueIdentifier>{5c552222-6919-441e-813e-6af041b88f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\AR\ParaPlane\T">
+      <UniqueIdentifier>{1570b6b1-2d8a-46c1-9da1-92426e0d4f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Metric\Normalize\G">
+      <UniqueIdentifier>{f5d2d71e-cc53-499a-9634-9d5a51cf1688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Metric\Normalize\T">
+      <UniqueIdentifier>{6d041a64-74c5-46a4-b1eb-7aff393257cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.hxx">
@@ -200,6 +212,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\System\CadRepair_ApproxSurfMetric_System.hxx">
       <Filter>AutLib\CadRepair\SurfaceMetric\Approx\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\G\CadRepair_gParaPlaneAR.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\T\CadRepair_tParaPlaneAR.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\T</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\G\CadRepair_gNormalizeMetric.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\T\CadRepair_tNormalizeMetric.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\T</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

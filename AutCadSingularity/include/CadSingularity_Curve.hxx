@@ -16,9 +16,9 @@ namespace AutLib
 
 	protected:
 
-		CadSingularity_Curve(const CurveType& theCurve)
+		/*CadSingularity_Curve(const CurveType& theCurve)
 			: CurveType(theCurve)
-		{}
+		{}*/
 
 		CadSingularity_Curve
 		(

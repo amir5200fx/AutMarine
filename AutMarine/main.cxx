@@ -47,10 +47,18 @@ int main()
 	std::vector<std::shared_ptr<GModel_Surface>> surfaces;
 	std::shared_ptr<Geo3d_SizeFunction> sizeFun;
 
-	CadSingularity_Detection<GModel_Surface> detect;
+	Entity2d_Triangulation tri;
+
+	GeoMesh2d_Data data;
+	data.Construct(tri);
+
+	CadSingularity_Detection<GModel_Plane> detect;
+	detect.Perform();
 
 	CadAnalys_Model<GModel_Surface, Geo3d_SizeFunction>
 		analys(surfaces, sizeFun, cadAnalysSys::gl_model_analysis_info);
+
+	Mesh2d_Element ele;
 
 	return 0;
 

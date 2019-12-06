@@ -3,21 +3,28 @@
 #define _CadSingularity_Detection_Header
 
 #include <Global_Done.hxx>
+#include <Entity2d_BoxFwd.hxx>
 #include <CadSingularity_Detection_Info.hxx>
 #include <CadSingularity_Detection_Base.hxx>
 #include <Cad_SingularZone.hxx>
-#include <GeoMesh2d_Data.hxx>
+#include <GeoMesh2d_DataFwd.hxx>
 #include <Geo2d_SizeFunction.hxx>
 
 #include <vector>
 #include <memory>
+
+class Geom_Surface;
+
+#include "GModel_Plane.hxx"
+#include "GModel_parCurve.hxx"
 
 namespace AutLib
 {
 
 	// Forward Declarations
 	class CadSingularity_Horizon;
-	class CadAnalys_ColoringSurfMetric;
+	class CadRepair_ColoringSurfMetric;
+	class Pln_Curve;
 
 	template<class SurfPln>
 	class CadSingularity_Detection
@@ -35,7 +42,7 @@ namespace AutLib
 		/*Private Data*/
 
 		std::shared_ptr<CadSingularity_Horizon> theHorizons_;
-		std::shared_ptr<CadAnalys_ColoringSurfMetric> theColors_;
+		std::shared_ptr<CadRepair_ColoringSurfMetric> theColors_;
 
 		std::shared_ptr<sizeFun> theSizeFun_;
 
@@ -58,7 +65,7 @@ namespace AutLib
 		(
 			const Entity2d_Polygon& thePoly,
 			const GeoMesh2d_Data& bMesh,
-			const std::vector<std::shared_ptr<plnCurve>>& theSides,
+			const std::vector<std::shared_ptr<Pln_Curve>>& theSides,
 			const Geom_Surface& theSurface,
 			const sizeFun& theSize
 		);
@@ -68,7 +75,7 @@ namespace AutLib
 			const Entity2d_Polygon& thePolygon0,
 			const Entity2d_Polygon& thePolygon1,
 			const GeoMesh2d_Data& bMesh,
-			const std::vector<std::shared_ptr<plnCurve>>& theSides,
+			const std::vector<std::shared_ptr<Pln_Curve>>& theSides,
 			const Geom_Surface& theSurface,
 			const sizeFun& theSize
 		);
@@ -97,7 +104,7 @@ namespace AutLib
 
 		const std::shared_ptr<singularZone>& Zone(const Standard_Integer theIndex) const;
 
-		const std::shared_ptr<CadAnalys_ColoringSurfMetric>& Colors() const
+		const std::shared_ptr<CadRepair_ColoringSurfMetric>& Colors() const
 		{
 			return theColors_;
 		}
@@ -125,7 +132,7 @@ namespace AutLib
 			theHorizons_ = theHorizons;
 		}
 
-		void LoadColors(const std::shared_ptr<CadAnalys_ColoringSurfMetric>& theColors)
+		void LoadColors(const std::shared_ptr<CadRepair_ColoringSurfMetric>& theColors)
 		{
 			theColors_ = theColors;
 		}

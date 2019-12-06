@@ -1,10 +1,16 @@
 #pragma once
 #include <Global_Macros.hxx>
 #include <Global_Message.hxx>
+#include <GeoMesh2d_Data.hxx>
 #include <Geo_Tools.hxx>
+#include <Cad_Tools.hxx>
+#include <Pln_Curve.hxx>
 #include <Cad2d_Plane_System.hxx>
 #include <CadPlnModel_Curve.hxx>
 #include <CadPlnModel_Segment.hxx>
+#include <CadRepair_ApproxSurfMetric.hxx>
+#include <CadRepair_ColoringSurfMetric.hxx>
+#include <CadSingularity_Horizon.hxx>
 #include <CadSingularity_PoleCurve.hxx>
 #include <CadSingularity_LineCurve.hxx>
 #include <SingularZone_Pole_Loop.hxx>
@@ -20,6 +26,79 @@
 #include <OSstream.hxx>
 
 #include <Geom2dAPI_ProjectPointOnCurve.hxx>
+#include <Geom_Surface.hxx>
+
+namespace AutLib
+{
+
+	namespace singularityTools
+	{
+
+		std::vector<std::shared_ptr<Pln_Curve>>
+			RetrieveSides(const Entity2d_Box& theBox);
+
+		Pnt2d FindParametricCoord
+		(
+			const Entity2d_Polygon& thePoly,
+			const Geom_Surface& theSurface,
+			const Standard_Real theLength
+		);
+
+		std::shared_ptr<Pln_Curve>
+			GetPlnCurve(const Pnt2d& theP0, const Pnt2d& theP1);
+
+		template<class CurveType>
+		std::shared_ptr<CadSingularity_PoleCurve<CurveType>>
+			ParametricCurve(const Entity2d_Polygon& thePoly)
+		{
+			if (thePoly.NbPoints() < 2)
+			{
+				FatalErrorIn("std::shared_ptr<CadSingularity_PoleCurve<CurveType>> ParametricCurve(const Entity2d_Polygon& thePoly)")
+					<< "Invalid polygon" << endl
+					<< abort(FatalError);
+			}
+
+			if (thePoly.NbPoints() == 2)
+			{
+				const auto& pts = thePoly.Points();
+				auto pcurve = GetPlnCurve(pts[0], pts[1]);
+
+				auto curve = std::make_shared<CadSingularity_PoleCurve<CurveType>>
+					(
+						Cad_Tools::ConvertToBSpline
+						(
+							pcurve->Curve()
+						),
+						pcurve->FirstParam(),
+						pcurve->LastParam(),
+						sysLib::gl_pln_curve_info
+						);
+				return std::move(curve);
+			}
+
+			auto pcurve = std::make_shared<Pln_Curve>(sysLib::gl_pln_curve_info);
+
+			if (pcurve->Interpolation(thePoly.Points()))
+			{
+				FatalErrorIn("std::shared_ptr<CadSingularity_PoleCurve<CurveType>> ParametricCurve(const Entity2d_Polygon& thePoly)")
+					<< "Failed to interpolate" << endl
+					<< abort(FatalError);
+			}
+
+			auto curve = std::make_shared<CadSingularity_PoleCurve<CurveType>>
+				(
+					Cad_Tools::ConvertToBSpline
+					(
+						pcurve->Curve()
+					),
+					pcurve->FirstParam(),
+					pcurve->LastParam(),
+					sysLib::gl_pln_curve_info
+					);
+			return std::move(curve);
+		}
+	}
+}
 
 namespace AutLib
 {
@@ -30,7 +109,7 @@ namespace AutLib
 		(
 			const Entity2d_Polygon& thePolygon,
 			const GeoMesh2d_Data& bMesh,
-			const std::vector<std::shared_ptr<plnCurve>>& theSides,
+			const std::vector<std::shared_ptr<Pln_Curve>>& theSides,
 			const Geom_Surface& theSurface,
 			const sizeFun& theSize
 		)
@@ -84,7 +163,7 @@ namespace AutLib
 
 			const auto box = Entity2d_Box::BoundingBoxOf(pts);
 
-			auto curves = base::template LineHorizonCurves_Loop<plnCurve>(box);
+			auto curves = base::LineHorizonCurves_Loop(box);
 
 			if (length < Weight() * elmSize)
 			{
@@ -182,9 +261,9 @@ namespace AutLib
 			{
 				if (s0 IS_EQUAL s1)
 				{
-					const auto curve = base::template ParametricCurve<plnCurve>(thePolygon);
+					const auto curve = singularityTools::template ParametricCurve<plnCurve>(thePolygon);
 
-					const auto Pm = SingularityTools::FindParametricCoord(thePolygon, theSurface, 0.5 * length);
+					const auto Pm = singularityTools::FindParametricCoord(thePolygon, theSurface, 0.5 * length);
 					curve->SetMid(Pm);
 
 					if (Info()->Verbose())
@@ -200,9 +279,9 @@ namespace AutLib
 				}
 				else if (ABS(s0 - s1) IS_EQUAL 1)
 				{
-					const auto curve = base::template ParametricCurve<plnCurve>(thePolygon);
+					const auto curve = singularityTools::template ParametricCurve<plnCurve>(thePolygon);
 
-					const auto Pm = SingularityTools::FindParametricCoord(thePolygon, theSurface, 0.5 * length);
+					const auto Pm = singularityTools::FindParametricCoord(thePolygon, theSurface, 0.5 * length);
 					curve->SetMid(Pm);
 
 					if (Info()->Verbose())
@@ -218,11 +297,10 @@ namespace AutLib
 				}
 				else if (ABS(s0 - s1) IS_EQUAL 2)
 				{
-					CadPlnModel_Segment LinSegMaker;
-					const auto pcurve = LinSegMaker(P0, P1);
+					const auto pcurve = singularityTools::GetPlnCurve(P0, P1);
 					auto curve = std::make_shared<CadSingularity_PoleCurve<plnCurve>>
 						(
-							Cad_Tools::ConvertToBSpline(pcurve->Curve(), pcurve->FirstParam(), pcurve->LastParam()),
+							Cad_Tools::ConvertToBSpline(pcurve->Curve()),
 							pcurve->FirstParam(), pcurve->LastParam(),
 							sysLib::gl_pln_curve_info
 							);
@@ -254,7 +332,7 @@ namespace AutLib
 
 				if (s0 IS_EQUAL s1)
 				{
-					auto curves = base::template LineHorizonCurves_Dangle<plnCurve>(box, s0);
+					auto curves = base::LineHorizonCurves_Dangle(box, s0);
 
 					if (Info()->Verbose())
 					{
@@ -274,7 +352,7 @@ namespace AutLib
 				else if (ABS(s0 - s1) IS_EQUAL 1)
 				{
 					auto curves =
-						base::template LineHorizonCurves_Corner<plnCurve>
+						base::LineHorizonCurves_Corner
 						(
 							box,
 							s0, theSurface, Weight() * size);
@@ -292,7 +370,7 @@ namespace AutLib
 				}
 				else if (ABS(s0 - s1) IS_EQUAL 2)
 				{
-					auto curves = base::template LineHorizonCurves_WholeSide<plnCurve>(box, s0);
+					auto curves = base::LineHorizonCurves_WholeSide(box, s0);
 
 					if (Info()->Verbose())
 					{
@@ -325,7 +403,7 @@ namespace AutLib
 			const Entity2d_Polygon& thePolygon0,
 			const Entity2d_Polygon& thePolygon1,
 			const GeoMesh2d_Data& bMesh,
-			const std::vector<std::shared_ptr<plnCurve>>& theSides,
+			const std::vector<std::shared_ptr<Pln_Curve>>& theSides,
 			const Geom_Surface& theSurface,
 			const sizeFun& theSize
 		)
@@ -426,7 +504,7 @@ namespace AutLib
 
 		const auto box = Entity2d_Box::Union(box0, box1);
 
-		const auto curves = base::template LineHorizonCurves_TwoSided<plnCurve>(box, s00);
+		const auto curves = base::LineHorizonCurves_TwoSided(box, s00);
 
 		auto singularity =
 			std::make_shared<SingularZone_Line_TwoSide<SurfPln>>
@@ -479,5 +557,171 @@ namespace AutLib
 	Standard_Boolean CadSingularity_Detection<SurfPln>::IsInfoLoaded() const
 	{
 		return (Standard_Boolean)theInfo_;
+	}
+
+	template<class SurfPln>
+	void CadSingularity_Detection<SurfPln>::Perform()
+	{
+		if (NOT Horizons())
+		{
+			FatalErrorIn("void CadSingularity_Detection<SurfPln>::Perform()")
+				<< "Found no metric approximation" << endl
+				<< abort(FatalError);
+		}
+
+		if (NOT Horizons()->Metric())
+		{
+			FatalErrorIn("void CadSingularity_Detection<SurfPln>::Perform()")
+				<< "Found no metric approximation" << endl
+				<< abort(FatalError);
+		}
+
+		if (NOT Colors())
+		{
+			FatalErrorIn("void CadSingularity_Detection<SurfPln>::Perform()")
+				<< "No coloring has not been loaded!" << endl
+				<< abort(FatalError);
+		}
+
+		if (NOT Horizons()->HasHorizon())
+		{
+			Change_IsDone() = Standard_True;
+			return;
+		}
+
+		const auto& approx = *Horizons()->Metric();
+		const auto& surface = *approx.Surface();
+		const auto& box = approx.Domain();
+
+		const auto& color = *Colors();
+
+		std::map
+			<
+			Standard_Integer,
+			std::shared_ptr<std::list<std::shared_ptr<Entity2d_Polygon>>>
+			>
+			IndexToHorizon;
+
+		if (Info()->Verbose())
+		{
+			GET_MESSAGE << "  Nb. of Horizons: " << Horizons()->NbHorizons();
+			SEND_INFO;
+		}
+
+		forThose
+		(
+			Index,
+			0,
+			Horizons()->NbHorizons() - 1
+		)
+		{
+			if (Info()->Verbose())
+			{
+				GET_MESSAGE << " horizon no. " << Index + 1;
+				SEND_INFO;
+			}
+
+			const auto& horizon = *Horizons()->Horizon(Index);
+
+			const auto i = color.Value(horizon.GetPoint(horizon.NbPoints() / 2));
+
+			if (Info()->Verbose())
+			{
+				GET_MESSAGE << "  color no. " << i;
+				SEND_INFO;
+			}
+
+			auto iter = IndexToHorizon.find(i);
+
+			if (iter IS_EQUAL IndexToHorizon.end())
+			{
+				IndexToHorizon.insert
+				(
+					std::make_pair
+					(
+						i,
+						std::make_shared<std::list<std::shared_ptr<Entity2d_Polygon>>>()
+					)
+				);
+			}
+
+			IndexToHorizon[i]->push_back(Horizons()->Horizon(Index));
+		}
+
+		const auto triangulation = Geo_Tools::Triangulation(box);
+		const auto sides = singularityTools::RetrieveSides(box);
+
+		if (Info()->Verbose())
+		{
+			GET_MESSAGE << "  constructing topological background mesh... ";
+			SEND_INFO;
+		}
+
+		GeoMesh2d_Data bmesh;
+		bmesh.Construct(*triangulation);
+
+		if (Info()->Verbose())
+		{
+			GET_MESSAGE << "  topological background mesh has been constructed! ";
+			SEND_INFO;
+		}
+
+		auto& zones = ChangeZones();
+		zones.reserve(IndexToHorizon.size());
+
+		auto iter = IndexToHorizon.begin();
+		while (iter NOT_EQUAL IndexToHorizon.end())
+		{
+			Debug_Null_Pointer(iter->second);
+			const auto& l = *iter->second;
+
+			if (l.empty())
+			{
+				FatalErrorIn("void AutLib::SingularityZone_TypeDetection::Perform()")
+					<< "empty list" << endl
+					<< abort(FatalError);
+			}
+
+			if (l.size() IS_EQUAL 1)
+			{
+				auto type =
+					TypeDetection
+					(
+						*l.front(), bmesh, sides,
+						surface, *theSizeFun_);
+				type->SetIndex(iter->first);
+
+				zones.push_back(type);
+			}
+
+			if (l.size() IS_EQUAL 2)
+			{
+				std::shared_ptr<Entity2d_Polygon> v[2];
+				Standard_Integer K = 0;
+				for (const auto& x : l)
+				{
+					v[K++] = x;
+				}
+
+				auto type =
+					TypeDetection
+					(
+						*v[0], *v[1], bmesh,
+						sides, surface, *theSizeFun_);
+				type->SetIndex(iter->first);
+
+				zones.push_back(type);
+			}
+
+			if (l.size() > 2)
+			{
+				FatalErrorIn("void AutLib::SingularityZone_TypeDetection::Perform()")
+					<< "Invalid Data" << endl
+					<< abort(FatalError);
+			}
+			iter++;
+		}
+
+		Change_IsDone() = Standard_True;
 	}
 }
