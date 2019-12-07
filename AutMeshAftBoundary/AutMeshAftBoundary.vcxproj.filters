@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{d04eb948-cb43-4291-bfc8-bb249779b1d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft">
+      <UniqueIdentifier>{4d2cbd14-051e-4fdb-8468-b7a24d3da8b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary">
+      <UniqueIdentifier>{7817bb31-df6c-4e87-a872-e1b0d65d5f07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane">
+      <UniqueIdentifier>{26a314f8-0d86-4cc5-a239-6cc8f1b1ebd2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Traits">
+      <UniqueIdentifier>{835b2888-7548-496d-8ebf-d88131fa0219}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Info">
+      <UniqueIdentifier>{edc2e14f-5ab0-4580-bb47-96a5726da904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Base">
+      <UniqueIdentifier>{1fbb0bb4-6d6b-46f4-a8c0-7a5b95ca645e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundaryI.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Base\Aft_PlnBoundary_Base.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\Aft_PlnBoundary_Info.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Traits\Aft_PlnBoundary_Traits.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Traits</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.cxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

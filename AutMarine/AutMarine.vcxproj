@@ -141,9 +141,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ProjectReference Include="..\AutMeshAftOptNode\AutMeshAftOptNode.vcxproj">
       <Project>{f7221de5-fa66-45d0-a33e-9ec4383be7f7}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\AutMeshAftPlnBoundary\AutMeshAftPlnBoundary.vcxproj">
-      <Project>{4430ac1b-a8a8-46f7-bf96-44ca8d7faa8b}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\AutMeshAft\AutMeshAft.vcxproj">
       <Project>{a8593a5e-68c0-481e-84fe-6362c1821ad4}</Project>
     </ProjectReference>

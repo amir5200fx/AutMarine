@@ -12,7 +12,7 @@
 namespace AutLib
 {
 
-	template<class ModelType>
+	template<class ModelType, class SizeFun, class MetricFun = void>
 	class AftApi_Boundary
 		: public Global_Done
 		, public Global_Indexed
