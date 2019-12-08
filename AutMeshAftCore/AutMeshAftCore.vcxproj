@@ -91,17 +91,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.hxx" />
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\AnIso\Mesh2d_PlnRegionAnIso.hxx" />
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\AnIso\Mesh2d_PlnRegionAnIsoFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIso.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIsoFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIso_Base.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Iso\Mesh2d_PlnCurve.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Iso\Mesh2d_PlnCurveFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Mesh_PlnCurve.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Mesh_PlnCurveI.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_gPlnCurveSurface.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_gPlnCurveSurfaceFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_tPlnCurveSurface.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_tPlnCurveSurfaceFwd.hxx" />
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Iso\Mesh2d_PlnRegion.hxx" />
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Iso\Mesh2d_PlnRegionFwd.hxx" />
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Mesh_PlnRegion.hxx" />
@@ -135,11 +124,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Cad\Patch\G\Mesh2d_gPatch.cxx" />
     <ClCompile Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIso.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Iso\Mesh2d_PlnCurve.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Mesh_PlnCurve.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_gPlnCurveSurface.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_tPlnCurveSurface.cxx" />
     <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurface.cxx" />
     <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurface.cxx" />
     <ClCompile Include="AutLib\MeshAft\Core\Aft_Core.cxx" />

@@ -22,20 +22,8 @@
     <Filter Include="AutLib\MeshAft\Cad\Plane">
       <UniqueIdentifier>{00d3893a-90c4-471d-997a-703395daf5f4}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Plane\Curve">
-      <UniqueIdentifier>{49264806-fcdb-427b-bee6-3fc0c7bca935}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\MeshAft\Cad\Plane\Wire">
       <UniqueIdentifier>{15a4797d-8271-419a-acda-d3841670e28d}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Plane\Curve\Iso">
-      <UniqueIdentifier>{d5feb59a-8168-41b0-ae87-d02c2286a822}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso">
-      <UniqueIdentifier>{c3786f87-5f12-46b3-8ddb-fb5a496ce564}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\MeshAft\Cad\Plane\Curve\Surface">
-      <UniqueIdentifier>{69c9a425-7888-4179-b7a9-f2138a4253c4}</UniqueIdentifier>
     </Filter>
     <Filter Include="AutLib\MeshAft\Cad\Plane\Wire\Iso">
       <UniqueIdentifier>{a28ae3bf-f662-43ed-842d-be8fbbe852da}</UniqueIdentifier>
@@ -99,21 +87,6 @@
     <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurfaceTemplate.hxx">
       <Filter>AutLib\MeshAft\Core\Surface</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Mesh_PlnCurve.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Mesh_PlnCurveI.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Iso\Mesh2d_PlnCurve.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Iso</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIso.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\AnIso</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIso_Base.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\AnIso</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Mesh_PlnWire.hxx">
       <Filter>AutLib\MeshAft\Cad\Plane\Wire</Filter>
     </ClInclude>
@@ -122,24 +95,6 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Iso\Mesh2d_PlnWire.hxx">
       <Filter>AutLib\MeshAft\Cad\Plane\Wire\Iso</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Iso\Mesh2d_PlnCurveFwd.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Iso</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIsoFwd.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\AnIso</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_gPlnCurveSurface.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Surface</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_gPlnCurveSurfaceFwd.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Surface</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_tPlnCurveSurface.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Surface</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_tPlnCurveSurfaceFwd.hxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Surface</Filter>
     </ClInclude>
     <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Iso\Mesh2d_PlnWireFwd.hxx">
       <Filter>AutLib\MeshAft\Cad\Plane\Wire\Iso</Filter>
@@ -229,21 +184,6 @@
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Core\Aft_Core.cxx">
       <Filter>AutLib\MeshAft\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Mesh_PlnCurve.cxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Iso\Mesh2d_PlnCurve.cxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Iso</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\AnIso\Mesh2d_PlnCurveAnIso.cxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\AnIso</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_gPlnCurveSurface.cxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Surface</Filter>
-    </ClCompile>
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Curve\Surface\Mesh2d_tPlnCurveSurface.cxx">
-      <Filter>AutLib\MeshAft\Cad\Plane\Curve\Surface</Filter>
     </ClCompile>
     <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurface.cxx">
       <Filter>AutLib\MeshAft\Cad\Plane\Surface</Filter>

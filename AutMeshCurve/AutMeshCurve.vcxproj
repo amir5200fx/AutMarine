@@ -1,14 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
-      <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
-      <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
@@ -25,19 +17,6 @@
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
-    <WholeProgramOptimization>true</WholeProgramOptimization>
-    <CharacterSet>MultiByte</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -55,12 +34,6 @@
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="Shared">
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -81,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Wire;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\AnIso\2d;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\Iso\2d;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\Surface\T;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\Surface\G;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Wire;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -94,32 +67,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)inclu
 for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)include" /y</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
-  </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -128,7 +75,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\AnIso\2d;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\Iso\2d;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\Surface\T;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve\Surface\G;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Length;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Derivation;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton\Function;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Newton;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction\Info;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\OptmPoint\Correction;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Entity;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve\AnIso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve\Iso;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Curve;$(SolutionDir)AutMeshCurve\AutLib\MeshCurve\Cad\Plane\Wire;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -138,6 +85,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurve.hxx" />
+    <ClInclude Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurveI.hxx" />
     <ClInclude Include="AutLib\MeshCurve\Curve\AnIso\Mesh2d_CurveAnIso.hxx" />
     <ClInclude Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.hxx" />
     <ClInclude Include="AutLib\MeshCurve\Curve\Iso\Mesh2d_Curve.hxx" />
@@ -162,6 +111,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_NewtonI.hxx" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurve.cxx" />
     <ClCompile Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.cxx" />
     <ClCompile Include="AutLib\MeshCurve\Curve\Mesh_Curve.cxx" />
     <ClCompile Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.cxx" />

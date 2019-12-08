@@ -21,6 +21,8 @@ namespace AutLib
 
 		typedef Mesh_PlnCurve<GModel_parCurve, Geo2d_SizeFunction, Geo2d_MetricFunction> curveType;
 		typedef void surfType;
+		typedef Geo2d_SizeFunction sizeFun;
+		typedef Geo2d_MetricFunction metricFun;
 	};
 }
 

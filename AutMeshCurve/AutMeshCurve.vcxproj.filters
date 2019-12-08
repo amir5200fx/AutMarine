@@ -52,6 +52,12 @@
     <Filter Include="AutLib\MeshCurve\Curve\AnIso">
       <UniqueIdentifier>{b7178e19-38bf-416b-9a4a-1020e567e5d4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshCurve\Cad">
+      <UniqueIdentifier>{796713f1-f073-4e36-97ad-90b8abc83d1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCurve\Cad\Curve">
+      <UniqueIdentifier>{ae9e2dcf-6222-48bc-aba6-798fbcbb532f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.hxx">
@@ -120,6 +126,12 @@
     <ClInclude Include="AutLib\MeshCurve\Curve\AnIso\Mesh2d_CurveAnIso.hxx">
       <Filter>AutLib\MeshCurve\Curve\AnIso</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurve.hxx">
+      <Filter>AutLib\MeshCurve\Cad\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurveI.hxx">
+      <Filter>AutLib\MeshCurve\Cad\Curve</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.cxx">
@@ -151,6 +163,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshCurve\Length\Function\Mesh_CurveLength_Function.cxx">
       <Filter>AutLib\MeshCurve\Length\Function</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurve.cxx">
+      <Filter>AutLib\MeshCurve\Cad\Curve</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

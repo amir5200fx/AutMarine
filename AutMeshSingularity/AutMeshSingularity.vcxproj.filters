@@ -127,6 +127,21 @@
     <Filter Include="AutLib\MeshSingularity\Patch\Defect\Metric">
       <UniqueIdentifier>{4d5ff079-eaed-4a1b-94a3-a4bd463b114b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft\Entities\Edge\Pole">
+      <UniqueIdentifier>{25b273a2-fc11-44f7-93a0-ed931ee54698}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft\Entities\Edge\Line">
+      <UniqueIdentifier>{863738d3-7f9f-461a-8b4c-ec580f6ea9d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft\Entities\Node">
+      <UniqueIdentifier>{48e42bff-5001-4cc0-9e53-dfdad36ef407}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft\Entities\Node\Pole">
+      <UniqueIdentifier>{701422a7-4230-4009-bf3a-89627ff42740}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshSingularity\Aft\Entities\Node\Line">
+      <UniqueIdentifier>{b1ab06d7-7e86-4cde-8393-19dc446ad040}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshSingularity\Patch\Imperfection\Mesh_ImpPatch.hxx">

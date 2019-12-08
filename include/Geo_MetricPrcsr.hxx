@@ -12,7 +12,7 @@
 namespace AutLib
 {
 
-	class Geo_MetricPrcsrBase
+	class Geo_MetricPrcsr_Base
 		: public Global_Indexed
 		, public Global_Named
 	{
@@ -29,11 +29,11 @@ namespace AutLib
 
 	protected:
 
-		Geo_MetricPrcsrBase(const std::shared_ptr<info>& theInfo)
+		Geo_MetricPrcsr_Base(const std::shared_ptr<info>& theInfo)
 			: theInfo_(theInfo)
 		{}
 
-		Geo_MetricPrcsrBase
+		Geo_MetricPrcsr_Base
 		(
 			const Standard_Integer theIndex,
 			const word& theName,
@@ -58,7 +58,7 @@ namespace AutLib
 
 	template<class SizeFun, class MetricFun = void>
 	class Geo_MetricPrcsr
-		: public Geo_MetricPrcsrBase
+		: public Geo_MetricPrcsr_Base
 	{
 
 	public:
@@ -77,13 +77,13 @@ namespace AutLib
 
 	public:
 
-		typedef typename Geo_MetricPrcsrBase::info info;
+		typedef typename Geo_MetricPrcsr_Base::info info;
 
 		typedef Point ptType;
 		typedef typename cascadeLib::vec_type_from_point<Point>::vcType vcType;
 
 		Geo_MetricPrcsr(const std::shared_ptr<info>& theInfo)
-			: Geo_MetricPrcsrBase(theInfo)
+			: Geo_MetricPrcsr_Base(theInfo)
 		{}
 
 		Geo_MetricPrcsr
@@ -92,7 +92,7 @@ namespace AutLib
 			const std::shared_ptr<MetricFun>& theMetricFunction,
 			const std::shared_ptr<info>& theInfo
 		)
-			: Geo_MetricPrcsrBase(theInfo)
+			: Geo_MetricPrcsr_Base(theInfo)
 			, theSizeFunction_(theSizeFunction)
 			, theMetricFunction_(theMetricFunction)
 		{}
@@ -105,7 +105,7 @@ namespace AutLib
 			const std::shared_ptr<MetricFun>& theMetricFunction,
 			const std::shared_ptr<info>& theInfo
 		)
-			: Geo_MetricPrcsrBase(theIndex, theName, theInfo)
+			: Geo_MetricPrcsr_Base(theIndex, theName, theInfo)
 			, theSizeFunction_(theSizeFunction)
 			, theMetricFunction_(theMetricFunction)
 		{}
@@ -119,6 +119,8 @@ namespace AutLib
 		{
 			return theMetricFunction_;
 		}
+
+		Point CalcCentre(const Point& theP0, const Point& theP1) const;
 
 		Standard_Real CalcElementSize(const Point& theCoord) const;
 
@@ -142,7 +144,7 @@ namespace AutLib
 
 	template<class SizeFun>
 	class Geo_MetricPrcsr<SizeFun, void>
-		: public Geo_MetricPrcsrBase
+		: public Geo_MetricPrcsr_Base
 	{
 
 	public:
@@ -157,13 +159,13 @@ namespace AutLib
 
 	public:
 
-		typedef typename Geo_MetricPrcsrBase::info info;
+		typedef typename Geo_MetricPrcsr_Base::info info;
 
 		typedef Point ptType;
 		typedef typename cascadeLib::vec_type_from_point<Point>::vcType vcType;
 
 		Geo_MetricPrcsr(const std::shared_ptr<info>& theInfo)
-			: Geo_MetricPrcsrBase(theInfo)
+			: Geo_MetricPrcsr_Base(theInfo)
 		{}
 
 		Geo_MetricPrcsr
@@ -171,7 +173,7 @@ namespace AutLib
 			const std::shared_ptr<SizeFun>& theSizeFunction,
 			const std::shared_ptr<info>& theInfo
 		)
-			: Geo_MetricPrcsrBase(theInfo)
+			: Geo_MetricPrcsr_Base(theInfo)
 			, theSizeFunction_(theSizeFunction)
 		{}
 
@@ -182,7 +184,7 @@ namespace AutLib
 			const std::shared_ptr<SizeFun>& theSizeFunction,
 			const std::shared_ptr<info>& theInfo
 		)
-			: Geo_MetricPrcsrBase(theIndex, theName, theInfo)
+			: Geo_MetricPrcsr_Base(theIndex, theName, theInfo)
 			, theSizeFunction_(theSizeFunction)
 		{}
 
@@ -190,6 +192,8 @@ namespace AutLib
 		{
 			return theSizeFunction_;
 		}
+
+		Point CalcCentre(const Point& theP0, const Point& theP1) const;
 
 		Standard_Real CalcElementSize(const Point& theCoord) const;
 

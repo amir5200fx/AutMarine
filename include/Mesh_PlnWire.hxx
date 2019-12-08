@@ -12,13 +12,13 @@
 namespace AutLib
 {
 
-	template<class PlnCurve>
+	template<class MshPlnCurve>
 	class Mesh_PlnWire
 		: public Global_Indexed
 		, public Global_Named
 	{
 
-		typedef std::shared_ptr<PlnCurve> curve_ptr;
+		typedef std::shared_ptr<MshPlnCurve> curve_ptr;
 		typedef std::vector<curve_ptr> curveList;
 
 		/*Private Data*/
@@ -26,8 +26,6 @@ namespace AutLib
 		std::shared_ptr<curveList> theCurves_;
 
 	public:
-
-		typedef PlnCurve plnCurveType;
 
 		Mesh_PlnWire
 		(
@@ -72,7 +70,7 @@ namespace AutLib
 
 		void ExportToPlt(OFstream& File) const;
 
-		static std::vector<std::shared_ptr<PlnCurve>>
+		static std::vector<std::shared_ptr<MshPlnCurve>>
 			RetrieveCurvesFrom
 			(
 				const std::vector<std::shared_ptr<Mesh_PlnWire>>& theWires

@@ -1,8 +1,21 @@
 #pragma once
+#include <Global_Macros.hxx>
 #include <error.hxx>
 #include <OSstream.hxx>
 namespace AutLib
 {
+
+	template<class SizeFun, class MetricFun>
+	typename Geo_MetricPrcsr<SizeFun, MetricFun>::Point 
+		Geo_MetricPrcsr<SizeFun, MetricFun>::CalcCentre
+		(
+			const Point& theP0, 
+			const Point& theP1
+		) const
+	{
+		auto c = MEAN(theP0, theP1);
+		return std::move(c);
+	}
 
 	template<class SizeFun, class MetricFun>
 	Standard_Real Geo_MetricPrcsr<SizeFun, MetricFun>::CalcElementSize
@@ -79,6 +92,18 @@ namespace AutLib
 	{
 		return sqrt(theVector.Dot(CalcMetric(thePoint).Multiplied(theVector)))
 			/ CalcElementSize(thePoint);
+	}
+
+	template<class SizeFun>
+	typename Geo_MetricPrcsr<SizeFun, void>::Point 
+		Geo_MetricPrcsr<SizeFun, void>::CalcCentre
+		(
+			const Point& theP0,
+			const Point& theP1
+		) const
+	{
+		auto c = MEAN(theP0, theP1);
+		return std::move(c);
 	}
 
 	template<class SizeFun>
