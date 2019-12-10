@@ -42,6 +42,16 @@ namespace AutLib
 			: Aft2d_SingularEdgeTemplate<BndEdgeType>(theIndex, theNode0, theNode1)
 		{}
 
+		Standard_Boolean IsLineSingular() const override
+		{
+			return Standard_True;
+		}
+
+		Standard_Boolean IsSingular() const override
+		{
+			return Standard_True;
+		}
+
 		//- Static functions and operators
 
 		static std::vector<std::shared_ptr<edgeType>>

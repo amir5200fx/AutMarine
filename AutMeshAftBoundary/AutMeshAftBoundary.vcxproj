@@ -21,12 +21,23 @@
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.hxx" />
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundaryI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\AnIso\Aft2d_PlnBoundaryAnIso.hxx" />
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Base\Aft_PlnBoundary_Base.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Base\Aft_PlnBoundary_BaseI.hxx" />
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\Aft_PlnBoundary_Info.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\AnIso\Aft2d_PlnBoundaryAnIso_Info.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\AnIso\Aft2d_PlnBoundaryAnIso_InfoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\Iso\Aft2d_PlnBoundary_Info.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\Iso\Aft2d_PlnBoundary_InfoFwd.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Iso\Aft2d_PlnBoundary.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Surface\G\Aft2d_gPlnBoundarySurface.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Surface\T\Aft2d_tPlnBoundarySurface.hxx" />
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Traits\Aft_PlnBoundary_Traits.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.cxx" />
+    <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Base\Aft_PlnBoundary_Base.cxx" />
+    <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Info\Aft_PlnBoundary_Info.cxx" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
@@ -93,8 +104,10 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Traits;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Base;$(ProjectDir)AutLib\MeshAft\Boundary\Plane;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Traits;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info\Surface;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info\AnIso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info\Iso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Base;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Surface\T;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Surface\G;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Surface;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\AnIso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Iso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshCad\include;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -115,8 +128,10 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Traits;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Base;$(ProjectDir)AutLib\MeshAft\Boundary\Plane;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Traits;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info\Surface;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info\AnIso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info\Iso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Info;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Base;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Surface\T;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Surface\G;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Surface;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\AnIso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane\Iso;$(ProjectDir)AutLib\MeshAft\Boundary\Plane;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshCad\include;$(SolutionDir)AutMeshCurve\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"

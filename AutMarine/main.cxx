@@ -35,6 +35,8 @@
 
 #include <AutMarine_Examples.hxx>
 
+#include <Aft2d_Edge.hxx>
+#include <Aft2d_EdgeAnIso.hxx>
 
 using namespace boost::archive;
 using namespace AutLib;
@@ -59,6 +61,9 @@ int main()
 		analys(surfaces, sizeFun, cadAnalysSys::gl_model_analysis_info);
 
 	Mesh2d_Element ele;
+
+	Aft2d_Edge ed0;
+	Aft2d_EdgeAnIso ed1;
 
 	return 0;
 

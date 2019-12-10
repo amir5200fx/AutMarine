@@ -18,7 +18,7 @@ namespace AutLib
 		typename TBndEdgeTraits::curveType,
 		typename TBndEdgeTraits::surfType,
 		typename TBndEdgeTraits::bndEdgeTraits::facetType,
-		typename TBndEdgeTraits::metricFun, POS
+		typename TBndEdgeTraits::metricPrcsr, POS
 		>
 		, public Aft_BndEdge<typename TBndEdgeTraits::bndEdgeTraits>
 	{
@@ -29,6 +29,7 @@ namespace AutLib
 
 		typedef Aft_BndEdge<typename TBndEdgeTraits::bndEdgeTraits> bndEdgeType;
 		typedef TBndEdgeTraits traitsType;
+		typedef typename TBndEdgeTraits::metricPrcsr metricPrcsr;
 
 		Aft_TBndEdge()
 		{}

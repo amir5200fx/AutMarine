@@ -40,6 +40,19 @@ namespace AutLib
 			: Aft2d_SingularEdgeTemplate<BndEdgeType>(theIndex, theNode0, theNode1)
 		{}
 
+
+		Standard_Boolean IsPoleSingular() const override
+		{
+			return Standard_True;
+		}
+
+		Standard_Boolean IsSingular() const override
+		{
+			return Standard_True;
+		}
+
+		void SingularityContraction(const typename BndEdgeType::metricPrcsr& thePrcsr) override;
+
 		//- Static functions and operators
 
 		static std::vector<std::shared_ptr<edgeType>> 

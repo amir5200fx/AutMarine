@@ -85,8 +85,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurve.hxx" />
-    <ClInclude Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurveI.hxx" />
     <ClInclude Include="AutLib\MeshCurve\Curve\AnIso\Mesh2d_CurveAnIso.hxx" />
     <ClInclude Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.hxx" />
     <ClInclude Include="AutLib\MeshCurve\Curve\Iso\Mesh2d_Curve.hxx" />
@@ -111,7 +109,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\MeshCurve\OptmPoint\Newton\Mesh_CurveOptmPoint_NewtonI.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\MeshCurve\Cad\Curve\Mesh_PlnCurve.cxx" />
     <ClCompile Include="AutLib\MeshCurve\Curve\Info\Mesh_CurveInfo.cxx" />
     <ClCompile Include="AutLib\MeshCurve\Curve\Mesh_Curve.cxx" />
     <ClCompile Include="AutLib\MeshCurve\Entity\Mesh_CurveEntity.cxx" />

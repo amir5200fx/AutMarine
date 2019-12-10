@@ -44,7 +44,7 @@ namespace AutLib
 	) const
 	{
 		auto mp =
-			CalcEffectiveMetric(theEdge.Centre(), theCentre);
+			base::CalcEffectiveMetric(theEdge.Centre(), theCentre);
 
 		const auto& n0 = *theEdge.Node0();
 		const auto& n1 = *theEdge.Node1();

@@ -22,6 +22,30 @@
     <Filter Include="AutLib\MeshAft\Boundary\Plane\Base">
       <UniqueIdentifier>{1fbb0bb4-6d6b-46f4-a8c0-7a5b95ca645e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Info\Iso">
+      <UniqueIdentifier>{29dbe77f-e651-443a-9c22-75cbfe63c835}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Info\AnIso">
+      <UniqueIdentifier>{3ff385bf-1d96-4327-b5ce-ba3bc603510d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Info\Surface">
+      <UniqueIdentifier>{0a22ea8d-3178-4595-9007-f9c7810580b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Iso">
+      <UniqueIdentifier>{6c748823-ba6a-43ed-a9bc-82752b0e5537}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\AnIso">
+      <UniqueIdentifier>{82669f64-210a-4237-8df9-d07eda0d9947}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Surface">
+      <UniqueIdentifier>{cc96d6a2-a9a6-4b2b-9a8c-81e3c706df75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Surface\G">
+      <UniqueIdentifier>{d53f6d9f-183a-47bc-a5f1-bc6c59926f79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\Surface\T">
+      <UniqueIdentifier>{2e27c5fa-3837-4d78-b6e5-297f05db1aa3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.hxx">
@@ -39,10 +63,43 @@
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Traits\Aft_PlnBoundary_Traits.hxx">
       <Filter>AutLib\MeshAft\Boundary\Plane\Traits</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\AnIso\Aft2d_PlnBoundaryAnIso_Info.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Info\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\Iso\Aft2d_PlnBoundary_Info.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Info\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\Iso\Aft2d_PlnBoundary_InfoFwd.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Info\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Info\AnIso\Aft2d_PlnBoundaryAnIso_InfoFwd.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Info\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Base\Aft_PlnBoundary_BaseI.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Iso\Aft2d_PlnBoundary.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Iso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\AnIso\Aft2d_PlnBoundaryAnIso.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\AnIso</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Surface\G\Aft2d_gPlnBoundarySurface.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Surface\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Surface\T\Aft2d_tPlnBoundarySurface.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Surface\T</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.cxx">
       <Filter>AutLib\MeshAft\Boundary\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Base\Aft_PlnBoundary_Base.cxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Info\Aft_PlnBoundary_Info.cxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\Info</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

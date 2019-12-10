@@ -1,7 +1,7 @@
 #include <Aft2d_SegmentEdge.hxx>
 
 #include <Entity2d_Chain.hxx>
-#include <Mesh2d_PlnCurve.hxx>
+#include <Aft2d_PlnCurve.hxx>
 #include <Aft2d_PoleNodeTemplate.hxx>
 #include <Aft2d_PoleEdgeTemplate.hxx>
 #include <Aft2d_LineNodeTemplate.hxx>

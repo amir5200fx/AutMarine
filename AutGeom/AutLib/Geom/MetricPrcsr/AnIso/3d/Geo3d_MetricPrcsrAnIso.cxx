@@ -23,8 +23,8 @@ namespace AutLib
 		Geo3d_SegmentIntegrand line(theP0, theP1, *this);
 		Geo3d_SegmentIntegrand_Function func(line);
 
-		Debug_Null_Pointer(Info());
-		auto& inf = *Info();
+		Debug_Null_Pointer(base::Info()->IntegInfo());
+		auto& inf = *base::Info()->IntegInfo();
 
 		Numeric_AdaptIntegration<Geo3d_SegmentIntegrand_Function> alg(func, 0.0, 1.0, inf);
 		alg.Perform();
@@ -50,8 +50,8 @@ namespace AutLib
 		Geo3d_SegmentIntegrand line(theP0, theP1, *this);
 		Geo3d_SegmentIntegrand_UnitLength_Function func(line);
 
-		Debug_Null_Pointer(Info());
-		auto& inf = *Info();
+		Debug_Null_Pointer(base::Info()->IntegInfo());
+		auto& inf = *base::Info()->IntegInfo();
 
 		Numeric_AdaptIntegration<Geo3d_SegmentIntegrand_UnitLength_Function> alg(func, 0.0, 1.0, inf);
 		alg.Perform();

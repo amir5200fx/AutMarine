@@ -85,29 +85,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\MeshAft\Cad\Patch\G\Mesh2d_gPatch.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Mesh_PatchTemplate.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Patch\Mesh_PatchTemplateI.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\AnIso\Mesh2d_PlnRegionAnIso.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\AnIso\Mesh2d_PlnRegionAnIsoFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Iso\Mesh2d_PlnRegion.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Iso\Mesh2d_PlnRegionFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Mesh_PlnRegion.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurface.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurfaceFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurface.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurfaceFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\AnIso\Mesh2d_PlnWireAnIso.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\AnIso\Mesh2d_PlnWireAnIsoFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Iso\Mesh2d_PlnWire.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Iso\Mesh2d_PlnWireFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Mesh_PlnWire.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Mesh_PlnWireI.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Surface\Mesh2d_gPlnWireSurfaceFwd.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Surface\Mesh2d_tPlnWireSurface.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Surface\Mesh2d_gPlnWireSurface.hxx" />
-    <ClInclude Include="AutLib\MeshAft\Cad\Plane\Wire\Surface\Mesh2d_tPlnWireSurfaceFwd.hxx" />
     <ClInclude Include="AutLib\MeshAft\Core\2d\Aft2d_CoreAnIsoTemplate.hxx" />
     <ClInclude Include="AutLib\MeshAft\Core\Aft_Core.hxx" />
     <ClInclude Include="AutLib\MeshAft\Core\Aft_CoreI.hxx" />
@@ -122,10 +99,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurfaceTemplate.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\MeshAft\Cad\Patch\G\Mesh2d_gPatch.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Patch\T\Mesh2d_tPatch.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_gPlnRegionSurface.cxx" />
-    <ClCompile Include="AutLib\MeshAft\Cad\Plane\Surface\Mesh2d_tPlnRegionSurface.cxx" />
     <ClCompile Include="AutLib\MeshAft\Core\Aft_Core.cxx" />
     <ClCompile Include="AutLib\MeshAft\Core\Base\Aft_Core_Base.cxx" />
   </ItemGroup>

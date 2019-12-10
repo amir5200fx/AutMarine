@@ -2,11 +2,18 @@
 #ifndef _Aft_PlnBoundary_Header
 #define _Aft_PlnBoundary_Header
 
-#include <Global_Indexed.hxx>
-#include <Global_Named.hxx>
-#include <Global_Done.hxx>
+#include <Geo_MetricPrcsr.hxx>
+#include <Aft_PlnBoundary_Base.hxx>
+#include <Aft_PlnBoundary_Traits.hxx>
 
 #include <memory>
+#include <vector>
+
+#include "Aft2d_gPlnRegionSurface.hxx"
+#include "Aft2d_gPlnCurveSurface.hxx"
+#include "Aft2d_gPlnWireSurface.hxx"
+#include "Aft2d_PlnBoundary_Info.hxx"
+#include "Aft2d_gSegmentEdge.hxx"
 
 namespace AutLib
 {
@@ -15,31 +22,53 @@ namespace AutLib
 
 	template<class RegionType, class SizeFun, class MetricFun = void>
 	class Aft_PlnBoundary
-		: public Global_Indexed
-		, public Global_Named
-		, public Global_Done
+		: public Aft_PlnBoundary_Base<typename aft_pln_boundary_entity_type<RegionType>::type>
 	{
+
+		typedef Geo_MetricPrcsr<SizeFun, MetricFun>
+			metricPrcsr;
+		typedef typename aft_pln_boundary_info_type<RegionType>::type 
+			info;
+		typedef typename aft_pln_boundary_entity_type<RegionType>::type
+			bndType;
+		typedef Aft_PlnBoundary_Base<typename aft_pln_boundary_entity_type<RegionType>::type>
+			base;
+		typedef typename RegionType::plnCurveType curveType;
 
 		/*Private Data*/
 
-		std::shared_ptr<SizeFun> theSizeFun_;
-		std::shared_ptr<MetricFun> theMetricFun_;
+		std::shared_ptr<metricPrcsr> theMetricPrcsr_;
+		std::shared_ptr<info> theInfo_;
 
 		std::shared_ptr<RegionType> thePlane_;
+
+		std::vector<std::shared_ptr<bndType>> theBoundaries_;
+
+
+		//- private functions and operators
+
+		std::vector<std::shared_ptr<bndType>>& ChangeBoundaries()
+		{
+			return theBoundaries_;
+		}
+
+		void RemoveDegeneracies();
+
+		void UpdateFront();
 
 	public:
 
 		Aft_PlnBoundary()
 		{}
 
-		const std::shared_ptr<SizeFun>& SizeFunction() const
+		const std::shared_ptr<metricPrcsr>& MetricProcessor() const
 		{
-			return theSizeFun_;
+			return theMetricPrcsr_;
 		}
 
-		const std::shared_ptr<MetricFun>& MetricFunction() const
+		const std::shared_ptr<info>& Info() const
 		{
-			return theMetricFun_;
+			return theInfo_;
 		}
 
 		const std::shared_ptr<RegionType>& Plane() const
@@ -47,16 +76,16 @@ namespace AutLib
 			return thePlane_;
 		}
 
-		void Perform();
-
-		void LoadSizeFunction(const std::shared_ptr<SizeFun>& theFun)
+		const std::vector<std::shared_ptr<bndType>>& Boundaries() const
 		{
-			theSizeFun_ = theFun;
+			return theBoundaries_;
 		}
 
-		void LoadMetricFunction(const std::shared_ptr<MetricFun>& theFun)
+		void Perform();
+
+		void LoadMetricProcessor(const std::shared_ptr<metricPrcsr>& thePrcsr)
 		{
-			theMetricFun_ = theFun;
+			theMetricPrcsr_ = thePrcsr;
 		}
 
 		void LoadPlane(const std::shared_ptr<RegionType>& thePlane)
@@ -67,22 +96,46 @@ namespace AutLib
 
 	template<class RegionType, class SizeFun>
 	class Aft_PlnBoundary<RegionType, SizeFun, void>
+		: public Aft_PlnBoundary_Base<typename aft_pln_boundary_entity_type<RegionType>::type>
 	{
+
+		typedef Geo_MetricPrcsr<SizeFun>
+			metricPrcsr;
+		typedef typename aft_pln_boundary_info_type<RegionType>::type
+			info;
+		typedef typename aft_pln_boundary_entity_type<RegionType>::type
+			bndType;
 
 		/*Private Data*/
 
-		std::shared_ptr<SizeFun> theSizeFun_;
+		std::shared_ptr<metricPrcsr> theMetricPrcsr_;
+		std::shared_ptr<info> theInfo_;
 
 		std::shared_ptr<RegionType> thePlane_;
+
+
+		std::vector<std::shared_ptr<bndType>> theBoundaries_;
+
+		//- private functions and operators
+
+		std::vector<std::shared_ptr<bndType>>& ChangeBoundaries()
+		{
+			return theBoundaries_;
+		}
 
 	public:
 
 		Aft_PlnBoundary()
 		{}
 
-		const std::shared_ptr<SizeFun>& SizeFunction() const
+		const std::shared_ptr<metricPrcsr>& MetricProcessor() const
 		{
-			return theSizeFun_;
+			return theMetricPrcsr_;
+		}
+
+		const std::shared_ptr<info>& Info() const
+		{
+			return theInfo_;
 		}
 
 		const std::shared_ptr<RegionType>& Plane() const
@@ -90,11 +143,16 @@ namespace AutLib
 			return thePlane_;
 		}
 
+		const std::vector<std::shared_ptr<bndType>>& Boundaries() const
+		{
+			return theBoundaries_;
+		}
+
 		void Perform();
 
-		void LoadSizeFunction(const std::shared_ptr<SizeFun>& theFun)
+		void LoadMetricProcessor(const std::shared_ptr<metricPrcsr>& thePrcsr)
 		{
-			theSizeFun_ = theFun;
+			theMetricPrcsr_ = thePrcsr;
 		}
 
 		void LoadPlane(const std::shared_ptr<RegionType>& thePlane)
