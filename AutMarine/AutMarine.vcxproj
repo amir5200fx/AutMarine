@@ -144,9 +144,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ProjectReference Include="..\AutMeshAft\AutMeshAft.vcxproj">
       <Project>{a8593a5e-68c0-481e-84fe-6362c1821ad4}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\AutMeshAnalysis\AutMeshAnalysis.vcxproj">
-      <Project>{84a3deca-f77a-466e-a075-09817e7e8118}</Project>
-    </ProjectReference>
     <ProjectReference Include="..\AutMeshBase\AutMeshBase.vcxproj">
       <Project>{41611037-46a9-46f9-9634-682edf3f308a}</Project>
     </ProjectReference>
@@ -155,9 +152,6 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </ProjectReference>
     <ProjectReference Include="..\AutMeshRepair\AutMeshRepair.vcxproj">
       <Project>{0b03ca50-b983-4cfc-97ba-acee431f386b}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\AutMeshSingularity\AutMeshSingularity.vcxproj">
-      <Project>{28be9ab3-7d34-415d-9113-6831f49a8702}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMetricProcessor\AutMetricProcessor.vcxproj">
       <Project>{a2fbba27-c111-4f55-b2a8-6d463461844d}</Project>

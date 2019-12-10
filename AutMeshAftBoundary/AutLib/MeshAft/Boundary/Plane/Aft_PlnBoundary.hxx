@@ -9,11 +9,11 @@
 #include <memory>
 #include <vector>
 
-#include "Aft2d_gPlnRegionSurface.hxx"
-#include "Aft2d_gPlnCurveSurface.hxx"
-#include "Aft2d_gPlnWireSurface.hxx"
-#include "Aft2d_PlnBoundary_Info.hxx"
-#include "Aft2d_gSegmentEdge.hxx"
+//#include "Aft2d_gPlnRegionSurface.hxx"
+//#include "Aft2d_gPlnCurveSurface.hxx"
+//#include "Aft2d_gPlnWireSurface.hxx"
+//#include "Aft2d_PlnBoundary_Info.hxx"
+//#include "Aft2d_gSegmentEdge.hxx"
 
 namespace AutLib
 {
@@ -122,6 +122,8 @@ namespace AutLib
 		{
 			return theBoundaries_;
 		}
+
+		void UpdateFront();
 
 	public:
 
