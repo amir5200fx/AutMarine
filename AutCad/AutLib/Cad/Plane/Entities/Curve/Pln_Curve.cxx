@@ -3,8 +3,71 @@
 #include <GeoProcessor.hxx>
 #include <Cad_Tools.hxx>
 
+#include <StdFail_NotDone.hxx>
+#include <Geom2d_BSplineCurve.hxx>
 #include <Bnd_Box2d.hxx>
 #include <BndLib_Add2dCurve.hxx>
+#include <Geom2dAPI_Interpolate.hxx>
+#include <TColgp_HArray1OfPnt2d.hxx>
+
+AutLib::Pln_Curve::Pln_Curve
+(
+	const Standard_Real theFirst, 
+	const Standard_Real theLast,
+	const Handle(Geom2d_Curve)& theCurve, 
+	const std::shared_ptr<info>& theInfo
+)
+	: Cad_Curve<Geom2d_Curve>(theFirst, theLast, theCurve)
+	, theInfo_(theInfo)
+{
+	if (NOT Handle(Geom2d_BSplineCurve)::DownCast(theCurve))
+	{
+		FatalErrorIn("Pln_Curve()")
+			<< " the curve is not bspline" << endl
+			<< abort(FatalError);
+	}
+}
+
+AutLib::Pln_Curve::Pln_Curve
+(
+	const Standard_Integer theIndex, 
+	const word& theName, 
+	const Standard_Real theFirst,
+	const Standard_Real theLast, 
+	const Handle(Geom2d_Curve)& theCurve,
+	const std::shared_ptr<info>& theInfo
+)
+	: Cad_Curve<Geom2d_Curve>(theFirst, theLast, theCurve)
+	, Pln_Entity(theIndex, theName)
+	, theInfo_(theInfo)
+{
+	if (NOT Handle(Geom2d_BSplineCurve)::DownCast(theCurve))
+	{
+		FatalErrorIn("Pln_Curve()")
+			<< " the curve is not bspline" << endl
+			<< abort(FatalError);
+	}
+}
+
+void AutLib::Pln_Curve::Init
+(
+	const Standard_Real theFirst, 
+	const Standard_Real theLast,
+	const Handle(Geom2d_Curve)& theCurve
+)
+{
+	if (NOT Handle(Geom2d_BSplineCurve)::DownCast(theCurve))
+	{
+		FatalErrorIn("void Init()")
+			<< " the curve is not bspline" << endl
+			<< abort(FatalError);
+	}
+
+	base::SetFirstParam(theFirst);
+	base::SetLastParam(theLast);
+
+	base::SetCurve(theCurve);
+}
 
 Standard_Real AutLib::Pln_Curve::CalcCurvature
 (
@@ -65,6 +128,50 @@ AutLib::Pln_Curve::BoundingBox() const
 
 	Entity2d_Box box(Pnt2d(Xmin, Ymin), Pnt2d(Xmax, Ymax));
 	return std::move(box);
+}
+
+Standard_Boolean 
+AutLib::Pln_Curve::Interpolation
+(
+	const std::vector<Pnt2d>& theQ,
+	const Standard_Integer theDeg,
+	const Standard_Real theTolerance
+)
+{
+	if (theQ.size() < 2)
+	{
+		FatalErrorIn("Standard_Boolean AutLib::Plane_Curve::Interpolation(const pointList & theQ, const Standard_Integer theDeg, const Standard_Real theTolerance)")
+			<< "Not enough points"
+			<< abort(FatalError);
+	}
+
+	Handle(TColgp_HArray1OfPnt2d) PtsPtr = new TColgp_HArray1OfPnt2d(1, (Standard_Integer)theQ.size());
+	auto& Pts = *PtsPtr;
+	forThose(Index, 0, theQ.size() - 1)
+		Pts.SetValue(Index + 1, theQ[Index]);
+
+	Geom2dAPI_Interpolate Interpolation(PtsPtr, Standard_False, theTolerance);
+	Interpolation.Perform();
+
+	if (!Interpolation.IsDone())
+	{
+		return Standard_True;
+	}
+
+	try
+	{
+		Init
+		(
+			Interpolation.Curve()->FirstParameter(),
+			Interpolation.Curve()->LastParameter(),
+			Interpolation.Curve()
+		);
+		return Standard_False;
+	}
+	catch (StdFail_NotDone&)
+	{
+		return Standard_True;
+	}
 }
 
 void AutLib::Pln_Curve::Split

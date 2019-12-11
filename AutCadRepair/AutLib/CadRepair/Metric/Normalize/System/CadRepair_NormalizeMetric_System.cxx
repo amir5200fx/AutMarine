@@ -1,6 +1,8 @@
 #include <CadRepair_NormalizeMetric_System.hxx>
 
 #include <Numeric_AdaptIntegrationInfo.hxx>
+#include <CadRepair_NormalizeMetric_Info.hxx>
+
 #include <OSspecific.hxx>
 #include <OStringStream.hxx>
 #include <IOstreams.hxx>
@@ -13,16 +15,20 @@ namespace AutLib
 {
 
 	std::shared_ptr<Numeric_AdaptIntegrationInfo> 
-		cadRepairSys::normalize_metric_intg_info = std::make_shared<Numeric_AdaptIntegrationInfo>();
+		cadRepairSys::gl_normalize_metric_intg_info = std::make_shared<Numeric_AdaptIntegrationInfo>();
 
+	std::shared_ptr<CadRepair_NormalizeMetric_Info>
+		cadRepairSys::gl_normalize_metric_info = std::make_shared<CadRepair_NormalizeMetric_Info>();
 }
 
-void AutLib::cadRepairSys::InitRunTime()
+void AutLib::cadRepairSys::InitNormalizeMetricRunTime()
 {
-	auto& info = *normalize_metric_intg_info;
+	auto& info = *gl_normalize_metric_intg_info;
 
 	info.SetNbInitIterations(6);
 	info.SetTolerance(1.0e-6);
+
+	gl_normalize_metric_info->OverrideIntegInfo(gl_normalize_metric_intg_info);
 }
 
 AutLib::OSstream & AutLib::Metric_Surface_Failure::operator()

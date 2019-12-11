@@ -1,5 +1,7 @@
 #include <CadRepair_ParaPlaneAR_System.hxx>
 
+#include <CadRepair_ParaPlaneAR_Info.hxx>
+
 #include <OSspecific.hxx>
 #include <OStringStream.hxx>
 #include <IOstreams.hxx>
@@ -7,6 +9,9 @@
 #include <ITstream.hxx>
 #include <Pstream.hxx>
 #include <JobInfo.hxx>
+
+std::shared_ptr<AutLib::CadRepair_ParaPlaneAR_Info> 
+AutLib::cadRepairSys::gl_para_plane_ar_info = std::make_shared<AutLib::CadRepair_ParaPlaneAR_Info>();
 
 AutLib::OSstream & AutLib::AR_ParaPlane_Failure::operator()
 (

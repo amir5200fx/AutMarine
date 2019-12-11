@@ -319,6 +319,18 @@
     <Filter Include="AutLib\Geom\Tools">
       <UniqueIdentifier>{a598f940-5d68-4012-a355-e562f5900eef}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Function\Size\Surface">
+      <UniqueIdentifier>{a64fb8f6-6f64-44a6-a869-f01e4f03820c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\Info">
+      <UniqueIdentifier>{6088191a-b93f-4f13-8c7e-4cf3d292178e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\System">
+      <UniqueIdentifier>{17d8de2a-2a3b-490c-8777-dda1f64ae213}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\MetricPrcsr\Traits">
+      <UniqueIdentifier>{67ede9a2-c2f7-4b4c-ae8a-9da7a2e7fc2f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -476,6 +488,15 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Tools\Geo_Tools.cxx">
       <Filter>AutLib\Geom\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Function\Size\Surface\Geo2d_SizeFunction_Surface.cxx">
+      <Filter>AutLib\Geom\Function\Size\Surface</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\Info\Geo_MetricPrcsrAnIso_Info.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsrAnIso_System.cxx">
+      <Filter>AutLib\Geom\MetricPrcsr\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -862,6 +883,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Tools\Geo_Tools.hxx">
       <Filter>AutLib\Geom\Tools</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Size\Surface\Geo2d_SizeFunction_Surface.hxx">
+      <Filter>AutLib\Geom\Function\Size\Surface</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Info\Geo_MetricPrcsrAnIso_Info.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsrAnIso_System.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\Traits\Geo_MetricPrcsr_Traits.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\Traits</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

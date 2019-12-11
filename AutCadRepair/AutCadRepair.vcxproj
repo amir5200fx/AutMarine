@@ -70,10 +70,10 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(SolutionDir)\Common\Armadillo;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(IncludePath)</IncludePath>
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(SolutionDir)\Common\Armadillo;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -81,7 +81,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadRepair\Metric\Normalize\Info;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\System;$(ProjectDir)AutLib\CadRepair\Metric\Normalize;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\System;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\Info;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadRepair\Metric\Normalize\Info;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\System;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\T;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\G;$(ProjectDir)AutLib\CadRepair\Metric\Normalize;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\System;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\Info;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\T;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\G;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Imperfection;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Regular;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Singular\Deep;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Singular\Common;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Singular;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx\Info;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx\Base;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx\System;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
@@ -120,7 +121,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadRepair\Metric\Normalize\Info;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\System;$(ProjectDir)AutLib\CadRepair\Metric\Normalize;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\System;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\Info;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\CadRepair\Metric\Normalize\Info;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\System;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\T;$(ProjectDir)AutLib\CadRepair\Metric\Normalize\G;$(ProjectDir)AutLib\CadRepair\Metric\Normalize;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\System;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\Info;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\T;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane\G;$(ProjectDir)AutLib\CadRepair\AR\ParaPlane;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Imperfection;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Regular;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Singular\Deep;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Singular\Common;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Singular;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Topology;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch\Defect;$(ProjectDir)AutLib\CadRepair\Model\Entities\Patch;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx\Info;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx\Base;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx\System;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Approx;$(ProjectDir)AutLib\CadRepair\SurfaceMetric\Coloring;$(SolutionDir)AutCadAnalysis\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -130,12 +132,41 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
   <ItemGroup>
     <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneAR.hxx" />
     <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneARI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\G\CadRepair_gParaPlaneAR.hxx" />
     <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\Info\CadRepair_ParaPlaneAR_Info.hxx" />
     <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\System\CadRepair_ParaPlaneAR_System.hxx" />
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\T\CadRepair_tParaPlaneAR.hxx" />
     <ClInclude Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetric.hxx" />
     <ClInclude Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetricI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\G\CadRepair_gNormalizeMetric.hxx" />
     <ClInclude Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.hxx" />
     <ClInclude Include="AutLib\CadRepair\Metric\Normalize\System\CadRepair_NormalizeMetric_System.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\T\CadRepair_tNormalizeMetric.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\CadRepair_Patch.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\CadRepair_DefectPatch.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR\CadRepair_DefectPatch_AR.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR\CadRepair_DefectPatch_ARI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\CadRepair_DefectPatch_Geometry.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric\CadRepair_DefectPatch_Metric.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric\CadRepair_DefectPatch_MetricI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\CadRepair_DefectPatch_Topology.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\CadRepair_DefectPatch_Wire.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect\CadRepair_DefectPatch_IntersectWire.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect\CadRepair_DefectPatch_IntersectWireI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open\CadRepair_DefectPatch_OpenWire.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open\CadRepair_DefectPatch_OpenWireI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order\CadRepair_DefectPatch_OrderWire.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order\CadRepair_DefectPatch_OrderWireI.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Imperfection\CadRepair_ImpPatch.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Regular\CadRepair_RegularPatch.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\CadRepair_SingularPatch.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Common\CadRepair_SingularPatch_Common.hxx" />
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Deep\CadRepair_SingularPatch_Deep.hxx" />
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\Base\CadRepair_ApproxSurfMetric_Base.hxx" />
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\CadRepair_ApproxSurfMetric.hxx" />
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\Info\CadRepair_ApproxSurfMetric_Info.hxx" />
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\System\CadRepair_ApproxSurfMetric_System.hxx" />
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Coloring\CadRepair_ColoringSurfMetric.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneAR.cxx" />
@@ -144,6 +175,15 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClCompile Include="AutLib\CadRepair\Metric\Normalize\CadRepair_NormalizeMetric.cxx" />
     <ClCompile Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.cxx" />
     <ClCompile Include="AutLib\CadRepair\Metric\Normalize\System\CadRepair_NormalizeMetric_System.cxx" />
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric\CadRepair_DefectPatch_Metric.cxx" />
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect\CadRepair_DefectPatch_IntersectWire.cxx" />
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open\CadRepair_DefectPatch_OpenWire.cxx" />
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order\CadRepair_DefectPatch_OrderWire.cxx" />
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\Base\CadRepair_ApproxSurfMetric_Base.cxx" />
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\CadRepair_ApproxSurfMetric.cxx" />
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\Info\CadRepair_ApproxSurfMetric_Info.cxx" />
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\System\CadRepair_ApproxSurfMetric_System.cxx" />
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Coloring\CadRepair_ColoringSurfMetric.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

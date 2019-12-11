@@ -72,7 +72,7 @@ namespace AutLib
 		return std::move(cp);
 	}
 
-	template<class FrontType, class SizeFun, class MetricFun>
+	/*template<class FrontType, class SizeFun, class MetricFun>
 	typename Aft_MetricPrcsr<FrontType, SizeFun, MetricFun>::metricType 
 		Aft_MetricPrcsr<FrontType, SizeFun, MetricFun>::CalcEffectiveMetric
 		(
@@ -118,7 +118,7 @@ namespace AutLib
 
 		ms *= (landa*landa);
 		return std::move(ms);
-	}
+	}*/
 
 }
 

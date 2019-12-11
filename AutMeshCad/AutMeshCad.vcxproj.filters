@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{e494b991-e135-4578-8409-dcd63ee20454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCad">
+      <UniqueIdentifier>{9d84c1d1-3826-4a8f-a808-0ce3ee34f281}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCad\Curve">
+      <UniqueIdentifier>{558339e8-6982-45c2-8478-9aa35228028a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCad\Wire">
+      <UniqueIdentifier>{91d57158-0d2a-4bce-af49-9a950a5e06d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCad\PlnRegion">
+      <UniqueIdentifier>{f14771db-ff9e-4019-96ee-25091b3eb228}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshCad\Patch">
+      <UniqueIdentifier>{276eebab-77d1-45fb-9cd9-4c7c51d855cb}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshCad\Curve\Mesh_PlnCurve.hxx">
+      <Filter>AutLib\MeshCad\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\Curve\Mesh_PlnCurveI.hxx">
+      <Filter>AutLib\MeshCad\Curve</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\Wire\Mesh_PlnWire.hxx">
+      <Filter>AutLib\MeshCad\Wire</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\Wire\Mesh_PlnWireI.hxx">
+      <Filter>AutLib\MeshCad\Wire</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\PlnRegion\Mesh_PlnRegion.hxx">
+      <Filter>AutLib\MeshCad\PlnRegion</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\Patch\Mesh_PatchTemplate.hxx">
+      <Filter>AutLib\MeshCad\Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\Patch\Mesh_PatchTemplateI.hxx">
+      <Filter>AutLib\MeshCad\Patch</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshCad\Curve\Mesh_PlnCurve.cxx">
+      <Filter>AutLib\MeshCad\Curve</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshCad\Wire\Mesh_PlnWire.cxx">
+      <Filter>AutLib\MeshCad\Wire</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

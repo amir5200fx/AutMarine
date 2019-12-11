@@ -8,12 +8,10 @@
 #include <iostream>
 #include <IO_IGES.hxx>
 #include <FastDiscrete_Params.hxx>
-#include <Leg_Vessel_Nihad2.hxx>
-#include <Leg_Model_PropNo1.hxx>
-#include <Leg_Prop_BladeFace.hxx>
-#include <Leg_Model_DuctNo1.hxx>
 #include <Cad_Tools.hxx>
 #include <Cad3d_TModel.hxx>
+#include <Cad3d_GModel.hxx>
+#include <GModel_Surface.hxx>
 #include <TModel_Surface.hxx>
 #include <TModel_Tools.hxx>
 #include <FastDiscrete.hxx>
@@ -26,56 +24,49 @@
 #include <Geom2d_Circle.hxx>
 #include <Geo_CurveLength.hxx>
 
+#include <GModel_Curve.hxx>
+#include <GModel_Surface.hxx>
 #include <GeoSizeFun_Uniform.hxx>
+#include <CadSingularity_Detection.hxx>
+#include <CadAnalys_Model.hxx>
+#include <CadAnalys_Model_System.hxx>
 //#include <Mesh2d_AftMetricPrcsr.hxx>
+#include <Geo3d_SizeFunction.hxx>
 
-namespace AutLib
-{
+#include <AutMarine_Examples.hxx>
 
-	struct IntFun
-		: public Numeric_IntegrationFunction
-	{
-
-		Standard_Real Value(const Standard_Real x) const override
-		{
-			cout <<" x = " << x << std::endl;
-			return 3*x*x;
-		}
-	};
-
-	template<class T>
-	class A
-	{
-	public:
-
-		A()
-		{}
-
-		void f(int)
-		{}
-	};
-
-	template<class T>
-	class B : public A<T>
-	{
-	public:
-
-		using A<T>::f;
-
-		B()
-		{}
-
-		void f(int ,int)
-		{}
-	};
-}
-
+#include <Aft2d_Edge.hxx>
+#include <Aft2d_EdgeAnIso.hxx>
 
 using namespace boost::archive;
 using namespace AutLib;
 
 int main()
 {
+
+	//example_reading_iges_creating_gmodel();
+
+	std::vector<std::shared_ptr<GModel_Surface>> surfaces;
+	std::shared_ptr<Geo3d_SizeFunction> sizeFun;
+
+	Entity2d_Triangulation tri;
+
+	GeoMesh2d_Data data;
+	data.Construct(tri);
+
+	CadSingularity_Detection<GModel_Plane> detect;
+	detect.Perform();
+
+	CadAnalys_Model<GModel_Surface, Geo3d_SizeFunction>
+		analys(surfaces, sizeFun, cadAnalysSys::gl_model_analysis_info);
+
+	Mesh2d_Element ele;
+
+	Aft2d_Edge ed0;
+	Aft2d_EdgeAnIso ed1;
+
+	return 0;
+
 	/*auto fun = std::make_shared<GeoSizeFun_Uniform<Pnt2d>>(0.2);
 	Mesh_AftMetricPrcsr<Aft2d_Edge, GeoSizeFun_Uniform<Pnt2d>> procsr(fun);
 
@@ -105,23 +96,17 @@ int main()
 	Geo_CurveIntegrand<Geom2d_Circle> integrand(circle);
 	cout << "length = " << GeoLib::CalcCurveLength<Geom2d_Circle>::_(integrand, circle.FirstParameter(), circle.LastParameter(), inf);*/
 
-	
-
-	fileName name("preview.plt");
+	/*fileName name("preview.plt");
 	OFstream myFile(name);
 
 	{
 		Global_Timer timer;
 
-		Leg_Model_DuctNo1 duct;
-		duct.Perform();
-		PAUSE;
-		const auto& myShape = duct.Entity();
+		Leg_Model_PropNo1 prop;
+		prop.Perform();
 
-		Cad_Tools::ExportToIGES("mm", myShape, "duct.iges");
+		const auto& myShape = prop.Entity();
 
-		gl_fast_discrete_parameters->Angle = 1.0;
-		gl_fast_discrete_parameters->Deflection = 0.1;
 		FastDiscrete::Triangulation(myShape, *gl_fast_discrete_parameters);
 
 		auto myTris = Cad_Tools::RetrieveTriangulation(myShape);
@@ -133,7 +118,7 @@ int main()
 		}
 	}
 
-	cout << global_time_duration << std::endl;
+	cout << global_time_duration << std::endl;*/
 
 	/*{
 		Global_Timer timer;

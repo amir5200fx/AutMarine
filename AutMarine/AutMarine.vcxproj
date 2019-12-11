@@ -56,7 +56,9 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Examples;$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <AdditionalDependencies>libboost_serialization-vc141-mt-gd-x64-1_69.lib;libgmp-10.lib;libmpfr-4.lib;msmpi.lib;msmpifec.lib;msmpifmc.lib;psapi.lib;TKBin.lib;TKBinL.lib;TKBinTObj.lib;TKBinXCAF.lib;TKBO.lib;TKBool.lib;TKBRep.lib;TKCAF.lib;TKCDF.lib;TKD3DHost.lib;TKDCAF.lib;TKDFBrowser.lib;TKDraw.lib;TKernel.lib;TKFeat.lib;TKFillet.lib;TKG2d.lib;TKG3d.lib;TKGeomAlgo.lib;TKGeomBase.lib;TKHLR.lib;TKIGES.lib;TKIVtk.lib;TKIVtkDraw.lib;TKLCAF.lib;TKMath.lib;TKMesh.lib;TKMeshVS.lib;TKOffset.lib;TKOpenGl.lib;TKPrim.lib;TKQADraw.lib;TKService.lib;TKShapeView.lib;TKShHealing.lib;TKStd.lib;TKStdL.lib;TKSTEP.lib;TKSTEP209.lib;TKSTEPAttr.lib;TKSTEPBase.lib;TKSTL.lib;TKTInspector.lib;TKTInspectorAPI.lib;TKTObj.lib;TKTObjDRAW.lib;TKToolsDraw.lib;TKTopAlgo.lib;TKTopTest.lib;TKTreeModel.lib;TKV3d.lib;TKVCAF.lib;TKView.lib;TKViewerTest.lib;TKVInspector.lib;TKVRML.lib;TKXCAF.lib;TKXDEDRAW.lib;TKXDEIGES.lib;TKXDESTEP.lib;TKXMesh.lib;TKXml.lib;TKXmlL.lib;TKXmlTObj.lib;TKXmlXCAF.lib;TKXSBase.lib;TKXSDRAW.lib;tbb.lib;tbb_debug.lib;tbb_preview.lib;tbb_preview_debug.lib;tbbmalloc.lib;tbbmalloc_debug.lib;tbbmalloc_debug_s.lib;tbbmalloc_proxy.lib;tbbmalloc_proxy_debug.lib;tbbmalloc_s.lib;tbbproxy.lib;tbbproxy_debug.lib;lapack_win64_MT.lib;blas_win64_MT.lib;%(AdditionalDependencies)</AdditionalDependencies>
@@ -76,7 +78,9 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)Examples;$(SolutionDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -85,6 +89,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Examples\example_reading_iges_creating_gmodel.cxx" />
     <ClCompile Include="main.cxx" />
   </ItemGroup>
   <ItemGroup>
@@ -94,11 +99,17 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ProjectReference Include="..\AutCadAnalysis\AutCadAnalysis.vcxproj">
       <Project>{46db38ff-cedb-4b41-b4f5-2cbbdbcba25b}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\AutCadModel\AutCadModel.vcxproj">
+      <Project>{d9b716ca-0ae0-4100-af94-aea21f8a01f0}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\AutCadOperators\AutCadOperators.vcxproj">
       <Project>{ac08ae30-a740-4e81-ae41-73ec60388d64}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutCadRepair\AutCadRepair.vcxproj">
       <Project>{7b34d80c-aabb-49e6-9102-b77ee01dd31c}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AutCadSingularity\AutCadSingularity.vcxproj">
+      <Project>{07d6108e-5a58-40a2-9763-cff02f25eeeb}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutCadSketch\AutCadSketch.vcxproj">
       <Project>{f0c83bac-20d0-4ce4-8b10-ed4d9cf9f132}</Project>
@@ -109,11 +120,20 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ProjectReference Include="..\AutGeom\AutGeom.vcxproj">
       <Project>{f51e15fb-9314-4805-9753-e025e735725e}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\AutHydroStatic\AutHydroStatic.vcxproj">
+      <Project>{e82e80fb-c474-4507-ac63-2932e5624216}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\AutIO\AutIO.vcxproj">
       <Project>{c5b8127a-23a7-4752-8380-1221288db6f4}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMarineBase\AutMarineBase.vcxproj">
       <Project>{92c56944-d175-4e27-bb20-5f09c115b020}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AutMeshAdapt\AutMeshAdapt.vcxproj">
+      <Project>{fdc97543-761e-47f1-af40-bd58310a14d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AutMeshAftApi\AutMeshAftApi.vcxproj">
+      <Project>{beec3800-586c-4b54-b102-0fa6abc1801b}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMeshAftCore\AutMeshAftCore.vcxproj">
       <Project>{aadea632-4059-404a-9b25-0ccb225aa91e}</Project>
@@ -130,11 +150,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ProjectReference Include="..\AutMeshCurve\AutMeshCurve.vcxproj">
       <Project>{d9f7a879-3057-40c6-9b01-830bb7e4b355}</Project>
     </ProjectReference>
-    <ProjectReference Include="..\AutMeshSingularity\AutMeshSingularity.vcxproj">
-      <Project>{28be9ab3-7d34-415d-9113-6831f49a8702}</Project>
-    </ProjectReference>
-    <ProjectReference Include="..\AutMesh\AutMesh.vcxproj">
-      <Project>{fdc2de14-55b7-4f8c-9f4f-55469b8be32f}</Project>
+    <ProjectReference Include="..\AutMeshRepair\AutMeshRepair.vcxproj">
+      <Project>{0b03ca50-b983-4cfc-97ba-acee431f386b}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMetricProcessor\AutMetricProcessor.vcxproj">
       <Project>{a2fbba27-c111-4f55-b2a8-6d463461844d}</Project>
@@ -153,6 +170,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Examples\AutMarine_Examples.hxx" />
     <ClInclude Include="resource.h" />
   </ItemGroup>
   <ItemGroup>

@@ -13,5 +13,17 @@
     <Filter Include="AutLib\MeshAnalysis\Model">
       <UniqueIdentifier>{c1b55c8b-05b1-4763-9157-2f06cd26bc9a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Model\Info">
+      <UniqueIdentifier>{e0f2453f-16f6-40b3-ad51-249c47130fa0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Traits">
+      <UniqueIdentifier>{f1f0d679-b7f9-4677-af82-0366e2ea71da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Model\Base">
+      <UniqueIdentifier>{97b00664-d4d1-4663-ada6-8ea5752fb590}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAnalysis\Model\Traits">
+      <UniqueIdentifier>{bf43825b-97f2-467c-ab34-c78a8b1577fe}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
 </Project>

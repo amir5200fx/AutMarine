@@ -2,10 +2,16 @@
 
 #include <CadRepair_NormalizeMetric_System.hxx>
 
+const Standard_Real AutLib::CadRepair_NormalizeMetric_Info::DEFAULT_MAX_DETERMINANT(1000.0);
+
+const Standard_Integer AutLib::CadRepair_NormalizeMetric_Info::DEFAULT_NB_SEGMENTS_U(2);
+const Standard_Integer AutLib::CadRepair_NormalizeMetric_Info::DEFAULT_NB_SEGMENTS_V(2);
+
 AutLib::CadRepair_NormalizeMetric_Info::CadRepair_NormalizeMetric_Info()
 	: theMaxDet_(0)
 	, theNbSegmentsU_(DEFAULT_NB_SEGMENTS_U)
 	, theNbSegmentsV_(DEFAULT_NB_SEGMENTS_V)
+	, toApply_(Standard_False)
 {
-	theIntgInfo_ = cadRepairSys::normalize_metric_intg_info;
+	theIntgInfo_ = cadRepairSys::gl_normalize_metric_intg_info;
 }

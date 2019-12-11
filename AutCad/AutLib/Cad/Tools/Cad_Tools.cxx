@@ -645,7 +645,9 @@ AutLib::Cad_Tools::RetrieveTriangulation
 			Explorer.Next()
 			)
 	{
-		tris.push_back(RetrieveTriangulation(TopoDS::Face(Explorer.Current())));
+		auto tri = RetrieveTriangulation(TopoDS::Face(Explorer.Current()));
+		if (tri)
+			tris.push_back(tri);
 	}
 	return std::move(tris);
 }

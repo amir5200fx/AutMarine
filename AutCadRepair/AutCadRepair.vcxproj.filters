@@ -31,6 +31,87 @@
     <Filter Include="AutLib\CadRepair\AR\ParaPlane\System">
       <UniqueIdentifier>{da81c841-c1eb-4a2f-9102-04154cb1f355}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadRepair\Model">
+      <UniqueIdentifier>{dc72f6cc-1660-472e-86ce-03ad5a346635}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities">
+      <UniqueIdentifier>{a514c0dc-1a1e-49b8-bfd7-aaacd37c4c9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch">
+      <UniqueIdentifier>{2f8f6267-da3e-4bcf-a24c-12228c01a020}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Regular">
+      <UniqueIdentifier>{ac9fe607-5388-4254-b81b-6a4b389cc66f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Imperfection">
+      <UniqueIdentifier>{d4cfc48d-6ea2-4bc1-9de4-161f8687ba8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Singular">
+      <UniqueIdentifier>{069559a5-bc67-4492-bfc2-31acabeb4ebc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect">
+      <UniqueIdentifier>{1ba276f1-8ade-4dd1-a26c-3500b520ac10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Common">
+      <UniqueIdentifier>{c159c84c-98be-40b5-aaf5-6ff4eeecba4f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Deep">
+      <UniqueIdentifier>{f5c965d4-73d2-4c2f-91d8-f75dba7258ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\SurfaceMetric">
+      <UniqueIdentifier>{7140bb4d-bff4-4724-8cc7-4ca86f3cd1bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\SurfaceMetric\Approx">
+      <UniqueIdentifier>{2477f326-220c-4a6e-8fd4-9412368508a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\SurfaceMetric\Coloring">
+      <UniqueIdentifier>{9e4fa882-1f9d-4c93-bb3e-bee5ccee99f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\SurfaceMetric\Approx\Info">
+      <UniqueIdentifier>{ab80b66b-9f14-41b2-97fd-3313fe076e85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\SurfaceMetric\Approx\Base">
+      <UniqueIdentifier>{c4ffbe44-e5d3-4d9a-82c0-5c4dbf729f41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology">
+      <UniqueIdentifier>{c5718406-df99-4ed7-ba4f-3efc3df04108}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry">
+      <UniqueIdentifier>{4fd688ef-acbc-465d-8707-47b9abce60b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire">
+      <UniqueIdentifier>{3b331066-984d-4015-858f-58fd586d9f4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect">
+      <UniqueIdentifier>{abff607a-f9df-4a37-93a9-064a67269f01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order">
+      <UniqueIdentifier>{c88041b4-84c4-4d4f-9b3e-206f13025748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open">
+      <UniqueIdentifier>{abf3c410-3e93-4b62-bbd7-e4432a193909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric">
+      <UniqueIdentifier>{860a0401-5ab8-4a7e-9e4f-0c46193ca7eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR">
+      <UniqueIdentifier>{e66d6b16-169a-4eb8-9d77-c94a524c0b7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\SurfaceMetric\Approx\System">
+      <UniqueIdentifier>{35314bb5-6204-49f0-925b-b6f78a0a6a3c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\AR\ParaPlane\G">
+      <UniqueIdentifier>{5c552222-6919-441e-813e-6af041b88f57}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\AR\ParaPlane\T">
+      <UniqueIdentifier>{1570b6b1-2d8a-46c1-9da1-92426e0d4f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Metric\Normalize\G">
+      <UniqueIdentifier>{f5d2d71e-cc53-499a-9634-9d5a51cf1688}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadRepair\Metric\Normalize\T">
+      <UniqueIdentifier>{6d041a64-74c5-46a4-b1eb-7aff393257cf}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.hxx">
@@ -57,6 +138,93 @@
     <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneARI.hxx">
       <Filter>AutLib\CadRepair\AR\ParaPlane</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\CadRepair_Patch.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Regular\CadRepair_RegularPatch.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Imperfection\CadRepair_ImpPatch.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Imperfection</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\CadRepair_SingularPatch.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Singular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\CadRepair_DefectPatch.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\Info\CadRepair_ApproxSurfMetric_Info.hxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\CadRepair_ApproxSurfMetric.hxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\Base\CadRepair_ApproxSurfMetric_Base.hxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Coloring\CadRepair_ColoringSurfMetric.hxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Coloring</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Deep\CadRepair_SingularPatch_Deep.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Singular\Deep</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Singular\Common\CadRepair_SingularPatch_Common.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Singular\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\CadRepair_DefectPatch_Topology.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\CadRepair_DefectPatch_Wire.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect\CadRepair_DefectPatch_IntersectWire.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect\CadRepair_DefectPatch_IntersectWireI.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open\CadRepair_DefectPatch_OpenWire.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open\CadRepair_DefectPatch_OpenWireI.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order\CadRepair_DefectPatch_OrderWire.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order\CadRepair_DefectPatch_OrderWireI.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\CadRepair_DefectPatch_Geometry.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric\CadRepair_DefectPatch_Metric.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric\CadRepair_DefectPatch_MetricI.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR\CadRepair_DefectPatch_AR.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR\CadRepair_DefectPatch_ARI.hxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\AR</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\SurfaceMetric\Approx\System\CadRepair_ApproxSurfMetric_System.hxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\G\CadRepair_gParaPlaneAR.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\AR\ParaPlane\T\CadRepair_tParaPlaneAR.hxx">
+      <Filter>AutLib\CadRepair\AR\ParaPlane\T</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\G\CadRepair_gNormalizeMetric.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadRepair\Metric\Normalize\T\CadRepair_tNormalizeMetric.hxx">
+      <Filter>AutLib\CadRepair\Metric\Normalize\T</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\CadRepair\Metric\Normalize\Info\CadRepair_NormalizeMetric_Info.cxx">
@@ -76,6 +244,33 @@
     </ClCompile>
     <ClCompile Include="AutLib\CadRepair\AR\ParaPlane\CadRepair_ParaPlaneAR.cxx">
       <Filter>AutLib\CadRepair\AR\ParaPlane</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\Info\CadRepair_ApproxSurfMetric_Info.cxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\Base\CadRepair_ApproxSurfMetric_Base.cxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\CadRepair_ApproxSurfMetric.cxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Coloring\CadRepair_ColoringSurfMetric.cxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Coloring</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect\CadRepair_DefectPatch_IntersectWire.cxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Intersect</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open\CadRepair_DefectPatch_OpenWire.cxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Open</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order\CadRepair_DefectPatch_OrderWire.cxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Topology\Wire\Order</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric\CadRepair_DefectPatch_Metric.cxx">
+      <Filter>AutLib\CadRepair\Model\Entities\Patch\Defect\Geometry\Metric</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadRepair\SurfaceMetric\Approx\System\CadRepair_ApproxSurfMetric_System.cxx">
+      <Filter>AutLib\CadRepair\SurfaceMetric\Approx\System</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
