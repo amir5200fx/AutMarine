@@ -37,6 +37,11 @@
 
 #include <Aft2d_Edge.hxx>
 #include <Aft2d_EdgeAnIso.hxx>
+#include <Aft2d_Core.hxx>
+#include <Aft2d_MetricPrcsr.hxx>
+#include <Geo2d_MetricPrcsr.hxx>
+#include <Geo2d_SizeFunction.hxx>
+#include <Mesh2d_Node.hxx>
 
 using namespace boost::archive;
 using namespace AutLib;
@@ -64,6 +69,9 @@ int main()
 
 	Aft2d_Edge ed0;
 	Aft2d_EdgeAnIso ed1;
+	Aft2d_Node n0;
+
+	Aft2d_Core core;
 
 	return 0;
 

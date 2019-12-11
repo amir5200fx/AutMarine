@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{038403b3-4a67-4fd1-b550-4a71cd713209}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft">
+      <UniqueIdentifier>{9165fc15-9345-4aa0-b8a0-af01dc6c4d90}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model">
+      <UniqueIdentifier>{a31976ab-fb94-41be-acf8-5968c32dc60f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model\Traits">
+      <UniqueIdentifier>{66ab91d3-e5e5-445e-9535-4288c5f3d93f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model\Info">
+      <UniqueIdentifier>{a88f4fd7-79e8-4e91-b8f1-a3fe281644f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model\Cache">
+      <UniqueIdentifier>{ed5fbd1a-4239-46ec-9022-447d7fe252f5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshAft\Model\Aft_Model.hxx">
+      <Filter>AutLib\MeshAft\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Model\Aft_ModelI.hxx">
+      <Filter>AutLib\MeshAft\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Model\Traits\Aft_Model_Traits.hxx">
+      <Filter>AutLib\MeshAft\Model\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Model\Cache\Aft_Model_Cache.hxx">
+      <Filter>AutLib\MeshAft\Model\Cache</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAft\Model\Aft_Model.cxx">
+      <Filter>AutLib\MeshAft\Model</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

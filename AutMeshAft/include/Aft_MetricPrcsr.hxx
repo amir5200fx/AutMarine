@@ -134,6 +134,8 @@ namespace AutLib
 		: public Geo_MetricPrcsr<SizeFun, void>
 	{
 
+	public:
+
 		typedef Geo_MetricPrcsr<SizeFun, void> base;
 		typedef FrontType frontType;
 

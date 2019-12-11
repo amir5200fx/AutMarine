@@ -36,6 +36,9 @@
     <ClInclude Include="MeshAft\Api\Model\AftApi_Model.hxx">
       <Filter>AutLib\MeshAft\Api\Model</Filter>
     </ClInclude>
+    <ClInclude Include="MeshAft\Api\Model\Traits\AftApi_Model_Traits.hxx">
+      <Filter>AutLib\MeshAft\Api\Model\Traits</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MeshAft\Api\Curves\AftApi_BndCurves.cxx">

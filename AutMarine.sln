@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.757
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29318.209
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutMarine", "AutMarine\AutMarine.vcxproj", "{D2126030-8550-48FB-B678-7E0E236FC370}"
 EndProject
@@ -52,6 +52,8 @@ EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutMeshAftBoundary", "AutMeshAftBoundary\AutMeshAftBoundary.vcxproj", "{DA31BFEA-B36D-44E5-A56B-8DD3990CC16E}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutMeshCad", "AutMeshCad\AutMeshCad.vcxproj", "{21157B3B-4801-4255-914C-427B0DAA9DE5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "AutMeshAftModel", "AutMeshAftModel\AutMeshAftModel.vcxproj", "{DA8D37ED-DC14-4792-8101-89405AC4B9E1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -233,6 +235,14 @@ Global
 		{21157B3B-4801-4255-914C-427B0DAA9DE5}.Release|x64.Build.0 = Release|x64
 		{21157B3B-4801-4255-914C-427B0DAA9DE5}.Release|x86.ActiveCfg = Release|Win32
 		{21157B3B-4801-4255-914C-427B0DAA9DE5}.Release|x86.Build.0 = Release|Win32
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Debug|x64.ActiveCfg = Debug|x64
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Debug|x64.Build.0 = Debug|x64
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Debug|x86.ActiveCfg = Debug|Win32
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Debug|x86.Build.0 = Debug|Win32
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Release|x64.ActiveCfg = Release|x64
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Release|x64.Build.0 = Release|x64
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Release|x86.ActiveCfg = Release|Win32
+		{DA8D37ED-DC14-4792-8101-89405AC4B9E1}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

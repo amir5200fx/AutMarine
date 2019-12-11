@@ -20,8 +20,8 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{BEEC3800-586C-4B54-B102-0FA6ABC1801B}</ProjectGuid>
-    <RootNamespace>AutMeshAftApi</RootNamespace>
+    <ProjectGuid>{DA8D37ED-DC14-4792-8101-89405AC4B9E1}</ProjectGuid>
+    <RootNamespace>AutMeshAftModel</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,26 +70,24 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
+    <IncludePath>$(OPENCASCADE_INCLUDEDIR);$(BOOST_INCLUDEDIR);$(SolutionDir)Common\Armadillo;$(IncludePath)</IncludePath>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
-      <Optimization>MaxSpeed</Optimization>
-      <FunctionLevelLinking>true</FunctionLevelLinking>
-      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Api\Model\Traits;$(ProjectDir)AutLib\MeshAft\Api\Model\System;$(ProjectDir)AutLib\MeshAft\Api\Model\Base;$(ProjectDir)AutLib\MeshAft\Api\Model\Info;$(ProjectDir)AutLib\MeshAft\Api\Model;$(ProjectDir)AutLib\MeshAft\Api\Curves;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Model\Traits;$(ProjectDir)AutLib\MeshAft\Model\Cache;$(ProjectDir)AutLib\MeshAft\Model\Info;$(ProjectDir)AutLib\MeshAft\Model;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -102,25 +100,6 @@
     <Link>
       <SubSystem>Console</SubSystem>
     </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <Optimization>Disabled</Optimization>
-      <SDLCheck>true</SDLCheck>
-      <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Api\Model\Traits;$(ProjectDir)AutLib\MeshAft\Api\Model\System;$(ProjectDir)AutLib\MeshAft\Api\Model\Base;$(ProjectDir)AutLib\MeshAft\Api\Model\Info;$(ProjectDir)AutLib\MeshAft\Api\Model;$(ProjectDir)AutLib\MeshAft\Api\Curves;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <MultiProcessorCompilation>true</MultiProcessorCompilation>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-    </Link>
-    <PostBuildEvent>
-      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
-if not exist "$(ProjectDir)include" mkdir "$(ProjectDir)include"
-for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y
-for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)include" /y</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -137,14 +116,33 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Model\Traits;$(ProjectDir)AutLib\MeshAft\Model\Cache;$(ProjectDir)AutLib\MeshAft\Model\Info;$(ProjectDir)AutLib\MeshAft\Model;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="MeshAft\Api\Boundary\AftApi_Boundary.hxx" />
-    <ClInclude Include="MeshAft\Api\Curves\AftApi_BndCurves.hxx" />
-    <ClInclude Include="MeshAft\Api\Model\AftApi_Model.hxx" />
-    <ClInclude Include="MeshAft\Api\Model\Traits\AftApi_Model_Traits.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Model\Aft_Model.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Model\Aft_ModelI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Model\Cache\Aft_Model_Cache.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Model\Traits\Aft_Model_Traits.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="MeshAft\Api\Curves\AftApi_BndCurves.cxx" />
+    <ClCompile Include="AutLib\MeshAft\Model\Aft_Model.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
