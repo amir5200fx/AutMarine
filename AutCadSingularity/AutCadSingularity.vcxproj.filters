@@ -76,6 +76,12 @@
     <Filter Include="AutLib\CadSingularity\Detection\T">
       <UniqueIdentifier>{d0efd434-ab59-4fa7-9315-8228cbcae1f0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadSingularity\Detection\Base\G">
+      <UniqueIdentifier>{87aa79bc-b112-47c3-b407-0161f03937a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadSingularity\Detection\Base\T">
+      <UniqueIdentifier>{94617c79-40fc-4b09-944f-bd743188bcae}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadSingularity\Horizon\CadSingularity_Horizon.hxx">
@@ -153,6 +159,12 @@
     <ClInclude Include="AutLib\CadSingularity\Detection\T\CadSingularity_tDetection.hxx">
       <Filter>AutLib\CadSingularity\Detection\T</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Detection\Base\G\CadSingularity_gDetection_Base.hxx">
+      <Filter>AutLib\CadSingularity\Detection\Base\G</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadSingularity\Detection\Base\T\CadSingularity_tDetection_Base.hxx">
+      <Filter>AutLib\CadSingularity\Detection\Base\T</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\CadSingularity\Horizon\CadSingularity_Horizon.cxx">
@@ -193,6 +205,15 @@
     </ClCompile>
     <ClCompile Include="AutLib\CadSingularity\Detection\System\CadSingularity_Detection_System.cxx">
       <Filter>AutLib\CadSingularity\Detection\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadSingularity\Detection\Base\G\CadSingularity_gDetection_Base.cxx">
+      <Filter>AutLib\CadSingularity\Detection\Base\G</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadSingularity\Detection\Base\T\CadSingularity_tDetection_Base.cxx">
+      <Filter>AutLib\CadSingularity\Detection\Base\T</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\CadSingularity\Detection\Base\T\CadSingularity_Detection_BaseM.cxx">
+      <Filter>AutLib\CadSingularity\Detection\Base</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

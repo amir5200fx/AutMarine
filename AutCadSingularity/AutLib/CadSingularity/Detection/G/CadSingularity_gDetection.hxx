@@ -4,6 +4,7 @@
 
 #include <GModel_Surface.hxx>
 #include <CadSingularity_Detection.hxx>
+#include <CadSingularity_gDetection_Base.hxx>
 
 namespace AutLib
 {
