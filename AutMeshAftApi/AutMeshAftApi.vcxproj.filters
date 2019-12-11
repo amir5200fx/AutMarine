@@ -16,6 +16,15 @@
     <Filter Include="AutLib\MeshAft\Api\Boundary">
       <UniqueIdentifier>{009f2d7b-436d-4250-97c0-ba7a440db4c4}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Api\Model">
+      <UniqueIdentifier>{8805d6f3-f363-4312-8e61-70ba37c7e6e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Api\Model\Base">
+      <UniqueIdentifier>{23be518f-ecc8-47d1-8f51-861c3e9c85e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Api\Model\Traits">
+      <UniqueIdentifier>{7788a66b-aaa5-445e-ab4e-565ce9976240}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MeshAft\Api\Curves\AftApi_BndCurves.hxx">
@@ -23,6 +32,9 @@
     </ClInclude>
     <ClInclude Include="MeshAft\Api\Boundary\AftApi_Boundary.hxx">
       <Filter>AutLib\MeshAft\Api\Boundary</Filter>
+    </ClInclude>
+    <ClInclude Include="MeshAft\Api\Model\AftApi_Model.hxx">
+      <Filter>AutLib\MeshAft\Api\Model</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

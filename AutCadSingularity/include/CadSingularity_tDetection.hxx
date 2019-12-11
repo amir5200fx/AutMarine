@@ -4,6 +4,7 @@
 
 #include <TModel_Surface.hxx>
 #include <CadSingularity_Detection.hxx>
+#include <CadSingularity_tDetection_Base.hxx>
 
 namespace AutLib
 {
