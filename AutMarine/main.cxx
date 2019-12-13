@@ -46,6 +46,12 @@
 #include <Aft2d_PlnBoundary.hxx>
 #include <Aft2d_PlnRegion.hxx>
 
+#include <Cad2d_Plane.hxx>
+#include <Aft2d_PlnCurve.hxx>
+#include <Pln_Curve.hxx>
+#include <Pln_Wire.hxx>
+#include <Pln_Edge.hxx>
+
 using namespace boost::archive;
 using namespace AutLib;
 
@@ -53,6 +59,13 @@ int main()
 {
 
 	//example_reading_iges_creating_gmodel();
+
+	auto b = Cad2d_Plane::MakeBox(Pnt2d(0, 0), Pnt2d(1, 1));
+
+	auto reg = Aft2d_PlnRegion::MakePlane(b);
+
+	PAUSE;
+	return 0;
 
 	std::vector<std::shared_ptr<GModel_Surface>> surfaces;
 	std::shared_ptr<Geo3d_SizeFunction> sizeFun;

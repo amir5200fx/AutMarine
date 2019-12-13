@@ -33,11 +33,11 @@ namespace AutLib
 		curves.reserve(theWire.NbEdges());
 
 		Standard_Integer K = 0;
-		for (const auto& x : *theWire.Edges())
+		for (const auto& x : theWire.Edges())
 		{
 			Debug_Null_Pointer(x);
 
-			const auto& xCurve = x->Par();
+			const auto& xCurve = x->Curve();
 			Debug_Null_Pointer(xCurve);
 
 			curves.push_back(std::make_shared<plnCurveType>(*xCurve));

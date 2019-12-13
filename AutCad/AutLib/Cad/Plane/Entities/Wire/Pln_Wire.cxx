@@ -366,6 +366,6 @@ AutLib::Pln_Wire::RetrieveOrientation
 		}
 	}
 
-	if (Processor::IsCcwOrder(Pts)) return Pln_Orientation_CCW;
+	if (Processor::IsCcwOrder_cgal(Pts)) return Pln_Orientation_CCW;
 	else return Pln_Orientation_CW;
 }
