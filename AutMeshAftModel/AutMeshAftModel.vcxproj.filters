@@ -19,6 +19,21 @@
     <Filter Include="AutLib\MeshAft\Model\Cache">
       <UniqueIdentifier>{ed5fbd1a-4239-46ec-9022-447d7fe252f5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Model\Constants">
+      <UniqueIdentifier>{44793fe8-ae60-4e2b-bee0-16a0528c3cc1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model\Iso">
+      <UniqueIdentifier>{e7903d1a-1f89-4225-9a8f-18ddbe2350c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model\Iso\2d">
+      <UniqueIdentifier>{6c054b8a-d6ce-41dd-925c-55105d120a97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model\AnIso">
+      <UniqueIdentifier>{44290e51-e968-41f8-95e6-ae7c2e16a07d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Model\AnIso\2d">
+      <UniqueIdentifier>{3a4bf465-0904-48cc-bfa4-3a957053d7fa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Model\Aft_Model.hxx">
@@ -33,10 +48,22 @@
     <ClInclude Include="AutLib\MeshAft\Model\Cache\Aft_Model_Cache.hxx">
       <Filter>AutLib\MeshAft\Model\Cache</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Model\Constants\Aft_Model_Constants.hxx">
+      <Filter>AutLib\MeshAft\Model\Constants</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Model\Iso\2d\Aft2d_Model.hxx">
+      <Filter>AutLib\MeshAft\Model\Iso\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Model\AnIso\2d\Aft2d_ModelAnIso.hxx">
+      <Filter>AutLib\MeshAft\Model\AnIso\2d</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Model\Aft_Model.cxx">
       <Filter>AutLib\MeshAft\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Model\Constants\Aft_Model_Constants.cxx">
+      <Filter>AutLib\MeshAft\Model\Constants</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -2,6 +2,12 @@
 
 #include <Pln_Ring.hxx>
 
+namespace AutLib
+{
+
+	const std::shared_ptr<Pln_Vertex> Pln_Vertex::null = std::make_shared<Pln_Vertex>();
+}
+
 Standard_Boolean AutLib::Pln_Vertex::IsFree() const
 {
 	return NbEdges() IS_EQUAL 1;

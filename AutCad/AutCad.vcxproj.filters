@@ -402,6 +402,9 @@
     <ClCompile Include="AutLib\Cad\Plane\System\Cad2d_Plane_System.cxx">
       <Filter>AutLib\Cad\Plane\System</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\Cad\Plane\Cad2d_PlaneIO.cxx">
+      <Filter>AutLib\Cad\Plane</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Serialization\Cad_Serialization.hxx">

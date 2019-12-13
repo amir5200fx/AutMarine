@@ -42,6 +42,9 @@
 #include <Geo2d_MetricPrcsr.hxx>
 #include <Geo2d_SizeFunction.hxx>
 #include <Mesh2d_Node.hxx>
+#include <Aft2d_Model.hxx>
+#include <Aft2d_PlnBoundary.hxx>
+#include <Aft2d_PlnRegion.hxx>
 
 using namespace boost::archive;
 using namespace AutLib;
@@ -72,6 +75,10 @@ int main()
 	Aft2d_Node n0;
 
 	Aft2d_Core core;
+	Aft2d_Model model;
+	model.Perform();
+
+	
 
 	return 0;
 

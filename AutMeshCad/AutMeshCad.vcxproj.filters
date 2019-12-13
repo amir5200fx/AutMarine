@@ -19,6 +19,9 @@
     <Filter Include="AutLib\MeshCad\Patch">
       <UniqueIdentifier>{276eebab-77d1-45fb-9cd9-4c7c51d855cb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshCad\PlnRegion\Traits">
+      <UniqueIdentifier>{81ca521a-cb77-4358-8899-eb0f6ad13e1b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshCad\Curve\Mesh_PlnCurve.hxx">
@@ -41,6 +44,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\MeshCad\Patch\Mesh_PatchTemplateI.hxx">
       <Filter>AutLib\MeshCad\Patch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\PlnRegion\Traits\Mesh_PlnRegion_Traits.hxx">
+      <Filter>AutLib\MeshCad\PlnRegion\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshCad\PlnRegion\Mesh_PlnRegionI.hxx">
+      <Filter>AutLib\MeshCad\PlnRegion</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

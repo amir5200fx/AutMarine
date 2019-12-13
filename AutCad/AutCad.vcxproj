@@ -33,6 +33,7 @@
     <ClCompile Include="AutLib\Cad\GModel\System\GModel_System.cxx" />
     <ClCompile Include="AutLib\Cad\GModel\Tools\GModel_Tools.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Cad2d_Plane.cxx" />
+    <ClCompile Include="AutLib\Cad\Plane\Cad2d_PlaneIO.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Entities\CmpEdge\Pln_CmpEdge.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Entities\Curve\Pln_Curve.cxx" />
     <ClCompile Include="AutLib\Cad\Plane\Entities\Cutter\Pln_Cutter.cxx" />

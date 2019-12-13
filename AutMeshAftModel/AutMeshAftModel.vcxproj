@@ -81,7 +81,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Model\Traits;$(ProjectDir)AutLib\MeshAft\Model\Cache;$(ProjectDir)AutLib\MeshAft\Model\Info;$(ProjectDir)AutLib\MeshAft\Model;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Model\Traits;$(ProjectDir)AutLib\MeshAft\Model\Cache;$(ProjectDir)AutLib\MeshAft\Model\Info;$(ProjectDir)AutLib\MeshAft\Model\Constants;$(ProjectDir)AutLib\MeshAft\Model\AnIso\2d;$(ProjectDir)AutLib\MeshAft\Model\Iso\2d;$(ProjectDir)AutLib\MeshAft\Model;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -89,6 +89,12 @@
     <Link>
       <SubSystem>Console</SubSystem>
     </Link>
+    <PostBuildEvent>
+      <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
+if not exist "$(ProjectDir)include" mkdir "$(ProjectDir)include"
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(SolutionDir)include" /y
+for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)include" /y</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
@@ -124,7 +130,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Model\Traits;$(ProjectDir)AutLib\MeshAft\Model\Cache;$(ProjectDir)AutLib\MeshAft\Model\Info;$(ProjectDir)AutLib\MeshAft\Model;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Model\Traits;$(ProjectDir)AutLib\MeshAft\Model\Cache;$(ProjectDir)AutLib\MeshAft\Model\Info;$(ProjectDir)AutLib\MeshAft\Model\Constants;$(ProjectDir)AutLib\MeshAft\Model\AnIso\2d;$(ProjectDir)AutLib\MeshAft\Model\Iso\2d;$(ProjectDir)AutLib\MeshAft\Model;$(SolutionDir)AutMeshAftOptNode\include;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalUsingDirectories>
       </AdditionalUsingDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
@@ -138,11 +144,15 @@
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Model\Aft_Model.hxx" />
     <ClInclude Include="AutLib\MeshAft\Model\Aft_ModelI.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Model\AnIso\2d\Aft2d_ModelAnIso.hxx" />
     <ClInclude Include="AutLib\MeshAft\Model\Cache\Aft_Model_Cache.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Model\Constants\Aft_Model_Constants.hxx" />
+    <ClInclude Include="AutLib\MeshAft\Model\Iso\2d\Aft2d_Model.hxx" />
     <ClInclude Include="AutLib\MeshAft\Model\Traits\Aft_Model_Traits.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Model\Aft_Model.cxx" />
+    <ClCompile Include="AutLib\MeshAft\Model\Constants\Aft_Model_Constants.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
