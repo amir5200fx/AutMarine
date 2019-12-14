@@ -9,9 +9,9 @@
 #include <GeoProcessor.hxx>
 #include <Adt_AvlTree.hxx>
 
-void AutLib::Pln_Wire::CalcBoundingBox()
+void AutLib::Pln_Wire::CalcBoundingBox(const edgeList& theEdges)
 {
-	const auto& edges = Edges();
+	const auto& edges = theEdges;
 
 	if (edges.empty())
 	{
@@ -20,24 +20,25 @@ void AutLib::Pln_Wire::CalcBoundingBox()
 			<< abort(FatalError);
 	}
 
-	const auto iter = edges.cbegin();
+	auto iter = edges.begin();
 	Debug_Null_Pointer(*iter);
 	Debug_Null_Pointer((*iter)->Curve());
 
 	auto box = (*iter)->Curve()->BoundingBox();
-	while (iter NOT_EQUAL edges.cend())
+	while (iter NOT_EQUAL edges.end())
 	{
 		const auto& x = (*iter)->Curve();
 
 		Debug_Null_Pointer(x);
 		box = Entity2d_Box::Union(box, x->BoundingBox());
+		iter++;
 	}
 	theBoundingBox_ = std::make_shared<Entity2d_Box>(box);
 }
 
 void AutLib::Pln_Wire::CheckWire(const edgeList & theEdges) const
 {
-	const auto& edges = Edges();
+	const auto& edges = theEdges;
 
 	if (edges.size() IS_EQUAL 1)
 	{
@@ -85,11 +86,13 @@ void AutLib::Pln_Wire::CreateWire
 			<< "Null edge list!" << endl
 			<< abort(FatalError);
 	}
-
+	
 	CheckWire(theEdges->Edges());
+	
+	CalcBoundingBox(theEdges->Edges());
 
 	theEdges_ = theEdges;
-
+	
 	theOrientation_ = RetrieveOrientation(*this);
 }
 
@@ -209,17 +212,18 @@ namespace AutLib
 			}
 			list->push_back(edge);
 		}
-
+		
 		if (NOT cycle)
 		{
 			FatalErrorIn("wire_ptr TrackWire(Adt_AvlTree<std::shared_ptr<Plane_Edge>>& theRegister)")
 				<< "found no wire" << endl
 				<< abort(FatalError);
 		}
-
+		
 		auto compound = Pln_Tools::MakeCompoundEdge(*list);
 
 		auto wire = std::make_shared<Pln_Wire>(0, compound);
+
 		return std::move(wire);
 	}
 }
@@ -360,10 +364,15 @@ AutLib::Pln_Wire::RetrieveOrientation
 		const auto& chain = x->Approx();
 		const auto& appx_pts = chain->Points();
 
-		for (const auto& pt : appx_pts)
+		forThose(Index, 0, appx_pts.size() - 2)
+		{
+			Pts.push_back(appx_pts[Index]);
+		}
+
+		/*for (const auto& pt : appx_pts)
 		{
 			Pts.push_back(pt);
-		}
+		}*/
 	}
 
 	if (Processor::IsCcwOrder_cgal(Pts)) return Pln_Orientation_CCW;

@@ -66,6 +66,7 @@ void AutLib::Cad2d_Plane::Make
 {
 	Debug_Null_Pointer(theInfo_);
 	auto edges = Pln_Edge::MakeEdges(theCurves, Info()->Tolerance());
+
 	for (auto& x : edges)
 	{
 		Debug_Null_Pointer(x);
@@ -248,10 +249,10 @@ AutLib::Cad2d_Plane::MakeBox
 	const auto& P2 = theP1;
 	const auto P3 = Pnt2d(theP0.X(), theP1.Y());
 
-	const auto c1 = Cad_Tools::MakeSegment(P0, P1);
-	const auto c2 = Cad_Tools::MakeSegment(P1, P2);
-	const auto c3 = Cad_Tools::MakeSegment(P2, P3);
-	const auto c4 = Cad_Tools::MakeSegment(P3, P0);
+	const auto c1 = Cad_Tools::ConvertToBSpline(Cad_Tools::MakeSegment(P0, P1));
+	const auto c2 = Cad_Tools::ConvertToBSpline(Cad_Tools::MakeSegment(P1, P2));
+	const auto c3 = Cad_Tools::ConvertToBSpline(Cad_Tools::MakeSegment(P2, P3));
+	const auto c4 = Cad_Tools::ConvertToBSpline(Cad_Tools::MakeSegment(P3, P0));
 
 	std::vector<std::shared_ptr<Pln_Curve>> curves;
 	curves.reserve(4);

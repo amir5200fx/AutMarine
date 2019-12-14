@@ -45,6 +45,7 @@
 #include <Aft2d_Model.hxx>
 #include <Aft2d_PlnBoundary.hxx>
 #include <Aft2d_PlnRegion.hxx>
+#include <Cad2d_Plane_System.hxx>
 
 #include <Cad2d_Plane.hxx>
 #include <Aft2d_PlnCurve.hxx>
@@ -59,6 +60,9 @@ int main()
 {
 
 	//example_reading_iges_creating_gmodel();
+	sysLib::init_pln_approx_curve_info();
+	sysLib::init_pln_curve_info();
+	sysLib::init_plane_info();
 
 	auto b = Cad2d_Plane::MakeBox(Pnt2d(0, 0), Pnt2d(1, 1));
 
