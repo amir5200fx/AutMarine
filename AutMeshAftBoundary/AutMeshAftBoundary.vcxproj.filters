@@ -46,6 +46,9 @@
     <Filter Include="AutLib\MeshAft\Boundary\Plane\Surface\T">
       <UniqueIdentifier>{2e27c5fa-3837-4d78-b6e5-297f05db1aa3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\MeshAft\Boundary\Plane\System">
+      <UniqueIdentifier>{0eb51131-8f47-410a-b89c-ce8645b0df28}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.hxx">
@@ -90,6 +93,9 @@
     <ClInclude Include="AutLib\MeshAft\Boundary\Plane\Surface\T\Aft2d_tPlnBoundarySurface.hxx">
       <Filter>AutLib\MeshAft\Boundary\Plane\Surface\T</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Boundary\Plane\System\Aft_PlnBoundary_System.hxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\System</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Aft_PlnBoundary.cxx">
@@ -100,6 +106,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\MeshAft\Boundary\Plane\Info\Aft_PlnBoundary_Info.cxx">
       <Filter>AutLib\MeshAft\Boundary\Plane\Info</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Boundary\Plane\System\Aft_PlnBoundary_System.cxx">
+      <Filter>AutLib\MeshAft\Boundary\Plane\System</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

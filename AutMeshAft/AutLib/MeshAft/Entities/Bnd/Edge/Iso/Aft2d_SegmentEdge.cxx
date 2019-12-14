@@ -72,3 +72,107 @@ AutLib::Aft2d_SegmentEdge::GetTopology
 	}
 	return std::move(edges);
 }
+
+template<>
+void AutLib::Aft2d_SegmentEdge::MergeDangles
+(
+	const std::vector<std::shared_ptr<Aft2d_SegmentEdge>>& theWire,
+	const Standard_Real theTol
+)
+{
+	forThose(Index, 1, theWire.size() - 1)
+	{
+		Debug_Null_Pointer(theWire[Index - 1]);
+		Debug_Null_Pointer(theWire[Index]);
+
+		auto& e0 = *theWire[Index - 1];
+		auto& e1 = *theWire[Index];
+
+		if (e0.Node1() IS_EQUAL e1.Node0())
+			continue;
+
+		if (Distance(e0.Node1()->Coord(), e1.Node0()->Coord()) > theTol)
+		{
+			FatalErrorIn(FunctionSIG) << endl
+				<< "Invalid Wire" << endl
+				<< abort(FatalError);
+		}
+
+		const auto sn0 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e0.Node1());
+		const auto sn1 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e1.Node0());
+
+		if (sn0 AND sn1)
+		{
+			auto node =
+				Aft2d_SegmentNode::MergeNodes(sn0, sn1, Aft2d_SegmentNode::Merge_Alg::New);
+
+			e0.SetNode1(node);
+			e1.SetNode0(node);
+
+			continue;
+		}
+
+		const auto cn0 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e0.Node1());
+		const auto cn1 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e1.Node0());
+
+		if (sn0 AND sn1)
+		{
+			auto node =
+				Aft2d_CornerNode::MergeNodes(cn0, cn1, Aft2d_CornerNode::Merge_Alg::New);
+
+			e0.SetNode1(node);
+			e1.SetNode0(node);
+
+			continue;
+		}
+
+		FatalErrorIn(FunctionSIG) << endl
+			<< "Invalid Wire" << endl
+			<< abort(FatalError);
+	}
+
+	auto& e0 = *theWire[theWire.size() - 1];
+	auto& e1 = *theWire[0];
+
+	if (e0.Node1() IS_EQUAL e1.Node0())
+		return;
+
+	if (Distance(e0.Node1()->Coord(), e1.Node0()->Coord()) > theTol)
+	{
+		FatalErrorIn(FunctionSIG) << endl
+			<< "Invalid Wire" << endl
+			<< abort(FatalError);
+	}
+
+	const auto sn0 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e0.Node1());
+	const auto sn1 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e1.Node0());
+
+	if (sn0 AND sn1)
+	{
+		auto node =
+			Aft2d_SegmentNode::MergeNodes(sn0, sn1, Aft2d_SegmentNode::Merge_Alg::New);
+
+		e0.SetNode1(node);
+		e1.SetNode0(node);
+
+		return;
+	}
+
+	const auto cn0 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e0.Node1());
+	const auto cn1 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e1.Node0());
+
+	if (sn0 AND sn1)
+	{
+		auto node =
+			Aft2d_CornerNode::MergeNodes(cn0, cn1, Aft2d_CornerNode::Merge_Alg::New);
+
+		e0.SetNode1(node);
+		e1.SetNode0(node);
+
+		return;
+	}
+
+	FatalErrorIn(FunctionSIG) << endl
+		<< "Invalid Wire" << endl
+		<< abort(FatalError);
+}

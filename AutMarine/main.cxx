@@ -61,7 +61,8 @@ int main()
 
 	//example_reading_iges_creating_gmodel();
 	//example_creating_plane_region_box();
-	example_spliting_block_surface();
+	//example_spliting_block_surface();
+	example_boundary_mesh_plane_region();
 
 	PAUSE;
 	return 0;
