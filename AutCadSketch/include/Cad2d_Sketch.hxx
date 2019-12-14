@@ -3,7 +3,7 @@
 #define _Cad2d_Sketch_Header
 
 #include <Cad_Sketch.hxx>
-#include <Cad2d_SketchEngine.hxx>
+#include <Cad2d_Sketch_Engine.hxx>
 
 #include <memory>
 
@@ -23,7 +23,7 @@ namespace AutLib
 
 	class Cad2d_Sketch
 		: public Cad_Sketch
-		, public Cad2d_SketchEngine
+		, public Cad2d_Sketch_Engine
 	{
 
 		/*Private Data*/

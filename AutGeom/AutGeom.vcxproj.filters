@@ -495,7 +495,7 @@
     <ClCompile Include="AutLib\Geom\MetricPrcsr\Info\Geo_MetricPrcsrAnIso_Info.cxx">
       <Filter>AutLib\Geom\MetricPrcsr\Info</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsrAnIso_System.cxx">
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsr_System.cxx">
       <Filter>AutLib\Geom\MetricPrcsr\System</Filter>
     </ClCompile>
   </ItemGroup>
@@ -890,11 +890,11 @@
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Info\Geo_MetricPrcsrAnIso_Info.hxx">
       <Filter>AutLib\Geom\MetricPrcsr\Info</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsrAnIso_System.hxx">
-      <Filter>AutLib\Geom\MetricPrcsr\System</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Traits\Geo_MetricPrcsr_Traits.hxx">
       <Filter>AutLib\Geom\MetricPrcsr\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsr_System.hxx">
+      <Filter>AutLib\Geom\MetricPrcsr\System</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

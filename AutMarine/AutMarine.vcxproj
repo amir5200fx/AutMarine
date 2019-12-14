@@ -91,7 +91,10 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Examples\example_boundary_mesh_plane_region.cxx" />
+    <ClCompile Include="Examples\example_creating_plane_region_box.cxx" />
     <ClCompile Include="Examples\example_reading_iges_creating_gmodel.cxx" />
+    <ClCompile Include="Examples\example_spliting_block_surface.cxx" />
     <ClCompile Include="main.cxx" />
   </ItemGroup>
   <ItemGroup>
@@ -137,8 +140,14 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ProjectReference Include="..\AutMeshAftApi\AutMeshAftApi.vcxproj">
       <Project>{beec3800-586c-4b54-b102-0fa6abc1801b}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\AutMeshAftBoundary\AutMeshAftBoundary.vcxproj">
+      <Project>{da31bfea-b36d-44e5-a56b-8dd3990cc16e}</Project>
+    </ProjectReference>
     <ProjectReference Include="..\AutMeshAftCore\AutMeshAftCore.vcxproj">
       <Project>{aadea632-4059-404a-9b25-0ccb225aa91e}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AutMeshAftModel\AutMeshAftModel.vcxproj">
+      <Project>{da8d37ed-dc14-4792-8101-89405ac4b9e1}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMeshAftOptNode\AutMeshAftOptNode.vcxproj">
       <Project>{f7221de5-fa66-45d0-a33e-9ec4383be7f7}</Project>
@@ -148,6 +157,9 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </ProjectReference>
     <ProjectReference Include="..\AutMeshBase\AutMeshBase.vcxproj">
       <Project>{41611037-46a9-46f9-9634-682edf3f308a}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AutMeshCad\AutMeshCad.vcxproj">
+      <Project>{21157b3b-4801-4255-914c-427b0daa9de5}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMeshCurve\AutMeshCurve.vcxproj">
       <Project>{d9f7a879-3057-40c6-9b01-830bb7e4b355}</Project>

@@ -4,6 +4,7 @@
 
 #include <Global_Indexed.hxx>
 #include <Global_Named.hxx>
+#include <Entity_Box.hxx>
 #include <Geo_CascadeTraits.hxx>
 #include <Numeric_AdaptIntegrationInfo.hxx>
 #include <Geo_MetricPrcsrAnIso_Info.hxx>
@@ -28,12 +29,15 @@ namespace AutLib
 
 		/*Private Data*/
 
+		Standard_Real theDimSize_;
+
 		std::shared_ptr<info> theInfo_;
 
 	protected:
 
 		Geo_MetricPrcsr_Base(const std::shared_ptr<info>& theInfo)
 			: theInfo_(theInfo)
+			, theDimSize_(RealLast())
 		{}
 
 		Geo_MetricPrcsr_Base
@@ -45,11 +49,24 @@ namespace AutLib
 			: Global_Indexed(theIndex)
 			, Global_Named(theName)
 			, theInfo_(theInfo)
+			, theDimSize_(RealLast())
 		{}
+
+	public:
 
 		const std::shared_ptr<info>& Info() const
 		{
 			return theInfo_;
+		}
+
+		const Standard_Real DimSize() const
+		{
+			return theDimSize_;
+		}
+
+		void SetDimSize(const Standard_Real theSize)
+		{
+			theDimSize_ = theSize;
 		}
 
 		void OverrideInfo
@@ -116,6 +133,12 @@ namespace AutLib
 			, theSizeFunction_(theSizeFunction)
 			, theMetricFunction_(theMetricFunction)
 		{}
+
+		const Entity_Box<Point>& BoundingBox() const
+		{
+			Debug_Null_Pointer(SizeFunction());
+			return SizeFunction()->BoundingBox();
+		}
 
 		const std::shared_ptr<SizeFun>& SizeFunction() const
 		{
@@ -239,6 +262,12 @@ namespace AutLib
 			: Geo_MetricPrcsr_Base<void>(theIndex, theName, theInfo)
 			, theSizeFunction_(theSizeFunction)
 		{}
+
+		const Entity_Box<Point>& BoundingBox() const
+		{
+			Debug_Null_Pointer(SizeFunction());
+			return SizeFunction()->BoundingBox();
+		}
 
 		const std::shared_ptr<SizeFun>& SizeFunction() const
 		{

@@ -133,6 +133,7 @@ namespace AutLib
 			{
 				poly.push_back(Point_2(x.X(), x.Y()));
 			}
+
 			bool IsClockwise = (poly.orientation() == CGAL::COUNTERCLOCKWISE);
 
 			return IsClockwise;

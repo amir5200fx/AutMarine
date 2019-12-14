@@ -193,6 +193,18 @@ namespace AutLib
 
 	template<class FrontType, class SizeFun>
 	typename Aft_MetricPrcsr<FrontType, SizeFun, void>::box 
+		Aft_MetricPrcsr<FrontType, SizeFun, void>::CalcSearchRegion
+		(
+			const Standard_Real theRadius, 
+			const frontType & theFront
+		) const
+	{
+		auto b = CalcSearchRegion(theRadius, theFront.Centre());
+		return std::move(b);
+	}
+
+	template<class FrontType, class SizeFun>
+	typename Aft_MetricPrcsr<FrontType, SizeFun, void>::box 
 		Aft_MetricPrcsr<FrontType, SizeFun, void>::CalcEffectiveFront
 		(
 			const Standard_Real theRadius,

@@ -120,6 +120,8 @@ namespace AutLib
 			return theGeom_;
 		}
 
+		Handle(Poly_Triangulation) RetrieveTriangulation() const;
+
 		const Handle(Poly_Triangulation)& Triangulation() const
 		{
 			return theTriangulation_;

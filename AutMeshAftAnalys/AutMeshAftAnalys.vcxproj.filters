@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{287754d8-975f-4132-b315-8f1c2f433dcf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft">
+      <UniqueIdentifier>{fbab5503-eeec-4f7f-a9c7-66b291e2a7d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Analys">
+      <UniqueIdentifier>{055a58a1-738a-4d14-813b-1f07c3e39264}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Analys\Plane">
+      <UniqueIdentifier>{8ae3c210-85d4-4b21-8d79-ce875b6b496f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Analys\Plane\Base">
+      <UniqueIdentifier>{c6815e2e-b9ee-4d60-adbe-0a10bbf8b848}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Analys\Plane\Traits">
+      <UniqueIdentifier>{845372b8-9c65-4657-b868-642bc24b1748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\MeshAft\Analys\Plane\Info">
+      <UniqueIdentifier>{c1350325-778d-4e58-ba3c-7394f6270269}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\MeshAft\Analys\Plane\Aft_PlnAnalys.cxx">
+      <Filter>AutLib\MeshAft\Analys\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Analys\Plane\Base\Aft_PlnAnalys_Base.cxx">
+      <Filter>AutLib\MeshAft\Analys\Plane\Base</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\MeshAft\Analys\Plane\Aft_PlnAnalys.hxx">
+      <Filter>AutLib\MeshAft\Analys\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Analys\Plane\Aft_PlnAnalysI.hxx">
+      <Filter>AutLib\MeshAft\Analys\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Analys\Plane\Base\Aft_PlnAnalys_Base.hxx">
+      <Filter>AutLib\MeshAft\Analys\Plane\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Analys\Plane\Traits\Aft_PlnAnalys_Traits.hxx">
+      <Filter>AutLib\MeshAft\Analys\Plane\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\MeshAft\Analys\Plane\Base\Aft_PlnAnalys_BaseI.hxx">
+      <Filter>AutLib\MeshAft\Analys\Plane\Base</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
