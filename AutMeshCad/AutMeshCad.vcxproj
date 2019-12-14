@@ -81,7 +81,8 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshCad\Patch;$(ProjectDir)AutLib\MeshCad\PlnRegion;$(ProjectDir)AutLib\MeshCad\Wire;$(ProjectDir)AutLib\MeshCad\Curve;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshCad\Patch;$(ProjectDir)AutLib\MeshCad\PlnRegion\Traits;$(ProjectDir)AutLib\MeshCad\PlnRegion;$(ProjectDir)AutLib\MeshCad\Wire;$(ProjectDir)AutLib\MeshCad\Curve;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
@@ -120,7 +121,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshCad\Patch;$(ProjectDir)AutLib\MeshCad\PlnRegion;$(ProjectDir)AutLib\MeshCad\Wire;$(ProjectDir)AutLib\MeshCad\Curve;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshCad\Patch;$(ProjectDir)AutLib\MeshCad\PlnRegion\Traits;$(ProjectDir)AutLib\MeshCad\PlnRegion;$(ProjectDir)AutLib\MeshCad\Wire;$(ProjectDir)AutLib\MeshCad\Curve;$(SolutionDir)AutGeom\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -133,6 +135,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\MeshCad\Patch\Mesh_PatchTemplate.hxx" />
     <ClInclude Include="AutLib\MeshCad\Patch\Mesh_PatchTemplateI.hxx" />
     <ClInclude Include="AutLib\MeshCad\PlnRegion\Mesh_PlnRegion.hxx" />
+    <ClInclude Include="AutLib\MeshCad\PlnRegion\Mesh_PlnRegionI.hxx" />
+    <ClInclude Include="AutLib\MeshCad\PlnRegion\Traits\Mesh_PlnRegion_Traits.hxx" />
     <ClInclude Include="AutLib\MeshCad\Wire\Mesh_PlnWire.hxx" />
     <ClInclude Include="AutLib\MeshCad\Wire\Mesh_PlnWireI.hxx" />
   </ItemGroup>

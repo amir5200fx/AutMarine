@@ -82,6 +82,9 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Polygon;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Info;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\System;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Engine;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d;$(SolutionDir)AutCadSketch\AutLib\Sketch;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Quadrilateral;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\LineSegment;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Approximation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation\Info;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Ellipse;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Circle;$(SolutionDir)AutCadSketch\AutLib\Geom\2d;$(SolutionDir)AutCadSketch\AutLib\Geom;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
@@ -121,6 +124,9 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Polygon;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Info;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\System;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d\Engine;$(SolutionDir)AutCadSketch\AutLib\Sketch\2d;$(SolutionDir)AutCadSketch\AutLib\Sketch;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Quadrilateral;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\LineSegment;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Approximation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation\Info;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Interpolation;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Ellipse;$(SolutionDir)AutCadSketch\AutLib\Geom\2d\Circle;$(SolutionDir)AutCadSketch\AutLib\Geom\2d;$(SolutionDir)AutCadSketch\AutLib\Geom;$(SolutionDir)AutGeom\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutIO\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalUsingDirectories>
+      </AdditionalUsingDirectories>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -136,7 +142,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\Geom\2d\LineSegment\Geo2d_LineSegment.hxx" />
     <ClInclude Include="AutLib\Geom\Geo_Sketch.hxx" />
     <ClInclude Include="AutLib\Sketch\2d\Cad2d_Sketch.hxx" />
-    <ClInclude Include="AutLib\Sketch\2d\Engine\Cad2d_SketchEngine.hxx" />
+    <ClInclude Include="AutLib\Sketch\2d\Engine\Cad2d_Sketch_Engine.hxx" />
     <ClInclude Include="AutLib\Sketch\2d\Info\Cad2d_SketchInfo.hxx" />
     <ClInclude Include="AutLib\Sketch\2d\System\Cad2d_SketchCache.hxx" />
     <ClInclude Include="AutLib\Sketch\Cad_Sketch.hxx" />
@@ -149,6 +155,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClCompile Include="AutLib\Geom\2d\Interpolation\Info\Geo2d_InterpolationInfo.cxx" />
     <ClCompile Include="AutLib\Geom\2d\LineSegment\Geo2d_LineSegment.cxx" />
     <ClCompile Include="AutLib\Sketch\2d\Cad2d_Sketch.cxx" />
+    <ClCompile Include="AutLib\Sketch\2d\Engine\Cad2d_Sketch_Engine.cxx" />
     <ClCompile Include="AutLib\Sketch\2d\Info\Cad2d_SketchInfo.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -2,6 +2,7 @@
 #ifndef _Geo2d_SizeFunction_Surface_Header
 #define _Geo2d_SizeFunction_Surface_Header
 
+#include <Entity2d_Box.hxx>
 #include <Geo2d_SizeFunction.hxx>
 #include <Geo3d_SizeFunction.hxx>
 
@@ -26,15 +27,18 @@ namespace AutLib
 
 	public:
 
-		Geo2d_SizeFunction_Surface()
+		Geo2d_SizeFunction_Surface(const Entity2d_Box& theBox)
+			: Geo2d_SizeFunction(theBox)
 		{}
 
 		Geo2d_SizeFunction_Surface
 		(
 			const Handle(Geom_Surface)& theSurface, 
-			const std::shared_ptr<Geo3d_SizeFunction>& theSize3d
+			const std::shared_ptr<Geo3d_SizeFunction>& theSize3d,
+			const Entity2d_Box& theBox
 		)
-			: theSurface_(theSurface)
+			: Geo2d_SizeFunction(theBox)
+			, theSurface_(theSurface)
 			, theSize3d_(theSize3d)
 		{}
 

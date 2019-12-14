@@ -83,5 +83,14 @@
     <ClCompile Include="AutLib\MeshAft\Core\Base\Aft_Core_Base.cxx">
       <Filter>AutLib\MeshAft\Core\Base</Filter>
     </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Core\Iso\2d\Aft2d_Core.cxx">
+      <Filter>AutLib\MeshAft\Core\Iso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Core\AnIso\2d\Aft2d_CoreAnIso.cxx">
+      <Filter>AutLib\MeshAft\Core\AnIso\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\MeshAft\Core\Surface\Aft2d_CoreSurface.cxx">
+      <Filter>AutLib\MeshAft\Core\Surface</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

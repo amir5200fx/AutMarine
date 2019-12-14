@@ -60,9 +60,6 @@
     <ClInclude Include="AutLib\Sketch\2d\Cad2d_Sketch.hxx">
       <Filter>AutLib\Sketch\2d</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Sketch\2d\Engine\Cad2d_SketchEngine.hxx">
-      <Filter>AutLib\Sketch\2d\Engine</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Geom\Geo_Sketch.hxx">
       <Filter>AutLib\Geom</Filter>
     </ClInclude>
@@ -83,6 +80,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\2d\Interpolation\Info\Geo2d_InterpolationInfo.hxx">
       <Filter>AutLib\Geom\2d\Interpolation\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Sketch\2d\Engine\Cad2d_Sketch_Engine.hxx">
+      <Filter>AutLib\Sketch\2d\Engine</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -109,6 +109,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Sketch\2d\Cad2d_Sketch.cxx">
       <Filter>AutLib\Sketch\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Sketch\2d\Engine\Cad2d_Sketch_Engine.cxx">
+      <Filter>AutLib\Sketch\2d\Engine</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

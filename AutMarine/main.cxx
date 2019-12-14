@@ -37,6 +37,21 @@
 
 #include <Aft2d_Edge.hxx>
 #include <Aft2d_EdgeAnIso.hxx>
+#include <Aft2d_Core.hxx>
+#include <Aft2d_MetricPrcsr.hxx>
+#include <Geo2d_MetricPrcsr.hxx>
+#include <Geo2d_SizeFunction.hxx>
+#include <Mesh2d_Node.hxx>
+#include <Aft2d_Model.hxx>
+#include <Aft2d_PlnBoundary.hxx>
+#include <Aft2d_PlnRegion.hxx>
+#include <Cad2d_Plane_System.hxx>
+
+#include <Cad2d_Plane.hxx>
+#include <Aft2d_PlnCurve.hxx>
+#include <Pln_Curve.hxx>
+#include <Pln_Wire.hxx>
+#include <Pln_Edge.hxx>
 
 using namespace boost::archive;
 using namespace AutLib;
@@ -45,6 +60,11 @@ int main()
 {
 
 	//example_reading_iges_creating_gmodel();
+	//example_creating_plane_region_box();
+	example_spliting_block_surface();
+
+	PAUSE;
+	return 0;
 
 	std::vector<std::shared_ptr<GModel_Surface>> surfaces;
 	std::shared_ptr<Geo3d_SizeFunction> sizeFun;
@@ -64,6 +84,13 @@ int main()
 
 	Aft2d_Edge ed0;
 	Aft2d_EdgeAnIso ed1;
+	Aft2d_Node n0;
+
+	Aft2d_Core core;
+	Aft2d_Model model;
+	model.Perform();
+
+	
 
 	return 0;
 

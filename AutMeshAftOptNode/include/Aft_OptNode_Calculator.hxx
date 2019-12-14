@@ -26,8 +26,8 @@ namespace AutLib
 
 		/*Private Data*/
 
-		const std::shared_ptr<frontType>& theFront_;
-		const std::shared_ptr<metricMap>& theMetricMap_;
+		std::shared_ptr<frontType> theFront_;
+		std::shared_ptr<metricMap> theMetricMap_;
 
 		Standard_Real theSize_;
 

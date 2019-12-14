@@ -5,6 +5,7 @@
 #include <TModel_Edge.hxx>
 #include <TModel_Wire.hxx>
 
+#include <BRep_Tool.hxx>
 #include <Bnd_Box.hxx>
 #include <Geom_BSplineSurface.hxx>
 
@@ -132,6 +133,15 @@ AutLib::TModel_Surface::IsClamped() const
 		if (NOT x->PairedEdge().lock()) return Standard_False;
 	}
 	return Standard_True;
+}
+
+Handle(Poly_Triangulation)
+AutLib::TModel_Surface::RetrieveTriangulation() const
+{
+	TopLoc_Location loc;
+	auto tri = BRep_Tool::Triangulation(Face(), loc);
+
+	return std::move(tri);
 }
 
 std::vector<std::shared_ptr<AutLib::TModel_Edge>> 

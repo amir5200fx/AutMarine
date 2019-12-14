@@ -271,20 +271,14 @@ AutLib::Pln_Curve::MakeLineSegment
 	const std::shared_ptr<info>& theInfo
 )
 {
-	Handle(Geom2d_Curve) geom =
-		new Geom2d_Line(theP0, gp_Dir2d(gp_Vec2d(theP0, theP1)));
+	auto trimmed = Cad_Tools::MakeSegment(theP0, theP1);
 
-	Geom2dAPI_ProjectPointOnCurve Projection;
+	auto curve = 
+		std::make_shared<Pln_Curve>
+		(
+			trimmed->FirstParameter(), 
+			trimmed->LastParameter(), trimmed, theInfo);
 
-	Projection.Init(theP0, geom);
-	auto first = Projection.LowerDistanceParameter();
-
-	Projection.Init(theP1, geom);
-	auto last = Projection.LowerDistanceParameter();
-
-	auto trimmed = Cad_Tools::ConvertToTrimmedCurve(geom, first, last);
-
-	auto curve = std::make_shared<Pln_Curve>(first, last, trimmed, theInfo);
 	return std::move(curve);
 }
 

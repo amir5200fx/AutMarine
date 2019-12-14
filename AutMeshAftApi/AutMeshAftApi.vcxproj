@@ -83,7 +83,7 @@
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Api\Model\Traits;$(ProjectDir)AutLib\MeshAft\Api\Model\System;$(ProjectDir)AutLib\MeshAft\Api\Model\Base;$(ProjectDir)AutLib\MeshAft\Api\Model\Info;$(ProjectDir)AutLib\MeshAft\Api\Model;$(ProjectDir)AutLib\MeshAft\Api\Curves;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Api\Model\Traits;$(ProjectDir)AutLib\MeshAft\Api\Model\System;$(ProjectDir)AutLib\MeshAft\Api\Model\Base;$(ProjectDir)AutLib\MeshAft\Api\Model\Info;$(ProjectDir)AutLib\MeshAft\Api\Model;$(ProjectDir)AutLib\MeshAft\Api\Curves;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -109,7 +109,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Api\Model\Traits;$(ProjectDir)AutLib\MeshAft\Api\Model\System;$(ProjectDir)AutLib\MeshAft\Api\Model\Base;$(ProjectDir)AutLib\MeshAft\Api\Model\Info;$(ProjectDir)AutLib\MeshAft\Api\Model;$(ProjectDir)AutLib\MeshAft\Api\Curves;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)AutLib\MeshAft\Api\Model\Traits;$(ProjectDir)AutLib\MeshAft\Api\Model\System;$(ProjectDir)AutLib\MeshAft\Api\Model\Base;$(ProjectDir)AutLib\MeshAft\Api\Model\Info;$(ProjectDir)AutLib\MeshAft\Api\Model;$(ProjectDir)AutLib\MeshAft\Api\Curves;$(SolutionDir)AutMeshAftCore\include;$(SolutionDir)AutMeshAft\include;$(SolutionDir)AutMeshBase\include;$(SolutionDir)AutCad\include;$(SolutionDir)AutNumeric\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -141,6 +141,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="MeshAft\Api\Boundary\AftApi_Boundary.hxx" />
     <ClInclude Include="MeshAft\Api\Curves\AftApi_BndCurves.hxx" />
     <ClInclude Include="MeshAft\Api\Model\AftApi_Model.hxx" />
+    <ClInclude Include="MeshAft\Api\Model\Traits\AftApi_Model_Traits.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MeshAft\Api\Curves\AftApi_BndCurves.cxx" />
