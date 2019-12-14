@@ -131,7 +131,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClCompile Include="AutLib\Geom\MetricPrcsr\Info\Geo_MetricPrcsrAnIso_Info.cxx" />
     <ClCompile Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsr.cxx" />
     <ClCompile Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsr.cxx" />
-    <ClCompile Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsrAnIso_System.cxx" />
+    <ClCompile Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsr_System.cxx" />
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx" />
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2dIO.cxx" />
     <ClCompile Include="AutLib\Geom\Point\3d\Pnt3d.cxx" />
@@ -253,7 +253,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\2d\Geo2d_MetricPrcsrFwd.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsr.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Iso\3d\Geo3d_MetricPrcsrFwd.hxx" />
-    <ClInclude Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsrAnIso_System.hxx" />
+    <ClInclude Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsr_System.hxx" />
     <ClInclude Include="AutLib\Geom\MetricPrcsr\Traits\Geo_MetricPrcsr_Traits.hxx" />
     <ClInclude Include="AutLib\Geom\Point\2d\Pnt2d.hxx" />
     <ClInclude Include="AutLib\Geom\Point\2d\Pnt2dI.hxx" />

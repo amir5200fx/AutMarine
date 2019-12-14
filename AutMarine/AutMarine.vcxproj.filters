@@ -16,6 +16,15 @@
     <ClCompile Include="Examples\example_reading_iges_creating_gmodel.cxx">
       <Filter>Examples</Filter>
     </ClCompile>
+    <ClCompile Include="Examples\example_creating_plane_region_box.cxx">
+      <Filter>Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Examples\example_boundary_mesh_plane_region.cxx">
+      <Filter>Examples</Filter>
+    </ClCompile>
+    <ClCompile Include="Examples\example_spliting_block_surface.cxx">
+      <Filter>Examples</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="resource.h" />

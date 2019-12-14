@@ -60,13 +60,8 @@ int main()
 {
 
 	//example_reading_iges_creating_gmodel();
-	sysLib::init_pln_approx_curve_info();
-	sysLib::init_pln_curve_info();
-	sysLib::init_plane_info();
-
-	auto b = Cad2d_Plane::MakeBox(Pnt2d(0, 0), Pnt2d(1, 1));
-
-	auto reg = Aft2d_PlnRegion::MakePlane(b);
+	//example_creating_plane_region_box();
+	example_spliting_block_surface();
 
 	PAUSE;
 	return 0;
