@@ -20,9 +20,9 @@ namespace AutLib
 			true
 			>
 			Iterator(fun, der, *theIter);
-		cout << "guess = " << theGuess << std::endl;
+
 		Iterator.Perform(theGuess);
-		cout << "value = " << theIter->Result() << std::endl;
+
 		Debug_If_Condition_Message(NOT theIter->IsDone(), "Newton's Algorithm is not performed");
 
 		if (theIter->Condition() IS_EQUAL NewtonIter_ZERODIVIDE)

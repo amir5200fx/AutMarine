@@ -98,7 +98,7 @@ void AutLib::Aft2d_SegmentEdge::MergeDangles
 				<< abort(FatalError);
 		}
 
-		const auto sn0 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e0.Node1());
+		/*const auto sn0 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e0.Node1());
 		const auto sn1 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e1.Node0());
 
 		if (sn0 AND sn1)
@@ -110,12 +110,12 @@ void AutLib::Aft2d_SegmentEdge::MergeDangles
 			e1.SetNode0(node);
 
 			continue;
-		}
+		}*/
 
 		const auto cn0 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e0.Node1());
 		const auto cn1 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e1.Node0());
 
-		if (sn0 AND sn1)
+		if (cn0 AND cn1)
 		{
 			auto node =
 				Aft2d_CornerNode::MergeNodes(cn0, cn1, Aft2d_CornerNode::Merge_Alg::New);
@@ -144,7 +144,7 @@ void AutLib::Aft2d_SegmentEdge::MergeDangles
 			<< abort(FatalError);
 	}
 
-	const auto sn0 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e0.Node1());
+	/*const auto sn0 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e0.Node1());
 	const auto sn1 = std::dynamic_pointer_cast<Aft2d_SegmentNode>(e1.Node0());
 
 	if (sn0 AND sn1)
@@ -156,12 +156,12 @@ void AutLib::Aft2d_SegmentEdge::MergeDangles
 		e1.SetNode0(node);
 
 		return;
-	}
+	}*/
 
 	const auto cn0 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e0.Node1());
 	const auto cn1 = std::dynamic_pointer_cast<Aft2d_CornerNode>(e1.Node0());
 
-	if (sn0 AND sn1)
+	if (cn0 AND cn1)
 	{
 		auto node =
 			Aft2d_CornerNode::MergeNodes(cn0, cn1, Aft2d_CornerNode::Merge_Alg::New);

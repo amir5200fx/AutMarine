@@ -209,13 +209,12 @@ namespace AutLib
 					dp = y0 / df;
 
 				p1 = u - UnderRelaxation()*dp;
-				cout << "p = " << p1 << std::endl;
-				cout << "ur = " << UnderRelaxation() << std::endl;
+
 				fun::CheckBound(p1);
 				y1 = fun::Value(p1);
 
 				rel_err = (Standard_Real)2.0 * ABS(dp) / (ABS(p1) + Small());
-				cout << "error = " << rel_err << std::endl;
+
 				if (rel_err < Tolerance() OR ABS(y1) < Zero())
 					if (Condition() NOT_EQUAL NewtonIter_ZERODIVIDE)
 						ChangeCondition() = NewtonIter_CONVERGED;

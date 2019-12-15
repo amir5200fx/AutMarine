@@ -1,6 +1,6 @@
 #include <AutMarine_Examples.hxx>
 
-#include <Geo_MetricPrcsrAnIso_System.hxx>
+#include <Geo_MetricPrcsr_System.hxx>
 #include <Geo2d_SizeFunction.hxx>
 #include <GeoSizeFun_Uniform.hxx>
 #include <Pln_Curve.hxx>
