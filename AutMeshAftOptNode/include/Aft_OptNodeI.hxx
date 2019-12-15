@@ -34,11 +34,11 @@ namespace AutLib
 		ChangeCorrector() = Crt;
 	}*/
 
-	/*template<class FrontType, class SizeFun>
+	template<class FrontType, class SizeFun>
 	void Aft_OptNode<FrontType, SizeFun>::Perform()
 	{
 		auto IntP = 
-			std::make_shared<Aft_OptNode_Analytical<FrontType, void>>(base::ElementSize(), base::Front());
+			std::make_shared<Aft_OptNode_Analytical<FrontType, void>>(base::Size(), *base::Front());
 		Debug_Null_Pointer(IntP);
 
 		IntP->Perform();
@@ -51,14 +51,14 @@ namespace AutLib
 		base::ChangeCoord() = IntP->Coord();
 		base::Change_IsConverged() = Standard_True;
 
-		Change_IsDone() = Standard_True;
-	}*/
+		base::Change_IsDone() = Standard_True;
+	}
 
 	template<class FrontType, class SizeFun, class OptTraits>
 	void Aft_OptNode<FrontType, SizeFun, OptTraits, true>::Perform()
 	{
 		auto IntP =
-			std::make_shared<Aft_OptNode_Analytical<FrontType, void>>(base::ElementSize(), base::Front());
+			std::make_shared<Aft_OptNode_Analytical<FrontType, void>>(base::Size(), *base::Front());
 		Debug_Null_Pointer(IntP);
 
 		IntP->Perform();

@@ -12,6 +12,8 @@ namespace AutLib
 	void example_boundary_mesh_plane_region();
 
 	void example_spliting_block_surface();
+
+	void example_mesh_plane();
 }
 
 #endif // !_AutMarine_Examples_Header
