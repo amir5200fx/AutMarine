@@ -105,6 +105,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClCompile Include="AutLib\Geom\Entities\Metric1\2d\Entity2d_Metric1IO.cxx" />
     <ClCompile Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1.cxx" />
     <ClCompile Include="AutLib\Geom\Entities\Metric1\3d\Entity3d_Metric1IO.cxx" />
+    <ClCompile Include="AutLib\Geom\Entities\Metric2\2d\Entity2d_Metric2.cxx" />
     <ClCompile Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_PolygonIO.cxx" />
     <ClCompile Include="AutLib\Geom\Entities\Polygon\2d\Entity2d_Polygon_Tools.cxx" />
     <ClCompile Include="AutLib\Geom\Entities\Polygon\3d\Entity3d_PolygonIO.cxx" />
@@ -205,6 +206,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\Geom\Function\Metric\2d\Geo2d_MetricFunctionFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunction.hxx" />
     <ClInclude Include="AutLib\Geom\Function\Metric\3d\Geo3d_MetricFunctionFwd.hxx" />
+    <ClInclude Include="AutLib\Geom\Function\Metric\Uniform\2d\GeoMetricFun2d_Uniform.hxx" />
+    <ClInclude Include="AutLib\Geom\Function\Metric\Uniform\GeoMetricFun_Uniform.hxx" />
     <ClInclude Include="AutLib\Geom\Function\Size\2d\Geo2d_SizeFunctionFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Function\Size\3d\Geo3d_SizeFunctionFwd.hxx" />
     <ClInclude Include="AutLib\Geom\Function\Size\Surface\Geo2d_SizeFunction_Surface.hxx" />

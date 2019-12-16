@@ -5,6 +5,7 @@
 #include <Mesh_CurveOptmPoint_CorrectionInfo.hxx>
 #include <Mesh_CurveInfo.hxx>
 #include <Aft2d_PlnBoundary_Info.hxx>
+#include <Aft2d_PlnBoundaryAnIso_Info.hxx>
 #include <Aft2d_MetricPrcsrAnIso_System.hxx>
 
 namespace AutLib
@@ -26,6 +27,9 @@ namespace AutLib
 
 	std::shared_ptr<Aft2d_PlnBoundary_Info> plnBoundarySys::gl_plane_boundary_info =
 		std::make_shared<Aft2d_PlnBoundary_Info>();
+
+	std::shared_ptr<Aft2d_PlnBoundaryAnIso_Info> plnBoundarySys::gl_plane_boundary_aniso_info =
+		std::make_shared<Aft2d_PlnBoundaryAnIso_Info>();
 
 
 }
@@ -64,5 +68,9 @@ void AutLib::plnBoundarySys::init_plane_boundary_mesh_info()
 	auto& plan = *gl_plane_boundary_info;
 	plan.OverrideGlobalCurve(gl_plane_boundary_curve_mesh_info);
 	plan.SetMergeTolerance(1.0E-4);
-	
+
+	auto& planAniso = *gl_plane_boundary_aniso_info;
+	planAniso.OverrideGlobalCurve(gl_plane_boundary_curve_mesh_info);
+	planAniso.OverrideGlobalMetricPrcsr(metricSys::gl_aft_metric_prcsr_aniso_info);
+	planAniso.SetMergeTolerance(1.0E-4);
 }

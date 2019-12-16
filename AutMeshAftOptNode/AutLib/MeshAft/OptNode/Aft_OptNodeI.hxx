@@ -46,7 +46,32 @@ namespace AutLib
 		Debug_If_Condition_Message
 		(
 			NOT IntP->IsDone(),
-			"the Aft2d_OptNodeAnIso_Analytical algorithm has not been performed");
+			"the Aft2d_OptNode_Analytical algorithm has not been performed");
+
+		base::ChangeCoord() = IntP->Coord();
+		base::Change_IsConverged() = Standard_True;
+
+		base::Change_IsDone() = Standard_True;
+	}
+
+	template<class FrontType, class SizeFun, class MetricFun>
+	void Aft_OptNode<FrontType, SizeFun, void, false, MetricFun>::Perform()
+	{
+		auto IntP =
+			std::make_shared<Aft_OptNode_Analytical<FrontType, typename MetricFun::metricType>>
+			(
+				base::Size(),
+				base::Front()->EffectiveMetric(),
+				*base::Front()
+				);
+		Debug_Null_Pointer(IntP);
+
+		IntP->Perform();
+
+		Debug_If_Condition_Message
+		(
+			NOT IntP->IsDone(),
+			"the Aft2d_OptNode_Analytical algorithm has not been performed");
 
 		base::ChangeCoord() = IntP->Coord();
 		base::Change_IsConverged() = Standard_True;
@@ -66,7 +91,7 @@ namespace AutLib
 		Debug_If_Condition_Message
 		(
 			NOT IntP->IsDone(),
-			"the Aft2d_OptNodeAnIso_Analytical algorithm has not been performed");
+			"the Aft2d_OptNode_Analytical algorithm has not been performed");
 
 		auto crt = 
 			std::make_shared

@@ -93,6 +93,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
   <ItemGroup>
     <ClCompile Include="Examples\example_boundary_mesh_plane_region.cxx" />
     <ClCompile Include="Examples\example_creating_plane_region_box.cxx" />
+    <ClCompile Include="Examples\example_mesh_aniso_plane.cxx" />
     <ClCompile Include="Examples\example_mesh_plane.cxx" />
     <ClCompile Include="Examples\example_reading_iges_creating_gmodel.cxx" />
     <ClCompile Include="Examples\example_spliting_block_surface.cxx" />
@@ -137,6 +138,9 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </ProjectReference>
     <ProjectReference Include="..\AutMeshAdapt\AutMeshAdapt.vcxproj">
       <Project>{fdc97543-761e-47f1-af40-bd58310a14d4}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\AutMeshAftAnalys\AutMeshAftAnalys.vcxproj">
+      <Project>{0cca5447-6d10-4887-8037-3bb35ab96f4e}</Project>
     </ProjectReference>
     <ProjectReference Include="..\AutMeshAftApi\AutMeshAftApi.vcxproj">
       <Project>{beec3800-586c-4b54-b102-0fa6abc1801b}</Project>

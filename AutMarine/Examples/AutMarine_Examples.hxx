@@ -14,6 +14,8 @@ namespace AutLib
 	void example_spliting_block_surface();
 
 	void example_mesh_plane();
+
+	void example_mesh_aniso_plane();
 }
 
 #endif // !_AutMarine_Examples_Header

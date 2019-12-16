@@ -32,7 +32,7 @@ void AutLib::example_mesh_plane()
 
 	auto reg = Aft2d_PlnRegion::MakePlane(b);
 
-	auto uniSizeFun = std::make_shared<GeoSizeFun_Uniform<Pnt2d>>(0.1, b->BoundingBox());
+	auto uniSizeFun = std::make_shared<GeoSizeFun_Uniform<Pnt2d>>(0.025, b->BoundingBox());
 
 	auto metricMap =
 		std::make_shared<Aft_MetricPrcsr<Aft2d_Edge, Geo2d_SizeFunction>>

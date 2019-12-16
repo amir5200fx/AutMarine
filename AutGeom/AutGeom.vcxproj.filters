@@ -331,6 +331,12 @@
     <Filter Include="AutLib\Geom\MetricPrcsr\Traits">
       <UniqueIdentifier>{67ede9a2-c2f7-4b4c-ae8a-9da7a2e7fc2f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Function\Metric\Uniform\2d">
+      <UniqueIdentifier>{c219147f-8325-4db0-8c5f-8b657dc60917}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Function\Metric\Uniform\3d">
+      <UniqueIdentifier>{4bbc13c8-b8bd-411a-b437-f6371558e11e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -497,6 +503,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsr_System.cxx">
       <Filter>AutLib\Geom\MetricPrcsr\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Entities\Metric2\2d\Entity2d_Metric2.cxx">
+      <Filter>AutLib\Geom\Entities\Metric2\2d</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -895,6 +904,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\MetricPrcsr\System\Geo_MetricPrcsr_System.hxx">
       <Filter>AutLib\Geom\MetricPrcsr\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\Uniform\GeoMetricFun_Uniform.hxx">
+      <Filter>AutLib\Geom\Function\Metric\Uniform</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Function\Metric\Uniform\2d\GeoMetricFun2d_Uniform.hxx">
+      <Filter>AutLib\Geom\Function\Metric\Uniform\2d</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -8,6 +8,10 @@
 
 #include <memory>
 
+//#include "Aft2d_EdgeAnIso.hxx"
+//#include "Geo2d_SizeFunction.hxx"
+//#include "Geo2d_MetricFunction.hxx"
+
 namespace AutLib
 {
 
@@ -50,6 +54,32 @@ namespace AutLib
 
 		typedef Aft_OptNode_Calculator<FrontType, SizeFun, void> base;
 		typedef Aft_MetricPrcsr<FrontType, SizeFun, void>
+			metricMap;
+		typedef FrontType frontType;
+		typedef SizeFun sizeFun;
+
+		typedef typename sizeFun::ptType Point;
+
+		/*Private Data*/
+
+
+		//- private functions and operators
+
+	public:
+
+		Aft_OptNode()
+		{}
+
+		void Perform() override;
+	};
+
+	template<class FrontType, class SizeFun, class MetricFun>
+	class Aft_OptNode<FrontType, SizeFun, void, false, MetricFun>
+		: public Aft_OptNode_Calculator<FrontType, SizeFun, MetricFun>
+	{
+
+		typedef Aft_OptNode_Calculator<FrontType, SizeFun, MetricFun> base;
+		typedef Aft_MetricPrcsr<FrontType, SizeFun, MetricFun>
 			metricMap;
 		typedef FrontType frontType;
 		typedef SizeFun sizeFun;

@@ -3,6 +3,7 @@
 #define _Aft_PlnBoundary_System_Header
 
 #include <Aft2d_PlnBoundary_InfoFwd.hxx>
+#include <Aft2d_PlnBoundaryAnIso_Info.hxx>
 
 #include <memory>
 
@@ -26,6 +27,7 @@ namespace AutLib
 		extern std::shared_ptr<Mesh_CurveInfo> gl_plane_boundary_curve_mesh_info;
 
 		extern std::shared_ptr<Aft2d_PlnBoundary_Info> gl_plane_boundary_info;
+		extern std::shared_ptr<Aft2d_PlnBoundaryAnIso_Info> gl_plane_boundary_aniso_info;
 
 		void init_plane_boundary_mesh_info();
 	}
