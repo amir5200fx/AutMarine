@@ -13,10 +13,10 @@
 
 void AutLib::TModel_Edge::Discrete(const std::shared_ptr<Geo_ApprxCurveInfo>& theInfo) const
 {
-	const auto& geom = Geometry();
-
-	if (NOT geom->Curve())
+	if (NOT Geometry())
 		return;
+
+	const auto& geom = Geometry();
 
 	auto alg = std::make_shared<Geo3d_ApprxCurve>();
 	Debug_Null_Pointer(alg);

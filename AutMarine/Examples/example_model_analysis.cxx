@@ -4,6 +4,7 @@
 #include <GeoSizeFun_Uniform.hxx>
 #include <CadAnalys_Model_System.hxx>
 #include <CadCascade_Box.hxx>
+#include <CadCascade_Sphere.hxx>
 #include <CadAnalys_tModel.hxx>
 #include <Cad_Tools.hxx>
 #include <TModel_Tools.hxx>
@@ -20,7 +21,8 @@ void AutLib::example_model_analysis()
 	fileName name("preview.plt");
 	OFstream myFile(name);
 
-	auto model = std::make_shared<CadCascade_Box>(Pnt3d(0, 0, 0), Pnt3d(0.1, 0.3, 0.43));
+	//auto model = std::make_shared<CadCascade_Box>(Pnt3d(0, 0, 0), Pnt3d(0.1, 0.3, 0.43));
+	auto model = std::make_shared<CadCascade_Sphere>(Pnt3d(0, 0, 0), 1.0);
 
 	auto tmodel = Cad3d_TModel::MakeSolid(model->Shape(), 1.0E-6);
 	TModel_Tools::DicreteEdges(*tmodel, approxCurveSys::gl_approx_curve3d_info);
@@ -43,11 +45,12 @@ void AutLib::example_model_analysis()
 
 	for (const auto& x : curves)
 	{
+		if (NOT x->Mesh()) continue;
 		x->Mesh()->ExportToPlt(myFile);
 	}
 
-	auto sizeFun = std::make_shared<GeoSizeFun_Uniform<Pnt3d>>(0.05, tmodel->BoundingBox());
+	/*auto sizeFun = std::make_shared<GeoSizeFun_Uniform<Pnt3d>>(0.05, tmodel->BoundingBox());
 
 	auto analys = std::make_shared<CadAnalys_tModel>(surfaces, sizeFun, cadAnalysSys::gl_model_analysis_info);
-	analys->Perform();
+	analys->Perform();*/
 }
