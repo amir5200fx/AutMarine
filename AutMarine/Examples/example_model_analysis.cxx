@@ -12,6 +12,7 @@
 #include <Cad3d_TModel.hxx>
 #include <FastDiscrete.hxx>
 #include <FastDiscrete_Params.hxx>
+#include <Leg_Vessel_Nihad2.hxx>
 
 #include <Poly_Triangulation.hxx>
 
@@ -22,15 +23,17 @@ void AutLib::example_model_analysis()
 	OFstream myFile(name);
 
 	//auto model = std::make_shared<CadCascade_Box>(Pnt3d(0, 0, 0), Pnt3d(0.1, 0.3, 0.43));
-	auto model = std::make_shared<CadCascade_Sphere>(Pnt3d(0, 0, 0), 1.0);
+	//auto model = std::make_shared<CadCascade_Sphere>(Pnt3d(0, 0, 0), 1.0);
+	auto model = std::make_shared<Leg_Nihad2_BareHull>();
+	model->Perform();
 
-	auto tmodel = Cad3d_TModel::MakeSolid(model->Shape(), 1.0E-6);
+	auto tmodel = Cad3d_TModel::MakeSolid(model->Entity(), 1.0E-6);
 	TModel_Tools::DicreteEdges(*tmodel, approxCurveSys::gl_approx_curve3d_info);
 
-	FastDiscrete::Triangulation(model->Shape(), *gl_fast_discrete_parameters);
+	FastDiscrete::Triangulation(model->Entity(), *gl_fast_discrete_parameters);
 	
 
-	auto myTris = Cad_Tools::RetrieveTriangulation(model->Shape());
+	auto myTris = Cad_Tools::RetrieveTriangulation(model->Entity());
 
 	for (const auto& x : myTris)
 	{

@@ -343,6 +343,9 @@
     <Filter Include="AutLib\Geom\Approximation\Curve\Traits">
       <UniqueIdentifier>{9a49bbba-6c38-4f1b-80ce-a13f29b5adf8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Curve\Info">
+      <UniqueIdentifier>{106f9b68-9f4e-477b-b763-c68e82175890}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -707,9 +710,6 @@
     <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurveI.hxx">
       <Filter>AutLib\Geom\Approximation\Curve</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Geom\Approximation\Curve\Geo_ApprxCurveInfo.hxx">
-      <Filter>AutLib\Geom\Approximation\Curve</Filter>
-    </ClInclude>
     <ClInclude Include="AutLib\Geom\Approximation\Curve\2d\Geo2d_ApprxCurve.hxx">
       <Filter>AutLib\Geom\Approximation\Curve\2d</Filter>
     </ClInclude>
@@ -931,6 +931,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Approximation\Curve\Traits\Geo_ApprxCurve_Traits.hxx">
       <Filter>AutLib\Geom\Approximation\Curve\Traits</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Info\Geo_ApprxCurveInfo.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve\Info</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
