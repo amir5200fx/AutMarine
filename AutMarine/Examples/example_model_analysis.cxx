@@ -1,8 +1,10 @@
 #include <AutMarine_Examples.hxx>
 
 #include <Geo_ApprxCurve_System.hxx>
+#include <GeoSizeFun_Uniform.hxx>
+#include <CadAnalys_Model_System.hxx>
 #include <CadCascade_Box.hxx>
-#include <CadAnalys_gModel.hxx>
+#include <CadAnalys_tModel.hxx>
 #include <Cad_Tools.hxx>
 #include <TModel_Tools.hxx>
 #include <TModel_Edge.hxx>
@@ -43,4 +45,9 @@ void AutLib::example_model_analysis()
 	{
 		x->Mesh()->ExportToPlt(myFile);
 	}
+
+	auto sizeFun = std::make_shared<GeoSizeFun_Uniform<Pnt3d>>(0.05, tmodel->BoundingBox());
+
+	auto analys = std::make_shared<CadAnalys_tModel>(surfaces, sizeFun, cadAnalysSys::gl_model_analysis_info);
+	analys->Perform();
 }

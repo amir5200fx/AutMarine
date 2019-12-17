@@ -9,7 +9,7 @@
 std::shared_ptr<AutLib::CadAnalys_Model_Info> AutLib::cadAnalysSys::gl_model_analysis_info = 
 std::make_shared<AutLib::CadAnalys_Model_Info>();
 
-void AutLib::cadAnalysSys::InitModelRunTime()
+void AutLib::cadAnalysSys::init_model_analysis_info()
 {
 	auto info = *gl_model_analysis_info;
 	
