@@ -31,6 +31,8 @@
 #include <TopoDS.hxx>
 #include <TopoDS_Face.hxx>
 #include <TopoDS_Shape.hxx>
+#include <TopoDS_Compound.hxx>
+#include <TopoDS_Builder.hxx>
 #include <IGESControl_Controller.hxx>
 #include <IGESControl_Writer.hxx>
 #include <STEPControl_Controller.hxx>
@@ -852,6 +854,23 @@ void AutLib::Cad_Tools::ExportToIGES
 			<< "Unable to export the model" << endl
 			<< abort(FatalError);
 	}
+}
+
+TopoDS_Shape 
+AutLib::Cad_Tools::CombineFaces
+(
+	const std::vector<TopoDS_Face>& theFaces
+)
+{
+	TopoDS_Compound Compound;
+	TopoDS_Builder Builder;
+	Builder.MakeCompound(Compound);
+
+	for (const auto& x : theFaces)
+	{
+		Builder.Add(Compound, x);
+	}
+	return Compound;
 }
 
 void AutLib::Cad_Tools::ExportToSTEP
