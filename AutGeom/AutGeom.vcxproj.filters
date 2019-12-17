@@ -337,6 +337,12 @@
     <Filter Include="AutLib\Geom\Function\Metric\Uniform\3d">
       <UniqueIdentifier>{4bbc13c8-b8bd-411a-b437-f6371558e11e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Curve\System">
+      <UniqueIdentifier>{6777f2af-8ac0-41be-98da-871cf51dbfae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\Approximation\Curve\Traits">
+      <UniqueIdentifier>{9a49bbba-6c38-4f1b-80ce-a13f29b5adf8}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -506,6 +512,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Entities\Metric2\2d\Entity2d_Metric2.cxx">
       <Filter>AutLib\Geom\Entities\Metric2\2d</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Approximation\Curve\System\Geo_ApprxCurve_System.cxx">
+      <Filter>AutLib\Geom\Approximation\Curve\System</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -910,6 +919,18 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Function\Metric\Uniform\2d\GeoMetricFun2d_Uniform.hxx">
       <Filter>AutLib\Geom\Function\Metric\Uniform\2d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\3d\Geo3d_ApprxCurve.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\3d\Geo3d_ApprxCurveFwd.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve\3d</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\System\Geo_ApprxCurve_System.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve\System</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Approximation\Curve\Traits\Geo_ApprxCurve_Traits.hxx">
+      <Filter>AutLib\Geom\Approximation\Curve\Traits</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

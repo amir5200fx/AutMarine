@@ -2,6 +2,7 @@
 #include <Numeric_Random.hxx>
 #include <GeoProcessor.hxx>
 #include <Geom_ItemSort.hxx>
+#include <Geo_ApprxCurve_Traits.hxx>
 namespace AutLib
 {
 
@@ -125,13 +126,13 @@ namespace AutLib
 			const Segment& theSeg
 		)
 		{
-			typename CurveType::ptType pt0, pt1;
-			typename CurveType::vtType vec0, vec1;
+			typename Geo_ApprxCurve_Traits<CurveType>::ptType pt0, pt1;
+			typename Geo_ApprxCurve_Traits<CurveType>::vtType vec0, vec1;
 
 			theCurve.D1(theSeg.theX0, pt0, vec0);
 			theCurve.D1(theSeg.theX1, pt1, vec1);
 
-			typename CurveType::vtType vt(pt0, pt1);
+			typename Geo_ApprxCurve_Traits<CurveType>::vtType vt(pt0, pt1);
 
 			return MAX(vt.Angle(vec0), vt.Angle(vec1));
 		}

@@ -62,7 +62,8 @@ int main()
 	//example_reading_iges_creating_gmodel();
 	//example_creating_plane_region_box();
 	//example_spliting_block_surface();
-	example_mesh_aniso_plane();
+	//example_mesh_aniso_plane();
+	example_model_analysis();
 
 	PAUSE;
 	return 0;

@@ -6,8 +6,38 @@
 #include <TModel_Edge.hxx>
 #include <TModel_Curve.hxx>
 #include <TModel_parCurve.hxx>
+#include <Cad3d_TModel.hxx>
 #include <error.hxx>
 #include <OSstream.hxx>
+
+void AutLib::TModel_Tools::DicreteEdges
+(
+	const TModel_Surface& theSurface,
+	const std::shared_ptr<Geo_ApprxCurveInfo>& theInfo
+)
+{
+	const auto& edges = theSurface.Edges();
+	for (const auto& x : edges)
+	{
+		x->Discrete(theInfo);
+	}
+}
+
+void AutLib::TModel_Tools::DicreteEdges
+(
+	const Cad3d_TModel& theModel, 
+	const std::shared_ptr<Geo_ApprxCurveInfo>& theInfo
+)
+{
+	std::vector<std::shared_ptr<TModel_Surface>> surfaces;
+	theModel.RetrieveFacesTo(surfaces);
+
+	for (const auto& x : surfaces)
+	{
+		Debug_Null_Pointer(x);
+		DicreteEdges(*x, theInfo);
+	}
+}
 
 std::shared_ptr<AutLib::Entity2d_Polygon> 
 AutLib::TModel_Tools::UniformDiscrete
