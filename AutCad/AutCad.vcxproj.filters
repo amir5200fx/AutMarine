@@ -205,6 +205,24 @@
     <Filter Include="AutLib\Cad\Plane\System">
       <UniqueIdentifier>{9a30dd85-6ea8-45fd-9dba-296cde8ffdb0}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cascade\Surface">
+      <UniqueIdentifier>{2b30164e-34a9-4b71-a1f1-dbba1d42954b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\Model">
+      <UniqueIdentifier>{92048bb9-6e2e-4c9f-9cf6-23e0d6e626bd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\Model\Regular">
+      <UniqueIdentifier>{422bbf0b-21fc-4ad0-840e-1f53c9baf300}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\Model\Regular\Box">
+      <UniqueIdentifier>{8c8b7882-5a43-41d4-929d-b6f4a568b5ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\Model\Regular\Sphere">
+      <UniqueIdentifier>{6bb123bf-eca5-49ba-a365-0084d018714f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cascade\Model\Regular\Cylinder">
+      <UniqueIdentifier>{f00d845c-bfd6-48bc-98a2-741e5036f732}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cascade\Discrete\System\FastDiscrete_Params.cxx">
@@ -404,6 +422,15 @@
     </ClCompile>
     <ClCompile Include="AutLib\Cad\Plane\Cad2d_PlaneIO.cxx">
       <Filter>AutLib\Cad\Plane</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cascade\Model\Regular\Box\CadCascade_Box.cxx">
+      <Filter>AutLib\Cascade\Model\Regular\Box</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cascade\Model\Regular\Sphere\CadCascade_Sphere.cxx">
+      <Filter>AutLib\Cascade\Model\Regular\Sphere</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cascade\Model\Regular\Cylinder\CadCascade_Cylinder.cxx">
+      <Filter>AutLib\Cascade\Model\Regular\Cylinder</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -610,6 +637,21 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\TModel\Entities\Paired\TModel_PairedManager.hxx">
       <Filter>AutLib\Cad\TModel\Entities\Paired</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\Model\CadCascade_Model.hxx">
+      <Filter>AutLib\Cascade\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\Model\Regular\CadCascade_Regular.hxx">
+      <Filter>AutLib\Cascade\Model\Regular</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\Model\Regular\Box\CadCascade_Box.hxx">
+      <Filter>AutLib\Cascade\Model\Regular\Box</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\Model\Regular\Sphere\CadCascade_Sphere.hxx">
+      <Filter>AutLib\Cascade\Model\Regular\Sphere</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cascade\Model\Regular\Cylinder\CadCascade_Cylinder.hxx">
+      <Filter>AutLib\Cascade\Model\Regular\Cylinder</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

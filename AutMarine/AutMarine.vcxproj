@@ -95,6 +95,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClCompile Include="Examples\example_creating_plane_region_box.cxx" />
     <ClCompile Include="Examples\example_mesh_aniso_plane.cxx" />
     <ClCompile Include="Examples\example_mesh_plane.cxx" />
+    <ClCompile Include="Examples\example_model_analysis.cxx" />
     <ClCompile Include="Examples\example_reading_iges_creating_gmodel.cxx" />
     <ClCompile Include="Examples\example_spliting_block_surface.cxx" />
     <ClCompile Include="main.cxx" />

@@ -16,6 +16,8 @@ namespace AutLib
 	void example_mesh_plane();
 
 	void example_mesh_aniso_plane();
+
+	void example_model_analysis();
 }
 
 #endif // !_AutMarine_Examples_Header
