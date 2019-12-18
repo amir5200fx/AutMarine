@@ -20,7 +20,7 @@ namespace AutLib
 		const auto& n0 = *Node0();
 		const auto& n1 = *Node1();
 
-		return Processor::IsPointRightEdge_cgal(theCoord, n0.Coord(), n1.Coord());
+		return Processor::IsPointLeftEdge_cgal(theCoord, n0.Coord(), n1.Coord());
 	}
 
 	template<>
@@ -36,6 +36,6 @@ namespace AutLib
 		const auto& n0 = *Node0();
 		const auto& n1 = *Node1();
 
-		return Processor::IsPointLeftEdge_cgal(theCoord, n0.Coord(), n1.Coord());
+		return Processor::IsPointRightEdge_cgal(theCoord, n0.Coord(), n1.Coord());
 	}
 }

@@ -11,7 +11,7 @@ std::make_shared<AutLib::CadAnalys_Model_Info>();
 
 void AutLib::cadAnalysSys::init_model_analysis_info()
 {
-	auto info = *gl_model_analysis_info;
+	auto& info = *gl_model_analysis_info;
 	
 	info.OverrideGlobalMetricApproximation(cadRepairSys::gl_surface_metric_approximate_info);
 	info.OverrideGlobalNormalizeMetric(cadRepairSys::gl_normalize_metric_info);

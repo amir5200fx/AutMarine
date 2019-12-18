@@ -518,7 +518,7 @@ void AutLib::CadSingularity_Horizon::Perform()
 			<< abort(FatalError);
 	}
 
-	if (Metric()->Approx())
+	if (NOT Metric()->Approx())
 	{
 		FatalErrorIn("void AutLib::CadSingularity_Horizon::Perform()")
 			<< "no surface metric approximation has been found!"

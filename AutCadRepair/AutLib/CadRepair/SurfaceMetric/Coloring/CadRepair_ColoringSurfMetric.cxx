@@ -336,7 +336,8 @@ AutLib::CadRepair_ColoringSurfMetric::Value
 	Debug_Null_Pointer(apprx.Mesh());
 	const auto& mesh = *apprx.Mesh();
 
-	const auto& element = mesh.TriangleLocation(mesh.FirstElement(), theCoord);
+	auto element = mesh.TriangleLocation(mesh.FirstElement(), theCoord);
+	Debug_Null_Pointer(element);
 
 	return Value(Index_Of(element->Index()));
 }

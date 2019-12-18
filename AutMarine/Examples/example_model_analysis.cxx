@@ -28,32 +28,35 @@ void AutLib::example_model_analysis()
 	model->Perform();
 
 	auto tmodel = Cad3d_TModel::MakeSolid(model->Entity(), 1.0E-6);
-	TModel_Tools::DicreteEdges(*tmodel, approxCurveSys::gl_approx_curve3d_info);
+	//TModel_Tools::DicreteEdges(*tmodel, approxCurveSys::gl_approx_curve3d_info);
 
-	FastDiscrete::Triangulation(model->Entity(), *gl_fast_discrete_parameters);
+	//FastDiscrete::Triangulation(model->Entity(), *gl_fast_discrete_parameters);
 	
 
-	auto myTris = Cad_Tools::RetrieveTriangulation(model->Entity());
+	/*auto myTris = Cad_Tools::RetrieveTriangulation(model->Entity());
 
 	for (const auto& x : myTris)
 	{
 		auto mesh = Cad_Tools::Triangulation(*x);
 		mesh->ExportToPlt(myFile);
-	}
+	}*/
 
 	std::vector<std::shared_ptr<TModel_Surface>> surfaces;
 	tmodel->RetrieveFacesTo(surfaces);
 
-	auto curves = TModel_Tools::RetrieveEdges(surfaces);
+	/*auto curves = TModel_Tools::RetrieveEdges(surfaces);
 
 	for (const auto& x : curves)
 	{
 		if (NOT x->Mesh()) continue;
 		x->Mesh()->ExportToPlt(myFile);
-	}
+	}*/
 
-	/*auto sizeFun = std::make_shared<GeoSizeFun_Uniform<Pnt3d>>(0.05, tmodel->BoundingBox());
+	cadAnalysSys::init_model_analysis_info();
 
+	auto sizeFun = std::make_shared<GeoSizeFun_Uniform<Pnt3d>>(0.1, tmodel->BoundingBox());
+
+	cadAnalysSys::gl_model_analysis_info->SetVerbisity(2);
 	auto analys = std::make_shared<CadAnalys_tModel>(surfaces, sizeFun, cadAnalysSys::gl_model_analysis_info);
-	analys->Perform();*/
+	analys->Perform();
 }
