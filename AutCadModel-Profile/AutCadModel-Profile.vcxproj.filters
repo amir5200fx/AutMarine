@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="AutLib">
+      <UniqueIdentifier>{a297f300-04c3-455e-916d-a187ca89123b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel">
+      <UniqueIdentifier>{e09404c0-87b8-41a7-8be1-04e1d3ed821a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile">
+      <UniqueIdentifier>{7764f3a2-b1db-4a8f-891b-d79e56dbae32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities">
+      <UniqueIdentifier>{6c02be21-a223-429d-b8d8-91fd726a7e5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Pole">
+      <UniqueIdentifier>{09b5f313-eb8e-4cb6-8fc5-56ddaac41059}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Segment">
+      <UniqueIdentifier>{3bba02c3-ab0c-4ed7-8c24-dc39a80f130e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Entity">
+      <UniqueIdentifier>{e8d8d63f-03d1-4aea-996a-0b3108167ee0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Pole\Clamped">
+      <UniqueIdentifier>{57b1aa23-7050-416d-9aae-d53d7662413e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Pole\Dangle">
+      <UniqueIdentifier>{4d142f22-1175-425f-9b8a-d97363421c37}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AutLib\CadModel\Profile\Entities\Entity\CadModel_ProfileEntity.hxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Entities\Pole\CadModel_ProfilePole.hxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Pole</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Entities\Segment\CadModel_ProfileSegment.hxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Entities\Pole\Dangle\CadModel_ProfilePole_Dangle.hxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Pole\Dangle</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Entities\Pole\Segment\CadModel_ProfilePole_Clamped.hxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Pole\Clamped</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AutLib\CadModel\Profile\Entities\Entity\CadModel_ProfileEntity.cxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Entity</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
