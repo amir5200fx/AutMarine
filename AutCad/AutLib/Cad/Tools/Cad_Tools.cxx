@@ -12,6 +12,7 @@
 #include <Bnd_Box2d.hxx>
 #include <BndLib_AddSurface.hxx>
 #include <BndLib_Add2dCurve.hxx>
+#include <BRepLib.hxx>
 #include <BRep_Tool.hxx>
 #include <Poly_Triangulation.hxx>
 #include <Geom2d_BoundedCurve.hxx>
@@ -37,6 +38,63 @@
 #include <IGESControl_Writer.hxx>
 #include <STEPControl_Controller.hxx>
 #include <STEPControl_Writer.hxx>
+
+std::vector<TopoDS_Vertex> 
+AutLib::Cad_Tools::RetrieveVertices
+(
+	const TopoDS_Shape& theShape
+)
+{
+	std::vector<TopoDS_Vertex> vertices;
+	for
+		(
+			TopExp_Explorer Explorer(theShape, TopAbs_VERTEX);
+			Explorer.More();
+			Explorer.Next()
+			)
+	{
+		vertices.push_back(TopoDS::Vertex(theShape));
+	}
+	return std::move(vertices);
+}
+
+std::vector<TopoDS_Edge> 
+AutLib::Cad_Tools::RetrieveEdges
+(
+	const TopoDS_Shape& theShape
+)
+{
+	std::vector<TopoDS_Edge> edges;
+	for
+		(
+			TopExp_Explorer Explorer(theShape, TopAbs_EDGE);
+			Explorer.More();
+			Explorer.Next()
+			)
+	{
+		edges.push_back(TopoDS::Edge(theShape));
+	}
+	return std::move(edges);
+}
+
+std::vector<TopoDS_Face>
+AutLib::Cad_Tools::RetrieveFaces
+(
+	const TopoDS_Shape& theShape
+)
+{
+	std::vector<TopoDS_Face> faces;
+	for
+		(
+			TopExp_Explorer Explorer(theShape, TopAbs_FACE);
+			Explorer.More();
+			Explorer.Next()
+			)
+	{
+		faces.push_back(TopoDS::Face(theShape));
+	}
+	return std::move(faces);
+}
 
 Handle(Geom2d_Curve)
 AutLib::Cad_Tools::MakeSegment

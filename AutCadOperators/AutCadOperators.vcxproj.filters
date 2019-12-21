@@ -58,6 +58,15 @@
     <Filter Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Info">
       <UniqueIdentifier>{f6032e67-bc90-4085-8ab4-c0cbbb1b60f1}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Operators\Section">
+      <UniqueIdentifier>{bdebc18e-f6c0-4914-a52f-0085c42db007}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Section\Plane">
+      <UniqueIdentifier>{bdfcf644-dd85-42fe-ac5a-5449c1f2708d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Section\Cutter">
+      <UniqueIdentifier>{26d9c089-a04f-41bf-b398-9f94ed36aaab}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Pln_IntsctEntity.hxx">
@@ -99,6 +108,12 @@
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Info\Pln_IntsctEdgeEdgeInfo.hxx">
       <Filter>AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Info</Filter>
     </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Section\Cutter\CadOpter_Cutter.hxx">
+      <Filter>AutLib\Cad\Operators\Section\Cutter</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Section\Plane\CadOpter_PlnCutter.hxx">
+      <Filter>AutLib\Cad\Operators\Section\Plane</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Pln_IntsctEntity.cxx">
@@ -115,6 +130,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Tools\Pln_IntsctTools.cxx">
       <Filter>AutLib\Cad\Operators\Plane\Intersection\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Operators\Section\Cutter\CadOpter_PlnCutter.cxx">
+      <Filter>AutLib\Cad\Operators\Section\Plane</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Plane;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Cutter;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <PostBuildEvent>
       <Command>if not exist "$(SolutionDir)include" mkdir "$(SolutionDir)include"
@@ -71,7 +71,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Plane;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Cutter;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -92,6 +92,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Segment\Pln_IntscSegment.hxx" />
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Vertex\Pln_IntsctVertex.hxx" />
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Tools\Pln_IntsctTools.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Section\Cutter\CadOpter_Cutter.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Section\Plane\CadOpter_PlnCutter.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Info\Pln_IntsctEdgeEdgeInfo.cxx" />
@@ -99,6 +101,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Pln_IntsctEntity.cxx" />
     <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Point\Pln_IntsctPoint.cxx" />
     <ClCompile Include="AutLib\Cad\Operators\Plane\Intersection\Tools\Pln_IntsctTools.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Section\Cutter\CadOpter_PlnCutter.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

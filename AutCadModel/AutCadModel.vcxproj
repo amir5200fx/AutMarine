@@ -141,6 +141,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     <ClInclude Include="AutLib\CadModel\Plane\Curve\CadPlnModel_Curve.hxx" />
     <ClInclude Include="AutLib\CadModel\Plane\Curve\Segment\CadPlnModel_Segment.hxx" />
     <ClInclude Include="AutLib\CadModel\Plane\Entity\CadPlnModel_Entity.hxx" />
+    <ClInclude Include="AutLib\CadModel\Solid\CadModel_Solid.hxx" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\CadModel\Plane\Curve\CadPlnModel_Curve.cxx" />

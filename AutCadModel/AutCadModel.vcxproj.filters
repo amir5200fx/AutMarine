@@ -34,6 +34,9 @@
     <Filter Include="AutLib\CadModel\Plane\Curve\Approximation">
       <UniqueIdentifier>{e5f475c9-22c1-483d-b7b0-217bba956984}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadModel\Solid">
+      <UniqueIdentifier>{0aacd781-082c-453b-bb4e-37ba107b2471}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadModel\Plane\Entity\CadPlnModel_Entity.hxx">
@@ -44,6 +47,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\CadModel\Plane\Curve\Segment\CadPlnModel_Segment.hxx">
       <Filter>AutLib\CadModel\Plane\Curve\Segment</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Solid\CadModel_Solid.hxx">
+      <Filter>AutLib\CadModel\Solid</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -125,6 +125,9 @@ void AutLib::Cad_EntityManager<EntityType>::Combine()
 
 	while (NOT theSelected_.empty())
 	{
+		blockName = theSelected_.front();
+		theSelected_.pop_front();
+
 		auto iter = theBlocks_.find(blockName);
 		Debug_If_Condition(iter IS_EQUAL theBlocks_.end());
 
