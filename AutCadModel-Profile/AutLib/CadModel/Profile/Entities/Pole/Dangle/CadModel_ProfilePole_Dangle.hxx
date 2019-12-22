@@ -22,10 +22,22 @@ namespace AutLib
 
 		std::weak_ptr<segmentType> theSegment_;
 
-	public:
+	protected:
 
 		CadModel_ProfilePole_Dangle()
 		{}
+
+	public:
+
+		virtual Standard_Boolean IsForward() const
+		{
+			return Standard_False;
+		}
+
+		virtual Standard_Boolean IsBackward() const
+		{
+			return Standard_False;
+		}
 
 		//- Macros
 		GLOBAL_ACCESS_SINGLE(std::weak_ptr<segmentType>, Segment)

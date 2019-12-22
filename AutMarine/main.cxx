@@ -61,11 +61,17 @@ using namespace AutLib;
 int main()
 {
 
+	Aft_Node<Aft2d_NodeTraits> n0;
+	Aft_Node<Aft2d_NodeAnIsoTraits> an0;
+
+	Aft_Node<Aft2d_NodeSurfaceTraits> sn0;
+
+
 	//example_reading_iges_creating_gmodel();
 	//example_creating_plane_region_box();
 	//example_spliting_block_surface();
 	//example_mesh_aniso_plane();
-	example_model_analysis();
+	//example_model_analysis();
 
 	PAUSE;
 	return 0;

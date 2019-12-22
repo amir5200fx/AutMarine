@@ -28,6 +28,24 @@
     <Filter Include="AutLib\CadModel\Profile\Entities\Pole\Dangle">
       <UniqueIdentifier>{4d142f22-1175-425f-9b8a-d97363421c37}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Pole\Dangle\Forward">
+      <UniqueIdentifier>{859f2fa1-b9dd-420f-89aa-b0e039ff8f35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Pole\Dangle\Backward">
+      <UniqueIdentifier>{3e4a8c22-5496-4cc2-aa39-b1c39af1cc70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Entities\Pole\Tools">
+      <UniqueIdentifier>{17c6607f-c057-40c9-adf4-87ed99a6d8d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Prime">
+      <UniqueIdentifier>{bb58bc29-fad4-4fa1-9206-0af412f35fe1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Prime\Triple">
+      <UniqueIdentifier>{671bb02a-32f5-4c51-889b-6348fd587199}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\CadModel\Profile\Prime\Quadruple">
+      <UniqueIdentifier>{fee89441-ad44-4410-9931-f17128f2f913}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\CadModel\Profile\Entities\Entity\CadModel_ProfileEntity.hxx">
@@ -44,6 +62,24 @@
     </ClInclude>
     <ClInclude Include="AutLib\CadModel\Profile\Entities\Pole\Segment\CadModel_ProfilePole_Clamped.hxx">
       <Filter>AutLib\CadModel\Profile\Entities\Pole\Clamped</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Entities\Pole\Dangle\Forward\CadModel_ProfilePole_Forward.hxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Pole\Dangle\Forward</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Entities\Pole\Dangle\Backward\CadModel_ProfilePole_Backward.hxx">
+      <Filter>AutLib\CadModel\Profile\Entities\Pole\Dangle\Backward</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\CadModel_Profile.hxx">
+      <Filter>AutLib\CadModel\Profile</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Prime\CadModel_PrimeProfile.hxx">
+      <Filter>AutLib\CadModel\Profile\Prime</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Prime\Triple\CadModel_PrimeProfile_Triple.hxx">
+      <Filter>AutLib\CadModel\Profile\Prime\Triple</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\CadModel\Profile\Prime\Quadruple\CadModel_PrimeProfile_Quadruple.hxx">
+      <Filter>AutLib\CadModel\Profile\Prime\Quadruple</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
