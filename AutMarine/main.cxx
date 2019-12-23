@@ -53,6 +53,15 @@
 #include <Pln_Wire.hxx>
 #include <Pln_Edge.hxx>
 
+#include <Aft2d_Node.hxx>
+#include <Aft2d_NodeAnIso.hxx>
+#include <Aft2d_NodeSurface.hxx>
+#include <Aft2d_ElementAnIso.hxx>
+#include <Aft2d_ElementSurface.hxx>
+
+#include <Aft2d_SegmentNode.hxx>
+#include <Aft2d_CornerNode.hxx>
+
 
 
 using namespace boost::archive;
@@ -61,11 +70,26 @@ using namespace AutLib;
 int main()
 {
 
+	Aft_Node<Aft2d_NodeTraits> N0;
+	Aft_Node<Aft2d_NodeAnIsoTraits> aN0;
+	Aft_Node<Aft2d_NodeSurfaceTraits> sN0;
+
+	Aft_TBndNode<Aft2d_TBndNodeTraits, Mesh_BndNode_Position_Corner> corN0;
+	Aft_TBndNode<Aft2d_TBndNodeTraits, Mesh_BndNode_Position_Segment> segN0;
+
+
+
+	Aft_Node<Aft2d_NodeTraits> node0;
+
+	Aft_Node<Aft2d_NodeAnIsoTraits> aNode0;
+
+	Aft_Node<Aft2d_NodeSurfaceTraits> sNode0;
+
 	//example_reading_iges_creating_gmodel();
 	//example_creating_plane_region_box();
 	//example_spliting_block_surface();
 	//example_mesh_aniso_plane();
-	example_model_analysis();
+	//example_model_analysis();
 
 	PAUSE;
 	return 0;

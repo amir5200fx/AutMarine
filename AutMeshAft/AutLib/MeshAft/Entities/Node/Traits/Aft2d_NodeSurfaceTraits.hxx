@@ -17,7 +17,7 @@ namespace AutLib
 		typedef Aft2d_ElementSurface elementType;
 		typedef void facetType;
 
-		static const Aft_NodeType nType = Aft_NodeType_AnIso;
+		static const Aft_NodeType nType = Aft_NodeType_Surface;
 
 		typedef Pnt2d ptType;
 	};
