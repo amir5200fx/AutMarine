@@ -79,6 +79,8 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Edge\Pln_IntsctEdge.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex\Pln_IntsctVertex.hxx" />
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Info\Pln_IntsctEdgeEdgeInfo.hxx" />
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\EdgeEdge\Pln_IntsctEdgeEdge.hxx" />
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Edge\Boundary\Pln_IntsctEdge_Boundary.hxx" />

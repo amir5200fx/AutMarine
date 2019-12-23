@@ -67,6 +67,27 @@
     <Filter Include="AutLib\Cad\Operators\Section\Cutter">
       <UniqueIdentifier>{26d9c089-a04f-41bf-b398-9f94ed36aaab}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection">
+      <UniqueIdentifier>{ebfd004f-07a3-4c79-a18a-e411d3de1ae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection\Plane">
+      <UniqueIdentifier>{f9b9d39d-89e3-4c95-99fc-b191cce16f0a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities">
+      <UniqueIdentifier>{5a9b8740-4513-41c7-a07a-f36a69e2b2d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex">
+      <UniqueIdentifier>{5eaa818a-322e-4cd6-8779-aeb0a270a774}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Edge">
+      <UniqueIdentifier>{d05b4ce1-36a1-4eb9-a903-fee9700dbe86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge">
+      <UniqueIdentifier>{81e50198-5455-4073-8de4-354006c16367}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge">
+      <UniqueIdentifier>{7a07cbe8-2ce4-4fbd-8932-c9e7dba3ffa9}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Operators\Plane\Intersection\Entities\Entity\Pln_IntsctEntity.hxx">
@@ -113,6 +134,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\Operators\Section\Plane\CadOpter_PlnCutter.hxx">
       <Filter>AutLib\Cad\Operators\Section\Plane</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex\Pln_IntsctVertex.hxx">
+      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Edge\Pln_IntsctEdge.hxx">
+      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Edge</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
