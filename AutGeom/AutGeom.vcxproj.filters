@@ -346,6 +346,12 @@
     <Filter Include="AutLib\Geom\Approximation\Curve\Info">
       <UniqueIdentifier>{106f9b68-9f4e-477b-b763-c68e82175890}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\ItemSearch">
+      <UniqueIdentifier>{ed127f4c-f0c4-4e9b-839f-a61583273cdb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Geom\ItemSearch\BinSearch">
+      <UniqueIdentifier>{61826799-c9ea-4522-a658-41caae6b4471}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -518,6 +524,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\Approximation\Curve\System\Geo_ApprxCurve_System.cxx">
       <Filter>AutLib\Geom\Approximation\Curve\System</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\ItemSearch\BinSearch\Geo_BinSearch.cxx">
+      <Filter>AutLib\Geom\ItemSearch\BinSearch</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -934,6 +943,15 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Approximation\Curve\Info\Geo_ApprxCurveInfo.hxx">
       <Filter>AutLib\Geom\Approximation\Curve\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\ItemSearch\Geo_ItemSearch.hxx">
+      <Filter>AutLib\Geom\ItemSearch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\ItemSearch\BinSearch\Geo_BinSearch.hxx">
+      <Filter>AutLib\Geom\ItemSearch\BinSearch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\ItemSearch\BinSearch\Geo_BinSearchI.hxx">
+      <Filter>AutLib\Geom\ItemSearch\BinSearch</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>
