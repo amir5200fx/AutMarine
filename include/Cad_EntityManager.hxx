@@ -88,11 +88,11 @@ namespace AutLib
 			const word& theName
 		) const;
 
+		block_ptr Combine();
+
 		void SelectAll();
 
 		void UnSelectAll();
-
-		void Combine();
 
 		void Combine(const word& Blockname);
 

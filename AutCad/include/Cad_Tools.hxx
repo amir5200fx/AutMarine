@@ -16,6 +16,8 @@ class Geom_Curve;
 class Geom_Surface;
 class Geom2d_Curve;
 class Poly_Triangulation;
+class TopoDS_Vertex;
+class TopoDS_Edge;
 class TopoDS_Face;
 class TopoDS_Shape;
 class Geom2dAPI_InterCurveCurve;
@@ -30,6 +32,30 @@ namespace AutLib
 	{
 
 	public:
+
+		/*static Standard_Integer NbVertices(const TopoDS_Shape& theShape);
+
+		static Standard_Integer NbEdges(const TopoDS_Shape& theShape);
+
+		static Standard_Integer NbFaces(const TopoDS_Shape& theShape);*/
+
+		static std::vector<TopoDS_Vertex> 
+			RetrieveVertices
+			(
+				const TopoDS_Shape& theShape
+			);
+
+		static std::vector<TopoDS_Edge> 
+			RetrieveEdges
+			(
+				const TopoDS_Shape& theShape
+			);
+
+		static std::vector<TopoDS_Face> 
+			RetrieveFaces
+			(
+				const TopoDS_Shape& theShape
+			);
 
 		static Handle(Geom2d_Curve)
 			MakeSegment

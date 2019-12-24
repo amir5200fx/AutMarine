@@ -88,6 +88,42 @@ AutLib::Cad_EntityManager<EntityType>::GetBlockEntity
 }
 
 template<class EntityType>
+typename AutLib::Cad_EntityManager<EntityType>::block_ptr
+AutLib::Cad_EntityManager<EntityType>::Combine()
+{
+	if (theSelected_.size() < 2)
+	{
+		FatalErrorIn("block_ptr combine()")
+			<< "Invalid data"
+			<< abort(FatalError);
+	}
+
+	auto blockName = theSelected_.front();
+	theSelected_.pop_front();
+
+	auto block = theBlocks_.find(blockName);
+	Debug_If_Condition(block IS_EQUAL theBlocks_.end());
+
+	while (NOT theSelected_.empty())
+	{
+		blockName = theSelected_.front();
+		theSelected_.pop_front();
+
+		auto iter = theBlocks_.find(blockName);
+		Debug_If_Condition(iter IS_EQUAL theBlocks_.end());
+
+		entityList entities;
+		iter->second->RetrieveEntitiesTo(entities);
+
+		for (const auto& x : entities)
+			block->second->Add(x);
+
+		theBlocks_.erase(iter);
+	}
+	return std::move(block->second);
+}
+
+template<class EntityType>
 void AutLib::Cad_EntityManager<EntityType>::SelectAll()
 {
 	auto iter = theBlocks_.begin();
@@ -112,39 +148,13 @@ void AutLib::Cad_EntityManager<EntityType>::UnSelectAll()
 }
 
 template<class EntityType>
-void AutLib::Cad_EntityManager<EntityType>::Combine()
-{
-	if (theSelected_.size() < 2)
-		return;
-
-	auto blockName = theSelected_.front();
-	theSelected_.pop_front();
-
-	auto block = theBlocks_.find(blockName);
-	Debug_If_Condition(block IS_EQUAL theBlocks_.end());
-
-	while (NOT theSelected_.empty())
-	{
-		auto iter = theBlocks_.find(blockName);
-		Debug_If_Condition(iter IS_EQUAL theBlocks_.end());
-
-		entityList entities;
-		iter->second->RetrieveEntitiesTo(entities);
-
-		for (const auto& x : entities)
-			block->second->Add(x);
-
-		theBlocks_.erase(iter);
-	}
-}
-
-template<class EntityType>
 void AutLib::Cad_EntityManager<EntityType>::Combine
 (
 	const word & Blockname
 )
 {
-	Combine();
+	auto block = Combine();
+	SelectBlockEntity(block->Name());
 
 	RenameBlock(Blockname);
 }
