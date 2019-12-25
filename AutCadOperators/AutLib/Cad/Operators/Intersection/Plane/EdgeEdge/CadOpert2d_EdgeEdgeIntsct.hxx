@@ -1,24 +1,25 @@
 #pragma once
-#ifndef _CadOpetr2d_EdgeEdgeIntsct_Header
-#define _CadOpetr2d_EdgeEdgeIntsct_Header
+#ifndef _CadOpert2d_EdgeEdgeIntsct_Header
+#define _CadOpert2d_EdgeEdgeIntsct_Header
 
 #include <Global_Done.hxx>
 
 #include <memory>
+#include <vector>
 
 namespace AutLib
 {
 
 	// Forward Declarations
-	class CadOpetr2d_IntsctPair;
-	class CadOpetr2d_EdgeEdgeIntsct_Info;
+	class CadOpert2d_IntsctPair;
+	class CadOpert2d_EdgeEdgeIntsct_Info;
 	class Pln_Edge;
 
-	class CadOpetr2d_EdgeEdgeIntsct
+	class CadOpert2d_EdgeEdgeIntsct
 		: public Global_Done
 	{
 
-		typedef CadOpetr2d_EdgeEdgeIntsct_Info info;
+		typedef CadOpert2d_EdgeEdgeIntsct_Info info;
 
 		/*Private Data*/
 
@@ -28,20 +29,20 @@ namespace AutLib
 		std::shared_ptr<info> theInfo_;
 
 
-		std::vector<std::shared_ptr<CadOpetr2d_IntsctPair>> theEntities_;
+		std::vector<std::shared_ptr<CadOpert2d_IntsctPair>> theEntities_;
 
 
-		std::vector<std::shared_ptr<CadOpetr2d_IntsctPair>>& ChangeEntities()
+		std::vector<std::shared_ptr<CadOpert2d_IntsctPair>>& ChangeEntities()
 		{
 			return theEntities_;
 		}
 
 	public:
 
-		CadOpetr2d_EdgeEdgeIntsct()
+		CadOpert2d_EdgeEdgeIntsct()
 		{}
 
-		CadOpetr2d_EdgeEdgeIntsct
+		CadOpert2d_EdgeEdgeIntsct
 		(
 			const std::shared_ptr<Pln_Edge>& theEdge0,
 			const std::shared_ptr<Pln_Edge>& theEdge1,
@@ -77,12 +78,12 @@ namespace AutLib
 			return theInfo_;
 		}
 
-		const std::vector<std::shared_ptr<CadOpetr2d_IntsctPair>>& Entities() const
+		const std::vector<std::shared_ptr<CadOpert2d_IntsctPair>>& Entities() const
 		{
 			return theEntities_;
 		}
 
-		const std::shared_ptr<CadOpetr2d_IntsctPair>& 
+		const std::shared_ptr<CadOpert2d_IntsctPair>& 
 			Entity
 			(
 				const Standard_Integer theIndex
@@ -106,4 +107,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_CadOpetr2d_EdgeEdgeIntsct_Header
+#endif // !_CadOpert2d_EdgeEdgeIntsct_Header

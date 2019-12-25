@@ -1,13 +1,13 @@
-#include <CadOpetr2d_EdgeEdgeIntsct.hxx>
+#include <CadOpert2d_EdgeEdgeIntsct.hxx>
 
 #include <Global_Macros.hxx>
 #include <Pln_Curve.hxx>
 #include <Pln_Edge.hxx>
 #include <Cad_Tools.hxx>
-#include <CadOpetr2d_IntsctPair.hxx>
-#include <CadOpetr2d_IntsctPoint.hxx>
-#include <CadOpetr2d_IntsctSegment.hxx>
-#include <CadOpetr2d_EdgeEdgeIntsct_Info.hxx>
+#include <CadOpert2d_IntsctPair.hxx>
+#include <CadOpert2d_IntsctPoint.hxx>
+#include <CadOpert2d_IntsctSegment.hxx>
+#include <CadOpert2d_EdgeEdgeIntsct_Info.hxx>
 #include <error.hxx>
 #include <OSstream.hxx>
 
@@ -16,15 +16,15 @@
 #include <Geom2dInt_GInter.hxx>
 #include <Geom2d_Curve.hxx>
 
-const std::shared_ptr<AutLib::CadOpetr2d_IntsctPair>& 
-AutLib::CadOpetr2d_EdgeEdgeIntsct::Entity
+const std::shared_ptr<AutLib::CadOpert2d_IntsctPair>& 
+AutLib::CadOpert2d_EdgeEdgeIntsct::Entity
 (
 	const Standard_Integer theIndex
 ) const
 {
 	if (NOT INSIDE(theIndex, 0, NbEntities() - 1))
 	{
-		FatalErrorIn("const std::shared_ptr<CadOpetr2d_IntsctPair>& Entity(const Standard_Integer theIndex) const")
+		FatalErrorIn("const std::shared_ptr<CadOpert2d_IntsctPair>& Entity(const Standard_Integer theIndex) const")
 			<< "Invalid index : " << theIndex << endl
 			<< " - nb. of entities: " << NbEntities() << endl
 			<< abort(FatalError);
@@ -32,7 +32,7 @@ AutLib::CadOpetr2d_EdgeEdgeIntsct::Entity
 	return theEntities_[theIndex];
 }
 
-void AutLib::CadOpetr2d_EdgeEdgeIntsct::Perform()
+void AutLib::CadOpert2d_EdgeEdgeIntsct::Perform()
 {
 	if (NOT Edge0())
 	{
@@ -66,11 +66,11 @@ void AutLib::CadOpetr2d_EdgeEdgeIntsct::Perform()
 	{
 		const auto& pt = alg.Point(Index);
 
-		auto pair = std::make_shared<CadOpetr2d_IntsctPair>();
+		auto pair = std::make_shared<CadOpert2d_IntsctPair>();
 		Debug_Null_Pointer(pair);
 
-		auto entity0 = std::make_shared<CadOpetr2d_IntsctPoint>();
-		auto entity1 = std::make_shared<CadOpetr2d_IntsctPoint>();
+		auto entity0 = std::make_shared<CadOpert2d_IntsctPoint>();
+		auto entity1 = std::make_shared<CadOpert2d_IntsctPoint>();
 		Debug_Null_Pointer(entity0);
 		Debug_Null_Pointer(entity1);
 
@@ -107,11 +107,11 @@ void AutLib::CadOpetr2d_EdgeEdgeIntsct::Perform()
 				<< abort(FatalError);
 		}
 
-		auto pair = std::make_shared<CadOpetr2d_IntsctPair>();
+		auto pair = std::make_shared<CadOpert2d_IntsctPair>();
 		Debug_Null_Pointer(pair);
 
-		auto entity0 = std::make_shared<CadOpetr2d_IntsctSegment>();
-		auto entity1 = std::make_shared<CadOpetr2d_IntsctSegment>();
+		auto entity0 = std::make_shared<CadOpert2d_IntsctSegment>();
+		auto entity1 = std::make_shared<CadOpert2d_IntsctSegment>();
 		Debug_Null_Pointer(entity0);
 		Debug_Null_Pointer(entity1);
 

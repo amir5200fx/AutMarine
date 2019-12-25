@@ -1,8 +1,8 @@
 #pragma once
-#ifndef _CadOpetr2d_IntsctSegment_Header
-#define _CadOpetr2d_IntsctSegment_Header
+#ifndef _CadOpert2d_IntsctSegment_Header
+#define _CadOpert2d_IntsctSegment_Header
 
-#include <CadOpetr2d_IntsctEntity.hxx>
+#include <CadOpert2d_IntsctEntity.hxx>
 #include <Pnt2d.hxx>
 
 #include <Standard_Handle.hxx>
@@ -12,8 +12,8 @@ class Geom2d_Curve;
 namespace AutLib
 {
 
-	class CadOpetr2d_IntsctSegment
-		: public CadOpetr2d_IntsctEntity
+	class CadOpert2d_IntsctSegment
+		: public CadOpert2d_IntsctEntity
 	{
 
 		/*Private Data*/
@@ -28,10 +28,10 @@ namespace AutLib
 
 	public:
 
-		CadOpetr2d_IntsctSegment()
+		CadOpert2d_IntsctSegment()
 		{}
 
-		CadOpetr2d_IntsctSegment
+		CadOpert2d_IntsctSegment
 		(
 			const std::shared_ptr<Pln_Edge>& theEdge,
 			const Pnt2d& theCoord0,
@@ -40,7 +40,7 @@ namespace AutLib
 			const Standard_Real theP1,
 			const Handle(Geom2d_Curve)& theCurve
 		)
-			: CadOpetr2d_IntsctEntity(theEdge)
+			: CadOpert2d_IntsctEntity(theEdge)
 			, theCoord0_(theCoord0)
 			, theCoord1_(theCoord1)
 			, theParameter0_(theP0)
@@ -69,4 +69,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_CadOpetr2d_IntsctSegment_Header
+#endif // !_CadOpert2d_IntsctSegment_Header

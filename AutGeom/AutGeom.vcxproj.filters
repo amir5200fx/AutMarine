@@ -352,6 +352,9 @@
     <Filter Include="AutLib\Geom\ItemSearch\BinSearch">
       <UniqueIdentifier>{61826799-c9ea-4522-a658-41caae6b4471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Knit\Item">
+      <UniqueIdentifier>{bd16fa27-f5e2-4642-8daa-6ac937d99f7c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -527,6 +530,9 @@
     </ClCompile>
     <ClCompile Include="AutLib\Geom\ItemSearch\BinSearch\Geo_BinSearch.cxx">
       <Filter>AutLib\Geom\ItemSearch\BinSearch</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Geom\Knit\Item\Knit_Item.cxx">
+      <Filter>AutLib\Geom\Knit\Item</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -952,6 +958,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\ItemSearch\BinSearch\Geo_BinSearchI.hxx">
       <Filter>AutLib\Geom\ItemSearch\BinSearch</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Item\Knit_Item.hxx">
+      <Filter>AutLib\Geom\Knit\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Item\Knit_ItemI.hxx">
+      <Filter>AutLib\Geom\Knit\Item</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

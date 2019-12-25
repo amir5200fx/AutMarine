@@ -54,7 +54,7 @@
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Plane;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Cutter;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Edge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Tools;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Plane;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Cutter;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\TEdge\Paired;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\TEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Edge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeWire;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Tools;$(ProjectDir)AutLib\Cad\Operators\Split\Plane;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <PostBuildEvent>
@@ -72,7 +72,7 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Pair;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Segment;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity\Point;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Entity;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Boundary;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Outer;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge\Inner;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Edge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Entities\Vertex;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\Tools;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge\Info;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Plane\intersection\EdgeEdge;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Plane;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Cutter;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Edge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Tools;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Plane;$(MSBuildProjectDirectory)\AutLib\Cad\Operators\Section\Cutter;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\TEdge\Paired;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\TEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Edge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Entities\Entity;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeEdge;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\EdgeWire;$(ProjectDir)AutLib\Cad\Operators\Intersection\Plane\Tools;$(ProjectDir)AutLib\Cad\Operators\Split\Plane;$(SolutionDir)AutCad\include;$(SolutionDir)AutGeom\include;$(SolutionDir)AutBase\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
@@ -81,28 +81,26 @@ for /r "$(ProjectDir)AutLib" %%f in (*.hxx) do @xcopy "%%f" "$(ProjectDir)includ
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpetr2d_EdgeEdgeIntsct.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpetr2d_EdgeEdgeIntsct_Info.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge\CadOpetr2d_IntsctCmpEdge.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge\CadOpetr2d_CutterEdge.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge\Tangential\CadOpetr_TangCutterEdge.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Edge\CadOpetr2d_IntsctEdge.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\CadOpetr2d_IntsctEntity.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair\CadOpetr2d_IntsctPair.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point\CadOpetr2d_IntsctPoint.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment\CadOpetr2d_IntsctSegment.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\CadOpetr2d_SubEdge.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\Tangential\CadOpetr2d_TangSubEdge.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex\CadOpetr2d_IntsctVertx.hxx" />
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpetr2d_IntsctTools.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpert2d_EdgeEdgeIntsct.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpert2d_EdgeEdgeIntsct_Info.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge\CadOpert2d_IntsctCmpEdge.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Edge\CadOpert2d_IntsctEdge.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\CadOpert2d_IntsctEntity.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair\CadOpert2d_IntsctPair.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point\CadOpert2d_IntsctPoint.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment\CadOpert2d_IntsctSegment.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex\CadOpert2d_IntsctVertx.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpert2d_IntsctTools.hxx" />
     <ClInclude Include="AutLib\Cad\Operators\Section\Cutter\CadOpetr_Cutter.hxx" />
     <ClInclude Include="AutLib\Cad\Operators\Section\Plane\CadOpetr_PlnCutter.hxx" />
+    <ClInclude Include="AutLib\Cad\Operators\Split\Plane\CadOpert2d_Split.hxx" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpetr2d_EdgeEdgeIntsct.cxx" />
-    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpetr2d_EdgeEdgeIntsct_Info.cxx" />
-    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpetr2d_IntsctTools.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpert2d_EdgeEdgeIntsct.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpert2d_EdgeEdgeIntsct_Info.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpert2d_IntsctTools.cxx" />
     <ClCompile Include="AutLib\Cad\Operators\Section\Cutter\CadOpetr_PlnCutter.cxx" />
+    <ClCompile Include="AutLib\Cad\Operators\Split\Plane\CadOpert2d_Split.cxx" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

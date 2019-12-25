@@ -6,7 +6,8 @@ namespace AutLib
 {
 
 	template<class Point>
-	inline Entity_Box<Point> AutLib::Entity_Box<Point>::Union
+	Entity_Box<Point> 
+		Entity_Box<Point>::Union
 	(
 		const Entity_Box & theBox0, 
 		const Entity_Box & theBox1
@@ -24,7 +25,38 @@ namespace AutLib
 	}
 
 	template<class Point>
-	inline Entity_Box<Point> AutLib::Entity_Box<Point>::BoundingBoxOf(const std::vector<Point>& thePts)
+	template<class T>
+	Entity_Box<Point> 
+		Entity_Box<Point>::BoundingBoxOf
+		(
+			const std::vector<std::shared_ptr<T>>& theItems
+		)
+	{
+		Point Pmin, Pmax;
+		Pmin = RealLast();
+		Pmax = RealFirst();
+
+		for (const auto& x : theItems)
+		{
+			auto b = T::BoundingBox(*x);
+
+			const auto& p0 = b.P0();
+			const auto& p1 = b.P1();
+
+			for (int i = 1; i <= Point::dim; i++)
+				Pmin.SetCoord(i, MIN(Pmin.Coord(i), p0.Coord(i)));
+
+			for (int i = 1; i <= Point::dim; i++)
+				Pmax.SetCoord(i, MAX(Pmax.Coord(i), p1.Coord(i)));
+		}
+
+		Entity_Box<Point> box(Pmin, Pmax);
+		return std::move(box);
+	}
+
+	template<class Point>
+	Entity_Box<Point> 
+		Entity_Box<Point>::BoundingBoxOf(const std::vector<Point>& thePts)
 	{
 		Point Pmin, Pmax;
 		Pmin = RealLast();
@@ -43,7 +75,8 @@ namespace AutLib
 	}
 
 	template<class Point>
-	inline Entity_Box<Point> AutLib::Entity_Box<Point>::BoundingBoxOf
+	Entity_Box<Point> 
+		Entity_Box<Point>::BoundingBoxOf
 	(
 		const Point & P0,
 		const Point & P1
@@ -62,7 +95,8 @@ namespace AutLib
 	}
 
 	template<class Point>
-	inline Standard_Boolean AutLib::Entity_Box<Point>::IsInside
+	Standard_Boolean 
+		Entity_Box<Point>::IsInside
 	(
 		const Entity_Box & theInner, 
 		const Entity_Box & theBox

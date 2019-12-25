@@ -201,6 +201,9 @@ namespace AutLib
 
 		static Entity_Box Union(const Entity_Box& theBox0, const Entity_Box& theBox1);
 
+		template<class T>
+		static Entity_Box BoundingBoxOf(const std::vector<std::shared_ptr<T>>& theItems);
+
 		static Entity_Box BoundingBoxOf(const std::vector<Point>& thePts);
 
 		static Entity_Box BoundingBoxOf(const Point& P0, const Point& P1);

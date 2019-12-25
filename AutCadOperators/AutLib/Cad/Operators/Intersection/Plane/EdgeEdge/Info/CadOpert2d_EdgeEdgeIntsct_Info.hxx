@@ -1,6 +1,6 @@
 #pragma once
-#ifndef _CadOpetr2d_EdgeEdgeIntsct_Info_Header
-#define _CadOpetr2d_EdgeEdgeIntsct_Info_Header
+#ifndef _CadOpert2d_EdgeEdgeIntsct_Info_Header
+#define _CadOpert2d_EdgeEdgeIntsct_Info_Header
 
 #include <Standard_TypeDef.hxx>
 #include <Global_AccessMethod.hxx>
@@ -8,7 +8,7 @@
 namespace AutLib
 {
 
-	class CadOpetr2d_EdgeEdgeIntsct_Info
+	class CadOpert2d_EdgeEdgeIntsct_Info
 	{
 
 		/*Private Data*/
@@ -19,7 +19,7 @@ namespace AutLib
 
 		static const Standard_Real DEFAULT_TOLERANCE;
 
-		CadOpetr2d_EdgeEdgeIntsct_Info()
+		CadOpert2d_EdgeEdgeIntsct_Info()
 			: theTolerance_(DEFAULT_TOLERANCE)
 		{}
 
@@ -29,4 +29,4 @@ namespace AutLib
 	};
 }
 
-#endif // !_CadOpetr2d_EdgeEdgeIntsct_Info_Header
+#endif // !_CadOpert2d_EdgeEdgeIntsct_Info_Header

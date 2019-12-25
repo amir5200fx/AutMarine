@@ -37,12 +37,6 @@
     <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge">
       <UniqueIdentifier>{7a07cbe8-2ce4-4fbd-8932-c9e7dba3ffa9}</UniqueIdentifier>
     </Filter>
-    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge">
-      <UniqueIdentifier>{296dc15a-208c-4463-8537-8949f5292a79}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\Tangential">
-      <UniqueIdentifier>{380bc8ea-45fc-4b43-9b5a-65a28ad4e609}</UniqueIdentifier>
-    </Filter>
     <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge\Tangential">
       <UniqueIdentifier>{c0968f6d-d55c-41dd-9abe-c2a02e3cfd41}</UniqueIdentifier>
     </Filter>
@@ -76,6 +70,9 @@
     <Filter Include="AutLib\Cad\Operators\Split\Plane">
       <UniqueIdentifier>{83691e02-944f-4f8e-8213-603368ae0404}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Operators\Intersection\Plane\EdgeWire">
+      <UniqueIdentifier>{c03eb375-3306-4fdb-b132-9c193a0648c5}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Operators\Section\Cutter\CadOpetr_Cutter.hxx">
@@ -84,61 +81,55 @@
     <ClInclude Include="AutLib\Cad\Operators\Section\Plane\CadOpetr_PlnCutter.hxx">
       <Filter>AutLib\Cad\Operators\Section\Plane</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge\Tangential\CadOpetr_TangCutterEdge.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge\Tangential</Filter>
+    <ClInclude Include="AutLib\Cad\Operators\Split\Plane\CadOpert2d_Split.hxx">
+      <Filter>AutLib\Cad\Operators\Split\Plane</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpetr2d_EdgeEdgeIntsct.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\EdgeEdge</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpetr2d_EdgeEdgeIntsct_Info.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex\CadOpetr2d_IntsctVertx.hxx">
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex\CadOpert2d_IntsctVertx.hxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Vertex</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\CadOpetr2d_SubEdge.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\Tangential\CadOpetr2d_TangSubEdge.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\Tangential</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\CadOpetr2d_IntsctEntity.hxx">
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\CadOpert2d_IntsctEntity.hxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Entity</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point\CadOpetr2d_IntsctPoint.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment\CadOpetr2d_IntsctSegment.hxx">
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment\CadOpert2d_IntsctSegment.hxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Segment</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair\CadOpetr2d_IntsctPair.hxx">
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point\CadOpert2d_IntsctPoint.hxx">
+      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Point</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair\CadOpert2d_IntsctPair.hxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Entity\Pair</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Edge\CadOpetr2d_IntsctEdge.hxx">
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\Edge\CadOpert2d_IntsctEdge.hxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\Edge</Filter>
     </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge\CadOpetr2d_CutterEdge.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\CutterEdge</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpetr2d_IntsctTools.hxx">
-      <Filter>AutLib\Cad\Operators\Intersection\Plane\Tools</Filter>
-    </ClInclude>
-    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge\CadOpetr2d_IntsctCmpEdge.hxx">
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge\CadOpert2d_IntsctCmpEdge.hxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\CmpEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpert2d_EdgeEdgeIntsct.hxx">
+      <Filter>AutLib\Cad\Operators\Intersection\Plane\EdgeEdge</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpert2d_EdgeEdgeIntsct_Info.hxx">
+      <Filter>AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpert2d_IntsctTools.hxx">
+      <Filter>AutLib\Cad\Operators\Intersection\Plane\Tools</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Cad\Operators\Section\Cutter\CadOpetr_PlnCutter.cxx">
       <Filter>AutLib\Cad\Operators\Section\Plane</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpetr2d_EdgeEdgeIntsct.cxx">
+    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\CadOpert2d_EdgeEdgeIntsct.cxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\EdgeEdge</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpetr2d_EdgeEdgeIntsct_Info.cxx">
+    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info\CadOpert2d_EdgeEdgeIntsct_Info.cxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\EdgeEdge\Info</Filter>
     </ClCompile>
-    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpetr2d_IntsctTools.cxx">
+    <ClCompile Include="AutLib\Cad\Operators\Intersection\Plane\Tools\CadOpert2d_IntsctTools.cxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Tools</Filter>
+    </ClCompile>
+    <ClCompile Include="AutLib\Cad\Operators\Split\Plane\CadOpert2d_Split.cxx">
+      <Filter>AutLib\Cad\Operators\Split\Plane</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
