@@ -11,7 +11,7 @@ namespace AutLib
 {
 
 	// Forward Declarations
-	class CadOpert2d_IntsctEdge;
+	class Pln_Edge;
 
 	class CadOpert2d_IntsctCmpEdge
 		: public Global_Indexed
@@ -19,23 +19,28 @@ namespace AutLib
 
 		/*Private Data*/
 
-		std::vector<std::shared_ptr<CadOpert2d_IntsctEdge>> theEdges_;
+		std::vector<std::shared_ptr<Pln_Edge>> theEdges_;
 
-	public:
+	protected:
 
 		CadOpert2d_IntsctCmpEdge()
 		{}
 
-		CadOpert2d_IntsctCmpEdge(const Standard_Integer theIndex)
+		CadOpert2d_IntsctCmpEdge
+		(
+			const Standard_Integer theIndex
+		)
 			: Global_Indexed(theIndex)
 		{}
 
-		const std::vector<std::shared_ptr<CadOpert2d_IntsctEdge>>& Edges() const
+	public:
+
+		const std::vector<std::shared_ptr<Pln_Edge>>& Edges() const
 		{
 			return theEdges_;
 		}
 
-		std::vector<std::shared_ptr<CadOpert2d_IntsctEdge>>& Edges()
+		std::vector<std::shared_ptr<Pln_Edge>>& Edges()
 		{
 			return theEdges_;
 		}
@@ -45,7 +50,7 @@ namespace AutLib
 			return Standard_False;
 		}
 
-		virtual Standard_Boolean IsSubdivided() const
+		virtual Standard_Boolean IsSubEdge() const
 		{
 			return Standard_False;
 		}

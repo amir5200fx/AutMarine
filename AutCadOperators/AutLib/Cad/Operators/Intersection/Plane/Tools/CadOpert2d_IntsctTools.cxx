@@ -3,7 +3,9 @@
 #include <Geom_ItemSort.hxx>
 #include <CadOpert2d_IntsctVertx.hxx>
 #include <CadOpert2d_IntsctEdge.hxx>
+#include <CadOpert2d_IntsctSubEdge.hxx>
 #include <CadOpert2d_IntsctSegment.hxx>
+#include <CadOpert2d_IntsctPair.hxx>
 #include <error.hxx>
 #include <OSstream.hxx>
 
@@ -27,7 +29,7 @@ AutLib::CadOpert2d_IntsctTools::IsIntersectionEntity
 {
 	return (Standard_Boolean)std::dynamic_pointer_cast
 		<
-		CadOpert2d_IntsctEdge
+		CadOpert2d_IntsctCmpEdge
 		>(theEdge);
 }
 
@@ -41,23 +43,40 @@ void AutLib::CadOpert2d_IntsctTools::Sort
 	sort.Perform(theEntities);
 }
 
-void AutLib::CadOpert2d_IntsctTools::SubdivideEdge
+void AutLib::CadOpert2d_IntsctTools::SplitEntities
 (
-	const Pln_Edge& theEdge,
-	const std::vector<std::shared_ptr<CadOpert2d_IntsctEntity>>& theEntities, 
-	std::vector<std::shared_ptr<CadOpert2d_IntsctEdge>>& theSegments
+	const std::vector<std::shared_ptr<CadOpert2d_IntsctPair>>& theEntities, 
+	std::vector<std::shared_ptr<CadOpert2d_IntsctEntity>>& theEntities0,
+	std::vector<std::shared_ptr<CadOpert2d_IntsctEntity>>& theEntities1
 )
 {
-	
+	theEntities0.reserve(theEntities.size());
+	theEntities1.reserve(theEntities.size());
+
 	for (const auto& x : theEntities)
 	{
-		if (x->IsPoint())
-		{
-			
-		}
-		else
-		{
-			
-		}
+		Debug_Null_Pointer(x);
+		theEntities0.push_back(x->Entity0());
+		theEntities1.push_back(x->Entity1());
 	}
 }
+
+//void AutLib::CadOpert2d_IntsctTools::SubdivideEdge
+//(
+//	const Pln_Edge& theEdge, 
+//	const std::vector<std::shared_ptr<CadOpert2d_IntsctEntity>>& theEntities,
+//	std::vector<std::shared_ptr<CadOpert2d_IntsctSubEdge>>& theSegments
+//)
+//{
+//	for (const auto& x : theEntities)
+//	{
+//		if (x->IsPoint())
+//		{
+//
+//		}
+//		else
+//		{
+//
+//		}
+//	}
+//}

@@ -3,6 +3,7 @@
 #define _Pln_CmpEdge_Header
 
 #include <Pln_Entity.hxx>
+#include <Entity2d_BoxFwd.hxx>
 
 #include <memory>
 #include <vector>
@@ -50,6 +51,8 @@ namespace AutLib
 		)
 			: Pln_Entity(theIndex, theName)
 		{}
+
+		Entity2d_Box CalcBoundingBox() const;
 
 		Standard_Integer NbEdges() const
 		{

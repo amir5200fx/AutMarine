@@ -54,6 +54,8 @@ namespace AutLib
 
 	public:
 
+		typedef Pnt2d ptType;
+
 		Pln_Edge
 		(
 			const std::shared_ptr<Pln_Vertex>& theV0,
@@ -186,6 +188,11 @@ namespace AutLib
 		//- virtual functions and operators
 
 		virtual Standard_Boolean IsRing() const
+		{
+			return Standard_False;
+		}
+
+		virtual Standard_Boolean IsIntersection() const
 		{
 			return Standard_False;
 		}

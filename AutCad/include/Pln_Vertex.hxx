@@ -116,6 +116,11 @@ namespace AutLib
 
 		void Transform(const gp_Trsf2d& T);
 
+		virtual Standard_Boolean IsIntersection() const
+		{
+			return Standard_False;
+		}
+
 		static Standard_Boolean IsLess
 		(
 			const std::shared_ptr<Pln_Vertex>& theVtx0,
