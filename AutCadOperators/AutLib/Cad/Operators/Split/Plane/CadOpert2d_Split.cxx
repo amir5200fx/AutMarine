@@ -13,13 +13,41 @@
 #include <CadOpert2d_IntsctCutter_TangClamped.hxx>
 #include <CadOpert2d_IntsctCutter_OrthClamped.hxx>
 #include <CadOpert2d_IntsctCutter_Dangle.hxx>
-#include <CadOpert2d_IntsctSubEdge_Orth.hxx>
-#include <CadOpert2d_IntsctSubEdge_Tang.hxx>
+#include <CadOpert2d_IntsctPlnEdge_Orth.hxx>
+#include <CadOpert2d_IntsctPlnEdge_Tang.hxx>
+#include <CadOpert2d_IntsctVertx.hxx>
+#include <CadOpert2d_IntsctCmpEdge.hxx>
+#include <Knit_Item.hxx>
+#include <CadOpert2d_Split_Traits.hxx>
 
 namespace AutLib
 {
 	typedef std::vector<std::shared_ptr<CadOpert2d_IntsctEntity>>
 		entList;
+
+	typedef Knit_Item<CadOpert2d_Split_Traits>
+		knitItem;
+
+	template<>
+	void knitItem::SetTypes()
+	{
+		auto nodes = nodeRegistery::RetrieveKnit_ChainNodes();
+		for (const auto& x : nodes)
+		{
+			Debug_Null_Pointer(x.second);
+
+			if (std::dynamic_pointer_cast<CadOpert2d_IntsctVertx>(x.second))
+			{
+				// start node
+				x.second->Type() = Knit_ChainNode_Type::START;
+			}
+			else
+			{
+				// regular node
+				x.second->Type() = Knit_ChainNode_Type::REGULAR;
+			}
+		}
+	}
 }
 
 void AutLib::CadOpert2d_Split::Perform()
@@ -169,4 +197,9 @@ void AutLib::CadOpert2d_Split::Perform()
 
 	auto newCutter = CadOpert2d_IntsctTools::SubdivideCmpEdge(*Edge(), regIntsct0);
 	auto newPlane = CadOpert2d_IntsctTools::SubdividePlane(*Shape(), regIntsct1);
+
+	auto knit = std::make_shared<knitItem>();
+	Debug_Null_Pointer(knit);
+
+	
 }

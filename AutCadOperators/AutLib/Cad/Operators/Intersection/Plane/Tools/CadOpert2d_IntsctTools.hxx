@@ -75,6 +75,8 @@ namespace AutLib
 			std::shared_ptr<std::vector<std::shared_ptr<CadOpert2d_IntsctEntity>>>
 			>& theEntities
 		);
+
+
 	};
 }
 

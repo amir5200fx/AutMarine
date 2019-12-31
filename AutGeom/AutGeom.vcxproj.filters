@@ -355,6 +355,9 @@
     <Filter Include="AutLib\Geom\Knit\Item">
       <UniqueIdentifier>{bd16fa27-f5e2-4642-8daa-6ac937d99f7c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Geom\Knit\Item\Node">
+      <UniqueIdentifier>{1dc152d1-fda3-4fe1-872e-d696d597e56e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="AutLib\Geom\Point\2d\Pnt2d.cxx">
@@ -964,6 +967,12 @@
     </ClInclude>
     <ClInclude Include="AutLib\Geom\Knit\Item\Knit_ItemI.hxx">
       <Filter>AutLib\Geom\Knit\Item</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Item\Node\Knit_ItemNode.hxx">
+      <Filter>AutLib\Geom\Knit\Item\Node</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Geom\Knit\Item\Node\Knit_ItemNodeI.hxx">
+      <Filter>AutLib\Geom\Knit\Item\Node</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

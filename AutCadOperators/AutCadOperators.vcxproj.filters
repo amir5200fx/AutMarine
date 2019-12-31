@@ -94,6 +94,12 @@
     <Filter Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\Tang">
       <UniqueIdentifier>{dcc7ed27-3822-4130-8cd0-b192379c95db}</UniqueIdentifier>
     </Filter>
+    <Filter Include="AutLib\Cad\Operators\Split\Plane\Knit">
+      <UniqueIdentifier>{88a80670-95e8-4aca-b857-f6c7d0b1b87a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="AutLib\Cad\Operators\Split\Plane\Knit\Traits">
+      <UniqueIdentifier>{a0da6460-1579-433e-ba95-7c19620c9740}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="AutLib\Cad\Operators\Section\Cutter\CadOpetr_Cutter.hxx">
@@ -164,6 +170,9 @@
     </ClInclude>
     <ClInclude Include="AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\Tang\CadOpert2d_IntsctSubEdge_Tang.hxx">
       <Filter>AutLib\Cad\Operators\Intersection\Plane\Entities\SubEdge\Tang</Filter>
+    </ClInclude>
+    <ClInclude Include="AutLib\Cad\Operators\Split\Plane\Knit\Traits\CadOpert2d_Split_Traits.hxx">
+      <Filter>AutLib\Cad\Operators\Split\Plane\Knit\Traits</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

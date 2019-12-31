@@ -23,8 +23,8 @@ namespace AutLib
 		theNode->RemoveFromEdges(Edge->Index());
 		edgeRegistery::RemoveFromKnit_ChainEdges(Edge->Index());
 
-		const auto& left = std::dynamic_pointer_cast<nodeType>(Edge->Node0());
-		const auto& right = std::dynamic_pointer_cast<nodeType>(Edge->Node1());
+		const auto left = std::dynamic_pointer_cast<nodeType>(Edge->Node0());
+		const auto right = std::dynamic_pointer_cast<nodeType>(Edge->Node1());
 
 		std::shared_ptr<nodeType> next;
 		if (left IS_EQUAL theNode) next = right;
